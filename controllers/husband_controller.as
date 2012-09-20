@@ -150,7 +150,7 @@ class HusbandController extends ScreenController implements TimerListener
 		else if (event.name == "giveKiss") {
 			Game.sounds.playSFX("buttonPress");
 			
-			ret = Game.sharedGame().shop.buyLoveRefill("watchGame");
+			ret = Game.sharedGame().shop.buyLoveRefill("giveKiss");
 			if(ret == 1) {
 				fillLoveTankBy(3);
 			}
@@ -163,7 +163,7 @@ class HusbandController extends ScreenController implements TimerListener
 		else if (event.name == "goOnDate") {
 			Game.sounds.playSFX("buttonPress");
 
-			ret = Game.sharedGame().shop.buyLoveRefill("watchGame");
+			ret = Game.sharedGame().shop.buyLoveRefill("goOnDate");
 			if(ret == 1) {
 				fillLoveTankBy(10);
 			}
