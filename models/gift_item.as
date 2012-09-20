@@ -67,6 +67,11 @@ class GiftItem
 		this.amount = amount;
 		this.currency = currency;
 	}
+
+	public function toString() {
+	    return str(this.id) + "-" + this.title;
+	}
+
 }
 
 interface IBuff
