@@ -127,6 +127,8 @@ class HousewifeWars extends Game
 
 		this.milesEarnedTimer.start();
 		Game.pushScreen(screen);
+
+        c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
 	}
 
 	public function loadSounds()
