@@ -19,13 +19,13 @@
 		<screen:element name="friendsButton" resource="main-menu/friendicon.png" left="1127" top="482" ontap="displayFriendsBelt"/>
 		
 		<screen:element name="friendsBeltContainer" resource="" left="0" top="0" visible="NO" ontap="" z-index="10000">
-			<screen:element name="friendsBeltFrame" resource="friend-belt/friendbelt-frame.png" left="48" top="475" ontap=""/>
-    		<screen:element name="friendsBeltFrameState1" resource="friend-belt/friendbelt-frame-state2.png" left="72" top="475" ontap="">
+			<screen:element name="friendsBeltFrame" resource="friend-belt/friendbelt-frame.png" left="48" top="490" ontap=""/>
+    		<screen:element name="friendsBeltFrameState1" resource="friend-belt/friendbelt-frame-state2.png" left="72" top="490" ontap="">
     			<screen:element name="myFriendsText" resource="" left="36" top="26" ontap="" font-size="36" font-style="bold" text-align="left" >MY FRIENDS</screen:element>
     		</screen:element>
     		
     		<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="1160" top="500" ontap="hideFriendsBelt" z-index="100"/>
-    		<screen:element name="friendsScroll" class="Scroll" resource="" left="66" top="570" width="1148" height="196" lock="horizontal" z-index="99">
+    		<screen:element name="friendsScroll" class="Scroll" resource="" left="60" top="570" width="1148" height="196" lock="horizontal" z-index="99">
 			</screen:element>
     	</screen:element>
 		
