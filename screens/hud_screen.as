@@ -20,12 +20,12 @@ class HUDScreen extends Screen
 	
 	public function HUDScreen()
 	{
-		super();
-		this.screenUpdateTimer = new hudScreenUpdateTimer();
+		super();		
 	}
 	
 	override public function build()
 	{
+        c_addtimer(1000, this.update, null, 0, -1);
 	}
 	
 	public function update()
@@ -48,19 +48,5 @@ class HUDScreen extends Screen
 	{
 		var sprt = this.getElement("ssp-buff-icon").getSprite();
 		sprt.visible(0)
-	}
-}
-
-class hudScreenUpdateTimer extends Timer
-{
-	public function hudScreenUpdateTimer()
-	{
-		super("hudScreenUpdateTimer", 1, -1);
-	}
-	
-	override public function tick()
-	{
-		Game.bannerScreen.update();
-		Game.sharedGame().updateLeaderboards();
 	}
 }
