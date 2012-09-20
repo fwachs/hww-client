@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:shopping-items>
+
+    <!--
+		id: item number
+        name: item name
+        type: furniture / mystery
+        rarity: common / rare / very rare / extremely rare
+        hubbyLvlReq: husband level required to find item
+    -->
+
+    <!-- Furniture  -->
+    <hww-config:shopping-item id="" name="item" type="furniture" hubbyLvlReq="10" rarity="common"/>
+
+</hww-config:shopping-itesm>

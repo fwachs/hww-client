@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:house-maps>
+	
+	<!--hww-config:house name="standard" rows="46" cols="24"-->
+	<!--hww-config:room-tiles row="1" col="25" height="10"  width="56" type="Grass"/-->
+	<hww-config:house name="standard" rows="31" cols="52">
+
+		<hww-config:room name="room1" level="1">
+			<hww-config:room-tiles row="8" col="18" height="6" width="6" type="Floor"/>
+			<hww-config:room-tiles row="7" col="18" height="1" width="6" type="Paint"/>			
+			<hww-config:room-tiles row="8" col="17" height="1" width="1" type="VWallEnd"/>
+			<hww-config:room-tiles row="9" col="17" height="5" width="1" type="VWall"/>			
+			<hww-config:room-tiles row="7" col="24" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="7" col="17" height="1"  width="1" type="BackT"/>
+			<!--Grass for back of house-->
+			<hww-config:room-tiles row="1" col="1" height="4"  width="54" type="Grassx"/>
+            <hww-config:room-tiles row="5" col="1" height="2"  width="17" type="Grassx"/>
+            <hww-config:room-tiles row="5" col="49" height="2"  width="4" type="Grassx"/>
+            <hww-config:room-tiles row="5" col="31" height="2"  width="2" type="Grassx"/>
+            <hww-config:room-tiles row="5" col="33" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="35" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="37" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="39" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="41" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="43" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="45" height="2"  width="2" type="Grassx"/>
+			<hww-config:room-tiles row="5" col="47" height="2"  width="2" type="Grassx"/>
+			<!--Driveway and Street-->
+			<hww-config:room-tiles row="30" col="1" height="2"  width="11" type="Grassx"/>
+			<hww-config:room-tiles row="30" col="12" height="2"  width="6" type="Driveway"/>
+			<hww-config:room-tiles row="30" col="17" height="2"  width="38" type="Grassx"/>
+			<!--<hww-config:room-tiles row="33" col="1" height="2"  width="54" type="Driveway"/>-->
+			<!--Side Grass-->
+			<hww-config:room-tiles row="7" col="1" height="24"  width="4" type="Grassx"/>
+			<hww-config:room-tiles row="7" col="51" height="24"  width="2" type="Grassx"/>	
+		</hww-config:room>
+
+		<hww-config:room name="room2"  level="1">
+			<hww-config:room-tiles row="15" col="18" height="6" width="6" type="Floor"/>
+			<hww-config:room-tiles row="15" col="17" height="6" width="1" type="VWall"/>			
+			<hww-config:room-tiles row="14" col="18" height="1" width="1" type="HWall"/>
+			<hww-config:room-tiles row="14" col="19" height="1" width="1" type="doorh"/>
+			<hww-config:room-tiles row="14" col="20" height="1" width="4" type="HWall"/>
+						
+			<hww-config:room-tiles row="21" col="18" height="1" width="6" type="FrontWall"/>
+			<!-- changed to FrontWall -->			
+			<hww-config:room-tiles row="14"  col="24" height="1"  width="1" type="RightT"/>
+			<hww-config:room-tiles row="20" col="24" height="1"  width="1" type="LeftT"/>
+			<hww-config:room-tiles row="21" col="24" height="1"  width="1" type="BottomRightCorner"/>
+			<hww-config:room-tiles row="21" col="17" height="1"  width="1" type="BottomLeftCorner"/>
+			
+			<hww-config:room-tiles row="14" col="17" height="1" width="1" type="LeftT"/>
+			
+		</hww-config:room>
+		
+		<hww-config:room name="room3" level="1">
+			
+			<hww-config:room-tiles row="8"  col="24" height="1" width="1" type="VWallEnd"/>
+			<hww-config:room-tiles row="9"  col="24" height="1" width="1" type="VWall"/>
+			<hww-config:room-tiles row="10"  col="24" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="11"  col="24" height="3" width="1" type="VWall"/>
+			
+			<hww-config:room-tiles row="15"  col="24" height="2" width="1" type="VWall"/>
+			<hww-config:room-tiles row="17"  col="24" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="18"  col="24" height="2" width="1" type="VWall"/>
+			
+			<hww-config:room-tiles row="7"  col="25" height="1" width="4" type="Paint"/>			
+			<hww-config:room-tiles row="8"  col="25" height="12" width="4" type="Floor"/>
+		
+			<hww-config:room-tiles row="20" col="26" height="1" width="4" type="Door"/>
+			<!-- added entryway -mp -->
+			<hww-config:room-tiles row="21" col="26" height="2" width="2" type="Steps"/>
+			<hww-config:room-tiles row="23" col="26" height="8" width="2" type="Walkway"/>
+			<hww-config:room-tiles row="21" col="25" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="21" col="28" height="1" width="1" type="Bush"/>
+			<!-- added Walkway and steps to level 1 unlock -->
+			<hww-config:room-tiles row="7"  col="29" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="14"  col="29" height="1"  width="1" type="LeftT"/>
+			<hww-config:room-tiles row="20"  col="29" height="1"  width="1" type="RightT"/>
+			<hww-config:room-tiles row="21"  col="29" height="1"  width="1" type="BottomLeftCorner"/>
+			<!-- moved from room 4 -->
+			<hww-config:room-tiles row="8" col="29" height="1" width="1" type="VWallEnd"/>	
+			<hww-config:room-tiles row="9" col="29" height="1" width="1" type="VWall"/>	
+			<hww-config:room-tiles row="10" col="29" height="1" width="1" type="doorv"/>	
+			<hww-config:room-tiles row="11" col="29" height="3" width="1" type="VWall"/>	
+		</hww-config:room>
+		
+		<hww-config:room name="room4" level="1">
+		<!-- changed to level 1 -mp -->
+			<hww-config:room-tiles row="8" col="30" height="6" width="4" type="Floor"/>
+			<hww-config:room-tiles row="7" col="30" height="1" width="4" type="Paint"/>			
+			<!-- moved this line to Room 3 -->
+			<hww-config:room-tiles row="7"  col="34" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="12"  col="34" height="1"  width="1" type="LeftT"/>	
+			<!-- added from Room 6 -mp -->
+			<hww-config:room-tiles row="8" col="34" height="1" width="1" type="VWallEnd"/>
+			<hww-config:room-tiles row="9" col="34" height="1" width="1" type="VWall"/>
+			<hww-config:room-tiles row="10" col="34" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="11" col="34" height="1" width="1" type="VWall"/>	
+		</hww-config:room>
+		
+		<hww-config:room name="room5" level="1">
+		<!-- changed unlock to level 1 -mp -->
+			<hww-config:room-tiles row="15" col="30" height="6" width="4" type="Floor"/>
+			
+			<hww-config:room-tiles row="15" col="29" height="2" width="1" type="VWall"/>			
+			<hww-config:room-tiles row="17" col="29" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="18" col="29" height="3" width="1" type="VWall"/>
+			
+			<hww-config:room-tiles row="14" col="30" height="1" width="1" type="HWall"/>
+			<hww-config:room-tiles row="14" col="31" height="1" width="1" type="doorh"/>
+			<hww-config:room-tiles row="14" col="32" height="1" width="2" type="HWall"/>
+						
+			<hww-config:room-tiles row="21" col="30" height="1" width="4" type="FrontWall"/>
+			<!--changed to FrontWall -mp -->			
+			<hww-config:room-tiles row="14"  col="34" height="1"  width="1" type="RightT"/>
+			<hww-config:room-tiles row="21" col="34" height="1"  width="1" type="FrontT"/>
+			
+			<hww-config:room-tiles row="13" col="34" height="1" width="1" type="VWall"/>
+			<hww-config:room-tiles row="15" col="34" height="2" width="1" type="VWall"/>
+			<hww-config:room-tiles row="17"  col="34" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="18" col="34" height="3" width="1" type="VWall"/>
+			
+			<!-- Moved to make sure leveling worked smoothly  edited row="6" and "height="10" and split to 2 lines to eliminate extras-mp -->
+		</hww-config:room>
+		
+		<hww-config:room name="room6" level="2">
+			<hww-config:room-tiles row="8" col="35" height="4" width="10" type="Floor"/>
+			<hww-config:room-tiles row="7" col="35" height="1" width="10" type="Paint"/>			
+			<!-- moved line to room 4 -mp -->		
+			<hww-config:room-tiles row="7"  col="45" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="12"  col="45" height="1"  width="1" type="Cross"/>
+			<!--moved next line from room 7 -->
+			<hww-config:room-tiles row="12" col="35" height="1" width="10" type="HWall"/>
+			<!-- moved next line from room 8 -->
+			<hww-config:room-tiles row="8" col="45" height="1" width="1" type="VWallEnd"/>
+			<hww-config:room-tiles row="9" col="45" height="1" width="1" type="VWall"/>
+			<hww-config:room-tiles row="10"  col="45" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="11" col="45" height="1" width="1" type="VWall"/>
+		</hww-config:room>
+		
+		<hww-config:room name="room7" level="3">
+			<hww-config:room-tiles row="13" col="35" height="8" width="10" type="Floor"/>
+			<!-- 1 line moved to room 5, 1 line moved to room 6 -->			
+			<hww-config:room-tiles row="21" col="35" height="1" width="10" type="FrontWall"/>
+			<!-- changed to FrontWall -->			
+			<hww-config:room-tiles row="21"  col="45" height="1"  width="1" type="Cross"/>
+			<!-- move to end Redundant line removed -->
+			<hww-config:room-tiles row="13" col="45" height="3" width="1" type="VWall"/>
+			<hww-config:room-tiles row="16"  col="45" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="17" col="45" height="4" width="1" type="VWall"/>
+			<!-- added line from  changed row=6 and height =10-->
+		</hww-config:room>
+
+		<hww-config:room name="room8" level="4">
+			<hww-config:room-tiles row="7" col="50" height="1"  width="1" type="TopRightCorner"/>
+			<hww-config:room-tiles row="8" col="46" height="4" width="4" type="Floor"/>
+			<hww-config:room-tiles row="7" col="46" height="1" width="4" type="Paint"/>						
+
+			<hww-config:room-tiles row="8" col="50" height="1" width="1" type="VWallEndOut"/>
+			<hww-config:room-tiles row="9" col="50" height="3" width="1" type="VWallOut"/>			
+			<hww-config:room-tiles row="12" col="46" height="1" width="4" type="HWall"/>
+			<hww-config:room-tiles row="12" col="50" height="1"  width="1" type="RightTOut"/>
+		</hww-config:room>
+		
+		<hww-config:room name="room9" level="5">
+			<hww-config:room-tiles row="13" col="46" height="8" width="4" type="Floor"/>
+						
+			<hww-config:room-tiles row="13" col="50" height="8" width="1" type="VWallOut"/>
+			
+			<hww-config:room-tiles row="21" col="46" height="1" width="1" type="HWall"/>
+			<hww-config:room-tiles row="21" col="47" height="1" width="1" type="doorh"/>
+			<hww-config:room-tiles row="21" col="48" height="1" width="2" type="HWall"/>
+			
+			<hww-config:room-tiles row="21" col="50" height="1"  width="1" type="RightTOut"/>
+						
+		</hww-config:room>
+		
+		<hww-config:room name="room10" level="6">
+			<hww-config:room-tiles row="22" col="46" height="8" width="4" type="Floor"/>
+			
+			<hww-config:room-tiles row="22" col="45" height="3" width="1" type="VWall"/>
+			<hww-config:room-tiles row="25" col="45" height="1" width="1" type="doorv"/>
+			<hww-config:room-tiles row="26" col="45" height="3" width="1" type="VWall"/>
+					
+			<hww-config:room-tiles row="29" col="46" height="1" width="4" type="FrontWall"/>			
+			<hww-config:room-tiles row="22" col="50" height="7" width="1" type="VWallOut"/>			
+			
+			<hww-config:room-tiles row="29" col="45" height="1"  width="1" type="BottomLeftCorner"/>
+			<hww-config:room-tiles row="29" col="50" height="1"  width="1" type="BottomRightCorner"/>			
+		</hww-config:room>
+		
+		<hww-config:room name="yard" level="7">
+			<hww-config:room-tiles row="22" col="18" height="8" width="8" type="Grass"/>
+			<hww-config:room-tiles row="22" col="28" height="8" width="16" type="Grass"/>
+			<hww-config:room-tiles row="29" col="17" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="29" col="18" height="1" width="7" type="HFence"/>
+			<hww-config:room-tiles row="29" col="28" height="1" width="16" type="HFence"/>
+			<hww-config:room-tiles row="30" col="17" height="1" width="8" type="Grass"/>
+			<hww-config:room-tiles row="29" col="25" height="1" width="1" type="MBox"/>
+			<hww-config:room-tiles row="30" col="28" height="1" width="23" type="Grass"/>
+				
+			<hww-config:room-tiles row="22" col="17" height="7" width="1" type="VFence"/>			
+			<hww-config:room-tiles row="22" col="44" height="7" width="1" type="VFence"/>
+			<hww-config:room-tiles row="29" col="44" height="1" width="1" type="Bush"/>
+			
+			<hww-config:room-tiles row="23" col="25" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="23" col="28" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="25" col="25" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="25" col="28" height="1" width="1" type="Bush"/>
+			<!-- Change to Corner piece once ready -->			
+			<!-- moved to level 1 unlock "walkway" -->
+			
+		</hww-config:room>			
+				
+		<hww-config:room name="garage" level="8">
+			<hww-config:room-tiles row="22" col="12" height="7" width="1" type="VFence"/>
+			<!-- moved from yard  changed height=14-->
+			<hww-config:room-tiles row="8"  col="12" height="13" width="1" type="VWall"/>			
+			<hww-config:room-tiles row="7"  col="13" height="1" width="4" type="Paint"/>
+			<hww-config:room-tiles row="29" col="12" height="1" width="1" type="Bush"/>
+			<hww-config:room-tiles row="8"  col="13" height="12" width="4" type="Garage"/>
+			<hww-config:room-tiles row="20" col="13" height="12" width="4" type="Driveway"/>
+			<hww-config:room-tiles row="7"  col="17" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="21" col="12" height="1"  width="1" type="BottomLeftCorner"/>
+			<!--Changed to Bottom left corner-->
+		</hww-config:room>			
+		
+		<hww-config:room name="sideyard" level="9">
+			<hww-config:room-tiles row="18"  col="6" height="12" width="6" type="Grass"/>
+			<hww-config:room-tiles row="29" col="6" height="1"  width="6" type="HFence"/>			
+			<hww-config:room-tiles row="20"  col="5" height="9" width="1" type="VFence"/>
+			<hww-config:room-tiles row="29" col="5" height="1" width="1" type="Bush"/>			
+		</hww-config:room>	
+		
+		<hww-config:room name="backyard" level="10">
+			<hww-config:room-tiles row="6"  col="6" height="12" width="6" type="Grass"/>
+			<hww-config:room-tiles row="7"  col="5" height="1"  width="1" type="Bush"/>
+			<hww-config:room-tiles row="7"  col="6" height="1"  width="6" type="HFence"/>
+			<hww-config:room-tiles row="7"  col="12" height="1"  width="1" type="BackT"/>
+			<hww-config:room-tiles row="8"  col="5" height="12" width="1" type="VFence"/>			
+
+		</hww-config:room>	
+					
+		
+	</hww-config:house>
+	
+</hww-config:house-maps>

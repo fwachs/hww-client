@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:ppy-achievements>
+
+    <hww-config:ppy-achievement iosID="2329" androidID="2355" name="What's Her Name?"/>
+    <hww-config:ppy-achievement iosID="2330" androidID="2356" name="Social Climber"/>
+    <hww-config:ppy-achievement iosID="2331" androidID="2357" name="Celebrity"/>
+    <hww-config:ppy-achievement iosID="2332" androidID="2358" name="A-Lister"/>
+    <hww-config:ppy-achievement iosID="2333" androidID="2359" name="DIY"/>
+    <hww-config:ppy-achievement iosID="2334" androidID="2360" name="Interior Designer"/>
+    <hww-config:ppy-achievement iosID="2335" androidID="2361" name="Real Estate Mogul"/>
+    <hww-config:ppy-achievement iosID="2336" androidID="2362" name="Living Large"/>
+    <hww-config:ppy-achievement iosID="2337" androidID="2363" name="Tourist"/>
+    <hww-config:ppy-achievement iosID="2338" androidID="2364" name="Jet Setter"/>
+    <hww-config:ppy-achievement iosID="2339" androidID="2365" name="Sheila"/>
+    <hww-config:ppy-achievement iosID="2340" androidID="2366" name="Housewife Warlord"/>
+    <hww-config:ppy-achievement iosID="2341" androidID="2367" name="Up and Coming"/>
+    <hww-config:ppy-achievement iosID="2342" androidID="2368" name="Moving on Up"/>
+    <hww-config:ppy-achievement iosID="2343" androidID="2369" name="Career Driven"/>
+    <hww-config:ppy-achievement iosID="2344" androidID="2370" name="Junior Executive"/>
+    <hww-config:ppy-achievement iosID="2345" androidID="2371" name="The Boss"/>
+    <hww-config:ppy-achievement iosID="2346" androidID="2372" name="Generosity"/>
+    <hww-config:ppy-achievement iosID="2347" androidID="2373" name="Backstabber"/>
+    <hww-config:ppy-achievement iosID="2348" androidID="2374" name="Slave Driver"/>
+    <hww-config:ppy-achievement iosID="2349" androidID="2375" name="Running on Empty"/>
+    <hww-config:ppy-achievement iosID="2350" androidID="2376" name="Heartbreaker"/>
+    <hww-config:ppy-achievement iosID="2351" androidID="2377" name="High Roller"/>
+    <hww-config:ppy-achievement iosID="2352" androidID="2378" name="Big Spender"/>
+    <hww-config:ppy-achievement iosID="2353" androidID="2379" name="Top Pick"/>
+    <hww-config:ppy-achievement iosID="2354" androidID="2380" name="Green Thumb"/>
+
+</hww-config:ppy-achievements>

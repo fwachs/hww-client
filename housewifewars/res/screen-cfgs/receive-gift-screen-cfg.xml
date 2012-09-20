@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="State1" resource="" left="0" top="0" z-index="101" visible="yes" >
+			<screen:element name="confirmFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="131"/>
+			<screen:element name="state1GiftDescription" resource="" left="331" top="163" font-size="48" font-style="bold" text-align="left" width="638" height="174" text-wrap="yes">#placeholder</screen:element>
+						<screen:element name="state1GiftQuestion" resource="" left="331" top="228" font-size="48" font-style="bold" text-align="left" width="638" height="174" text-wrap="yes">Open it? - Be careful, some gifts are traps!</screen:element>
+			<screen:element name="openItem" resource="tutorial-icons/yes.png" left="331" top="355" ontap="openItem"/>
+			<screen:element name="dontOpenItem" resource="tutorial-icons/no.png" left="662" top="370" ontap="dontOpenItem"/>
+		</screen:element>
+		
+		<screen:element name="State2" resource="" left="0" top="0" z-index="102" visible="no" >
+			<screen:element name="confirmFrame" resource="gift-others-prompt/confirm-frame.png" left="205" top="137"/>
+			<screen:element name="giftImage" resource="#image_placeholder" left="900" top="162"/>	
+			<screen:element name="giftTitle" resource="" left="223" top="163" text-wrap="yes" width="750" font-size="60" font-style="bold">#title_placeholder</screen:element>
+			<screen:element name="giftDescription" resource="" left="230" top="273" font-size="48" font-style="bold" text-align="left" width="800" height="247" text-wrap="yes">#description_placeholder</screen:element>
+			<screen:element name="btnOK" resource="tutorial-icons/okay.png" left="516" top="500" ontap="btnOK"/>
+		</screen:element>
+	</screen:elements>
+</screen:config>

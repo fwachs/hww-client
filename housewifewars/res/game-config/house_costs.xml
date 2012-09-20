@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:player-houses>
+	
+	<!-- Premium -->
+	<hww-config:player-house name="Goodwitch Castle" houseStyle="Wall015" fileNumber="015" type="Premium" hubbyLvlReq="0" price="20" currency="Diamonds"/>
+	<hww-config:player-house name="Sakura Castle" houseStyle="Wall014" fileNumber="014" type="Premium" hubbyLvlReq="0" price="30" currency="Diamonds"/>
+	<hww-config:player-house name="Roman Goddess Villa" houseStyle="Wall016" fileNumber="016" type="Premium" hubbyLvlReq="0" price="40" currency="Diamonds"/>
+	
+	<!-- Default -->
+	<hww-config:player-house name="Classic" houseStyle="brick-yellow" fileNumber="001" type="Default" hubbyLvlReq="0" price="0" currency=""/>
+	<hww-config:player-house name="Suburb" houseStyle="plaster" fileNumber="002" type="Default" hubbyLvlReq="0" price="0" currency=""/>
+	<hww-config:player-house name="Southern" houseStyle="Wall003" fileNumber="003" type="Default" hubbyLvlReq="0" price="0" currency=""/>
+	
+	<!-- Husband Level Requirement -->
+	<hww-config:player-house name="Colonial" houseStyle="Wall007" fileNumber="007" type="LvlReq" hubbyLvlReq="10" price="7000" currency="GameBucks"/>
+	<hww-config:player-house name="Tropical" houseStyle="Wall005" fileNumber="005" type="LvlReq" hubbyLvlReq="20" price="14000" currency="GameBucks"/>
+	<hww-config:player-house name="Oceanview" houseStyle="Wall008" fileNumber="008" type="LvlReq" hubbyLvlReq="30" price="21000" currency="GameBucks"/>
+	<hww-config:player-house name="Countryside" houseStyle="Wall011" fileNumber="011" type="LvlReq" hubbyLvlReq="40" price="28000" currency="GameBucks"/>
+	<hww-config:player-house name="Chateau" houseStyle="Wall012" fileNumber="012" type="LvlReq" hubbyLvlReq="50" price="35000" currency="GameBucks"/>
+	
+	<!-- Number of Friends Requirement -->
+	
+</hww-config:player-houses>

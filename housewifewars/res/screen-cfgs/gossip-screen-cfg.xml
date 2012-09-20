@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="background" resource="wife-selection-screen/wife-selection-screen.png" left="0" top="0" ontap="doNothing"/>
+		
+		<screen:element name="crown" resource="gossip-wall/top-wife-crown.png" left="158" top="126"/>
+		<screen:element name="topWifeFrame" resource="gossip-wall/top-wife-box.png" left="46" top="0">
+			<screen:element name="topWifeText" resource="gossip-wall/top-housewife.png" left="16" top="30"/>
+			<screen:element name="topWifeName" resource="" left="16" top="80" font-size="48" text-align="center" width="246" text-wrap="yes">#topWife</screen:element>
+			
+			<screen:element name="topWife" resource="" left="50" top="170">
+				<screen:element name="hairback" resource="" left="38" top="0"/>
+				<screen:element name="rightArm" resource="" left="4" top="30"/>
+				<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+				<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
+				<screen:element name="undies" resource="" left="74" top="150"/>
+				<screen:element name="shoes" resource="" left="74" top="452"/>
+				<screen:element name="pants" resource="" left="38" top="226"/>
+				<screen:element name="belt" resource="" left="38" top="226"/>
+				<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+				<screen:element name="dress" resource="" left="0" top="112"/>
+				<screen:element name="shirt" resource="" left="38" top="112"/>
+				<screen:element name="jacket" resource="" left="38" top="112"/>
+				<screen:element name="leftArm" resource="" left="4" top="30"/>
+				<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
+				<screen:element name="hairfront" resource="" left="38" top="0"/>
+			</screen:element>
+			
+			<screen:element name="sspIcon" resource="other-player-screen/SSPIcon-02.png" left="24" top="614"/>
+			<screen:element name="sspText" resource="" left="110" top="712" font-size="48" text-align="center" width="246" text-wrap="yes">#topSsp</screen:element>
+			
+		</screen:element>
+		
+		<screen:element name="gossipWall" resource="" left="0" top="0"/>
+		<screen:element name="scroll" class="Scroll" resource="" left="0" top="20" width="1400" height="600" lock="vertical" z-index="100000"/>
+
+		<!-- ios only -->
+		<!-- <screen:element name="gossipWallText" resource="gossip-wall/gossip-text.png" left="393" top="681"/> -->
+		
+		<screen:element name="postButton" resource="gossip-wall/post-button.png" left="955" top="682" ontap="post"/>
+		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="686" ontap="goBack"/>
+
+	</screen:elements>
+</screen:config>

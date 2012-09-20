@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:house-styles>
+	
+	<hww-config:house-style name="brick-yellow" description="Classic">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls001/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls001/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls001/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls001/Wall_001_7.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls001/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls001/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls001/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls001/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls001/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls001/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls001/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls001/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls001/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls001/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="walls-default/walls001/floor-custom.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls001/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<!--change doorway to entry way-->
+		<hww-config:style-item type="Door" resource="walls-default/entryway001.png" width="4" depth="1"/>
+		<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_001.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls001/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+
+	<hww-config:house-style name="plaster" description="Suburb">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls002/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls002/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls002/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls002/Wall_001_7.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="LeftT" resource="walls-default/walls002/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls002/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls002/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls002/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls002/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls002/Wall_001_14.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="Cross" resource="walls-default/walls002/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls002/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls002/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls002/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/183_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls002/walkway01.png" width="1" depth="1"/-->
+		<hww-config:style-item type="Paint" resource="paint/191_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/304_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/304_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Door" resource="walls-default/entryway002.png" width="4" depth="1" />
+<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_002.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls001/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+
+	<hww-config:house-style name="Wall003" description="Southern">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls003/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls003/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls003/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls003/Wall_001_7.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="LeftT" resource="walls-default/walls003/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls003/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls003/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls003/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls003/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls003/Wall_001_14.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="Cross" resource="walls-default/walls003/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls003/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls003/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls003/Wall_001_6.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Floor" resource="walls-default/walls003/floor-custom.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls003/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/192_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway003.png" width="4" depth="1" />
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_001.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls003/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+		
+	<hww-config:house-style name="Wall004" description="Modern">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls004/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls004/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls004/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls004/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="LeftT" resource="walls-default/walls004/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls004/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls004/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls004/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls004/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls004/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls004/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls004/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls004/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls004/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls004/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/193_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls004/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+
+		<hww-config:style-item type="Door" resource="walls-default/entryway004.png" width="4" depth="1" />
+
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_002.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls004/walkway01.png" width="2" depth="2" />
+	</hww-config:house-style>
+		
+	<hww-config:house-style name="Wall005" description="Tropical">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls005/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls005/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls005/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls005/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls005/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls005/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls005/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls005/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls005/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls005/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls005/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls005/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls005/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls005/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls005/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass02.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls005/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<!--change doorway to entry way-->
+		<hww-config:style-item type="Door" resource="walls-default/entryway005.png" width="4" depth="1" />
+		<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_003.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls004/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall006" description="Medieval">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls006/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls006/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls006/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls006/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+	
+		<hww-config:style-item type="LeftT" resource="walls-default/walls006/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls006/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls006/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls006/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls006/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls006/Wall_001_14.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="Cross" resource="walls-default/walls006/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls006/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls006/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls006/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/183_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls006/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/191_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<!--change doorway to entry way-->
+		<hww-config:style-item type="Door" resource="walls-default/entryway006.png" width="4" depth="1" />
+		<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_005.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls001/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall007" description="Colonial">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls007/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls007/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls007/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls007/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls007/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls007/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls007/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls007/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls007/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls007/Wall_001_14.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="Cross" resource="walls-default/walls007/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls007/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls007/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls007/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/179_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls007/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway007.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_001.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls001/walkway01.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall008" description="Oceanview">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls008/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls008/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls008/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls008/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls008/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls008/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls008/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls008/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls008/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls008/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls008/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls008/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls008/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls008/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls008/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="walls-default/walls008/floor-custom.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass02.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass02.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls008/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls008/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway008.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_003.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls008/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls008/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall009" description="Sci Fi">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls009/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls009/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls009/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls009/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls009/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls009/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls009/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls009/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls009/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls009/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls009/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls009/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls009/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls009/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="dirt01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="dirt01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls009/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls009/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway009.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_005.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls009/walkway01.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall010" description="Gingerbread">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls010/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls010/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls010/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls010/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls010/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls010/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls010/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls010/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls010/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls001/Wall_010_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls001/Wall_010_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls010/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls010/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls010/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls010/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/191_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls010/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls010/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<!--change doorway to entry way-->
+		<hww-config:style-item type="Door" resource="walls-default/entryway010.png" width="4" depth="1" />
+		<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_001.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls010/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall011" description="Countryside">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls011/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls011/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls011/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls011/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls011/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls011/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls011/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls011/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls011/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls011/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls011/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls011/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls011/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls011/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls011/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="walls-default/walls011/back-wall.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls011/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		<!--change doorway to entry way-->
+		<hww-config:style-item type="Door" resource="walls-default/entryway011.png" width="4" depth="1" />
+		<!-- this will change for each housestyle -->
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_002.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls011/walkway01.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall012" description="Chateau">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls012/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls012/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls012/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls012/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="LeftT" resource="walls-default/walls012/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls012/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls012/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls012/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls012/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls012/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls012/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls012/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls012/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls012/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/180_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls012/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/192_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway012.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_002.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls012/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall013" description="Shinobi">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls013/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls013/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls013/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls013/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls013/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls013/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls013/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls013/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls013/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls013/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls013/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls013/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls013/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls013/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/185_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls013/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway013.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_004.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls001/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall014" description="Sakura Castle">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls014/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls014/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls014/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls014/Wall_001_7.png" width="1" depth="1"/>
+		
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls014/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls014/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls014/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls014/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls014/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls014/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls014/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls014/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls014/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls014/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/179_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="walls-default/walls014/back-wall.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls015/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway014.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_005.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls014/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall015" description="Goodwitch Castle">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallStone.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls015/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls015/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls015/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls015/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls015/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls015/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls015/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls015/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls001/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls015/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls015/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls015/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls015/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls015/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls015/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="walls-default/walls015/floor-custom.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls015/walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="wallpaper/169_Wallpaper.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls015/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway015.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_004.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001.png" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls015/walkway01.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+	<hww-config:house-style name="Wall016" description="Roman Goddess Villa">
+		<hww-config:style-item type="custom-floor" resource="" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="custom-paint" resource="" width="2" depth="1"/>
+
+		<!--hww-config:style-item type="ExtWall" resource="walls/ExtWallBrick.png" width="1" depth="1"/-->
+		<hww-config:style-item type="VWall" resource="walls-default/walls016/Wall_001_1.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallOut" resource="walls-default/walls016/Wall_001_11.png" width="1" depth="1"/>
+		<hww-config:style-item type="HWall" resource="walls-default/walls016/Wall_001_2.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontWall" resource="walls-default/walls016/Wall_001_7.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="doorh" resource="walls-default/walls001/int_door.png" width="1" depth="1"/>
+		<hww-config:style-item type="doorv" resource="walls-default/walls001/int_doorv.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="LeftT" resource="walls-default/walls016/Wall_001_3.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightT" resource="walls-default/walls016/Wall_001_4.png" width="1" depth="1"/>
+		<hww-config:style-item type="RightTOut" resource="walls-default/walls016/Wall_001_12.png" width="1" depth="1"/>
+		<hww-config:style-item type="FrontT" resource="walls-default/walls016/Wall_001_8.png" width="1" depth="1"/>
+		<hww-config:style-item type="BackT" resource="walls-default/walls016/Wall_001_10.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="VWallEnd" resource="walls-default/walls016/Wall_001_13.png" width="1" depth="1"/>
+		<hww-config:style-item type="VWallEndOut" resource="walls-default/walls016/Wall_001_14.png" width="1" depth="1"/>
+
+		<hww-config:style-item type="Cross" resource="walls-default/walls016/Wall_001_5.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomLeftCorner" resource="walls-default/walls016/Wall_001_6.png" width="1" depth="1"/>
+		<hww-config:style-item type="BottomRightCorner" resource="walls-default/walls016/Wall_001_9.png" width="1" depth="1"/>
+		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls016/Wall_001_6.png" width="1" depth="1" flip="1"/>
+
+		<hww-config:style-item type="Floor" resource="flooring/189_Floor.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
+		<!--hww-config:style-item type="Walkway2x3" resource="walkway01.png" width="2" depth="2"/-->
+		<hww-config:style-item type="Paint" resource="walls-default/walls016/back-wall.png" width="2" depth="1"/>
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Walkway" resource="walls-default/walls016/walkway01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
+		
+		<hww-config:style-item type="Door" resource="walls-default/entryway016.png" width="4" depth="1" />
+		
+		<hww-config:style-item type="Bush" resource="Hedge/Hedge_004.png" width="1" depth="1" flip="1"/>
+		<hww-config:style-item type="MBox" resource="walls-default/walls001/mailbox_001" width="1" depth="1" />
+		<hww-config:style-item type="Steps" resource="walls-default/walls016/stairs001.png" width="2" depth="2" />
+	</hww-config:house-style>
+	
+</hww-config:house-styles>

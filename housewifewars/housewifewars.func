@@ -1,0 +1,3508 @@
+__init__
+rand
+abs
+chr
+hex
+range
+time
+str
+sin
+cos
+len
+copy
+deepcopy
+min
+max
+sum
+append
+pop
+insert
+remove
+index
+reverse
+count
+sort
+int
+ord
+split
+join
+strip
+find
+rfind
+replace
+pack
+unpack
+dumps
+loads
+substr
+strlen
+lower
+upper
+array
+request
+fetch
+send
+setbuffer
+addbuffer
+screensize
+md5
+setcolor
+getcolor
+drawline
+drawarc
+drawrect
+width
+drawroundrect
+fillarc
+fillrect
+fillroundrect
+filltriangle
+setfont
+fontheight
+wrapstr
+drawstr
+drawstr2
+setclip
+draw
+drawbuffer
+key
+ckey
+dkey
+initkey
+height
+cng
+translate
+buffer
+clear
+getfont
+strwidth
+addcolor
+usecolor
+cliprect
+seed
+getmodel
+getversion
+setscore
+bitmap
+getuser
+displayUserName
+userScore
+displayChatWindow
+showChatInput
+showUserInfo
+sendto
+quitguide
+quitgame
+hideUserName
+showalert
+openUrl
+strsize
+getusername
+isguest
+isadvancedtable
+clienttype
+supportPurchase
+canPurchase
+startPurchase
+containsTransaction
+transactionCount
+transaction
+webDlgShow
+tapHighlight
+createaudio
+play
+pause
+stop
+destroy
+isplaying
+duration
+currenttime
+preparetoplay
+setcurrenttime
+gameaudioenable
+buffer2image
+bitmap2bytes
+savetoalbum
+dict
+c_fromkeys
+fromkeys
+get
+has_key
+items
+keys
+popitem
+setdefault
+update
+values
+set
+isdisjoint
+issubset
+issuperset
+union
+intersection
+difference
+symmetric_difference
+intersection_update
+difference_update
+symmetric_difference_update
+add
+discard
+list
+extend
+c_file_open
+c_file_exist
+c_file_attr
+c_file_op
+c_res_exist
+c_res_request
+c_res_request_batch
+c_res_file
+c_res_bytes
+c_res_image
+xrange
+v_create
+v_root
+addview
+create
+removefromparent
+subviews
+parent
+pos
+size
+center
+text
+attr
+setaction
+c_addtimer
+isactive
+c_invoke
+__obsolete__g_repaint
+repaint
+c_res_expire
+__bases__
+__class__
+__get__
+__set__
+__delete__
+classmethod
+staticmethod
+property
+isinstance
+issubclass
+type
+callable
+visible
+v_font
+resize
+bringtofront
+bringtoback
+image
+animate
+a_rotate
+a_scale
+a_alpha
+a_translate
+i_linear
+i_accelerate
+i_cycle
+i_decelerate
+i_accelerate_decelerate
+getchatview
+getmytableid
+c_sensor
+gettablenames
+focus
+focusable
+c_alert
+openurl
+getroomid
+gettableids
+calljs
+v_scale
+i_tile
+i_gradient
+i_color
+sqrt
+stackpos
+m_set
+m_matrix
+m_invert
+m_concat
+m_rotate
+m_scale
+m_skew
+m_translate
+addsprite
+addscene
+scale
+anchor
+rotate
+color
+addaction
+sequence
+spawn
+repeat
+fadein
+fadeout
+rotateby
+rotateto
+scaleby
+scaleto
+moveby
+moveto
+blink
+tintby
+tintto
+jumpby
+jumpto
+delaytime
+customaction
+imoveto
+show
+hide
+togglevisibility
+callfunc
+addlabel
+getfps
+sprite
+label
+node
+texture
+freetexture
+sysinfo
+m_color
+blend
+waves3d
+flipx3d
+flipy3d
+lens3d
+ripple3d
+shaky3d
+liquid
+waves
+twirl
+gridtex
+stopgrid
+accamp
+decamp
+accdecamp
+ripple
+imoveby
+iscaleto
+iscaleby
+irotateto
+irotateby
+getscene
+addnode
+reversetime
+shakytile3d
+shatter3d
+shuffle3d
+fadeouttr
+fadeoutbl
+fadeoutup
+fadeoutdown
+turnoff
+wavestile3d
+jump3d
+splitrows
+splitcols
+setevent
+subnodes
+node2world
+world2node
+itintby
+itintto
+clipping
+sizeto
+sizeby
+isizeto
+isizeby
+powin
+powout
+powio
+expin
+expout
+expio
+sinein
+sineout
+sineio
+elasticin
+elasticout
+elasticio
+bouncein
+bounceout
+bounceio
+backin
+backout
+backio
+trapeze
+trapezeby
+trapezeto
+itrapezeby
+itrapezeto
+bezierby
+export
+iremovefromparent
+vibrate
+itexture
+itext
+uri_encode
+uri_decode
+http_request
+json_request
+cancel_requests
+json_dumps
+json_loads
+start_payment
+purchase_papayas
+ppy_connected
+ppy_username
+ppy_userid
+ppy_query
+ppy_postnewsfeed
+ppy_setscore
+ppy_updatescore
+getengine
+ppy_session
+robotquit
+c_opendb
+put
+newmenu
+setmenu
+closemenu
+loadscript
+openmenu
+menuvisible
+createsound
+resume
+load_sprite_sheet
+parsexml
+ppy_login
+avatar_url
+prepare
+boundingbox
+subtouch
+__unused1__
+start
+positioniterations
+velocityiterations
+linearvelocity
+applyforce
+applytorque
+applylinearimpulse
+applyangularimpulse
+getinertia
+awake
+bodyactive
+bullet
+setsensor
+sleepingallowed
+fixedrotation
+angularvelocity
+lineardamping
+angulardamping
+bodytype
+__unused2__
+enablemotor
+motorspeed
+motortorque
+maxmotortorque
+enablelimit
+limits
+jointangle
+jointspeed
+length
+frequency
+dampingratio
+motorforce
+maxmotorforce
+createjoint
+jointtranslation
+maxforce
+maxtorque
+pulleylength
+pulleyradio
+getanchor
+reactionforce
+reactiontorque
+getphysics
+gravity
+atan
+atan2
+asin
+acos
+addparticle
+particle
+stopparticle
+resetparticle
+ppy_listachievements
+ppy_unlockachievement
+ppy_showoffers
+ppy_notification
+compress
+decompress
+svg2bitmap
+get_base_url
+_
+load_text_table
+invite_friends
+start_purchase
+system_gc
+clearforces
+autoclearforces
+getmass
+facebook
+twitter
+finishTJAction
+ppy_upload
+setvolume
+density
+friction
+restitution
+contactfilter
+bindbody
+createvideo
+ppy_tracker_event
+mask
+setmask
+__classname__
+minpool
+callobj
+getfunc
+getclass
+ppy_tracker_page
+ppy_charge
+registerTimer
+1registerTimer
+getTimer
+1getTimer
+registerListener
+1registerListener
+unregisterListener
+1unregisterListener
+startTimers
+1startTimers
+updateRemoteTimerTick
+1updateRemoteTimerTick
+processTimers
+1processTimers
+1__INIT__
+tick
+1tick
+run
+1run
+1stop
+changeRunningTime
+1changeRunningTime
+reset
+1reset
+restart
+1restart
+1start
+getTimeLeft
+1getTimeLeft
+getTimeString
+1getTimeString
+timerDBKey
+1timerDBKey
+load
+1load
+save
+1save
+serialize
+1serialize
+newControlFromAttributes
+1newControlFromAttributes
+addChild
+1addChild
+removeChild
+1removeChild
+removeFromParent
+1removeFromParent
+removeAllChildren
+1removeAllChildren
+configureEvents
+1configureEvents
+addToParent
+1addToParent
+getSprite
+1getSprite
+parseText
+1parseText
+setFont
+1setFont
+setText
+1setText
+getText
+1getText
+bubbleUpSize
+1bubbleUpSize
+addEvent
+1addEvent
+attachEvent
+1attachEvent
+eventFired
+1eventFired
+getCanvas
+1getCanvas
+tapEventHandler
+1tapEventHandler
+translateEvent
+1translateEvent
+controlTapped
+1controlTapped
+newScrollFromAttributes
+2newScrollFromAttributes
+2__INIT__
+2configureEvents
+2addToParent
+2removeFromParent
+2bubbleUpSize
+2getSprite
+2eventFired
+dragStarted
+2dragStarted
+dragMoved
+2dragMoved
+dragEnded
+2dragEnded
+zoomStarted
+2zoomStarted
+zoomMoved
+2zoomMoved
+zoomEnded
+2zoomEnded
+offsetLeft
+2offsetLeft
+offsetTop
+2offsetTop
+setContentSize
+2setContentSize
+setZoomLimits
+2setZoomLimits
+newGiftFromAttributes
+1newGiftFromAttributes
+canOpenGift
+1canOpenGift
+createBuffFromGift
+1createBuffFromGift
+getBuffForGift
+1getBuffForGift
+startBuffs
+1startBuffs
+showIconsForGift
+1showIconsForGift
+resetBuffs
+1resetBuffs
+clearBufs
+1clearBufs
+execute
+1execute
+2execute
+2tick
+screenLoaded
+1screenLoaded
+screenUnloaded
+1screenUnloaded
+showTutorial
+1showTutorial
+screenPostLoaded
+1screenPostLoaded
+hookFired
+1hookFired
+showMessageBox
+1showMessageBox
+presentModalScreen
+1presentModalScreen
+reactivateEvents
+1reactivateEvents
+dismissModalScreen
+1dismissModalScreen
+addCall
+1addCall
+runSerialized
+1runSerialized
+callSerialized
+1callSerialized
+newCanvasFromAttributes
+3newCanvasFromAttributes
+3__INIT__
+3removeFromParent
+createTiles
+3createTiles
+destroyTiles
+3destroyTiles
+destroyItems
+3destroyItems
+getTile
+3getTile
+unselectSelectedItem
+3unselectSelectedItem
+selectItem
+3selectItem
+acceptItem
+3acceptItem
+cancelAdding
+3cancelAdding
+removeItem
+3removeItem
+liftItem
+3liftItem
+addItem
+3addItem
+newItem
+3newItem
+placeItem
+3placeItem
+isInFrontOf
+3isInFrontOf
+startBubbleSort
+3startBubbleSort
+reorganize
+3reorganize
+setTilesForItem
+3setTilesForItem
+tileFromPos
+3tileFromPos
+testPlacement
+3testPlacement
+placeOnTile
+3placeOnTile
+highlightTiles
+3highlightTiles
+setHighlightTiles
+3setHighlightTiles
+clearHighlight
+3clearHighlight
+visibleTile
+3visibleTile
+centerOnTile
+3centerOnTile
+tileTapped
+3tileTapped
+3translateEvent
+2destroy
+changeImage
+2changeImage
+setCanvas
+2setCanvas
+2testPlacement
+createEditingUI
+2createEditingUI
+removeEditingUI
+2removeEditingUI
+moveEditingUI
+2moveEditingUI
+unselect
+2unselect
+hideAcceptButton
+2hideAcceptButton
+toggleEditingUI
+2toggleEditingUI
+swapWidthAndDepth
+2swapWidthAndDepth
+flipItem
+2flipItem
+flip
+2flip
+calculatePosition
+2calculatePosition
+addGhost
+2addGhost
+removeGhost
+2removeGhost
+updateGhostPos
+2updateGhostPos
+2controlTapped
+buttonTapped
+2buttonTapped
+addToCanvas
+2addToCanvas
+lightUp
+2lightUp
+lightDown
+2lightDown
+setFlatResource
+2setFlatResource
+setResource
+2setResource
+2removeItem
+div
+1div
+mul
+1mul
+1add
+sub
+1sub
+integer
+1integer
+round
+1round
+begin
+1begin
+addPoint
+1addPoint
+end
+1end
+getScreenName
+1getScreenName
+addElement
+1addElement
+getElement
+1getElement
+parseEvents
+1parseEvents
+controlFromXmlNode
+1controlFromXmlNode
+parseNode
+1parseNode
+1create
+showNextTutorial
+1showNextTutorial
+showPrevTutorial
+1showPrevTutorial
+showTutorialStep
+1showTutorialStep
+controlFromXMLString
+1controlFromXMLString
+arrayToString
+1arrayToString
+getTemplateText
+1getTemplateText
+controlFromXMLTemplate
+1controlFromXMLTemplate
+build
+1build
+1destroy
+gotFocus
+1gotFocus
+lostFocus
+1lostFocus
+setProperty
+1setProperty
+getProperty
+1getProperty
+2getText
+2build
+startHusbandAnimation
+2startHusbandAnimation
+stopWifeAnimation
+2stopWifeAnimation
+2gotFocus
+2lostFocus
+stopHusbandAnimation
+2stopHusbandAnimation
+2screenLoaded
+nameChanged
+2nameChanged
+updateSelection
+2updateSelection
+2screenUnloaded
+2presentModalScreen
+selectHouse
+2selectHouse
+buyHouse
+2buyHouse
+updateCheckmark
+2updateCheckmark
+displayHouse
+2displayHouse
+getSelectedHouse
+2getSelectedHouse
+buildOtherPlayerScreen
+2buildOtherPlayerScreen
+buildHouseScreen
+2buildHouseScreen
+getHusbandTexture
+2getHusbandTexture
+setPage
+2setPage
+checkAchievements
+2checkAchievements
+hreturnhome
+2hreturnhome
+checkForPoppedBalloons
+2checkForPoppedBalloons
+buySouvenir
+2buySouvenir
+collectCompletePurchasePoints
+2collectCompletePurchasePoints
+stopGiftShopAnimationTransition
+2stopGiftShopAnimationTransition
+balloonsFlyAway
+2balloonsFlyAway
+transitionToPassportScreen
+2transitionToPassportScreen
+hBuySouvenirAtLevel
+2hBuySouvenirAtLevel
+hBuySouvenir1
+2hBuySouvenir1
+hBuySouvenir2
+2hBuySouvenir2
+hBuySouvenir3
+2hBuySouvenir3
+hBuySouvenir4
+2hBuySouvenir4
+hBuySouvenir5
+2hBuySouvenir5
+pushPremiumCurrencyScreen
+2pushPremiumCurrencyScreen
+getCostTest
+2getCostTest
+flyTo
+2flyTo
+showGiftShopScreen
+2showGiftShopScreen
+buyTicketTo
+2buyTicketTo
+buyTicketToLondon
+2buyTicketToLondon
+buyTicketToSanFrancisco
+2buyTicketToSanFrancisco
+buyTicketToParis
+2buyTicketToParis
+buyTicketToBuenosAires
+2buyTicketToBuenosAires
+buyTicketToTokyo
+2buyTicketToTokyo
+buyTicketToSydney
+2buyTicketToSydney
+buildMessageListAndBestWife
+2buildMessageListAndBestWife
+updateMessageList
+2updateMessageList
+reduceStressBy
+2reduceStressBy
+fillLoveTankBy
+2fillLoveTankBy
+timerFired
+2timerFired
+sendHusbandToWork
+2sendHusbandToWork
+displayTooStressedPrompt
+2displayTooStressedPrompt
+sendHusbandShopping
+2sendHusbandShopping
+displayOutOfLovePrompt
+2displayOutOfLovePrompt
+displayOutShoppingPrompt
+2displayOutShoppingPrompt
+displayOutWorkingPrompt
+2displayOutWorkingPrompt
+returnFromWorkPrompt
+2returnFromWorkPrompt
+checkForLevelUp
+2checkForLevelUp
+thresholdWeighedWithBuff
+2thresholdWeighedWithBuff
+returnFromShoppingPrompt
+2returnFromShoppingPrompt
+secretPopUp
+2secretPopUp
+2showTutorial
+promptForRemodel
+2promptForRemodel
+doRemodel
+2doRemodel
+startDecorator
+2startDecorator
+stopDecorator
+2stopDecorator
+showStorage
+2showStorage
+hideStorage
+2hideStorage
+forSale
+2forSale
+collectPoints
+2collectPoints
+showPointsToCollect
+2showPointsToCollect
+showHouseNeedsCleanUp
+2showHouseNeedsCleanUp
+cleanHouse
+2cleanHouse
+categoryTapped
+2categoryTapped
+subcategoryTapped
+2subcategoryTapped
+furnitureTapped
+2furnitureTapped
+2hookFired
+addSelectedFurniture
+2addSelectedFurniture
+showDecorator
+2showDecorator
+hideDecorator
+2hideDecorator
+areaTapped
+2areaTapped
+itemTapped
+2itemTapped
+itemAccepted
+2itemAccepted
+itemRemoved
+2itemRemoved
+itemMoved
+2itemMoved
+itemFlipped
+2itemFlipped
+moveItemToStorage
+2moveItemToStorage
+storageTapped
+2storageTapped
+displayOkayPrompt
+2displayOkayPrompt
+setOkayPromptTextSize
+2setOkayPromptTextSize
+setOkayPromptPosition
+2setOkayPromptPosition
+displayConfirmCancelPrompt
+2displayConfirmCancelPrompt
+displayMysteryItems
+2displayMysteryItems
+drawGiftsWall
+2drawGiftsWall
+showGiftItemPromt
+2showGiftItemPromt
+toggleFrameStack
+2toggleFrameStack
+displayHouses
+2displayHouses
+loadHouseListing
+2loadHouseListing
+startGiftShopIdleAnimation
+2startGiftShopIdleAnimation
+stopGiftShopIdleAnimation
+2stopGiftShopIdleAnimation
+startGiftShopEndAnimation
+2startGiftShopEndAnimation
+stopBalloonAnimation
+2stopBalloonAnimation
+stopGiftShopEndAnimation
+2stopGiftShopEndAnimation
+drawBestHouseWife
+2drawBestHouseWife
+addMessageToWall
+2addMessageToWall
+updateMessages
+2updateMessages
+drawWall
+2drawWall
+post
+2post
+initializeScreen
+2initializeScreen
+showChatText
+2showChatText
+hideChatBubble
+2hideChatBubble
+fillLoveTank
+2fillLoveTank
+closeLoveOptions
+2closeLoveOptions
+closeStressOptions
+2closeStressOptions
+releaseStress
+2releaseStress
+displayWorkBuffIcon
+2displayWorkBuffIcon
+displayShoppingBuffIcon
+2displayShoppingBuffIcon
+showWorkBuffIcon
+2showWorkBuffIcon
+hideWorkBuffIcon
+2hideWorkBuffIcon
+showShoppingBuffIcon
+2showShoppingBuffIcon
+hideShoppingBuffIcon
+2hideShoppingBuffIcon
+updateLabels
+2updateLabels
+display
+2display
+displayOut
+2displayOut
+update_career_stats
+2update_career_stats
+updateLoveTank
+2updateLoveTank
+updateStressMeter
+2updateStressMeter
+redrawIso
+2redrawIso
+setWalls
+2setWalls
+setBlueprint
+2setBlueprint
+lockTiles
+2lockTiles
+setTiles
+2setTiles
+loadFurniture
+2loadFurniture
+setFloor
+2setFloor
+setPaint
+2setPaint
+buildCategories
+2buildCategories
+buildSubcategories
+2buildSubcategories
+buildFurnitureList
+2buildFurnitureList
+asyncItemLoad
+2asyncItemLoad
+buildStorageList
+2buildStorageList
+showSubcategories
+2showSubcategories
+showItems
+2showItems
+checkNextTutorialStep
+2checkNextTutorialStep
+displayCustomizationFrame
+2displayCustomizationFrame
+updateHairStyleSelection
+2updateHairStyleSelection
+setSliderStartingPosition
+2setSliderStartingPosition
+slideSkinToneSlider
+2slideSkinToneSlider
+getSkinTone
+2getSkinTone
+setCheckMark
+2setCheckMark
+setHairStyleCheckmark
+2setHairStyleCheckmark
+setHairColorCheckmark
+2setHairColorCheckmark
+rotateToIndex
+1rotateToIndex
+onPaymentFinished
+2onPaymentFinished
+showFirstTimeBuyerPopup
+2showFirstTimeBuyerPopup
+hideFirstTimeBuyerPopup
+2hideFirstTimeBuyerPopup
+removeEventsForHandler
+1removeEventsForHandler
+removeEventsForHandlerAndChildren
+1removeEventsForHandlerAndChildren
+setHook
+1setHook
+clearHook
+1clearHook
+1copy
+2run
+getAnimation
+1getAnimation
+getRightArmAnimation
+1getRightArmAnimation
+getLeftArmAnimation
+1getLeftArmAnimation
+getBusinessLeftArmAnimation
+1getBusinessLeftArmAnimation
+getBusinessRightArmAnimation
+1getBusinessRightArmAnimation
+getRetroLeftArmAnimation
+1getRetroLeftArmAnimation
+getRetroRightArmAnimation
+1getRetroRightArmAnimation
+getRockerLeftArmAnimation
+1getRockerLeftArmAnimation
+getRockerRightArmAnimation
+1getRockerRightArmAnimation
+buildGenericWifeFaceAnimation
+1buildGenericWifeFaceAnimation
+buildExecutiveAnimation
+1buildExecutiveAnimation
+buildSportsAnimation
+1buildSportsAnimation
+buildLawyerAnimation
+1buildLawyerAnimation
+buildDoctorAnimation
+1buildDoctorAnimation
+buildBankerAnimation
+1buildBankerAnimation
+getGiftShopBalloonsAnimation
+1getGiftShopBalloonsAnimation
+getGiftShopIdleAnimation
+1getGiftShopIdleAnimation
+getGiftShopAnimation
+1getGiftShopAnimation
+addSound
+1addSound
+addMusic
+1addMusic
+playSFX
+1playSFX
+playMusic
+1playMusic
+1pause
+1resume
+setVolume
+1setVolume
+turnOff
+1turnOff
+turnOn
+1turnOn
+getFont
+1getFont
+getBoldFont
+1getBoldFont
+getSmallFontSize
+1getSmallFontSize
+getLargeFontSize
+1getLargeFontSize
+register
+1register
+syncWife
+1syncWife
+syncHusband
+1syncHusband
+syncHouse
+1syncHouse
+getOtherPlayerHouse
+1getOtherPlayerHouse
+getOtherPlayerProfile
+1getOtherPlayerProfile
+postGossip
+1postGossip
+getMessagesAndBestWife
+1getMessagesAndBestWife
+getCurrentDateAndTick
+1getCurrentDateAndTick
+getGifts
+1getGifts
+sendGift
+1sendGift
+getDailyBonus
+1getDailyBonus
+makeRequest
+1makeRequest
+defaultCallBack
+1defaultCallBack
+buyFurniture
+1buyFurniture
+buyHouseRemodel
+1buyHouseRemodel
+buyStressRelease
+1buyStressRelease
+buyLoveRefill
+1buyLoveRefill
+buyImmediateReturn
+1buyImmediateReturn
+1buyHouse
+buyGift
+1buyGift
+1buySouvenir
+getSouvenirCost
+1getSouvenirCost
+buyTripTo
+1buyTripTo
+getLocationCosts
+1getLocationCosts
+getTravelCost
+1getTravelCost
+getTravelCurrency
+1getTravelCurrency
+getGameBucks
+1getGameBucks
+getDiamonds
+1getDiamonds
+test
+1test
+substract
+1substract
+collect
+1collect
+pay
+1pay
+payMultiple
+1payMultiple
+testMultipleAccounts
+1testMultipleAccounts
+moneyForCurrency
+1moneyForCurrency
+getBalance
+1getBalance
+purchaseCurrency
+1purchaseCurrency
+getHusbandAnimation
+1getHusbandAnimation
+1getHusbandTexture
+isHome
+1isHome
+setSalaryFactor
+1setSalaryFactor
+setRareItemThreshold
+1setRareItemThreshold
+coolDown
+1coolDown
+returnFromWork
+1returnFromWork
+returnFromShopping
+1returnFromShopping
+1checkAchievements
+levelUp
+1levelUp
+updateVisits
+1updateVisits
+updateWorkHours
+1updateWorkHours
+setWorkBuffTime
+1setWorkBuffTime
+clearWorkBuffTime
+1clearWorkBuffTime
+increaseWorkHours
+1increaseWorkHours
+getId
+1getId
+deserialize
+1deserialize
+getLevel
+1getLevel
+currentRemodel
+1currentRemodel
+nextRemodel
+1nextRemodel
+remodel
+1remodel
+setSelectedStyle
+1setSelectedStyle
+loadBlueprint
+1loadBlueprint
+loadMap
+1loadMap
+loadStyles
+1loadStyles
+loadRemodels
+1loadRemodels
+putFurniture
+1putFurniture
+updateFurniture
+1updateFurniture
+storeFurniture
+1storeFurniture
+unstoreFurniture
+1unstoreFurniture
+deleteStorageItem
+1deleteStorageItem
+removeFurniture
+1removeFurniture
+flipFurniture
+1flipFurniture
+setCustomTiles
+1setCustomTiles
+loadCustomTiles
+1loadCustomTiles
+saveTilesGroup
+1saveTilesGroup
+serializeCustomTiles
+1serializeCustomTiles
+pointsIncrement
+1pointsIncrement
+addPoints
+1addPoints
+1collectPoints
+setDirty
+1setDirty
+needsCleaning
+1needsCleaning
+clean
+1clean
+visit
+1visit
+loadStorage
+1loadStorage
+1loadFurniture
+deleteFurniture
+1deleteFurniture
+saveFurniture
+1saveFurniture
+saveNewStorageItem
+1saveNewStorageItem
+incrementAndSaveItemId
+1incrementAndSaveItemId
+saveStorageItem
+1saveStorageItem
+serializeStorage
+1serializeStorage
+serializeFurniture
+1serializeFurniture
+isEditable
+1isEditable
+2loadStorage
+2loadCustomTiles
+2isEditable
+2setSelectedStyle
+addSubcategory
+1addSubcategory
+addFurniture
+1addFurniture
+loadFromJSON
+1loadFromJSON
+getType
+1getType
+dress
+1dress
+cutAndDyeHair
+1cutAndDyeHair
+getHairType
+1getHairType
+getHairColor
+1getHairColor
+getHairStyle
+1getHairStyle
+incSocialStatusPoints
+1incSocialStatusPoints
+setStatusPointsFactor
+1setStatusPointsFactor
+loadMysteryItems
+1loadMysteryItems
+saveMysteryItems
+1saveMysteryItems
+openGift
+2openGift
+achievement_callback
+2achievement_callback
+dailyBonusCallback
+2dailyBonusCallback
+checkForGifts
+2checkForGifts
+loadFriends
+2loadFriends
+buildFriendCallback
+2buildFriendCallback
+prepareFriendsBelt
+2prepareFriendsBelt
+showDailyBonusFrame
+2showDailyBonusFrame
+2update
+showSSPsBuffIcon
+2showSSPsBuffIcon
+hideSSPsBuffIcon
+2hideSSPsBuffIcon
+getPapayaUserId
+1getPapayaUserId
+sharedGame
+1sharedGame
+getDatabase
+1getDatabase
+getServer
+1getServer
+audioOn
+1audioOn
+trackEvent
+1trackEvent
+showLoadingScreen
+1showLoadingScreen
+transitionLoadingScreen
+1transitionLoadingScreen
+loading1
+1loading1
+loading2
+1loading2
+loading3
+1loading3
+loading4
+1loading4
+hideLoadingScreen
+1hideLoadingScreen
+translateX
+1translateX
+translateY
+1translateY
+translateFontSize
+1translateFontSize
+untranslate
+1untranslate
+initializeTimers
+1initializeTimers
+initializeServer
+1initializeServer
+initializeDatabase
+1initializeDatabase
+quit
+1quit
+currentScreen
+1currentScreen
+lastScreen
+1lastScreen
+pushScreen
+1pushScreen
+popToRoot
+1popToRoot
+popScreen
+1popScreen
+setBanner
+1setBanner
+showBanner
+1showBanner
+hideBanner
+1hideBanner
+loadProperties
+1loadProperties
+saveProperties
+1saveProperties
+loadSounds
+2loadSounds
+rateReward
+2rateReward
+loadCities
+2loadCities
+2loadMysteryItems
+getCities
+2getCities
+loadAchievements
+2loadAchievements
+unlockAchievement
+2unlockAchievement
+loadGifts
+2loadGifts
+checkForReceivedGifts
+2checkForReceivedGifts
+saveGiftsCallback
+2saveGiftsCallback
+getGift
+2getGift
+2getGifts
+2save
+saveHusband
+2saveHusband
+saveWife
+2saveWife
+savePassport
+2savePassport
+saveWallet
+2saveWallet
+saveRealestate
+2saveRealestate
+updateLeaderboards
+2updateLeaderboards
+getFurniture
+2getFurniture
+getFurnitureCategories
+2getFurnitureCategories
+loadHusbandMessages
+2loadHusbandMessages
+getRandomMessage
+2getRandomMessage
+currentMinutesTick
+currentSecondsTick
+timersList
+name
+listeners
+lastTickCheck
+firingSecondsTick
+firingMinutesTick
+running
+repetitions
+ticks
+seconds
+args
+controlsCount
+attrs
+lowlight
+highlight
+_sprite
+tapEvent
+mustBubbleSize
+children
+textLabel
+textString
+font
+eventType
+controller
+argument
+canvas
+controlName
+x
+y
+didMove
+cancelEvents
+lock
+container
+ZOOM
+DRAG
+minZoom
+maxZoom
+currentScale
+multi
+state
+lastMoved
+startPos
+speed
+contentWidth
+contentHeight
+points
+dist0
+dist1
+buffType
+buffFactor
+buffTime
+buffWorkIcon
+buffShoppingIcon
+buffSSPsIcon
+id
+title
+description
+smallImage
+amount
+currency
+started
+hubby
+control
+screen
+bannerScreen
+husband
+workTimer
+shoppingTimer
+wife
+message
+wifeName
+houseLevel
+minutesAgo
+modalScreenStack
+firstTime
+configFile
+hudFrameTop
+hudFrameBottom
+scene
+calls
+callsCounter
+selectedItem
+cols
+rows
+tileWidth
+tileHeight
+addingItem
+tiles
+occupied
+left
+top
+depth
+z
+xpos
+ypos
+item
+prevLighted
+isFlipped
+area
+acceptButton
+cancelButton
+flippButton
+hiddenAcceptButton
+imageSprite
+editUIIsVisible
+ghost
+highlightSprite
+isHighlighted
+value
+xmlTemplates
+isRoot
+currentTutorial
+elements
+rootNode
+properties
+isWife
+animations
+textInput
+sounds
+occupation
+nameScreen
+husbandScreen
+carousel
+currentGame
+receivedGift
+currentGift
+player
+shop
+papayaUserId
+houseListing
+selectedHouse
+realestate
+propertyListing
+showingHouse
+fileNumber
+house
+houseStyle
+careerLevel
+hubbyLvlReq
+price
+MB_House_Select_Insufficient_Level
+houseNameLabel
+costDiamondsLabel
+costGameBucksLabel
+styles
+selectedStyle
+socialStatusPoints
+storage
+furniture
+customTiles
+level
+travelDestination
+currentPage
+today
+stampCompletedDateLabel
+souvenirTopLeftIcon
+souvenirTopRightIcon
+souvenirBottomLeftIcon
+souvenirBottomRightIcon
+souvenirMiddleIcon
+souvenirTopLeftCaption
+souvenirTopRightCaption
+souvenirBottomLeftCaption
+souvenirBottomRightCaption
+souvenirMiddleCaption
+souvinirPurchase
+MB_Travel_Return
+passport
+LondonSouvenirs
+SanFranciscoSouvenirs
+ParisSouvenirs
+BuenosAiresSouvenirs
+TokyoSouvenirs
+SydneySouvenirs
+datesCompleted
+promptFunction
+achievementIcon
+itemNameText
+itemDescriptionText
+diamondCost
+citiesVisited
+LondonCost
+SanFranciscoCost
+ParisCost
+BuenosAiresCost
+TokyoCost
+SydneyCost
+LondonCostText
+SanFranciscoCostText
+ParisCostText
+BuenosAiresCostText
+TokyoCostText
+SydneyCostText
+travelTimer
+startLocation
+endLocation
+MB_Travel_Sydney
+londonFirstVisit
+SanFranciscoFirstVisit
+ParisFirstVisit
+BuenosAiresFirstVisit
+TokyoFirstVisit
+SydneyFirstVisit
+shardGame
+MB_Insufficient_Miles
+screenUpdateTimer
+outShopping
+outWorking
+stressCooldown
+stressReductionTimer
+loveCooldown
+loveFillingTimer
+stressMeterValue
+MB_Hubby_Stress_Results
+loveTankValue
+MB_Hubby_Love_Results
+localVisits
+requiredVisits
+workStressorValue
+MB_Hubby_Stressed_Out
+shoppingDreadValue
+shoppingCounts
+MB_Hubby_Out_Of_Love
+MB_Hubby_Return_Shopping_Early
+MB_Hubby_Return_Work_Early
+MB_Hubby_Return_Work
+MB_Hubby_Level_Up
+rareItemThreshold
+furnitureListing
+stars
+mysteryItems
+mysteryItemCollection
+MB_Hubby_Return_Shopping
+MB_Secret
+pointsShowing
+selectedFloor
+selectedPaint
+currentItem
+selectedFurniture
+MB_HouseTutorial
+MB_RemodelHousePrompt
+MB_CantUnlockRemodel
+uncollectedPoints
+subcategories
+subcategory
+iso
+ref
+furnitureType
+gameBucks
+diamonds
+MB_Insufficient_Papayas
+MB_OutWorkTutorial
+MB_OutWorkShopping
+MB_CantOpenGift
+salary
+salaryFactor
+workSSPReturn
+MB_OutShoppingTutorial
+desc
+messages
+lastMessageNumber
+workBuffIcon
+shoppingBuffIcon
+updateTimer
+sendWorkText
+sendToWorkButtonOverlay
+sendShoppingText
+sendShoppingButtonOverlay
+stressCooldownText
+loveCooldownText
+careerLevelText
+careerStatusProgress
+salaryText
+loveTank
+loveTankLevelText
+stressMeter
+stressLevelText
+prevIsHome
+kissCost
+goOnADateCost
+playVideoGameCost
+watchTheGameCost
+style
+rooms
+row
+col
+blueprint
+room
+floor
+resource
+furnitureCategories
+colorsShown
+skinShown
+hairStyle
+hairColor
+sliderStartPosition
+sliderEndPosition
+body
+rightArm
+leftArm
+skinTone
+counter
+startWidth
+startHeight
+step
+direction
+currentAngle
+selectedIndex
+defaultView
+wallet
+param
+firingTime
+hookController
+hookType
+animationsMap
+currentTrack
+leftVolume
+rightVolume
+soundOn
+fontType
+fontTypeBold
+screenScale
+smallSize
+mediumSize
+largeSize
+url
+iosID
+androidID
+avatarUrl
+isGamePlayer
+accounts
+succeeded
+workBuffTime
+totalVisits
+updateWorkStats
+workHours
+pointsTimer
+cleaningTimer
+itemId
+remodels
+unlockLevel
+isDirty
+rewardTime
+cleanReward
+garbageTime
+category
+remodelRequirement
+firstPlay
+statusPointsFactor
+settingsText
+soundText
+notificationsText
+updateFunction
+ssp
+miles
+gamebucks
+db
+server
+loadingScreen
+advertisement
+loadingBar
+loadingBarStart
+loadingProgress
+loadingBarEnd
+loadingText
+screens
+store
+gifts
+furnitures
+milesEarnedTimer
+cities
+achievements
+husbandMainMenuScreenMessages
+husbandHusbandScreenMessages
+18900 timerHandler
+firingTimer tick arg
+18914 timerTickUpdate
+request_id ret_code response_content response currentTick
+19073 registerTimer
+this timer
+19124 getTimer
+this name
+19138 registerListener
+this timerName listener timer
+19166 unregisterListener
+this timerName listener timer
+19195 startTimers
+this currentTick storedTick
+19362 updateRemoteTimerTick
+this newTime
+19418 processTimers
+this keys i timer ticks
+19633 Timer
+this name seconds reps
+19694 tick
+this
+19699 run
+this i
+19790 stop
+this
+19810 changeRunningTime
+this secs timeLeft deltaMinutes deltaSeconds
+19878 reset
+this deltaMinutes deltaSeconds
+19932 restart
+this
+19970 start
+this
+19990 getTimeLeft
+this
+20022 getTimeString
+this timeLeft minutes seconds
+20105 timerDBKey
+this
+20127 load
+this timerData
+20321 save
+this serializedTimer
+20395 serialize
+this timerData
+20492 distance
+point0 point1 dx dy
+20543 newControlFromAttributes
+this attrs control className resource highlightFile resParts handler w h strColor parts
+21097 Control
+this resourceImage
+21237 addChild
+this childControl
+21269 removeChild
+this child
+21305 removeFromParent
+this sprt parentSprite
+21470 removeAllChildren
+this
+21507 configureEvents
+this
+21633 addToParent
+this parent zIndex strZIndex
+21720 getSprite
+this
+21729 parseText
+this text pos size fontSize fontStyle strFontStyle textAlign strTextAlign selectedFont strFont ret width
+22274 setFont
+this fontName fontSize style align wrapMode size textAlign fontStyle
+22498 setText
+this text defaultFont
+22581 getText
+this
+22589 bubbleUpSize
+this width height size
+22660 addEvent
+this eventName argument eventType
+22684 attachEvent
+this node eventName argument eventType ev
+22740 eventFired
+this event
+22755 getCanvas
+this ele
+22764 tapEventHandler
+this event worldPos p1 p2 dist pos newPos newEvent target
+23214 translateEvent
+this event pos newPos newEvent
+23293 controlTapped
+this
+23377 newScrollFromAttributes
+this attrs scroll
+23519 Scroll
+this left top w h
+23788 configureEvents
+this
+23793 addToParent
+this parent zIndex strZIndex
+23898 removeFromParent
+this
+23926 bubbleUpSize
+this width height
+23938 getSprite
+this
+23947 eventFired
+this event
+24152 dragStarted
+this event
+24203 dragMoved
+this event newX newY
+24338 dragEnded
+this event newX newY cWidth cHeight
+24647 zoomStarted
+this event
+24688 zoomMoved
+this event scaleDelta pos
+24866 zoomEnded
+this event scaleDelta pos
+25033 offsetLeft
+this
+25048 offsetTop
+this
+25063 setContentSize
+this width height
+25096 setZoomLimits
+this minZoom maxZoom
+25116 newGiftFromAttributes
+this giftAttrs gift
+25571 GiftItem
+this id title type description image smallImage amount currency
+25679 canOpenGift
+this ongoingBuff
+25740 createBuffFromGift
+this gift buff
+25867 getBuffForGift
+this gift buff
+26147 startBuffs
+this currentGift gift buf
+26267 showIconsForGift
+this gift workIcon shoppingIcon sspIcon
+26411 resetBuffs
+this buffType
+26537 clearBufs
+this
+26675 Buffs
+this
+26680 execute
+this factor time
+26709 DebuffHusbandWorkTime
+this
+26714 execute
+this factor time
+26743 DebuffHusbandShoppingTime
+this
+26748 execute
+this factor time
+26801 DebuffHusbandWorkShoppingTime
+this
+26806 BuffHusbandWorkTime
+this
+26845 execute
+this factor time
+26927 tick
+this
+26985 BuffHusbandSalary
+this
+27022 execute
+this factor time
+27101 tick
+this
+27159 execute
+this factor time
+27221 BuffRareItemChance
+this
+27226 BuffSStatusPoints
+this
+27263 execute
+this factor time
+27342 tick
+this
+27400 GossipMessage
+this msg name level minutesAgo
+27433 serialize
+this papayaUserId gossipMessageArray
+27538 ScreenController
+this controlledScreen
+27572 screenLoaded
+this
+27577 screenUnloaded
+this
+27582 showTutorial
+this
+27587 screenPostLoaded
+this
+27615 eventFired
+this event scrName evParts evName
+27854 hookFired
+this event
+27859 showMessageBox
+this mbType promptScreen
+27931 presentModalScreen
+this modalScreen newCanvas
+28155 reactivateEvents
+this
+28168 dismissModalScreen
+this modalScreen nextModalScreen
+28389 Runnable
+this
+28416 addCall
+this method args
+28438 runSerialized
+this interval i method args
+28519 callSerialized
+this timer tick param method args
+28607 newCanvasFromAttributes
+this attrs canvas
+28805 IsometricCanvas
+this left top cols rows tileWidth tileHeight width height
+28890 removeFromParent
+this sprt parentSprite
+29034 createTiles
+this y r x i tile bottomTile rightTile
+29271 destroyTiles
+this y x
+29363 destroyItems
+this n item itemSprite tiles i
+29483 getTile
+this x y
+29522 unselectSelectedItem
+this
+29556 selectItem
+this item
+29630 acceptItem
+this item
+29663 cancelAdding
+this
+29748 removeItem
+this item
+29822 liftItem
+this item tiles i
+29869 addItem
+this item x y itemSprite z
+29977 newItem
+this item x y
+30020 placeItem
+this item x y tile itemSprite itemWidth itemHeight x1000 y1000 itemWidth1000 itemDepth1000 z left top
+30269 isInFrontOf
+this aItem bItem
+30559 startBubbleSort
+this swapped j tmp i z item itemSprite parent
+30796 reorganize
+this
+30810 setTilesForItem
+this item tilex tiley y x tile
+30948 tileFromPos
+this xpos ypos x y tileWidth tileHeight tileAspect mapTop mapLeft ymouse _ymouse xmouse xtile ytile
+31363 testPlacement
+this item tileX tileY y x tile
+31488 placeOnTile
+this item xpos ypos i tilePos
+31672 highlightTiles
+this item xpos ypos tilePos
+31710 setHighlightTiles
+this item xTile yTile y x tile
+31819 clearHighlight
+this i
+31873 visibleTile
+this pos size
+31935 centerOnTile
+this x y tile size
+32010 tileTapped
+this tile
+32039 translateEvent
+this event pos newPos scrollPos newEvent
+32168 IsometricItem
+this imageResource width depth size
+32359 destroy
+this
+32409 changeImage
+this newImage
+32427 setCanvas
+this canvas
+32489 configureEvents
+this
+32604 testPlacement
+this pos result
+32665 createEditingUI
+this
+33206 removeEditingUI
+this
+33266 moveEditingUI
+this size pos middleX topY
+33443 unselect
+this
+33467 hideAcceptButton
+this
+33595 toggleEditingUI
+this
+33718 swapWidthAndDepth
+this depth
+33746 flipItem
+this size firstTile
+33950 flip
+this
+34032 calculatePosition
+this pos size itemWidth itemHeight x1000 y1000 itemWidth1000 x y
+34235 addGhost
+this parent
+34302 removeGhost
+this
+34327 updateGhostPos
+this posnow
+34367 eventFired
+this event pos ret parent result deltaX deltaY posnow
+34705 controlTapped
+this
+34724 buttonTapped
+this button
+34884 IsometricTile
+this x y width height
+34992 configureEvents
+this
+35107 controlTapped
+this
+35126 addToCanvas
+this canvas
+35288 destroy
+this
+35334 lightUp
+this item
+35516 lightDown
+this
+35554 setFlatResource
+this resource item_width item_depth newSprite size top left parent x1000 y1000 itemWidth1000
+35748 setResource
+this resource item_width item_depth newSprite size itemWidth itemHeight x1000 y1000 itemWidth1000 left top parent
+35976 removeItem
+this
+36003 Button
+this resourceImage controller name
+36032 destroy
+this
+36064 configureEvents
+this
+36179 controlTapped
+this
+36203 FixedPoint
+this val
+36220 div
+this fpNumber divNum
+36257 mul
+this fpNumber mulNum
+36294 add
+this fpNumber addNum
+36326 sub
+this fpNumber subNum
+36358 integer
+this
+36371 round
+this ival mantisse
+36426 begin
+this
+36455 addPoint
+this name
+36479 end
+this report prevT i deltaT totalT keys
+36725 Profiler
+this
+36738 Screen
+this
+36773 getScreenName
+this
+36810 addElement
+this name element
+36838 getElement
+this name
+36852 addEvent
+this node eventName argument eventType ev
+36912 parseEvents
+this control attrs newSprite onTap ev onTouchUp onTouchDown onMove
+37141 controlFromXmlNode
+this ele attrs text control newSprite
+37335 parseNode
+this node parent elems i ele control
+37457 create
+this dict screenCfg screenNode
+37760 showNextTutorial
+this
+37809 showPrevTutorial
+this
+37859 showTutorialStep
+this step oldTut newTut
+37993 controlFromXMLString
+this xmlString dict ele control
+38044 arrayToString
+this arr newstr i
+38091 getTemplateText
+this fileName templateText file_handler result
+38221 controlFromXMLTemplate
+this templateName argsDictionary fileName strXML keys i dict templates tplt attrs screenNode
+38520 build
+this
+38525 destroy
+this
+38577 gotFocus
+this
+38582 lostFocus
+this
+38587 bubbleUpSize
+this width height
+38593 load
+this
+38742 save
+this
+38829 setProperty
+this key value
+38856 getProperty
+this key
+38870 NameEnterScreen
+this
+38890 getText
+this
+38897 build
+this
+38996 startHusbandAnimation
+this husband faceSprite action
+39082 stopWifeAnimation
+this
+39233 destroy
+this
+39239 gotFocus
+this vf
+39392 lostFocus
+this
+39544 stopHusbandAnimation
+this
+39582 HusbandSelectionController
+this controlledScreen
+39597 screenLoaded
+this
+39647 nameChanged
+this name
+39668 eventFired
+this event mainScreen controller
+40658 HusbandSelectionScreen
+this
+40671 gotFocus
+this
+40684 lostFocus
+this
+40698 build
+this
+40923 updateSelection
+this husbandType wifeTypeBox1 wifeTypeBox2 wifeTypeBox3 wifeTypeBox4 wifeTypeBox5
+41904 MysteryItemsController
+this controlledScreen
+41919 screenLoaded
+this
+41932 screenUnloaded
+this
+41937 eventFired
+this event
+41990 ReceiveGiftController
+this controlledScreen receivedGift
+42012 screenLoaded
+this
+42052 presentModalScreen
+this modalScreen giftDescription
+42155 eventFired
+this event gift
+42549 GiftOthersPromptController
+this controlledScreen player
+42578 screenLoaded
+this
+42646 eventFired
+this event ret params screen controller
+43534 HouseSelectionController
+this controlledScreen
+43550 screenLoaded
+this
+43680 screenUnloaded
+this
+43686 eventFired
+this event
+44056 selectHouse
+this
+44138 buyHouse
+this ret houseSelectionBar screen controller promptScreen
+44829 updateCheckmark
+this asset
+44999 displayHouse
+this house
+45666 getSelectedHouse
+this i house houseStyleId
+45769 OtherPlayerController
+this controlledScreen player
+45791 screenLoaded
+this
+45905 buildOtherPlayerScreen
+this request_id ret_code response_content response wife husband husbandName husbandType citiesVisited jobLevel loveTank stressLevel houseLevel husbandNameElement houseWife socialStatusPointsElement houseLevelElement citiesVisitedElement jobLevelElement loveTankElement stressLevelElement
+46569 eventFired
+this event screen controller
+46858 buildHouseScreen
+this request_id ret_code response_content response customTiles houseCustomTiles i tg furnitures houseFurniture j furnitureItem storage houseStorage k storageItem selectedStyleId level house screen controller
+47420 getHusbandTexture
+this occupation
+47788 PassportController
+this controlledScreen
+47804 screenLoaded
+this
+49010 eventFired
+this event promptScreen
+49321 setPage
+this
+56985 checkAchievements
+this
+58658 hreturnhome
+this
+58760 GiftShopController
+this controlledScreen
+58776 screenLoaded
+this
+60218 eventFired
+this event passportScreen controller
+66418 checkForPoppedBalloons
+this itemsBought
+68675 buySouvenir
+this city souvenirLevel ret
+69203 collectCompletePurchasePoints
+this
+69454 stopGiftShopAnimationTransition
+this
+69500 balloonsFlyAway
+this
+70970 transitionToPassportScreen
+this passportScreen controller
+71083 hBuySouvenirAtLevel
+this level ret
+71144 hBuySouvenir1
+this x
+71159 hBuySouvenir2
+this x
+71174 hBuySouvenir3
+this x
+71189 hBuySouvenir4
+this x
+71204 hBuySouvenir5
+this x
+71219 pushPremiumCurrencyScreen
+this screen controller
+71313 City
+this
+71318 TravelController
+this controlledScreen
+71334 screenLoaded
+this
+72119 eventFired
+this event slider dist posX posY promptScreen
+73590 getCostTest
+this value thousands hundreds costText
+73648 flyTo
+this location travelImage
+74954 showGiftShopScreen
+this giftShopScreen controller
+75027 buyTicketTo
+this destination ret promptScreen
+75139 buyTicketToLondon
+this
+75161 buyTicketToSanFrancisco
+this
+75189 buyTicketToParis
+this
+75210 buyTicketToBuenosAires
+this
+75237 buyTicketToTokyo
+this
+75258 buyTicketToSydney
+this
+75280 planeTravelTimer
+this
+75316 tick
+this giftShopScreen controller
+75396 GossipController
+this controlledScreen
+75411 screenLoaded
+this
+75479 buildMessageListAndBestWife
+this request_id ret_code response_content response messages bestWife topHouseWife
+75638 updateMessageList
+this request_id ret_code response_content response messages
+75744 eventFired
+this event
+75865 HusbandController
+this controlledScreen
+75880 screenLoaded
+this
+75996 screenUnloaded
+this
+76058 eventFired
+this event promptScreen cost ret
+77612 reduceStressBy
+this value promptScreen
+77794 fillLoveTankBy
+this value promptScreen
+77976 timerFired
+this timer
+78184 sendHusbandToWork
+this hubbyStress
+78623 displayTooStressedPrompt
+this promptScreen
+78698 sendHusbandShopping
+this
+78974 displayOutOfLovePrompt
+this promptScreen
+79048 displayOutShoppingPrompt
+this promptScreen
+79122 displayOutWorkingPrompt
+this promptScreen
+79196 returnFromWorkPrompt
+this promptScreen
+79282 checkForLevelUp
+this promptScreen
+79429 thresholdWeighedWithBuff
+this thrx
+79545 returnFromShoppingPrompt
+this itemType rareness shoppingItem commonItems rareItems veryRareItems extremelyRareItems selectionRange selectionIndex threshold furnLen i itemLevel miLen j promptScreen
+81340 secretPopUp
+this promptScreen
+81414 hcantcomplete
+x
+81457 hcancel
+x
+81482 hreturnwork
+ret
+81585 hreturnshopping
+ret
+81696 gotoPremiumCurrencyDiamonds
+screen controller
+81790 gotoPremiumCurrencyGameBucks
+screen controller
+81886 husbandStressReductionTimer
+this
+81934 tick
+this
+81981 husbandLoveFillingTimer
+this
+82025 tick
+this
+82072 HouseController
+this controlledScreen pHouse
+82136 screenLoaded
+this
+82178 showTutorial
+this
+82196 screenUnloaded
+this
+82231 eventFired
+this event
+83186 promptForRemodel
+this promptScreen remodel
+83352 doRemodel
+this remodel ret
+83452 pushPremiumCurrencyScreen
+this screen controller
+83546 startDecorator
+this
+83559 stopDecorator
+this map
+83598 showStorage
+this
+83622 hideStorage
+this
+83638 forSale
+this screen controller
+83717 collectPoints
+this
+83778 showPointsToCollect
+this points
+83860 showHouseNeedsCleanUp
+this
+83919 cleanHouse
+this
+83970 timerFired
+this timer
+84011 categoryTapped
+this category map
+84069 subcategoryTapped
+this subcategory
+84102 furnitureTapped
+this furniture map
+84237 hookFired
+this ev event tilePos
+84414 addSelectedFurniture
+this tileX tileY centeredX centeredY map frnture
+84660 showDecorator
+this
+84684 hideDecorator
+this
+84700 areaTapped
+this area map
+84793 itemTapped
+this item area furniture ret
+84973 itemAccepted
+this item furniture ret map screen controller
+85232 itemRemoved
+this item
+85253 itemMoved
+this item x y
+85315 itemFlipped
+this item
+85375 moveItemToStorage
+this item map
+85462 storageTapped
+this item map tile furniture frnture
+85755 MessageBoxScreen
+this newType arg
+85782 build
+this itemRetrieved sizeX sizeY scaleX scaleY shoppingText shoppingItemText
+89318 displayOkayPrompt
+this displayText okayButton
+89408 setOkayPromptTextSize
+this newSize style align wrapMode okayPromptText
+89472 setOkayPromptPosition
+this posX posY okayPromptText
+89533 displayConfirmCancelPrompt
+this bakedText confirmButton
+89651 MysteryItemsScreen
+this
+89664 build
+this
+89728 displayMysteryItems
+this mysteryItemCatalog leftStart left top mysteryItemsCount shelfStart i row col item itemImage itemName imageLeft imageTop params property newShelf
+90487 ReceiveGiftScreen
+this
+90500 build
+this
+90505 GiftOthersPromptScreen
+this
+90518 build
+this
+90524 drawGiftsWall
+this giftsScroll left yTop gifts rowsGift secondRow i gift params scrollGiftItem
+90912 showGiftItemPromt
+this gift currencyIcon
+91227 toggleFrameStack
+this visible
+91271 gotFocus
+this
+91293 RealEstate
+this
+91298 HouseSelectionScreen
+this
+91312 build
+this
+91502 displayHouses
+this houseSelectionBar left i house houseSmallFrame houseType houseText params property
+92261 loadHouseListing
+this xmldict xmlhouses i xmlhouse houseattrs realEstate
+92663 OtherPlayerScreen
+this
+92676 build
+this
+92681 gotFocus
+this
+92698 lostFocus
+this
+92712 stopWifeAnimation
+this
+92863 PassportScreen
+this purchase
+92883 build
+this
+92888 gotFocus
+this
+92901 lostFocus
+this
+92914 GiftShopScreen
+this
+92927 gotFocus
+this
+92948 lostFocus
+this
+92977 startGiftShopIdleAnimation
+this peopleAnimation action
+93064 stopGiftShopIdleAnimation
+this
+93104 startGiftShopEndAnimation
+this peopleAnimation action
+93188 stopBalloonAnimation
+this
+93193 stopGiftShopEndAnimation
+this
+93233 TravelScreen
+this
+93246 gotFocus
+this
+93263 lostFocus
+this
+93276 build
+this
+93281 GossipScreen
+this
+93303 build
+this
+93315 gotFocus
+this vf
+93442 lostFocus
+this
+93474 stopWifeAnimation
+this
+93625 drawBestHouseWife
+this topHouseWife
+93704 addMessageToWall
+this idx message ypos crownTexture params
+94092 updateMessages
+this msgs
+94118 drawWall
+this messages scroll i message control textEle size vertSize bgEle bottEle
+94585 post
+this msg
+94764 buildMessageListAndBestWife
+this request_id ret_code response_content response messages bestWife topHouseWife
+94917 gossipScreenUpdateTimer
+this
+94961 tick
+this
+94966 HusbandScreen
+this
+95000 build
+this husbandElement husband
+95071 initializeScreen
+this occupation name
+96242 showChatText
+this chatText husbandMessage
+96494 hideChatBubble
+this
+96546 gotFocus
+this currentGift gift workIcon shoppingIcon
+96997 startHusbandAnimation
+this husband faceSprite action
+97111 stopHusbandAnimation
+this
+97178 lostFocus
+this
+97228 fillLoveTank
+this
+97420 closeLoveOptions
+this
+97463 closeStressOptions
+this
+97509 releaseStress
+this
+97705 displayWorkBuffIcon
+this iconElement sprt
+97829 displayShoppingBuffIcon
+this iconElement sprt
+97953 showWorkBuffIcon
+this icon
+97973 hideWorkBuffIcon
+this
+97993 showShoppingBuffIcon
+this icon
+98013 hideShoppingBuffIcon
+this
+98034 updateLabels
+this timer tick param salary
+98770 display
+this sprite
+98901 displayOut
+this sprite occupation
+99362 update_career_stats
+this distance t s
+99499 updateLoveTank
+this tank value
+99836 updateStressMeter
+this meter value
+100007 HouseScreen
+this pHouse
+100035 redrawIso
+this
+100190 gotFocus
+this
+100274 lostFocus
+this
+100305 build
+this
+100311 setWalls
+this i room j
+100480 setBlueprint
+this tiles map r c row col t asset
+100764 lockTiles
+this tiles map r c row col t
+100888 setTiles
+this tiles styleItem map customTiles r c col row t res frnture
+101564 loadFurniture
+this map items i it f frnture
+101773 setFloor
+this tiles furniture map r c col row t
+101970 setPaint
+this tiles furniture map r c col row t
+102214 buildCategories
+this categories categoriesBar left i bg cat item catItem
+102554 buildSubcategories
+this subcategories subcategoriesBar subnodes n t left i cat item
+102854 buildFurnitureList
+this items furnitureBar left i furniture itemParams template
+103306 asyncItemLoad
+this firingTimer tick args furnitureBar item
+103397 buildStorageList
+this items furnitureBar left i it furniture itemXML item
+103845 showDecorator
+this container
+103946 hideDecorator
+this container
+104047 showSubcategories
+this container
+104114 showItems
+this container
+104181 showStorage
+this container
+104282 hideStorage
+this container
+104383 WifeCustomizationController
+this controlledScreen
+104412 screenLoaded
+this
+104485 nameChanged
+this name
+104506 eventFired
+this event husbandScreen controller
+106484 checkNextTutorialStep
+this
+106489 WifeCustomizationScreen
+this
+106502 gotFocus
+this
+106533 lostFocus
+this
+106547 stopWifeAnimation
+this
+106698 build
+this
+106704 displayCustomizationFrame
+this frame hairStyleContainer hairColorContainer skinToneContainer
+106933 updateHairStyleSelection
+this hairstyle01b hairstyle01f hairstyle02b hairstyle02f hairstyle03b hairstyle03f hairstyle04b hairstyle04f hairstyle05b hairstyle05f hairstyle06b hairstyle06f hairType hairColor base
+107773 setSliderStartingPosition
+this newPosition
+107786 slideSkinToneSlider
+this newPosition slider dist posX posY
+108639 getSkinTone
+this
+108777 setCheckMark
+this checkMarkName idx i
+108868 setHairStyleCheckmark
+this idx
+108900 setHairColorCheckmark
+this idx
+108933 rotateLoop
+timer tick carousel i e element currentAngle x y scale width height parent
+109214 Carousel
+this type
+109324 addElement
+this ele angle e
+109369 rotateToIndex
+this idx e targetAngle loops
+109622 PremiumCurrencyController
+this controlledScreen
+109638 screenLoaded
+this
+109858 eventFired
+this event diamonds gameBucks currencyName description title amount papayas paymentParams
+110730 onPaymentFinished
+this pid ret tid receipt param wallet amount currency money db purchaseCount promptScreen
+111379 PremiumCurrencyScreen
+this defaultView
+111399 gotFocus
+this
+111412 lostFocus
+this
+111425 build
+this
+111430 showFirstTimeBuyerPopup
+this
+111476 hideFirstTimeBuyerPopup
+this
+111528 eventHandler
+node event param x y points hookResult nodeEvents i
+111738 addEvent
+this event arrayList
+111815 removeEventsForHandler
+this objectHandler
+111829 removeEventsForHandlerAndChildren
+this objectHandler nodes i
+111894 setHook
+this controller eventType
+111913 clearHook
+this controller eventType
+111932 run
+this
+111950 copy
+this e
+112071 Event
+this
+112076 run
+this
+112089 GoBackEvent
+this
+112102 run
+this
+112115 QuitEvent
+this
+112129 Animations
+this
+112528 getAnimation
+this strAnimationName action
+112565 getRightArmAnimation
+this rightArmSequence action secondAction
+121790 getLeftArmAnimation
+this leftArmSequence action secondAction
+130693 getBusinessLeftArmAnimation
+this businessLeftArmSequence action secondAction
+140892 getBusinessRightArmAnimation
+this businessRightArmSequence action secondAction
+151413 getRetroLeftArmAnimation
+this retroLeftArmSequence action secondAction
+160644 getRetroRightArmAnimation
+this retroRightArmSequence action secondAction
+170197 getRockerLeftArmAnimation
+this rockerLeftArmSequence action secondAction
+179750 getRockerRightArmAnimation
+this rockerRightArmSequence action secondAction
+189625 buildGenericWifeFaceAnimation
+this genericWifeFaceAction action
+192653 buildExecutiveAnimation
+this action
+196687 buildSportsAnimation
+this action
+201081 buildLawyerAnimation
+this action
+205475 buildDoctorAnimation
+this action
+209869 buildBankerAnimation
+this action
+214263 getGiftShopBalloonsAnimation
+this action
+214642 getGiftShopIdleAnimation
+this action
+218856 getGiftShopAnimation
+this action
+224044 Sounds
+this
+224077 addSound
+this name location sound
+224159 addMusic
+this name location sound
+224240 playSFX
+this name sound
+224336 playMusic
+this name sound
+224470 pause
+this
+224493 resume
+this
+224532 stop
+this
+224595 restart
+this
+224638 setVolume
+this left right
+224657 turnOff
+this
+224716 turnOn
+this
+224777 Font
+this
+224916 getFont
+this
+224924 getBoldFont
+this
+224932 setFont
+this newFontType
+224944 getSmallFontSize
+this
+224952 getLargeFontSize
+this
+224960 Server
+this
+225000 register
+this husband wife couple serializedHusband passport
+225144 syncWife
+this wife
+225193 syncHusband
+this husband passport serializedHusband
+225283 syncHouse
+this house
+225357 getOtherPlayerHouse
+this papayaUserId callback params
+225421 getOtherPlayerProfile
+this papayaUserId callback params
+225486 postGossip
+this gossipWallMessage callback
+225522 getMessagesAndBestWife
+this callback wife
+225583 getCurrentDateAndTick
+this callback
+225626 getGifts
+this callback
+225684 sendGift
+this params
+225716 getDailyBonus
+this callback
+225779 makeRequest
+this path callback params completeUrl
+225856 defaultCallBack
+this request_id ret_code response_content
+225918 Achievement
+this IosID AndroidID Name
+225944 buyFurniture
+this furniture costGB costD payments ret
+226036 buyHouseRemodel
+this remodel cost ret
+226073 buyStressRelease
+this type ret cost
+226258 buyLoveRefill
+this type ret cost
+226385 buyImmediateReturn
+this from cost ret
+226517 buyHouse
+this house price cost ret
+226575 buyGift
+this gift cost ret
+226625 buySouvenir
+this city souvenirLevel diamonds cost ret
+226672 getSouvenirCost
+this city souvenirLevel costList cityCost diamonds
+226864 buyTripTo
+this location travelCost travelCurrency cost ret
+226928 getLocationCosts
+this locationCosts
+227114 getTravelCost
+this location travelCost
+227171 getTravelCurrency
+this location travelCurrency
+227194 getGameBucks
+this amount
+227226 getDiamonds
+this amount
+227257 Shop
+this
+227262 MysteryItem
+this pId pName pDesc pFileName pStars pPoints
+227308 Realestate
+this
+227322 load
+this papayaUserId realestateMap
+227502 save
+this papayaUserId serializedRealestate
+227603 serialize
+this papayaUserId realestateArray
+227675 PapayaFriend
+this papayaUserId name avatarUrl isGamePlayer
+227708 Passport
+this
+227722 load
+this papayaUserId passportMap
+229075 save
+this papayaUserId serializedPassport
+229173 serialize
+this papayaUserId passportArray
+229695 Currency
+this name image
+229713 Money
+this currency amount
+229732 Account
+this currency amount
+229751 add
+this amount
+229769 test
+this amount
+229791 substract
+this amount
+229828 Wallet
+this gameBucks diamonds miles wallet
+230074 collect
+this money account
+230153 pay
+this money account response
+230224 payMultiple
+this moneyArray i money account
+230310 testMultipleAccounts
+this moneyArray i money account ret
+230432 moneyForCurrency
+this amount currencyName account currency
+230463 getBalance
+this currencyName account
+230484 purchaseCurrency
+this money controller ev
+230527 load
+this
+230532 save
+this serializedWallet
+230618 serialize
+this papayaUserId walletArray
+230780 PurchaseCurrencyEvent
+this
+230816 Husband
+this controller
+230952 getHusbandAnimation
+this
+231113 getHusbandTexture
+this
+231441 isHome
+this
+231471 setSalaryFactor
+this factor
+231491 setRareItemThreshold
+this factor
+231511 coolDown
+this
+231543 returnFromWork
+this payment ret
+231834 returnFromShopping
+this
+232040 checkAchievements
+this
+232325 levelUp
+this
+232966 updateVisits
+this
+233223 updateWorkHours
+this
+233363 setWorkBuffTime
+this buffTime
+233383 clearWorkBuffTime
+this
+233403 increaseWorkHours
+this newHours
+233503 load
+this papayaUserId husbandMap
+234462 save
+this papayaUserId serializedHusband
+234559 serialize
+this papayaUserId husbandArray
+235397 hlevel
+x
+235430 hyes
+x
+235469 hno
+x
+235508 outToWorkTimer
+this
+235606 tick
+this
+235657 outShoppingTimer
+this
+235693 tick
+this
+235744 copy
+this newCopy
+235801 getId
+this
+235822 serialize
+this map
+235964 deserialize
+this customTile tilesGroup furniture
+236086 TilesGroup
+this
+236091 Room
+this
+236104 Style
+this
+236116 StyleItem
+this
+236121 Remodel
+this
+236127 House
+this styleId
+236385 getLevel
+this
+236393 currentRemodel
+this remodel
+236413 nextRemodel
+this remodel
+236486 remodel
+this remodel
+236537 checkAchievements
+this
+236660 setSelectedStyle
+this styleId
+236709 load
+this houseMap
+236808 save
+this
+236883 loadBlueprint
+this xmldict blutiles i xmlt tileattrs
+237114 loadMap
+this xmldict houses house houseAttrs xmlrooms i xmlr roomattrs room xmltileGroups j xmltg xmlGroup tileGroup
+237687 loadStyles
+this xmldict xmlstyles i xmlstyle styleattrs style xmlstyleItems j xlst xmlItem stItem
+238203 loadRemodels
+this xmldict xmlstyles i xmlremodel remodelattrs remodel
+238663 putFurniture
+this item
+238793 updateFurniture
+this item
+238873 storeFurniture
+this item
+238917 unstoreFurniture
+this item
+238960 deleteStorageItem
+this storageItem key savedStorageItems deletedObject
+239103 removeFurniture
+this item
+239135 flipFurniture
+this item
+239178 setCustomTiles
+this tilesGroup type furniture tilesId tg
+239269 loadCustomTiles
+this papayaUserId key savedCustomTiles customTiles savedCustomTilesArray i tg
+239416 saveTilesGroup
+this tg papayaUserId key customTiles
+239521 serializeCustomTiles
+this serializedCustomTiles customTilesArray i customTile
+239588 pointsIncrement
+this keys length result count item
+239726 addPoints
+this
+239743 collectPoints
+this
+239841 setDirty
+this
+239853 needsCleaning
+this
+239861 clean
+this payment ret
+239959 visit
+this
+239976 loadStorage
+this key serializedStorage storage serializedStorageArray i furnitureItem
+240125 loadFurniture
+this key savedFurnitures furniture savedFurnituresArray i furnitureItem
+240319 deleteFurniture
+this furniture key savedFurnitures
+240407 saveFurniture
+this furniture key savedFurnitures
+240527 saveNewStorageItem
+this furniture furnitureItem
+240612 incrementAndSaveItemId
+this
+240661 saveStorageItem
+this storageItem key savedStorageItems
+240754 serialize
+this houseMap
+240914 serializeStorage
+this serializedStorage storageArray i furnitureItem
+241015 serializeFurniture
+this furnitureArray furnitures i furnitureItem
+241081 isEditable
+this
+241086 OtherPlayerHouse
+this
+241099 loadFurniture
+this
+241111 loadStorage
+this
+241123 loadCustomTiles
+this
+241128 isEditable
+this
+241133 setSelectedStyle
+this styleId
+241154 HousePointsTimer
+this
+241193 tick
+this
+241212 HouseCleaningTimer
+this
+241254 tick
+this
+241273 FurnitureCategory
+this catName image
+241299 addSubcategory
+this subCat
+241323 FurnitureSubcategory
+this subCatName image
+241349 addFurniture
+this furnit
+241373 Furniture
+this id name image width depth level gameBucks diamonds stars points remodelRequirement
+241453 FurnitureItem
+this furniture left top flipped
+241493 getId
+this
+241502 deserialize
+this serializedItem itemId furnitureTypeId furnitureType left top isFlipped furnitureItem
+241637 serialize
+this map
+241763 Wife
+this
+241806 loadFromJSON
+this bestWife
+241946 getType
+this
+241954 dress
+this screen body face action rightArm rightArmAction leftArm leftArmAction hairBack shoes pants belt dress shirt jacket hairFront undies rightArmSleeve leftArmSleeve
+243925 cutAndDyeHair
+this screen hairBack hairFront hairTypeText hairColorText hairStyleText base frontString backString
+244127 getHairType
+this
+244307 getHairColor
+this
+244441 getHairStyle
+this
+244564 incSocialStatusPoints
+this points total
+244708 checkAchievements
+this
+244876 setStatusPointsFactor
+this newFactor
+244897 load
+this papayaUserId db wifeMap
+245333 loadMysteryItems
+this papayaUserId db mysteryIds i
+245445 save
+this papayaUserId serializedWife
+245549 saveMysteryItems
+this papayaUserId keys
+245647 serialize
+this papayaUserId wifeArray
+245899 MainController
+this controlledScreen
+245915 screenLoaded
+this
+246637 screenUnloaded
+this
+246643 eventFired
+this event screen controller web url socialPlayer lastRewardDay
+249460 openGift
+this storedGifts receivedGift countElement screen controller
+249777 achievement_callback
+this id ret content param
+249821 dailyBonusCallback
+this request_id ret_code response_content response lastRewardDay currency amount dailyBonus reward db
+250190 checkForGifts
+this storedGifts giftsIcon countElement
+250436 loadFriends
+this friends queryParams param
+250516 buildFriendCallback
+this requestId ret_code response param flist friends i friendUserId name avatarVersionId avatarUrl isGamePlayer friend
+250854 mainScreenUpdateTimer
+this functionArg
+250903 tick
+this
+250958 MainScreen
+this
+250978 build
+this husbandElement husband
+251069 showChatText
+this chatText husbandMessage
+251228 hideChatBubble
+this
+251265 gotFocus
+this
+251324 lostFocus
+this
+251423 stopWifeAnimation
+this
+251574 startHusbandAnimation
+this husband faceSprite action
+251659 stopHusbandAnimation
+this
+251722 prepareFriendsBelt
+this friends friendsBelt left totalFriendsToDisplay friendsCount avatarLeft avatarTop i friend friendParams property j fakeFriendParams fakePapayaFriend
+252454 showDailyBonusFrame
+this db lastReward count i
+252830 WifeSelectionController
+this controlledScreen
+252845 screenLoaded
+this
+252893 eventFired
+this event screen controller
+253406 WifeSelectionScreen
+this
+253420 build
+this
+253635 updateSelection
+this wifeType wifeTypeBox1 wifeTypeBox2 wifeTypeBox3 wifeTypeBox4 wifeTypeBox5
+254597 HUDController
+this controlledScreen
+254613 screenLoaded
+this
+254939 eventFired
+this event screen controller house
+256072 HUDScreen
+this
+256094 build
+this
+256100 update
+this
+256272 showSSPsBuffIcon
+this icon sprt
+256326 hideSSPsBuffIcon
+this sprt
+256370 hudScreenUpdateTimer
+this
+256411 tick
+this
+256460 getPapayaUserId
+this
+256471 sharedGame
+this
+256479 getDatabase
+this
+256506 getServer
+this
+256534 audioOn
+this
+256717 trackEvent
+this category action label value
+256764 showLoadingScreen
+this
+256991 transitionLoadingScreen
+this
+257579 loading1
+this
+257662 loading2
+this
+257745 loading3
+this
+257828 loading4
+this
+257927 hideLoadingScreen
+this timer tick param
+258028 translateX
+this xPos translatedX
+258046 translateY
+this yPos translatedY
+258064 translateFontSize
+this fontSize translatedSize
+258082 untranslate
+this value
+258096 Game
+this
+258214 run
+this
+258219 start
+this
+258225 initializeTimers
+this request_id ret_code response_content response currentTick currentDay
+258397 initializeServer
+this
+258411 initializeDatabase
+this
+258499 quit
+this
+258516 currentScreen
+this
+258526 lastScreen
+this
+258547 pushScreen
+this screenToPush scrSize newCanvas lastScreen
+258785 popToRoot
+this
+258834 popScreen
+this screenToPop lastScreen
+258937 setBanner
+this banner bannerHeight newCanvas
+259073 showBanner
+this top bottom
+259208 hideBanner
+this
+259312 loadProperties
+this
+259405 saveProperties
+this
+259481 setProperty
+this key value
+259508 getProperty
+this key
+259522 HousewifeWars
+this
+259564 run
+this screen controller hud hudcontroller startingGameBucks returnValue startingDiamonds startingMiles
+260153 loadSounds
+this
+261082 rateReward
+this rateKey db hasRated rewardMoney
+261190 loadCities
+this xmldict xmlcities i xmlcity cityattrs city
+261459 loadMysteryItems
+this xmldict xmlmysteryitems i xmlmysteryitem mysteryitemattrs mysteryItem
+261790 getCities
+this
+261818 loadAchievements
+this xmldict xmlachievements i xmlachievement achievementattrs achievement
+262089 unlockAchievement
+this Name achievement achievementID
+262148 loadGifts
+this xmldict xmlGifts i xmlGift giftAttrs gift
+262339 checkForReceivedGifts
+this
+262368 saveGiftsCallback
+this request_id ret_code response_content response gifts storedGifts i
+262533 getGift
+this giftId
+262547 getGifts
+this
+262559 save
+this
+262618 saveHusband
+this
+262634 saveWife
+this
+262650 savePassport
+this
+262666 saveWallet
+this
+262682 saveRealestate
+this
+262698 updateLeaderboards
+this
+262771 getFurniture
+this furnitureId
+262805 getFurnitureCategories
+this furnitures categories xmldict xmlFurnitures i xmlCategory catAttrs category xmlSubCategories j xmlSubCat subCatAttrs subCategory xmlFurnitureItems k xmlFurniture furnitureAttrs furniture
+263547 loadHusbandMessages
+this xmldict blutiles i xmlt tileattrs
+263824 getRandomMessage
+this screenName message messagesCount
+263910 earnMilesTimer
+this
+263945 tick
+this milesEarned ret
+264009 onpause
+
+264119 onresume
+
+__g__ 
+0 timerHandler timerTickUpdate TimerListener Timer distance Control Scroll IBuff GiftItem Buffs DebuffHusbandWorkTime DebuffHusbandShoppingTime DebuffHusbandWorkShoppingTime BuffHusbandWorkTime BuffHusbandSalary BuffRareItemChance BuffSStatusPoints GossipMessage ScreenController Runnable IsometricCanvas IsometricItem IsometricTile Button FixedPoint Profiler Screen INameEnterController NameEnterScreen HusbandSelectionController HusbandSelectionScreen MysteryItemsController ReceiveGiftController GiftOthersPromptController HouseSelectionController OtherPlayerController PassportController GiftShopController City TravelController planeTravelTimer GossipController hcantcomplete hcancel hreturnwork hreturnshopping gotoPremiumCurrencyDiamonds gotoPremiumCurrencyGameBucks HusbandController husbandStressReductionTimer husbandLoveFillingTimer HouseController MessageBoxScreen MysteryItemsScreen ReceiveGiftScreen GiftOthersPromptScreen RealEstate HouseSelectionScreen OtherPlayerScreen PassportScreen GiftShopScreen TravelScreen GossipScreen gossipScreenUpdateTimer HusbandScreen HouseScreen WifeCustomizationController WifeCustomizationScreen rotateLoop Carousel PremiumCurrencyController PremiumCurrencyScreen eventHandler Event GoBackEvent QuitEvent Animations Sounds Font Server Achievement Shop MysteryItem Realestate PapayaFriend Passport Currency Money Account Wallet PurchaseCurrencyEvent hlevel hyes hno Husband outToWorkTimer outShoppingTimer TilesGroup Room Style StyleItem Remodel House OtherPlayerHouse HousePointsTimer HouseCleaningTimer FurnitureCategory FurnitureSubcategory Furniture FurnitureItem Wife MainController mainScreenUpdateTimer MainScreen WifeSelectionController WifeSelectionScreen HUDController HUDScreen hudScreenUpdateTimer Game onpause onresume HousewifeWars earnMilesTimer glEvents theGame

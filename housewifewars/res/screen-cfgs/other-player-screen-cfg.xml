@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="background" resource="travel-screen/background-travel.png" left="0" top="0"/>
+		<screen:element name="window-back" resource="other-player-screen/window-back.png" left="93" top="133"/>
+		
+		<screen:element name="wife" resource="" left="137" top="157">
+			<screen:element name="hairback" resource="" left="38" top="0"/>
+			<screen:element name="rightArm" resource="" left="4" top="30"/>
+			<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+			<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="undies" resource="" left="74" top="150"/>
+			<screen:element name="shoes" resource="" left="74" top="452"/>
+			<screen:element name="pants" resource="" left="38" top="226"/>
+			<screen:element name="belt" resource="" left="38" top="226"/>
+			<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+			<screen:element name="dress" resource="" left="0" top="112"/>
+			<screen:element name="shirt" resource="" left="38" top="112"/>
+			<screen:element name="jacket" resource="" left="38" top="112"/>
+			<screen:element name="leftArm" resource="" left="4" top="30"/>
+			<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="hairfront" resource="" left="38" top="0"/>
+		</screen:element>
+			
+		<screen:element name="husband" resource="" left="316" top="150" />
+		
+		<screen:element name="otherPlayer" resource="other-player-screen/window.png" left="0" top="0"/>
+		
+		<screen:element name="playerName" resource="" left="650" top="150" font-style="bold">#placeholder</screen:element>
+		
+		<screen:element name="houseLevel" resource="other-player-screen/other-player-button.png" left="630" top="228">
+			<screen:element name="houseLevelText" resource="" left="22" top="10" font-style="bold">House Level</screen:element>
+			<screen:element name="houseLevelValue" resource="" left="330" top="10">#placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="citiesVisited" resource="other-player-screen/other-player-button.png" left="630" top="300">
+			<screen:element name="citiesVisitedText" resource="" left="22" top="10" font-style="bold">Cities Visited</screen:element>
+			<screen:element name="citiesVisitedValue" resource="" left="330" top="10">#placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="gift-icon" resource="other-player-screen/gift-icon.png" left="1021" top="143" ontap="showGiftOthersScreen"/>
+		
+		<screen:element name="husbandName" resource="" left="650" top="425" font-style="bold">#placeholder</screen:element>
+		
+		<screen:element name="jobLevel" resource="other-player-screen/other-player-button.png" left="630" top="494">
+			<screen:element name="jobLevelText" resource="" left="22" top="10" font-style="bold">Job Level</screen:element>
+			<screen:element name="jobLevelValue" resource="" left="330" top="10">#placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="loveTank" resource="other-player-screen/other-player-button.png" left="630" top="566">
+			<screen:element name="loveTankText" resource="" left="22" top="10" font-style="bold">Love Tank</screen:element>
+			<screen:element name="loveTankValue" resource="" left="330" top="10">#placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="stressLevel" resource="other-player-screen/other-player-button.png" left="630" top="638">
+			<screen:element name="stressLevelText" resource="" left="22" top="10" font-style="bold">Stress Level</screen:element>
+			<screen:element name="stressLevelValue" resource="" left="330" top="10">#placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="flirt-icon" resource="other-player-screen/flirt-icon.png" left="1014" top="410"/>
+		
+		<screen:element name="SSPBar" resource="other-player-screen/other-player-button2.png" left="84" top="492"/>
+		<screen:element name="SSPIcon-02" resource="other-player-screen/SSPIcon-02.png" left="47" top="466"/>
+		<screen:element name="SSPText" resource="" left="190" top="510">#points</screen:element>
+		
+		<screen:element name="visit-home-icon" resource="other-player-screen/visit-home-icon.png" left="104" top="566" ontap="visitHome"/>
+		<screen:element name="viewHouse" resource="" left="275" top="640" font-style="bold" ontap="visitHome" >View House</screen:element>
+		
+		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1049" top="688" ontap="goBack"/>
+		
+	</screen:elements>
+</screen:config>
+

@@ -1,0 +1,375 @@
+/*****************************************************************************
+filename    game.as
+author      Rafa Imas
+DP email    rafael.imas@2clams.com
+project     Papaya-Engine 2clams framework
+
+Brief Description:
+   Handles entry point and screen management
+*****************************************************************************/
+
+import framework.server
+import framework.font
+import framework.sounds
+import framework.animations
+
+class Game
+{
+    static var db;
+	static var screens;
+	static var scene;
+	static var currentGame;
+	static var server;
+	static var font;
+	static var bannerScreen = null;
+	static var sounds;
+	static var animations;
+	static var screenScale = 70;
+	static var papayaUserId = 0;
+	var loadingScreen;
+	var loadingBar;
+	var loadingBarStart;
+	var loadingProgress;
+	var loadingBarEnd;
+	var loadingText;
+	var today;
+	var properties;
+	var advertisement;
+	var soundOn = null;
+
+	public static function getPapayaUserId()
+	{
+	    return str(papayaUserId);
+	}
+
+	public static function sharedGame()
+	{
+		return Game.currentGame;
+	}
+
+    public static function getDatabase()
+    {	
+    	if (Game.db == null) {
+    		Game.initializeDatabase();
+    	}
+        return Game.db;
+    }
+
+	public static function getServer()
+	{
+		if (Game.server == null) {
+    		Game.initializeServer();
+    	}
+		return Game.server;
+	}
+	
+	public static function audioOn()
+	{
+		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
+		if(Game.soundOn == null) {
+		    if (Game.sharedGame() != null) {
+		        Game.soundOn = Game.sharedGame().properties.get("soundOn", 1);
+	            Game.sharedGame().setProperty("soundOn", Game.soundOn);
+		    } else {
+		        Game.soundOn = 1;
+		    }
+		}
+		
+		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
+		return Game.soundOn;
+	}
+	
+	public static function trackEvent(category, action, label, value)
+	{
+		ppy_tracker_event(category, action, label, value);
+		
+		trace("** TRACK EVENT:", category, action, label, value);
+	}
+
+	function showLoadingScreen()
+	{
+		Game.sounds.addMusic("splashMusic", "sounds/Housewife.Splash.1b.mp3");
+		Game.sounds.playMusic("splashMusic");
+		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
+		c_invoke(transitionLoadingScreen, 2000, null);
+		advertisement = v_create (V_APPFLOOD_BANNER, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
+		v_root().addview(advertisement);
+	}
+	
+	function transitionLoadingScreen()
+	{
+		this.loadingScreen.texture("images/LoadScreen.png");
+		this.loadingBar = Game.scene.addsprite("images/tutorial-icons/loadingbar-base.png").pos(Game.translateX(325), Game.translateY( 722));
+		this.loadingBarStart = loadingBar.addsprite("images/tutorial-icons/loadingbar-front.png").pos(Game.translateX(0), Game.translateY( 0));
+		this.loadingProgress = loadingBar.addsprite("images/tutorial-icons/loadingbar-repeat.png").pos(Game.translateX(20), Game.translateY( 0));
+		this.loadingBarEnd = loadingBar.addsprite("images/tutorial-icons/loadingbar-end.png").pos(Game.translateX(577), Game.translateY( 0));
+		this.loadingText = this.loadingBar.addsprite("images/tutorial-icons/loading001.png");
+		this.loadingBarEnd.visible(0);
+		this.loadingProgress.size(Game.translateX(557), Game.translateY( 42));
+		this.loadingProgress.scale(0, 100);
+		
+		Game.screens = new Array();
+		this.animations = new Animations();
+        Game.initializeServer();
+        Game.papayaUserId = ppy_userid();
+        trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+        if (Game.papayaUserId == null || Game.papayaUserId == 0 ) {
+            quitgame();
+        }
+
+        c_invoke(loading1, 1000, null);
+	}
+	
+	function loading1()
+	{
+		this.loadingProgress.scale(25, 100);
+		this.loadingText.texture("images/tutorial-icons/loading002.png");
+		c_invoke(loading2, 1000, null);
+	}
+	
+	function loading2()
+	{
+		this.loadingProgress.scale(50, 100);
+		this.loadingText.texture("images/tutorial-icons/loading003.png");
+		c_invoke(loading3, 1000, null);
+	}
+	
+	function loading3()
+	{
+		this.loadingProgress.scale(75, 100);
+		this.loadingText.texture("images/tutorial-icons/loading004.png");
+		c_invoke(loading4, 1000, null);
+	}
+	
+	function loading4()
+	{
+		this.loadingText.texture("images/tutorial-icons/loading005.png");
+		this.loadingProgress.scale(100, 100);
+		this.getServer().getCurrentDateAndTick(initializeTimers);
+		this.loadingBarEnd.visible(1);
+		
+	}
+	
+	function hideLoadingScreen(timer, tick, param)
+	{
+		this.scene.remove(this.loadingScreen);
+		this.scene.remove(this.loadingBar);	
+		this.scene.remove(this.loadingBarStart);
+		this.scene.remove(this.loadingBarEnd);
+		this.scene.remove(this.loadingText);
+		if (advertisement != null) {
+		    advertisement.removefromparent();
+		}
+	}
+	
+	public static function translateX(xPos)
+	{		
+		var translatedX = xPos * Game.screenScale / 100;
+		
+		return translatedX;
+	}
+	
+	public static function translateY(yPos)
+	{
+		var translatedY = yPos * Game.screenScale / 100;
+		
+		return translatedY;
+	}
+	
+	public static function translateFontSize(fontSize)
+	{
+		var translatedSize = fontSize * Game.screenScale / 100;
+		
+		return translatedSize;
+	}
+		
+	public static function untranslate(value)
+	{
+		return value * 100 / Game.screenScale;
+	}
+	
+	public function Game()
+	{
+		Game.initializeDatabase();
+		this.loadProperties();
+		
+		Game.scene = getscene();
+		v_scale(Game.translateX(1280), Game.translateY(800));
+		this.font = new Font();
+		this.sounds = new Sounds();
+		this.showLoadingScreen();
+
+		Game.trackEvent("Session", "begin", "", 10);
+	}
+	
+	// starting point for subclasses, must be overriden
+	public function run()
+	{
+	}
+
+	public function start()
+	{
+	}
+
+	public function initializeTimers(request_id, ret_code, response_content)
+	{
+		if(ret_code == 1) {
+			var response = json_loads(response_content);
+			var currentTick = response.get("currentTick");
+			var currentDay = response.get("currentDay");
+			this.today = currentDay;
+			Timer.startTimers(currentTick);
+			trace("### HWW ### - Today ", currentDay, " CurrentTick: ", str(currentTick));
+		}
+		else {
+			this.today = "";
+			Timer.startTimers(0);
+		}
+		
+		this.hideLoadingScreen();
+
+		Game.sharedGame().run();
+	}
+
+    public function initializeServer()
+    {
+        server = new Server();
+    }
+
+    public function initializeDatabase()
+    {   
+    	trace("Before initializeDatabase");
+        db = c_opendb(0, "hww");
+    	trace("After initializeDatabase: ", db);
+    }
+
+	public function quit()
+	{
+	    Game.store();
+		quitgame();
+	}
+	
+	static public function currentScreen()
+	{
+		return Game.lastScreen();
+	}
+	
+	static public function lastScreen()
+	{
+		return Game.screens[len(Game.screens) - 1];
+	}
+	
+	static public function pushScreen(screenToPush)
+	{
+		var scrSize = screensize();		
+		var newCanvas = Game.scene.addsprite().size(scrSize).pos(Game.translateX(1280), 0);
+		screenToPush.canvas = newCanvas;
+
+		var lastScreen = Game.lastScreen();
+
+		Game.screens.append(screenToPush);
+		
+		if(len(Game.screens) > 1) {
+			lastScreen.lostFocus();
+			lastScreen.canvas.addaction(moveto(250, Game.translateX( -1280), Game.translateY( 0)));
+			screenToPush.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
+			screenToPush.create();
+		}
+		else {
+			screenToPush.canvas.pos(Game.translateX(0), Game.translateY( 0));
+			screenToPush.create();
+		}
+		
+		screenToPush.controller.screenLoaded();
+		screenToPush.gotFocus();
+		screenToPush.controller.screenPostLoaded();
+	}
+	
+	static public function popToRoot()
+	{
+		while(Game.lastScreen().isRoot == 0) {
+			Game.sharedGame().popScreen();		
+		}
+		Game.lastScreen().gotFocus();
+	}
+	
+	public function popScreen()
+	{
+		var screenToPop = Game.screens.pop();
+		screenToPop.lostFocus();
+		
+		var lastScreen = Game.lastScreen();
+		lastScreen.gotFocus();
+		
+//		screenToPop.canvas.addaction(moveto(250, Game.translateX( 1280), Game.translateY( 0)));
+//		lastScreen.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
+		lastScreen.canvas.pos(Game.translateX(0), Game.translateY( 0));
+		
+		screenToPop.destroy();
+		this.scene.remove(screenToPop.canvas);
+		screenToPop.controller.screenUnloaded();
+	}
+	
+	static public function setBanner(banner, bannerHeight)
+	{
+		if(Game.bannerScreen != null) {
+			Game.scene.remove(Game.bannerScreen.canvas);
+		}
+	
+		Game.bannerScreen = banner;
+		
+		var newCanvas = Game.scene.addsprite().size(Game.translateX(screensize()[0]), Game.translateY( bannerHeight)).pos(Game.translateX(0), Game.translateY( -bannerHeight));
+		Game.bannerScreen.canvas = newCanvas;
+		Game.bannerScreen.create();
+		Game.bannerScreen.controller.screenLoaded();
+	}
+
+	static public function showBanner(top, bottom)
+	{		
+//		Game.bannerScreen.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
+		Game.bannerScreen.canvas.pos(Game.translateX(0), Game.translateY( 0));
+		
+		Game.bannerScreen.getElement("hudFrameTop").getSprite().visible(top);
+		Game.bannerScreen.getElement("hudFrameBottom").getSprite().visible(bottom);
+		
+		Game.bannerScreen.gotFocus();
+		Game.bannerScreen.canvas.bringtofront();
+	}
+	
+	public function hideBanner()
+	{
+//		Game.bannerScreen.canvas.addaction(moveto(250, Game.translateX( -Game.bannerScreen.canvas.size(Game.translateX()[0])), Game.translateY( Game.translateY( 0))));
+		
+		Game.bannerScreen.gotFocus();
+		Game.bannerScreen.canvas.bringtoback();
+		Game.bannerScreen.getElement("hudFrameTop").getSprite().visible(0);
+		Game.bannerScreen.getElement("hudFrameBottom").getSprite().visible(0);
+	}
+
+	public function loadProperties()
+	{
+        this.properties = Game.getDatabase().get("game_properties");
+        if(this.properties == null)  {
+        	this.properties = dict();
+        }
+
+        trace("**** loadGameProperties: ", this.properties);
+	}
+
+    public function saveProperties()
+    {
+        trace("**** saveGameProperties: ", this.properties);
+        Game.getDatabase().put("game_properties", this.properties);
+    }
+    
+    public function setProperty(key, value)
+    {
+    	this.properties.update(key, value);
+    	this.saveProperties();
+    }
+    
+    public function getProperty(key)
+    {
+    	return this.properties.get(key);
+    }
+}

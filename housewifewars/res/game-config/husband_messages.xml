@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:husband-messages>
+	<hww-config:message  text="I'm the luckiest guy." screen="main-menu" />
+	<hww-config:message  text="You make me complete." screen="main-menu" />
+	<hww-config:message  text="You look beautiful as always." screen="main-menu" />
+	<hww-config:message  text="Where have you been? I missed you." screen="main-menu" />
+	<hww-config:message  text="Hi sweetie, what can I get you today?" screen="main-menu" />
+	<hww-config:message  text="I can't imagine life without you." screen="main-menu" />
+	<hww-config:message  text="I love you unconditionally." screen="main-menu" />
+	<hww-config:message  text="Hi honey, what can I do for you today." screen="main-menu" />
+	<hww-config:message  text="What do you like to do?" screen="main-menu" />
+	<hww-config:message  text="You have a hot body." screen="main-menu" />
+	<hww-config:message  text="Your legs are very toned." screen="main-menu" />
+	<hww-config:message  text="I never want to lose you, baby. " screen="main-menu" />
+	<hww-config:message  text="What a nice day. We should go shopping." screen="main-menu" />
+	<hww-config:message  text="You are the most beautiful woman in the world." screen="main-menu" />
+	<hww-config:message  text="Hey cutie pie." screen="main-menu" />
+	<hww-config:message  text="I'm glad I have you in my life." screen="main-menu" />
+	<hww-config:message  text="You make me want to be a better man." screen="main-menu" />
+	<hww-config:message  text="You look absolutely gorgeous. " screen="main-menu" />
+	<hww-config:message  text="I love the dress you are wearing. Hot." screen="main-menu" />
+	<hww-config:message  text="Wow, you are stunning!" screen="main-menu" />
+	<hww-config:message  text="You are such a strong and confident woman." screen="main-menu" />
+	<hww-config:message  text="I hope I get a promotion at work soon." screen="main-menu" />
+	<hww-config:message  text="Don't leave me!" screen="main-menu" />
+	<hww-config:message  text="I love you." screen="main-menu" />
+	<hww-config:message  text="You mean the world to me." screen="main-menu" />
+	<hww-config:message  text="Tell me what's on your mind. I want to listen." screen="main-menu" />
+	<hww-config:message  text="How can I make it up to you?" screen="main-menu" />
+	<hww-config:message  text="What would make you happy right now?" screen="main-menu" />
+	<hww-config:message  text="I want to kiss you all night." screen="main-menu" />
+	<hww-config:message  text="I've been thinking of you." screen="main-menu" />
+	<hww-config:message  text="I'm glad I woke up with you by my side." screen="main-menu" />
+	<hww-config:message  text="You smell nice." screen="main-menu" />
+	<hww-config:message  text="I'll make you dinner tonight." screen="main-menu" />
+	<hww-config:message  text="Let's go on a date." screen="main-menu" />
+	<hww-config:message  text="I'm sorry. You are always right." screen="main-menu" />
+	<hww-config:message  text="I don't feel complete without you." screen="main-menu" />
+	<hww-config:message  text="I appreciate all the things you do around the house." screen="main-menu" />
+	<hww-config:message  text="Thank you for being you." screen="main-menu" />
+	<hww-config:message  text="Thank you for taking care of me." screen="main-menu" />
+	<hww-config:message  text="You make each day brighter." screen="main-menu" />
+	<hww-config:message  text="Every time you kiss me, you electrify me." screen="main-menu" />
+	<hww-config:message  text="I love watching your mouth move." screen="main-menu" />
+	<hww-config:message  text="You are the most amazing woman I've ever met." screen="main-menu" />
+	<hww-config:message  text="I can't wait to grow old together." screen="main-menu" />
+	<hww-config:message  text="I've been dreaming about you." screen="main-menu" />
+
+	<hww-config:message  text="I want to buy you a big house some day." screen="husband-screen" />
+	<hww-config:message  text="I hope I get a promotion soon." screen="husband-screen" />
+	<hww-config:message  text="My team counts on me." screen="husband-screen" />
+	<hww-config:message  text="My wife deserves the best in anything she wants." screen="husband-screen" />
+	<hww-config:message  text="I feel energetic. Do you want to go shopping after work?" screen="husband-screen" />
+	<hww-config:message  text="Everyday brings new opportunities." screen="husband-screen" />
+	<hww-config:message  text="I have a dream wife and a dream job." screen="husband-screen" />
+	<hww-config:message  text="I can't wait to get home to see my beautiful wife." screen="husband-screen" />
+	<hww-config:message  text="I love being challenged at work." screen="husband-screen" />
+	<hww-config:message  text="My wife is # 1 priority." screen="husband-screen" />
+	<hww-config:message  text="I've been feeling tired lately." screen="husband-screen" />
+	<hww-config:message  text="I haven't' seen my buddies for a while." screen="husband-screen" />
+	<hww-config:message  text="It would be nice to take a day off." screen="husband-screen" />
+	<hww-config:message  text="How have I let you down?" screen="husband-screen" />
+	<hww-config:message  text="Do you love me?" screen="husband-screen" />
+	<hww-config:message  text="You are acting like your mother." screen="husband-screen" />
+	<hww-config:message  text="Bad hair day?" screen="husband-screen" />
+	<hww-config:message  text="It must be that time of the month." screen="husband-screen" />
+	<hww-config:message  text="Nobody listens to me at work." screen="husband-screen" />
+	<hww-config:message  text="I'm overwhelmed with what's going on at work." screen="husband-screen" />
+	<hww-config:message  text="I'm really stressed out." screen="husband-screen" />
+	<hww-config:message  text="I can't go on like this." screen="husband-screen" />
+	<hww-config:message  text="Help me!" screen="husband-screen" />
+	<hww-config:message  text="You don't care how I feel." screen="husband-screen" />
+	<hww-config:message  text="I don't want to go to work." screen="husband-screen" />
+	<hww-config:message  text="I don't have anything left in my tank." screen="husband-screen" />
+	<hww-config:message  text="I see ghost." screen="husband-screen" />
+	<hww-config:message  text="I am seeing things." screen="husband-screen" />
+	<hww-config:message  text="I can't think straight." screen="husband-screen" />
+	<hww-config:message  text="I'm hallucinating." screen="husband-screen" />
+	<hww-config:message  text="I've fallen in love with you many times." screen="husband-screen" />
+	<hww-config:message  text="I love you just the way you are." screen="husband-screen" />
+	<hww-config:message  text="You are the most important thing in my life." screen="husband-screen" />
+	<hww-config:message  text="I'm the luckiest guy to have you as my wife." screen="husband-screen" />
+	<hww-config:message  text="I love you more than life itself." screen="husband-screen" />
+	<hww-config:message  text="Love for you can never grow old." screen="husband-screen" />
+	<hww-config:message  text="Your love keeps me going." screen="husband-screen" />
+	<hww-config:message  text="I'm deeply in love with you." screen="husband-screen" />
+	<hww-config:message  text="Gosh, how did I get so lucky?" screen="husband-screen" />
+	<hww-config:message  text="I would do anything for you." screen="husband-screen" />
+	<hww-config:message  text="I've been feeling a little lonely. " screen="husband-screen" />
+	<hww-config:message  text="When was the last time we went on a date?" screen="husband-screen" />
+	<hww-config:message  text="I miss homemade meals." screen="husband-screen" />
+	<hww-config:message  text="I miss being with you." screen="husband-screen" />
+	<hww-config:message  text="Do you love me?" screen="husband-screen" />
+	<hww-config:message  text="Kiss me." screen="husband-screen" />
+	<hww-config:message  text="We never see each other." screen="husband-screen" />
+	<hww-config:message  text="Don't you think we should spend more time together?" screen="husband-screen" />
+	<hww-config:message  text="I miss you." screen="husband-screen" />
+	<hww-config:message  text="What have you been up to?" screen="husband-screen" />
+	<hww-config:message  text="Don't abandon me. I love you." screen="husband-screen" />
+	<hww-config:message  text="Why don't you understand how much I love you?" screen="husband-screen" />
+	<hww-config:message  text="Did you find someone else?" screen="husband-screen" />
+	<hww-config:message  text="What did I do wrong?" screen="husband-screen" />
+	<hww-config:message  text="Don't tell me it's over." screen="husband-screen" />
+	<hww-config:message  text="How can I fix our relationship?" screen="husband-screen" />
+	<hww-config:message  text="What went wrong?" screen="husband-screen" />
+	<hww-config:message  text="I'm hungry for your love." screen="husband-screen" />
+	<hww-config:message  text="Can you make me my favoriate meal?" screen="husband-screen" />
+	<hww-config:message  text="Let's go to the place where we met on our first date." screen="husband-screen" />
+</hww-config:husband-messages>

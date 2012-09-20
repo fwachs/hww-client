@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="background" resource="wife-selection-screen/wife-selection-screen.png" left="0" top="0"/>
+		
+		<screen:element name="spotLight" resource="wife-selection-screen/spot-light.png" left="0" top="0"/>
+
+		<screen:element name="descriptionBox" resource="wife-selection-screen/description-box.png" left="368" top="727"/>
+		<screen:element name="typeBigBox" resource="wife-selection-screen/type-big-box.png" left="921" top="166"/>
+
+		<screen:element name="confirmCircle" resource="wife-selection-screen/confirm-circle.png" left="1114" top="684" ontap="jumpTutorialStep:3"/>
+
+		<screen:element name="wifeTypeBox1" resource="wife-selection-screen/wife-type-highlight.png" left="956" top="214" ontap="showExecutive">
+			<screen:element name="wifeTypeBox1Text" resource="husband-selection-screen/exec-name.png" left="0" top="0"/>
+		</screen:element>
+		
+		<screen:element name="wifeTypeBox2" resource="wife-selection-screen/wife-type-box.png" left="956" top="306" ontap="showDoctor">
+			<screen:element name="wifeTypeBox1Text" resource="husband-selection-screen/doctor-name.png" left="0" top="0"/>
+		</screen:element>
+		
+		<screen:element name="wifeTypeBox3" resource="wife-selection-screen/wife-type-box.png" left="956" top="398" ontap="showBanker">
+			<screen:element name="wifeTypeBox1Text" resource="husband-selection-screen/banker-name.png" left="0" top="0"/>
+		</screen:element>
+		
+		<screen:element name="wifeTypeBox4" resource="wife-selection-screen/wife-type-box.png" left="956" top="490" ontap="showAthlete">
+			<screen:element name="wifeTypeBox1Text" resource="husband-selection-screen/athlete-name.png" left="0" top="0"/>
+		</screen:element>
+		
+		<screen:element name="wifeTypeBox5" resource="wife-selection-screen/wife-type-box.png" left="956" top="582" ontap="showLawyer">
+			<screen:element name="wifeTypeBox1Text" resource="husband-selection-screen/lawyer-name.png" left="0" top="0"/>
+		</screen:element>
+		
+		<screen:element name="executiveHubby" resource="husband-selection-screen/m-Husbands-executivev5-536.png" left="40" top="258"/>
+		<screen:element name="doctorHubby" resource="husband-selection-screen/m-Husbands-Doctor-536.png" left="0" top="0"/>
+		<screen:element name="bankerHubby" resource="husband-selection-screen/m-Husbands-Bankerv5-536.png" left="722" top="258"/>
+		<screen:element name="athleteHubby" resource="husband-selection-screen/m-Husbands-Sport-536.png" left="571" top="296"/>
+		<screen:element name="spotLight" resource="wife-selection-screen/spot-light.png" left="0" top="0"/>
+		<screen:element name="spotLightOverlay" resource="wife-selection-screen/spot-light-overlay.png" left="0" top="0"/>
+		<screen:element name="lawyerHubby" resource="husband-selection-screen/m-Husbands-Lawyer-536.png" left="383" top="197"/>
+		
+	    <screen:element name="tutorial-step-1" resource="tutorial-icons/arrowdown01.png" z-index="99999999" left="1064" top="92" visible="no"/>
+	    <screen:element name="tutorial-step-2" resource="tutorial-icons/arrow01.png" z-index="99999999" left="1010" top="722" visible="no"/>		
+		<screen:element name="tutorial-step-3" resource="tutorial-icons/overlay75gray.png" left="0" top="0" z-index="99999999" ontap="doNothing" visible="no">
+		    <screen:element name="" resource="tutorial-icons/do-You.png" left="294" top="216"/>
+		     <screen:element name="" resource="tutorial-icons/no.png" left="342" top="436" ontap="prevTutorial"/>
+		     <screen:element name="" resource="tutorial-icons/i-do.png" left="660" top="420" ontap="done"/>
+		</screen:element>
+		<screen:element name="tutorial-step-4" resource="tutorial-icons/overlay75gray.png" left="0" top="0" z-index="99999999" ontap="doNothing" visible="no">
+		    <screen:element name="" resource="tutorial-icons/congrats-dream-house.png" left="294" top="216"/>
+		    <screen:element name="okay-button" resource="tutorial-icons/okay.png" left="526" top="446" ontap="completed"/>
+		</screen:element>		
+			    		
+	</screen:elements>
+</screen:config>

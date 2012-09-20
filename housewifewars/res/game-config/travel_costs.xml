@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:travel-cities>
+	
+	<hww-config:travel-city name="London" price="20000" currency="Miles"/>
+	<hww-config:travel-city name="SanFrancisco" price="25000" currency="Miles"/>
+	<hww-config:travel-city name="Paris" price="35000" currency="Miles"/>
+	<hww-config:travel-city name="BuenosAires" price="50000" currency="Miles"/>
+	<hww-config:travel-city name="Tokyo" price="100000" currency="Miles"/>
+	<hww-config:travel-city name="Sydney" price="10" currency="Diamonds"/>
+	
+</hww-config:travel-cities>

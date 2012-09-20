@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:house-remodels>
+	
+	<hww-config:remodel remodel="1"  diamonds="0"   rewardTime="4"  cleanReward="10"  garbageTime="4"  unlockLevel="1"/>
+	<hww-config:remodel remodel="2"  diamonds="5"   rewardTime="6"  cleanReward="20"  garbageTime="4"  unlockLevel="5"/>
+	<hww-config:remodel remodel="3"  diamonds="8"   rewardTime="8"  cleanReward="30"  garbageTime="6"  unlockLevel="10"/>
+	<hww-config:remodel remodel="4"  diamonds="13"  rewardTime="8"  cleanReward="40"  garbageTime="6"  unlockLevel="15"/>
+	<hww-config:remodel remodel="5"  diamonds="20"  rewardTime="8"  cleanReward="50"  garbageTime="6"  unlockLevel="20"/>
+	<hww-config:remodel remodel="6"  diamonds="31"  rewardTime="16" cleanReward="60"  garbageTime="8"  unlockLevel="30"/>
+	<hww-config:remodel remodel="7"  diamonds="48"  rewardTime="16" cleanReward="70"  garbageTime="8"  unlockLevel="40"/>
+	<hww-config:remodel remodel="8"  diamonds="72"  rewardTime="16" cleanReward="80"  garbageTime="8"  unlockLevel="50"/>
+	<hww-config:remodel remodel="9"  diamonds="112" rewardTime="16" cleanReward="90"  garbageTime="8"  unlockLevel="60"/>
+	<hww-config:remodel remodel="10" diamonds="162" rewardTime="20" cleanReward="100" garbageTime="10" unlockLevel="80"/>
+	
+</hww-config:house-remodels>

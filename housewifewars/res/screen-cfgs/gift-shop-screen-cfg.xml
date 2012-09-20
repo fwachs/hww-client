@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+	
+		<screen:element name="background" resource="gift-shop/gift-shop-painting.png" left="0" top="0"/>
+		<screen:element name="animation" resource="" left="0" top="0"/>
+		
+		<!-- Travel cities souvenirs -->
+		<screen:element name="LondonFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationLondon" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="londonsouvenir1" resource="gift-shop-icons/for-balloons/bulldog.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="londonsouvenir2" resource="gift-shop-icons/for-balloons/gin.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="londonsouvenir3" resource="gift-shop-icons/for-balloons/big-ben.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="londonsouvenir4" resource="gift-shop-icons/for-balloons/buckingham-palace.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="londonsouvenir5" resource="gift-shop-icons/for-balloons/fish-n-chips.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="SanFranciscoFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationSanFrancisco" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="sanfranciscosouvenir1" resource="gift-shop-icons/for-balloons/sourdough-bread.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="sanfranciscosouvenir2" resource="gift-shop-icons/for-balloons/gg-bridge.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="sanfranciscosouvenir3" resource="gift-shop-icons/for-balloons/dim-sum.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="sanfranciscosouvenir4" resource="gift-shop-icons/for-balloons/cable-car.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="sanfranciscosouvenir5" resource="gift-shop-icons/for-balloons/alcatraz.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="ParisFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationParis" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="parissouvenir1" resource="gift-shop-icons/for-balloons/baguette.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="parissouvenir2" resource="gift-shop-icons/for-balloons/eiffel-tower.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="parissouvenir3" resource="gift-shop-icons/for-balloons/poodle.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="parissouvenir4" resource="gift-shop-icons/for-balloons/dress.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="parissouvenir5" resource="gift-shop-icons/for-balloons/wine.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="BuenosAiresFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationBuenosAires" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="buenosairessouvenir1" resource="gift-shop-icons/for-balloons/el-obelisco.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="buenosairessouvenir2" resource="gift-shop-icons/for-balloons/do-the-tango.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="buenosairessouvenir3" resource="gift-shop-icons/for-balloons/puente-de-la-mujer.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="buenosairessouvenir4" resource="gift-shop-icons/for-balloons/mate.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="buenosairessouvenir5" resource="gift-shop-icons/for-balloons/el-caminito.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="TokyoFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationTokyo" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="tokyosouvenir1" resource="gift-shop-icons/for-balloons/sushi.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="tokyosouvenir2" resource="gift-shop-icons/for-balloons/sake.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="tokyosouvenir3" resource="gift-shop-icons/for-balloons/bullet-train.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="tokyosouvenir4" resource="gift-shop-icons/for-balloons/kinkakuji.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="tokyosouvenir5" resource="gift-shop-icons/for-balloons/kimono.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="SydneyFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="balloonsAnimationSydney" resource="Animation/gift_shop_end_anim/just_balloons_with_strings0001.png" left="155" top="104"/>
+			<screen:element name="sydneysouvenir1" resource="gift-shop-icons/for-balloons/koala.png" left="460" top="311" ontap="buysouvenir1"/>
+			<screen:element name="sydneysouvenir2" resource="gift-shop-icons/for-balloons/opera-house.png" left="657" top="275" ontap="buysouvenir2"/>
+			<screen:element name="sydneysouvenir3" resource="gift-shop-icons/for-balloons/harbour-bridge.png" left="170" top="260" ontap="buysouvenir3"/>
+			<screen:element name="sydneysouvenir4" resource="gift-shop-icons/for-balloons/kangaroo.png" left="539" top="133" ontap="buysouvenir4"/>
+			<screen:element name="sydneysouvenir5" resource="gift-shop-icons/for-balloons/manly-ferry.png" left="329" top="137" ontap="buysouvenir5"/>
+		</screen:element>
+		
+		<screen:element name="peopleAnimation" resource="" left="394" top="129"/>
+		<screen:element name="balloonStrings" resource="Animation/gift_shop_end_anim/strings0001.png" left="795" top="470"/>
+		
+		<screen:element name="passportbutton" resource="gift-shop/passport-button.png" left="1039" top="633" ontap="gotopassport"/>
+		
+		<!-- prompt screen -->
+		<screen:element name="buySouvenirPrompt" resource="gift-shop-prompt/prompt-frame.png" left="278" top="139" visible="NO">
+			<screen:element name="cancelButton" resource="gift-shop-prompt/cancel-button.png" left="676" top="-25" ontap="cancelBuySouvenir"/>			
+			<screen:element name="achievementIcon" resource="" left="41" top="57"/>
+			<screen:element name="itemNameText" resource="" left="250" top="57" font-size="48" font-style="bold">#placeholder</screen:element>
+			<screen:element name="itemDescriptionText" resource="" left="250" top="141" font-size="36" text-align="left" width="440" height="380" text-wrap="yes">#placeholder</screen:element>
+			<screen:element name="diamondIcon" resource="premium-currency-screen/dimonds01v2.png" left="50" top="348"/>
+			<screen:element name="diamondCost" resource="" left="156" top="348" font-size="60" font-style="bold">#placeholder</screen:element>
+			<screen:element name="buyButton" resource="gift-shop-prompt/buy-button.png" left="397" top="348" ontap="buySouvenirPrompt"/>
+		</screen:element>
+
+	</screen:elements>
+</screen:config>

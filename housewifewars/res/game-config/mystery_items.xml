@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:mystery-items>
+
+    <hww-config:mystery-item id="321" name="acoustic guitar" desc="Acoustic Guitar" fileName="mystery-items/321_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="322" name="Ticket to a popular talk show" desc="Audience Member" fileName="mystery-items/322_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="323" name="Invitation to host a charity event" desc="Charity Event" fileName="mystery-items/323_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="324" name="Ticket to a classical concert" desc="Classical Concert" fileName="mystery-items/324_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="325" name="Dinner with royal family" desc="Royal Dinner" fileName="mystery-items/325_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="326" name="Box of cookies" desc="Box of Cookies" fileName="mystery-items/326_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="327" name="Travel Brochure" desc="Travel Brochure" fileName="mystery-items/327_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="328" name="Gloves" desc="Gloves" fileName="mystery-items/328_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="329" name="Smelly trash" desc="Smelly Trash" fileName="mystery-items/329_mystery_item.png" stars="0" points="5"/>
+    <hww-config:mystery-item id="330" name="Broken piece of furniture" desc="Broken Furniture" fileName="mystery-items/330_mystery_item.png" stars="0" points="5"/>
+    <hww-config:mystery-item id="331" name="Dead clams" desc="Dead Clams" fileName="mystery-items/331_mystery_item.png" stars="0" points="5"/>
+    <hww-config:mystery-item id="332" name="Expired milk" desc="Expired milk" fileName="mystery-items/332_mystery_item.png" stars="0" points="5"/>
+    <hww-config:mystery-item id="333" name="Dead plant" desc="Dead Plant" fileName="mystery-items/333_mystery_item.png" stars="0" points="5"/>
+    <hww-config:mystery-item id="334" name="Lawnmower" desc="Lawnmower" fileName="mystery-items/334_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="335" name="Crystal Ware" desc="Crystal Ware" fileName="mystery-items/335_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="336" name="Hawaiian coffee" desc="Hawaiian Coffee" fileName="mystery-items/336_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="337" name="Bowling ball" desc="Bowling Ball" fileName="mystery-items/337_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="338" name="Way station gaming console" desc="Waystation Console" fileName="mystery-items/338_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="339" name="Vitamin C pack" desc="Vitamin C Pack" fileName="mystery-items/339_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="340" name="Fuzzy slippers" desc="Fuzzy Slippers" fileName="mystery-items/340_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="341" name="Tennis racket" desc="Tennis Racket "fileName="mystery-items/341_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="342" name="Snow skis" desc="Snow Skis" fileName="mystery-items/342_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="343" name="Leaf Blower" desc="Leaf Blower" fileName="mystery-items/343_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="344" name="Cast iron pot" desc="Cast Iron Pot" fileName="mystery-items/344_mystery_item.png" stars="1" points="100"/>
+    <hww-config:mystery-item id="345" name="Car wax" desc="Car wax" fileName="mystery-items/345_mystery_item.png" stars="1" points="300"/>
+    <hww-config:mystery-item id="346" name="Scented bath salts" desc="Scented Bath Salts" fileName="mystery-items/346_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="347" name="Golf clubs" desc="Golf Clubs" fileName="mystery-items/347_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="348" name="Fancy makeup set" desc="Fancy Makeup Set" fileName="mystery-items/348_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="349" name="Leather briefcase" desc="Leather Briefcase" fileName="mystery-items/349_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="350" name="Espresso machine" desc="Espresso Machine" fileName="mystery-items/350_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="351" name="Music box" desc="Music Box" fileName="mystery-items/351_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="352" name="Opera tickets" desc="Opera Tickets" fileName="mystery-items/352_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="353" name="Jeweled watch" desc="Jeweled Watch" fileName="mystery-items/353_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="354" name="Voice lesson" desc="Voice Lesson" fileName="mystery-items/354_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="355" name="personal assistant" desc="Personal Assistant" fileName="mystery-items/355_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="356" name="Spa day" desc="Spa Day" fileName="mystery-items/356_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="357" name="Personal trainer" desc="Personal Trainer" fileName="mystery-items/357_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="358" name="Box of chocolates" desc="Box of Chocolates" fileName="mystery-items/358_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="359" name="Glass vase" desc="Glass Vase" fileName="mystery-items/359_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="360" name="Diamond ring" desc="Diamond Ring" fileName="mystery-items/360_mystery_item.png" stars="2" points="300"/>
+    <hww-config:mystery-item id="361" name="50,000 miles ticket" desc="50,000 Miles Ticket" fileName="mystery-items/361_mystery_item.png" stars="2" points="1000"/>
+    <hww-config:mystery-item id="362" name="Invitation to NY Fashion Week" desc="NY Fashion Week" fileName="mystery-items/362_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="363" name="Barble bust" desc="Barble Bust" fileName="mystery-items/363_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="364" name="Expensive champagne" desc="Expensive Champagne" fileName="mystery-items/364_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="365" name="Treasure chest - 20,000 GB$$" desc="Treasure Chest" fileName="mystery-items/365_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="366" name="Invitation to be a guest on a popular talk show" desc="Talk Show Guest" fileName="mystery-items/366_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="367" name="Photo shoot for the cover of 'Housewife Wars' magazine" desc="HWW Photo Shoot" fileName="mystery-items/367_mystery_item.png" stars="3" points="1000"/>
+	<hww-config:mystery-item id="368" name="Grand prize for national pie baking contest" desc="Grand Prize Pie" fileName="mystery-items/368_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="369" name="exclusive party with Hollywood A-listers" desc="Celebrity Party" fileName="mystery-items/369_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="370" name="ticket for around the world super luxury cruise" desc="Luxury Cruise" fileName="mystery-items/370_mystery_item.png" stars="3" points="1000"/>
+
+</hww-config:mystery-items>

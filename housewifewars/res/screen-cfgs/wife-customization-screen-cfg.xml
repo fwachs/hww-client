@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="background" resource="customize-wife/customize-wife-screen.png" left="0" top="0"/>
+		
+		<screen:element name="wife" left="180" top="144">
+			<screen:element name="hairback" resource="" left="38" top="0"/>
+			<screen:element name="rightArm" resource="" left="4" top="30"/>
+			<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+			<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="undies" resource="" left="74" top="150"/>
+			<screen:element name="shoes" resource="" left="74" top="452"/>
+			<screen:element name="pants" resource="" left="38" top="226"/>
+			<screen:element name="belt" resource="" left="38" top="226"/>
+			<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+			<screen:element name="dress" resource="" left="0" top="112"/>
+			<screen:element name="shirt" resource="" left="38" top="112"/>
+			<screen:element name="jacket" resource="" left="38" top="112"/>
+			<screen:element name="leftArm" resource="" left="4" top="30"/>
+			<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="hairfront" resource="" left="38" top="0"/>
+		</screen:element>
+
+		<screen:element name="itemBoxFrame" resource="customize-wife/options-frame.png" left="511" top="105"/>
+
+		<screen:element name="hairStyleContainer" left="511" top="105">
+			<screen:element name="itemBox1" resource="customize-wife/item-box-x2.png" left="55" top="34" ontap="selectHairStyle01">
+				<screen:element name="hairstyle01b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay1" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle01f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle1" resource="tutorial-icons/check-select.png" left="40" top="175" visible="no"/>		    
+						
+			<screen:element name="itemBox2" resource="customize-wife/item-box-x2.png" left="283" top="34" ontap="selectHairStyle02">
+				<screen:element name="hairstyle02b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay2" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle02f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle2" resource="tutorial-icons/check-select.png" left="268" top="175" visible="no"/>		    
+						
+			<screen:element name="itemBox3" resource="customize-wife/item-box-x2.png" left="510" top="34" ontap="selectHairStyle03">
+				<screen:element name="hairstyle03b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay3" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle03f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle3" resource="tutorial-icons/check-select.png" left="495" top="175" visible="no"/>		    
+						
+			<screen:element name="itemBox4" resource="customize-wife/item-box-x2.png" left="55" top="286" ontap="selectHairStyle04">
+				<screen:element name="hairstyle04b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay4" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle04f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle4" resource="tutorial-icons/check-select.png" left="40" top="427" visible="no"/>		    
+						
+			<screen:element name="itemBox5" resource="customize-wife/item-box-x2.png" left="283" top="286" ontap="selectHairStyle05">
+				<screen:element name="hairstyle05b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay5" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle05f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle5" resource="tutorial-icons/check-select.png" left="268" top="427" visible="no"/>		    
+						
+			<screen:element name="itemBox6" resource="customize-wife/item-box-x2.png" left="510" top="286" ontap="selectHairStyle06">
+				<screen:element name="hairstyle06b" resource="" left="20" top="0"/>
+				<screen:element name="hairDisplay6" resource="customize-wife/wife parts/HairDisplayBody.png" left="20" top="0"/>
+				<screen:element name="hairstyle06f" resource="" left="20" top="0"/>
+			</screen:element>
+			<screen:element name="checkHairStyle6" resource="tutorial-icons/check-select.png" left="495" top="427" visible="no"/>		    						
+		</screen:element>
+
+		<screen:element name="hairColorContainer" left="511" top="105" visible="NO">
+			<screen:element name="itemBox21" resource="customize-wife/item-box-x2.png" left="55" top="34" ontap="selectHairColor01">
+				<screen:element name="hairColor1" resource="customize-wife/6HairStyles/CelebHS01Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor1" resource="tutorial-icons/check-select.png" left="40" top="175" visible="no"/>		    
+						
+			<screen:element name="itemBox22" resource="customize-wife/item-box-x2.png" left="283" top="34" ontap="selectHairColor02">
+				<screen:element name="hairColor2" resource="customize-wife/6HairStyles/CelebHS02Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor2" resource="tutorial-icons/check-select.png" left="268" top="175" visible="no"/>	
+						
+			<screen:element name="itemBox23" resource="customize-wife/item-box-x2.png" left="510" top="34" ontap="selectHairColor03">
+				<screen:element name="hairColor3" resource="customize-wife/6HairStyles/CelebHS03Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor3" resource="tutorial-icons/check-select.png" left="495" top="175" visible="no"/>		    
+						
+			<screen:element name="itemBox24" resource="customize-wife/item-box-x2.png" left="55" top="286" ontap="selectHairColor04">
+				<screen:element name="hairColor4" resource="customize-wife/6HairStyles/CelebHS04Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor4" resource="tutorial-icons/check-select.png" left="40" top="427" visible="no"/>	
+						
+			<screen:element name="itemBox25" resource="customize-wife/item-box-x2.png" left="283" top="286" ontap="selectHairColor05">
+				<screen:element name="hairColor5" resource="customize-wife/6HairStyles/CelebHS05Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor5" resource="tutorial-icons/check-select.png" left="268" top="427" visible="no"/>		    
+						
+			<screen:element name="itemBox26" resource="customize-wife/item-box-x2.png" left="510" top="286" ontap="selectHairColor06">
+				<screen:element name="hairColor6" resource="customize-wife/6HairStyles/CelebHS06Full.png" left="25" top="35"/>
+			</screen:element>
+			<screen:element name="checkHairColor6" resource="tutorial-icons/check-select.png" left="495" top="427" visible="no"/>		    						
+		</screen:element>
+		
+		<screen:element name="skinToneContainer" left="511" top="105" visible="NO">
+			<screen:element name="sliderBox" resource="customize-wife/slider-box.png" left="87" top="172">
+				<screen:element name="slider" resource="customize-wife/slider.png" left="267" top="0" ontouchdown="getSliderPosition" onmove="skinToneSlider" />
+			</screen:element>
+			<screen:element name="ebonyBox" resource="customize-wife/ebony-box.png" left="93" top="420"/>
+			<screen:element name="paleBox" resource="customize-wife/pale-box.png" left="515" top="420"/>
+		</screen:element>
+
+		<screen:element name="buttonHairStyle" resource="customize-wife/hair-style-icon.png" left="110" top="688" ontap="showHairStyle"/>
+		<screen:element name="buttonHairColor" resource="customize-wife/hair-color-icon.png" left="310" top="688" ontap="showHairColor"/>
+		<screen:element name="buttonSkinTone" resource="customize-wife/skin-tone-icon.png" left="510" top="688" ontap="showSkinTone"/>
+		
+		<screen:element name="confirmCircle" resource="customize-wife/confirm-circle.png" left="1113" top="685" ontap="jumpTutorialStep:4"/>
+
+		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
+		    <screen:element name="" resource="tutorial-icons/arrow01.png" left="450" top="220"/>
+		     <screen:element name="" resource="tutorial-icons/arrow01.png" left="450" top="446"/>
+		</screen:element>		
+	    <screen:element name="tutorial-step-2" resource="tutorial-icons/arrowdown01.png" z-index="99999999" left="875" top="156" visible="no"/>
+	    <screen:element name="tutorial-step-3" resource="tutorial-icons/arrow01.png" z-index="99999999" left="1010" top="722" visible="no"/>		
+		<screen:element name="tutorial-step-4" resource="tutorial-icons/overlay75gray.png" left="0" top="0" z-index="99999999" ontap="doNothing" visible="no">
+		    <screen:element name="" resource="tutorial-icons/happylookconf.png" left="292" top="232"/>
+		     <screen:element name="" resource="tutorial-icons/no.png" left="342" top="436" ontap="prevTutorial"/>
+		     <screen:element name="" resource="tutorial-icons/yes.png" left="660" top="420" ontap="chooseHusband"/>
+		</screen:element>		
+	    		
+	</screen:elements>
+</screen:config>

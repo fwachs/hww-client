@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:blueprint-tiles>
+<!-- Tennis Court -->
+	<hww-config:tile  row="7" col="5" asset="furniture/blueprint/topl.png"/>
+	<hww-config:tile  row="7" col="6" asset="furniture/blueprint/th.png" />
+	<hww-config:tile  row="7" col="7" asset="furniture/blueprint/th.png" />
+	<hww-config:tile  row="7" col="8" asset="furniture/blueprint/th.png" />
+	<hww-config:tile  row="7" col="9" asset="furniture/blueprint/th.png" />
+	<hww-config:tile  row="7" col="10" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="8" col="6" asset="furniture/blueprint/fill2.png"/><!-- height="10" width="5"/-->
+	<hww-config:tile  row="10" col="8" asset="furniture/blueprint/fill2.png"/>
+	<hww-config:tile  row="15" col="9" asset="furniture/blueprint/fill2.png"/>
+<!-- expand if needed-->
+
+	<hww-config:tile  row="8" col="5" asset="furniture/blueprint/lv.png"/><!-- height="10" width="1"/-->
+	<hww-config:tile  row="9" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="10" col="5" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="11" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="12" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="13" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="14" col="5" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="15" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="16" col="5" asset="furniture/blueprint/lv.png"/>
+	
+	<!-- height="10" width="1"/-->
+	<hww-config:tile  row="8" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="9" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="10" col="10" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="11" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="12" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="13" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="14" col="10" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="15" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="16" col="10" asset="furniture/blueprint/rv.png"/>
+		
+	<hww-config:tile  row="17" col="5" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="17" col="6" asset="furniture/blueprint/bh.png"/><!-- height="1" width="6"/-->
+	<hww-config:tile  row="17" col="7" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="17" col="8" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="17" col="9" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="17" col="10" asset="furniture/blueprint/botr.png"/>
+
+<!-- Pool -->
+	<hww-config:tile  row="19" col="5" asset="furniture/blueprint/topl.png" />
+	<hww-config:tile  row="19" col="6" asset="furniture/blueprint/th.png"/> <!-- height="1" width="6"/-->
+	<hww-config:tile  row="19" col="7" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="19" col="8" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="19" col="9" asset="furniture/blueprint/th.png"/>
+		
+	<hww-config:tile  row="19" col="10" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="20" col="6" asset="furniture/blueprint/fill.png"/><!-- height="10" width="6"/-->
+	
+	<hww-config:tile  row="20" col="5" asset="furniture/blueprint/lv.png"/> <!--height="10" width="1"/-->
+	<hww-config:tile  row="21" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="22" col="5" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="23" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="24" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="25" col="5" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="26" col="5" asset="furniture/blueprint/lv2.png"/>
+				
+	<hww-config:tile  row="20" col="10" asset="furniture/blueprint/rv.png"/> <!-- height="10" width="1"/-->
+	<hww-config:tile  row="21" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="22" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="23" col="10" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="24" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="25" col="10" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="26" col="10" asset="furniture/blueprint/rv.png"/>
+				
+	<hww-config:tile  row="27" col="5" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="27" col="6" asset="furniture/blueprint/bh.png"/> <!--height="1" width="6"/-->
+	<hww-config:tile  row="27" col="7" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="8" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="9" asset="furniture/blueprint/bh.png"/>
+	
+	<hww-config:tile  row="27" col="10" asset="furniture/blueprint/botr.png"/>
+
+<!--Garage-->
+	<hww-config:tile  row="7" col="12" asset="furniture/blueprint/topl.png"/>
+	<hww-config:tile  row="7" col="13" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="14" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="8" col="14" asset="furniture/blueprint/fill2.png"/>
+	<hww-config:tile  row="15" col="14" asset="furniture/blueprint/fill2.png"/>
+	<hww-config:tile  row="20" col="14" asset="furniture/blueprint/loc1.png"/>
+	<hww-config:tile  row="25" col="14" asset="furniture/blueprint/fill2.png"/>
+	
+	<hww-config:tile  row="8" col="12" asset="furniture/blueprint/lv.png"/><!--height="22" width="1"/-->
+	<hww-config:tile  row="9" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="10" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="11" col="12" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="12" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="13" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="14" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="15" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="16" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="17" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="18" col="12" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="19" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="20" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="21" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="22" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="23" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="24" col="12" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="25" col="12" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="26" col="12" asset="furniture/blueprint/lv.png" />
+			
+	<hww-config:tile  row="8" col="14" asset="furniture/blueprint/rv.png"/><!-- height="22" width="1"/-->
+	<hww-config:tile  row="9" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="10" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="11" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="12" col="14" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="13" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="14" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="15" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="16" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="17" col="14" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="18" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="19" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="20" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="21" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="22" col="14" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="23" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="23" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="24" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="25" col="14" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="26" col="14" asset="furniture/blueprint/rv2.png"/>
+		
+	<hww-config:tile  row="27" col="12" asset="furniture/blueprint/botl.png"/>
+	<hww-config:tile  row="27" col="13" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="14" asset="furniture/blueprint/botr.png"/>
+		
+<!--Yard Left-->
+	<hww-config:tile  row="22" col="16" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="22" col="17" asset="furniture/blueprint/th.png"/><!-- height="1" width="7"/-->
+	<hww-config:tile  row="22" col="18" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="19" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="20" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="21" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="22" asset="furniture/blueprint/th.png"/>
+	
+	<hww-config:tile  row="22" col="23" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="23" col="16" asset="furniture/blueprint/lv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="16" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="25" col="16" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="26" col="16" asset="furniture/blueprint/lv.png"/>
+			
+	<hww-config:tile  row="23" col="18" asset="furniture/blueprint/fill2.png"/><!-- height="7" width="7"/-->
+	<hww-config:tile  row="26" col="20" asset="furniture/blueprint/loc1.png"/>
+	<hww-config:tile  row="26" col="21" asset="furniture/blueprint/fill2.png"/>
+	<hww-config:tile  row="26" col="22" asset="furniture/blueprint/fill2.png"/>
+
+	<hww-config:tile  row="23" col="23" asset="furniture/blueprint/rv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="23" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="25" col="23" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="26" col="23" asset="furniture/blueprint/rv.png"/>
+			
+	<hww-config:tile  row="27" col="16" asset="furniture/blueprint/botl.png"/>
+	<hww-config:tile  row="27" col="17" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="18" asset="furniture/blueprint/bh.png"/> <!--height="1" width="7"/-->
+	<hww-config:tile  row="27" col="19" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="20" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="21" asset="furniture/blueprint/bh.png"/>	
+	<hww-config:tile  row="27" col="22" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="23" asset="furniture/blueprint/botr.png"/>
+	
+<!--Yard Right-->
+	<hww-config:tile  row="22" col="28" asset="furniture/blueprint/topl.png"/>
+	<hww-config:tile  row="22" col="29" asset="furniture/blueprint/th.png"/><!-- height="1" width="15"/-->
+	<hww-config:tile  row="22" col="30" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="31" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="32" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="33" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="34" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="35" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="36" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="37" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="38" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="39" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="40" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="41" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="22" col="42" asset="furniture/blueprint/th.png"/>
+		
+	<hww-config:tile  row="22" col="43" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="23" col="28" asset="furniture/blueprint/lv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="28" asset="furniture/blueprint/lv.png" />
+	<hww-config:tile  row="25" col="28" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="26" col="28" asset="furniture/blueprint/lv.png" />
+	<hww-config:tile  row="27" col="28" asset="furniture/blueprint/lv.png" />
+		
+	<hww-config:tile  row="23" col="29" asset="furniture/blueprint/fill.png"/> <!--height="7" width="15"/-->
+	
+	<hww-config:tile  row="23" col="43" asset="furniture/blueprint/rv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="43" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="25" col="43" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="26" col="43" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="27" col="43" asset="furniture/blueprint/rv2.png"/>
+		
+	<hww-config:tile  row="27" col="28" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="27" col="29" asset="furniture/blueprint/bh.png"/> <!-- height="1" width="15"-->
+	<hww-config:tile  row="27" col="30" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="31" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="32" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="33" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="34" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="35" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="36" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="37" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="38" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="39" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="40" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="41" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="27" col="42" asset="furniture/blueprint/bh.png"/>
+		
+	<hww-config:tile  row="27" col="43" asset="furniture/blueprint/botr.png"/>
+
+<!--Guest House-->
+	<hww-config:tile  row="22" col="45" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="22" col="46" asset="furniture/blueprint/th.png"/><!--height="1" width="4"/-->
+	<hww-config:tile  row="22" col="47" asset="furniture/blueprint/th.png"/>
+		
+	<hww-config:tile  row="22" col="48" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="23" col="45" asset="furniture/blueprint/lv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="45" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="25" col="45" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="26" col="45" asset="furniture/blueprint/lv.png"/>
+			
+	<hww-config:tile  row="23" col="46" asset="furniture/blueprint/fill2.png"/><!-- height="7" width="4"/-->
+	<hww-config:tile  row="24" col="47" asset="furniture/blueprint/loc1.png"/>
+
+	<hww-config:tile  row="23" col="48" asset="furniture/blueprint/rv.png"/><!-- height="7" width="1"/-->
+	<hww-config:tile  row="24" col="48" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="25" col="48" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="26" col="48" asset="furniture/blueprint/rv.png"/>
+		
+	<hww-config:tile  row="27" col="45" asset="furniture/blueprint/botl.png" />
+	
+	<hww-config:tile  row="27" col="46" asset="furniture/blueprint/bh.png"/><!-- height="1" width="4"/-->
+	<hww-config:tile  row="27" col="47" asset="furniture/blueprint/bh.png"/>
+		
+	<hww-config:tile  row="27" col="48" asset="furniture/blueprint/botr.png"/>
+
+<!--Gym-->
+	<hww-config:tile  row="7" col="35" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="8" col="35" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="9" col="35" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="10" col="35" asset="furniture/blueprint/lv2.png"/>
+	
+	<hww-config:tile  row="7" col="36" asset="furniture/blueprint/th.png"/><!-- height="1" width="8"/-->
+	<hww-config:tile  row="7" col="37" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="38" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="39" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="40" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="41" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="7" col="42" asset="furniture/blueprint/th.png"/>
+		
+	<hww-config:tile  row="7" col="43" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="8" col="43" asset="furniture/blueprint/rv.png"/><!-- height="3" width="1"-->
+	<hww-config:tile  row="9" col="43" asset="furniture/blueprint/rv2.png" />
+	<hww-config:tile  row="10" col="43" asset="furniture/blueprint/rv.png"/>
+	
+	<hww-config:tile  row="8" col="36" asset="furniture/blueprint/fill.png"/><!-- height="3" width="8"/-->
+	<hww-config:tile  row="9" col="38" asset="furniture/blueprint/loc1.png"/>
+	<hww-config:tile  row="8" col="39" asset="furniture/blueprint/lev1.png"/>
+	
+	<hww-config:tile  row="11" col="35" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="11" col="36" asset="furniture/blueprint/bh.png"/><!-- height="1" width="8"/-->
+	<hww-config:tile  row="11" col="37" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="11" col="38" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="11" col="39" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="11" col="40" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="11" col="41" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="11" col="42" asset="furniture/blueprint/bh.png"/>
+	
+	<hww-config:tile  row="11" col="43" asset="furniture/blueprint/botr.png"/>
+
+<!--Master Bedroom-->
+	<hww-config:tile  row="13" col="35" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="13" col="36" asset="furniture/blueprint/th.png"/><!-- height="1" width="8"/-->
+	<hww-config:tile  row="13" col="37" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="13" col="38" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="13" col="39" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="13" col="40" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="13" col="41" asset="furniture/blueprint/th.png"/>
+	<hww-config:tile  row="13" col="42" asset="furniture/blueprint/th.png"/>
+	
+	<hww-config:tile  row="13" col="43" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="14" col="35" asset="furniture/blueprint/lv.png"/><!-- height="3" width="1"/-->
+	<hww-config:tile  row="15" col="35" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="16" col="35" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="17" col="35" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="18" col="35" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="19" col="35" asset="furniture/blueprint/lv.png"/>
+	
+	<hww-config:tile  row="14" col="36" asset="furniture/blueprint/fill2.png"/><!-- height="8" width="8"/-->
+	<hww-config:tile  row="15" col="36" asset="furniture/blueprint/loc1.png"/>
+	<hww-config:tile  row="17" col="36" asset="furniture/blueprint/lev2.png"/>
+	
+	<hww-config:tile  row="14" col="43" asset="furniture/blueprint/rv.png"/><!-- height="3" width="1"/-->
+	<hww-config:tile  row="15" col="43" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="16" col="43" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="17" col="43" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="18" col="43" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="19" col="43" asset="furniture/blueprint/rv.png"/>
+	
+	<hww-config:tile  row="20" col="35" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="20" col="36" asset="furniture/blueprint/bh.png"/><!-- height="1" width="8"/-->
+	<hww-config:tile  row="20" col="37" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="20" col="38" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="20" col="39" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="20" col="40" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="20" col="41" asset="furniture/blueprint/bh.png"/>
+	<hww-config:tile  row="20" col="42" asset="furniture/blueprint/bh.png"/>
+	
+	<hww-config:tile  row="20" col="43" asset="furniture/blueprint/botr.png"/>
+
+<!--Top Right-->
+	<hww-config:tile  row="7" col="45" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="7" col="46" asset="furniture/blueprint/th.png"/><!-- height="1" width="4"/-->
+	<hww-config:tile  row="7" col="47" asset="furniture/blueprint/th.png"/>
+		
+	<hww-config:tile  row="7" col="48" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="8" col="45" asset="furniture/blueprint/lv.png"/><!-- height="3" width="1"/-->
+	<hww-config:tile  row="9" col="45" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="10" col="45" asset="furniture/blueprint/lv.png"/>
+	
+	<hww-config:tile  row="8" col="46" asset="furniture/blueprint/fill.png"/><!-- height="3" width="4"/-->
+	<hww-config:tile  row="9" col="47" asset="furniture/blueprint/loc1.png"/>
+	
+	<hww-config:tile  row="8" col="48" asset="furniture/blueprint/rv.png"/><!-- height="3" width="1"/-->
+	<hww-config:tile  row="9" col="48" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="10" col="48" asset="furniture/blueprint/rv2.png"/>
+	
+	<hww-config:tile  row="11" col="45" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="11" col="46" asset="furniture/blueprint/bh.png"/><!-- height="1" width="4"/-->
+	<hww-config:tile  row="11" col="47" asset="furniture/blueprint/bh.png"/>
+	
+	<hww-config:tile  row="11" col="48" asset="furniture/blueprint/botr.png"/>
+	
+<!--Spare Bedroom-->
+	<hww-config:tile  row="13" col="45" asset="furniture/blueprint/topl.png"/>
+	
+	<hww-config:tile  row="13" col="46" asset="furniture/blueprint/th.png"/><!-- height="1" width="4"/-->
+	<hww-config:tile  row="13" col="47" asset="furniture/blueprint/th.png"/>
+	
+	<hww-config:tile  row="13" col="48" asset="furniture/blueprint/topr.png"/>
+	
+	<hww-config:tile  row="14" col="45" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="15" col="45" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="16" col="45" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="17" col="45" asset="furniture/blueprint/lv2.png"/>
+	<hww-config:tile  row="18" col="45" asset="furniture/blueprint/lv.png"/>
+	<hww-config:tile  row="19" col="45" asset="furniture/blueprint/lv2.png"/>
+		
+	<hww-config:tile  row="14" col="46" asset="furniture/blueprint/fill.png"/><!-- height="8" width="4"/-->
+	<hww-config:tile  row="15" col="48" asset="furniture/blueprint/loc1.png"/>
+	<hww-config:tile  row="17" col="47" asset="furniture/blueprint/fill2.png"/>
+
+	<hww-config:tile  row="14" col="48" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="15" col="48" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="16" col="48" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="17" col="48" asset="furniture/blueprint/rv2.png"/>
+	<hww-config:tile  row="18" col="48" asset="furniture/blueprint/rv.png"/>
+	<hww-config:tile  row="19" col="48" asset="furniture/blueprint/rv2.png"/>
+		
+	<hww-config:tile  row="20" col="45" asset="furniture/blueprint/botl.png"/>
+	
+	<hww-config:tile  row="20" col="46" asset="furniture/blueprint/bh.png"/><!-- height="1" width="4"/-->
+	<hww-config:tile  row="20" col="47" asset="furniture/blueprint/bh.png"/>
+	
+	<hww-config:tile  row="20" col="48" asset="furniture/blueprint/botr.png"/>
+
+</hww-config:blueprint-tiles>
+	

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="confirmFrameStack" resource="" left="-80" top="0" z-index="101" visible="NO" >
+			<screen:element name="confirmFrame" resource="gift-others-prompt/confirm-frame.png" left="286" top="142"/>
+			<screen:element name="giftImage" resource="" left="919" top="158"/>	
+			
+			<screen:element name="giftTitle" resource="" left="310" top="170" text-wrap="yes" width="556" font-size="48" font-style="bold">#placeholder</screen:element>
+			<screen:element name="giftDescription" resource="" left="305" top="249" text-wrap="yes" text-Align="left" width="556" font-style="bold" font-size="40">#giftDescription</screen:element>
+			
+			<screen:element name="giftCurrencyIcon" resource="gift-others-prompt/diamond-icon.png" left="951" top="400">
+				<screen:element name="giftCurrencyAmount" resource="" left="69" top="0" font-style="bold" font-size="60">3</screen:element>
+			</screen:element>
+			
+			<screen:element name="sendItem" resource="gift-others-prompt/send-it-button.png" left="385" top="486" ontap="sendItem"/>
+			<screen:element name="dontSendItem" resource="gift-others-prompt/dont-button.png" left="735" top="486" ontap="dontSendItem"/>
+		</screen:element>
+
+		<screen:element name="giftOthersPromptScreenStack" resource="travel-screen/background-travel.png" left="0" top="0" z-index="100">
+			<screen:element name="currencyFrame" resource="gift-others-prompt/gift-others-frame.png" left="51" top="96"/>
+			<screen:element name="backButton" resource="travel-screen/back-button.png" left="1049" top="688" ontap="goBack"/>
+			<screen:element name="giftsScroll" class="Scroll" resource="" left="75" top="116" width="1130" height="526" lock="horizontal" z-index="100"/>
+		</screen:element>
+	</screen:elements>
+</screen:config>

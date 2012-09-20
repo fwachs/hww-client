@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+	
+		<screen:element name="background" resource="travel-screen/background-travel.png" left="0" top="0"/>
+		
+		<screen:element name="travelOptionsFrame" resource="" left="50" top="100" ontouchdown="getLocation" onmove="slideCities">
+			<screen:element name="background" resource="travel-screen/CitySelect001.png" left="0" top="0">
+				<screen:element name="LondonCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToLondon" width="539" height="108">
+					<screen:element name="goToLondon" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+			</screen:element>
+			<screen:element name="background" resource="travel-screen/CitySelect002.png" left="550" top="0">
+				<screen:element name="SanFranciscoCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToSanFrancisco" width="539" height="108">
+					<screen:element name="goToSanFrancisco" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+			</screen:element>
+			<screen:element name="background" resource="travel-screen/CitySelect003.png" left="1100" top="0">
+				<screen:element name="ParisCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToParis" width="539" height="108">
+					<screen:element name="goToParis" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+				<screen:element name="goToParis" resource="travel-screen/go-button.png" left="410" top="600" ontap="goToParis"/>
+			</screen:element>
+			<screen:element name="background" resource="travel-screen/CitySelect004.png" left="1650" top="0">
+				<screen:element name="BuenosAiresCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToBuenosAires" width="539" height="108">
+					<screen:element name="goToBuenosAires" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+			</screen:element>
+			<screen:element name="background" resource="travel-screen/CitySelect005.png" left="2200" top="0">
+				<screen:element name="TokyoCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToTokyo" width="539" height="108">
+					<screen:element name="goToTokyo" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+			</screen:element>
+			<screen:element name="background" resource="travel-screen/CitySelect006.png" left="2750" top="0">
+				<screen:element name="SydneyCostText" resource="" left="110" top="600"/>
+				<screen:element name="hotspot" resource="" left="0" top="600" ontap="goToSydney" width="539" height="108">
+					<screen:element name="goToSydney" resource="travel-screen/go-button.png" left="410" top="0" />
+				</screen:element>
+			</screen:element>
+		</screen:element>
+		
+		<screen:element name="backbutton" resource="travel-screen/back-button.png" left="1020" top="688" ontap="goback"/>
+		
+		<screen:element name="travelPortalFrame" resource="" left="0" top="0" visible="NO">
+			<screen:element name="travelImage" resource="travel-portal/london-travel.png" left="0" top="0"/>
+			<screen:element name="loadingbar" resource="travel-portal/loading-barl.png" left="0" top="730"/>
+			<screen:element name="loadingframe" resource="travel-portal/loading-frame.png" left="0" top="730"/>
+			<screen:element name="plane" resource="travel-portal/plane.png" left="0" top="720"/>
+		</screen:element>
+
+	</screen:elements>
+</screen:config>
