@@ -10,7 +10,7 @@ Brief Description:
 
 class Animations
 {
-	var animationsMap = null;
+	var animationsMap = null; 
 
 	public function Animations() {
 		animationsMap = new dict();
