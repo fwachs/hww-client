@@ -23,8 +23,6 @@ class HouseSelectionController extends ScreenController
 
     override public function screenLoaded()
     {
-        Game.hideBanner();
-
         if(this.screen.firstTime == 1) {
             this.displayHouse(this.screen.houseListing[0]);
             this.selectHouse();
@@ -36,11 +34,6 @@ class HouseSelectionController extends ScreenController
             this.displayHouse(this.selectedHouse);
             this.selectHouse();
         }
-    }
-
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_HouseSelectionTutorial);
     }
 
     override public function screenUnloaded()

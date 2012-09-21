@@ -33,11 +33,6 @@ class WifeCustomizationController extends ScreenController implements INameEnter
         this.screen.updateHairStyleSelection();
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_WifeCustomizeTutorial);
-    }
-
     public function nameChanged(name)
     {
         Game.sharedGame().wife.name = name;

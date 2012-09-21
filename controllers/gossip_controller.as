@@ -26,11 +26,6 @@ class GossipController extends ScreenController
         Game.sharedGame().getServer().getMessagesAndBestWife(this.buildMessageListAndBestWife);
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_GossipTutorial);
-    }
-
     public function buildMessageListAndBestWife(request_id, ret_code, response_content)
     {
         if(ret_code == 0) return;

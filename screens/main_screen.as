@@ -54,6 +54,7 @@ class MainScreen extends Screen
 
 	override public function lostFocus()
 	{
+		Game.hideBanner();
 		this.getElement("settingsFrame").getSprite().visible(0);
 		this.getElement("friendsBeltContainer").getSprite().visible(0);
 		this.stopHusbandAnimation();

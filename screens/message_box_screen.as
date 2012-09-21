@@ -36,11 +36,7 @@ class MessageBoxScreen extends Screen
     static var MB_TravelTutorial = 22;
     static var MB_HusbandTutorial = 23;
     static var MB_MysteryTutorial = 24;
-    static var MB_GossipTutorial = 25;
-    static var MB_MainTutorial = 26;
-    static var MB_HouseSelectionTutorial = 27;
-    static var MB_WifeCustomizeTutorial = 28;
-    static var MB_HubbySelectionTutorial = 29;
+    static var MB_MainTutorial = 25;
 
     var type;
     var argument;
@@ -169,20 +165,8 @@ class MessageBoxScreen extends Screen
         else if(this.type == MessageBoxScreen.MB_MysteryTutorial) {
             displayTutorialPrompt("images/tutorial-icons/mystery-tutorial.png");
         }
-        else if(this.type == MessageBoxScreen.MB_GossipTutorial) {
-            displayOkayPrompt("Here you can gossip and see who the number #1 wife in the game is.");
-        }
         else if(this.type == MessageBoxScreen.MB_MainTutorial) {
-            displayOkayPrompt("Add friends and send them Gifts or even a trap!");
-        }
-        else if(this.type == MessageBoxScreen.MB_HouseSelectionTutorial) {
-            displayOkayPrompt("Select a house, don't worry you can change it later.");
-        }
-        else if(this.type == MessageBoxScreen.MB_WifeCustomizeTutorial) {
-            displayOkayPrompt("Make her fabulous!");
-        }
-        else if(this.type == MessageBoxScreen.MB_HubbySelectionTutorial) {
-            displayOkayPrompt("Pick a good career!");
+        	displayTutorialPrompt("images/tutorial-icons/mainmenu-tutorial-01.png");
         }
     }
 

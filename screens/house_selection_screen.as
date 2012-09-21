@@ -46,8 +46,18 @@ class HouseSelectionScreen extends Screen
 		costGameBucksLabel = this.getElement("gameBucksCost");
 		
 		if(this.firstTime == 1) {
-			this.getElement("backbutton").getSprite().texture("images/main-menu/nav-button-small-02.png");
+			this.getElement("backbutton").getSprite().texture("images/wife-selection-screen/confirm-circle.png");
 		}
+	}
+	
+	override public function gotFocus()
+	{
+		Game.hideBanner();
+	}
+	
+	override public function lostFocus()
+	{
+		Game.hideBanner();
 	}
 	
 	public function displayHouses()

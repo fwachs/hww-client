@@ -26,11 +26,6 @@ class HusbandSelectionController extends ScreenController implements INameEnterC
         trace("HusbandSelectionController screenLoaded!");
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_HubbySelectionTutorial);
-    }
-
     public function nameChanged(name)
     {
         Game.sharedGame().hubby.name = name;
