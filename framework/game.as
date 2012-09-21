@@ -146,6 +146,7 @@ class Game
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
 		this.getServer().getCurrentDateAndTick(initializeTimers);
+		Timer.startTimers(0);
 		this.loadingBarEnd.visible(1);
 		
 	}
