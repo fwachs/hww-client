@@ -353,13 +353,10 @@ class Game
         if(this.properties == null)  {
         	this.properties = dict();
         }
-
-        trace("**** loadGameProperties: ", this.properties);
 	}
 
     public function saveProperties()
     {
-        trace("**** saveGameProperties: ", this.properties);
         Game.getDatabase().put("game_properties", this.properties);
     }
     
