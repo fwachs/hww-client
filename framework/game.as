@@ -146,7 +146,6 @@ class Game
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
 		this.getServer().getCurrentDateAndTick(initializeTimers);
-		Timer.startTimers(0);
 		this.loadingBarEnd.visible(1);
 		
 	}
@@ -219,17 +218,17 @@ class Game
 			var currentTick = response.get("currentTick");
 			var currentDay = response.get("currentDay");
 			this.today = currentDay;
-			Timer.startTimers(currentTick);
 			trace("### HWW ### - Today ", currentDay, " CurrentTick: ", str(currentTick));
 		}
 		else {
 			this.today = "";
-			Timer.startTimers(0);
 		}
 		
 		this.hideLoadingScreen();
 
 		Game.sharedGame().run();
+
+		Timer.startTimers();
 	}
 
     public function initializeServer()
