@@ -16,7 +16,7 @@ class Shop
         if (ret == 0) {
             action = "purchase-fail";
         }
-        Game.trackEvent("InGame Purchase", action, label, 1);
+        Game.trackEvent(category, action, label, 1);
     }
 
     public function buyFurniture(furniture)
