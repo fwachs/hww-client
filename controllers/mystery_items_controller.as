@@ -20,7 +20,6 @@ class MysteryItemsController extends ScreenController
 
     override public function screenLoaded()
     {
-        Game.hideBanner();
     }
 
     override public function showTutorial()
@@ -37,10 +36,14 @@ class MysteryItemsController extends ScreenController
         super.eventFired(event);
 
         if(event.name == "goback") {
-            Game.showBanner(1, 1);
+            Game.sounds.playSFX("buttonPress");
             Game.popScreen();
         }
         else if(event.name == "doNothing") {
+        }
+        else if(event.name == "dismiss") {
+            Game.sounds.playSFX("buttonPress");
+            this.dismissModalScreen();
         }
     }
 }
