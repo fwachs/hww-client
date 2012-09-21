@@ -1,67 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <screen:config>
-	<screen:elements>
-	
-	<screen:element name="okayPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="okayPromptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
-		<screen:element name="okayPromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" text-wrap="yes">#placeholder</screen:element>
-	</screen:element>
-	
-	<!-- okayPrompt needs to select a okay-button with specific ontap functionality -->
-	<screen:element name="okay-button-default" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismiss" visible="NO"/>
-	<screen:element name="okay-button-relieve-stress" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpRelieveStress" visible="NO"/>
-	<screen:element name="okay-button-increase-love" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpIncreaseLove" visible="NO"/>
-	<screen:element name="okay-button-work-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissWorkTutorial" visible="NO"/>
-	<screen:element name="okay-button-shopping-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissShoppingTutorial" visible="NO"/>
-	
-	<screen:element name="confirmCancelPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="confirmCancelPromptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
-		<screen:element name="confirmCancelPromptBakedText" resource="hubby-screen/gone-to-work-text.png" left="282" top="226"/>
-		<screen:element name="cancel-button" resource="hubby-screen/cancel-button-highlight.png" left="673" top="531" ontap="dismiss"/>
-	</screen:element>
-	
-	<!-- confirmCancelPrompt needs to select a confirm-button with specific ontap functionality -->
-	<screen:element name="confirm-button-default" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="dismiss" visible="NO"/>
-	<screen:element name="confirm-button-shopping-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="shoppingReturn" visible="NO"/>
-	<screen:element name="confirm-button-work-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="workReturn" visible="NO"/>
-	
-	<screen:element name="ReturnFromWorkingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
-		<screen:element name="textTop" resource="" left="315" top="180" font-size="42" font-style="bold">What a day! He came home with</screen:element>
-		<screen:element name="gameBucksIcon" resource="hubby-screen/back-from-work-screen/game-buck.png" left="336" top="244"/>
-		<screen:element name="gameBucksLable" resource="" left="506" top="244"/>
-		<screen:element name="sspIcon" resource="hubby-screen/back-from-work-screen/SSP-return.png" left="338" top="374"/>
-		<screen:element name="sspLable" resource="" left="506" top="374"/>
-		<screen:element name="okay-button" resource="tutorial-icons/okay.png" left="506" top="531" ontap="levelUpCheck"/>
-	</screen:element>
-	
-	<screen:element name="ReturnFromShoppingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
-		<screen:element name="itemRetrieved" resource="" left="543" top="335"/>
-		<screen:element name="star1" resource="hubby-screen/item-star-grey.png" left="692" top="318"/>
-		<screen:element name="star2" resource="hubby-screen/item-star-grey.png" left="692" top="371"/>
-		<screen:element name="star3" resource="hubby-screen/item-star-grey.png" left="692" top="424"/>
-		<screen:element name="shoppingText" resource="" left="390" top="187" font-size="48" font-style="bold" text-align="center" width="550" height="59">#placeholder</screen:element>
-		<screen:element name="shoppingItemText" resource="" left="464" top="239" font-size="36" font-style="bold" text-align="center" width="360" height="82">#placeholder</screen:element>
-		<screen:element name="okay-button" resource="tutorial-icons/okay.png" left="512" top="523" ontap="dismiss"/>
-	</screen:element>
-	
-	<screen:element name="TravelReturnPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="promptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
-		<screen:element name="textTop" resource="" left="331" top="163" font-size="42" font-style="bold" width="618" height="140" text-wrap="yes">Are you ready to return home from your trip?</screen:element>
-		<screen:element name="confirm-button" resource="hubby-screen/confirm-button-highlight.png" left="318" top="370" ontap="travelReturn"/>
-		<screen:element name="cancel-button" resource="hubby-screen/cancel-button-highlight.png" left="673" top="370" ontap="dismiss"/>
-	</screen:element>
+    <screen:elements>
 
-	<screen:element name="RemodelHousePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
-		<screen:element name="promptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
-		<screen:element name="remodelHousePromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" height="109" text-wrap="yes">Congratulations! Do you want to remodel your house?</screen:element>
-		<screen:element name="diamondIcon" resource="premium-currency-screen/dimonds01v2.png" left="536" top="284"/>
-		<screen:element name="remodelCost" resource="" left="634" top="284" font-size="60" font-style="bold">#placeholder</screen:element>
-		<screen:element name="yes-button" resource="tutorial-icons/yes.png" left="331" top="355" ontap="remodel"/>
-		<screen:element name="no-button" resource="tutorial-icons/no.png" left="662" top="370" ontap="dismiss"/>
-	</screen:element>
-				
-	</screen:elements>
+    <screen:element name="okayPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="okayPromptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
+        <screen:element name="okayPromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" text-wrap="yes">#placeholder</screen:element>
+    </screen:element>
+
+    <!-- okayPrompt needs to select a okay-button with specific ontap functionality -->
+    <screen:element name="okay-button-default" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismiss" visible="NO"/>
+    <screen:element name="okay-button-relieve-stress" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpRelieveStress" visible="NO"/>
+    <screen:element name="okay-button-increase-love" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpIncreaseLove" visible="NO"/>
+    <screen:element name="okay-button-work-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissWorkTutorial" visible="NO"/>
+    <screen:element name="okay-button-shopping-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissShoppingTutorial" visible="NO"/>
+
+    <screen:element name="confirmCancelPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="confirmCancelPromptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
+        <screen:element name="confirmCancelPromptBakedText" resource="hubby-screen/gone-to-work-text.png" left="282" top="226"/>
+        <screen:element name="cancel-button" resource="hubby-screen/cancel-button-highlight.png" left="673" top="531" ontap="dismiss"/>
+    </screen:element>
+
+    <!-- confirmCancelPrompt needs to select a confirm-button with specific ontap functionality -->
+    <screen:element name="confirm-button-default" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="dismiss" visible="NO"/>
+    <screen:element name="confirm-button-shopping-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="shoppingReturn" visible="NO"/>
+    <screen:element name="confirm-button-work-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="workReturn" visible="NO"/>
+
+    <screen:element name="ReturnFromWorkingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
+        <screen:element name="textTop" resource="" left="315" top="180" font-size="42" font-style="bold">What a day! He came home with</screen:element>
+        <screen:element name="gameBucksIcon" resource="hubby-screen/back-from-work-screen/game-buck.png" left="336" top="244"/>
+        <screen:element name="gameBucksLable" resource="" left="506" top="244"/>
+        <screen:element name="sspIcon" resource="hubby-screen/back-from-work-screen/SSP-return.png" left="338" top="374"/>
+        <screen:element name="sspLable" resource="" left="506" top="374"/>
+        <screen:element name="okay-button" resource="tutorial-icons/okay.png" left="506" top="531" ontap="levelUpCheck"/>
+    </screen:element>
+
+    <screen:element name="ReturnFromShoppingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
+        <screen:element name="itemRetrieved" resource="" left="543" top="335"/>
+        <screen:element name="star1" resource="hubby-screen/item-star-grey.png" left="692" top="318"/>
+        <screen:element name="star2" resource="hubby-screen/item-star-grey.png" left="692" top="371"/>
+        <screen:element name="star3" resource="hubby-screen/item-star-grey.png" left="692" top="424"/>
+        <screen:element name="shoppingText" resource="" left="390" top="187" font-size="48" font-style="bold" text-align="center" width="550" height="59">#placeholder</screen:element>
+        <screen:element name="shoppingItemText" resource="" left="464" top="239" font-size="36" font-style="bold" text-align="center" width="360" height="82">#placeholder</screen:element>
+        <screen:element name="okay-button" resource="tutorial-icons/okay.png" left="512" top="523" ontap="dismiss"/>
+    </screen:element>
+
+    <screen:element name="TravelReturnPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="promptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
+        <screen:element name="textTop" resource="" left="331" top="163" font-size="42" font-style="bold" width="618" height="140" text-wrap="yes">Are you ready to return home from your trip?</screen:element>
+        <screen:element name="confirm-button" resource="hubby-screen/confirm-button-highlight.png" left="318" top="370" ontap="travelReturn"/>
+        <screen:element name="cancel-button" resource="hubby-screen/cancel-button-highlight.png" left="673" top="370" ontap="dismiss"/>
+    </screen:element>
+
+    <screen:element name="RemodelHousePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="promptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
+        <screen:element name="remodelHousePromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" height="109" text-wrap="yes">Congratulations! Do you want to remodel your house?</screen:element>
+        <screen:element name="diamondIcon" resource="premium-currency-screen/dimonds01v2.png" left="536" top="284"/>
+        <screen:element name="remodelCost" resource="" left="634" top="284" font-size="60" font-style="bold">#placeholder</screen:element>
+        <screen:element name="yes-button" resource="tutorial-icons/yes.png" left="331" top="355" ontap="remodel"/>
+        <screen:element name="no-button" resource="tutorial-icons/no.png" left="662" top="370" ontap="dismiss"/>
+    </screen:element>
+
+    <screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="tutorialPromptFrame" resource="" left="0" top="0" ontap="doNothing"/>
+        <screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="dismiss"/>
+    </screen:element>
+
+    </screen:elements>
 </screen:config>
