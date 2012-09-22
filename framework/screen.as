@@ -305,7 +305,7 @@ class Screen
         this.properties = Game.getDatabase().get("screen_" + this.configFile);
         trace("### HWW ### - Fetched screen:", "screen_" + this.configFile, this.properties);
         if(this.properties)  {
-        	this.firstTime = 1;
+        	this.firstTime = 0;
         }
         else {        
         	this.firstTime = 1;
