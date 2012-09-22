@@ -218,17 +218,17 @@ class Game
 			var currentTick = response.get("currentTick");
 			var currentDay = response.get("currentDay");
 			this.today = currentDay;
-			Timer.startTimers(currentTick);
 			trace("### HWW ### - Today ", currentDay, " CurrentTick: ", str(currentTick));
 		}
 		else {
 			this.today = "";
-			Timer.startTimers(0);
 		}
 		
 		this.hideLoadingScreen();
 
 		Game.sharedGame().run();
+
+		Timer.startTimers();
 	}
 
     public function initializeServer()
@@ -352,13 +352,10 @@ class Game
         if(this.properties == null)  {
         	this.properties = dict();
         }
-
-        trace("**** loadGameProperties: ", this.properties);
 	}
 
     public function saveProperties()
     {
-        trace("**** saveGameProperties: ", this.properties);
         Game.getDatabase().put("game_properties", this.properties);
     }
     
