@@ -97,16 +97,20 @@
 		</screen:element>
 
 		<screen:element name="character" resource="" left="0" top="40"/>
-		
-		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
+
+	    <screen:element name="tutorial-step-1" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+	        <screen:element name="tutorialPromptFrame" resource="tutorial-icons/husband-tutorial.png" left="0" top="0" ontap="doNothing"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="nextTutorial"/>
+    	</screen:element>
+		<screen:element name="tutorial-step-2" resource="" left="0" top="0" z-index="99999999" visible="no">
 		    <screen:element name="" resource="tutorial-icons/SpeechBubble-work.png" left="381" top="92"/>
 		    <screen:element name="" resource="tutorial-icons/arrow01.png" left="535" top="281"/>		
 		</screen:element>				
-		<screen:element name="tutorial-step-2" resource="" left="0" top="0" z-index="99999999" visible="no">
+		<screen:element name="tutorial-step-3" resource="" left="0" top="0" z-index="99999999" visible="no">
 		    <screen:element name="" resource="tutorial-icons/SpeechBubble-shopping.png" left="381" top="92"/>
 		    <screen:element name="" resource="tutorial-icons/arrow01.png" left="535" top="410"/>		
 		</screen:element>		
-		<screen:element name="tutorial-step-3" resource="" left="0" top="0" z-index="99999999" visible="no">
+		<screen:element name="tutorial-step-4" resource="" left="0" top="0" z-index="99999999" visible="no">
 		    <screen:element name="" resource="tutorial-icons/SpeechBubble-checkonme.png" left="381" top="92"/>
 		</screen:element>		
 								
