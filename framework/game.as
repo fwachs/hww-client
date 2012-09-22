@@ -270,6 +270,7 @@ class Game
 		Game.screens.append(screenToPush);
 		
 		if(len(Game.screens) > 1) {
+			lastScreen.willLooseFocus();
 			lastScreen.lostFocus();
 			lastScreen.canvas.addaction(moveto(250, Game.translateX( -1280), Game.translateY( 0)));
 			screenToPush.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -281,6 +282,7 @@ class Game
 		}
 		
 		screenToPush.controller.screenLoaded();
+		screenToPush.willGetFocus();
 		screenToPush.gotFocus();
 		screenToPush.controller.screenPostLoaded();
 	}
