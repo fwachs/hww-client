@@ -98,6 +98,8 @@ class HousewifeWars extends Game
         ret = Game.currentGame.wallet.collect(freeGB);
         */
 
+		wife.firstPlay = 1;
+		
 		if(wife.firstPlay == 1)
 		{
 			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(5000, "GameBucks");

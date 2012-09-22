@@ -152,8 +152,8 @@ class Screen
 			
 			trace("create screen: ", this.configFile, this.firstTime);
 
-				this.showNextTutorial();
-			}
+			this.showNextTutorial();
+		}
 
 		this.build();		
 	}
@@ -173,19 +173,28 @@ class Screen
 	public function showTutorialStep(step)
 	{
 		if(this.firstTime == 0) return;
-		
-		var oldTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
-		if(oldTut) {
-			oldTut.getSprite().visible(0);
-		}
+
+		this.hideTutorial();
 		
 		this.currentTutorial = step;
 
 		var newTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
 		if(newTut) {
+			newTut.getSprite().removefromparent();
+			Game.scene.add(newTut.getSprite());
 			newTut.getSprite().visible(1);
 		}
-}
+	}
+	
+	public function hideTutorial()
+	{
+		var oldTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
+		if(oldTut) {
+			oldTut.getSprite().removefromparent();
+			this.rootNode.getSprite().add(oldTut.getSprite());
+			oldTut.getSprite().visible(0);
+		}
+	}
 	
 	public function controlFromXMLString(xmlString)
 	{
@@ -275,7 +284,17 @@ class Screen
 	
 	public function lostFocus()
 	{
-	}	
+	}
+	
+	public function willLooseFocus()
+	{
+		this.hideTutorial();
+	}
+	
+	public function willGetFocus()
+	{
+		this.showTutorialStep(this.currentTutorial);
+	}
 	
 	public function bubbleUpSize(width, height)
 	{
@@ -286,7 +305,7 @@ class Screen
         this.properties = Game.getDatabase().get("screen_" + this.configFile);
         trace("### HWW ### - Fetched screen:", "screen_" + this.configFile, this.properties);
         if(this.properties)  {
-        	this.firstTime = 0;
+        	this.firstTime = 1;
         }
         else {        
         	this.firstTime = 1;
