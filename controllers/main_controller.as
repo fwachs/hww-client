@@ -318,7 +318,7 @@ class MainController extends ScreenController
     public function loadFriends()
     {
         var friends = new Array();
-        var queryParams = dict([["offset",0],["limit",100]]);
+        var queryParams = dict([["offset",0],["limit",499]]);
         var param = "";
         // ppy_query("list_friends", queryParams, buildFriendCallback, param);
         ppy_query("list_friends", queryParams, buildFriendCallback, param);
