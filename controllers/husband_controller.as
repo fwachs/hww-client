@@ -280,7 +280,7 @@ class HusbandController extends ScreenController implements TimerListener
                     Game.sharedGame().hubby.shoppingTimer.seconds = 1;
                 }
                 else {
-                    Game.sharedGame().hubby.shoppingTimer.seconds = 60;
+                    Game.sharedGame().hubby.shoppingTimer.seconds = 120;
                 }
                 Game.sharedGame().hubby.shoppingTimer.restart();
                 Game.sharedGame().hubby.shoppingTimer.ticks = 1;
