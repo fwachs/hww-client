@@ -181,7 +181,7 @@ class Screen
 		var newTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
 		if(newTut) {
 			newTut.getSprite().removefromparent();
-			Game.scene.add(newTut.getSprite());
+			Game.scene.add(newTut.getSprite(), 99999999);
 			newTut.getSprite().visible(1);
 		}
 	}

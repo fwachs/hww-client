@@ -31,7 +31,7 @@ class HusbandController extends ScreenController implements TimerListener
 
     override public function showTutorial()
     {
-        this.showMessageBox(MessageBoxScreen.MB_HusbandTutorial);
+        //this.showMessageBox(MessageBoxScreen.MB_HusbandTutorial);
     }
 
     override public function screenUnloaded()
