@@ -92,8 +92,8 @@ class MainScreen extends Screen
 		var totalFriendsToDisplay = 10;
 		var friendsCount = len(friends);
 		
-		var avatarLeft = 47;
-		var avatarTop = 43;
+		var avatarLeft = 67;
+		var avatarTop = 61;
 		
 		for(var i = 0; i < friendsCount; i++) {
 			var friend = friends[i];
@@ -102,8 +102,8 @@ class MainScreen extends Screen
 			friendParams.update("left_pos", str(left));
 			friendParams.update("friend_name", friend.name);
 			friendParams.update("avatar_url", friend.avatarUrl);
-			friendParams.update("avatar_left", str(avatarLeft));
-			friendParams.update("avatar_top", str(avatarTop));
+			friendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
+			friendParams.update("avatar_top", str(Game.translateY(avatarTop)));
 			friendParams.update("tap_event", "friendSelected");
 			var property = this.controlFromXMLTemplate("PapayaFriend", friendParams, "papaya-friend.xml");
 			property.tapEvent.argument = friend;
@@ -111,16 +111,16 @@ class MainScreen extends Screen
 			left += 165;
 		}
 		
-		avatarLeft = 42;
-		avatarTop = 38;
+		avatarLeft = 60;
+		avatarTop = 54;
 
 		for(var j = 0; j < totalFriendsToDisplay - friendsCount; j++) {
 			var fakeFriendParams = dict();
 			fakeFriendParams.update("left_pos", str(left));
 			fakeFriendParams.update("friend_name", "Invite");
 			fakeFriendParams.update("avatar_url", "friend-belt/friendbelt-question.png");
-			fakeFriendParams.update("avatar_left", str(avatarLeft));
-			fakeFriendParams.update("avatar_top", str(avatarTop));
+			fakeFriendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
+			fakeFriendParams.update("avatar_top", str(Game.translateY(avatarTop)));
 			fakeFriendParams.update("tap_event", "inviteFriends");
 			var fakePapayaFriend = this.controlFromXMLTemplate("PapayaFriend", fakeFriendParams, "papaya-friend.xml");
 			friendsBelt.addChild(fakePapayaFriend);
