@@ -24,7 +24,7 @@ class Game
 	static var bannerScreen = null;
 	static var sounds;
 	static var animations;
-	static var screenScale = 70;
+	static var screenScale = 50;
 	static var papayaUserId = 0;
 	var loadingScreen;
 	var loadingBar;
