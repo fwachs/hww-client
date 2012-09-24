@@ -84,11 +84,6 @@ class MainController extends ScreenController
         }
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_MainTutorial);
-    }
-
     override public function screenUnloaded()
     {
     }

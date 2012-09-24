@@ -29,11 +29,6 @@ class HusbandController extends ScreenController implements TimerListener
         Timer.registerListener("outShoppingTimer", this);
     }
 
-    override public function showTutorial()
-    {
-        //this.showMessageBox(MessageBoxScreen.MB_HusbandTutorial);
-    }
-
     override public function screenUnloaded()
     {
         Timer.unregisterListener("outToWorkTimer", this);
