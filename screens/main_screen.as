@@ -114,7 +114,7 @@ class MainScreen extends Screen
 		avatarLeft = 42;
 		avatarTop = 38;
 
-		for(var j = 0; j < totalFriendsToDisplay - friendsCount; j++) {
+		for(var j = 0; j < 5; j++) {
 			var fakeFriendParams = dict();
 			fakeFriendParams.update("left_pos", str(left));
 			fakeFriendParams.update("friend_name", "Invite");
