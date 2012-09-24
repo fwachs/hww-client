@@ -127,12 +127,13 @@ class GossipScreen extends Screen
 		this.text = this.textInput.text();
 		this.textInput.text("");
 		
-		this.messages.append(dict([["message", this.text], ["houseWifeName", Game.currentGame.wife.name], ["houseLeve", ""], ["timeAgo", ""]]));
-		
 		// TODO: get house level
-		var msg = GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);		
-		
-		Game.sharedGame().getServer().postGossip(msg, this.buildMessageListAndBestWife);
+		if (this.text != "") {
+		    this.messages.append(dict([["message", this.text], ["houseWifeName", Game.currentGame.wife.name], ["houseLeve", ""], ["timeAgo", ""]]));
+		    var msg = GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
+	        
+	        Game.sharedGame().getServer().postGossip(msg, this.buildMessageListAndBestWife);    
+		}
 	}
 
 	public function buildMessageListAndBestWife(request_id, ret_code, response_content)

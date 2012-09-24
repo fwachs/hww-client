@@ -10,14 +10,16 @@ Brief Description:
 
 class MysteryItem
 {
-	var id;
-	var name;
-	var desc;
-	var image;
-	var stars;
-	var points;
+	var id = null;
+	var name = null;
+	var desc = null;
+	var image = null;
+	var stars = null;
+	var points = null;
+	var reward = null;
+	var currency = null;
 	
-	public function MysteryItem(pId, pName, pDesc, pFileName, pStars, pPoints)
+	public function MysteryItem(pId, pName, pDesc, pFileName, pStars, pPoints, pReward, pCurrency)
 	{
 		this.id = pId;
 		this.name = pName;
@@ -25,5 +27,10 @@ class MysteryItem
 		this.image = pFileName;
 		this.stars = pStars;
 		this.points = pPoints;
+		if (pReward != null) {
+		    this.reward = int(pReward);
+		}
+		this.currency = pCurrency;
 	}
+
 }

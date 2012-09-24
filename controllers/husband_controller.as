@@ -493,8 +493,7 @@ class HusbandController extends ScreenController implements TimerListener
                 shoppingItem = commonItems[selectionIndex];
             }
 
-            Game.sharedGame().wife.mysteryItemCollection.update(shoppingItem.id, shoppingItem);
-            Game.sharedGame().wife.incSocialStatusPoints(shoppingItem.points);
+            Game.sharedGame().wife.awardMysteryItem(shoppingItem);
             Game.sharedGame().wife.save();
 
             Game.sounds.playSFX("gainSSP");
