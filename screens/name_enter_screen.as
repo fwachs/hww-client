@@ -64,7 +64,7 @@ class NameEnterScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
-		var vf = v_font(30, "arial", FONT_NORMAL);
+		var vf = v_font(Game.translateFontSize(30), "arial", FONT_NORMAL);
 		this.textInput = v_create(V_INPUT_VIEW, Game.translateX(353), Game.translateY(110), Game.translateX(562), Game.translateY(100)); 
 		this.textInput.attr(ATTR_FONT, vf);
 		this.textInput.attr(ATTR_INPUT_MAX, 10);
