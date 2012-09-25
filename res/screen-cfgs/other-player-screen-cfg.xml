@@ -38,9 +38,10 @@
 			<screen:element name="citiesVisitedText" resource="" left="22" top="10" font-style="bold">Cities Visited</screen:element>
 			<screen:element name="citiesVisitedValue" resource="" left="330" top="10">#placeholder</screen:element>
 		</screen:element>
-		
-		<screen:element name="gift-icon" resource="other-player-screen/gift-icon.png" left="1021" top="143" ontap="showGiftOthersScreen"/>
-		
+
+<!-- 		<screen:element name="gift-icon" resource="other-player-screen/gift-icon.png" left="1021" top="143" ontap="showGiftOthersScreen"/> -->
+		<screen:element name="gift-icon" resource="other-player-screen/gift-icon.png" left="1021" top="143" ontap="doNothing"/>
+
 		<screen:element name="husbandName" resource="" left="650" top="425" font-style="bold">#placeholder</screen:element>
 		
 		<screen:element name="jobLevel" resource="other-player-screen/other-player-button.png" left="630" top="494">
