@@ -104,16 +104,14 @@ class Sounds
 	
 	public function turnOff()
 	{
-		Game.soundOn = 0;
-		Game.sharedGame().setProperty("soundOn", Game.soundOn);
+		Game.getDatabase().put("soundOn", 0);
 		this.setVolume(0, 0);
 		this.pause();
 	}
 	
 	public function turnOn()
 	{
-		Game.soundOn = 1;
-		Game.sharedGame().setProperty("soundOn", Game.soundOn);
+		Game.getDatabase().put("soundOn", 1);
 		this.setVolume(100, 100);
 		this.resume();
 	}

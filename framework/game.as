@@ -35,7 +35,6 @@ class Game
 	var today;
 	var properties;
 	var advertisement;
-	var soundOn = null;
 
 	public static function getPapayaUserId()
 	{
@@ -65,18 +64,11 @@ class Game
 	
 	public static function audioOn()
 	{
-		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
-		if(Game.soundOn == null) {
-		    if (Game.sharedGame() != null) {
-		        Game.soundOn = Game.sharedGame().properties.get("soundOn", 1);
-	            Game.sharedGame().setProperty("soundOn", Game.soundOn);
-		    } else {
-		        Game.soundOn = 1;
-		    }
-		}
-		
-		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
-		return Game.soundOn;
+	    if (Game.getDatabase().get("soundOn") != null) {
+	        return Game.getDatabase().get("soundOn");
+	    }
+	    Game.getDatabase().put("soundOn", 1);
+		return 1;
 	}
 	
 	public static function trackEvent(category, action, label, value)
