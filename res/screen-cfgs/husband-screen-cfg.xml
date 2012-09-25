@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <screen:config>
@@ -98,120 +97,6 @@
 		</screen:element>
 
 		<screen:element name="character" resource="" left="0" top="40"/>
-		
-		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
-		    <screen:element name="" resource="tutorial-icons/SpeechBubble-work.png" left="381" top="92"/>
-		    <screen:element name="" resource="tutorial-icons/arrow01.png" left="535" top="281"/>		
-		</screen:element>				
-		<screen:element name="tutorial-step-2" resource="" left="0" top="0" z-index="99999999" visible="no">
-		    <screen:element name="" resource="tutorial-icons/SpeechBubble-shopping.png" left="381" top="92"/>
-		    <screen:element name="" resource="tutorial-icons/arrow01.png" left="535" top="410"/>		
-		</screen:element>		
-		<screen:element name="tutorial-step-3" resource="" left="0" top="0" z-index="99999999" visible="no">
-		    <screen:element name="" resource="tutorial-icons/SpeechBubble-checkonme.png" left="381" top="92"/>
-		</screen:element>		
-								
-	</screen:elements>
-=======
-<?xml version="1.0" encoding="UTF-8" ?>
-
-<screen:config>
-	<screen:elements>
-		<screen:element name="background" resource="hubby-screen/hubby-screen.png" left="0" top="0"/>
-		
-		<screen:element name="bgFrame" resource="hubby-screen/options-frame.png" left="512" top="97"/>
-		
-		<screen:element name="sendToWorkButton" resource="hubby-screen/send-to-work-button.png" left="645" top="258" ontap="sendToWork">
-			<screen:element name="sendToWorkButtonOverlay" resource="hubby-screen/send-work-text.png" left="0" top="0" visible="NO"/>
-			<screen:element name="sendToWorkButtonText" resource="" left="110" top="26" font-size="40" text-align="left" width="299" height="51">#placeholder</screen:element>
-		</screen:element>
-		<screen:element name="work-buff-icon" resource="hubby/arrow_up_2.png" left="945" top="238" visible="no"/>
-				
-		<screen:element name="sendShoppingButton" resource="hubby-screen/send-shopping-button.png" left="645" top="387" ontap="sendShopping">
-			<screen:element name="sendShoppingButtonOverlay" resource="hubby-screen/send-shop-text.png" left="0" top="0" visible="NO"/>
-			<screen:element name="sendShoppingButtonText" resource="" left="110" top="26" font-size="40" text-align="left" width="299" height="51">#placeholder</screen:element>
-		</screen:element>
-		<screen:element name="shop-buff-icon" resource="hubby/arrow_up_2.png" left="945" top="367" visible="no"/>
-				
-		<screen:element name="secretButton" resource="hubby-screen/give-gift-button.png" left="645" top="515" ontap="secretButton">
-			<screen:element name="secretButtonOverlay" resource="hubby-screen/secret-text.png" left="0" top="0"/>
-		</screen:element>
-		
-		<screen:element name="careerStatusFrame" resource="hubby-screen/career-status-frame.png" left="595" top="190"/>
-		<screen:element name="careerStatusFrameProgress" resource="hubby-screen/career-status-frame-progress.png" left="595" top="190"/>
-		<screen:element name="careerStatusCircle" resource="hubby-screen/career-status-circle.png" left="547" top="170">
-			<screen:element name="careerLevelText" resource="" left="0" top="6" font-size="48" text-align="center" width="59" height="59">#placeholder</screen:element>
-		</screen:element>
-		
-		<screen:element name="name" left="622" top="126" />
-		<screen:element name="occupation" left="1095" top="140" />
-		<screen:element name="salary" left="935" top="136" />
-
-		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="1018" top="277" ontap="fillLoveTank" />
-		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="1018" top="431" ontap="releaseStress"/>
-		
-		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
-			<screen:element name="faceAnimation" resource="" left="0" top="0" />
-			<screen:element name="chatBubble" resource="main-menu/chat-bubble.png" left="210" top="-75" visible="NO">
-				<screen:element name="chatText" resource="" left="20" top="30" width="372" text-wrap="yes">#placeholder</screen:element>
-			</screen:element>
-		</screen:element>
-
-		<screen:element name="stressOptionsFrame" resource="hubby-screen/options-frame-popover.png" left="512" top="97" visible="NO">
-			<screen:element name="stressOption1" resource="hubby-screen/option-1-boxv2.png" left="68" top="28" ontap="hangOut">
-				<screen:element name="stressOption1_icon" resource="hubby-screen/with-friends.png" left="20" top="8"/>
-				<screen:element name="stressOption1_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">
-					#placeholder
-				</screen:element>
-				<screen:element name="stressOption1_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Lowers Stress -2</screen:element>
-			</screen:element>
-
-			<screen:element name="stressOption2" resource="hubby-screen/option-1-boxv2.png" left="68" top="205" ontap="playVideoGames">
-				<screen:element name="stressOption2_icon" resource="hubby-screen/play-games.png" left="20" top="8"/>
-				<screen:element name="stressOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
-				<screen:element name="stressOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="stressOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Video game madness</screen:element>
-				<screen:element name="stressOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Lowers Stress -3</screen:element>
-			</screen:element>
-
-			<screen:element name="stressOption3" resource="hubby-screen/option-1-boxv2.png" left="68" top="382" ontap="watchGame">
-				<screen:element name="stressOption3_icon" resource="hubby-screen/watch-game.png" left="20" top="8"/>
-				<screen:element name="stressOption3_cost_icon" resource="premium-currency-screen/dimonds01v2.png" left="157" top="60"/>
-				<screen:element name="stressOption3_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="stressOption3_text" resource="" left="212" top="23" font-size="40" font-style="bold" text-align="center" width="378" height="50" text-wrap="yes">Sports all weekend</screen:element>
-				<screen:element name="stressOption3_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Lowers Stress -10</screen:element>
-			</screen:element>
-
-			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="644" top="7" ontap="closeStressOptions"/>
-		</screen:element>
-
-		<screen:element name="loveOptionsFrame" resource="hubby-screen/options-frame-popover.png" left="512" top="97" visible="NO">
-			<screen:element name="loveOption1" resource="hubby-screen/option-1-boxv2.png" left="68" top="28" ontap="makeFavoriteMeal">
-				<screen:element name="loveOption1_icon" resource="hubby-screen/fav-meal.png" left="20" top="8"/>
-				<screen:element name="loveOption1_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">#placeholder</screen:element>
-				<screen:element name="loveOption1_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Fills Love Tank +2</screen:element>
-			</screen:element>
-
-			<screen:element name="loveOption2" resource="hubby-screen/option-1-boxv2.png" left="68" top="205" ontap="giveKiss">
-				<screen:element name="loveOption2_icon" resource="hubby-screen/give-kiss.png" left="20" top="8"/>
-				<screen:element name="loveOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
-				<screen:element name="loveOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="loveOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Give him a kiss</screen:element>
-				<screen:element name="loveOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Fills Love Tank +3</screen:element>
-			</screen:element>
-
-			<screen:element name="loveOption3" resource="hubby-screen/option-1-boxv2.png" left="68" top="382" ontap="goOnDate">
-				<screen:element name="loveOption3_icon" resource="hubby-screen/go-date.png" left="20" top="8"/>
-				<screen:element name="loveOption3_cost_icon" resource="premium-currency-screen/dimonds01v2.png" left="157" top="60"/>
-				<screen:element name="loveOption3_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="loveOption3_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Go on a date</screen:element>
-				<screen:element name="loveOption3_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Fills Love Tank +10</screen:element>
-			</screen:element>
-
-			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="644" top="7" ontap="closeLoveOptions"/>
-		</screen:element>
-
-		<screen:element name="character" resource="" left="0" top="40"/>
 
 	    <screen:element name="tutorial-step-1" resource="tutorial-icons/overlay75gray.png" z-index="99999999" left="0" top="0" visible="NO" ontap="doNothing">
 	        <screen:element name="tutorialPromptFrame" resource="tutorial-icons/husband-tutorial.png" left="0" top="0" ontap="doNothing"/>
@@ -230,5 +115,4 @@
 		</screen:element>
 				
 	</screen:elements>
->>>>>>> develop
 </screen:config>
