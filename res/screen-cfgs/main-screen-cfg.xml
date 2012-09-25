@@ -94,7 +94,7 @@
 
 		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
         	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/mainmenu-tutorial-01.png" left="0" top="0" ontap="doNothing"/>
-        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="dismiss"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="nextTutorial"/>
     	</screen:element>
 	</screen:elements>
 	

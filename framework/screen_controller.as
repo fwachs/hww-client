@@ -93,7 +93,7 @@ class ScreenController
 		modalScreen.controller = this;
 		modalScreen.create();
 
-		this.screen.willLooseFocus();
+		this.screen.willLoseFocus();
 		this.screen.lostFocus();
 		
 		newCanvas.addaction(sequence(moveto(250, 0, 0), callfunc(this.reactivateEvents)));
@@ -124,8 +124,8 @@ class ScreenController
 			nextModalScreen.gotFocus();
 		}
 		else {					
-			this.screen.willGetFocus();
 			this.screen.gotFocus();
+			this.screen.willGetFocus();
 			
 			trace("*** Last modal screen closed: ", this.hudFrameBottom, this.hudFrameTop);
 			

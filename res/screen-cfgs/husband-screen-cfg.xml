@@ -112,7 +112,7 @@
 		</screen:element>		
 		<screen:element name="tutorial-step-4" resource="" left="0" top="0" z-index="99999999" visible="no">
 		    <screen:element name="" resource="tutorial-icons/SpeechBubble-checkonme.png" left="381" top="92"/>
-		</screen:element>		
-								
+		</screen:element>
+				
 	</screen:elements>
 </screen:config>
