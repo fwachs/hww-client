@@ -35,11 +35,10 @@
 		<screen:element name="gossipWall" resource="" left="0" top="0"/>
 		<screen:element name="scroll" class="Scroll" resource="" left="0" top="20" width="1400" height="600" lock="vertical" z-index="100000"/>
 
-		<!-- ios only -->
-		<!-- <screen:element name="gossipWallText" resource="gossip-wall/gossip-text.png" left="393" top="681"/> -->
+		<screen:element name="gossipWallText" resource="gossip-wall/post-box.png" left="400" top="612" z-index="900000"/>
 		
-		<screen:element name="postButton" resource="gossip-wall/post-button.png" left="955" top="682" ontap="post"/>
-		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="686" ontap="goBack"/>
+		<screen:element name="postButton" resource="gossip-wall/post-button.png" left="955" top="697" ontap="post" z-index="900000"/>
+		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="686" ontap="goBack" z-index="900000"/>
 
 	</screen:elements>
 </screen:config>

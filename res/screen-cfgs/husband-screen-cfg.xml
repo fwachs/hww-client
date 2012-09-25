@@ -25,7 +25,7 @@
 		<screen:element name="careerStatusFrame" resource="hubby-screen/career-status-frame.png" left="595" top="190"/>
 		<screen:element name="careerStatusFrameProgress" resource="hubby-screen/career-status-frame-progress.png" left="595" top="190"/>
 		<screen:element name="careerStatusCircle" resource="hubby-screen/career-status-circle.png" left="547" top="170">
-			<screen:element name="careerLevelText" resource="" left="0" top="6" font-size="48" text-align="center" width="59" height="59">#placeholder</screen:element>
+			<screen:element name="careerLevelText" resource="" left="10" top="11" font-size="48" text-align="center" width="59" height="59">#placeholder</screen:element>
 		</screen:element>
 		
 		<screen:element name="name" left="622" top="126" />
