@@ -427,10 +427,15 @@ class HouseController extends ScreenController implements TimerListener
         	var item = this.selectedStorageFurniture;
         	var furniture = item.furnitureType;
         	
-            var centeredX = tileX + this.selectedFurniture.depth / 2;
-            var centeredY = tileY + this.selectedFurniture.width / 2;
+        	var centeredX = tileX;
+            var centeredY = tileY;
+        	if (furniture != null) {
+        	    centeredX = tileX + furniture.depth / 2;
+        	    centeredY = tileY + furniture.width / 2;
+        	}
 
-            trace("Add storage funriture centered: ", centeredX, centeredY, this.selectedFurniture.width, this.selectedFurniture.depth);
+            trace("Furniture: ", furniture.name, " id: ", furniture.id);
+            trace("Add storage funriture centered: ", centeredX, centeredY, furniture.width, furniture.depth);
 
             var map = this.screen.getElement("map");
             var frnture = new IsometricItem("images/" + furniture.image, furniture.width, furniture.depth);
