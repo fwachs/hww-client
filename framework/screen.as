@@ -152,8 +152,8 @@ class Screen
 			
 			trace("create screen: ", this.configFile, this.firstTime);
 
-				this.showNextTutorial();
-			}
+			this.showNextTutorial();
+		}
 
 		this.build();		
 	}
@@ -173,19 +173,28 @@ class Screen
 	public function showTutorialStep(step)
 	{
 		if(this.firstTime == 0) return;
-		
-		var oldTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
-		if(oldTut) {
-			oldTut.getSprite().visible(0);
-		}
+
+		this.hideTutorial();
 		
 		this.currentTutorial = step;
 
 		var newTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
 		if(newTut) {
+			newTut.getSprite().removefromparent();
+			Game.scene.add(newTut.getSprite(), 99999999);
 			newTut.getSprite().visible(1);
 		}
-}
+	}
+	
+	public function hideTutorial()
+	{
+		var oldTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
+		if(oldTut) {
+			oldTut.getSprite().removefromparent();
+			this.rootNode.getSprite().add(oldTut.getSprite());
+			oldTut.getSprite().visible(0);
+		}
+	}
 	
 	public function controlFromXMLString(xmlString)
 	{
@@ -275,7 +284,19 @@ class Screen
 	
 	public function lostFocus()
 	{
-	}	
+	}
+	
+	public function willLoseFocus()
+	{
+		trace("Will lose focus", this.configFile);
+		this.hideTutorial();
+	}
+	
+	public function willGetFocus()
+	{
+		trace("Will get focus", this.configFile);
+		this.showTutorialStep(this.currentTutorial);
+	}
 	
 	public function bubbleUpSize(width, height)
 	{

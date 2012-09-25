@@ -357,4 +357,14 @@ class Wife
         wifeArray.append(["statusPointsFactor", statusPointsFactor]);
         return dict(wifeArray);
     }
+
+    public function awardMysteryItem(mysteryItem) {
+        this.mysteryItemCollection.update(mysteryItem.id, mysteryItem);
+        this.incSocialStatusPoints(mysteryItem.points);
+        if (mysteryItem.reward != null) {
+            var reward = Game.currentGame.wallet.moneyForCurrency(mysteryItem.reward, mysteryItem.currency);
+            var ret = Game.currentGame.wallet.collect(reward);
+            trace("### HWW ###: Reward Awarded: ", mysteryItem.id, " currency:", mysteryItem.currency, " amount: ", mysteryItem.reward, " ret: ", str(ret));
+        }
+    }
 }

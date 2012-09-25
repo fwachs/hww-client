@@ -29,11 +29,6 @@ class HusbandController extends ScreenController implements TimerListener
         Timer.registerListener("outShoppingTimer", this);
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_HusbandTutorial);
-    }
-
     override public function screenUnloaded()
     {
         Timer.unregisterListener("outToWorkTimer", this);
@@ -280,7 +275,7 @@ class HusbandController extends ScreenController implements TimerListener
                     Game.sharedGame().hubby.shoppingTimer.seconds = 1;
                 }
                 else {
-                    Game.sharedGame().hubby.shoppingTimer.seconds = 60;
+                    Game.sharedGame().hubby.shoppingTimer.seconds = 120;
                 }
                 Game.sharedGame().hubby.shoppingTimer.restart();
                 Game.sharedGame().hubby.shoppingTimer.ticks = 1;
@@ -493,8 +488,7 @@ class HusbandController extends ScreenController implements TimerListener
                 shoppingItem = commonItems[selectionIndex];
             }
 
-            Game.sharedGame().wife.mysteryItemCollection.update(shoppingItem.id, shoppingItem);
-            Game.sharedGame().wife.incSocialStatusPoints(shoppingItem.points);
+            Game.sharedGame().wife.awardMysteryItem(shoppingItem);
             Game.sharedGame().wife.save();
 
             Game.sounds.playSFX("gainSSP");

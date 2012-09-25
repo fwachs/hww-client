@@ -218,17 +218,17 @@ class Game
 			var currentTick = response.get("currentTick");
 			var currentDay = response.get("currentDay");
 			this.today = currentDay;
-			Timer.startTimers(currentTick);
 			trace("### HWW ### - Today ", currentDay, " CurrentTick: ", str(currentTick));
 		}
 		else {
 			this.today = "";
-			Timer.startTimers(0);
 		}
 		
 		this.hideLoadingScreen();
 
 		Game.sharedGame().run();
+
+		Timer.startTimers();
 	}
 
     public function initializeServer()
@@ -270,6 +270,7 @@ class Game
 		Game.screens.append(screenToPush);
 		
 		if(len(Game.screens) > 1) {
+			lastScreen.willLoseFocus();
 			lastScreen.lostFocus();
 			lastScreen.canvas.addaction(moveto(250, Game.translateX( -1280), Game.translateY( 0)));
 			screenToPush.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -282,6 +283,7 @@ class Game
 		
 		screenToPush.controller.screenLoaded();
 		screenToPush.gotFocus();
+		screenToPush.willGetFocus();
 		screenToPush.controller.screenPostLoaded();
 	}
 	
@@ -297,9 +299,11 @@ class Game
 	{
 		var screenToPop = Game.screens.pop();
 		screenToPop.lostFocus();
+		screenToPop.willLoseFocus();
 		
 		var lastScreen = Game.lastScreen();
 		lastScreen.gotFocus();
+		lastScreen.willGetFocus();
 		
 //		screenToPop.canvas.addaction(moveto(250, Game.translateX( 1280), Game.translateY( 0)));
 //		lastScreen.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -352,13 +356,10 @@ class Game
         if(this.properties == null)  {
         	this.properties = dict();
         }
-
-        trace("**** loadGameProperties: ", this.properties);
 	}
 
     public function saveProperties()
     {
-        trace("**** saveGameProperties: ", this.properties);
         Game.getDatabase().put("game_properties", this.properties);
     }
     
