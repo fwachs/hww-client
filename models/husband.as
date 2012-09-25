@@ -539,7 +539,7 @@ class outShoppingTimer extends Timer
 {
 	public function outShoppingTimer()
 	{
-		super("outShoppingTimer", 60, 1);
+		super("outShoppingTimer", 120, 1);
 	}
 	
 	override public function tick()

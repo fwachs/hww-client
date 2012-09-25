@@ -103,7 +103,7 @@ class HousewifeWars extends Game
 			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(5000, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
-			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(50, "Diamonds");
+			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(30, "Diamonds");
 			returnValue = Game.currentGame.wallet.collect(startingDiamonds);
 
 			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000, "Miles");
@@ -194,7 +194,7 @@ class HousewifeWars extends Game
 			var mysteryitemattrs = xmlmysteryitem.get("#attributes");
 			trace("Mystery items attributes: ", str(mysteryitemattrs));
 			var mysteryItem = new MysteryItem(mysteryitemattrs.get("id"), mysteryitemattrs.get("name"), mysteryitemattrs.get("desc"), mysteryitemattrs.get("fileName"),
-									int(mysteryitemattrs.get("stars")), int(mysteryitemattrs.get("points")));
+									int(mysteryitemattrs.get("stars")), int(mysteryitemattrs.get("points")), mysteryitemattrs.get("reward"), mysteryitemattrs.get("currency"));
 			
 			this.mysteryItems.append(mysteryItem);
 		}		

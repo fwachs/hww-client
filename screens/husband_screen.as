@@ -160,10 +160,6 @@ class HusbandScreen extends Screen
 		//this.displayWorkBuffIcon();
         this.showChatText();
 
-        trace("Hubby timer before: ", Game.sharedGame().hubby.running);
-		Game.sharedGame().hubby.screenUpdateTimer.start();
-        trace("Hubby timer after: ", Game.sharedGame().hubby.running);
-        
         this.updateTimer = c_addtimer(1000, this.updateLabels, null, 0, -1);
         
         this.prevIsHome = -1;
@@ -189,7 +185,6 @@ class HusbandScreen extends Screen
 
 	override public function lostFocus()
 	{
-		Game.sharedGame().hubby.screenUpdateTimer.stop();
 		Game.hideBanner();
 		this.stopHusbandAnimation();
 		

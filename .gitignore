@@ -42,12 +42,7 @@ housewifewars.func
 buildwifes.php
 housewifewars-svn
 .project
-<<<<<<< HEAD
-/housewifewars-debug.apk
-/housewifewars.md5
-=======
 
 *.apk
 
-*.md5
->>>>>>> -
+housewifewars.md5

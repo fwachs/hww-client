@@ -125,6 +125,7 @@ class WifeCustomizationController extends ScreenController implements INameEnter
         else if(event.name == "showHairStyle") {
             Game.sounds.playSFX("buttonPress");
             this.screen.displayCustomizationFrame(0);
+            this.screen.showTutorialStep(1);
         }
         else if(event.name == "showHairColor") {
             Game.sounds.playSFX("buttonPress");

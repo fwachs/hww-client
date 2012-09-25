@@ -84,11 +84,6 @@ class MainController extends ScreenController
         }
     }
 
-    override public function showTutorial()
-    {
-        this.showMessageBox(MessageBoxScreen.MB_MainTutorial);
-    }
-
     override public function screenUnloaded()
     {
     }
@@ -318,7 +313,7 @@ class MainController extends ScreenController
     public function loadFriends()
     {
         var friends = new Array();
-        var queryParams = dict([["offset",0],["limit",25]]);
+        var queryParams = dict([["offset",0],["limit",499]]);
         var param = "";
         // ppy_query("list_friends", queryParams, buildFriendCallback, param);
         ppy_query("list_friends", queryParams, buildFriendCallback, param);
