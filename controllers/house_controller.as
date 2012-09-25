@@ -20,6 +20,7 @@ class HouseController extends ScreenController implements TimerListener
     var currentItem = null;
     var house = null;
     var selectedFurniture = null;
+    var selectedStorageFurniture = null;
 
     public function HouseController(controlledScreen, pHouse)
     {
@@ -271,7 +272,13 @@ class HouseController extends ScreenController implements TimerListener
             trace("hookFired: ", event, event.name, event.x, event.y, "-", ev.x, ev.y);
 
             var tilePos = this.screen.iso.tileFromPos(event.x, event.y);
-            this.addSelectedFurniture(abs(tilePos[0]), abs(tilePos[1]));
+            
+            if(this.selectedFurniture) {
+	            this.addSelectedFurniture(abs(tilePos[0]), abs(tilePos[1]));
+            }
+            else if(this.selectedStorageFurniture) {
+            	this.storeFurniture(abs(tilePos[0]), abs(tilePos[1]));
+            }
 
             Event.clearHook(this, EVENT_TOUCH);
             Event.setHook(this, EVENT_UNTOUCH);
@@ -408,23 +415,38 @@ class HouseController extends ScreenController implements TimerListener
 
     public function storageTapped(item)
     {
-        var map = this.screen.getElement("map");
-
-        var tile = map.visibleTile();
-
-        var furniture = item.furnitureType;
-
-        var frnture = new IsometricItem("images/" + furniture.image, furniture.width, furniture.depth);
-        frnture.ref = item;
-
-        map.addItem(frnture, tile[0], tile[1]);
-
-        frnture.hideAcceptButton();
+        this.selectedStorageFurniture = item;
+        Event.setHook(this, EVENT_TOUCH);
 
         this.hideStorage();
+    }
+    
+    public function storeFurniture(tileX, tileY)
+    {
+        if(this.selectedStorageFurniture) {
+        	var item = this.selectedStorageFurniture;
+        	var furniture = item.furnitureType;
+        	
+            var centeredX = tileX + this.selectedFurniture.depth / 2;
+            var centeredY = tileY + this.selectedFurniture.width / 2;
 
-        house.unstoreFurniture(item);
+            trace("Add storage funriture centered: ", centeredX, centeredY, this.selectedFurniture.width, this.selectedFurniture.depth);
 
-        this.screen.buildStorageList(house.loadStorage());
+            var map = this.screen.getElement("map");
+            var frnture = new IsometricItem("images/" + furniture.image, furniture.width, furniture.depth);
+            frnture.ref = item;
+
+            if(map.testPlacement(frnture, centeredX, centeredY) == 1) {
+                map.addItem(frnture, centeredX, centeredY);
+
+                frnture.hideAcceptButton();
+
+                house.unstoreFurniture(item);
+
+                this.screen.buildStorageList(house.loadStorage());
+            }
+
+            this.selectedStorageFurniture = null;
+        }
     }
 }
