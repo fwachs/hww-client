@@ -14,7 +14,7 @@
 			<screen:element name="confirmFrame" resource="gift-others-prompt/confirm-frame.png" left="205" top="137"/>
 			<screen:element name="giftImage" resource="#image_placeholder" left="900" top="162"/>	
 			<screen:element name="giftTitle" resource="" left="223" top="163" text-wrap="yes" width="750" font-size="60" font-style="bold">#title_placeholder</screen:element>
-			<screen:element name="giftDescription" resource="" left="230" top="273" font-size="48" font-style="bold" text-align="left" width="800" height="247" text-wrap="yes">#description_placeholder</screen:element>
+			<screen:element name="giftDescription" resource="" left="230" top="298" font-size="48" font-style="bold" text-align="left" width="800" height="247" text-wrap="yes">#description_placeholder</screen:element>
 			<screen:element name="btnOK" resource="tutorial-icons/okay.png" left="516" top="500" ontap="btnOK"/>
 		</screen:element>
 	</screen:elements>
