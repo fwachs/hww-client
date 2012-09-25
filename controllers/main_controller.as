@@ -74,7 +74,7 @@ class MainController extends ScreenController
         this.screenUpdateTimer = new mainScreenUpdateTimer(this.checkForGifts);
         this.screenUpdateTimer.start();
 
-        if(Game.soundOn == 1) {
+        if(Game.audioOn() == 1) {
             this.screen.getElement("soundOnButton").getSprite().texture("images/settings-prompt/on-box-highlight.png");
             this.screen.getElement("soundOffButton").getSprite().texture("images/settings-prompt/off-box-deselect.png");
         }

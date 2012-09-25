@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*****************************************************************************
 filename    game.as
 author      Rafa Imas
@@ -375,6 +376,8 @@ class Game
     }
 }
 =======
+=======
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 /*****************************************************************************
 filename    game.as
 author      Rafa Imas
@@ -412,7 +415,10 @@ class Game
 	var today;
 	var properties;
 	var advertisement;
+<<<<<<< HEAD
 	var soundOn = null;
+=======
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 
 	public static function getPapayaUserId()
 	{
@@ -442,6 +448,7 @@ class Game
 	
 	public static function audioOn()
 	{
+<<<<<<< HEAD
 		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
 		if(Game.soundOn == null) {
 		    if (Game.sharedGame() != null) {
@@ -454,6 +461,13 @@ class Game
 		
 		trace("### HWW ### - Is audio on? " + str(Game.soundOn));
 		return Game.soundOn;
+=======
+	    if (Game.getDatabase().get("soundOn") != null) {
+	        return Game.getDatabase().get("soundOn");
+	    }
+	    Game.getDatabase().put("soundOn", 1);
+		return 1;
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 	}
 	
 	public static function trackEvent(category, action, label, value)
@@ -647,7 +661,11 @@ class Game
 		Game.screens.append(screenToPush);
 		
 		if(len(Game.screens) > 1) {
+<<<<<<< HEAD
 			lastScreen.willLooseFocus();
+=======
+			lastScreen.willLoseFocus();
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 			lastScreen.lostFocus();
 			lastScreen.canvas.addaction(moveto(250, Game.translateX( -1280), Game.translateY( 0)));
 			screenToPush.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -659,8 +677,13 @@ class Game
 		}
 		
 		screenToPush.controller.screenLoaded();
+<<<<<<< HEAD
 		screenToPush.willGetFocus();
 		screenToPush.gotFocus();
+=======
+		screenToPush.gotFocus();
+		screenToPush.willGetFocus();
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 		screenToPush.controller.screenPostLoaded();
 	}
 	
@@ -676,9 +699,17 @@ class Game
 	{
 		var screenToPop = Game.screens.pop();
 		screenToPop.lostFocus();
+<<<<<<< HEAD
 		
 		var lastScreen = Game.lastScreen();
 		lastScreen.gotFocus();
+=======
+		screenToPop.willLoseFocus();
+		
+		var lastScreen = Game.lastScreen();
+		lastScreen.gotFocus();
+		lastScreen.willGetFocus();
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd
 		
 //		screenToPop.canvas.addaction(moveto(250, Game.translateX( 1280), Game.translateY( 0)));
 //		lastScreen.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -749,4 +780,7 @@ class Game
     	return this.properties.get(key);
     }
 }
+<<<<<<< HEAD
 >>>>>>> develop
+=======
+>>>>>>> 690648a521e387b0b750207886c7b1ff051c42cd

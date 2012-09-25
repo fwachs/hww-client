@@ -110,11 +110,11 @@ class MainScreen extends Screen
 			friendsBelt.addChild(property);
 			left += 165;
 		}
-		
+
 		avatarLeft = 60;
 		avatarTop = 54;
 
-		for(var j = 0; j < totalFriendsToDisplay - friendsCount; j++) {
+		for(var j = 0; j < 3; j++) {
 			var fakeFriendParams = dict();
 			fakeFriendParams.update("left_pos", str(left));
 			fakeFriendParams.update("friend_name", "Invite");
