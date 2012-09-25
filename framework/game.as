@@ -24,7 +24,7 @@ class Game
 	static var bannerScreen = null;
 	static var sounds;
 	static var animations;
-	static var screenScale = 50;
+	static var screenScale = 70;
 	static var papayaUserId = 0;
 	var loadingScreen;
 	var loadingBar;
@@ -270,7 +270,7 @@ class Game
 		Game.screens.append(screenToPush);
 		
 		if(len(Game.screens) > 1) {
-			lastScreen.willLooseFocus();
+			lastScreen.willLoseFocus();
 			lastScreen.lostFocus();
 			lastScreen.canvas.addaction(moveto(250, Game.translateX( -1280), Game.translateY( 0)));
 			screenToPush.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));
@@ -282,8 +282,8 @@ class Game
 		}
 		
 		screenToPush.controller.screenLoaded();
-		screenToPush.willGetFocus();
 		screenToPush.gotFocus();
+		screenToPush.willGetFocus();
 		screenToPush.controller.screenPostLoaded();
 	}
 	
@@ -299,9 +299,11 @@ class Game
 	{
 		var screenToPop = Game.screens.pop();
 		screenToPop.lostFocus();
+		screenToPop.willLoseFocus();
 		
 		var lastScreen = Game.lastScreen();
 		lastScreen.gotFocus();
+		lastScreen.willGetFocus();
 		
 //		screenToPop.canvas.addaction(moveto(250, Game.translateX( 1280), Game.translateY( 0)));
 //		lastScreen.canvas.addaction(moveto(250, Game.translateX( 0), Game.translateY( 0)));

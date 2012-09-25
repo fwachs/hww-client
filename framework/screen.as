@@ -286,13 +286,15 @@ class Screen
 	{
 	}
 	
-	public function willLooseFocus()
+	public function willLoseFocus()
 	{
+		trace("Will lose focus", this.configFile);
 		this.hideTutorial();
 	}
 	
 	public function willGetFocus()
 	{
+		trace("Will get focus", this.configFile);
 		this.showTutorialStep(this.currentTutorial);
 	}
 	
