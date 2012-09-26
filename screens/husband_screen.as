@@ -142,6 +142,8 @@ class HusbandScreen extends Screen
 				this.startHusbandAnimation();
 			}
 		}
+		
+		Game.startButtonShineAnimation();
 
 		var currentGift = Game.sharedGame().getProperty("CurrentGiftId");
         if(currentGift >= 0) {
@@ -187,6 +189,7 @@ class HusbandScreen extends Screen
 	{
 		Game.hideBanner();
 		this.stopHusbandAnimation();
+		Game.stopButtonShineAnimation();
 		
 		this.updateTimer.stop();
 	}

@@ -96,6 +96,8 @@ class OtherPlayerController extends ScreenController
 			screen.configFile = "screen-cfgs/gift-others-prompt-screen-cfg.xml";
 			var controller = new GiftOthersPromptController(screen, this.player);
 			Game.pushScreen(screen);
+		} else if (event.name == "doNothing") {
+		    
 		}
 	}
 
