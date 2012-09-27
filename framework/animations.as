@@ -1043,7 +1043,7 @@ class Animations
     }
 	
 	public function getButtonShineAnimation() {
-		var action = animate(416, "images/Animation/button_animation/shine_1.png", "images/Animation/button_animation/shine_2.png",
+		var action = animate(832, "images/Animation/button_animation/shine_1.png", "images/Animation/button_animation/shine_2.png",
 				"images/Animation/button_animation/shine_3.png", "images/Animation/button_animation/shine_4.png",
 				"images/Animation/button_animation/shine_5.png");
 		return action;

@@ -6,14 +6,14 @@
 		
 		<screen:element name="bgFrame" resource="hubby-screen/options-frame.png" left="512" top="97"/>
 		
-		<screen:element name="sendToWorkButtonShadow" resource="Animation/button_animation/shadow_rect.png" left="652" top="304"/>
+		<!-- <screen:element name="sendToWorkButtonShadow" resource="Animation/button_animation/shadow_rect.png" left="652" top="304"/> -->
 		<screen:element name="sendToWorkButton" resource="hubby-screen/send-to-work-button.png" left="645" top="258" ontap="sendToWork">
 			<screen:element name="sendToWorkButtonOverlay" resource="hubby-screen/send-work-text.png" left="0" top="0" visible="NO"/>
 			<screen:element name="sendToWorkButtonText" resource="" left="110" top="26" font-size="40" text-align="left" width="299" height="51">#placeholder</screen:element>
 		</screen:element>
 		<screen:element name="work-buff-icon" resource="hubby/arrow_up_2.png" left="945" top="238" visible="no"/>
 		
-		<screen:element name="sendShoppingButtonShadow" resource="Animation/button_animation/shadow_rect.png" left="652" top="429"/>
+		<!-- <screen:element name="sendShoppingButtonShadow" resource="Animation/button_animation/shadow_rect.png" left="652" top="429"/> -->
 		<screen:element name="sendShoppingButton" resource="hubby-screen/send-shopping-button.png" left="645" top="387" ontap="sendShopping">
 			<screen:element name="sendShoppingButtonOverlay" resource="hubby-screen/send-shop-text.png" left="0" top="0" visible="NO"/>
 			<screen:element name="sendShoppingButtonText" resource="" left="110" top="26" font-size="40" text-align="left" width="299" height="51">#placeholder</screen:element>
@@ -34,10 +34,10 @@
 		<screen:element name="occupation" left="1095" top="140" />
 		<screen:element name="salary" left="935" top="136" />
 
-		<screen:element name="loveTankShadow" resource="Animation/button_animation/shadow_smallcircle.png" left="1019" top="315"/>
+		<!-- <screen:element name="loveTankShadow" resource="Animation/button_animation/shadow_smallcircle.png" left="1019" top="315"/> -->
 		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="1018" top="277" ontap="fillLoveTank" />
 		
-		<screen:element name="stressMeterShadow" resource="Animation/button_animation/shadow_smallcircle.png" left="1019" top="465"/>
+		<!-- <screen:element name="stressMeterShadow" resource="Animation/button_animation/shadow_smallcircle.png" left="1019" top="465"/> -->
 		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="1018" top="431" ontap="releaseStress"/>
 		
 		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
