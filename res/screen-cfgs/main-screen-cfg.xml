@@ -13,9 +13,13 @@
 			<screen:element name="giftsCount" resource="" left="50" top="14" font-size="32" font-style="bold" text-align="center" width="36" height="41" z-index="999">#number_placeholder</screen:element>
 		</screen:element>
 
+		
 		<screen:element name="dailyBonusButton" resource="main-menu/daily-bonus-button.png" left="1118" top="695" ontap="showDailyBonusFrame"/>
+		
+		
 		<screen:element name="settingsButton" resource="main-menu/settings-icon.png" left="1159" top="346" ontap="gotoSettings"/>
 
+		
 		<screen:element name="friendsButton" resource="main-menu/friendicon.png" left="1127" top="482" ontap="displayFriendsBelt"/>
 		
 		<screen:element name="friendsBeltContainer" resource="" left="0" top="0" visible="NO" ontap="" z-index="10000">
