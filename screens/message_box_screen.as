@@ -37,6 +37,7 @@ class MessageBoxScreen extends Screen
     static var MB_HusbandTutorial = 23;
     static var MB_MysteryTutorial = 24;
     static var MB_MainTutorial = 25;
+    static var MB_Exit = 26;
 
     var type;
     var argument;
@@ -167,6 +168,9 @@ class MessageBoxScreen extends Screen
         }
         else if(this.type == MessageBoxScreen.MB_MainTutorial) {
         	displayTutorialPrompt("images/tutorial-icons/mainmenu-tutorial-01.png");
+        }
+        else if(this.type == MessageBoxScreen.MB_Exit) {
+            displayConfirmCancelPrompt("images/hubby-screen/gone-to-work-text.png", "confirm-button-exit");
         }
     }
 

@@ -62,6 +62,10 @@ class ScreenController
 				this.screen.showTutorialStep(int(evParts[1]));
 			}
 		}
+		
+		if(event.name == "exitGame") {
+			Game.sharedGame().quit();
+		}
 	}	
 
 	public function hookFired(event)
@@ -136,5 +140,12 @@ class ScreenController
 				Game.showBanner(this.hudFrameTop, this.hudFrameBottom);
 			}
 		}		
+	}
+	
+	public function keyDown(node, event, param, x, y, points)
+	{
+		if(event == EVENT_KEYDOWN && x == KEYCODE_BACK) {
+			this.showMessageBox(MessageBoxScreen.MB_Exit);
+		}
 	}
 }

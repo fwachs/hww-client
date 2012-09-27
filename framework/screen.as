@@ -154,6 +154,8 @@ class Screen
 
 			this.showNextTutorial();
 		}
+		
+		this.canvas.setevent(EVENT_KEYDOWN, this.controller.keyDown);
 
 		this.build();		
 	}
@@ -288,13 +290,12 @@ class Screen
 	
 	public function willLoseFocus()
 	{
-		trace("Will lose focus", this.configFile);
 		this.hideTutorial();
 	}
 	
 	public function willGetFocus()
 	{
-		trace("Will get focus", this.configFile);
+		this.canvas.focus(1);
 		this.showTutorialStep(this.currentTutorial);
 	}
 	

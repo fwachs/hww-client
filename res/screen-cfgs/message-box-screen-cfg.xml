@@ -25,7 +25,8 @@
     <screen:element name="confirm-button-default" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="dismiss" visible="NO"/>
     <screen:element name="confirm-button-shopping-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="shoppingReturn" visible="NO"/>
     <screen:element name="confirm-button-work-return" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="workReturn" visible="NO"/>
-
+    <screen:element name="confirm-button-exit" resource="hubby-screen/confirm-button-highlight.png" left="318" top="531" ontap="exitGame" visible="NO"/>
+    
     <screen:element name="ReturnFromWorkingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
         <screen:element name="textTop" resource="" left="315" top="180" font-size="42" font-style="bold">What a day! He came home with</screen:element>
