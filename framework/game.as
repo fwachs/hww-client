@@ -341,6 +341,118 @@ class Game
 		Game.bannerScreen.getElement("hudFrameTop").getSprite().visible(0);
 		Game.bannerScreen.getElement("hudFrameBottom").getSprite().visible(0);
 	}
+	
+	public function startButtonShineAnimation()
+	{
+		var buttonShineAnimation = Game.bannerScreen.getElement("buttonShineAnimation").getSprite();
+		var action = Game.animations.getAnimation("button_shine");
+		buttonShineAnimation.stop();
+		buttonShineAnimation.addaction(repeat(action));
+		
+		buttonShineAnimation.addaction(repeat(delaytime(416),callfunc(Game.buttonShineUpdateFunction)));
+		trace("### HWW ### - " + Game.currentScreen().getScreenName());
+	}
+	
+	public function buttonShineUpdateFunction()
+	{
+		var buttonShineAnimation = Game.bannerScreen.getElement("buttonShineAnimation").getSprite();
+		var location;
+		
+		trace("### HWW ### - " + Game.currentScreen().getScreenName());
+		
+		if(Game.currentScreen().getScreenName() == "main-screen") {
+			location = rand(12, 5) + 1;
+			
+			if(location == 1) {
+				buttonShineAnimation.pos(Game.translateX(158), Game.translateY(650));
+			}
+			else if(location == 2) {
+				buttonShineAnimation.pos(Game.translateX(262), Game.translateY(741));
+			}
+			else if(location == 3) {
+				buttonShineAnimation.pos(Game.translateX(340), Game.translateY(718));
+			}
+			else if(location == 4) {
+				buttonShineAnimation.pos(Game.translateX(498), Game.translateY(684));
+			}
+			else if(location == 5) {
+				buttonShineAnimation.pos(Game.translateX(573), Game.translateY(681));
+			}
+			else if(location == 6) {
+				buttonShineAnimation.pos(Game.translateX(286), Game.translateY(6));
+			}
+			else if(location == 7) {
+				buttonShineAnimation.pos(Game.translateX(582), Game.translateY(6));
+			}
+			else if(location == 8) {
+				buttonShineAnimation.pos(Game.translateX(859), Game.translateY(6));
+			}
+			else if(location == 9) {
+				buttonShineAnimation.pos(Game.translateX(1156), Game.translateY(6));
+			}
+			else if(location == 10) {
+				buttonShineAnimation.pos(Game.translateX(1169), Game.translateY(718));
+			}
+			else if(location == 11) {
+				buttonShineAnimation.pos(Game.translateX(1185), Game.translateY(487));
+			}
+			else if(location == 12) {
+				buttonShineAnimation.pos(Game.translateX(1168), Game.translateY(329 ));
+			}
+		}
+		else if(Game.currentScreen().getScreenName() == "husband-screen") {
+			location = rand(13, 5) + 1;
+			
+			if(location == 1) {
+				buttonShineAnimation.pos(Game.translateX(158), Game.translateY(650));
+			}
+			else if(location == 2) {
+				buttonShineAnimation.pos(Game.translateX(262), Game.translateY(741));
+			}
+			else if(location == 3) {
+				buttonShineAnimation.pos(Game.translateX(340), Game.translateY(718));
+			}
+			else if(location == 4) {
+				buttonShineAnimation.pos(Game.translateX(498), Game.translateY(684));
+			}
+			else if(location == 5) {
+				buttonShineAnimation.pos(Game.translateX(573), Game.translateY(681));
+			}
+			else if(location == 6) {
+				buttonShineAnimation.pos(Game.translateX(286), Game.translateY(6));
+			}
+			else if(location == 7) {
+				buttonShineAnimation.pos(Game.translateX(582), Game.translateY(6));
+			}
+			else if(location == 8) {
+				buttonShineAnimation.pos(Game.translateX(859), Game.translateY(6));
+			}
+			else if(location == 9) {
+				buttonShineAnimation.pos(Game.translateX(1156), Game.translateY(6));
+			}
+			else if(location == 10) {
+				buttonShineAnimation.pos(Game.translateX(944), Game.translateY(944));
+			}
+			else if(location == 11) {
+				buttonShineAnimation.pos(Game.translateX(1146), Game.translateY(360));
+			}
+			else if(location == 12) {
+				buttonShineAnimation.pos(Game.translateX(1074), Game.translateY(280));
+			}
+			else if(location == 13) {
+				buttonShineAnimation.pos(Game.translateX(1074), Game.translateY(430));
+			}
+		}
+		else {
+			// shouldn't be on any other screen.
+		}
+	}
+	
+	public function stopButtonShineAnimation()
+	{
+		Game.bannerScreen.getElement("buttonShineAnimation").getSprite().stop();
+		trace("### HWW ### - " + Game.currentScreen().getScreenName());
+	}
 
 	public function loadProperties()
 	{
