@@ -271,18 +271,7 @@ class HusbandController extends ScreenController implements TimerListener
     {
         if(Game.sharedGame().hubby.isHome()) {
             if(Game.sharedGame().hubby.loveTankValue - Game.sharedGame().hubby.shoppingDreadValue >= 0) {
-                if(Game.sharedGame().hubby.shoppingCounts == 0) {
-                    Game.sharedGame().hubby.shoppingTimer.seconds = 1;
-                }
-                else {
-                    Game.sharedGame().hubby.shoppingTimer.seconds = 180;
-                }
-                Game.sharedGame().hubby.shoppingTimer.restart();
-                Game.sharedGame().hubby.shoppingTimer.ticks = 1;
-                Game.sharedGame().hubby.outShopping = 1;
-                Game.sharedGame().hubby.loveTankValue -= Game.sharedGame().hubby.shoppingDreadValue;
-                Game.sharedGame().hubby.checkAchievements();
-                Game.sharedGame().hubby.save();
+                Game.sharedGame().hubby.sendShopping();
             }
             else {
                 displayOutOfLovePrompt();
