@@ -429,7 +429,7 @@ class Husband //implements DBModel
         trace("### HWW ### - Fetched Husband from DB:", str(husbandMap));
         if (husbandMap == null) 
         {
-        	name = "Mark";
+        	name = "MysteryHusband";
 			type = "Executive";
 			occupation = 0;
 			careerLevel = 1;

@@ -15,6 +15,7 @@ class GiftItem
 	var id;
 	var title;
 	var type;
+	var itemDescription;
 	var description;
 	var image;
 	var smallImage;
@@ -29,7 +30,7 @@ class GiftItem
 	
 	public static function newGiftFromAttributes(giftAttrs)
 	{							 
-		var gift = new GiftItem(giftAttrs.get("id"), giftAttrs.get("title"), giftAttrs.get("type"), giftAttrs.get("description"), giftAttrs.get("image"),
+		var gift = new GiftItem(giftAttrs.get("id"), giftAttrs.get("title"), giftAttrs.get("type"), giftAttrs.get("itemDescription"), giftAttrs.get("description"), giftAttrs.get("image"),
 								 giftAttrs.get("smallImage"), giftAttrs.get("amount"), giftAttrs.get("currency"));
 		
 		gift.buffType = giftAttrs.get("buff-type");
@@ -56,11 +57,12 @@ class GiftItem
 		return gift;
 	}
 
-	public function GiftItem(id, title, type, description, image, smallImage, amount, currency)
+	public function GiftItem(id, title, type, itemDescription, description, image, smallImage, amount, currency)
 	{
 		this.id = id;
 		this.title = title;
 		this.type = type;
+		this.itemDescription = itemDescription;
 		this.description = description;
 		this.image = image;
 		this.smallImage = smallImage;
