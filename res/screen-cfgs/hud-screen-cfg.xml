@@ -43,7 +43,7 @@
 			<screen:element name="gossipNavButton" resource="main-menu/nav-button-small-05.png" left="586" top="690" ontap="gotoGossip"/>
 		</screen:element>
 		
-		<screen:element name="buttonShineAnimation" resource="" left="158" top="650" z-index="99999999"/>
+		<screen:element name="buttonShineAnimation" resource="" left="158" top="650" visible="NO" z-index="99999999"/>
 
 	</screen:elements>
 </screen:config>
