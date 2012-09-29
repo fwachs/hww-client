@@ -105,7 +105,7 @@ class Game
         Game.initializeServer();
         Game.papayaUserId = ppy_userid();
         trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
-        if (Game.papayaUserId == null || Game.papayaUserId == 0 ) {
+        if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
 
