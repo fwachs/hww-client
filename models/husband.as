@@ -196,8 +196,8 @@ class Husband //implements DBModel
 	{		
 		careerLevel += 1;
 		salary += 100;
-		playVideoGameCost += 40;
-		kissCost += 20;
+		playVideoGameCost = 80 * careerLevel;
+		kissCost = 40 * careerLevel;
 		workSSPReturn += 5;
 		
 		if(careerLevel % 10 == 0) {
@@ -413,8 +413,8 @@ class Husband //implements DBModel
 			loveCooldown = 0;
 			rareItemThreshold = 80;
 			salaryFactor = 1;
-			playVideoGameCost = 40;
-			kissCost = 20;
+			playVideoGameCost = 80;
+			kissCost = 40;
 			watchTheGameCost = 1;
 			goOnADateCost = 1;
 			workHours = 60;
