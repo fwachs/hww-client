@@ -210,11 +210,11 @@ class Husband //implements DBModel
 		
 		updateVisits();
 		
-		if(careerLevel == 1) {
+		if(careerLevel == 2) {
 			workStressorValue = 1;
 			shoppingDreadValue = 2;
 		}
-		else if(careerLevel == 20) {
+		else if(careerLevel == 10) {
 			// banker
 			if(occupation == 2) {
 				workStressorValue = 2;
@@ -224,7 +224,7 @@ class Husband //implements DBModel
 				shoppingDreadValue = 4;
 			}
 		}
-		else if(careerLevel == 40) {
+		else if(careerLevel == 20) {
 			// excutive
 			if(occupation == 0) {
 				workStressorValue = 2;
@@ -234,10 +234,27 @@ class Husband //implements DBModel
 				shoppingDreadValue = 4;
 			}
 		}
-		else if(careerLevel == 50) {
+		else if(careerLevel == 25) {
 			// lawyer
 			if(occupation == 4) {
 				workStressorValue = 2;
+			}
+		}
+		else if(careerLevel == 31) {
+			// doctor
+			if(occupation == 1) {
+				workStressorValue = 2;
+			}
+		}
+		else if(careerLevel == 35) {
+			// athlete
+			if(occupation == 3) {
+				workStressorValue = 2;
+			}
+		}
+		else if(careerLevel == 50) {
+			// lawyer
+			if(occupation == 4) {
 				shoppingDreadValue = 4;
 			}
 		}
@@ -246,19 +263,11 @@ class Husband //implements DBModel
 			if(occupation == 0) {
 				shoppingDreadValue = 4;
 			}
-			// doctor
-			else if(occupation == 1) {
-				workStressorValue = 2;
-			}
 		}
 		else if(careerLevel == 64) {
 			// banker
 			if(occupation == 2) {
 				shoppingDreadValue = 4;
-			}
-			// athlete
-			else if(occupation == 3) {
-				workStressorValue = 2;
 			}
 		}
 		else if(careerLevel == 70) {
