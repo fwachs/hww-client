@@ -396,7 +396,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[0] == "") {
 					Game.sharedGame().passport.datesCompleted[0] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				
@@ -411,7 +411,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[1] == "") {
 					Game.sharedGame().passport.datesCompleted[1] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				
@@ -426,7 +426,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[2] == "") {
 					Game.sharedGame().passport.datesCompleted[2] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				
@@ -441,7 +441,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[3] == "") {
 					Game.sharedGame().passport.datesCompleted[3] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				
@@ -456,7 +456,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[4] == "") {
 					Game.sharedGame().passport.datesCompleted[4] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				
@@ -471,7 +471,7 @@ class PassportController extends ScreenController
 				// check if not yet unlocked
 				if(Game.sharedGame().passport.datesCompleted[5] == "") {
 					Game.sharedGame().passport.datesCompleted[5] = Game.sharedGame().today;
-					Game.sharedGame().savePassport();
+					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
 				}
 				

@@ -89,14 +89,14 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
-		/*
+		
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
         var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
         ret = Game.currentGame.wallet.collect(freeMiles);
         var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
         ret = Game.currentGame.wallet.collect(freeGB);
-        */
+        
 
 		if(wife.firstPlay == 1)
 		{
@@ -295,7 +295,7 @@ class HousewifeWars extends Game
 			this.saveHusband();
 			this.saveWallet();
 			this.saveRealestate();
-			this.savePassport();
+			this.passport.save();
 		}	
 	}
 
@@ -307,11 +307,6 @@ class HousewifeWars extends Game
 	public function saveWife()
 	{
 		this.wife.save();
-	}
-	
-	public function savePassport()
-	{
-		this.passport.save();
 	}
 
 	public function saveWallet()

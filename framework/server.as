@@ -24,7 +24,7 @@ class Server
 	    var couple = dict();
 	    couple.update("wife", wife.serialize());
 	    var serializedHusband = husband.serialize();
-	    var passport = new Passport();
+	    var passport = Game.sharedGame().passport;
 	    
 	    serializedHusband.update("citiesVisited", passport.citiesVisited);
         couple.update("husband", serializedHusband);
@@ -40,7 +40,7 @@ class Server
     public function syncHusband()
     {
     	var husband = Game.sharedGame().hubby;
-    	var passport = new Passport();
+    	var passport = Game.sharedGame().passport;
     	var serializedHusband = husband.serialize();
         serializedHusband.update("citiesVisited", passport.citiesVisited);
         this.makeRequest("/syncHusband", defaultCallBack, serializedHusband);

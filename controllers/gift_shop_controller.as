@@ -31,6 +31,8 @@ class GiftShopController extends ScreenController
 	{
 		trace("GiftShopController screenLoaded!");
 		trace(Game.font.getFont());
+
+		Game.sharedGame().passport.save();
 		
 		promptFunction = null;
 		achievementIcon = this.screen.getElement("achievementIcon").getSprite();
@@ -499,7 +501,7 @@ class GiftShopController extends ScreenController
 			Game.currentGame.passport.SydneySouvenirs[souvenirLevel - 1] = 1;
 		}
 		
-		Game.sharedGame().savePassport();
+		Game.sharedGame().passport.save();
 		
 		// pop balloons
 		var ret = checkForPoppedBalloons();
