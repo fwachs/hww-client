@@ -38,6 +38,7 @@ class MessageBoxScreen extends Screen
     static var MB_MysteryTutorial = 24;
     static var MB_MainTutorial = 25;
     static var MB_Exit = 26;
+    static var MB_GotBusted = 27;
 
     var type;
     var argument;
@@ -171,6 +172,9 @@ class MessageBoxScreen extends Screen
         }
         else if(this.type == MessageBoxScreen.MB_Exit) {
             displayConfirmCancelPrompt("images/hubby-screen/gone-to-work-text.png", "confirm-button-exit");
+        }
+        else if(this.type == MessageBoxScreen.MB_GotBusted) {
+            displayOkayPrompt("You got caught. Your hasband is going to have to bail you out miss. You loos 500 GBs");
         }
     }
 

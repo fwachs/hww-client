@@ -11,7 +11,8 @@ Brief Description:
 class Shop
 {
 
-    public function trackPurchaseEvent(category, label, ret) {
+    public function trackPurchaseEvent(category, label, ret) 
+    {
         var action = "purchase-success";
         if (ret == 0) {
             action = "purchase-fail";
@@ -103,6 +104,16 @@ class Shop
         return ret;
     }
     
+    public function buyBailout()
+    {
+        var cost = Game.sharedGame().wallet.moneyForCurrency(500, "GameBucks");
+        
+        var ret = Game.sharedGame().wallet.pay(cost);
+        this.trackPurchaseEvent("Bailout Purchase");
+        
+        return ret;
+    }
+    
     public function buyGift(gift)
     {
         var cost = Game.currentGame.wallet.moneyForCurrency(int(gift.amount), gift.currency);
@@ -121,7 +132,8 @@ class Shop
         return ret;
     }
     
-    public function getSouvenirCost(city, souvenirLevel) {
+    public function getSouvenirCost(city, souvenirLevel) 
+    {
         var costList = dict([
                 ["London",      [1, 2, 1, 1, 1]],
                 ["SanFrancisco",[1, 1, 2, 1, 3]],

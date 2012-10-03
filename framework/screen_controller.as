@@ -15,12 +15,19 @@ class ScreenController
 	var hudFrameTop;
 	var hudFrameBottom;
 	var cancelEvents = 0;
+	var handlers = null;
 	
 	public function ScreenController(controlledScreen)
 	{
 		this.modalScreenStack = new Array();
 		this.screen = controlledScreen;
 		controlledScreen.controller = this;
+		this.handlers = dict();
+		this.configureHandlers();
+	}
+	
+	public function configureHandlers()
+	{		
 	}
 	
 	public function screenLoaded()
@@ -49,17 +56,14 @@ class ScreenController
 		Game.trackEvent("User event", scrName, event.name, 10);
 
 		if(this.screen.firstTime == 1) {
-			var evParts = event.name.split(":");
-			var evName = evParts[0];
-			
-			if(evName == "nextTutorial") {
+			if(event.name == "nextTutorial") {
 				this.screen.showNextTutorial();
 			}
-			else if(evName == "prevTutorial") {
+			else if(event.name == "prevTutorial") {
 				this.screen.showPrevTutorial();
 			}
-			else if(evName == "jumpTutorialStep") {
-				this.screen.showTutorialStep(int(evParts[1]));
+			else if(event.name == "jumpTutorialStep") {
+				this.screen.showTutorialStep(int(event.argument));
 			}
 		}
 		
@@ -68,6 +72,20 @@ class ScreenController
 		}
 	}	
 
+	public function setEventHandler(handler, eventName)
+	{
+		this.handlers.update(eventName, handler);
+	}
+	
+	public function processHandlerForEvent(event)
+	{
+		var handler = this.handlers.get(event.name);
+		trace("processHandler: ", event.name, handler, handlers);
+		if(handler) {
+			handler(event);
+		}
+	}
+	
 	public function hookFired(event)
 	{
 		return 0;

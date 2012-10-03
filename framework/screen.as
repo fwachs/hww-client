@@ -61,13 +61,22 @@ class Screen
 	public function parseEvents(control, attrs)
 	{
 		var newSprite = control.getSprite();
+		
 		var onTap = attrs.get("ontap");
 		if(onTap) {
 			trace("Adding on tap to ", control.controlName);
 
+			var evParts = onTap.split(":");
+			var evName = evParts[0];
+			var evArg = null;
+			if(len(evParts) > 1) {
+				evArg = evParts[1];
+			}
+			
 			var ev = new Event();		
 			ev.node = newSprite;
-			ev.name = onTap;
+			ev.name = evName;
+			ev.argument = evArg;
 			ev.eventType = EVENT_UNTOUCH;
 			ev.controller = this.controller;
 
