@@ -247,7 +247,7 @@ class HusbandController extends ScreenController implements TimerListener
                 Game.sharedGame().hubby.workTimer.restart();
                 Game.sharedGame().hubby.workTimer.ticks = 1;
                 Game.sharedGame().hubby.outWorking = 1;
-                Game.sharedGame().hubby.stressMeterValue += Game.sharedGame().hubby.workStressorValue;
+                Game.sharedGame().hubby.stressMeterValue += Game.sharedGame().hubby.getWorkStressPenalty();
                 Game.sharedGame().hubby.checkAchievements();
                 Game.sharedGame().hubby.save();
             }

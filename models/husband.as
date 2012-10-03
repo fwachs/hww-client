@@ -11,13 +11,13 @@ Brief Description:
 
 class Husband //implements DBModel
 {
+	static var HubbyType_Executive = 0;
+	static var HubbyType_Doctor = 1;
+	static var HubbyType_Banker = 2;
+	static var HubbyType_Athlete = 3;
+	static var HubbyType_Lawyer = 4;
 	var name;
 	var type;
-	// 0 - executive
-	// 1 - doctor
-	// 2 - banker
-	// 3 - athlete
-	// 4 - lawyer
 	var occupation;	
 	var careerLevel;
 	var loveTankValue;
@@ -72,38 +72,38 @@ class Husband //implements DBModel
 
 	public function getHusbandAnimation()
 	{
-		if(this.occupation == 0) {
+		if(this.occupation == Husband.HubbyType_Executive) {
 			return "husband_exec";
 		}
-		else if(this.occupation == 1) {
+		else if(this.occupation == Husband.HubbyType_Doctor) {
 			return "husband_doctor";
 		}
-		else if(this.occupation == 2) {
+		else if(this.occupation == Husband.HubbyType_Banker) {
 			return "husband_banker";
 		}
-		else if(this.occupation == 3) {
+		else if(this.occupation == Husband.HubbyType_Athlete) {
 			return "husband_sports";
 		}
-		else if(this.occupation == 4) {
+		else if(this.occupation == Husband.HubbyType_Lawyer) {
 			return "husband_lawyer";
 		}
 	}
 
 	public function getHusbandTexture()
 	{
-		if(this.occupation == 0) {
+		if(this.occupation == Husband.HubbyType_Executive) {
 			return "images/Animation/exec_anim/exec_animBase.png";
 		}
-		else if(this.occupation == 1) {
+		else if(this.occupation == Husband.HubbyType_Doctor) {
 			return "images/Animation/doctor_anim/doctor_animBase.png";
 		}
-		else if(this.occupation == 2) {
+		else if(this.occupation == Husband.HubbyType_Banker) {
 			return "images/Animation/banker_anim/banker_animBase.png";
 		}
-		else if(this.occupation == 3) {
+		else if(this.occupation == Husband.HubbyType_Athlete) {
 			return "images/Animation/sports_anim/sports_animBase.png";
 		}
-		else if(this.occupation == 4) {
+		else if(this.occupation == Husband.HubbyType_Lawyer) {
 			return "images/Animation/lawyer_anim/lawyer_animBase.png";
 		}
 	}
@@ -193,13 +193,131 @@ class Husband //implements DBModel
 			Game.sharedGame().unlockAchievement("Running on Empty");
 	}
 	
+	public function getWorkStressPenalty()
+	{
+		if(this.occupation == Husband.HubbyType_Executive) {
+			if(this.careerLevel >= 86) {
+				return 3;
+			}
+			else if(this.careerLevel >= 20) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Doctor) {
+			if(this.careerLevel >= 95) {
+				return 3;
+			}
+			else if(this.careerLevel >= 31) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Banker) {
+			if(this.careerLevel >= 70) {
+				return 3;
+			}
+			else if(this.careerLevel >= 10) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Athlete) {
+			if(this.careerLevel >= 99) {
+				return 3;
+			}
+			else if(this.careerLevel >= 35) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Lawyer) {
+			if(this.careerLevel >= 91) {
+				return 3;
+			}
+			else if(this.careerLevel >= 25) {
+				return 2;
+			}
+			else {
+				return 1;
+			}
+		}
+	}
+	
+	public function getShoppingLovePenalty()
+	{
+		if(this.occupation == Husband.HubbyType_Executive) {
+			if(this.careerLevel >= 95) {
+				return 6;
+			}
+			else if(this.careerLevel >= 59) {
+				return 4;
+			}
+			else {
+				return 2;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Doctor) {
+			if(this.careerLevel >= 86) {
+				return 6;
+			}
+			else if(this.careerLevel >= 20) {
+				return 4;
+			}
+			else {
+				return 2;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Banker) {
+			if(this.careerLevel >= 99) {
+				return 6;
+			}
+			else if(this.careerLevel >= 64) {
+				return 4;
+			}
+			else {
+				return 2;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Athlete) {
+			if(this.careerLevel >= 70) {
+				return 6;
+			}
+			else if(this.careerLevel >= 10) {
+				return 4;
+			}
+			else {
+				return 2;
+			}
+		}
+		else if(this.occupation == Husband.HubbyType_Lawyer) {
+			if(this.careerLevel >= 91) {
+				return 6;
+			}
+			else if(this.careerLevel >= 50) {
+				return 4;
+			}
+			else {
+				return 2;
+			}
+		}
+	}
+	
 	public function levelUp()
 	{		
 		careerLevel += 1;
-		salary += 100;
+		salary = 100 * careerLevel;
 		playVideoGameCost = 80 * careerLevel;
 		kissCost = 40 * careerLevel;
-		workSSPReturn += 5;
+		workSSPReturn = 5 * careerLevel + 5;
 		
 		if(careerLevel % 10 == 0) {
 			watchTheGameCost += 1;
@@ -209,108 +327,13 @@ class Husband //implements DBModel
 		this.checkAchievements();		
 		Game.sounds.playSFX("hubbyLevelUp");
 		
-		updateVisits();
+		workStressorValue = getWorkStressPenalty();
+		shoppingDreadValue = getShoppingLovePenalty();
 		
-		if(careerLevel == 2) {
-			workStressorValue = 1;
-			shoppingDreadValue = 2;
-		}
-		else if(careerLevel == 10) {
-			// banker
-			if(occupation == 2) {
-				workStressorValue = 2;
-			}
-			// athlete
-			else if(occupation == 3) {
-				shoppingDreadValue = 4;
-			}
-		}
-		else if(careerLevel == 20) {
-			// excutive
-			if(occupation == 0) {
-				workStressorValue = 2;
-			}
-			// doctor
-			else if(occupation == 1) {
-				shoppingDreadValue = 4;
-			}
-		}
-		else if(careerLevel == 25) {
-			// lawyer
-			if(occupation == 4) {
-				workStressorValue = 2;
-			}
-		}
-		else if(careerLevel == 31) {
-			// doctor
-			if(occupation == 1) {
-				workStressorValue = 2;
-			}
-		}
-		else if(careerLevel == 35) {
-			// athlete
-			if(occupation == 3) {
-				workStressorValue = 2;
-			}
-		}
-		else if(careerLevel == 50) {
-			// lawyer
-			if(occupation == 4) {
-				shoppingDreadValue = 4;
-			}
-		}
-		else if(careerLevel == 59) {
-			// excutive
-			if(occupation == 0) {
-				shoppingDreadValue = 4;
-			}
-		}
-		else if(careerLevel == 64) {
-			// banker
-			if(occupation == 2) {
-				shoppingDreadValue = 4;
-			}
-		}
-		else if(careerLevel == 70) {
-			// banker
-			if(occupation == 2) {
-				workStressorValue = 3;
-			}
-			// athlete
-			else if(occupation == 3) {
-				shoppingDreadValue = 6;
-			}
-		}
-		else if(careerLevel == 86) {
-			// excutive
-			if(occupation == 0) {
-				workStressorValue = 3;
-			}
-			// doctor
-			else if(occupation == 1) {
-				shoppingDreadValue = 6;
-			}
-		}
-		else if(careerLevel == 91) {
-			// excutive
-			if(occupation == 0) {
-				shoppingDreadValue = 6;
-			}
-			// doctor
-			else if(occupation == 1) {
-				workStressorValue = 3;
-			}
-		}
-		else if(careerLevel == 99) {
-			// banker
-			if(occupation == 2) {
-				shoppingDreadValue = 6;
-			}
-			// athlete
-			else if(occupation == 3) {
-				workStressorValue = 3;
-			}
-		}
+		updateVisits();
+		updateWorkHours();
+		control.updateWorkStats();
+		this.save();		
 	}
 	
 	public function updateVisits()
@@ -349,10 +372,6 @@ class Husband //implements DBModel
 		else if(careerLevel == 78) {
 			requiredVisits = 10;
 		}
-		
-		updateWorkHours();
-		control.updateWorkStats();
-		this.save();
 	}
 	
 	public function updateWorkHours()
@@ -426,7 +445,7 @@ class Husband //implements DBModel
         this.shoppingTimer.restart();
         this.shoppingTimer.ticks = 1;
         this.outShopping = 1;
-        this.loveTankValue -= this.shoppingDreadValue;
+        this.loveTankValue -= getShoppingLovePenalty();
         this.checkAchievements();
         this.save();
 	}
