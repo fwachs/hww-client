@@ -33,10 +33,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls001/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" floor="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -79,10 +77,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls002/walkway01.png" width="1" depth="1"/-->
 		<hww-config:style-item type="Paint" resource="paint/191_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/304_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/304_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/304_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/304_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -123,10 +119,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls003/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/192_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -169,10 +163,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls004/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/193_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls004/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -216,10 +208,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls005/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass02x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass02x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -263,10 +253,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls006/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/191_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -310,10 +298,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls007/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -357,10 +343,8 @@
 		<hww-config:style-item type="Grassx" resource="grass02.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls008/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass02x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass02x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls008/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -404,10 +388,8 @@
 		<hww-config:style-item type="Grassx" resource="dirt01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls009/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="dirt01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="dirt01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls009/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -451,10 +433,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls010/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls010/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -498,10 +478,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls011/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="walls-default/walls011/back-wall.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls011/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -545,10 +523,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls012/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/192_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -592,10 +568,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls013/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/301_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/301_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls001/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -639,10 +613,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="walls-default/walls014/back-wall.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls015/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -686,10 +658,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls015/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="wallpaper/169_Wallpaper.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls015/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
@@ -733,10 +703,8 @@
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="walls-default/walls016/back-wall.png" width="2" depth="1"/>
-		<hww-config:style-item type="HFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<hww-config:style-item type="VFence" resource="grass01x1.png" width="1" depth="1" floor="1"/>
-		<!--hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
-		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/-->
+		<hww-config:style-item type="HFence" resource="fences/305_Fence.png" width="1" depth="1"/>
+		<hww-config:style-item type="VFence" resource="fences/305_Fence.png" width="1" depth="1" flip="1"/>
 		<hww-config:style-item type="Driveway" resource="driveway.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Walkway" resource="walls-default/walls016/walkway01.png" width="2" depth="2" floor="1"/>
 		<hww-config:style-item type="Garage" resource="garage-default.png" width="2" depth="2" floor="1"/>
