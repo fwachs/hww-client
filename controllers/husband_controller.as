@@ -490,9 +490,18 @@ class HusbandController extends ScreenController implements TimerListener
 
     public function secretPopUp()
     {
+    	/*
         var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_Secret);
         promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
         this.presentModalScreen(promptScreen);
+        */
+
+    	if(Game.sharedGame().darkSide.isActive == 1) {
+	    	var screen = new DarkSideScreen();
+	        screen.configFile = "screen-cfgs/darkside-screen-cfg.xml";
+	        var controller = new DarkSideController(screen);
+	        Game.pushScreen(screen);
+    	}
     }
 }
 

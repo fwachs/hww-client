@@ -10,6 +10,9 @@ Brief Description:
 
 import framework.game
 
+import screens.darkside_screen
+import controllers.darkside_controller
+
 import screens.hud_screen
 import controllers.hud_controller
 
@@ -25,6 +28,7 @@ import models.wife
 import models.furniture
 import models.house
 import models.husband
+import models.darkside
 import models.currency
 import models.passport
 import models.papaya_friend
@@ -39,6 +43,7 @@ class HousewifeWars extends Game
 	var house;
 	var wallet;
 	var hubby;
+	var darkSide;
 	var milesEarnedTimer;
 	var passport;
 	var cities;
@@ -69,6 +74,7 @@ class HousewifeWars extends Game
 		this.furnitureCategories = this.getFurnitureCategories();
 		this.wife = new Wife();
 		this.hubby = new Husband();
+		this.darkSide = new DarkSide();
 		this.house = new House();
 		this.wallet = new Wallet();
 		this.shop = new Shop();
