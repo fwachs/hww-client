@@ -84,7 +84,7 @@ class Game
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
 		c_invoke(transitionLoadingScreen, 2000, null);
-		advertisement = v_create (V_APPFLOOD_BANNER, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
+		advertisement = v_create (V_APPFLOOD_BANNER_SMALL, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
 		v_root().addview(advertisement);
 	}
 	
