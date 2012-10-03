@@ -52,6 +52,7 @@ class Husband //implements DBModel
 	var workHours;
 	var workSSPReturn;
 	var workBuffTime = 0;
+	var shoppingBuffTime = 0;
 	
 	var control = null;
 
@@ -385,9 +386,42 @@ class Husband //implements DBModel
 		trace("increaseWorkHours: ", newHours, " with buff: ", this.workBuffTime);
 		
 		Game.sharedGame().hubby.workHours = newHours;
-		this.workTimer.seconds = Game.sharedGame().hubby.workHours + (newHours * this.workBuffTime / 100); 
+		this.workTimer.seconds = Game.sharedGame().hubby.workHours + this.workBuffTime; 
+	}
+	
+	public function setShoppingBuffTime(buffTime)
+	{
+		this.shoppingBuffTime = buffTime;
+		
+		this.save();
 	}
 
+	public function clearShoppingBuffTime()
+	{
+		this.shoppingBuffTime = 0;
+		this.save();
+	}
+	
+	public function getShoppingTime()
+	{
+        if(this.shoppingCounts == 0) {
+            return 1;
+        }
+
+		return 180 + this.shoppingBuffTime; 
+	}
+	
+	public function sendShopping()
+	{
+        this.shoppingTimer.seconds = this.getShoppingTime();
+        this.shoppingTimer.restart();
+        this.shoppingTimer.ticks = 1;
+        this.outShopping = 1;
+        this.loveTankValue -= this.shoppingDreadValue;
+        this.checkAchievements();
+        this.save();
+	}
+	
 	public function load() 
 	{
         var papayaUserId = Game.getPapayaUserId();
@@ -395,7 +429,7 @@ class Husband //implements DBModel
         trace("### HWW ### - Fetched Husband from DB:", str(husbandMap));
         if (husbandMap == null) 
         {
-        	name = "Mark";
+        	name = "MysteryHusband";
 			type = "Executive";
 			occupation = 0;
 			careerLevel = 1;

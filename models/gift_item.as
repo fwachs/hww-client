@@ -140,6 +140,9 @@ class Buffs
 			else if(gift.buffType == "BuffSocialStatusPoints") {
 				buff = new BuffSStatusPoints();
 			}
+			else if(gift.buffType == "BuffShoppingTime") {
+				buff = new BuffHusbandShoppingTime();
+			}
 		}
 		
 		return buff;
@@ -247,6 +250,33 @@ class BuffHusbandWorkTime extends Timer implements IBuff
 		trace("Done BuffHusbandWorkTime");
 		
 		Game.sharedGame().hubby.clearWorkBuffTime();
+
+		Buffs.clearBufs();
+	}
+}
+
+class BuffHusbandShoppingTime extends Timer implements IBuff
+{
+	public function BuffHusbandShoppingTime()
+	{
+		super("BuffHusbandShoppingTime", 1, 1);
+	}
+
+	override public function execute(factor, time)
+	{
+		trace("Execute BuffHusbandShoppingTime", factor, time);
+		
+		Game.sharedGame().hubby.setShoppingBuffTime(-factor);
+
+		this.restart();
+		this.changeRunningTime(time * 3600);
+	}
+
+	override public function tick()
+	{
+		trace("Done BuffHusbandShoppingTime");
+		
+		Game.sharedGame().hubby.clearShoppingBuffTime();
 
 		Buffs.clearBufs();
 	}
