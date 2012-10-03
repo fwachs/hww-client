@@ -193,67 +193,67 @@ class TravelController extends ScreenController
 
         if(location == "London") {
             if(Game.sharedGame().passport.londonFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(1500);
                 Game.sharedGame().passport.londonFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to London");
+            Game.sharedGame().wife.incSocialStatusPoints(1500);
             GiftShopController.travelDestination = "London";
             travelImage.texture("images/travel-portal/london-travel.png");
         }
         else if(location == "SanFrancisco") {
             if(Game.sharedGame().passport.SanFranciscoFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(3000);
                 Game.sharedGame().passport.SanFranciscoFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to SanFrancisco");
+            Game.sharedGame().wife.incSocialStatusPoints(3000);
             GiftShopController.travelDestination = "SanFrancisco";
             travelImage.texture("images/travel-portal/sf-travel.png");
         }
         else if(location == "Paris") {
             if(Game.sharedGame().passport.ParisFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(6000);
                 Game.sharedGame().passport.ParisFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to Paris");
+            Game.sharedGame().wife.incSocialStatusPoints(6000);
             GiftShopController.travelDestination = "Paris";
             travelImage.texture("images/travel-portal/paris-travel.png");
         }
         else if(location == "BuenosAires") {
             if(Game.sharedGame().passport.BuenosAiresFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(11000);
                 Game.sharedGame().passport.BuenosAiresFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to BuenosAires");
+            Game.sharedGame().wife.incSocialStatusPoints(11000);
             GiftShopController.travelDestination = "BuenosAires";
             travelImage.texture("images/travel-portal/buenos-aires-travel.png");
         }
         else if(location == "Tokyo") {
             if(Game.sharedGame().passport.TokyoFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(24000);
                 Game.sharedGame().passport.TokyoFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to Tokyo");
+            Game.sharedGame().wife.incSocialStatusPoints(24000);
             GiftShopController.travelDestination = "Tokyo";
             travelImage.texture("images/travel-portal/tokyo-travel.png");
         }
         else if(location == "Sydney") {
             if(Game.sharedGame().passport.SydneyFirstVisit) {
-                Game.sharedGame().wife.incSocialStatusPoints(30000);
                 Game.sharedGame().passport.SydneyFirstVisit = 0;
                 Game.sharedGame().passport.citiesVisited += 1;
             }
 
             trace("off to Sydney");
+            Game.sharedGame().wife.incSocialStatusPoints(30000);
             GiftShopController.travelDestination = "Sydney";
             travelImage.texture("images/travel-portal/sydney-travel.png");
         }
