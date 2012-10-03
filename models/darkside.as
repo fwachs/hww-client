@@ -19,6 +19,8 @@ class DarkSide
 	public function DarkSide()
 	{
 		this.timer = new DarkSideTimer();
+		
+		this.load();
 	}
 	
 	public function activate()
