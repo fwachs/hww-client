@@ -92,10 +92,18 @@ class Passport
         trace("### HWW ### - Passport datesCompleted:" + datesCompleted[3]);
         trace("### HWW ### - Passport datesCompleted:" + datesCompleted[4]);
         trace("### HWW ### - Passport datesCompleted:" + datesCompleted[5]);
+        
+        trace("### HWW ### - Passport londonFirstVisit: " + str(londonFirstVisit));
+        trace("### HWW ### - Passport SanFranciscoFirstVisit: " + str(SanFranciscoFirstVisit));
+        trace("### HWW ### - Passport ParisFirstVisit: " + str(ParisFirstVisit));
+        trace("### HWW ### - Passport BuenosAiresFirstVisit:" + str(BuenosAiresFirstVisit));
+        trace("### HWW ### - Passport TokyoFirstVisit:" + str(TokyoFirstVisit));
+        trace("### HWW ### - Passport SydneyFirstVisit:" + str(SydneyFirstVisit));
 	}
 
     public function save()
     {
+    	trace("### HWW ### - Saving Passport...");
         var papayaUserId = Game.getPapayaUserId();
         var serializedPassport = this.serialize();
         trace("### HWW ### - Saving Passport:", str(serializedPassport));
