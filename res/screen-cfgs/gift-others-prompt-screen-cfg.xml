@@ -9,7 +9,7 @@
 			<screen:element name="giftTitle" resource="" left="310" top="170" text-wrap="yes" width="556" font-size="48" font-style="bold">#placeholder</screen:element>
 			<screen:element name="giftDescription" resource="" left="305" top="249" text-wrap="yes" text-Align="left" width="556" font-style="bold" font-size="40">#giftDescription</screen:element>
 			
-			<screen:element name="giftCurrencyIcon" resource="gift-others-prompt/diamond-icon.png" left="951" top="400">
+			<screen:element name="giftCurrencyIcon" resource="gift-others-prompt/diamond-icon.png" left="921" top="400">
 				<screen:element name="giftCurrencyAmount" resource="" left="69" top="0" font-style="bold" font-size="60">3</screen:element>
 			</screen:element>
 			
