@@ -175,7 +175,8 @@ class MessageBoxScreen extends Screen
         	displayTutorialPrompt("images/tutorial-icons/mainmenu-tutorial-01.png");
         }
         else if(this.type == MessageBoxScreen.MB_Exit) {
-            displayConfirmCancelPrompt("images/hubby-screen/gone-to-work-text.png", "confirm-button-exit");
+        	displayOkayPrompt("Are you sure you want to quit Housewife Wars?", "okay-button-exit");
+        	this.getElement("cancel-button-dismiss").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_GotBusted) {
             displayOkayPrompt("");

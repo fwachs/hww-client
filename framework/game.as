@@ -345,6 +345,7 @@ class Game
 	public function startButtonShineAnimation()
 	{
 		var buttonShineAnimation = Game.bannerScreen.getElement("buttonShineAnimation").getSprite();
+		buttonShineAnimation.visible(1);
 		var action = Game.animations.getAnimation("button_shine");
 		buttonShineAnimation.stop();
 		buttonShineAnimation.addaction(repeat(action));
@@ -451,6 +452,7 @@ class Game
 	public function stopButtonShineAnimation()
 	{
 		Game.bannerScreen.getElement("buttonShineAnimation").getSprite().stop();
+		Game.bannerScreen.getElement("buttonShineAnimation").getSprite().visible(0);
 		trace("### HWW ### - " + Game.currentScreen().getScreenName());
 	}
 

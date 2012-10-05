@@ -239,7 +239,7 @@ class HusbandController extends ScreenController implements TimerListener
         trace("### HWW ### req hubby work trips: " + str(Game.sharedGame().hubby.requiredVisits));
 
         if(Game.sharedGame().hubby.isHome()) {
-            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().hubby.workStressorValue;
+            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().getWorkStressPenalty();
             trace("### HWW ### Sending hubby to work will cause stress to be at: " + str(hubbyStress));
 
             if(hubbyStress <= 10) {
@@ -247,7 +247,7 @@ class HusbandController extends ScreenController implements TimerListener
                 Game.sharedGame().hubby.workTimer.restart();
                 Game.sharedGame().hubby.workTimer.ticks = 1;
                 Game.sharedGame().hubby.outWorking = 1;
-                Game.sharedGame().hubby.stressMeterValue += Game.sharedGame().hubby.workStressorValue;
+                Game.sharedGame().hubby.stressMeterValue += Game.sharedGame().hubby.getWorkStressPenalty();
                 Game.sharedGame().hubby.checkAchievements();
                 Game.sharedGame().hubby.save();
             }
@@ -270,7 +270,10 @@ class HusbandController extends ScreenController implements TimerListener
     public function sendHusbandShopping()
     {
         if(Game.sharedGame().hubby.isHome()) {
-            if(Game.sharedGame().hubby.loveTankValue - Game.sharedGame().hubby.shoppingDreadValue >= 0) {
+        	var hubbyLove = Game.sharedGame().hubby.loveTankValue - Game.sharedGame().hubby.getShoppingLovePenalty();
+        	trace("### HWW ### Sending hubby shopping will cause love to be at: " + str(hubbyLove));
+        	
+            if(hubbyLove >= 0) {
                 Game.sharedGame().hubby.sendShopping();
             }
             else {
@@ -360,21 +363,21 @@ class HusbandController extends ScreenController implements TimerListener
         //
         var threshold = this.thresholdWeighedWithBuff(itemType);
 
-        // 50% chance to get furniture
-        if(itemType <= 50) {
+        // 30% chance to get furniture
+        if(itemType <= 30) {
             var furnLen = len(Game.sharedGame().furnitureListing);
 
             trace("### HWW ### - Furniture items: " + str(furnLen));
 
-            // seperate by rarity
+            // seperate by rarity only allow items the husband is high enough level for and don't cost diamonds
             for(var i = 0; i < furnLen; i++) {
-                if(Game.sharedGame().furnitureListing[i].stars == 0 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel)
+                if(Game.sharedGame().furnitureListing[i].stars == 0 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
                     commonItems.append(Game.sharedGame().furnitureListing[i]);
-                if(Game.sharedGame().furnitureListing[i].stars == 1 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel)
+                if(Game.sharedGame().furnitureListing[i].stars == 1 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
                     rareItems.append(Game.sharedGame().furnitureListing[i]);
-                if(Game.sharedGame().furnitureListing[i].stars == 2 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel)
+                if(Game.sharedGame().furnitureListing[i].stars == 2 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
                     veryRareItems.append(Game.sharedGame().furnitureListing[i]);
-                if(Game.sharedGame().furnitureListing[i].stars == 3 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel)
+                if(Game.sharedGame().furnitureListing[i].stars == 3 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
                     extremelyRareItems.append(Game.sharedGame().furnitureListing[i]);
             }
 
@@ -427,7 +430,7 @@ class HusbandController extends ScreenController implements TimerListener
             Game.sounds.playSFX("gainSSP");
             Game.sharedGame().wife.incSocialStatusPoints(shoppingItem.points);
         }
-        // 50% chance to get a mystery item
+        // 70% chance to get a mystery item
         else {
             var miLen = len(Game.sharedGame().mysteryItems);
             rareness = rand(100, 4) + 1;
