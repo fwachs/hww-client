@@ -88,7 +88,7 @@
 		buff-type="BuffWorkTime"
 		buff-factor="60"
 		buff-time="24"
-		work-icon="hubby-screen/arrow_up_20.png"
+		work-icon="gift-others-prompt/buffs_debuffs/arrow_up.png"
 		shopping-icon=""
 		ssp-icon=""
 		/>
@@ -164,7 +164,7 @@
 		buff-type="BuffWorkTime"
 		buff-factor="60"
 		buff-time="12"
-		work-icon="hubby-screen/arrow_up_10.png"
+		work-icon="gift-others-prompt/buffs_debuffs/arrow_up.png"
 		shopping-icon=""
 		ssp-icon=""
 		/>
@@ -190,7 +190,7 @@
 		buff-type="BuffShoppingTime"
 		buff-factor="60"
 		buff-time="24"
-		work-icon="hubby-screen/arrow_up_20.png"
+		work-icon="gift-others-prompt/buffs_debuffs/arrow_up.png"
 		shopping-icon=""
 		ssp-icon=""
 		/>
@@ -217,7 +217,7 @@
 		buff-factor="60"
 		buff-time="12"
 		work-icon=""
-		shopping-icon="hubby-screen/arrow_up_10.png"
+		shopping-icon="gift-others-prompt/buffs_debuffs/arrow_up.png"
 		ssp-icon=""
 		/>
 	<hww-config:gift id="388" title="Mint Chip" type="GIFT"
