@@ -106,9 +106,15 @@ class Shop
     
     public function buyBailout()
     {
-        var cost = Game.sharedGame().wallet.moneyForCurrency(500, "GameBucks");
-        
+    	var balance = Game.sharedGame().wallet.balanceForCurrency("GameBucks");
+    	var amount = 500;
+    	if(balance < amount) {
+    		amount = balance;
+    	}
+    	
+        var cost = this.getGameBucks(amount);        
         var ret = Game.sharedGame().wallet.pay(cost);
+        
         this.trackPurchaseEvent("Bailout Purchase");
         
         return ret;

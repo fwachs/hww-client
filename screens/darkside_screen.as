@@ -31,15 +31,21 @@ class DarkSideScreen extends Screen
 		selector.getSprite().visible(0);
 	}
 	
-	public function showDiamondsAtDoor(doorNum)
+	public function showDiamondsAtDoor(doorNum, count)
 	{
 		var ele = this.getElement("door" + str(doorNum));
-		ele.getSprite().texture("images/dark-side/diamond-safe.png");
+		ele.getSprite().texture("images/dark-side/diamond-safe" + str(count) + ".png");
 	}
 	
 	public function showEmptyAtDoor(doorNum)
 	{
 		var ele = this.getElement("door" + str(doorNum));
 		ele.getSprite().texture("images/dark-side/webs-icon-empty-safe.png");
+	}
+	
+	public function showCopAtDoor(doorNum)
+	{
+		var ele = this.getElement("door" + str(doorNum));
+		ele.getSprite().texture("images/dark-side/jail-safe.png");
 	}
 }

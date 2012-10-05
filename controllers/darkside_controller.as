@@ -19,6 +19,8 @@ class DarkSideController extends ScreenController
 
 	override public function screenLoaded()
 	{
+		Game.sounds.stop();
+        Game.sounds.playMusic("darkSideMusic");
 	}	
 
 	override public function configureHandlers()
@@ -62,12 +64,17 @@ class DarkSideController extends ScreenController
 		
 		var ret = Game.sharedGame().darkSide.openDoor(doorNum);
 		if(ret > 0) {
-			this.screen.showDiamondsAtDoor(doorNum);
+            Game.sounds.playSFX("openSafe");
+			this.screen.showDiamondsAtDoor(doorNum, ret);
 		}
 		else if(ret < 0) {
-			this.gotBusted();
+			Game.sounds.stop();
+            Game.sounds.playSFX("sabotageGift");			
+			this.screen.showCopAtDoor(doorNum)
+			c_invoke(this.gotBusted, 1000, null);
 		}
 		else {
+            Game.sounds.playSFX("openSafe");
 			this.screen.showEmptyAtDoor(doorNum);
 		}
 	}
@@ -80,13 +87,19 @@ class DarkSideController extends ScreenController
 	public function getAway(event)
 	{
 		Game.sharedGame().darkSide.getAway();
-		
-        Game.popScreen();
+		this.leave();
 	}
 	
 	public function dismiss(event)
 	{
 		this.dismissModalScreen();
+		this.leave();
+	}
+	
+	public function leave()
+	{
         Game.popScreen();
+		Game.sounds.stop();
+        Game.sounds.playMusic("themeMusic");
 	}
 }

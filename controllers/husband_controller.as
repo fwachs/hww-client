@@ -482,6 +482,10 @@ class HusbandController extends ScreenController implements TimerListener
 
             Game.sharedGame().wife.awardMysteryItem(shoppingItem);
             Game.sharedGame().wife.save();
+            
+            if(Game.sharedGame().darkSide.checkRequirements() == 1) {
+            	this.showDarkSidePrompt();
+            }
 
             Game.sounds.playSFX("gainSSP");
         }
@@ -490,20 +494,48 @@ class HusbandController extends ScreenController implements TimerListener
         promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
         this.presentModalScreen(promptScreen);
     }
+    
+    public function showDarkSidePrompt()
+    {
+    	if(Game.sharedGame().darkSide.challengeAccepted() == 0) {
+    		this.showMessageBox(MessageBoxScreen.MB_DarkSideChallenge, this.showDarkSideLetter);
+    	}
+    	else {
+    		this.showDarkSideScreen();
+    	}
+    }
+    
+    public function showDarkSideLetter()
+    {
+    	Game.sharedGame().darkSide.acceptChallenge();
+    	
+    	this.showMessageBox(MessageBoxScreen.MB_DarkSideLetter, this.showDarkSideScreen);
+    }
+    
+    public function showDarkSideScreen()
+    {
+    	var screen = new DarkSideScreen();
+        screen.configFile = "screen-cfgs/darkside-screen-cfg.xml";
+        var controller = new DarkSideController(screen);
+        Game.pushScreen(screen);
+        
+        Game.sharedGame().darkSide.deactivate();
+    }
 
     public function secretPopUp()
     {
-    	/*
-        var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_Secret);
-        promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
-        this.presentModalScreen(promptScreen);
-        */
-
-    	if(Game.sharedGame().darkSide.isActive == 1) {
-	    	var screen = new DarkSideScreen();
-	        screen.configFile = "screen-cfgs/darkside-screen-cfg.xml";
-	        var controller = new DarkSideController(screen);
-	        Game.pushScreen(screen);
+    	if(Game.sharedGame().darkSide.checkRequirements() == 0) {
+            var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_Secret);
+            promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+            this.presentModalScreen(promptScreen);
+    	}
+    	else {
+    		if(Game.sharedGame().darkSide.challengeAccepted() == 0) {
+	    		this.showDarkSidePrompt();
+    		}
+	    	if(Game.sharedGame().darkSide.isActive == 1) {
+	    		this.showDarkSideScreen();
+	    	}
     	}
     }
 }

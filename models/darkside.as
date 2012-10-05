@@ -14,13 +14,44 @@ class DarkSide
 	var prizes = null;
 	var doors = null;
 	var isActive = 0;
+	var requirementsChecked = 0;
 	var accumulatedDiamonds = 0;
+	var isChallengeAccepted = 0;
 	
 	public function DarkSide()
 	{
 		this.timer = new DarkSideTimer();
 		
 		this.load();
+	}
+	
+	public function acceptChallenge()
+	{
+		this.isChallengeAccepted = 1;
+		this.save();
+	}
+	
+	public function challengeAccepted()
+	{
+		return this.isChallengeAccepted;
+	}
+	
+	public function checkRequirements()
+	{
+		return 1;
+    	if(this.requirementsChecked == 1) return 1;
+    	
+        var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
+        var wifeItemsCount = len(Game.sharedGame().wife.mysteryItemCollection);
+        
+        if(wifeItemsCount >= mysteryItemsCount) {
+    		this.requirementsChecked = 1;
+    		this.activate();
+        	
+        	return 1;
+        }
+        
+        return 0;
 	}
 	
 	public function activate()
@@ -45,7 +76,6 @@ class DarkSide
 			this.doors = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 			this.prizes = [0, -1, -1, -1, 1, 1, 2, 2, 4];
 			this.accumulatedDiamonds = 0;
-			this.deactivate();
 		}
 		
 		return this.doors[doorNum];
@@ -92,12 +122,16 @@ class DarkSide
         var darkSideMap = Game.getDatabase().get("darkside" + Game.getPapayaUserId());
         trace("### HWW ### - Fetched DarkSide from DB:", str(darkSideMap));
         if(darkSideMap == null) {
-			this.isActive = 1;
+			this.isActive = 0;
+			this.requirementsChecked = 0;
+			this.isChallengeAccepted = 0;
 			
             return;
         }
         
         this.isActive = darkSideMap.get("isActive");
+        this.requirementsChecked = darkSideMap.get("requirementsChecked");
+        this.isChallengeAccepted = darkSideMap.get("isChallengeAccepted");
 	}
 
     public function save()
@@ -112,7 +146,9 @@ class DarkSide
     {
         var darksideArray = [];
         darksideArray.append(["isActive", this.isActive]);
-
+        darksideArray.append(["requirementsChecked", this.requirementsChecked]);
+        darksideArray.append(["isChallengeAccepted", this.isChallengeAccepted]);
+        
         return dict(darksideArray);
     }
 }
