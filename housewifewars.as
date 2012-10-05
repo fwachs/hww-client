@@ -127,9 +127,8 @@ class HousewifeWars extends Game
 			screen = new MainScreen();
 			screen.configFile = "screen-cfgs/main-screen-cfg.xml";
 			controller = new MainController(screen);
-			Game.sharedGame().getServer().register();
-            Game.sharedGame().getServer().syncHouse();
-            c_addtimer(60000, this.updateServer, null, 0, -1);
+
+			c_addtimer(60000, this.updateServer, null, 0, -1);
 		}
 
 		this.milesEarnedTimer.start();
