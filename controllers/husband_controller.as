@@ -513,13 +513,11 @@ class HusbandController extends ScreenController implements TimerListener
     }
     
     public function showDarkSideScreen()
-    {
+    {    	
     	var screen = new DarkSideScreen();
         screen.configFile = "screen-cfgs/darkside-screen-cfg.xml";
         var controller = new DarkSideController(screen);
-        Game.pushScreen(screen);
-        
-        Game.sharedGame().darkSide.deactivate();
+        Game.pushScreen(screen);        
     }
 
     public function secretPopUp()

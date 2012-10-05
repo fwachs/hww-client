@@ -74,8 +74,8 @@
 
     <screen:element name="darkSideChallengePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="confirmCancelPromptFrame" resource="dark-side/dark-side-accept.png" left="282" top="146"/>
-        <screen:element name="cancelDarkSide" resource="hubby-screen/cancel-button-highlight.png" left="673" top="531" ontap="cancelMB"/>
-    	<screen:element name="acceptDarkSide" resource="tutorial-icons/accept.png" left="318" top="531" ontap="okMB"/>
+        <screen:element name="cancelDarkSide" resource="dark-side/not-now.png" left="313" top="519" ontap="cancelMB"/>
+    	<screen:element name="acceptDarkSide" resource="tutorial-icons/accept.png" left="693" top="519" ontap="okMB"/>
     </screen:element>
     
     </screen:elements>

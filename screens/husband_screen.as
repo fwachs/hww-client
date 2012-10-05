@@ -305,7 +305,8 @@ class HusbandScreen extends Screen
 				}
 				else {
 					this.getElement("secretButtonText").setText("");
-					this.getElement("secretButtonOverlay").getSprite().visible(1);				
+					this.getElement("secretButtonOverlay").getSprite().visible(1);
+					this.getElement("secretButtonOverlay").getSprite().texture("images/dark-side/dark-side-text.png");
 				}
             }
             else {

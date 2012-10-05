@@ -38,10 +38,11 @@ class DarkSide
 	
 	public function checkRequirements()
 	{
-		return 1;
     	if(this.requirementsChecked == 1) return 1;
     	
-        var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
+        // change for prod version 
+        //var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
+    	var mysteryItemsCount = 1;
         var wifeItemsCount = len(Game.sharedGame().wife.mysteryItemCollection);
         
         if(wifeItemsCount >= mysteryItemsCount) {
@@ -58,6 +59,8 @@ class DarkSide
 	{
 		this.isActive = 1;
 		this.doors = null;
+		this.accumulatedDiamonds = 0;
+		
 		this.save();
 	}
 	
