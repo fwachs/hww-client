@@ -70,6 +70,24 @@ class ScreenController
 		if(event.name == "exitGame") {
 			Game.sharedGame().quit();
 		}
+		else if(event.name == "cancelMB") {
+			var scr = this.modalScreenStack[len(this.modalScreenStack) - 1];
+			
+			this.dismissModalScreen();
+
+			if(scr.cancelCallBack) {
+				scr.cancelCallBack();
+			}
+		}
+		else if(event.name == "okMB") {
+			scr = this.modalScreenStack[len(this.modalScreenStack) - 1];
+			
+			this.dismissModalScreen();
+			
+			if(scr.okCallBack) {
+				scr.okCallBack();
+			}
+		}
 	}	
 
 	public function setEventHandler(handler, eventName)
@@ -91,10 +109,13 @@ class ScreenController
 		return 0;
 	}
 
-	public function showMessageBox(mbType)
+	public function showMessageBox(mbType, okCallBack = null, cancelCallBack = null)
 	{
 		var promptScreen = new MessageBoxScreen(mbType);
 		promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+		promptScreen.okCallBack = okCallBack;
+		promptScreen.cancelCallBack = cancelCallBack;
+		
 		this.presentModalScreen(promptScreen);
 	}
 	

@@ -298,14 +298,20 @@ class HusbandScreen extends Screen
 				sendShoppingButtonOverlay.visible(1);
 			}
 			
-			if(Game.sharedGame().darkSide.isActive == 0) {
-				this.getElement("secretButtonText").setText(Game.sharedGame().darkSide.timer.getTimeString());
-				this.getElement("secretButtonOverlay").getSprite().visible(0);
-			}
-			else {
+            if(Game.sharedGame().darkSide.checkRequirements() == 1) {
+				if(Game.sharedGame().darkSide.isActive == 0 && Game.sharedGame().darkSide.challengeAccepted() == 1) {
+					this.getElement("secretButtonText").setText(Game.sharedGame().darkSide.timer.getTimeString());
+					this.getElement("secretButtonOverlay").getSprite().visible(0);
+				}
+				else {
+					this.getElement("secretButtonText").setText("");
+					this.getElement("secretButtonOverlay").getSprite().visible(1);				
+				}
+            }
+            else {
 				this.getElement("secretButtonText").setText("");
-				this.getElement("secretButtonOverlay").getSprite().visible(1);				
-			}
+				this.getElement("secretButtonOverlay").getSprite().visible(1);
+            }
 			
 			if(Game.sharedGame().hubby.stressCooldown == 1) {
 				trace("### HWW ### - Husband Stress Reduction Timer: " + Game.sharedGame().hubby.stressReductionTimer.getTimeString());

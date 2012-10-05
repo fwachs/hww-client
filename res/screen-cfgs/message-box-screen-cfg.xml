@@ -14,7 +14,8 @@
     <screen:element name="okay-button-increase-love" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpIncreaseLove" visible="NO"/>
     <screen:element name="okay-button-work-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissWorkTutorial" visible="NO"/>
     <screen:element name="okay-button-shopping-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissShoppingTutorial" visible="NO"/>
-
+    <screen:element name="okay-button-dark-side-letter" resource="tutorial-icons/okay.png" left="495" top="622" ontap="okMB" visible="NO"/>
+    
     <screen:element name="confirmCancelPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="confirmCancelPromptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
         <screen:element name="confirmCancelPromptBakedText" resource="hubby-screen/gone-to-work-text.png" left="282" top="226"/>
@@ -69,5 +70,11 @@
         <screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="dismiss"/>
     </screen:element>
 
+    <screen:element name="darkSideChallengePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="confirmCancelPromptFrame" resource="dark-side/dark-side-accept.png" left="282" top="146"/>
+        <screen:element name="cancelDarkSide" resource="hubby-screen/cancel-button-highlight.png" left="673" top="531" ontap="cancelMB"/>
+    	<screen:element name="acceptDarkSide" resource="tutorial-icons/accept.png" left="318" top="531" ontap="okMB"/>
+    </screen:element>
+    
     </screen:elements>
 </screen:config>

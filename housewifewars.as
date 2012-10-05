@@ -140,6 +140,7 @@ class HousewifeWars extends Game
 	public function loadSounds()
 	{
 		Game.sounds.addMusic("themeMusic", "sounds/Housewife.Theme.1.mp3");
+		Game.sounds.addMusic("darkSideMusic", "sounds/Housewife.darkside.mp3");
 		
 		Game.sounds.addSound("houseLevelUp", "sounds/HousewifeSFX.Achievement2.mp3");
 		Game.sounds.addSound("cleanHouse", "sounds/HousewifeSFX.Clean1.mp3");
@@ -155,6 +156,7 @@ class HousewifeWars extends Game
 		Game.sounds.addSound("passportStamp", "sounds/HousewifeSFX.Stamp2.mp3");
 		Game.sounds.addSound("unlockItem", "sounds/HousewifeSFX.UnlockItem1.mp3");
 		Game.sounds.addSound("spinWheel", "sounds/HousewifeSFX.Wheel2.mp3");
+		Game.sounds.addSound("openSafe", "sounds/HousewifeSFX.Vault1.mp3");
 	}
 
 	public function rateReward()
