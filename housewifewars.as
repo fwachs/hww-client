@@ -129,6 +129,7 @@ class HousewifeWars extends Game
 			controller = new MainController(screen);
 			Game.sharedGame().getServer().register();
             Game.sharedGame().getServer().syncHouse();
+            c_addtimer(60000, this.updateServer, null, 0, -1);
 		}
 
 		this.milesEarnedTimer.start();
@@ -136,7 +137,11 @@ class HousewifeWars extends Game
 
         c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
 	}
-
+	
+	public function updateServer () {
+	    Game.getServer().synchronizeGame();
+	}
+	
 	public function loadSounds()
 	{
 		Game.sounds.addMusic("themeMusic", "sounds/Housewife.Theme.1.mp3");

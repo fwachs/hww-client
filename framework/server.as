@@ -24,17 +24,23 @@ class Server
     	this.makeRequest("/synchronize", callback, params);
     }
 
-    public function synchronizeGame(callback) {
+    public function synchronizeGame() {
         var params = dict();
         var wife = Game.sharedGame().wife.serialize();
         var husband = Game.sharedGame().hubby.serialize();
-        var passport = Game.sharedGame().passport.serialize();
         var wallet = Game.sharedGame().wallet.serialize();
+        var passport = Game.sharedGame().passport;
+        var house = Game.sharedGame().house;
+        house.loadCustomTiles();
+        house.loadFurniture();
+        house.loadStorage();
 
+        husband.update("citiesVisited", passport.citiesVisited);
+        params.update("house", house.serialize());
         params.update("wife", wife);
         params.update("husband", husband);
         params.update("wallet", wallet);
-        params.update("passport", passport);
+        params.update("passport", passport.serialize());
         params.update("papayaUserId", Game.papayaUserId);
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
     
