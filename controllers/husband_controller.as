@@ -239,7 +239,7 @@ class HusbandController extends ScreenController implements TimerListener
         trace("### HWW ### req hubby work trips: " + str(Game.sharedGame().hubby.requiredVisits));
 
         if(Game.sharedGame().hubby.isHome()) {
-            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().getWorkStressPenalty();
+            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().hubby.getWorkStressPenalty();
             trace("### HWW ### Sending hubby to work will cause stress to be at: " + str(hubbyStress));
 
             if(hubbyStress <= 10) {
