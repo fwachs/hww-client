@@ -139,7 +139,7 @@
 <!--				<hww-config:furniture id="115" name="" image="" width="3" depth="1" level="55" gameBucks="20000" diamonds="10" stars="2" points="42" remodelRequirement="3" />  -->
 			<hww-config:furniture id="116" name="Medieval" image="furniture/shelves/116_Shelf.png" width="3" depth="1" level="60" gameBucks="25000" diamonds="12" stars="2" points="49" remodelRequirement="3" />  
 			<hww-config:furniture id="117" name="Animal" image="furniture/shelves/117_Shelf.png" width="2" depth="1" level="70" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  
-			<hww-config:furniture id="118" name="Ebony Lacquer" image="furniture/shelves/118_Shelf.png" width="3" depth="1" level="80" gameBucks="35000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
+			<hww-config:furniture id="118" name="Ebony Lacquer" image="furniture/shelves/118_Shelf.png" width="2" depth="1" level="80" gameBucks="35000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
 <!--				<hww-config:furniture id="119" name="" image="" width="3" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
 <!--				<hww-config:furniture id="120" name="" image="" width="3" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
 		</hww-config:furniture-sub-category>
@@ -203,9 +203,9 @@
 			<hww-config:furniture id="185" name="Tatami" image="furniture/flooring/185_Floor.png" width="2" depth="2" level="60" gameBucks="38000" diamonds="7" stars="2" points="4" remodelRequirement="3" />
 			<hww-config:furniture id="186" name="Chessboard" image="furniture/flooring/186_Floor.png" width="2" depth="2" level="65" gameBucks="4100" diamonds="7" stars="2" points="4" remodelRequirement="3" />
 			<hww-config:furniture id="187" name="Rose Marble" image="furniture/flooring/187_Floor.png" width="2" depth="2" level="70" gameBucks="4400" diamonds="8" stars="2" points="5" remodelRequirement="3" />
-			<hww-config:furniture id="188" name="White Marble" image="furniture/flooring/188_floor.png" width="2" depth="2" level="80" gameBucks="4700" diamonds="9" stars="3" points="8" remodelRequirement="3" />
+			<hww-config:furniture id="188" name="White Marble" image="furniture/flooring/188_Floor.png" width="2" depth="2" level="80" gameBucks="4700" diamonds="9" stars="3" points="8" remodelRequirement="3" />
 			<hww-config:furniture id="189" name="Blue Marble" image="furniture/flooring/189_Floor.png" width="2" depth="2" level="90" gameBucks="5000" diamonds="10" stars="3" points="9" remodelRequirement="3" />
-			<hww-config:furniture id="190" name="Disco Tile" image="furniture/flooring/190_Floor001.png" width="2" depth="2" level="100" gameBucks="53000" diamonds="12" stars="3" points="10" remodelRequirement="3" />
+<!--			<hww-config:furniture id="190" name="Disco Tile" image="furniture/flooring/190_Floor001.png" width="2" depth="2" level="100" gameBucks="53000" diamonds="12" stars="3" points="10" remodelRequirement="3" /> -->
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 	
