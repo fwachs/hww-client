@@ -399,6 +399,7 @@ class Husband //implements DBModel
 	public function setWorkBuffTime(buffTime)
 	{
 		this.workBuffTime = buffTime;
+		this.workTimer.changeRunningTime(buffTime);
 		
 		this.save();
 	}
@@ -420,7 +421,7 @@ class Husband //implements DBModel
 	public function setShoppingBuffTime(buffTime)
 	{
 		this.shoppingBuffTime = buffTime;
-		
+		this.shoppingTimer.changeRunningTime(buffTime);
 		this.save();
 	}
 
@@ -549,7 +550,6 @@ class Husband //implements DBModel
         husbandArray.append(["workSSPReturn", workSSPReturn]);
 		husbandArray.append(["workBuffTime", workBuffTime]);
         husbandArray.append(["outShopping", outShopping]);
-		husbandArray.append(["workBuffTime", workBuffTime]);
         husbandArray.append(["stressCooldown", stressCooldown]);
         husbandArray.append(["loveCooldown", loveCooldown]);
 

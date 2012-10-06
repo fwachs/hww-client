@@ -48,7 +48,7 @@ class GiftItem
 			gift.buffShoppingIcon = "images/" + giftAttrs.get("shopping-icon");
 		}
 		
-		if(giftAttrs.get("shopping-icon") != "") {
+		if(giftAttrs.get("ssp-icon") != "") {
 			gift.buffSSPsIcon = "images/" + giftAttrs.get("ssp-icon");
 		}
 		
@@ -182,6 +182,7 @@ class Buffs
 				Buffs.shoppingIcon = shoppingIcon;
 			}
 		}
+		trace("gift ssp icon: ", gift.buffSSPsIcon);
 		if(gift.buffSSPsIcon) {
 		    var sspIcon = str(gift.buffSSPsIcon);
 			Game.sharedGame().bannerScreen.showSSPsBuffIcon(sspIcon);
@@ -356,7 +357,6 @@ class BuffRareItemChance implements IBuff
 		trace("Execute BuffRareItemChance");
 		
 		Game.sharedGame().hubby.setRareItemThreshold(factor);
-		Buffs.clearBuffs();
 	}
 }
 
