@@ -227,7 +227,9 @@ class Buffs
 			if(Game.sharedGame().getProperty("OngoingBuffWork") == 1) {
 				Buffs.clearBuffs();
 			}
-		} 
+		} else if (buffType == "BuffRareItemChance") {
+		    Buffs.clearBuffs();
+		}
 	}
 	
 	public static function clearBuffs()
