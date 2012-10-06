@@ -40,9 +40,7 @@ class DarkSide
 	{
     	if(this.requirementsChecked == 1) return 1;
     	
-        // change for prod version 
-        //var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
-    	var mysteryItemsCount = 1;
+        var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
         var wifeItemsCount = len(Game.sharedGame().wife.mysteryItemCollection);
         
         if(wifeItemsCount >= mysteryItemsCount) {

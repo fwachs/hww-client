@@ -95,14 +95,15 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
-		
+
+		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
         var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
         ret = Game.currentGame.wallet.collect(freeMiles);
         var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
         ret = Game.currentGame.wallet.collect(freeGB);
-        
+        */
 
 		if(wife.firstPlay == 1)
 		{
