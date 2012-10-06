@@ -166,23 +166,23 @@ class Buffs
 	
 	public static function showIconsForGift(gift)
 	{
+	    trace("hubby icons buff: ", Game.sharedGame().hubby);
 	    if (Game.sharedGame().hubby == null) return;
-
-	    var buffType = gift.buffTy
 
 		if(gift.buffWorkIcon) {
 		    var workIcon = str(gift.buffWorkIcon);
 			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffWork") == 0) {
+			    trace("gift work icon: ", gift.buffWorkIcon);
 				Buffs.workIcon = workIcon;
 			}
 		}
 		if(gift.buffShoppingIcon) {
 		    var shoppingIcon = str(gift.buffShoppingIcon);
 			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffShopping") == 0) {
+			    trace("gift shopping icon: ", gift.buffShoppingIcon);
 				Buffs.shoppingIcon = shoppingIcon;
 			}
 		}
-		trace("gift ssp icon: ", gift.buffSSPsIcon);
 		if(gift.buffSSPsIcon) {
 		    var sspIcon = str(gift.buffSSPsIcon);
 			Game.sharedGame().bannerScreen.showSSPsBuffIcon(sspIcon);
@@ -269,6 +269,8 @@ class DebuffHusbandWorkShoppingTime implements IBuff
 	{
 		Game.sharedGame().hubby.setWorkBuffTime(factor * 60);
 		Game.sharedGame().hubby.setShoppingBuffTime(factor * 60);
+		Game.sharedGame().setProperty("OngoingBuffShopping", 0);          
+        Game.sharedGame().setProperty("OngoingBuffWork", 0);
 	}
 }
 
