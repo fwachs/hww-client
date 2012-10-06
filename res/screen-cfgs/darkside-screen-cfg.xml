@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+	
+		<screen:element name="background" resource="dark-side/safe-cracker-bg.png" left="0" top="0"/>
+
+		<screen:element name="door1" resource="dark-side/safe-door.png" left="614" top="154" ontap="doorTapped:1"/>
+		<screen:element name="door2" resource="dark-side/safe-door.png" left="614" top="309" ontap="doorTapped:2"/>
+		<screen:element name="door3" resource="dark-side/safe-door.png" left="614" top="464" ontap="doorTapped:3"/>
+
+		<screen:element name="door4" resource="dark-side/safe-door.png" left="813" top="154" ontap="doorTapped:4"/>
+		<screen:element name="door5" resource="dark-side/safe-door.png" left="813" top="309" ontap="doorTapped:5"/>
+		<screen:element name="door6" resource="dark-side/safe-door.png" left="813" top="464" ontap="doorTapped:6"/>
+
+		<screen:element name="door7" resource="dark-side/safe-door.png" left="1012" top="154" ontap="doorTapped:7"/>
+		<screen:element name="door8" resource="dark-side/safe-door.png" left="1012" top="309" ontap="doorTapped:8"/>
+		<screen:element name="door9" resource="dark-side/safe-door.png" left="1012" top="464" ontap="doorTapped:9"/>
+		
+		<screen:element name="door-selector" resource="dark-side/safe-door-select.png" left="0" top="0" visible="no"/>
+		
+		<screen:element name="catburgler" resource="dark-side/catburgler.png" left="304" top="238" ontap="doNothing"/>
+
+		<screen:element name="open-safe" resource="dark-side/open-safe-button.png" left="118" top="284" ontap="openSafe"/>
+		<screen:element name="get-away" resource="dark-side/get-away-button.png" left="118" top="554" ontap="getAway"/>
+										
+	</screen:elements>
+
+</screen:config>

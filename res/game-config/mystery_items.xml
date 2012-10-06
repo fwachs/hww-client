@@ -44,7 +44,7 @@
     <hww-config:mystery-item id="360" name="Diamond ring" desc="Diamond Ring" fileName="mystery-items/360_mystery_item.png" stars="2" points="300"/>
     <hww-config:mystery-item id="361" name="50,000 miles ticket" desc="50,000 Miles Ticket" fileName="mystery-items/361_mystery_item.png" stars="2" points="1000" reward="50000" currency="Miles"/>
     <hww-config:mystery-item id="362" name="Invitation to NY Fashion Week" desc="NY Fashion Week" fileName="mystery-items/362_mystery_item.png" stars="3" points="1000"/>
-    <hww-config:mystery-item id="363" name="Barble bust" desc="Barble Bust" fileName="mystery-items/363_mystery_item.png" stars="3" points="1000"/>
+    <hww-config:mystery-item id="363" name="Marble Bust" desc="Marble Bust" fileName="mystery-items/363_mystery_item.png" stars="3" points="1000"/>
     <hww-config:mystery-item id="364" name="Expensive champagne" desc="Expensive Champagne" fileName="mystery-items/364_mystery_item.png" stars="3" points="1000"/>
     <hww-config:mystery-item id="365" name="Treasure chest - 20,000 GB$$" desc="Treasure Chest" fileName="mystery-items/365_mystery_item.png" stars="3" points="1000" reward="20000" currency="GameBucks" />
     <hww-config:mystery-item id="366" name="Invitation to be a guest on a popular talk show" desc="Talk Show Guest" fileName="mystery-items/366_mystery_item.png" stars="3" points="1000"/>

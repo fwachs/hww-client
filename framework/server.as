@@ -14,8 +14,35 @@ class Server
     public function Server()
     {	
     	url = "http://hww.2clams.com:8080";
-//		 url = "http://186.19.229.24:8080";
-//    	url = "http://ec2-184-72-11-123.us-west-1.compute.amazonaws.com:8080";
+    }
+
+    public function synchronize(callback) {
+    	var params = dict();
+
+        params.update("papayaUserId", Game.papayaUserId);
+    	this.makeRequest("/synchronize", callback, params);
+    }
+
+    public function synchronizeGame() {
+        var params = dict();
+        var wife = Game.sharedGame().wife.serialize();
+        var husband = Game.sharedGame().hubby.serialize();
+        var wallet = Game.sharedGame().wallet.serialize();
+        var passport = Game.sharedGame().passport;
+        var house = Game.sharedGame().house;
+        house.loadCustomTiles();
+        house.loadFurniture();
+        house.loadStorage();
+
+        husband.update("citiesVisited", passport.citiesVisited);
+        params.update("house", house.serialize());
+        params.update("wife", wife);
+        params.update("husband", husband);
+        params.update("wallet", wallet);
+        params.update("passport", passport.serialize());
+        params.update("papayaUserId", Game.papayaUserId);
+        this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
+    
     }
 
 	public function register() {
@@ -24,7 +51,7 @@ class Server
 	    var couple = dict();
 	    couple.update("wife", wife.serialize());
 	    var serializedHusband = husband.serialize();
-	    var passport = new Passport();
+	    var passport = Game.sharedGame().passport;
 	    
 	    serializedHusband.update("citiesVisited", passport.citiesVisited);
         couple.update("husband", serializedHusband);
@@ -40,7 +67,7 @@ class Server
     public function syncHusband()
     {
     	var husband = Game.sharedGame().hubby;
-    	var passport = new Passport();
+    	var passport = Game.sharedGame().passport;
     	var serializedHusband = husband.serialize();
         serializedHusband.update("citiesVisited", passport.citiesVisited);
         this.makeRequest("/syncHusband", defaultCallBack, serializedHusband);
@@ -80,9 +107,9 @@ class Server
         this.makeRequest("/getLatestGossipMessages", callback, wife.serialize());
     }
 
-	public function getCurrentDateAndTick(callback)
+	public function getCurrentDateAndTick()
     {
-        this.makeRequest("/getCurrentDateAndTick", callback, dict());
+        this.makeRequest("/getCurrentDateAndTick", this.defaultCallBack, dict());
     }
 
 	public function getGifts(callback)

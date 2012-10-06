@@ -50,6 +50,7 @@ class MainScreen extends Screen
 		this.stopWifeAnimation();
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
+		Game.startButtonShineAnimation();
 	}
 
 	override public function lostFocus()
@@ -59,6 +60,7 @@ class MainScreen extends Screen
 		this.getElement("friendsBeltContainer").getSprite().visible(0);
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
+		Game.stopButtonShineAnimation();
 	}
 
 	public function stopWifeAnimation()

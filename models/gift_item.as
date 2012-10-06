@@ -15,6 +15,7 @@ class GiftItem
 	var id;
 	var title;
 	var type;
+	var itemDescription;
 	var description;
 	var image;
 	var smallImage;
@@ -29,7 +30,7 @@ class GiftItem
 	
 	public static function newGiftFromAttributes(giftAttrs)
 	{							 
-		var gift = new GiftItem(giftAttrs.get("id"), giftAttrs.get("title"), giftAttrs.get("type"), giftAttrs.get("description"), giftAttrs.get("image"),
+		var gift = new GiftItem(giftAttrs.get("id"), giftAttrs.get("title"), giftAttrs.get("type"), giftAttrs.get("itemDescription"), giftAttrs.get("description"), giftAttrs.get("image"),
 								 giftAttrs.get("smallImage"), giftAttrs.get("amount"), giftAttrs.get("currency"));
 		
 		gift.buffType = giftAttrs.get("buff-type");
@@ -47,7 +48,7 @@ class GiftItem
 			gift.buffShoppingIcon = "images/" + giftAttrs.get("shopping-icon");
 		}
 		
-		if(giftAttrs.get("shopping-icon") != "") {
+		if(giftAttrs.get("ssp-icon") != "") {
 			gift.buffSSPsIcon = "images/" + giftAttrs.get("ssp-icon");
 		}
 		
@@ -56,11 +57,12 @@ class GiftItem
 		return gift;
 	}
 
-	public function GiftItem(id, title, type, description, image, smallImage, amount, currency)
+	public function GiftItem(id, title, type, itemDescription, description, image, smallImage, amount, currency)
 	{
 		this.id = id;
 		this.title = title;
 		this.type = type;
+		this.itemDescription = itemDescription;
 		this.description = description;
 		this.image = image;
 		this.smallImage = smallImage;
@@ -89,6 +91,8 @@ class Buffs
 	public static var salaryBuff;
 	public static var rareItemChanceBuff;
 	public static var sStatusPointsBuff;
+	public static var shoppingIcon;
+	public static var workIcon;
 	
 	public static function canOpenGift()
 	{
@@ -138,6 +142,9 @@ class Buffs
 			else if(gift.buffType == "BuffSocialStatusPoints") {
 				buff = new BuffSStatusPoints();
 			}
+			else if(gift.buffType == "BuffShoppingTime") {
+				buff = new BuffHusbandShoppingTime();
+			}
 		}
 		
 		return buff;
@@ -159,15 +166,22 @@ class Buffs
 	
 	public static function showIconsForGift(gift)
 	{
+	    trace("hubby icons buff: ", Game.sharedGame().hubby);
 	    if (Game.sharedGame().hubby == null) return;
 
 		if(gift.buffWorkIcon) {
 		    var workIcon = str(gift.buffWorkIcon);
-			Game.sharedGame().hubby.control.screen.showWorkBuffIcon(workIcon);
+			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffWork") == 0) {
+			    trace("gift work icon: ", gift.buffWorkIcon);
+				Buffs.workIcon = workIcon;
+			}
 		}
 		if(gift.buffShoppingIcon) {
-		    var shoppingIcon = str(gift.buffShoppingIcon)
-			Game.sharedGame().hubby.control.screen.showShoppingBuffIcon(shoppingIcon);
+		    var shoppingIcon = str(gift.buffShoppingIcon);
+			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffShopping") == 0) {
+			    trace("gift shopping icon: ", gift.buffShoppingIcon);
+				Buffs.shoppingIcon = shoppingIcon;
+			}
 		}
 		if(gift.buffSSPsIcon) {
 		    var sspIcon = str(gift.buffSSPsIcon);
@@ -175,34 +189,69 @@ class Buffs
 		}
 	}
 	
-	public static function resetBuffs()
+	public static function workTripEnded()
 	{
 		var buffType = Game.sharedGame().getProperty("OngoingBuff");
 		
-		if(buffType == "DebuffWorkTime" || buffType == "DebuffShoppingTime" || buffType == "DebuffWorkAndShoppingTime") {
-			Buffs.clearBufs();
+		if(buffType == "DebuffWorkTime") {
+			Game.sharedGame().hubby.clearWorkBuffTime();			
+			Buffs.clearBuffs();
+		}
+		else if(buffType == "DebuffWorkAndShoppingTime") {
+			Buffs.workIcon = null;
+			
+			Game.sharedGame().hubby.clearWorkBuffTime();
+
+			Game.sharedGame().setProperty("OngoingBuffWork", 1);			
+			if(Game.sharedGame().getProperty("OngoingBuffShopping") == 1) {
+				Buffs.clearBuffs();
+			}
+			
 		}
 	}
 	
-	public static function clearBufs()
+	public static function shoppingTripEnded()
 	{
-		trace("clearBufs");
+		var buffType = Game.sharedGame().getProperty("OngoingBuff");
 		
-		Game.sharedGame().husband.control.screen.hideWorkBuffIcon();
-		Game.sharedGame().husband.control.screen.hideShoppingBuffIcon();
+		if(buffType == "DebuffShoppingTime") {
+			Game.sharedGame().hubby.clearShoppingBuffTime();
+			Buffs.clearBuffs();
+		}
+		else if(buffType == "DebuffShoppingTime" || buffType == "DebuffWorkAndShoppingTime") {
+			Buffs.shoppingIcon = null;
+			
+			Game.sharedGame().hubby.clearShoppingBuffTime();
+
+			Game.sharedGame().setProperty("OngoingBuffShopping", 1);			
+			if(Game.sharedGame().getProperty("OngoingBuffWork") == 1) {
+				Buffs.clearBuffs();
+			}
+		} else if (buffType == "BuffRareItemChance") {
+		    Buffs.clearBuffs();
+		}
+	}
+	
+	public static function clearBuffs()
+	{
+		trace("clearBuffs");
+		
+		Buffs.workIcon = null;
+		Buffs.shoppingIcon = null;
 		Game.bannerScreen.controller.hideSSPsBuffIcon();
 
 		Game.sharedGame().setProperty("OngoingBuff", 0);
 		Game.sharedGame().setProperty("CurrentGiftId", -1);
+		Game.sharedGame().setProperty("OngoingBuffShopping", 0);			
+		Game.sharedGame().setProperty("OngoingBuffWork", 0);			
 	}
-
 }
 
 class DebuffHusbandWorkTime implements IBuff
 {
 	override public function execute(factor, time)
 	{
-		Game.sharedGame().hubby.workTimer.changeRunningTime(factor * 60);
+		Game.sharedGame().hubby.setWorkBuffTime(factor * 60);
 	}
 }
 
@@ -210,7 +259,7 @@ class DebuffHusbandShoppingTime implements IBuff
 {
 	override public function execute(factor, time)
 	{
-		Game.sharedGame().hubby.shoppingTimer.changeRunningTime(factor * 60);
+		Game.sharedGame().hubby.setShoppingBuffTime(factor * 60);
 	}
 }
 
@@ -218,8 +267,10 @@ class DebuffHusbandWorkShoppingTime implements IBuff
 {
 	override public function execute(factor, time)
 	{
-		Game.sharedGame().hubby.workTimer.changeRunningTime(factor * 60);
-		Game.sharedGame().hubby.shoppingTimer.changeRunningTime(factor * 60);
+		Game.sharedGame().hubby.setWorkBuffTime(factor * 60);
+		Game.sharedGame().hubby.setShoppingBuffTime(factor * 60);
+		Game.sharedGame().setProperty("OngoingBuffShopping", 0);          
+        Game.sharedGame().setProperty("OngoingBuffWork", 0);
 	}
 }
 
@@ -246,7 +297,34 @@ class BuffHusbandWorkTime extends Timer implements IBuff
 		
 		Game.sharedGame().hubby.clearWorkBuffTime();
 
-		Buffs.clearBufs();
+		Buffs.clearBuffs();
+	}
+}
+
+class BuffHusbandShoppingTime extends Timer implements IBuff
+{
+	public function BuffHusbandShoppingTime()
+	{
+		super("BuffHusbandShoppingTime", 1, 1);
+	}
+
+	override public function execute(factor, time)
+	{
+		trace("Execute BuffHusbandShoppingTime", factor, time);
+		
+		Game.sharedGame().hubby.setShoppingBuffTime(-factor);
+
+		this.restart();
+		this.changeRunningTime(time * 3600);
+	}
+
+	override public function tick()
+	{
+		trace("Done BuffHusbandShoppingTime");
+		
+		Game.sharedGame().hubby.clearShoppingBuffTime();
+
+		Buffs.clearBuffs();
 	}
 }
 
@@ -272,7 +350,7 @@ class BuffHusbandSalary extends Timer implements IBuff
 		trace("Done BuffHusbandSalary");
 		
 		Game.sharedGame().hubby.setSalaryFactor(1);
-		Buffs.clearBufs();
+		Buffs.clearBuffs();
 	}
 }
 
@@ -283,7 +361,6 @@ class BuffRareItemChance implements IBuff
 		trace("Execute BuffRareItemChance");
 		
 		Game.sharedGame().hubby.setRareItemThreshold(factor);
-		Buffs.clearBufs();
 	}
 }
 
@@ -309,6 +386,6 @@ class BuffSStatusPoints extends Timer implements IBuff
 		trace("Done BuffSStatusPoints");
 		
 		Game.sharedGame().wife.setStatusPointsFactor(0);
-		Buffs.clearBufs();
+		Buffs.clearBuffs();
 	}
 }

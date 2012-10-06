@@ -61,13 +61,22 @@ class Screen
 	public function parseEvents(control, attrs)
 	{
 		var newSprite = control.getSprite();
+		
 		var onTap = attrs.get("ontap");
 		if(onTap) {
 			trace("Adding on tap to ", control.controlName);
 
+			var evParts = onTap.split(":");
+			var evName = evParts[0];
+			var evArg = null;
+			if(len(evParts) > 1) {
+				evArg = evParts[1];
+			}
+			
 			var ev = new Event();		
 			ev.node = newSprite;
-			ev.name = onTap;
+			ev.name = evName;
+			ev.argument = evArg;
 			ev.eventType = EVENT_UNTOUCH;
 			ev.controller = this.controller;
 
@@ -154,6 +163,8 @@ class Screen
 
 			this.showNextTutorial();
 		}
+		
+		this.canvas.setevent(EVENT_KEYDOWN, this.controller.keyDown);
 
 		this.build();		
 	}
@@ -288,13 +299,12 @@ class Screen
 	
 	public function willLoseFocus()
 	{
-		trace("Will lose focus", this.configFile);
 		this.hideTutorial();
 	}
 	
 	public function willGetFocus()
 	{
-		trace("Will get focus", this.configFile);
+		this.canvas.focus(1);
 		this.showTutorialStep(this.currentTutorial);
 	}
 	

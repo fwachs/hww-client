@@ -25,6 +25,7 @@ class Animations
 		animationsMap.update("gift_shop_balloons", this.getGiftShopBalloonsAnimation());
 		animationsMap.update("gift_shop_people", this.getGiftShopIdleAnimation());
 		animationsMap.update("gift_shop_end", this.getGiftShopAnimation());
+		animationsMap.update("button_shine", this.getButtonShineAnimation());
 	}
 
 	public function getAnimation(strAnimationName) {
@@ -1040,4 +1041,11 @@ class Animations
                 "images/Animation/gift_shop_end_anim/frames_justpeople/justpeople0123.png","images/Animation/gift_shop_end_anim/frames_justpeople/justpeople0124.png");
         return action;
     }
+	
+	public function getButtonShineAnimation() {
+		var action = animate(832, "images/Animation/button_animation/shine_1.png", "images/Animation/button_animation/shine_2.png",
+				"images/Animation/button_animation/shine_3.png", "images/Animation/button_animation/shine_4.png",
+				"images/Animation/button_animation/shine_5.png");
+		return action;
+	}
 }

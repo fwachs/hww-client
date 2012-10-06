@@ -10,6 +10,9 @@ Brief Description:
 
 import framework.game
 
+import screens.darkside_screen
+import controllers.darkside_controller
+
 import screens.hud_screen
 import controllers.hud_controller
 
@@ -25,6 +28,7 @@ import models.wife
 import models.furniture
 import models.house
 import models.husband
+import models.darkside
 import models.currency
 import models.passport
 import models.papaya_friend
@@ -39,6 +43,7 @@ class HousewifeWars extends Game
 	var house;
 	var wallet;
 	var hubby;
+	var darkSide;
 	var milesEarnedTimer;
 	var passport;
 	var cities;
@@ -69,6 +74,7 @@ class HousewifeWars extends Game
 		this.furnitureCategories = this.getFurnitureCategories();
 		this.wife = new Wife();
 		this.hubby = new Husband();
+		this.darkSide = new DarkSide();
 		this.house = new House();
 		this.wallet = new Wallet();
 		this.shop = new Shop();
@@ -89,6 +95,7 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
+
 		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
@@ -121,8 +128,8 @@ class HousewifeWars extends Game
 			screen = new MainScreen();
 			screen.configFile = "screen-cfgs/main-screen-cfg.xml";
 			controller = new MainController(screen);
-			Game.sharedGame().getServer().register();
-            Game.sharedGame().getServer().syncHouse();
+
+			c_addtimer(60000, this.updateServer, null, 0, -1);
 		}
 
 		this.milesEarnedTimer.start();
@@ -130,10 +137,15 @@ class HousewifeWars extends Game
 
         c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
 	}
-
+	
+	public function updateServer () {
+	    Game.getServer().synchronizeGame();
+	}
+	
 	public function loadSounds()
 	{
 		Game.sounds.addMusic("themeMusic", "sounds/Housewife.Theme.1.mp3");
+		Game.sounds.addMusic("darkSideMusic", "sounds/Housewife.darkside.mp3");
 		
 		Game.sounds.addSound("houseLevelUp", "sounds/HousewifeSFX.Achievement2.mp3");
 		Game.sounds.addSound("cleanHouse", "sounds/HousewifeSFX.Clean1.mp3");
@@ -149,6 +161,7 @@ class HousewifeWars extends Game
 		Game.sounds.addSound("passportStamp", "sounds/HousewifeSFX.Stamp2.mp3");
 		Game.sounds.addSound("unlockItem", "sounds/HousewifeSFX.UnlockItem1.mp3");
 		Game.sounds.addSound("spinWheel", "sounds/HousewifeSFX.Wheel2.mp3");
+		Game.sounds.addSound("openSafe", "sounds/HousewifeSFX.Vault1.mp3");
 	}
 
 	public function rateReward()
@@ -295,7 +308,7 @@ class HousewifeWars extends Game
 			this.saveHusband();
 			this.saveWallet();
 			this.saveRealestate();
-			this.savePassport();
+			this.passport.save();
 		}	
 	}
 
@@ -307,11 +320,6 @@ class HousewifeWars extends Game
 	public function saveWife()
 	{
 		this.wife.save();
-	}
-	
-	public function savePassport()
-	{
-		this.passport.save();
 	}
 
 	public function saveWallet()

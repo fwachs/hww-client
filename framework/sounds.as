@@ -34,8 +34,7 @@ class Sounds
 	
 	public function addMusic(name, location)
 	{
-		var sound = createaudio(location);
-		this.list.update(name, sound);
+		this.list.update(name, location);
 		
 		trace("### HWW ### - Added music: " + name + " at location: " + location);
 	}
@@ -52,7 +51,8 @@ class Sounds
 	
 	public function playMusic(name)
 	{
-		var sound = this.list.get(name);
+		var location = this.list.get(name);
+		var sound = createaudio(location);
 		sound.preparetoplay();
 		this.currentTrack = sound;
 		

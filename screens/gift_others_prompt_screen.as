@@ -61,7 +61,7 @@ class GiftOthersPromptScreen extends Screen
 	public function showGiftItemPromt(gift) {
 		this.getElement("giftImage").getSprite().texture("images/" + gift.image);
 		this.getElement("giftTitle").setText(gift.title);
-		this.getElement("giftDescription").setText(gift.description);
+		this.getElement("giftDescription").setText(gift.itemDescription);
 		var currencyIcon = "images/gift-others-prompt/game-buck.png";		
 		if (gift.currency == "Diamonds") {
 			currencyIcon = "images/gift-others-prompt/diamond-icon.png";

@@ -277,7 +277,7 @@ class Wife
         trace("### HWW ### - Fetched Wife from DB: ", str(wifeMap));
         if (wifeMap == null) 
         {
-	        name = "Michi";
+	        name = "MysteryWife";
 			type = "Modern";
 			hairStyle = 0;
 			hairColor = 0;

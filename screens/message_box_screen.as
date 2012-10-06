@@ -37,10 +37,16 @@ class MessageBoxScreen extends Screen
     static var MB_HusbandTutorial = 23;
     static var MB_MysteryTutorial = 24;
     static var MB_MainTutorial = 25;
+    static var MB_Exit = 26;
+    static var MB_GotBusted = 27;
+    static var MB_DarkSideChallenge = 28;
+    static var MB_DarkSideLetter = 29;
 
     var type;
     var argument;
     var argument2;
+    var okCallBack;
+    var cancelCallBack;
 
     public function MessageBoxScreen(newType, arg = null)
     {
@@ -168,8 +174,31 @@ class MessageBoxScreen extends Screen
         else if(this.type == MessageBoxScreen.MB_MainTutorial) {
         	displayTutorialPrompt("images/tutorial-icons/mainmenu-tutorial-01.png");
         }
+        else if(this.type == MessageBoxScreen.MB_Exit) {
+        	displayOkayPrompt("Are you sure you want to quit Housewife Wars?", "okay-button-exit");
+        	this.getElement("cancel-button-dismiss").getSprite().visible(1);
+        }
+        else if(this.type == MessageBoxScreen.MB_GotBusted) {
+            displayOkayPrompt("");
+            this.getElement("okayPromptFrame").getSprite().texture("images/dark-side/bail-out-full.png");
+            this.getElement("okay-button-default").getSprite().pos(Game.translateX(641), Game.translateY(524));
+        }
+        else if(this.type == MessageBoxScreen.MB_DarkSideChallenge) {
+            displayDarkSideChallengePrompt();
+        }
+        else if(this.type == MessageBoxScreen.MB_DarkSideLetter) {
+            displayOkayPrompt("", "okay-button-dark-side-letter");
+            var promptBG = this.getElement("okayPromptFrame").getSprite();
+            promptBG.texture("images/dark-side/darkside-intro-02.png");
+            promptBG.pos(0, 0);
+        }
     }
 
+    public function displayDarkSideChallengePrompt()
+    {
+        this.getElement("darkSideChallengePrompt").getSprite().visible(1);
+    }
+    
     public function displayOkayPrompt(displayText, okayButton = "okay-button-default")
     {
         this.getElement("okayPromptText").setText(displayText);
