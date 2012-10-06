@@ -107,9 +107,9 @@ class Server
         this.makeRequest("/getLatestGossipMessages", callback, wife.serialize());
     }
 
-	public function getCurrentDateAndTick(callback)
+	public function getCurrentDateAndTick()
     {
-        this.makeRequest("/getCurrentDateAndTick", callback, dict());
+        this.makeRequest("/getCurrentDateAndTick", this.defaultCallBack, dict());
     }
 
 	public function getGifts(callback)
