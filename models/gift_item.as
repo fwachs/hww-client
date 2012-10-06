@@ -168,15 +168,17 @@ class Buffs
 	{
 	    if (Game.sharedGame().hubby == null) return;
 
+	    var buffType = gift.buffTy
+
 		if(gift.buffWorkIcon) {
 		    var workIcon = str(gift.buffWorkIcon);
-			if(Game.sharedGame().getProperty("OngoingBuffWork") == 0) {
+			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffWork") == 0) {
 				Buffs.workIcon = workIcon;
 			}
 		}
 		if(gift.buffShoppingIcon) {
 		    var shoppingIcon = str(gift.buffShoppingIcon);
-			if(Game.sharedGame().getProperty("OngoingBuffShopping") == 0) {
+			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffShopping") == 0) {
 				Buffs.shoppingIcon = shoppingIcon;
 			}
 		}
@@ -190,15 +192,20 @@ class Buffs
 	{
 		var buffType = Game.sharedGame().getProperty("OngoingBuff");
 		
-		if(buffType == "DebuffWorkTime" || buffType == "DebuffWorkAndShoppingTime") {
+		if(buffType == "DebuffWorkTime") {
+			Game.sharedGame().hubby.clearWorkBuffTime();			
+			Buffs.clearBuffs();
+		}
+		else if(buffType == "DebuffWorkAndShoppingTime") {
 			Buffs.workIcon = null;
 			
 			Game.sharedGame().hubby.clearWorkBuffTime();
-			
+
 			Game.sharedGame().setProperty("OngoingBuffWork", 1);			
 			if(Game.sharedGame().getProperty("OngoingBuffShopping") == 1) {
 				Buffs.clearBuffs();
 			}
+			
 		}
 	}
 	
@@ -206,7 +213,11 @@ class Buffs
 	{
 		var buffType = Game.sharedGame().getProperty("OngoingBuff");
 		
-		if(buffType == "DebuffShoppingTime" || buffType == "DebuffWorkAndShoppingTime") {
+		if(buffType == "DebuffShoppingTime") {
+			Game.sharedGame().hubby.clearShoppingBuffTime();
+			Buffs.clearBuffs();
+		}
+		else if(buffType == "DebuffShoppingTime" || buffType == "DebuffWorkAndShoppingTime") {
 			Buffs.shoppingIcon = null;
 			
 			Game.sharedGame().hubby.clearShoppingBuffTime();
@@ -215,7 +226,7 @@ class Buffs
 			if(Game.sharedGame().getProperty("OngoingBuffWork") == 1) {
 				Buffs.clearBuffs();
 			}
-}
+		} 
 	}
 	
 	public static function clearBuffs()
