@@ -157,7 +157,7 @@ class Husband //implements DBModel
 		
 		ppy_query("send_notification", dict([["message", "Your hubby " + Game.sharedGame().hubby.name + " has returned from work."], ["uid", Game.getPapayaUserId()]]) , null, null);
 		
-		Buffs.resetBuffs();
+		Buffs.workTripEnded();
 	}
 	
 	public function returnFromShopping()
@@ -171,7 +171,7 @@ class Husband //implements DBModel
 		
 		ppy_query("send_notification", dict([["message", "Your hubby " + Game.sharedGame().hubby.name + " has returned from shopping."], ["uid", Game.getPapayaUserId()]]) , null, null);
 
-		Buffs.resetBuffs();
+		Buffs.shoppingTripEnded();
 	}
 	
 	public function checkAchievements()
