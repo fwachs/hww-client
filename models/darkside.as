@@ -158,7 +158,7 @@ class DarkSideTimer extends Timer
 {
 	public function DarkSideTimer()
 	{
-		super("DarkSideTimer", 60 * 4, -1);
+		super("DarkSideTimer", 60 * 240, -1);
 	}
 	
 	override public function tick()
