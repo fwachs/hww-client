@@ -29,7 +29,7 @@
 		/>
 	<hww-config:gift id="373" title="Devil's Food Cake" type="TRAP"
 		itemDescription="TRAP - Adds 10 minutes to your opponent's husband shopping timer."
-		description="Your neighbor distracted your husband with this infatuated chocolate cake. Add 10 minutes to his shopping timer."
+		description="Your neighbor distracted your husband with this devil's food cake. Add 10 minutes to his shopping timer."
 		image="gift-others-prompt/gift-items/373_infatuated-chocolate-cake.png"
 		smallImage="gift-others-prompt/gift-items/medium-icons/373_infatuated-chocolate-cake.png"
 		amount="4000" currency="GameBucks" 
@@ -42,7 +42,7 @@
 		/>
 	<hww-config:gift id="374" title="Sexy Bomb Gingerbread" type="TRAP"
 		itemDescription="TRAP - Adds 15 minutes to your opponent's husband shopping timer."
-		description="Your neighbor gave your husband sexy bomb gingerbread cookies! Add 15 minutes to his shopping  timer."
+		description="Your neighbor gave your husband sexy bomb gingerbread! Add 15 minutes to his shopping  timer."
 		image="gift-others-prompt/gift-items/374_sexy-bomb-gbread-cookie.png"
 		smallImage="gift-others-prompt/gift-items/medium-icons/374_sexy-bomb-gbread-cookie.png"
 		amount="7000" currency="GameBucks" 
@@ -222,7 +222,7 @@
 		/>
 	<hww-config:gift id="388" title="Mint Chip" type="GIFT"
 		itemDescription="GIFT - Your friend's husband has a +10% chance to return with a rare item on his next shopping trip. "
-		description="Your husband loves chocolate chip ice cream. On his next shopping trip he has a +10% chance to return with a rare item."
+		description="Your husband loves mint chip. On his next shopping trip he has a +10% chance to return with a rare item."
 		image="gift-others-prompt/gift-items/388_chocolate-chip-ice-cream.png"
 		smallImage="gift-others-prompt/gift-items/medium-icons/388_chocolate-chip-ice-cream.png"
 		amount="4000" currency="GameBucks" 
