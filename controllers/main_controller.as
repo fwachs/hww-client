@@ -98,12 +98,6 @@ class MainController extends ScreenController
 
         if(event.name == "gotoMap") {
         }
-        else if (event.name == "syncWithServer") {
-            Game.sharedGame().getServer().register();
-            Game.sharedGame().getServer().syncHouse();
-            Game.sharedGame().getServer().syncHusband();
-            Game.sharedGame().getServer().syncWife();
-        }
         else if(event.name == "gotoSettings") {
             Game.sounds.playSFX("buttonPress");
 

@@ -145,21 +145,6 @@ class HusbandScreen extends Screen
 		
 		Game.startButtonShineAnimation();
 
-		var currentGift = Game.sharedGame().getProperty("CurrentGiftId");
-        if(currentGift >= 0) {
-            var gift = Game.sharedGame().getGift(str(currentGift));
-            trace("Current gift:", currentGift, gift);
-            if(gift.buffWorkIcon) {
-                var workIcon = str(gift.buffWorkIcon);
-                this.showWorkBuffIcon(workIcon);
-            }
-            if(gift.buffShoppingIcon) {
-                var shoppingIcon = str(gift.buffShoppingIcon)
-                this.showShoppingBuffIcon(shoppingIcon);
-            }
-        }
-		//this.displayShoppingBuffIcon();
-		//this.displayWorkBuffIcon();
         this.showChatText();
 
         this.updateTimer = c_addtimer(1000, this.updateLabels, null, 0, -1);
@@ -228,9 +213,9 @@ class HusbandScreen extends Screen
 		trace("work-buff-icon-element: ", iconElement);
 		if (iconElement != null) {
 		    var sprt = iconElement.getSprite();
-		    if(this.workBuffIcon != null) {
+		    if(Buffs.workIcon != null) {
 		    	sprt.visible(1);
-		        sprt.texture(this.workBuffIcon);
+		        sprt.texture(Buffs.workIcon);
 		    } else {
 		    	sprt.visible(0);
 		    }
@@ -243,37 +228,14 @@ class HusbandScreen extends Screen
 		trace("shop-buff-icon-element: ", iconElement);
 		if (iconElement != null) {
 		    var sprt = iconElement.getSprite();
-		    if(this.shoppingBuffIcon != null) {
+		    trace("buff shopping icon", Buffs.shoppingIcon);
+		    if(Buffs.shoppingIcon != null) {
 		    	sprt.visible(1);
-		        sprt.texture(this.shoppingBuffIcon);
+		        sprt.texture(Buffs.shoppingIcon);
 		    } else {
 		    	sprt.visible(0);
 		    }
 		}
-	}
-	
-	public function showWorkBuffIcon(icon)
-	{
-		this.workBuffIcon = icon;
-		this.displayWorkBuffIcon();
-	}
-	
-	public function hideWorkBuffIcon()
-	{
-		this.workBuffIcon = null;
-		this.displayWorkBuffIcon();
-	}
-	
-	public function showShoppingBuffIcon(icon)
-	{
-		this.shoppingBuffIcon = icon;
-		this.displayShoppingBuffIcon();
-	}
-	
-	public function hideShoppingBuffIcon()
-	{
-		this.shoppingBuffIcon = null;
-		this.displayShoppingBuffIcon();
 	}
 
 	public function updateLabels(timer, tick, param)
@@ -305,7 +267,8 @@ class HusbandScreen extends Screen
 				}
 				else {
 					this.getElement("secretButtonText").setText("");
-					this.getElement("secretButtonOverlay").getSprite().visible(1);				
+					this.getElement("secretButtonOverlay").getSprite().visible(1);
+					this.getElement("secretButtonOverlay").getSprite().texture("images/dark-side/dark-side-text.png");
 				}
             }
             else {
@@ -351,6 +314,9 @@ class HusbandScreen extends Screen
 				
 				this.prevIsHome = Game.sharedGame().hubby.isHome();
 			}
+			
+			this.displayWorkBuffIcon();
+			this.displayShoppingBuffIcon();
 		}
 	}
 	

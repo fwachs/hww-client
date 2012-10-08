@@ -239,7 +239,7 @@ class HusbandController extends ScreenController implements TimerListener
         trace("### HWW ### req hubby work trips: " + str(Game.sharedGame().hubby.requiredVisits));
 
         if(Game.sharedGame().hubby.isHome()) {
-            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().getWorkStressPenalty();
+            var hubbyStress = Game.sharedGame().hubby.stressMeterValue + Game.sharedGame().hubby.getWorkStressPenalty();
             trace("### HWW ### Sending hubby to work will cause stress to be at: " + str(hubbyStress));
 
             if(hubbyStress <= 10) {
@@ -513,13 +513,11 @@ class HusbandController extends ScreenController implements TimerListener
     }
     
     public function showDarkSideScreen()
-    {
+    {    	
     	var screen = new DarkSideScreen();
         screen.configFile = "screen-cfgs/darkside-screen-cfg.xml";
         var controller = new DarkSideController(screen);
-        Game.pushScreen(screen);
-        
-        Game.sharedGame().darkSide.deactivate();
+        Game.pushScreen(screen);        
     }
 
     public function secretPopUp()
