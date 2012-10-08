@@ -107,6 +107,11 @@ class HusbandScreen extends Screen
 		trace("StressMeter:", stressMeter);
 		this.updateStressMeter(stressMeter, Game.sharedGame().hubby.stressMeterValue);
 		stressLevelText = stressMeter.addlabel(str(Game.sharedGame().hubby.stressMeterValue),Game.font.getFont(),Game.translateFontSize(75)).pos(Game.translateX(130), Game.translateY( 27));
+		
+		if(Game.sharedGame().hubby.careerLevel == 100) {
+        	this.getElement("careerStatusCircle").getSprite().texture("images/hubby-screen/career-status-circle-100.png");
+        	this.careerLevelText.setText("");
+        }
 	}
 	
     public function showChatText() {
@@ -145,6 +150,21 @@ class HusbandScreen extends Screen
 		
 		Game.startButtonShineAnimation();
 
+		var currentGift = Game.sharedGame().getProperty("CurrentGiftId");
+        if(currentGift >= 0) {
+            var gift = Game.sharedGame().getGift(str(currentGift));
+            trace("Current gift:", currentGift, gift);
+            if(gift.buffWorkIcon) {
+                var workIcon = str(gift.buffWorkIcon);
+                this.showWorkBuffIcon(workIcon);
+            }
+            if(gift.buffShoppingIcon) {
+                var shoppingIcon = str(gift.buffShoppingIcon)
+                this.showShoppingBuffIcon(shoppingIcon);
+            }
+        }
+		//this.displayShoppingBuffIcon();
+		//this.displayWorkBuffIcon();
         this.showChatText();
 
         this.updateTimer = c_addtimer(1000, this.updateLabels, null, 0, -1);
@@ -213,9 +233,9 @@ class HusbandScreen extends Screen
 		trace("work-buff-icon-element: ", iconElement);
 		if (iconElement != null) {
 		    var sprt = iconElement.getSprite();
-		    if(Buffs.workIcon != null) {
+		    if(this.workBuffIcon != null) {
 		    	sprt.visible(1);
-		        sprt.texture(Buffs.workIcon);
+		        sprt.texture(this.workBuffIcon);
 		    } else {
 		    	sprt.visible(0);
 		    }
@@ -228,14 +248,37 @@ class HusbandScreen extends Screen
 		trace("shop-buff-icon-element: ", iconElement);
 		if (iconElement != null) {
 		    var sprt = iconElement.getSprite();
-		    trace("buff shopping icon", Buffs.shoppingIcon);
-		    if(Buffs.shoppingIcon != null) {
+		    if(this.shoppingBuffIcon != null) {
 		    	sprt.visible(1);
-		        sprt.texture(Buffs.shoppingIcon);
+		        sprt.texture(this.shoppingBuffIcon);
 		    } else {
 		    	sprt.visible(0);
 		    }
 		}
+	}
+	
+	public function showWorkBuffIcon(icon)
+	{
+		this.workBuffIcon = icon;
+		this.displayWorkBuffIcon();
+	}
+	
+	public function hideWorkBuffIcon()
+	{
+		this.workBuffIcon = null;
+		this.displayWorkBuffIcon();
+	}
+	
+	public function showShoppingBuffIcon(icon)
+	{
+		this.shoppingBuffIcon = icon;
+		this.displayShoppingBuffIcon();
+	}
+	
+	public function hideShoppingBuffIcon()
+	{
+		this.shoppingBuffIcon = null;
+		this.displayShoppingBuffIcon();
 	}
 
 	public function updateLabels(timer, tick, param)
@@ -267,8 +310,7 @@ class HusbandScreen extends Screen
 				}
 				else {
 					this.getElement("secretButtonText").setText("");
-					this.getElement("secretButtonOverlay").getSprite().visible(1);
-					this.getElement("secretButtonOverlay").getSprite().texture("images/dark-side/dark-side-text.png");
+					this.getElement("secretButtonOverlay").getSprite().visible(1);				
 				}
             }
             else {
@@ -314,9 +356,6 @@ class HusbandScreen extends Screen
 				
 				this.prevIsHome = Game.sharedGame().hubby.isHome();
 			}
-			
-			this.displayWorkBuffIcon();
-			this.displayShoppingBuffIcon();
 		}
 	}
 	
