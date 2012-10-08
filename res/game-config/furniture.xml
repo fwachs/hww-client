@@ -2,7 +2,7 @@
 
 <hww-config:furnitures>
 
-	<hww-config:furniture-category name="Furniture" image="images/house-decorator/furniture-icon.png">
+	<hww-config:furniture-category name="Furniture" image="images/house-decorator/furniture-icon.png" breadCrumb="images/house-decorator/icons/furniture.png">
 		<hww-config:furniture-sub-category name="Chairs" image="images/house-decorator/icons/chair-icon.png">
 			<hww-config:furniture id="21" name="Blue Plush" image="furniture/chairs/021_Chair.png" width="1" depth="1" level="1" gameBucks="150" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="27" name="Unfinished" image="furniture/chairs/027_Chair.png" width="1" depth="1" level="2" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
@@ -145,7 +145,7 @@
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 	
-	<hww-config:furniture-category name="Appliances" image="images/house-decorator/Appliances-icon.png" >
+	<hww-config:furniture-category name="Appliances" image="images/house-decorator/Appliances-icon.png" breadCrumb="images/house-decorator/icons/appliances.png">
 		<hww-config:furniture-sub-category name="Ovens" image="images/house-decorator/icons/oven-icon.png">
 			<hww-config:furniture id="121" name="Mini" image="furniture/ovens/121_Oven.png" width="1" depth="1" level="1" gameBucks="600" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="122" name="Glossy Black" image="furniture/ovens/122_Oven.png" width="1" depth="1" level="7" gameBucks="800" diamonds="0" stars="0" points="5" remodelRequirement="2" />
@@ -209,7 +209,7 @@
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 	
-	<hww-config:furniture-category name="Dècor" image="images/house-decorator/Decor-icon.png">
+	<hww-config:furniture-category name="Dècor" image="images/house-decorator/Decor-icon.png" breadCrumb="images/house-decorator/icons/Decor.png">
 		<hww-config:furniture-sub-category name="Lamps" image="images/house-decorator/icons/lamp-icon.png">
 			<hww-config:furniture id="201" name="Starter" image="furniture/lamps/201_Lamp.png" width="1" depth="1" level="3" gameBucks="50" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="202" name="Country" image="furniture/lamps/202_Lamp.png" width="1" depth="1" level="5" gameBucks="100" diamonds="1" stars="0" points="5" remodelRequirement="2" />
@@ -304,7 +304,7 @@
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 
-	<hww-config:furniture-category name="Fancy Stuff" image="images/house-decorator/Fancy-stuff-icon.png">
+	<hww-config:furniture-category name="Fancy Stuff" image="images/house-decorator/Fancy-stuff-icon.png" breadCrumb="images/house-decorator/icons/fancy-stuff.png">
 		<hww-config:furniture-sub-category name="Vanity" image="images/house-decorator/icons/vanity-icon.png">
 			<hww-config:furniture id="256" name="Starter" image="furniture/vanity/256_Vanity.png" width="2" depth="2" level="30" gameBucks="1500" diamonds="0" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="257" name="Country" image="furniture/vanity/257_Vanity.png" width="2" depth="2" level="35" gameBucks="3500" diamonds="4" stars="0" points="20" remodelRequirement="3" />
@@ -376,7 +376,7 @@
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 
-	<hww-config:furniture-category name="Outside" image="images/house-decorator/garden-icon.png" >
+	<hww-config:furniture-category name="Outside" image="images/house-decorator/garden-icon.png" breadCrumb="images/house-decorator/icons/outside.png">
 		<hww-config:furniture-sub-category name="Fences" image="images/house-decorator/icons/fence-icon.png">
 			<hww-config:furniture id="301" name="White Picket" image="furniture/fences/301_Fence.png" width="1" depth="1" level="40" gameBucks="320" diamonds="1" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="302" name="Wood Lattice" image="furniture/fences/302_Fence.png" width="1" depth="1" level="50" gameBucks="400" diamonds="1" stars="1" points="36" remodelRequirement="3" />

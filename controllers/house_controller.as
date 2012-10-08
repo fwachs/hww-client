@@ -229,19 +229,44 @@ class HouseController extends ScreenController implements TimerListener
         }
     }
 
-    public function categoryTapped(category)
+    public function categoryTapped(index)
     {
         var map = this.screen.getElement("map");
         map.cancelAdding();
+        
+        var categoriesBar = this.screen.getElement("categoryBar").getSprite();  
+        var n = len(categoriesBar.subnodes());
+        
+        // hide breadcrumbs
+        for(var i = 0; i < n; i++) {
+        	categoriesBar.subnodes()[i].subnodes()[0].visible(0);
+        }
+        
+        // highlight breadcrumb
+        categoriesBar.subnodes()[2 * index + 1].subnodes()[0].visible(1);
+        
+        // get the catagory selected
+        var categories = Game.currentGame.furnitureCategories;
+        var category = categories[index];
 
         this.screen.buildSubcategories(category.subcategories);
 
         this.screen.showSubcategories();
     }
 
-    public function subcategoryTapped(subcategory)
+    public function subcategoryTapped(subcatpack)
     {
-        this.screen.buildFurnitureList(subcategory.furniture);
+    	var subcategoriesBar = this.screen.getElement("subCategoryFrame").getSprite();
+    	var n = len(subcategoriesBar.subnodes());
+    	
+    	// hide breadcrumbs
+        for(var i = 0; i < n; i++) {
+        	subcategoriesBar.subnodes()[i].texture("images/house-decorator/sub-cat-box.png");
+        }
+        
+        subcategoriesBar.subnodes()[subcatpack.index].texture("images/house-decorator/sub-cat-box-highlight.png");
+    	
+        this.screen.buildFurnitureList(subcatpack.category.furniture);
 
         this.screen.showItems();
     }

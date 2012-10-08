@@ -12,12 +12,14 @@ class FurnitureCategory
 {
     var name;
     var image;
+    var breadCrumb;
     var subcategories;
     
-    public function FurnitureCategory(catName, image)
+    public function FurnitureCategory(catName, image, breadCrumb)
     {
         this.name = catName;
         this.image = image;
+        this.breadCrumb = breadCrumb;
         this.subcategories = new Array();
     }
     

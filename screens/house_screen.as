@@ -13,6 +13,18 @@ import framework.profiler
 import framework.isocanvas
 import framework.runnable
 
+class SubCatPacket
+{
+	var index;
+	var category;
+	
+	public function SubCatPacket(index, category)
+	{
+		this.index = index;
+		this.category = category;
+	}
+}
+
 class HouseScreen extends Screen
 {
 	var house;
@@ -288,11 +300,13 @@ class HouseScreen extends Screen
 			
 			var cat = categories[i];
 			var item = sprite().pos(Game.translateX(left + 14), Game.translateY( 65));
+			var catBreadCrumb = sprite(cat.breadCrumb).pos(Game.translateX(0), Game.translateY(75));
+			item.add(catBreadCrumb);
 			var catItem = sprite(cat.image).size(Game.translateX(70), Game.translateY( 70)).pos(Game.translateX(16), Game.translateY( 5));
 			item.add(catItem);
-			this.addEvent(item, "categoryTapped", cat, EVENT_UNTOUCH);
-			this.addEvent(bg, "categoryTapped", cat, EVENT_UNTOUCH);
-			categoriesBar.add(item);			
+			this.addEvent(item, "categoryTapped", i, EVENT_UNTOUCH);
+			this.addEvent(bg, "categoryTapped", i, EVENT_UNTOUCH);
+			categoriesBar.add(item);		
 			
 			left += 170;
 		}
@@ -312,7 +326,7 @@ class HouseScreen extends Screen
 			var cat = subcategories[i];
 			var item = sprite("images/house-decorator/sub-cat-box.png").pos(Game.translateX(left), Game.translateY( 25));
 			item.addsprite(cat.image).size(Game.translateX(70), Game.translateY( 70)).pos(Game.translateX(25), Game.translateY( 5));
-			this.addEvent(item, "subcategoryTapped", cat, EVENT_UNTOUCH);
+			this.addEvent(item, "subcategoryTapped", SubCatPacket(i, cat), EVENT_UNTOUCH);
 			subcategoriesBar.add(item, 0, i);
 			
 			left += 170;
@@ -405,6 +419,14 @@ class HouseScreen extends Screen
 
 	public function showDecorator()
 	{
+		 var categoriesBar = this.getElement("categoryBar").getSprite();
+        var n = len(categoriesBar.subnodes());
+        
+        // hide breadcrumbs
+        for(var i = 0; i < n; i++) {
+        	categoriesBar.subnodes()[i].subnodes()[0].visible(0);
+        }
+        
 		var container = this.getElement("categoryFrame").getSprite();		
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 619)));
 		
@@ -421,6 +443,14 @@ class HouseScreen extends Screen
 	
 	public function showSubcategories()
 	{
+		var subcategoriesBar = this.getElement("subCategoryFrame").getSprite();
+    	var n = len(subcategoriesBar.subnodes());
+    	
+    	// hide breadcrumbs
+        for(var i = 0; i < n; i++) {
+        	subcategoriesBar.subnodes()[i].texture("images/house-decorator/sub-cat-box.png");
+        }
+        
 		var container = this.getElement("categoryFrame").getSprite();
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 484)));		
 	}

@@ -353,7 +353,7 @@ class HousewifeWars extends Game
 			var xmlCategory = xmlFurnitures[i].get("hww-config:furniture-category");
 			var catAttrs = xmlCategory.get("#attributes");
 			
-			var category = new FurnitureCategory(catAttrs.get("name"), catAttrs.get("image"));
+			var category = new FurnitureCategory(catAttrs.get("name"), catAttrs.get("image"), catAttrs.get("breadCrumb"));
 
 			var xmlSubCategories = xmlCategory.get("#children");
 			for(var j = 0; j < len(xmlSubCategories); j++) {
