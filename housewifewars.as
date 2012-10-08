@@ -166,9 +166,9 @@ class HousewifeWars extends Game
 
 	public function rateReward()
 	{
-		var rateKey = "rate";
+		var rateKey = "rate" + Game.getPapayaUserId();
 		var db = Game.getDatabase();
-		var hasRated = db.get(rateKey + Game.getPapayaUserId()); 
+		var hasRated = db.get(rateKey); 
 		if (hasRated == null) {
 			var rewardMoney = Game.currentGame.wallet.moneyForCurrency(5, "Diamonds");
 			this.wallet.collect(rewardMoney);
