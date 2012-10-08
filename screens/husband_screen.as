@@ -412,6 +412,11 @@ class HusbandScreen extends Screen
 		}
 		
 		this.careerLevelText.setText(str(Game.sharedGame().hubby.careerLevel));
+		
+		if(Game.sharedGame().hubby.careerLevel == 100) {
+        	this.getElement("careerStatusCircle").getSprite().texture("images/hubby-screen/career-status-circle-100.png");
+        	this.careerLevelText.setText("");
+        }
 	}
 	
 	public function updateLoveTank(tank, value)
