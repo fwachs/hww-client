@@ -352,12 +352,18 @@ class HouseController extends ScreenController implements TimerListener
     public function areaTapped(area)
     {
         if(this.selectedFloor != null) {
-            house.setCustomTiles(area, "custom-floor", this.selectedFloor);
+            var furniture = this.selectedFloor;
+            var ret = Game.sharedGame().shop.buyFurniture(furniture);
+            if(ret == 1) {
+                house.setCustomTiles(area, "custom-floor", this.selectedFloor);
+                var map = this.screen.getElement("map");
 
-            var map = this.screen.getElement("map");
-
-            this.screen.setFloor(area, this.selectedFloor);
-            this.selectedFloor = null;
+                this.screen.setFloor(area, this.selectedFloor);
+                this.selectedFloor = null;
+            }
+            else {
+                this.pushPremiumCurrencyScreen();
+            }
         }
     }
 

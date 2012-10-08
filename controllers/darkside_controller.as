@@ -21,6 +21,7 @@ class DarkSideController extends ScreenController
 	{
 		Game.sounds.stop();
         Game.sounds.playMusic("darkSideMusic");
+    	Game.sharedGame().darkSide.activate();
 	}	
 
 	override public function configureHandlers()
@@ -98,6 +99,7 @@ class DarkSideController extends ScreenController
 	
 	public function leave()
 	{
+        Game.sharedGame().darkSide.deactivate();
         Game.popScreen();
 		Game.sounds.stop();
         Game.sounds.playMusic("themeMusic");

@@ -203,7 +203,7 @@
 			<hww-config:room-tiles row="29" col="50" height="1"  width="1" type="BottomRightCorner"/>			
 		</hww-config:room>
 		
-		<hww-config:room name="yard" level="1">
+		<hww-config:room name="yard" level="7">
 			<!--hww-config:room-tiles row="22" col="17" height="8" width="1" type="VFence"/-->
 			<hww-config:room-tiles row="21" col="17" height="10" width="10" type="Grass"/>
 			<hww-config:room-tiles row="22" col="25" height="2" width="2" type="Grass"/>

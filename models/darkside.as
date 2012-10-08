@@ -38,7 +38,6 @@ class DarkSide
 	
 	public function checkRequirements()
 	{
-		return 1;
     	if(this.requirementsChecked == 1) return 1;
     	
         var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
@@ -58,6 +57,8 @@ class DarkSide
 	{
 		this.isActive = 1;
 		this.doors = null;
+		this.accumulatedDiamonds = 0;
+		
 		this.save();
 	}
 	
@@ -157,7 +158,7 @@ class DarkSideTimer extends Timer
 {
 	public function DarkSideTimer()
 	{
-		super("DarkSideTimer", 60 * 4, -1);
+		super("DarkSideTimer", 60 * 240, -1);
 	}
 	
 	override public function tick()
