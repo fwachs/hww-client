@@ -73,6 +73,8 @@ class HousewifeWars extends Game
 
 		this.furnitureCategories = this.getFurnitureCategories();
 		this.wife = new Wife();
+		this.wife.cleanUnfinishedRegistration();
+		
 		this.hubby = new Husband();
 		this.darkSide = new DarkSide();
 		this.house = new House();
@@ -106,7 +108,7 @@ class HousewifeWars extends Game
         */
 
 		if(wife.firstPlay == 1)
-		{
+		{			
 			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
