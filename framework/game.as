@@ -64,6 +64,7 @@ class Game
 	
 	public static function audioOn()
 	{
+	    return 0;
 	    if (Game.getDatabase().get("soundOn") != null) {
 	        return Game.getDatabase().get("soundOn");
 	    }
@@ -108,10 +109,42 @@ class Game
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
-
-        c_invoke(loading1, 1000, null);
+        Game.getServer().synchronize(synchronizeCallback);
 	}
-	
+
+	function synchronizeCallback(request_id, ret_code, response_content) {
+        if (ret_code == 1) {
+            var wife = new Wife();
+//            if (wife.firstPlay == 1) {
+            if (1 == 1) {
+                var responseMap = json_loads(response_content);
+                var jsonWife = responseMap.get("wife");
+                if (jsonWife != null) {
+                    trace("### HWWW ### Synchronize Wife Response: ", jsonWife);
+                    wife.loadFromJSON(jsonWife);
+                    wife.save();
+
+                    var husband = new Husband();
+                    var jsonHusband = responseMap.get("husband");
+                    trace("### HWWW ### Synchronize Husband Response: ", jsonHusband);
+                    husband.loadFromJSON(jsonHusband);
+                    husband.save();
+
+                    var house = new House();
+                    var jsonHouse = responseMap.get("house");
+                    trace("### HWWW ### Synchronize House Response: ", jsonHouse);
+                    house.loadFromJSON(jsonHouse);
+                    
+                    var wallet = new Wallet();
+                    var jsonWallet = responseMap.get("wallet");
+                    trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
+                    wallet.loadFromJSON(jsonWallet);
+                }
+            }
+        }
+        c_invoke(loading1, 1, null);
+    }
+
 	function loading1()
 	{
 		this.loadingProgress.scale(25, 100);
@@ -238,7 +271,6 @@ class Game
 
 	public function quit()
 	{
-	    Game.store();
 		quitgame();
 	}
 	

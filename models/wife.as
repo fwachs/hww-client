@@ -313,9 +313,10 @@ class Wife
         var papayaUserId = Game.getPapayaUserId();
 		var db = Game.getDatabase();
         var mysteryIds = db.get("mysteryItems" + Game.getPapayaUserId());
-        
-        for(var i = 0; i < len(mysteryIds); i++) {
-        	this.mysteryItemCollection.update(mysteryIds[i], Game.sharedGame().furnitureListing.get(mysteryIds[i]));
+        if (Game.sharedGame().furnitureListing != null) {
+            for(var i = 0; i < len(mysteryIds); i++) {
+                this.mysteryItemCollection.update(mysteryIds[i], Game.sharedGame().furnitureListing.get(mysteryIds[i]));
+            }
         }
 	}
 	

@@ -55,7 +55,6 @@ class HouseScreen extends Screen
 	override public function lostFocus()
 	{
 		Game.hideBanner();
-		Game.sharedGame().getServer().syncHouse();
 	}
 	
 	override public function build()

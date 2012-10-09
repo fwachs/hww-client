@@ -38,7 +38,7 @@ class OtherPlayerController extends ScreenController
 		var husbandType = husband.get("occupation");
 		var citiesVisited = str(husband.get("totalVisits"));
 		var jobLevel = str(husband.get("careerLevel"));
-		var loveTank = str(husband.get("loveTank"));
+		var loveTank = str(husband.get("loveTankValue"));
 		var stressLevel = str(husband.get("stressLevel"));
 
 		var houseLevel = str(response.get("houseLevel"));

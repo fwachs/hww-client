@@ -232,6 +232,9 @@ class House
         Game.getDatabase().put("house" + Game.getPapayaUserId(), dict([["level", this.level], ["isDirty", this.isDirty]]));
     }
     
+    public function loadFromJSON(jsonHouse) {
+        
+    }
     public function loadBlueprint()
     {
         var xmldict = parsexml("game-config/blueprint-layout.xml", 1);

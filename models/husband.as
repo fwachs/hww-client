@@ -522,6 +522,35 @@ class Husband //implements DBModel
         Game.getDatabase().put("husband" + Game.getPapayaUserId(), serializedHusband);
     }
 
+    public function loadFromJSON(husbandMap) {
+        trace("husband map from server: ", str(husbandMap));
+        name = husbandMap.get("name");
+        occupation = husbandMap.get("occupation");
+        careerLevel = husbandMap.get("careerLevel");
+        loveTankValue = husbandMap.get("loveTankValue");
+        stressMeterValue = husbandMap.get("stressMeterValue");
+        shoppingDreadValue = husbandMap.get("shoppingDreadValue");
+        workStressorValue = husbandMap.get("workStressorValue");
+        salary = husbandMap.get("salary");
+        localVisits = husbandMap.get("localVisits");
+        totalVisits = husbandMap.get("totalVisits");
+        requiredVisits = husbandMap.get("requiredVisits");
+        rareItemThreshold = husbandMap.get("rareItemThreshold");
+        salaryFactor = husbandMap.get("salaryFactor");        
+        outShopping = husbandMap.get("outShopping");
+        outWorking = husbandMap.get("outWorking");
+        stressCooldown = husbandMap.get("stressCooldown");
+        loveCooldown = husbandMap.get("loveCooldown");
+        playVideoGameCost = husbandMap.get("playVideoGameCost");
+        kissCost = husbandMap.get("kissCost");
+        watchTheGameCost = husbandMap.get("watchTheGameCost");
+        goOnADateCost = husbandMap.get("goOnADateCost");
+        workHours = husbandMap.get("workHours");
+        shoppingCounts = husbandMap.get("shoppingCounts");
+        workSSPReturn = husbandMap.get("workSSPReturn");
+        workBuffTime = husbandMap.get("workBuffTime");
+    }
+
     public function serialize()
     {
         var papayaUserId = Game.getPapayaUserId();
