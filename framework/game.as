@@ -133,12 +133,12 @@ class Game
                     var house = new House();
                     var jsonHouse = responseMap.get("house");
                     trace("### HWWW ### Synchronize House Response: ", jsonHouse);
-                    house.loadFromJSON(jsonHouse);
+                    house.saveFromJSON(jsonHouse);
                     
                     var wallet = new Wallet();
                     var jsonWallet = responseMap.get("wallet");
                     trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
-                    wallet.loadFromJSON(jsonWallet);
+                    wallet.saveFromJSON(jsonWallet);
                 }
             }
         }
