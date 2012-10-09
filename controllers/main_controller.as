@@ -56,6 +56,8 @@ class MainController extends ScreenController
     override public function screenLoaded()
     {
         trace("MainControlller screenLoaded!");
+        
+        Game.sharedGame().wife.registrationDone();
 
         this.screen.getElement("mysteryItemsButton").getSprite().size(Game.translateX(125), Game.translateY( 146));
 
