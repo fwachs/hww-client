@@ -64,8 +64,6 @@ class Screen
 		
 		var onTap = attrs.get("ontap");
 		if(onTap) {
-			trace("Adding on tap to ", control.controlName);
-
 			var evParts = onTap.split(":");
 			var evName = evParts[0];
 			var evArg = null;
@@ -81,6 +79,8 @@ class Screen
 			ev.controller = this.controller;
 
 			control.tapEvent = ev;
+
+			trace("Adding on tap to ", control.controlName, ev.name, ev.argument);
 		}
 		
 		var onTouchUp = attrs.get("ontouchup");
