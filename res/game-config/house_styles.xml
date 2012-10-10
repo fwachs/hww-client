@@ -159,7 +159,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls004/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls004/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/193_Paint.png" width="2" depth="1"/>
@@ -204,7 +204,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls005/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass02.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass02x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls005/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
@@ -249,7 +249,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls006/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/183_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls006/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/191_Paint.png" width="2" depth="1"/>
@@ -294,7 +294,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls007/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/179_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls007/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
@@ -339,7 +339,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls008/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="walls-default/walls008/floor-custom.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass02.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass02x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass02.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls008/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
@@ -384,7 +384,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls009/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="dirt01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="dirt01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="dirt01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls009/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
@@ -429,7 +429,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls010/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/191_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls010/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/196_Paint.png" width="2" depth="1"/>
@@ -474,7 +474,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls011/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/173_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls011/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="walls-default/walls011/back-wall.png" width="2" depth="1"/>
@@ -519,7 +519,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls012/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/180_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls012/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/192_Paint.png" width="2" depth="1"/>
@@ -564,7 +564,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls013/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/185_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls013/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="paint/197_Paint.png" width="2" depth="1"/>
@@ -609,7 +609,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls014/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="flooring/179_Floor.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="walls-default/walls014/back-wall.png" width="2" depth="1"/>
@@ -654,7 +654,7 @@
 		<hww-config:style-item type="TopRightCorner" resource="walls-default/walls015/Wall_001_6.png" width="1" depth="1" flip="1"/>
 
 		<hww-config:style-item type="Floor" resource="walls-default/walls015/floor-custom.png" width="2" depth="2" floor="1"/>
-		<hww-config:style-item type="Grass" resource="grass01.png" width="2" depth="2" floor="1"/>
+		<hww-config:style-item type="Grass" resource="grass01x1.png" width="1" depth="1" floor="1"/>
 		<hww-config:style-item type="Grassx" resource="grass01.png" width="2" depth="2"/>
 		<!--hww-config:style-item type="Walkway2x3" resource="walls-default/walls015/walkway01.png" width="2" depth="2"/-->
 		<hww-config:style-item type="Paint" resource="wallpaper/169_Wallpaper.png" width="2" depth="1"/>
