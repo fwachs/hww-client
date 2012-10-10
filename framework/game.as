@@ -64,7 +64,6 @@ class Game
 	
 	public static function audioOn()
 	{
-	    return 0;
 	    if (Game.getDatabase().get("soundOn") != null) {
 	        return Game.getDatabase().get("soundOn");
 	    }

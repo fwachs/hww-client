@@ -200,7 +200,7 @@ class HousewifeWars extends Game
 	{
 		var xmldict = parsexml("game-config/mystery_items.xml", 1);
 		var xmlmysteryitems = xmldict.get("hww-config:mystery-items").get("#children");
-		this.mysteryItems = new Array();
+		this.mysteryItems = new dict();
 
 		for(var i = 0; i < len(xmlmysteryitems); i++) {
 			var xmlmysteryitem = xmlmysteryitems[i].get("hww-config:mystery-item");
@@ -209,8 +209,9 @@ class HousewifeWars extends Game
 			var mysteryItem = new MysteryItem(mysteryitemattrs.get("id"), mysteryitemattrs.get("name"), mysteryitemattrs.get("desc"), mysteryitemattrs.get("fileName"),
 									int(mysteryitemattrs.get("stars")), int(mysteryitemattrs.get("points")), mysteryitemattrs.get("reward"), mysteryitemattrs.get("currency"));
 			
-			this.mysteryItems.append(mysteryItem);
+			this.mysteryItems.update(mysteryItem.id, mysteryItem);
 		}		
+		trace("loaded mystery items: ", str(this.mysteryItems));
 	}
 
 	public function getCities()
