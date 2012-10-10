@@ -5,7 +5,7 @@
     
         <screen:element name="itemBox" resource="mystery-items/m-item-box.png" left="#left" top="#top" z-index="40">
             <screen:element name="item" resource="#itemImage" left="#imageLeft" top="#imageTop"/>
-            <screen:element name="houseText" resource="" left="0" top="147" font-size="24" font-style="bold" text-align="center" width="138" height="69">#itemName</screen:element>
+            <screen:element name="houseText" resource="" left="0" top="147" font-size="22" font-style="bold" text-align="center" width="138" height="69">#itemName</screen:element>
         </screen:element>
         
     </screen:template>
