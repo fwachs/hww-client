@@ -210,7 +210,7 @@
 			<hww-config:room-tiles row="24" col="25" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="26" col="25" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="28" col="25" height="2" width="2" type="Grass"/>
-			<hww-config:room-tiles row="30" col="25" height="2" width="2" type="Grass"/>
+			<!--hww-config:room-tiles row="29" col="25" height="2" width="2" type="Grass"/-->
 
 			<hww-config:room-tiles row="21" col="29" height="1" width="1" type="Grass"/>
 			<hww-config:room-tiles row="22" col="29" height="2" width="2" type="Grass"/>
@@ -220,7 +220,7 @@
 			<hww-config:room-tiles row="26" col="29" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="27" col="29" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="28" col="29" height="2" width="2" type="Grass"/>
-			<hww-config:room-tiles row="29" col="29" height="2" width="2" type="Grass"/>
+			<!--hww-config:room-tiles row="29" col="29" height="2" width="2" type="Grass"/-->
 			
 			<hww-config:room-tiles row="21" col="30" height="10" width="16" type="Grass"/>
 			<!--hww-config:room-tiles row="29" col="17" height="1" width="1" type="Bush"/-->
