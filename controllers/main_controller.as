@@ -322,7 +322,6 @@ class MainController extends ScreenController
 
     public function buildFriendCallback(requestId, ret_code, response, param)
     {
-        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
         if(ret_code == 0) {
             this.screen.prepareFriendsBelt(new Array());
             return;
@@ -330,7 +329,17 @@ class MainController extends ScreenController
 
         var flist = response.get("data");
         trace("Friends list: ", flist);
+                
+        // decorate user dicts with foundOnHWW attribute
+        // flist[i].update("foundOnHWW", 0 / 1);
         
+        this.buildFriends(flist);
+    }
+    
+    public function buildFriends(flist)
+    {
+        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
+
         var friends = new Array();
         for (var i=0; i< len(flist); i++) {
             var friendUserId = flist[i].get("id");
@@ -347,8 +356,27 @@ class MainController extends ScreenController
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";
             }
+            
             var isGamePlayer = flist[i].get("isplayer");
-            var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer);
+            
+            var foundOnHWW = flist[i].get("foundOnHWW");
+
+            var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer, foundOnHWW);
+
+            if(PapayaFriend.isInvited(friendUserId) == 1) {
+            	if(isGamePlayer == 1) {
+            		PapayaFriend.removeInvitation(friendUserId);
+            	}
+            	else {
+            		if(friend.foundOnHWW == 1) {
+            			friend.isGamePlayer = 1;
+            		}
+            		else {
+            			continue;
+            		}
+            	}
+            }
+            
             friends.append(friend);
         }
         this.screen.prepareFriendsBelt(friends);
@@ -362,7 +390,7 @@ class MainController extends ScreenController
     	
     	// uncomment for final version
     	//ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, "");
-    	friendInvited(0, 1, 0, friend);
+    	this.friendInvited(0, 1, 0, friend);
     }
 
     public function friendInvited(requestId, ret_code, response, friend)
@@ -374,7 +402,14 @@ class MainController extends ScreenController
         }
         else {
         	message = "Invitation succeded";
-        	friend.isGamePlayer = 1;
+        	
+        	if(friend.foundOnHWW == 1) {
+        		friend.isGamePlayer = 1;
+        	}
+        	else {
+        		this.friends.remove(friend);
+        	}
+    		PapayaFriend.addInvitation(friend.papayaUserId);
         }
         
         this.alert(message, this.friendInvitationOK);
