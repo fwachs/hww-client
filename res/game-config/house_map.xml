@@ -210,7 +210,7 @@
 			<hww-config:room-tiles row="24" col="25" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="26" col="25" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="28" col="25" height="2" width="2" type="Grass"/>
-			<hww-config:room-tiles row="30" col="25" height="2" width="2" type="Grass"/>
+			<!--hww-config:room-tiles row="29" col="25" height="2" width="2" type="Grass"/-->
 
 			<hww-config:room-tiles row="21" col="29" height="1" width="1" type="Grass"/>
 			<hww-config:room-tiles row="22" col="29" height="2" width="2" type="Grass"/>
@@ -220,7 +220,7 @@
 			<hww-config:room-tiles row="26" col="29" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="27" col="29" height="2" width="2" type="Grass"/>
 			<hww-config:room-tiles row="28" col="29" height="2" width="2" type="Grass"/>
-			<hww-config:room-tiles row="29" col="29" height="2" width="2" type="Grass"/>
+			<!--hww-config:room-tiles row="29" col="29" height="2" width="2" type="Grass"/-->
 			
 			<hww-config:room-tiles row="21" col="30" height="10" width="16" type="Grass"/>
 			<!--hww-config:room-tiles row="29" col="17" height="1" width="1" type="Bush"/-->
@@ -247,8 +247,9 @@
 		</hww-config:room>			
 				
 		<hww-config:room name="garage" level="8">
-			<hww-config:room-tiles row="22" col="12" height="7" width="1" type="VFence"/>
-			<!-- moved from yard  changed height=14-->
+			<!--hww-config:room-tiles row="22" col="12" height="7" width="1" type="VFence"/-->
+			<!--hww-config:room-tiles row="21" col="13" height="8" width="1" type="Grass"/-->
+			
 			<hww-config:room-tiles row="8"  col="12" height="13" width="1" type="VWall"/>			
 			<hww-config:room-tiles row="7"  col="13" height="1" width="4" type="Paint"/>
 			<hww-config:room-tiles row="29" col="12" height="1" width="1" type="Bush"/>
@@ -260,18 +261,18 @@
 		</hww-config:room>			
 		
 		<hww-config:room name="sideyard" level="9">
-			<hww-config:room-tiles row="18"  col="6" height="12" width="6" type="Grass"/>
-			<hww-config:room-tiles row="29" col="6" height="1"  width="6" type="HFence"/>			
-			<hww-config:room-tiles row="20"  col="5" height="9" width="1" type="VFence"/>
+			<hww-config:room-tiles row="18"  col="6" height="11" width="8" type="Grass"/>
+			<!--hww-config:room-tiles row="29" col="6" height="1"  width="6" type="HFence"/-->			
+			<!--hww-config:room-tiles row="20"  col="5" height="9" width="1" type="VFence"/-->
 			<hww-config:room-tiles row="29" col="5" height="1" width="1" type="Bush"/>			
 		</hww-config:room>	
 		
 		<hww-config:room name="backyard" level="10">
-			<hww-config:room-tiles row="6"  col="6" height="12" width="6" type="Grass"/>
+			<hww-config:room-tiles row="6"  col="6" height="13" width="7" type="Grass"/>
 			<hww-config:room-tiles row="7"  col="5" height="1"  width="1" type="Bush"/>
-			<hww-config:room-tiles row="7"  col="6" height="1"  width="6" type="HFence"/>
+			<!--hww-config:room-tiles row="7"  col="6" height="1"  width="6" type="HFence"/-->
 			<hww-config:room-tiles row="7"  col="12" height="1"  width="1" type="BackT"/>
-			<hww-config:room-tiles row="8"  col="5" height="12" width="1" type="VFence"/>			
+			<!--hww-config:room-tiles row="8"  col="5" height="12" width="1" type="VFence"/-->			
 
 		</hww-config:room>	
 					
