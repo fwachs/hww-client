@@ -34,7 +34,6 @@ class Game
 	var loadingText;
 	var today;
 	var properties;
-	var advertisement;
 
 	public static function getPapayaUserId()
 	{
@@ -84,8 +83,6 @@ class Game
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
 		c_invoke(transitionLoadingScreen, 2000, null);
-		advertisement = v_create (V_APPFLOOD_BANNER_SMALL, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
-		v_root().addview(advertisement);
 	}
 	
 	function transitionLoadingScreen()
@@ -108,10 +105,50 @@ class Game
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
-
-        c_invoke(loading1, 1000, null);
+        var wife = new Wife();
+        if (wife.firstPlay == 1) {
+            Game.getServer().synchronize(synchronizeCallback);
+        } else {
+            c_invoke(loading1, 1, null);
+        }
 	}
-	
+
+	function synchronizeCallback(request_id, ret_code, response_content) {
+        if (ret_code == 1) {
+            var responseMap = json_loads(response_content);
+            var jsonWife = responseMap.get("wife");
+            if (jsonWife != null) {
+                var wife = new Wife();
+                trace("### HWWW ### Synchronize Wife Response: ", jsonWife);
+                wife.loadFromJSON(jsonWife);
+                wife.save();
+
+                var husband = new Husband();
+                var jsonHusband = responseMap.get("husband");
+                trace("### HWWW ### Synchronize Husband Response: ", jsonHusband);
+                husband.loadFromJSON(jsonHusband);
+                husband.save();
+
+                var wallet = new Wallet();
+                var jsonWallet = responseMap.get("wallet");
+                trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
+                wallet.saveFromJSON(jsonWallet);
+
+                var jsonPassport = responseMap.get("passport");
+                if (jsonPassport != null) {
+                    var passport = new Passport();
+                    passport.saveFromJSON(jsonPassport);
+                }
+
+                var house = new House();
+                var jsonHouse = responseMap.get("house");
+                trace("### HWWW ### Synchronize House Response: ", jsonHouse);
+                house.saveFromJSON(jsonHouse);
+            }
+        }
+        c_invoke(loading1, 1, null);
+    }
+
 	function loading1()
 	{
 		this.loadingProgress.scale(25, 100);
@@ -137,8 +174,7 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
-		this.getServer().getCurrentDateAndTick();
-		this.initializeTimers();
+		this.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 	}
@@ -150,9 +186,6 @@ class Game
 		this.scene.remove(this.loadingBarStart);
 		this.scene.remove(this.loadingBarEnd);
 		this.scene.remove(this.loadingText);
-		if (advertisement != null) {
-		    advertisement.removefromparent();
-		}
 	}
 	
 	public static function translateX(xPos)
@@ -238,7 +271,6 @@ class Game
 
 	public function quit()
 	{
-	    Game.store();
 		quitgame();
 	}
 	

@@ -304,7 +304,9 @@ class Screen
 	
 	public function willGetFocus()
 	{
-		this.canvas.focus(1);
+	    if (this.canvas != null) {
+	        this.canvas.focus(1);
+	    }
 		this.showTutorialStep(this.currentTutorial);
 	}
 	

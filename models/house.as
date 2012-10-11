@@ -232,6 +232,43 @@ class House
         Game.getDatabase().put("house" + Game.getPapayaUserId(), dict([["level", this.level], ["isDirty", this.isDirty]]));
     }
     
+    public function saveFromJSON(jsonHouse) {
+        var customTiles = jsonHouse.get("customTiles");
+        for (var i=0; i<len(customTiles); i++) {
+            var tg = TilesGroup.deserialize(customTiles[i]);
+            this.saveTilesGroup(tg);
+        }
+
+        var furnitures = jsonHouse.get("furnitures");
+        for (var j=0; j<len(furnitures); j++) {
+            var furnitureItem = FurnitureItem.deserialize(furnitures[j]);
+            this.saveFurniture(furnitureItem);
+        }
+
+        var storage = jsonHouse.get("storage");
+        for (var k=0; k<len(storage); k++) {
+            var storageItem = FurnitureItem.deserialize(storage[k]);
+            this.saveStorageItem(storageItem);
+        }
+        var selectedStyleId = jsonHouse.get("type");
+        var level = jsonHouse.get("level");
+
+        this.setSelectedStyle(selectedStyleId);
+        if (this.selectedStyle == null) {
+            this.setSelectedStyle("brick-yellow");
+        }
+        if (level == null) {
+            level = 1;
+        }
+        this.level = level;
+        this.itemId = jsonHouse.get("itemId");
+        if (this.itemId == null || this.itemId == 0) {
+            this.itemId = 1000;
+        }
+        Game.getDatabase().put("lastItemId", this.itemId);
+        this.save();
+    }
+
     public function loadBlueprint()
     {
         var xmldict = parsexml("game-config/blueprint-layout.xml", 1);
@@ -660,6 +697,7 @@ class House
         houseMap.update("customTiles", this.serializeCustomTiles());
         houseMap.update("level", this.level);
         houseMap.update("type", this.selectedStyle.name);
+        houseMap.update("itemId", this.itemId);
         return houseMap;
     }
 

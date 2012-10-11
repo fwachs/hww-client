@@ -12,11 +12,15 @@ Brief Description:
 
 class MainScreen extends Screen
 {
+	var advertisement;
+	var firstTimeAdDisplay;
+	
 	public function MainScreen()
 	{
 		super();
 
-		this.isRoot = 1;		
+		this.isRoot = 1;	
+		this.firstTimeAdDisplay = 1;
 	}
 	
 	override public function build()
@@ -51,6 +55,13 @@ class MainScreen extends Screen
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
 		Game.startButtonShineAnimation();
+		
+		if(this.firstTimeAdDisplay == 1){
+			this.firstTimeAdDisplay = 0;
+			c_invoke(displayFullScreenAd, 5000, null);
+		}
+		
+		c_invoke(displayBannerAd, 60000, null);
 	}
 
 	override public function lostFocus()
@@ -61,6 +72,7 @@ class MainScreen extends Screen
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
 		Game.stopButtonShineAnimation();
+		removeAd();
 	}
 
 	public function stopWifeAnimation()
@@ -150,5 +162,29 @@ class MainScreen extends Screen
 		
 		this.getElement("todayBonusPrize").getSprite().texture("images/daily-bonus-prompt/bonus-0" + str(count) +".png");
 		this.getElement("dailyBonusFrame").getSprite().visible(1);
+	}
+	
+	public function displayBannerAd()
+	{
+	    if(Game.currentScreen().getScreenName() == "main-screen") {
+	        advertisement = v_create(V_APPFLOOD_BANNER_SMALL, Game.translateX(240), Game.translateY(0), Game.translateX(790), Game.translateY(70));
+	        v_root().addview(advertisement);
+	    }
+	    
+	    c_invoke(removeAd, 5000, null);
+	}
+
+	public function displayFullScreenAd()
+	{
+	    if(Game.currentScreen().getScreenName() == "main-screen") {
+	    	openUrl("appflood_fullscreen");
+	    }	    
+	}
+
+	public function removeAd()
+	{
+	    if (advertisement != null) {
+	        advertisement.removefromparent();
+	    }
 	}
 }

@@ -40,24 +40,24 @@ class MysteryItemsScreen extends Screen
         var left = leftStart;
         var top = 65;
         var mysteryItemsCount = len(Game.sharedGame().mysteryItems);
-
         var shelfStart = this.controlFromXMLString("<screen:element name=\"\" resource=\"mystery-items/mystery-bg-shelf.png\" left=\"-30\" top=\"103\" z-index=\"25\"/>");
         mysteryItemCatalog.addChild(shelfStart);
-
+        Game.sharedGame().wife.loadMysteryItems(Game.sharedGame().mysteryItems);
         for(var i = 0; i < mysteryItemsCount; ) {
 
             for(var row = 0; row < 3; row++) {
 
                 for(var col = 0; col < 7; col++) {
                     if(i < mysteryItemsCount) {
-                        var item = Game.sharedGame().mysteryItems[i];
+                        var itemId = Game.sharedGame().mysteryItems.keys()[i];
+                        var item = Game.sharedGame().mysteryItems.get(itemId);
                         i++;
                         var itemImage = ""; //"friend-belt/friendbelt-question.png";
                         var itemName = ""; //"?????";
                         var imageLeft = 16;
                         var imageTop = 16;
-
-                        if(Game.sharedGame().wife.mysteryItemCollection.has_key(item.id) == 1) {
+                        var mysteryItemsMap = Game.sharedGame().wife.mysteryItemCollection;
+                        if(mysteryItemsMap.has_key(str(item.id)) == 1) {
                             itemImage = item.image;
                             itemName = item.desc;
                             imageLeft = 6;

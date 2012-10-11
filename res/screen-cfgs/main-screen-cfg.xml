@@ -5,9 +5,7 @@
 	
 		<screen:element name="background" resource="main-menu/main-menu-screen.png" left="0" top="0"/>
 
-		<screen:element name="ppyCircle" resource="main-menu/feedback.png" left="920" top="697" ontap="gotoPapayaCircle"/>
-
-		<screen:element name="ppyHome" resource="main-menu/papaya-button.png" left="1040" top="712" ontap="gotoPapayaHome"/>
+		<screen:element name="ppyCircle" resource="main-menu/feedback.png" left="1020" top="697" ontap="gotoPapayaCircle"/>
 
 		<screen:element name="giftsIcon" resource="gift-others-prompt/gift-received-iconv2.png" left="100" top="280" ontap="showGiftOthersStep" visible="NO" z-index="10" >
 			<screen:element name="giftsCount" resource="" left="50" top="14" font-size="32" font-style="bold" text-align="center" width="36" height="41" z-index="999">#number_placeholder</screen:element>

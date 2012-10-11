@@ -435,17 +435,25 @@ class HusbandController extends ScreenController implements TimerListener
             var miLen = len(Game.sharedGame().mysteryItems);
             rareness = rand(100, 4) + 1;
             rareness += threshold;
+            var mysteryItemsMap = Game.sharedGame().mysteryItems; 
+            trace("mystery items map ", mysteryItemsMap);
+            var mysteryItemsKeys = mysteryItemsMap.keys();
+            trace("mystery keys ", mysteryItemsKeys);
 
             // seperate by rarity
             for(var j = 0; j < miLen; j++) {
-                if(Game.sharedGame().mysteryItems[j].stars == 0)
-                    commonItems.append(Game.sharedGame().mysteryItems[j]);
-                if(Game.sharedGame().mysteryItems[j].stars == 1)
-                    rareItems.append(Game.sharedGame().mysteryItems[j]);
-                if(Game.sharedGame().mysteryItems[j].stars == 2)
-                    veryRareItems.append(Game.sharedGame().mysteryItems[j]);
-                if(Game.sharedGame().mysteryItems[j].stars == 3)
-                    extremelyRareItems.append(Game.sharedGame().mysteryItems[j]);
+                var mysteryItemKey = mysteryItemsKeys[j];
+                trace("mystery key ", mysteryItemKey);
+                var mysteryItem = mysteryItemsMap.get(mysteryItemKey);
+                trace("found mystery item: ", mysteryItem);
+                if(mysteryItem.stars == 0)
+                    commonItems.append(mysteryItem);
+                if(mysteryItem.stars == 1)
+                    rareItems.append(mysteryItem);
+                if(mysteryItem.stars == 2)
+                    veryRareItems.append(mysteryItem);
+                if(mysteryItem.stars == 3)
+                    extremelyRareItems.append(mysteryItem);
             }
 
             trace("### HWW ### - common items: " + str(len(commonItems)));
