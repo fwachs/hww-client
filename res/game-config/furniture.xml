@@ -48,20 +48,20 @@
 			<hww-config:furniture id="1" name="Basic Twin PK" image="furniture/beds/001_Bed.png" width="3" depth="2" level="1" gameBucks="200" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="2" name="Basic Twin BL" image="furniture/beds/002_Bed.png" width="3" depth="2" level="2" gameBucks="200" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="3" name="Basic Queen" image="furniture/beds/003_Bed.png" width="3" depth="3" level="2" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="4" name="Contemporary" image="furniture/beds/004_Bed.png" width="3" depth="3" level="15" gameBucks="2000" diamonds="0" stars="0" points="10" remodelRequirement="3" />
-			<hww-config:furniture id="5" name="Sleeping Beauty" image="furniture/beds/005_Bed.png" width="3" depth="3" level="40" gameBucks="4000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="6" name="Old Fashioned" image="furniture/beds/006_Bed.png" width="3" depth="3" level="3" gameBucks="700" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="7" name="Heavenly" image="furniture/beds/007_Bed.png" width="3" depth="3" level="9" gameBucks="1200" diamonds="0" stars="0" points="5" remodelRequirement="2" />
-			<hww-config:furniture id="8" name="Modern King" image="furniture/beds/008_Bed.png" width="3" depth="3" level="30" gameBucks="6000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="9" name="Royalty" image="furniture/beds/009_Bed.png" width="3" depth="3" level="50" gameBucks="10000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-			<hww-config:furniture id="10" name="French King" image="furniture/beds/010_Bed.png" width="3" depth="3" level="60" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  
 			<hww-config:furniture id="11" name="Froggy" image="furniture/beds/011_Bed.png" width="3" depth="2" level="4" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="12" name="Pink Princess" image="furniture/beds/012_Bed.png" width="3" depth="2" level="35" gameBucks="11000" diamonds="6" stars="2" points="28" remodelRequirement="3" />
-			<hww-config:furniture id="13" name="Race Car" image="furniture/beds/013_Bed.png" width="3" depth="2" level="60" gameBucks="18000" diamonds="18" stars="3" points="70" remodelRequirement="3" /> 
 			<hww-config:furniture id="14" name="Basic Crib" image="furniture/beds/014_Crib.png" width="2" depth="1" level="6" gameBucks="550" diamonds="0" stars="0" points="5" remodelRequirement="2" />
+			<hww-config:furniture id="7" name="Heavenly" image="furniture/beds/007_Bed.png" width="3" depth="3" level="9" gameBucks="1200" diamonds="0" stars="0" points="5" remodelRequirement="2" />
+			<hww-config:furniture id="4" name="Contemporary" image="furniture/beds/004_Bed.png" width="3" depth="3" level="15" gameBucks="2000" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="15" name="Baby Boy" image="furniture/beds/015_Crib.png" width="2" depth="1" level="25" gameBucks="6000" diamonds="0" stars="0" points="15" remodelRequirement="3" />
+			<hww-config:furniture id="8" name="Modern King" image="furniture/beds/008_Bed.png" width="3" depth="3" level="30" gameBucks="6000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="12" name="Pink Princess" image="furniture/beds/012_Bed.png" width="3" depth="2" level="35" gameBucks="11000" diamonds="6" stars="2" points="28" remodelRequirement="3" />
 			<hww-config:furniture id="16" name="Carriage" image="furniture/beds/016_Crib.png" width="3" depth="2" level="35" gameBucks="8000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="17" name="Fairy Tale" image="furniture/beds/017_Crib.png" width="2" depth="2" level="55" gameBucks="10000" diamonds="5" stars="1" points="36" remodelRequirement="3" /> 
+			<hww-config:furniture id="5" name="Sleeping Beauty" image="furniture/beds/005_Bed.png" width="3" depth="3" level="40" gameBucks="4000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
+			<hww-config:furniture id="9" name="Royalty" image="furniture/beds/009_Bed.png" width="3" depth="3" level="50" gameBucks="10000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
+			<hww-config:furniture id="17" name="Fairy Tale" image="furniture/beds/017_Crib.png" width="2" depth="2" level="55" gameBucks="10000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
+			<hww-config:furniture id="10" name="French King" image="furniture/beds/010_Bed.png" width="3" depth="3" level="60" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
+			<hww-config:furniture id="13" name="Race Car" image="furniture/beds/013_Bed.png" width="3" depth="2" level="60" gameBucks="18000" diamonds="18" stars="3" points="70" remodelRequirement="3" /> 			
 			<hww-config:furniture id="18" name="Baby Princess" image="furniture/beds/018_Crib.png" width="2" depth="1" level="65" gameBucks="15000" diamonds="12" stars="2" points="49" remodelRequirement="3" /> 
 			<hww-config:furniture id="19" name="Palace King" image="furniture/beds/019_Bed.png" width="3" depth="3" level="70" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" /> 
 			<hww-config:furniture id="20" name="Lovers Only" image="furniture/beds/020_Bed.png" width="3" depth="3" level="95" gameBucks="45000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  

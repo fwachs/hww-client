@@ -61,7 +61,7 @@ class MainScreen extends Screen
 			c_invoke(displayFullScreenAd, 5000, null);
 		}
 		
-		c_invoke(displayBannerAd, 60000, null);
+		c_invoke(displayFullScreenAd, 60000, null);
 	}
 
 	override public function lostFocus()
