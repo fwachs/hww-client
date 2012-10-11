@@ -261,6 +261,7 @@ class House
             level = 1;
         }
         this.level = level;
+        this.itemId = jsonHouse.get("itemId");
         this.save();
     }
 
@@ -692,6 +693,7 @@ class House
         houseMap.update("customTiles", this.serializeCustomTiles());
         houseMap.update("level", this.level);
         houseMap.update("type", this.selectedStyle.name);
+        houseMap.update("itemId", this.itemId);
         return houseMap;
     }
 

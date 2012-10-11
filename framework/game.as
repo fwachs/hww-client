@@ -141,6 +141,10 @@ class Game
                 var jsonWallet = responseMap.get("wallet");
                 trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
                 wallet.saveFromJSON(jsonWallet);
+
+                var passport = new Passport();
+                var jsonPassport = responseMap.get("passport");
+                passport.saveFromJSON(jsonPassport);
             }
         }
         c_invoke(loading1, 1, null);
@@ -171,8 +175,7 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
-		this.getServer().getCurrentDateAndTick();
-		this.initializeTimers();
+		this.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 	}
