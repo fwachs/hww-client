@@ -129,7 +129,7 @@ class HousewifeWars extends Game
 			screen.configFile = "screen-cfgs/main-screen-cfg.xml";
 			controller = new MainController(screen);
 
-			c_addtimer(60000, this.updateServer, null, 0, -1);
+			c_addtimer(60000*3, this.updateServer, null, 0, -1);
 		}
 
 		this.milesEarnedTimer.start();

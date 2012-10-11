@@ -132,19 +132,21 @@ class Game
                 husband.loadFromJSON(jsonHusband);
                 husband.save();
 
-                var house = new House();
-                var jsonHouse = responseMap.get("house");
-                trace("### HWWW ### Synchronize House Response: ", jsonHouse);
-                house.saveFromJSON(jsonHouse);
-                
                 var wallet = new Wallet();
                 var jsonWallet = responseMap.get("wallet");
                 trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
                 wallet.saveFromJSON(jsonWallet);
 
-                var passport = new Passport();
                 var jsonPassport = responseMap.get("passport");
-                passport.saveFromJSON(jsonPassport);
+                if (jsonPassport != null) {
+                    var passport = new Passport();
+                    passport.saveFromJSON(jsonPassport);
+                }
+
+                var house = new House();
+                var jsonHouse = responseMap.get("house");
+                trace("### HWWW ### Synchronize House Response: ", jsonHouse);
+                house.saveFromJSON(jsonHouse);
             }
         }
         c_invoke(loading1, 1, null);

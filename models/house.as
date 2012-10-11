@@ -262,6 +262,10 @@ class House
         }
         this.level = level;
         this.itemId = jsonHouse.get("itemId");
+        if (this.itemId == null || this.itemId == 0) {
+            this.itemId = 1000;
+        }
+        Game.getDatabase().put("lastItemId", this.itemId);
         this.save();
     }
 
