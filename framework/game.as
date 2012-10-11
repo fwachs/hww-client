@@ -34,7 +34,6 @@ class Game
 	var loadingText;
 	var today;
 	var properties;
-	var advertisement;
 
 	public static function getPapayaUserId()
 	{
@@ -84,8 +83,6 @@ class Game
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
 		c_invoke(transitionLoadingScreen, 2000, null);
-		advertisement = v_create (V_APPFLOOD_BANNER_SMALL, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
-		v_root().addview(advertisement);
 	}
 	
 	function transitionLoadingScreen()
@@ -189,9 +186,6 @@ class Game
 		this.scene.remove(this.loadingBarStart);
 		this.scene.remove(this.loadingBarEnd);
 		this.scene.remove(this.loadingText);
-		if (advertisement != null) {
-		    advertisement.removefromparent();
-		}
 	}
 	
 	public static function translateX(xPos)
