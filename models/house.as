@@ -233,23 +233,6 @@ class House
     }
     
     public function saveFromJSON(jsonHouse) {
-        var customTiles = jsonHouse.get("customTiles");
-        for (var i=0; i<len(customTiles); i++) {
-            var tg = TilesGroup.deserialize(customTiles[i]);
-            this.saveTilesGroup(tg);
-        }
-
-        var furnitures = jsonHouse.get("furnitures");
-        for (var j=0; j<len(furnitures); j++) {
-            var furnitureItem = FurnitureItem.deserialize(furnitures[j]);
-            this.saveFurniture(furnitureItem);
-        }
-
-        var storage = jsonHouse.get("storage");
-        for (var k=0; k<len(storage); k++) {
-            var storageItem = FurnitureItem.deserialize(storage[k]);
-            this.saveStorageItem(storageItem);
-        }
         var selectedStyleId = jsonHouse.get("type");
         var level = jsonHouse.get("level");
 
@@ -267,6 +250,24 @@ class House
         }
         Game.getDatabase().put("lastItemId", this.itemId);
         this.save();
+
+        var customTiles = jsonHouse.get("customTiles");
+        for (var i=0; i<len(customTiles); i++) {
+            var tg = TilesGroup.deserialize(customTiles[i]);
+            this.saveTilesGroup(tg);
+        }
+
+        var furnitures = jsonHouse.get("furnitures");
+        for (var j=0; j<len(furnitures); j++) {
+            var furnitureItem = FurnitureItem.deserialize(furnitures[j]);
+            this.saveFurniture(furnitureItem);
+        }
+
+        var storage = jsonHouse.get("storage");
+        for (var k=0; k<len(storage); k++) {
+            var storageItem = FurnitureItem.deserialize(storage[k]);
+            this.saveStorageItem(storageItem);
+        }
     }
 
     public function loadBlueprint()
