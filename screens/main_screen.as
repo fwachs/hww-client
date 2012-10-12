@@ -55,13 +55,14 @@ class MainScreen extends Screen
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
 		Game.startButtonShineAnimation();
-		
+		/*
 		if(this.firstTimeAdDisplay == 1){
 			this.firstTimeAdDisplay = 0;
 			c_invoke(displayFullScreenAd, 5000, null);
 		}
 		
-		c_invoke(displayBannerAd, 60000, null);
+		c_invoke(displayFullScreenAd, 60000, null);
+		*/
 	}
 
 	override public function lostFocus()
