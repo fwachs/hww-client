@@ -26,6 +26,7 @@ class Animations
 		animationsMap.update("gift_shop_people", this.getGiftShopIdleAnimation());
 		animationsMap.update("gift_shop_end", this.getGiftShopAnimation());
 		animationsMap.update("button_shine", this.getButtonShineAnimation());
+		animationsMap.update("loading", this.getLoadingAnimation());
 	}
 
 	public function getAnimation(strAnimationName) {
@@ -1046,6 +1047,11 @@ class Animations
 		var action = animate(832, "images/Animation/button_animation/shine_1.png", "images/Animation/button_animation/shine_2.png",
 				"images/Animation/button_animation/shine_3.png", "images/Animation/button_animation/shine_4.png",
 				"images/Animation/button_animation/shine_5.png");
+		return action;
+	}
+	
+	public function getLoadingAnimation() {
+		var action = animate(2000, "images/house-decorator/load01.png", "images/house-decorator/load02.png", "images/house-decorator/load03.png", "images/house-decorator/load04.png");
 		return action;
 	}
 }
