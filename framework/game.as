@@ -34,7 +34,6 @@ class Game
 	var loadingText;
 	var today;
 	var properties;
-	var advertisement;
 
 	public static function getPapayaUserId()
 	{
