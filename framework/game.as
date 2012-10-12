@@ -106,15 +106,17 @@ class Game
             quitgame();
         }
         var wife = new Wife();
-        if (wife.firstPlay == 1) {
+        var shouldSynchronize = Game.getProperty("onGoingSynchronization");
+        if (wife.firstPlay == 1 || shouldSynchronize == 1) {
             Game.getServer().synchronize(synchronizeCallback);
         } else {
             c_invoke(loading1, 1, null);
         }
 	}
 
-	function synchronizeCallback(request_id, ret_code, response_content) {
+	public function synchronizeCallback(request_id, ret_code, response_content) {
         if (ret_code == 1) {
+            Game.setProperty("onGoingSynchronization", 1);
             var responseMap = json_loads(response_content);
             var jsonWife = responseMap.get("wife");
             if (jsonWife != null) {
@@ -145,6 +147,7 @@ class Game
                 trace("### HWWW ### Synchronize House Response: ", jsonHouse);
                 house.saveFromJSON(jsonHouse);
             }
+            Game.setProperty("onGoingSynchronization", 0);
         }
         c_invoke(loading1, 1, null);
     }
