@@ -34,6 +34,8 @@ class Game
 	var loadingText;
 	var today;
 	var properties;
+	var dontCloseSyncing;
+	var loadingAnimation;
 
 	public static function getPapayaUserId()
 	{
@@ -116,6 +118,13 @@ class Game
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {
         if (ret_code == 1) {
+        	
+        	this.dontCloseSyncing = this.loadingScreen.addsprite("images/house-decorator/dont-close-app.png").pos(Game.translateX(78), Game.translateY(396));
+        	var action = Game.animations.getAnimation("loading");
+        	this.loadingAnimation = this.loadingScreen.addsprite("images/house-decorator/load01.png").pos(Game.translateX(154), Game.translateY(496));
+    		this.loadingAnimation.stop();
+    		loadingAnimation.addaction(repeat(action));
+        	
             Game.setProperty("onGoingSynchronization", 1);
             trace("### HWWW ### Synchronize onGoingSynchronization: 1");
             var responseMap = json_loads(response_content);
@@ -158,6 +167,8 @@ class Game
             }
             trace("### HWWW ### Synchronize onGoingSynchronization: 0");
             Game.setProperty("onGoingSynchronization", 0);
+            
+            //this.scene.remove(dontClose);
         }
         c_invoke(loading1, 1, null);
     }
@@ -194,8 +205,11 @@ class Game
 	
 	function hideLoadingScreen(timer, tick, param)
 	{
+		this.loadingAnimation.stop();
+		this.scene.remove(this.loadingAnimation);
+		this.scene.remove(this.dontCloseSyncing);
 		this.scene.remove(this.loadingScreen);
-		this.scene.remove(this.loadingBar);	
+		this.scene.remove(this.loadingBar);
 		this.scene.remove(this.loadingBarStart);
 		this.scene.remove(this.loadingBarEnd);
 		this.scene.remove(this.loadingText);
