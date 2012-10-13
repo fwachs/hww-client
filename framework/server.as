@@ -30,6 +30,7 @@ class Server
         var wallet = Game.sharedGame().wallet.serialize();
         var passport = Game.sharedGame().passport;
         var house = Game.sharedGame().house;
+        var realstate = Game.sharedGame().realestate.serialize();
         house.loadCustomTiles();
         house.loadFurniture();
         house.loadStorage();
@@ -42,6 +43,7 @@ class Server
         var passportMap = passport.serialize();
         passportMap.update("datesCompleted", new Array());
         params.update("passport", passportMap);
+        params.update("realstate", realstate);
         params.update("papayaUserId", Game.papayaUserId);
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
     }

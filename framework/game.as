@@ -117,6 +117,7 @@ class Game
 	public function synchronizeCallback(request_id, ret_code, response_content) {
         if (ret_code == 1) {
             Game.setProperty("onGoingSynchronization", 1);
+            trace("### HWWW ### Synchronize onGoingSynchronization: 1");
             var responseMap = json_loads(response_content);
             var jsonWife = responseMap.get("wife");
             if (jsonWife != null) {
@@ -146,7 +147,16 @@ class Game
                 var jsonHouse = responseMap.get("house");
                 trace("### HWWW ### Synchronize House Response: ", jsonHouse);
                 house.saveFromJSON(jsonHouse);
+
+                var jsonRealstate = responseMap.get("realstate");
+                if (jsonRealstate != null) {
+                    trace("### HWWW ### Synchronize realstate Response: ", jsonRealstate);
+                    var realstate = new Realestate();
+                    realstate.loadFromJSON(jsonRealstate);
+                    realstate.save();
+                }
             }
+            trace("### HWWW ### Synchronize onGoingSynchronization: 0");
             Game.setProperty("onGoingSynchronization", 0);
         }
         c_invoke(loading1, 1, null);
