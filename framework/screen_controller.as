@@ -119,15 +119,6 @@ class ScreenController
 		this.presentModalScreen(promptScreen);
 	}
 	
-	public function alert(text, doneCallBack = null)
-	{
-		var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_BasicAccept, text);
-		promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
-		promptScreen.okCallBack = doneCallBack;
-		
-		this.presentModalScreen(promptScreen);
-	}
-	
 	public function presentModalScreen(modalScreen)
 	{
  		this.cancelEvents = 1;

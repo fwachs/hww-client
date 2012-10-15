@@ -10,7 +10,6 @@
 
     <!-- okayPrompt needs to select a okay-button with specific ontap functionality -->
     <screen:element name="okay-button-default" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismiss" visible="NO"/>
-    <screen:element name="okay-button-alert" resource="tutorial-icons/okay.png" left="512" top="370" ontap="okMB" visible="NO"/>
     <screen:element name="okay-button-relieve-stress" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpRelieveStress" visible="NO"/>
     <screen:element name="okay-button-increase-love" resource="tutorial-icons/okay.png" left="512" top="370" ontap="helpIncreaseLove" visible="NO"/>
     <screen:element name="okay-button-work-tutorial" resource="tutorial-icons/okay.png" left="512" top="370" ontap="dismissWorkTutorial" visible="NO"/>

@@ -41,7 +41,6 @@ class MessageBoxScreen extends Screen
     static var MB_GotBusted = 27;
     static var MB_DarkSideChallenge = 28;
     static var MB_DarkSideLetter = 29;
-    static var MB_BasicAccept = 30;
 
     var type;
     var argument;
@@ -192,9 +191,6 @@ class MessageBoxScreen extends Screen
             var promptBG = this.getElement("okayPromptFrame").getSprite();
             promptBG.texture("images/dark-side/darkside-intro-02.png");
             promptBG.pos(0, 0);
-        }
-        else if(this.type == MessageBoxScreen.MB_BasicAccept) {
-            displayOkayPrompt(this.argument, "okay-button-alert");
         }
     }
 

@@ -355,7 +355,7 @@ class Control
 		trace("tapEventHandler: ", event.name, " ", this.controlName);
 		
 		if(event.name == "ontouch") {
-			trace("touch event: " + this.controlName, " ", event.x, event.y, event.name, event.argument);
+			trace("touch event: " + this.controlName, " ", event.x, event.y);
 			
 			if(this.highlight != null) {
 				this.getSprite().texture(this.highlight);
@@ -413,7 +413,7 @@ class Control
 	
 	public function controlTapped()
 	{
-		trace("controlTapped: ", this.controlName, this.tapEvent.name, this.tapEvent.argument);
+		trace("controlTapped: ", this.controlName, " ", this.tapEvent);
 		if(this.tapEvent) {
 			if(this.tapEvent.controller.cancelEvents == 0) {
 				this.tapEvent.controller.eventFired(this.tapEvent);

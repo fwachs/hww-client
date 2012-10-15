@@ -47,7 +47,6 @@ class MainController extends ScreenController
     var soundText;
     var notificationsText;
     var screenUpdateTimer;
-    var friends = null;
 
     public function MainController(controlledScreen)
     {
@@ -113,7 +112,6 @@ class MainController extends ScreenController
         }
         else if(event.name == "displayFriendsBelt") {
             Game.sounds.playSFX("buttonPress");
-            Game.showBanner(1, 0);
             this.loadFriends();
         }
         else if(event.name == "hideFriendsBelt") {
@@ -226,9 +224,6 @@ class MainController extends ScreenController
         }
         else if(event.name == "doNothing") {
         }
-        else if(event.name == "inviteFriend") {
-        	this.inviteFriend(event.argument);
-        }
     }
 
     public function openGift()
@@ -322,24 +317,13 @@ class MainController extends ScreenController
 
     public function buildFriendCallback(requestId, ret_code, response, param)
     {
+        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
         if(ret_code == 0) {
             this.screen.prepareFriendsBelt(new Array());
             return;
         }
 
         var flist = response.get("data");
-        trace("Friends list: ", flist);
-                
-        // decorate user dicts with foundOnHWW attribute
-        // flist[i].update("foundOnHWW", 0 / 1);
-        
-        this.buildFriends(flist);
-    }
-    
-    public function buildFriends(flist)
-    {
-        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
-
         var friends = new Array();
         for (var i=0; i< len(flist); i++) {
             var friendUserId = flist[i].get("id");
@@ -356,69 +340,15 @@ class MainController extends ScreenController
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";
             }
-            
             var isGamePlayer = flist[i].get("isplayer");
-            
-            var foundOnHWW = flist[i].get("foundOnHWW");
-
-            var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer, foundOnHWW);
-
-            if(PapayaFriend.isInvited(friendUserId) == 1) {
-            	if(isGamePlayer == 1) {
-            		PapayaFriend.removeInvitation(friendUserId);
-            	}
-            	else {
-            		if(friend.foundOnHWW == 1) {
-            			friend.isGamePlayer = 1;
-            		}
-            		else {
-            			continue;
-            		}
-            	}
+            if (isGamePlayer) {
+                var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer);
+                friends.append(friend);
             }
-            
-            friends.append(friend);
         }
         this.screen.prepareFriendsBelt(friends);
-        
-        this.friends = friends;
     }
 
-    public function inviteFriend(friend)
-    {
-    	trace("inviteFriend: ", friend, friend.friendUserId);
-    	
-    	// uncomment for final version
-    	//ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, "");
-    	this.friendInvited(0, 1, 0, friend);
-    }
-
-    public function friendInvited(requestId, ret_code, response, friend)
-    {
-    	var message = "";
-    	
-        if(ret_code == 0) {
-            message = "Invitation failed";
-        }
-        else {
-        	message = "Invitation succeded";
-        	
-        	if(friend.foundOnHWW == 1) {
-        		friend.isGamePlayer = 1;
-        	}
-        	else {
-        		this.friends.remove(friend);
-        	}
-    		PapayaFriend.addInvitation(friend.papayaUserId);
-        }
-        
-        this.alert(message, this.friendInvitationOK);
-    }
-    
-    public function friendInvitationOK()
-    {
-        this.screen.prepareFriendsBelt(this.friends);        	
-    }
 }
 
 /*****************************************************************************

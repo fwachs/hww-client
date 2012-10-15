@@ -235,13 +235,6 @@ class Game
         db = c_opendb(0, "hww");
     	trace("After initializeDatabase: ", db);
     }
-    
-    public function cleanDatabase()
-    {
-    	this.db.destroy();
-    	this.db = null;
-    	this.initializeDatabase();
-    }
 
 	public function quit()
 	{
