@@ -102,6 +102,7 @@ class MainScreen extends Screen
 
 	public function prepareFriendsBelt(friends)
 	{
+	    Game.showBanner(1, 0);
 		this.getElement("friendsScroll").removeAllChildren();
 		
 		var left = this.buildFriendsBelt(friends, 20, 1, "friendSelected");

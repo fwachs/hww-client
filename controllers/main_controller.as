@@ -113,7 +113,6 @@ class MainController extends ScreenController
         }
         else if(event.name == "displayFriendsBelt") {
             Game.sounds.playSFX("buttonPress");
-            Game.showBanner(1, 0);
             this.loadFriends();
         }
         else if(event.name == "hideFriendsBelt") {
@@ -329,11 +328,11 @@ class MainController extends ScreenController
 
         var flist = response.get("data");
         trace("Friends list: ", flist);
-                
+
         // decorate user dicts with foundOnHWW attribute
-        // flist[i].update("foundOnHWW", 0 / 1);
+        Game.getServer().checkPlayersStatus(flist, this);
         
-        this.buildFriends(flist);
+//        this.buildFriends(flist);
     }
     
     public function buildFriends(flist)
