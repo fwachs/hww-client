@@ -75,7 +75,7 @@ class DarkSide
 	{
 		if(this.doors == null) {
 			this.doors = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-			this.prizes = [0, -1, -1, -1, 1, 1, 2, 2, 4];
+			this.prizes = [0, -1, -1, -1, 1, 1, 1, 1, 1];
 			this.accumulatedDiamonds = 0;
 		}
 		
