@@ -228,6 +228,7 @@ class HusbandScreen extends Screen
 		trace("shop-buff-icon-element: ", iconElement);
 		if (iconElement != null) {
 		    var sprt = iconElement.getSprite();
+		    trace("buff shopping icon", Buffs.shoppingIcon);
 		    if(Buffs.shoppingIcon != null) {
 		    	sprt.visible(1);
 		        sprt.texture(Buffs.shoppingIcon);

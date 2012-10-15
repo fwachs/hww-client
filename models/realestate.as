@@ -33,6 +33,10 @@ class Realestate
         propertyListing = realestateMap.get("propertyListing");
 	}
 
+	public function loadFromJSON(realstateMap) {
+	    this.propertyListing = realstateMap.get("propertyListing");
+	}
+
     public function save()
     {
         var papayaUserId = Game.getPapayaUserId();

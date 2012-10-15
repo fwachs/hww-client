@@ -44,6 +44,15 @@ class Wife
 		this.hairStyle = bestWife.get("hairStyle");
 		this.skinTone = bestWife.get("skinTone");
 		this.socialStatusPoints = bestWife.get("socialStatusPoints");
+        var mysteryIds = bestWife.get("mysteryItems");
+        trace("HWW@@ mystery items", str(mysteryIds));
+        if (mysteryIds == null) {
+            mysteryIds = new Array();
+        }
+        for(var i = 0; i < len(mysteryIds); i++) {
+            trace("server mystery item: ", str(mysteryIds[i]));
+            this.mysteryItemCollection.update(mysteryIds[i], 1);
+        }
 	}
 	
 	public function getType()
@@ -311,20 +320,20 @@ class Wife
             socialStatusPoints = 0;
         }
 		statusPointsFactor = wifeMap.get("statusPointsFactor");
-		
-		this.loadMysteryItems();
-
-        trace("### HWW ### - Fetched Wife socialStatusPoints: ", this.socialStatusPoints);
+		loadMysteryItems(null);
 	}
 	
-	public function loadMysteryItems()
+	public function loadMysteryItems(mysteryItemsMap)
 	{
         var papayaUserId = Game.getPapayaUserId();
 		var db = Game.getDatabase();
         var mysteryIds = db.get("mysteryItems" + Game.getPapayaUserId());
-        
         for(var i = 0; i < len(mysteryIds); i++) {
-        	this.mysteryItemCollection.update(mysteryIds[i], Game.sharedGame().furnitureListing.get(mysteryIds[i]));
+            var mysteryItem = 1;
+            if (mysteryItemsMap != null) {
+                mysteryItem = mysteryItemsMap.get(mysteryIds[i]);
+            }
+            this.mysteryItemCollection.update(str(mysteryIds[i]), mysteryItem);
         }
 	}
 	
@@ -372,6 +381,7 @@ class Wife
         }
         wifeArray.append(["socialStatusPoints", socialStatusPoints]);
         wifeArray.append(["statusPointsFactor", statusPointsFactor]);
+        wifeArray.append(["mysteryItems", this.mysteryItemCollection.keys()]);
         return dict(wifeArray);
     }
 

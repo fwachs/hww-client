@@ -39,14 +39,15 @@ class HUDScreen extends Screen
 	
 	public function showSSPsBuffIcon(icon)
 	{
+	    trace("show sspbuff icon ", icon);
 		var sprt = this.getElement("ssp-buff-icon").getSprite();
-		sprt.visible(1)
+		sprt.visible(1);
 		sprt.texture(icon);
 	}
 	
 	public function hideSSPsBuffIcon()
 	{
 		var sprt = this.getElement("ssp-buff-icon").getSprite();
-		sprt.visible(0)
+		sprt.visible(0);
 	}
 }

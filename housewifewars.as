@@ -73,8 +73,6 @@ class HousewifeWars extends Game
 
 		this.furnitureCategories = this.getFurnitureCategories();
 		this.wife = new Wife();
-		this.wife.cleanUnfinishedRegistration();
-		
 		this.hubby = new Husband();
 		this.darkSide = new DarkSide();
 		this.house = new House();
@@ -97,21 +95,22 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
-		
+
+		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
         var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
         ret = Game.currentGame.wallet.collect(freeMiles);
         var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
         ret = Game.currentGame.wallet.collect(freeGB);
-        
+        */
 
 		if(wife.firstPlay == 1)
-		{			
-			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(2000, "GameBucks");
+		{
+			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
-			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(20, "Diamonds");
+			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(10, "Diamonds");
 			returnValue = Game.currentGame.wallet.collect(startingDiamonds);
 
 			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000, "Miles");
@@ -167,9 +166,9 @@ class HousewifeWars extends Game
 
 	public function rateReward()
 	{
-		var rateKey = "rate";
+		var rateKey = "rate" + Game.getPapayaUserId();
 		var db = Game.getDatabase();
-		var hasRated = db.get(rateKey + Game.getPapayaUserId()); 
+		var hasRated = db.get(rateKey); 
 		if (hasRated == null) {
 			var rewardMoney = Game.currentGame.wallet.moneyForCurrency(5, "Diamonds");
 			this.wallet.collect(rewardMoney);
@@ -201,7 +200,7 @@ class HousewifeWars extends Game
 	{
 		var xmldict = parsexml("game-config/mystery_items.xml", 1);
 		var xmlmysteryitems = xmldict.get("hww-config:mystery-items").get("#children");
-		this.mysteryItems = new Array();
+		this.mysteryItems = new dict();
 
 		for(var i = 0; i < len(xmlmysteryitems); i++) {
 			var xmlmysteryitem = xmlmysteryitems[i].get("hww-config:mystery-item");
@@ -210,8 +209,9 @@ class HousewifeWars extends Game
 			var mysteryItem = new MysteryItem(mysteryitemattrs.get("id"), mysteryitemattrs.get("name"), mysteryitemattrs.get("desc"), mysteryitemattrs.get("fileName"),
 									int(mysteryitemattrs.get("stars")), int(mysteryitemattrs.get("points")), mysteryitemattrs.get("reward"), mysteryitemattrs.get("currency"));
 			
-			this.mysteryItems.append(mysteryItem);
+			this.mysteryItems.update(mysteryItem.id, mysteryItem);
 		}		
+		trace("loaded mystery items: ", str(this.mysteryItems));
 	}
 
 	public function getCities()

@@ -12,11 +12,16 @@ Brief Description:
 
 class MainScreen extends Screen
 {
+	var advertisement;
+	var firstTimeAdDisplay;
+	var idleAdTimer;
+	
 	public function MainScreen()
 	{
 		super();
 
-		this.isRoot = 1;		
+		this.isRoot = 1;	
+		this.firstTimeAdDisplay = 1;
 	}
 	
 	override public function build()
@@ -51,6 +56,14 @@ class MainScreen extends Screen
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
 		Game.startButtonShineAnimation();
+		
+		if(this.firstTimeAdDisplay == 1){
+			this.firstTimeAdDisplay = 0;
+			c_invoke(displayFullScreenAd, 5000, null);
+			idleAdTimer = c_addtimer(60000, displayFullScreenAd, null);
+		}
+		
+		idleAdTimer.play();
 	}
 
 	override public function lostFocus()
@@ -61,6 +74,7 @@ class MainScreen extends Screen
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
 		Game.stopButtonShineAnimation();
+		idleAdTimer.stop();
 	}
 
 	public function stopWifeAnimation()
@@ -94,7 +108,7 @@ class MainScreen extends Screen
 		var totalFriendsToDisplay = 10;
 		var friendsCount = len(friends);
 		
-		var avatarLeft = 67;
+		var avatarLeft = 82;
 		var avatarTop = 61;
 		
 		for(var i = 0; i < friendsCount; i++) {
@@ -113,7 +127,7 @@ class MainScreen extends Screen
 			left += 165;
 		}
 
-		avatarLeft = 60;
+		avatarLeft = 75;
 		avatarTop = 54;
 
 		for(var j = 0; j < 3; j++) {
@@ -150,5 +164,21 @@ class MainScreen extends Screen
 		
 		this.getElement("todayBonusPrize").getSprite().texture("images/daily-bonus-prompt/bonus-0" + str(count) +".png");
 		this.getElement("dailyBonusFrame").getSprite().visible(1);
+	}
+
+	public function displayFullScreenAd(timer, tick, param)
+	{
+		timer.stop();
+		
+	    if(Game.currentScreen().getScreenName() == "main-screen") {
+	    	openUrl("appflood_fullscreen");
+	    }	    
+	}
+
+	public function removeAd()
+	{
+	    if (advertisement != null) {
+	        advertisement.removefromparent();
+	    }
 	}
 }

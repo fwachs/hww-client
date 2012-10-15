@@ -34,7 +34,8 @@ class Game
 	var loadingText;
 	var today;
 	var properties;
-	var advertisement;
+	var dontCloseSyncing;
+	var loadingAnimation;
 
 	public static function getPapayaUserId()
 	{
@@ -84,8 +85,6 @@ class Game
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
 		c_invoke(transitionLoadingScreen, 2000, null);
-		advertisement = v_create (V_APPFLOOD_BANNER_SMALL, Game.translateX(240), Game.translateY(0),Game.translateX(790), Game.translateY(70));
-		v_root().addview(advertisement);
 	}
 	
 	function transitionLoadingScreen()
@@ -108,10 +107,72 @@ class Game
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
-
-        c_invoke(loading1, 1000, null);
+        var wife = new Wife();
+        var shouldSynchronize = Game.getProperty("onGoingSynchronization");
+        if (wife.firstPlay == 1 || shouldSynchronize == 1) {
+            Game.getServer().synchronize(synchronizeCallback);
+        } else {
+            c_invoke(loading1, 1, null);
+        }
 	}
-	
+
+	public function synchronizeCallback(request_id, ret_code, response_content) {
+        if (ret_code == 1) {
+        	
+        	this.dontCloseSyncing = this.loadingScreen.addsprite("images/house-decorator/dont-close-app.png").pos(Game.translateX(78), Game.translateY(396));
+        	var action = Game.animations.getAnimation("loading");
+        	this.loadingAnimation = this.loadingScreen.addsprite("images/house-decorator/load01.png").pos(Game.translateX(154), Game.translateY(496));
+    		this.loadingAnimation.stop();
+    		loadingAnimation.addaction(repeat(action));
+        	
+            Game.setProperty("onGoingSynchronization", 1);
+            trace("### HWWW ### Synchronize onGoingSynchronization: 1");
+            var responseMap = json_loads(response_content);
+            var jsonWife = responseMap.get("wife");
+            if (jsonWife != null) {
+                var wife = new Wife();
+                trace("### HWWW ### Synchronize Wife Response: ", jsonWife);
+                wife.loadFromJSON(jsonWife);
+                wife.save();
+
+                var husband = new Husband();
+                var jsonHusband = responseMap.get("husband");
+                trace("### HWWW ### Synchronize Husband Response: ", jsonHusband);
+                husband.loadFromJSON(jsonHusband);
+                husband.save();
+
+                var wallet = new Wallet();
+                var jsonWallet = responseMap.get("wallet");
+                trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
+                wallet.saveFromJSON(jsonWallet);
+
+                var jsonPassport = responseMap.get("passport");
+                if (jsonPassport != null) {
+                    var passport = new Passport();
+                    passport.saveFromJSON(jsonPassport);
+                }
+
+                var house = new House();
+                var jsonHouse = responseMap.get("house");
+                trace("### HWWW ### Synchronize House Response: ", jsonHouse);
+                house.saveFromJSON(jsonHouse);
+
+                var jsonRealstate = responseMap.get("realstate");
+                if (jsonRealstate != null) {
+                    trace("### HWWW ### Synchronize realstate Response: ", jsonRealstate);
+                    var realstate = new Realestate();
+                    realstate.loadFromJSON(jsonRealstate);
+                    realstate.save();
+                }
+            }
+            trace("### HWWW ### Synchronize onGoingSynchronization: 0");
+            Game.setProperty("onGoingSynchronization", 0);
+            
+            //this.scene.remove(dontClose);
+        }
+        c_invoke(loading1, 1, null);
+    }
+
 	function loading1()
 	{
 		this.loadingProgress.scale(25, 100);
@@ -137,22 +198,21 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
-		this.getServer().getCurrentDateAndTick();
-		this.initializeTimers();
+		this.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 	}
 	
 	function hideLoadingScreen(timer, tick, param)
 	{
+		this.loadingAnimation.stop();
+		this.scene.remove(this.loadingAnimation);
+		this.scene.remove(this.dontCloseSyncing);
 		this.scene.remove(this.loadingScreen);
-		this.scene.remove(this.loadingBar);	
+		this.scene.remove(this.loadingBar);
 		this.scene.remove(this.loadingBarStart);
 		this.scene.remove(this.loadingBarEnd);
 		this.scene.remove(this.loadingText);
-		if (advertisement != null) {
-		    advertisement.removefromparent();
-		}
 	}
 	
 	public static function translateX(xPos)
@@ -238,7 +298,6 @@ class Game
 
 	public function quit()
 	{
-	    Game.store();
 		quitgame();
 	}
 	

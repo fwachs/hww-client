@@ -48,7 +48,7 @@ class GiftItem
 			gift.buffShoppingIcon = "images/" + giftAttrs.get("shopping-icon");
 		}
 		
-		if(giftAttrs.get("shopping-icon") != "") {
+		if(giftAttrs.get("ssp-icon") != "") {
 			gift.buffSSPsIcon = "images/" + giftAttrs.get("ssp-icon");
 		}
 		
@@ -166,19 +166,20 @@ class Buffs
 	
 	public static function showIconsForGift(gift)
 	{
+	    trace("hubby icons buff: ", Game.sharedGame().hubby);
 	    if (Game.sharedGame().hubby == null) return;
-
-	    var buffType = gift.buffTy
 
 		if(gift.buffWorkIcon) {
 		    var workIcon = str(gift.buffWorkIcon);
 			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffWork") == 0) {
+			    trace("gift work icon: ", gift.buffWorkIcon);
 				Buffs.workIcon = workIcon;
 			}
 		}
 		if(gift.buffShoppingIcon) {
 		    var shoppingIcon = str(gift.buffShoppingIcon);
 			if(gift.buffType != "DebuffWorkAndShoppingTime" || Game.sharedGame().getProperty("OngoingBuffShopping") == 0) {
+			    trace("gift shopping icon: ", gift.buffShoppingIcon);
 				Buffs.shoppingIcon = shoppingIcon;
 			}
 		}
@@ -226,7 +227,9 @@ class Buffs
 			if(Game.sharedGame().getProperty("OngoingBuffWork") == 1) {
 				Buffs.clearBuffs();
 			}
-		} 
+		} else if (buffType == "BuffRareItemChance") {
+		    Buffs.clearBuffs();
+		}
 	}
 	
 	public static function clearBuffs()
@@ -266,6 +269,8 @@ class DebuffHusbandWorkShoppingTime implements IBuff
 	{
 		Game.sharedGame().hubby.setWorkBuffTime(factor * 60);
 		Game.sharedGame().hubby.setShoppingBuffTime(factor * 60);
+		Game.sharedGame().setProperty("OngoingBuffShopping", 0);          
+        Game.sharedGame().setProperty("OngoingBuffWork", 0);
 	}
 }
 
@@ -356,7 +361,6 @@ class BuffRareItemChance implements IBuff
 		trace("Execute BuffRareItemChance");
 		
 		Game.sharedGame().hubby.setRareItemThreshold(factor);
-		Buffs.clearBuffs();
 	}
 }
 

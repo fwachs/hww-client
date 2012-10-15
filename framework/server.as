@@ -30,6 +30,7 @@ class Server
         var wallet = Game.sharedGame().wallet.serialize();
         var passport = Game.sharedGame().passport;
         var house = Game.sharedGame().house;
+        var realstate = Game.sharedGame().realestate.serialize();
         house.loadCustomTiles();
         house.loadFurniture();
         house.loadStorage();
@@ -39,10 +40,12 @@ class Server
         params.update("wife", wife);
         params.update("husband", husband);
         params.update("wallet", wallet);
-        params.update("passport", passport.serialize());
+        var passportMap = passport.serialize();
+        passportMap.update("datesCompleted", new Array());
+        params.update("passport", passportMap);
+        params.update("realstate", realstate);
         params.update("papayaUserId", Game.papayaUserId);
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
-    
     }
 
 	public function register() {
@@ -107,9 +110,9 @@ class Server
         this.makeRequest("/getLatestGossipMessages", callback, wife.serialize());
     }
 
-	public function getCurrentDateAndTick()
+	public function getCurrentDateAndTick(callback)
     {
-        this.makeRequest("/getCurrentDateAndTick", this.defaultCallBack, dict());
+        this.makeRequest("/getCurrentDateAndTick", callback, dict());
     }
 
 	public function getGifts(callback)

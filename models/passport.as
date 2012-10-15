@@ -129,7 +129,33 @@ class Passport
         passportArray.append(["TokyoSouvenirs", TokyoSouvenirs]);
         passportArray.append(["SydneySouvenirs", SydneySouvenirs]);
         passportArray.append(["datesCompleted", datesCompleted]);
+        var escapedDates = new Array();
+        for (var i=0 ;i <len(datesCompleted); i++) {
+            trace("Dates Completed: ", datesCompleted[i]);
+            escapedDates.append(str("'" + datesCompleted[i] + "'"));
+        }
+        passportArray.append(["escapedDatesCompleted", escapedDates]);
         
         return dict(passportArray);
+    }
+
+    public function saveFromJSON(passportMap) {
+        citiesVisited = passportMap.get("citiesVisited");
+        
+        londonFirstVisit = passportMap.get("londonFirstVisit");
+        SanFranciscoFirstVisit = passportMap.get("sanFranciscoFirstVisit");
+        ParisFirstVisit = passportMap.get("parisFirstVisit");
+        BuenosAiresFirstVisit = passportMap.get("buenosAiresFirstVisit");
+        TokyoFirstVisit = passportMap.get("tokyoFirstVisit");
+        SydneyFirstVisit = passportMap.get("sydneyFirstVisit");
+        
+        LondonSouvenirs = passportMap.get("londonSouvenirs");
+        SanFranciscoSouvenirs = passportMap.get("sanFranciscoSouvenirs");
+        ParisSouvenirs = passportMap.get("parisSouvenirs");
+        BuenosAiresSouvenirs = passportMap.get("buenosAiresSouvenirs");
+        TokyoSouvenirs = passportMap.get("tokyoSouvenirs");
+        SydneySouvenirs = passportMap.get("sydneySouvenirs");
+        datesCompleted = passportMap.get("datesCompleted");
+        this.save();
     }
 }
