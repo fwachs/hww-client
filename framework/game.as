@@ -119,7 +119,6 @@ class Game
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {
         if (ret_code == 1) {
-        	
         	this.dontCloseSyncing = this.loadingScreen.addsprite("images/house-decorator/dont-close-app.png").pos(Game.translateX(78), Game.translateY(396));
         	var action = Game.animations.getAnimation("loading");
         	this.loadingAnimation = this.loadingScreen.addsprite("images/house-decorator/load01.png").pos(Game.translateX(154), Game.translateY(496));
@@ -301,9 +300,9 @@ class Game
     
     public function cleanDatabase()
     {
-    	this.db.destroy();
-    	this.db = null;
-    	this.initializeDatabase();
+        Game.db.destroy();
+    	Game.db = null;
+    	Game.initializeDatabase();
     }
 
 	public function quit()

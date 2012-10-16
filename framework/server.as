@@ -16,6 +16,24 @@ class Server
     	url = "http://hww.2clams.com:8080";
     }
 
+    public function checkPlayersStatus(flist, mainController) {
+        var params = dict();
+        params.update("papayaUserIds", flist);
+        params.update("mainController", mainController);
+        var completeUrl = url + "/checkPlayersStatus";
+        http_request(completeUrl, this.playerStatusCallback, params, 2000, params);
+    }
+
+    public function playerStatusCallback(request_id, ret_code, response_content, params) {
+        trace("params: ", params);
+        var flist = params.get("papayaUserIds");
+        for (var i=0; i< len(flist); i++) {
+            flist[i].update("foundOnHWW", 1);
+        }
+        var mainController = params.get("mainController");
+        mainController.buildFriends(flist);
+    }
+
     public function synchronize(callback) {
     	var params = dict();
 
@@ -130,7 +148,7 @@ class Server
 		this.makeRequest("/getDailyBonus", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 
-    function makeRequest(path, callback, params)
+    public function makeRequest(path, callback, params)
     {
     	var completeUrl = url + path;
     	trace("### HWW ### - Sending HTTP Request: ", completeUrl, str(params));
