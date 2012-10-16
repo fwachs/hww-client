@@ -364,7 +364,7 @@ class HusbandController extends ScreenController implements TimerListener
         var threshold = this.thresholdWeighedWithBuff(itemType);
 
         // 30% chance to get furniture
-        if(itemType <= 30) {
+       /* if(itemType <= 30) {
             var furnLen = len(Game.sharedGame().furnitureListing);
 
             trace("### HWW ### - Furniture items: " + str(furnLen));
@@ -430,8 +430,9 @@ class HusbandController extends ScreenController implements TimerListener
             Game.sounds.playSFX("gainSSP");
             Game.sharedGame().wife.incSocialStatusPoints(shoppingItem.points);
         }
+        */
         // 70% chance to get a mystery item
-        else {
+        //else {
             var miLen = len(Game.sharedGame().mysteryItems);
             rareness = rand(100, 4) + 1;
             rareness += threshold;
@@ -496,7 +497,7 @@ class HusbandController extends ScreenController implements TimerListener
             }
 
             Game.sounds.playSFX("gainSSP");
-        }
+        //}
 
         var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_Hubby_Return_Shopping, shoppingItem);
         promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
