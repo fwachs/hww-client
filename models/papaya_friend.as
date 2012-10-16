@@ -17,7 +17,8 @@ class PapayaFriend
 	var name;
 	var avatarUrl;
 	var isGamePlayer;
-	var foundOnHWW;
+	var foundOnHWW = 0;
+	var wasInvited = 0;
 	
 	public static function getInvitations()
 	{
@@ -68,12 +69,13 @@ class PapayaFriend
 		return 0;
 	}
 
-	public function PapayaFriend(papayaUserId, name, avatarUrl, isGamePlayer, foundOn) 
+	public function PapayaFriend(papayaUserId, name, avatarUrl, isGamePlayer, foundOn, invited) 
 	{
 		this.papayaUserId = papayaUserId;
 		this.name = name;
 		this.avatarUrl = avatarUrl;
 		this.isGamePlayer = isGamePlayer;
 		this.foundOnHWW = foundOn;
+		this.wasInvited = invited;
 	}
 }
