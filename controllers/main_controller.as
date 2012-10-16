@@ -47,6 +47,7 @@ class MainController extends ScreenController
     var soundText;
     var notificationsText;
     var screenUpdateTimer;
+    var friends = null;
 
     public function MainController(controlledScreen)
     {
@@ -112,6 +113,7 @@ class MainController extends ScreenController
         }
         else if(event.name == "displayFriendsBelt") {
             Game.sounds.playSFX("buttonPress");
+            Game.showBanner(1, 0);
             this.loadFriends();
         }
         else if(event.name == "hideFriendsBelt") {
@@ -224,6 +226,9 @@ class MainController extends ScreenController
         }
         else if(event.name == "doNothing") {
         }
+        else if(event.name == "inviteFriend") {
+        	this.inviteFriend(event.argument);
+        }
     }
 
     public function openGift()
@@ -324,6 +329,8 @@ class MainController extends ScreenController
         }
 
         var flist = response.get("data");
+        trace("Friends list: ", flist);
+        
         var friends = new Array();
         for (var i=0; i< len(flist); i++) {
             var friendUserId = flist[i].get("id");
@@ -341,14 +348,42 @@ class MainController extends ScreenController
                 avatarUrl = "friend-belt/friendbelt-question.png";
             }
             var isGamePlayer = flist[i].get("isplayer");
-            if (isGamePlayer) {
-                var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer);
-                friends.append(friend);
-            }
+            var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer);
+            friends.append(friend);
         }
         this.screen.prepareFriendsBelt(friends);
+        
+        this.friends = friends;
     }
 
+    public function inviteFriend(friend)
+    {
+    	trace("inviteFriend: ", friend, friend.friendUserId);
+    	
+    	// uncomment for final version
+    	//ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, "");
+    	friendInvited(0, 1, 0, friend);
+    }
+
+    public function friendInvited(requestId, ret_code, response, friend)
+    {
+    	var message = "";
+    	
+        if(ret_code == 0) {
+            message = "Invitation failed";
+        }
+        else {
+        	message = "Invitation succeded";
+        	friend.isGamePlayer = 1;
+        }
+        
+        this.alert(message, this.friendInvitationOK);
+    }
+    
+    public function friendInvitationOK()
+    {
+        this.screen.prepareFriendsBelt(this.friends);        	
+    }
 }
 
 /*****************************************************************************

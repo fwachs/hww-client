@@ -103,8 +103,18 @@ class MainScreen extends Screen
 
 	public function prepareFriendsBelt(friends)
 	{
+		this.getElement("friendsScroll").removeAllChildren();
+		
+		var left = this.buildFriendsBelt(friends, 20, 1, "friendSelected");
+		this.buildFriendsBelt(friends, left, 0, "inviteFriend");
+	}
+	
+	public function buildFriendsBelt(friends, leftStart, isGamePlayer, event)
+	{
+		this.getElement("friendsBeltContainer").getSprite().visible(1);
+		
 		var friendsBelt = this.getElement("friendsScroll");
-		var left = 20;
+		var left = leftStart;
 		var totalFriendsToDisplay = 10;
 		var friendsCount = len(friends);
 		
@@ -114,38 +124,28 @@ class MainScreen extends Screen
 		for(var i = 0; i < friendsCount; i++) {
 			var friend = friends[i];
 			
-			var friendParams = dict();
-			friendParams.update("left_pos", str(left));
-			friendParams.update("friend_name", friend.name);
-			friendParams.update("avatar_url", friend.avatarUrl);
-			friendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
-			friendParams.update("avatar_top", str(Game.translateY(avatarTop)));
-			friendParams.update("tap_event", "friendSelected");
-			var property = this.controlFromXMLTemplate("PapayaFriend", friendParams, "papaya-friend.xml");
-			property.tapEvent.argument = friend;
-			friendsBelt.addChild(property);
-			left += 165;
+			if(friend.isGamePlayer == isGamePlayer) {
+				var friendParams = dict();
+				friendParams.update("left_pos", str(left));
+				friendParams.update("friend_name", friend.name);
+				friendParams.update("avatar_url", friend.avatarUrl);
+				friendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
+				friendParams.update("avatar_top", str(Game.translateY(avatarTop)));
+				friendParams.update("tap_event", event);
+				if(isGamePlayer == 0) {
+					friendParams.update("invite", "yes");
+				}
+				else {
+					friendParams.update("invite", "no");
+				}
+				var property = this.controlFromXMLTemplate("PapayaFriend", friendParams, "papaya-friend.xml");
+				property.tapEvent.argument = friend;
+				friendsBelt.addChild(property);
+				left += 165;
+			}
 		}
-
-		avatarLeft = 75;
-		avatarTop = 54;
-
-		for(var j = 0; j < 3; j++) {
-			var fakeFriendParams = dict();
-			fakeFriendParams.update("left_pos", str(left));
-			fakeFriendParams.update("friend_name", "Invite");
-			fakeFriendParams.update("avatar_url", "friend-belt/friendbelt-question.png");
-			fakeFriendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
-			fakeFriendParams.update("avatar_top", str(Game.translateY(avatarTop)));
-			fakeFriendParams.update("tap_event", "inviteFriends");
-			var fakePapayaFriend = this.controlFromXMLTemplate("PapayaFriend", fakeFriendParams, "papaya-friend.xml");
-			friendsBelt.addChild(fakePapayaFriend);
-			left += 165;
-		}
-		this.getElement("friendsScroll").setContentSize(left, 185);
-		this.getElement("settingsFrame").getSprite().visible(0);
-        Game.showBanner(1, 0);
-		trace("Friends content size: ", left);
+		
+		return left;
 	}
 
 	public function showDailyBonusFrame()
