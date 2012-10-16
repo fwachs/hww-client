@@ -103,7 +103,7 @@ class Game
 		Game.screens = new Array();
 		this.animations = new Animations();
         Game.initializeServer();
-        Game.papayaUserId = 56437665; //ppy_userid();
+        Game.papayaUserId = ppy_userid();
         trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();

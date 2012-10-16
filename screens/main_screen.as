@@ -111,6 +111,7 @@ class MainScreen extends Screen
 	
 	public function buildFriendsBelt(friends, leftStart, isGamePlayer, event)
 	{
+		Game.showBanner(1, 0);
 		this.getElement("friendsBeltContainer").getSprite().visible(1);
 		
 		var friendsBelt = this.getElement("friendsScroll");
