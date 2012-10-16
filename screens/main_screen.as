@@ -120,10 +120,16 @@ class MainScreen extends Screen
 		
 		var avatarLeft = 82;
 		var avatarTop = 61;
+		var inviteVisible = "no";
+		if(isGamePlayer == 0) {
+			inviteVisible = "yes";
+		}
 		
 		for(var i = 0; i < friendsCount; i++) {
 			var friend = friends[i];
 			
+			if(friend.wasInvited == 1 && friend.isGamePlayer == 0) continue;
+						
 			if(friend.isGamePlayer == isGamePlayer) {
 				var friendParams = dict();
 				friendParams.update("left_pos", str(left));
@@ -132,12 +138,7 @@ class MainScreen extends Screen
 				friendParams.update("avatar_left", str(Game.translateX(avatarLeft)));
 				friendParams.update("avatar_top", str(Game.translateY(avatarTop)));
 				friendParams.update("tap_event", event);
-				if(isGamePlayer == 0) {
-					friendParams.update("invite", "yes");
-				}
-				else {
-					friendParams.update("invite", "no");
-				}
+				friendParams.update("invite", inviteVisible);
 				var property = this.controlFromXMLTemplate("PapayaFriend", friendParams, "papaya-friend.xml");
 				property.tapEvent.argument = friend;
 				friendsBelt.addChild(property);
@@ -147,7 +148,7 @@ class MainScreen extends Screen
 		
 		return left;
 	}
-
+	
 	public function showDailyBonusFrame()
 	{
 		var db = Game.getDatabase();
