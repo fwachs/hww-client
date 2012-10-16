@@ -53,6 +53,7 @@ class Wife
             trace("server mystery item: ", str(mysteryIds[i]));
             this.mysteryItemCollection.update(mysteryIds[i], 1);
         }
+        this.firstPlay = 0;
 	}
 	
 	public function getType()

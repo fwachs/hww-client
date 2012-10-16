@@ -44,7 +44,7 @@ class ScreenController
 	
 	public function screenPostLoaded()
 	{
-		if(this.screen.firstTime == 1) {
+		if(this.screen.firstTime == 1 && Game.sharedGame().recoveredFromServer == 0) {
 			this.showTutorial();
 		}		
 	}

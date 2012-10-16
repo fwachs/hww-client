@@ -183,7 +183,7 @@ class Screen
 	
 	public function showTutorialStep(step)
 	{
-		if(this.firstTime == 0) return;
+		if(this.firstTime == 0 || Game.sharedGame().recoveredFromServer == 1) return;
 
 		this.hideTutorial();
 		

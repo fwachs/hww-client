@@ -36,6 +36,7 @@ class Game
 	var properties;
 	var dontCloseSyncing;
 	var loadingAnimation;
+	var recoveredFromServer = 0;
 
 	public static function getPapayaUserId()
 	{
@@ -167,6 +168,8 @@ class Game
             }
             trace("### HWWW ### Synchronize onGoingSynchronization: 0");
             Game.setProperty("onGoingSynchronization", 0);
+            
+            this.recoveredFromServer = 1;
             
             //this.scene.remove(dontClose);
         }
