@@ -27,9 +27,7 @@ class Server
     public function playerStatusCallback(request_id, ret_code, response_content, params) {
         var flist = params.get("papayaUserIds");
         var response = json_loads(response_content);
-        trace("response: ", response);
         for (var i=0; i< len(flist); i++) {
-            trace("has key", str(flist[i].get("id"))+"-wife" , response.has_key(str(flist[i].get("id"))+"-wife"));
             flist[i].update("foundOnHWW", response.has_key(str(flist[i].get("id"))+"-wife"));
         }
         var mainController = params.get("mainController");
