@@ -45,7 +45,7 @@ class HouseSelectionScreen extends Screen
 		costDiamondsLabel = this.getElement("diamondsCost");
 		costGameBucksLabel = this.getElement("gameBucksCost");
 		
-		if(this.firstTime == 1) {
+		if(this.firstTime == 1 && Game.sharedGame().recoveredFromServer == 0) {
 			this.getElement("backbutton").getSprite().texture("images/wife-selection-screen/confirm-circle.png");
 		}
 	}
@@ -126,7 +126,7 @@ class HouseSelectionScreen extends Screen
 			var xmlhouse = xmlhouses[i].get("hww-config:player-house");
 			var houseattrs = xmlhouse.get("#attributes");
 			
-			if(this.firstTime == 0 || (this.firstTime == 1 && houseattrs.get("type") == "Default")) {
+			if(this.firstTime == 0 || Game.sharedGame().recoveredFromServer == 1 || (this.firstTime == 1 && houseattrs.get("type") == "Default")) {
 				var realEstate = new RealEstate();
 				realEstate.name = houseattrs.get("name");
 				realEstate.houseStyle = houseattrs.get("houseStyle");
