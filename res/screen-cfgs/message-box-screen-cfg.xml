@@ -81,12 +81,12 @@
     
     <screen:element name="sellFurniturePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="sellItemPromptFrame" resource="hubby-screen/results-box/result-frame.png" left="280" top="147"/>
-        <screen:element name="sellItemText" resource="" left="337" top="176" font-size="46" font-style="bold" width="615" height="140" text-wrap="yes">Do you want to sell this item?</screen:element>
+        <screen:element name="sellItemText" resource="" left="337" top="176" font-size="46" font-style="bold" width="615" height="140" text-wrap="yes">Sell this?</screen:element>
         <screen:element name="sellItemImage" resource="" left="545" top="240" width="200" height="200"/>
         <screen:element name="cancelSellItem" resource="enter-name/cancel-box.png" left="337" top="526" ontap="cancelMB"/>
     	<screen:element name="confirmSellItem" resource="enter-name/confirm-box.png" left="682" top="526" ontap="okMB"/>
-        <screen:element name="gameBucksIcon" resource="premium-currency-screen/game-buck.png" left="357" top="440"/>
-        <screen:element name="sellItemCostText" resource="" left="438" top="445" font-size="46" font-style="bold" width="615" height="140" text-wrap="yes">0</screen:element>
+        <screen:element name="gameBucksIcon" resource="premium-currency-screen/game-buck.png" left="519" top="445"/>
+        <screen:element name="sellItemCostText" resource="" left="600" top="445" font-size="46" font-style="bold">0</screen:element>
     </screen:element>
     
     </screen:elements>

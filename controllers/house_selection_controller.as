@@ -23,7 +23,7 @@ class HouseSelectionController extends ScreenController
 
     override public function screenLoaded()
     {
-        if(this.screen.firstTime == 1) {
+		if(this.screen.firstTime == 1 && Game.sharedGame().recoveredFromServer == 0) {
             this.displayHouse(this.screen.houseListing[0]);
             this.selectHouse();
             this.screen.getElement("tutorial-step-1").getSprite().visible(1);
