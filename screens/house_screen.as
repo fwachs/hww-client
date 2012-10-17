@@ -388,8 +388,8 @@ class HouseScreen extends Screen
 			var itemXML = 
 				"<screen:element name=\"furnitureItem\" resource=\"house-decorator/item-box-store.png\" left=\"" + str(left) + "\" top=\"15\" width=\"183\" height=\"176\" ontap=\"storageTapped\">" +
 		    	"	<screen:element name=\"itemI\" resource=\"" + furniture.image + "\" left=\"15\" top=\"15\" width=\"150\" height=\"150\"/>" +
+				"	<screen:element name=\"sellI\" resource=\"house-decorator/sell-item-solo.png\" left=\"110\" top=\"107\" ontap=\"sellItem:" + str(it.getId()) + "\"/>" +
 				"</screen:element>";
-
 
 			var item = this.controlFromXMLString(itemXML);
 			item.tapEvent.argument = it;

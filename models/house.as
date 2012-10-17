@@ -433,9 +433,14 @@ class House
     
     public function unstoreFurniture(item)
     {
+    	this.removeFromStorage(item);
+        this.putFurniture(item);
+    }
+    
+    public function removeFromStorage(item)
+    {
         this.storage.pop(item.getId());
         this.deleteStorageItem(item);
-        this.putFurniture(item);
     }
 
     public function deleteStorageItem(storageItem)
@@ -456,6 +461,17 @@ class House
     {
         this.furniture.pop(item.getId());
         this.deleteFurniture(item);
+    }
+    
+    public function sellFurniture(item)
+    {
+    	this.removeFromStorage(item);
+    	
+		var furniture = item.furnitureType;
+		var price = furniture.gameBucks / 10;
+		
+		var payment = Game.sharedGame().wallet.moneyForCurrency(price, "GameBucks");
+		var ret = Game.sharedGame().wallet.collect(payment);
     }
     
     public function flipFurniture(item)
