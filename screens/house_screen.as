@@ -27,6 +27,8 @@ class HouseScreen extends Screen
 	
 	public function redrawIso()
 	{
+		if(this.house.shouldDraw() == 0) return;
+		
 		if(this.iso != null) {
 			this.rootNode.removeChild(this.iso);
 		}
@@ -40,6 +42,8 @@ class HouseScreen extends Screen
 		this.buildCategories();
 
 		this.setWalls();
+		
+		this.house.wasDrawn();
 	}
 		
 	override public function gotFocus()
