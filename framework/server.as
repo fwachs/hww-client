@@ -25,6 +25,9 @@ class Server
     }
 
     public function playerStatusCallback(request_id, ret_code, response_content, params) {
+        if (ret_code == 0) {
+            return;
+        }
         var flist = params.get("papayaUserIds");
         var response = json_loads(response_content);
         for (var i=0; i< len(flist); i++) {
