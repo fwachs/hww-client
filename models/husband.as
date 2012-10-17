@@ -536,7 +536,7 @@ class Husband //implements DBModel
         totalVisits = husbandMap.get("totalVisits");
         requiredVisits = husbandMap.get("requiredVisits");
         rareItemThreshold = 0;
-        salaryFactor = 0;        
+        salaryFactor = 1;        
         outShopping = 0;
         outWorking = 0;
         stressCooldown = 0;

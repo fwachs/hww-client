@@ -106,7 +106,13 @@ class MainScreen extends Screen
 		this.getElement("friendsScroll").removeAllChildren();
 		
 		var left = this.buildFriendsBelt(friends, 20, 1, "friendSelected");
-		this.buildFriendsBelt(friends, left, 0, "inviteFriend");
+		left = this.buildFriendsBelt(friends, left, 0, "inviteFriend");
+		var fakeFriends = new Array();
+		for(var j = 0; j < 3; j++) {
+		    var fakeFriend = new PapayaFriend(0, "Invite", "friend-belt/friendbelt-question.png", 0, 0, 0);
+		    fakeFriends.append(fakeFriend);
+        }
+		this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriends");
 	}
 	
 	public function buildFriendsBelt(friends, leftStart, isGamePlayer, event)
