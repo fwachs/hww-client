@@ -22,7 +22,7 @@
 				
 		<screen:element name="secretButton" resource="hubby-screen/give-gift-button.png" left="645" top="515" ontap="secretButton">
 			<screen:element name="secretButtonOverlay" resource="hubby-screen/secret-text.png" left="0" top="0" visible="NO"/>
-			<screen:element name="secretButtonText" resource="" left="110" top="26" font-size="40" text-align="left" width="299" height="51">#placeholder</screen:element>
+			<screen:element name="secretButtonText" resource="" left="0" top="26" font-size="40" text-align="center" width="299" height="51">#placeholder</screen:element>
 		</screen:element>
 		
 		<screen:element name="careerStatusFrame" resource="hubby-screen/career-status-frame.png" left="595" top="190"/>
