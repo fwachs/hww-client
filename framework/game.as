@@ -304,9 +304,15 @@ class Game
     	Game.db = null;
     	Game.initializeDatabase();
     }
+    
+    public function save()
+    {
+    }
 
 	public function quit()
 	{
+		this.save();
+		
 		quitgame();
 	}
 	

@@ -302,15 +302,13 @@ class HousewifeWars extends Game
 		return gifts.values();
 	}
 
-	public function save()
+	override public function save()
 	{
-		if (wife.firstPlay == 1) {
-			this.saveWife();
-			this.saveHusband();
-			this.saveWallet();
-			this.saveRealestate();
-			this.passport.save();
-		}	
+		this.saveWife();
+		this.saveHusband();
+		this.saveWallet();
+		this.saveRealestate();
+		this.passport.save();
 	}
 
 	public function saveHusband()

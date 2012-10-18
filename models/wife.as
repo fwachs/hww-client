@@ -26,6 +26,15 @@ class Wife
 	public function Wife()
 	{
 		this.load();
+		this.cleanUnfinishedRegistration();
+	}
+	
+	public function cleanUnfinishedRegistration()
+	{
+		trace("clean unfinished reg ", this.firstPlay);
+		if(this.firstPlay == 1) {
+			Game.cleanDatabase();
+		}
 	}
 	
 	public function cleanUnfinishedRegistration()
