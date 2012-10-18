@@ -153,7 +153,7 @@ class MainController extends ScreenController
 
             var url = "http://itunes.apple.com/us/app/housewife-wars/id508200796?ls=1&mt=8";
             if (getmodel() == 6) {
-                url = "https://play.google.com/store/apps/details?id=com.twoclams.hww.android";
+                url = "https://play.google.com/store/apps/details?id=com.twoclams.hww.android.live";
             }
             Game.sharedGame().rateReward();
             openUrl(url);
