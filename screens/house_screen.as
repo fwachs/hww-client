@@ -26,8 +26,8 @@ class HouseScreen extends Screen
 	}
 	
 	public function redrawIso()
-	{
-//		if(this.house.shouldDraw() == 0) return;
+	{		
+		if(this.house.shouldDraw() == 0 && this.iso != null) return;
 		
 		if(this.iso != null) {
 			this.rootNode.removeChild(this.iso);
