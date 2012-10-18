@@ -128,6 +128,7 @@ class House
     var level;
     var remodels;
     var blueprint;
+    var mustDraw = 1;
     
     public function House()
     {
@@ -212,6 +213,18 @@ class House
     {
         this.selectedStyle = this.styles.get(styleId);
         Game.getDatabase().put("houseStyle", styleId);
+        
+        this.mustDraw = 1;
+    }
+    
+    public function wasDrawn()
+    {
+        this.mustDraw = 0;
+    }
+    
+    public function shouldDraw()
+    {
+    	return this.mustDraw;
     }
     
     public function load() 
