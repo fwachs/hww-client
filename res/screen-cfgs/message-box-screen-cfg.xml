@@ -70,7 +70,7 @@
 
     <screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="tutorialPromptFrame" resource="" left="0" top="0" ontap="doNothing"/>
-        <screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="643" ontap="dismiss"/>
+        <screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="dismiss"/>
     </screen:element>
 
     <screen:element name="darkSideChallengePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
