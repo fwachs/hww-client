@@ -128,6 +128,7 @@ class House
     var level;
     var remodels;
     var blueprint;
+    var mustDraw = 1;
     
     public function House()
     {
@@ -212,6 +213,18 @@ class House
     {
         this.selectedStyle = this.styles.get(styleId);
         Game.getDatabase().put("houseStyle", styleId);
+        
+        this.mustDraw = 1;
+    }
+    
+    public function wasDrawn()
+    {
+        this.mustDraw = 0;
+    }
+    
+    public function shouldDraw()
+    {
+    	return this.mustDraw;
     }
     
     public function load() 
@@ -433,9 +446,14 @@ class House
     
     public function unstoreFurniture(item)
     {
+    	this.removeFromStorage(item);
+        this.putFurniture(item);
+    }
+    
+    public function removeFromStorage(item)
+    {
         this.storage.pop(item.getId());
         this.deleteStorageItem(item);
-        this.putFurniture(item);
     }
 
     public function deleteStorageItem(storageItem)
@@ -456,6 +474,17 @@ class House
     {
         this.furniture.pop(item.getId());
         this.deleteFurniture(item);
+    }
+    
+    public function sellFurniture(item)
+    {
+    	this.removeFromStorage(item);
+    	
+		var furniture = item.furnitureType;
+		var price = furniture.gameBucks / 10;
+		
+		var payment = Game.sharedGame().wallet.moneyForCurrency(price, "GameBucks");
+		var ret = Game.sharedGame().wallet.collect(payment);
     }
     
     public function flipFurniture(item)

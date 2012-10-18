@@ -28,6 +28,14 @@ class Wife
 		this.load();
 	}
 	
+	public function cleanUnfinishedRegistration()
+	{
+		trace("clean unfinished reg ", this.firstPlay);
+		if(this.firstPlay == 1) {
+			Game.cleanDatabase();
+		}
+	}
+	
 	public function loadFromJSON(bestWife)
 	{
 		this.name = bestWife.get("name");
@@ -45,6 +53,7 @@ class Wife
             trace("server mystery item: ", str(mysteryIds[i]));
             this.mysteryItemCollection.update(mysteryIds[i], 1);
         }
+        this.firstPlay = 0;
 	}
 	
 	public function getType()
@@ -306,6 +315,7 @@ class Wife
 		hairStyle = wifeMap.get("hairStyle");
 		hairColor = wifeMap.get("hairColor");
 		skinTone = wifeMap.get("skinTone");
+		firstPlay = wifeMap.get("firstPlay");
 		socialStatusPoints = wifeMap.get("socialStatusPoints");
 		if (socialStatusPoints == null) {
             socialStatusPoints = 0;
@@ -328,9 +338,16 @@ class Wife
         }
 	}
 	
+	public function registrationDone()
+	{
+		trace("Registration done!");
+		
+		this.firstPlay = 0;
+		this.save();
+	}
+	
     public function save()
     {
-    	firstPlay = 0;
         var papayaUserId = Game.getPapayaUserId();
         var serializedWife = this.serialize();
         trace("### HWW ### - Saving Wife:", str(serializedWife));
@@ -359,6 +376,7 @@ class Wife
         wifeArray.append(["hairStyle", hairStyle]);
         wifeArray.append(["hairColor", hairColor]);
         wifeArray.append(["skinTone", skinTone]);
+        wifeArray.append(["firstPlay", firstPlay]);
         if (socialStatusPoints == null) {
             socialStatusPoints = 0;
         }

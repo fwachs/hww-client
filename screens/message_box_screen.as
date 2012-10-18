@@ -41,6 +41,8 @@ class MessageBoxScreen extends Screen
     static var MB_GotBusted = 27;
     static var MB_DarkSideChallenge = 28;
     static var MB_DarkSideLetter = 29;
+    static var MB_BasicAccept = 30;
+    static var MB_SellFurniture = 31;
 
     var type;
     var argument;
@@ -192,6 +194,12 @@ class MessageBoxScreen extends Screen
             promptBG.texture("images/dark-side/darkside-intro-02.png");
             promptBG.pos(0, 0);
         }
+        else if(this.type == MessageBoxScreen.MB_BasicAccept) {
+            displayOkayPrompt(this.argument, "okay-button-alert");
+        }
+        else if(this.type == MessageBoxScreen.MB_SellFurniture) {
+        	displaySellItemPrompt();
+        }
     }
 
     public function displayDarkSideChallengePrompt()
@@ -229,5 +237,15 @@ class MessageBoxScreen extends Screen
     {
         this.getElement("tutorialPrompt").getSprite().texture(tutorialImage);
         this.getElement("tutorialPrompt").getSprite().visible(1);
+    }
+
+    public function displaySellItemPrompt()
+    {
+		var furniture = this.argument.furnitureType;
+		var price = furniture.gameBucks / 10;
+		
+        this.getElement("sellFurniturePrompt").getSprite().visible(1);
+        this.getElement("sellItemImage").getSprite().texture("images/" + furniture.image);
+        this.getElement("sellItemCostText").setText(str(price));
     }
 }

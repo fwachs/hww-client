@@ -44,7 +44,7 @@ class ScreenController
 	
 	public function screenPostLoaded()
 	{
-		if(this.screen.firstTime == 1) {
+		if(this.screen.firstTime == 1 && Game.sharedGame().recoveredFromServer == 0) {
 			this.showTutorial();
 		}		
 	}
@@ -115,6 +115,15 @@ class ScreenController
 		promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
 		promptScreen.okCallBack = okCallBack;
 		promptScreen.cancelCallBack = cancelCallBack;
+		
+		this.presentModalScreen(promptScreen);
+	}
+	
+	public function alert(text, doneCallBack = null)
+	{
+		var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_BasicAccept, text);
+		promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+		promptScreen.okCallBack = doneCallBack;
 		
 		this.presentModalScreen(promptScreen);
 	}

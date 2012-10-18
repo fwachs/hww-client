@@ -26,7 +26,9 @@ class HouseScreen extends Screen
 	}
 	
 	public function redrawIso()
-	{
+	{		
+		if(this.house.shouldDraw() == 0 && this.iso != null) return;
+		
 		if(this.iso != null) {
 			this.rootNode.removeChild(this.iso);
 		}
@@ -40,6 +42,8 @@ class HouseScreen extends Screen
 		this.buildCategories();
 
 		this.setWalls();
+		
+		this.house.wasDrawn();
 	}
 		
 	override public function gotFocus()
@@ -389,12 +393,13 @@ class HouseScreen extends Screen
 				"<screen:element name=\"furnitureItem\" resource=\"house-decorator/item-box-store.png\" left=\"" + str(left) + "\" top=\"15\" width=\"183\" height=\"176\" ontap=\"storageTapped\">" +
 		    	"	<screen:element name=\"itemI\" resource=\"" + furniture.image + "\" left=\"15\" top=\"15\" width=\"150\" height=\"150\"/>" +
 				"</screen:element>";
-
-
 			var item = this.controlFromXMLString(itemXML);
 			item.tapEvent.argument = it;
-
 			furnitureBar.addChild(item);
+
+			itemXML = "<screen:element name=\"sellI\" resource=\"house-decorator/sell-item-solo.png\" left=\"" + str(left + 110) + "\" top=\"122\" ontap=\"sellItem:" + str(it.getId()) + "\"/>";
+			item = this.controlFromXMLString(itemXML);
+			furnitureBar.addChild(item);			
 			
 			left += 200;
 		}

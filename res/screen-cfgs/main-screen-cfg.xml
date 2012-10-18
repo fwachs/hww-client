@@ -5,8 +5,6 @@
 	
 		<screen:element name="background" resource="main-menu/main-menu-screen.png" left="0" top="0"/>
 
-		<screen:element name="ppyCircle" resource="main-menu/feedback.png" left="1020" top="697" ontap="gotoPapayaCircle"/>
-
 		<screen:element name="giftsIcon" resource="gift-others-prompt/gift-received-iconv2.png" left="100" top="280" ontap="showGiftOthersStep" visible="NO" z-index="10" >
 			<screen:element name="giftsCount" resource="" left="50" top="14" font-size="32" font-style="bold" text-align="center" width="36" height="41" z-index="999">#number_placeholder</screen:element>
 		</screen:element>
@@ -69,7 +67,7 @@
 			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="976" top="94" ontap="closeSettings"/>
 		</screen:element>
 
-		<screen:element name="dailyBonusFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="78" top="125" visible="NO" z-index="100">
+		<screen:element name="dailyBonusFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="78" top="125" visible="NO" z-index="100" ontap="doNothing">
 			<screen:element name="closeDailyBonusButton" resource="gift-shop-prompt/cancel-button.png" left="1125" top="-30" ontap="hideDailyBonusFrame" z-index="100"/>
 			<screen:element name="todayBonusBox" resource="daily-bonus-prompt/today-bonus-box.png" left="67" top="21">
 				<screen:element name="todayBonusText" resource="daily-bonus-prompt/daily-bonus-text.png" left="152" top="3"/>
@@ -97,7 +95,7 @@
 
 		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
         	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/mainmenu-tutorial-01.png" left="0" top="0" ontap="doNothing"/>
-        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="665" ontap="nextTutorial"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="nextTutorial"/>
     	</screen:element>
 	</screen:elements>
 	

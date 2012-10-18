@@ -662,6 +662,8 @@ class IsometricItem extends Control
 		var size = this.getSprite().size();
 		var pos = this.getSprite().pos();
 		
+		trace("moveEditingUI: ", size, pos);
+		
 		var middleX = pos[0] + size[0] / 2;
 		var topY = pos[1] - Game.translateY(85);
 		
@@ -706,6 +708,13 @@ class IsometricItem extends Control
 		this.acceptButton.getSprite().visible(this.editUIIsVisible);
 		this.cancelButton.getSprite().visible(this.editUIIsVisible);
 		this.flippButton.getSprite().visible(this.editUIIsVisible);
+
+		var size = this.getSprite().size();
+		var pos = this.getSprite().pos();
+		
+		trace("toggleEditingUI: ", size, pos);
+		
+		this.moveEditingUI();
 	}
 	
 	public function swapWidthAndDepth()

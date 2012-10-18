@@ -4,7 +4,7 @@
 
 	<hww-config:furniture-category name="Furniture" image="images/house-decorator/furniture-icon.png">
 		<hww-config:furniture-sub-category name="Chairs" image="images/house-decorator/icons/chair-icon.png">
-			<hww-config:furniture id="21" name="Blue Plush" image="furniture/chairs/021_Chair.png" width="1" depth="1" level="1" gameBucks="150" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="21" name="Blue Plush" image="furniture/chairs/021_Chair.png" width="1" depth="1" level="1" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="27" name="Unfinished" image="furniture/chairs/027_Chair.png" width="1" depth="1" level="2" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="33" name="Barstool" image="furniture/chairs/033_Chair.png" width="1" depth="1" level="6" gameBucks="600" diamonds="0" stars="0" points="5" remodelRequirement="2" />
 			<hww-config:furniture id="22" name="White Leather" image="furniture/chairs/022_Chair.png" width="1" depth="1" level="9" gameBucks="1200" diamonds="0" stars="0" points="5" remodelRequirement="2" />
@@ -28,7 +28,7 @@
 		
 		<hww-config:furniture-sub-category name="Coffee Tables" image="images/house-decorator/icons/coffeetable-icon.png">
 			<hww-config:furniture id="91" name="Black Coffee" image="furniture/coffee tables/091_Coffee.png" width="2" depth="1" level="2" gameBucks="350" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="92" name="Blue Coffee" image="furniture/coffee tables/092_Coffee.png" width="2" depth="1" level="3" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="92" name="Blue Coffee" image="furniture/coffee tables/092_Coffee.png" width="2" depth="1" level="3" gameBucks="800" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="93" name="Wood" image="furniture/coffee tables/093_Coffee.png" width="2" depth="1" level="8" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="2" />
 			<hww-config:furniture id="94" name="Starter" image="furniture/coffee tables/094_Coffee.png" width="2" depth="1" level="10" gameBucks="1500" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="95" name="Country" image="furniture/coffee tables/095_Coffee.png" width="2" depth="1" level="20" gameBucks="4000" diamonds="3" stars="0" points="15" remodelRequirement="3" />
@@ -40,14 +40,14 @@
 			<hww-config:furniture id="101" name="Medieval" image="furniture/coffee tables/101_Coffee.png" width="2" depth="1" level="60" gameBucks="25000" diamonds="12" stars="2" points="49" remodelRequirement="3" />
 			<hww-config:furniture id="102" name="Animal" image="furniture/coffee tables/102_Coffee.png" width="2" depth="1" level="70" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="103" name="Ebony Lacquer" image="furniture/coffee tables/103_Coffee.png" width="2" depth="2" level="80" gameBucks="35000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
-<!--				<hww-config:furniture id="104" name="" image="" width="2" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="105" name="" image="" width="2" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="104" name="Japanese" image="furniture/coffee tables/104_Coffee.png" width="2" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="105" name="Futuristic" image="furniture/coffee tables/105_Coffee.png" width="1" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" /> 
 		</hww-config:furniture-sub-category>
 	
 		<hww-config:furniture-sub-category name="Beds" image="images/house-decorator/icons/beds-icon.png">
-			<hww-config:furniture id="1" name="Basic Twin PK" image="furniture/beds/001_Bed.png" width="3" depth="2" level="1" gameBucks="200" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="2" name="Basic Twin BL" image="furniture/beds/002_Bed.png" width="3" depth="2" level="2" gameBucks="200" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="3" name="Basic Queen" image="furniture/beds/003_Bed.png" width="3" depth="3" level="2" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="1" name="Basic Twin PK" image="furniture/beds/001_Bed.png" width="3" depth="2" level="1" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="2" name="Basic Twin BL" image="furniture/beds/002_Bed.png" width="3" depth="2" level="2" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="3" name="Basic Queen" image="furniture/beds/003_Bed.png" width="3" depth="3" level="2" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="6" name="Old Fashioned" image="furniture/beds/006_Bed.png" width="3" depth="3" level="3" gameBucks="700" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="11" name="Froggy" image="furniture/beds/011_Bed.png" width="3" depth="2" level="4" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="14" name="Basic Crib" image="furniture/beds/014_Crib.png" width="2" depth="1" level="6" gameBucks="550" diamonds="0" stars="0" points="5" remodelRequirement="2" />
@@ -69,8 +69,8 @@
 
 		<hww-config:furniture-sub-category name="Sofas" image="images/house-decorator/icons/sofa-icon.png">
 			<hww-config:furniture id="41" name="Loveseat" image="furniture/sofas/041_Sofa.png" width="3" depth="1" level="1" gameBucks="250" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="42" name="Baby Blue" image="furniture/sofas/042_Sofa.png" width="2" depth="1" level="2" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="43" name="Starter" image="furniture/sofas/043_Sofa.png" width="2" depth="1" level="3" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="42" name="Baby Blue" image="furniture/sofas/042_Sofa.png" width="2" depth="1" level="2" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="43" name="Starter" image="furniture/sofas/043_Sofa.png" width="2" depth="1" level="3" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="44" name="Old English" image="furniture/sofas/044_Sofa.png" width="2" depth="1" level="10" gameBucks="1700" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="45" name="Country" image="furniture/sofas/045_Sofa.png" width="2" depth="3" level="10" gameBucks="1700" diamonds="2" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="46" name="Scandinavian" image="furniture/sofas/046_Sofa.png" width="2" depth="1" level="20" gameBucks="4000" diamonds="2" stars="0" points="15" remodelRequirement="3" />
@@ -85,14 +85,14 @@
 			<hww-config:furniture id="55" name="Red Divine" image="furniture/sofas/055_Sofa.png" width="3" depth="1" level="65" gameBucks="8000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
 			<hww-config:furniture id="56" name="Ebony Lacquer" image="furniture/sofas/056_Sofa.png" width="3" depth="1" level="70" gameBucks="10000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="57" name="Deep Plum" image="furniture/sofas/057_Sofa.png" width="3" depth="1" level="75" gameBucks="12000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  
-<!--				<hww-config:furniture id="58" name="" image="" width="2" depth="1" level="75" gameBucks="12000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  -->
+			<hww-config:furniture id="58" name="Japanese" image="furniture/sofas/058_Sofa.png" width="3" depth="2" level="75" gameBucks="12000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  
 			<hww-config:furniture id="59" name="Elizabethan" image="furniture/sofas/059_Sofa.png" width="3" depth="1" level="80" gameBucks="15000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
-<!--				<hww-config:furniture id="60" name="" image="" width="2" depth="1" level="80" gameBucks="25000" diamonds="24" stars="3" points="90" remodelRequirement="3" />  -->
+			<hww-config:furniture id="60" name="Futuristic" image="furniture/sofas/060_Sofa.png" width="3" depth="1" level="80" gameBucks="25000" diamonds="24" stars="3" points="90" remodelRequirement="3" /> 
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Dressers" image="images/house-decorator/icons/dresser-icon.png">
-			<hww-config:furniture id="61" name="Flower Power" image="furniture/dressers/061_Dresser.png" width="2" depth="1" level="2" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="62" name="Tansu" image="furniture/dressers/062_Dresser.png" width="2" depth="1" level="4" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="61" name="Flower Power" image="furniture/dressers/061_Dresser.png" width="2" depth="1" level="2" gameBucks="800" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="62" name="Tansu" image="furniture/dressers/062_Dresser.png" width="2" depth="1" level="4" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="63" name="Starter" image="furniture/dressers/063_Dresser.png" width="2" depth="1" level="10" gameBucks="1700" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="64" name="Country" image="furniture/dressers/064_Dresser.png" width="3" depth="1" level="10" gameBucks="1700" diamonds="2" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="65" name="Scandinavian" image="furniture/dressers/065_Dresser.png" width="1" depth="1" level="25" gameBucks="3000" diamonds="3" stars="0" points="15" remodelRequirement="3" />
@@ -100,34 +100,34 @@
 			<hww-config:furniture id="67" name="Retro" image="furniture/dressers/067_Dresser.png" width="2" depth="1" level="40" gameBucks="7000" diamonds="4" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="68" name="Medieval" image="furniture/dressers/068_Dresser.png" width="2" depth="1" level="45" gameBucks="8500" diamonds="0" stars="0" points="25" remodelRequirement="3" />  
 			<hww-config:furniture id="69" name="Animal" image="furniture/dressers/069_Dresser.png" width="2" depth="1" level="50" gameBucks="9000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  
-<!--				<hww-config:furniture id="70" name="" image="" width="2" depth="1" level="55" gameBucks="11000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  -->
+			<hww-config:furniture id="70" name="Chestnut" image="furniture/dressers/070_Dresser.png" width="2" depth="1" level="55" gameBucks="11000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  
 			<hww-config:furniture id="71" name="Ebony Lacquer" image="furniture/dressers/071_Dresser.png" width="2" depth="1" level="60" gameBucks="12000" diamonds="6" stars="1" points="42" remodelRequirement="3" /> 
-<!--				<hww-config:furniture id="72" name="" image="" width="2" depth="1" level="65" gameBucks="13000" diamonds="12" stars="2" points="49" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="73" name="" image="" width="2" depth="1" level="70" gameBucks="14000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="74" name="" image="" width="2" depth="1" level="75" gameBucks="15000" diamonds="21" stars="3" points="80" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="75" name="" image="" width="2" depth="1" level="80" gameBucks="20000" diamonds="24" stars="3" points="90" remodelRequirement="3" />  -->
+			<hww-config:furniture id="72" name="Black and White" image="furniture/dressers/072_Dresser.png" width="2" depth="1" level="65" gameBucks="13000" diamonds="12" stars="2" points="49" remodelRequirement="3" />
+			<hww-config:furniture id="73" name="Japanese" image="furniture/dressers/073_Dresser.png" width="2" depth="1" level="70" gameBucks="14000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
+			<hww-config:furniture id="74" name="Old English" image="furniture/dressers/074_Dresser.png" width="1" depth="2" level="75" gameBucks="15000" diamonds="21" stars="3" points="80" remodelRequirement="3" />
+			<hww-config:furniture id="75" name="Futuristic" image="furniture/dressers/075_Dresser.png" width="2" depth="1" level="80" gameBucks="20000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Dining Tables" image="images/house-decorator/icons/dining-icon.png">
-			<hww-config:furniture id="76" name="Starter" image="furniture/dining tables/076_Dining.png" width="3" depth="3" level="1" gameBucks="400" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="76" name="Starter" image="furniture/dining tables/076_Dining.png" width="3" depth="3" level="1" gameBucks="1000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="77" name="Country" image="furniture/dining tables/077_Dining.png" width="3" depth="3" level="10" gameBucks="1800" diamonds="2" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="78" name="Scandinavian" image="furniture/dining tables/078_Dining.png" width="3" depth="3" level="20" gameBucks="3500" diamonds="2" stars="0" points="15" remodelRequirement="3" />
 			<hww-config:furniture id="79" name="Light Blue" image="furniture/dining tables/079_Dining.png" width="3" depth="3" level="30" gameBucks="4500" diamonds="0" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="80" name="Wood" image="furniture/dining tables/080_Dining.png" width="3" depth="3" level="35" gameBucks="7500" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="81" name="Princess" image="furniture/dining tables/081_Dining.png" width="3" depth="3" level="40" gameBucks="9000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
+			<hww-config:furniture id="81" name="Princess" image="furniture/dining tables/081_Dining.png" width="3" depth="3" level="40" gameBucks="9000" diamonds="3" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="82" name="Charcoal" image="furniture/dining tables/082_Dining.png" width="3" depth="3" level="45" gameBucks="10000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="83" name="Retro" image="furniture/dining tables/083_Dining.png" width="3" depth="3" level="50" gameBucks="12000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-<!--				<hww-config:furniture id="84" name="" image="" width="3" depth="3" level="55" gameBucks="15000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  -->
+			<hww-config:furniture id="84" name="Dark Chestnut" image="furniture/dining tables/084_Dining.png" width="2" depth="2" level="55" gameBucks="15000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  
 			<hww-config:furniture id="85" name="Medieval" image="furniture/dining tables/085_Dining.png" width="3" depth="3" level="60" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  
-<!--				<hww-config:furniture id="86" name="" image="" width="3" depth="3" level="65" gameBucks="20000" diamonds="12" stars="2" points="49" remodelRequirement="3" />  -->
+			<hww-config:furniture id="86" name="Spring Accent" image="furniture/dining tables/086_Dining.png" width="2" depth="2" level="65" gameBucks="20000" diamonds="12" stars="2" points="49" remodelRequirement="3" />  
 			<hww-config:furniture id="87" name="Animal" image="furniture/dining tables/087_Dining.png" width="3" depth="3" level="70" gameBucks="25000" diamonds="14" stars="2" points="56" remodelRequirement="3" /> 
-<!--				<hww-config:furniture id="88" name="" image="" width="3" depth="3" level="75" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="89" name="" image="" width="3" depth="3" level="80" gameBucks="45000" diamonds="24" stars="3" points="90" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="90" name="" image="" width="3" depth="3" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="88" name="Ebony Lacquer" image="furniture/dining tables/088_Dining.png" width="3" depth="3" level="75" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
+			<hww-config:furniture id="89" name="Japanese" image="furniture/dining tables/089_Dining.png" width="3" depth="3" level="80" gameBucks="45000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
+			<hww-config:furniture id="90" name="Futuristic" image="furniture/dining tables/090_Dining.png" width="3" depth="3" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Shelves" image="images/house-decorator/icons/shelf-icon.png">
-			<hww-config:furniture id="106" name="Basic" image="furniture/shelves/106_Shelf.png" width="1" depth="1" level="1" gameBucks="100" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="106" name="Basic" image="furniture/shelves/106_Shelf.png" width="1" depth="1" level="1" gameBucks="300" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="107" name="Starter" image="furniture/shelves/107_Shelf.png" width="3" depth="1" level="4" gameBucks="450" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="108" name="Country" image="furniture/shelves/108_Shelf.png" width="2" depth="1" level="10" gameBucks="1400" diamonds="2" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="109" name="Dark Oak" image="furniture/shelves/109_Shelf.png" width="3" depth="1" level="25" gameBucks="6000" diamonds="0" stars="0" points="15" remodelRequirement="3" />
@@ -136,12 +136,12 @@
 			<hww-config:furniture id="112" name="Princess" image="furniture/shelves/112_Shelf.png" width="2" depth="1" level="40" gameBucks="8000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="113" name="Chatty" image="furniture/shelves/113_Shelf.png" width="2" depth="1" level="45" gameBucks="10000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="114" name="Retro" image="furniture/shelves/114_Shelf.png" width="3" depth="1" level="50"  gameBucks="15000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-<!--				<hww-config:furniture id="115" name="" image="" width="3" depth="1" level="55" gameBucks="20000" diamonds="10" stars="2" points="42" remodelRequirement="3" />  -->
+			<hww-config:furniture id="115" name="Imperial" image="furniture/shelves/115_Shelf.png" width="3" depth="1" level="55" gameBucks="20000" diamonds="10" stars="2" points="42" remodelRequirement="3" />
 			<hww-config:furniture id="116" name="Medieval" image="furniture/shelves/116_Shelf.png" width="3" depth="1" level="60" gameBucks="25000" diamonds="12" stars="2" points="49" remodelRequirement="3" />  
 			<hww-config:furniture id="117" name="Animal" image="furniture/shelves/117_Shelf.png" width="2" depth="1" level="70" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  
 			<hww-config:furniture id="118" name="Ebony Lacquer" image="furniture/shelves/118_Shelf.png" width="2" depth="1" level="80" gameBucks="35000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
-<!--				<hww-config:furniture id="119" name="" image="" width="3" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="120" name="" image="" width="3" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="119" name="Japanese" image="furniture/shelves/119_Shelf.png" width="1" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="120" name="Futuristic" image="furniture/shelves/120_Shelf.png" width="1" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 	
@@ -173,7 +173,7 @@
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Cabinets" image="images/house-decorator/icons/cabinet-icon.png">
-			<hww-config:furniture id="141" name="Starter" image="furniture/cabinets/141_Cabinet.png" width="3" depth="1" level="1" gameBucks="700" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="141" name="Starter" image="furniture/cabinets/141_Cabinet.png" width="3" depth="1" level="1" gameBucks="3000" diamonds="0" stars="0" points="5" remodelRequirement="0" />
 			<hww-config:furniture id="142" name="Country" image="furniture/cabinets/142_Cabinet.png" width="3" depth="1" level="20" gameBucks="7000" diamonds="3" stars="0" points="15" remodelRequirement="3" />
 			<hww-config:furniture id="143" name="Scandinavian" image="furniture/cabinets/143_Cabinet.png" width="3" depth="1" level="30" gameBucks="10000" diamonds="3" stars="1" points="24" remodelRequirement="3" />
 			<hww-config:furniture id="144" name="Princess" image="furniture/cabinets/144_Cabinet.png" width="3" depth="1" level="40" gameBucks="12000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
@@ -181,14 +181,14 @@
 			<hww-config:furniture id="146" name="Medieval" image="furniture/cabinets/146_Cabinet.png" width="3" depth="1" level="60" gameBucks="20000" diamonds="12" stars="2" points="49" remodelRequirement="3" />
 			<hww-config:furniture id="147" name="Animal" image="furniture/cabinets/147_Cabinet.png" width="3" depth="1" level="70" gameBucks="25000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="148" name="Ebony Lacquer" image="furniture/cabinets/148_Cabinet.png" width="3" depth="1" level="80" gameBucks="30000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
-<!--				<hww-config:furniture id="149" name="" image="" width="3" depth="1" level="90" gameBucks="45000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="150" name="" image="" width="3" depth="1" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="149" name="Japanese" image="furniture/cabinets/149_Cabinet.png" width="3" depth="1" level="90" gameBucks="45000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="150" name="Futuristic" image="furniture/cabinets/150_Cabinet.png" width="3" depth="2" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" /> 
 		</hww-config:furniture-sub-category>
 	
 		<hww-config:furniture-sub-category name="Floor" image="images/house-decorator/icons/flooring-icon.png" >
-			<hww-config:furniture id="171" name="Beige" image="furniture/flooring/171_Floor.png" width="2" depth="2" level="1" gameBucks="40" diamonds="0" stars="0" points="1" remodelRequirement="0" />
-			<hww-config:furniture id="172" name="Grey" image="furniture/flooring/172_Floor.png" width="2" depth="2" level="3" gameBucks="100" diamonds="0" stars="0" points="1" remodelRequirement="0" />
-			<hww-config:furniture id="173" name="Blue Shag" image="furniture/flooring/173_Floor.png" width="2" depth="2" level="5" gameBucks="300" diamonds="0" stars="0" points="1" remodelRequirement="2" />
+			<hww-config:furniture id="171" name="Beige" image="furniture/flooring/171_Floor.png" width="2" depth="2" level="1" gameBucks="1000" diamonds="0" stars="0" points="1" remodelRequirement="0" />
+			<hww-config:furniture id="172" name="Grey" image="furniture/flooring/172_Floor.png" width="2" depth="2" level="3" gameBucks="1200" diamonds="0" stars="0" points="1" remodelRequirement="0" />
+			<hww-config:furniture id="173" name="Blue Shag" image="furniture/flooring/173_Floor.png" width="2" depth="2" level="5" gameBucks="1500" diamonds="0" stars="0" points="1" remodelRequirement="2" />
 			<hww-config:furniture id="174" name="Green Shag" image="furniture/flooring/174_Floor.png" width="2" depth="2" level="7" gameBucks="500" diamonds="1" stars="0" points="1" remodelRequirement="2" />
 			<hww-config:furniture id="175" name="White Carpet" image="furniture/flooring/175_Floor.png" width="2" depth="2" level="10" gameBucks="800" diamonds="2" stars="0" points="2" remodelRequirement="3" />
 			<hww-config:furniture id="176" name="Dark Blue Tile" image="furniture/flooring/176_Floor.png" width="2" depth="2" level="15" gameBucks="1100" diamonds="2" stars="0" points="2" remodelRequirement="3" />
@@ -211,16 +211,16 @@
 	
 	<hww-config:furniture-category name="Dècor" image="images/house-decorator/Decor-icon.png">
 		<hww-config:furniture-sub-category name="Lamps" image="images/house-decorator/icons/lamp-icon.png">
-			<hww-config:furniture id="201" name="Starter" image="furniture/lamps/201_Lamp.png" width="1" depth="1" level="3" gameBucks="50" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-			<hww-config:furniture id="202" name="Country" image="furniture/lamps/202_Lamp.png" width="1" depth="1" level="5" gameBucks="100" diamonds="1" stars="0" points="5" remodelRequirement="2" />
-			<hww-config:furniture id="203" name="Scandinavian" image="furniture/lamps/203_Lamp.png" width="1" depth="1" level="7" gameBucks="200" diamonds="1" stars="0" points="5" remodelRequirement="2" />
-			<hww-config:furniture id="204" name="Princess" image="furniture/lamps/204_Lamp.png" width="1" depth="1" level="10" gameBucks="500" diamonds="0" stars="0" points="10" remodelRequirement="3" />
+			<hww-config:furniture id="201" name="Starter" image="furniture/lamps/201_Lamp.png" width="1" depth="1" level="3" gameBucks="250" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+			<hww-config:furniture id="202" name="Country" image="furniture/lamps/202_Lamp.png" width="1" depth="1" level="5" gameBucks="400" diamonds="1" stars="0" points="5" remodelRequirement="2" />
+			<hww-config:furniture id="203" name="Scandinavian" image="furniture/lamps/203_Lamp.png" width="1" depth="1" level="7" gameBucks="1000" diamonds="1" stars="0" points="5" remodelRequirement="2" />
+			<hww-config:furniture id="204" name="Princess" image="furniture/lamps/204_Lamp.png" width="1" depth="1" level="10" gameBucks="1500" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="205" name="Retro" image="furniture/lamps/205_Lamp.png" width="1" depth="1" level="20" gameBucks="1000" diamonds="2" stars="0" points="15" remodelRequirement="3" />
 			<hww-config:furniture id="206" name="Medieval" image="furniture/lamps/206_Lamp.png" width="1" depth="1" level="25" gameBucks="1500" diamonds="2" stars="1" points="18" remodelRequirement="3" />
 			<hww-config:furniture id="207" name="Animal" image="furniture/lamps/207_Lamp.png" width="1" depth="1" level="35" gameBucks="2000" diamonds="3" stars="1" points="24" remodelRequirement="3" />
 			<hww-config:furniture id="208" name="Ebony Lacquer" image="furniture/lamps/208_Lamp.png" width="1" depth="1" level="45" gameBucks="2500" diamonds="8" stars="2" points="35" remodelRequirement="3" />
 			<hww-config:furniture id="209" name="Japanese" image="furniture/lamps/209_Lamp.png" width="1" depth="1" level="50" gameBucks="3000" diamonds="10" stars="2" points="42" remodelRequirement="3" />
-<!--				<hww-config:furniture id="210" name="" image="" width="1" depth="1" level="55" gameBucks="3500" diamonds="15" stars="3" points="60" remodelRequirement="3" />  -->
+			<hww-config:furniture id="210" name="Futuristic" image="furniture/lamps/210_Lamp.png" width="2" depth="1" level="55" gameBucks="3500" diamonds="15" stars="3" points="60" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Mirrors" image="images/house-decorator/icons/mirror-icon.png">
@@ -273,10 +273,10 @@
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Plants" image="images/house-decorator/icons/plant-icon.png">
-			<hww-config:furniture id="221" name="Sprout" image="furniture/Plants/221_Plant.png" width="1" depth="1" level="1" gameBucks="50" diamonds="0" stars="0" points="5" remodelRequirement="0" />
-<!--				<hww-config:furniture id="222" name="" image="" width="1" depth="1" level="5" gameBucks="100" diamonds="0" stars="0" points="5" remodelRequirement="2" />  -->
-			<hww-config:furniture id="223" name="Fire Lily" image="furniture/Plants/223_Plant.png" width="1" depth="1" level="10" gameBucks="500" diamonds="0" stars="0" points="10" remodelRequirement="3" />
-			<hww-config:furniture id="224" name="Yellow Pansies" image="furniture/Plants/224_Plant.png" width="1" depth="1" level="15" gameBucks="750" diamonds="0" stars="0" points="10" remodelRequirement="3" />
+			<hww-config:furniture id="221" name="Sprout" image="furniture/Plants/221_Plant.png" width="1" depth="1" level="1" gameBucks="300" diamonds="0" stars="0" points="5" remodelRequirement="0" />
+<!--				<hww-config:furniture id="222" name="" image="" width="1" depth="1" level="5" gameBucks="600" diamonds="0" stars="0" points="5" remodelRequirement="2" />  -->
+			<hww-config:furniture id="223" name="Fire Lily" image="furniture/Plants/223_Plant.png" width="1" depth="1" level="10" gameBucks="800" diamonds="0" stars="0" points="10" remodelRequirement="3" />
+			<hww-config:furniture id="224" name="Yellow Pansies" image="furniture/Plants/224_Plant.png" width="1" depth="1" level="15" gameBucks="900" diamonds="0" stars="0" points="10" remodelRequirement="3" />
 			<hww-config:furniture id="225" name="Oasis" image="furniture/Plants/225_Plant.png" width="1" depth="1" level="20" gameBucks="1000" diamonds="0" stars="0" points="15" remodelRequirement="3" />
 			<hww-config:furniture id="226" name="Tropical" image="furniture/Plants/226_Plant.png" width="1" depth="1" level="25" gameBucks="1500" diamonds="0" stars="0" points="15" remodelRequirement="3" />
 			<hww-config:furniture id="227" name="Braided" image="furniture/Plants/227_Plant.png" width="1" depth="1" level="30" gameBucks="2000" diamonds="3" stars="1" points="24" remodelRequirement="3" />
@@ -296,26 +296,27 @@
 			<hww-config:furniture id="248" name="Sedan" image="furniture/cars/248_Car.png" width="4" depth="2" level="30" gameBucks="25000" diamonds="3" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="249" name="Sports" image="furniture/cars/249_Car.png" width="4" depth="2" level="40" gameBucks="30000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="250" name="SUV" image="furniture/cars/250_Car.png" width="3" depth="3" level="50" gameBucks="35000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-<!--				<hww-config:furniture id="251" name="" image="" width="0" depth="0" level="60" gameBucks="40000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  -->
+			<hww-config:furniture id="251" name="Lady Racer" image="furniture/cars/251_Car.png" width="4" depth="2" level="60" gameBucks="40000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  
 			<hww-config:furniture id="252" name="Electric" image="furniture/cars/252_Car.png" width="3" depth="2" level="70" gameBucks="45000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="253" name="Luxury" image="furniture/cars/253_Car.png" width="4" depth="2" level="80" gameBucks="50000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
-<!--				<hww-config:furniture id="254" name="" image="" width="0" depth="0" level="90" gameBucks="60000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="255" name="" image="" width="0" depth="0" level="100" gameBucks="70000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="254" name="Sunlight Racer" image="furniture/cars/254_Car.png" width="4" depth="2" level="90" gameBucks="60000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="255" name="HWW Van" image="furniture/cars/255_Car.png" width="4" depth="2" level="100" gameBucks="70000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
+			<hww-config:furniture id="401" name="Pink Pug" image="furniture/cars/256_Car.png" width="3" depth="2" level="1" gameBucks="1" diamonds="0" stars="3" points="1" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
 
 	<hww-config:furniture-category name="Fancy Stuff" image="images/house-decorator/Fancy-stuff-icon.png">
 		<hww-config:furniture-sub-category name="Vanity" image="images/house-decorator/icons/vanity-icon.png">
-			<hww-config:furniture id="256" name="Starter" image="furniture/vanity/256_Vanity.png" width="2" depth="2" level="30" gameBucks="1500" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="257" name="Country" image="furniture/vanity/257_Vanity.png" width="2" depth="2" level="35" gameBucks="3500" diamonds="4" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="258" name="Scandinavian" image="furniture/vanity/258_Vanity.png" width="3" depth="2" level="40" gameBucks="5000" diamonds="4" stars="0" points="25" remodelRequirement="3" />
+			<hww-config:furniture id="256" name="Starter" image="furniture/vanity/256_Vanity.png" width="2" depth="2" level="30" gameBucks="3000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="257" name="Country" image="furniture/vanity/257_Vanity.png" width="2" depth="2" level="35" gameBucks="4000" diamonds="4" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="258" name="Scandinavian" image="furniture/vanity/258_Vanity.png" width="3" depth="2" level="40" gameBucks="7000" diamonds="4" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="259" name="Princess" image="furniture/vanity/259_Vanity.png" width="2" depth="2" level="45" gameBucks="8000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="260" name="Retro" image="furniture/vanity/260_Vanity.png" width="2" depth="2" level="50" gameBucks="10000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
 			<hww-config:furniture id="261" name="Medieval" image="furniture/vanity/261_Vanity.png" width="3" depth="2" level="60" gameBucks="15000" diamonds="6" stars="1" points="42" remodelRequirement="3" /> 
-<!--				<hww-config:furniture id="262" name="" image="" width="2" depth="2" level="70" gameBucks="20000" diamonds="7" stars="1" points="48" remodelRequirement="3" />  -->
+			<hww-config:furniture id="262" name="Animal" image="furniture/vanity/262_Vanity.png" width="2" depth="2" level="70" gameBucks="20000" diamonds="7" stars="1" points="48" remodelRequirement="3" />
 			<hww-config:furniture id="263" name="Ebony Lacquer" image="furniture/vanity/263_Vanity.png" width="2" depth="2" level="80" gameBucks="30000" diamonds="16" stars="2" points="63" remodelRequirement="3" />  
-<!--				<hww-config:furniture id="264" name="" image="" width="2" depth="2" level="90" gameBucks="45000" diamonds="18" stars="2" points="70" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="265" name="" image="" width="2" depth="2" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="264" name="Japanese" image="furniture/vanity/264_Vanity.png" width="3" depth="2" level="90" gameBucks="45000" diamonds="18" stars="2" points="70" remodelRequirement="3" />
+			<hww-config:furniture id="265" name="Futuristic" image="furniture/vanity/265_Vanity.png" width="2" depth="2" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Islands" image="images/house-decorator/icons/island-icon.png">
@@ -324,16 +325,16 @@
 			<hww-config:furniture id="273" name="European" image="furniture/islands/273_island.png" width="3" depth="2" level="40" gameBucks="17000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="274" name="Kira Kira" image="furniture/islands/274_island.png" width="3" depth="2" level="45" gameBucks="20000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="275" name="Breakfast Bar" image="furniture/islands/275_island.png" width="3" depth="2" level="50" gameBucks="25000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-<!--				<hww-config:furniture id="276" name="" image="" width="0" depth="0" level="60" gameBucks="30000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="277" name="" image="" width="0" depth="0" level="70" gameBucks="35000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="278" name="" image="" width="0" depth="0" level="80" gameBucks="40000" diamonds="16" stars="2" points="63" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="279" name="" image="" width="0" depth="0" level="90" gameBucks="55000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="280" name="" image="" width="0" depth="0" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" />  -->
+			<hww-config:furniture id="276" name="CheckerBoard" image="furniture/islands/276_island.png" width="3" depth="2" level="60" gameBucks="30000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
+			<hww-config:furniture id="277" name="Gourmet Chef" image="furniture/islands/277_island.png" width="3" depth="2" level="70" gameBucks="35000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
+			<hww-config:furniture id="278" name="Sunny Morning" image="furniture/islands/278_island.png" width="3" depth="2" level="80" gameBucks="40000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
+			<hww-config:furniture id="279" name="Marble Bartop" image="furniture/islands/279_island.png" width="3" depth="2" level="90" gameBucks="55000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="280" name="Heirloom Granite" image="furniture/islands/280_island.png" width="3" depth="2" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Fireplaces" image="images/house-decorator/icons/fireplace-icon.png">
 			<hww-config:furniture id="281" name="Standard" image="furniture/fireplaces/281_Fireplace.png" width="3" depth="1" level="30" gameBucks="6000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="282" name="Classy" image="furniture/fireplaces/282_Fireplace.png" width="3" depth="1" level="35" gameBucks="7000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="282" name="Classy" image="furniture/fireplaces/282_Fireplace.png" width="3" depth="1" level="35" gameBucks="9000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="283" name="Country Stone" image="furniture/fireplaces/283_Fireplace.png" width="3" depth="1" level="40" gameBucks="10000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="284" name="Mahogany" image="furniture/fireplaces/284_Fireplace.png" width="3" depth="1" level="50" gameBucks="15000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
 			<hww-config:furniture id="285" name="Sculpted" image="furniture/fireplaces/285_Fireplace.png" width="3" depth="1" level="60" gameBucks="30000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
@@ -349,12 +350,12 @@
 			<hww-config:furniture id="292" name="Pipa" image="furniture/instruments/292_Instrument.png" width="1" depth="1" level="35" gameBucks="7000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="293" name="Jazz Sax" image="furniture/instruments/293_Instrument.png" width="1" depth="1" level="40" gameBucks="8500" diamonds="0" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="294" name="Electric Organ" image="furniture/instruments/294_Instrument.png" width="2" depth="1" level="45" gameBucks="10000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
-<!--				<hww-config:furniture id="295" name="" image="" width="0" depth="0" level="55" gameBucks="12000" diamonds="5" stars="1" points="36" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="296" name="" image="" width="0" depth="0" level="60" gameBucks="15000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="297" name="" image="" width="0" depth="0" level="65" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="298" name="" image="" width="0" depth="0" level="70" gameBucks="20000" diamonds="14" stars="2" points="56" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="299" name="" image="" width="0" depth="0" level="80" gameBucks="25000" diamonds="16" stars="2" points="63" remodelRequirement="3" />  -->
-<!--				<hww-config:furniture id="300" name="" image="" width="0" depth="0" level="90" gameBucks="30000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
+			<hww-config:furniture id="295" name="Marimba" image="furniture/instruments/295_Instrument.png" width="2" depth="1" level="55" gameBucks="12000" diamonds="5" stars="1" points="36" remodelRequirement="3" /> 
+			<hww-config:furniture id="296" name="Zither" image="furniture/instruments/296_Instrument.png" width="2" depth="2" level="60" gameBucks="15000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
+			<hww-config:furniture id="297" name="Drum Kit" image="furniture/instruments/297_Instrument.png" width="2" depth="2" level="65" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" /> 
+			<hww-config:furniture id="298" name="Cello" image="furniture/instruments/298_Instrument.png" width="1" depth="1" level="70" gameBucks="20000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
+			<hww-config:furniture id="299" name="Grand Piano" image="furniture/instruments/299_Instrument.png" width="2" depth="2" level="80" gameBucks="25000" diamonds="16" stars="2" points="63" remodelRequirement="3" /> 
+			<hww-config:furniture id="300" name="Harp" image="furniture/instruments/300_Instrument.png" width="1" depth="1" level="90" gameBucks="30000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Paintings" image="images/house-decorator/icons/painting-icon.png">
@@ -365,6 +366,9 @@
 			<hww-config:furniture id="395" name="Human" image="furniture/paintings/395_Painting.png" width="1" depth="1" level="50" gameBucks="2500" diamonds="5" stars="1" points="36" remodelRequirement="3" />
 			<hww-config:furniture id="396" name="Abstract " image="furniture/paintings/396_Painting.png" width="1" depth="1" level="60" gameBucks="3000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
 			<hww-config:furniture id="397" name="Animal" image="furniture/paintings/397_Painting.png" width="1" depth="1" level="70" gameBucks="3500" diamonds="7" stars="1" points="48" remodelRequirement="3" />
+			<hww-config:furniture id="398" name="Kids Bedroom" image="furniture/paintings/398_Painting.png" width="1" depth="1" level="80" gameBucks="4000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
+			<hww-config:furniture id="399" name="Koi Lilies" image="furniture/paintings/399_Painting.png" width="2" depth="1" level="90" gameBucks="4500" diamonds="18" stars="2" points="70" remodelRequirement="3" />
+			<hww-config:furniture id="400" name="Oil Still Life" image="furniture/paintings/400_Painting.png" width="2" depth="1" level="100" gameBucks="5000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Fountains" image="images/house-decorator/icons/fountain-icon.png">

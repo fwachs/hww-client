@@ -21,6 +21,7 @@ class HouseController extends ScreenController implements TimerListener
     var house = null;
     var selectedFurniture = null;
     var selectedStorageFurniture = null;
+    var sellItemId = -1;
 
     public function HouseController(controlledScreen, pHouse)
     {
@@ -112,6 +113,9 @@ class HouseController extends ScreenController implements TimerListener
         else if(event.name == "dismiss") {
             Game.sounds.playSFX("buttonPress");
             this.dismissModalScreen();
+        }
+        else if(event.name == "sellItem") {
+        	this.sellItem(event.argument);
         }
         else if(event.name == "doNothing") {
         }
@@ -464,5 +468,34 @@ class HouseController extends ScreenController implements TimerListener
 
             this.selectedStorageFurniture = null;
         }
+    }
+    
+    public function sellItem(itemId)
+    {    	
+    	this.sellItemId = int(itemId);
+    	var item = this.house.storage.get(this.sellItemId);
+
+		var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_SellFurniture, item);
+		promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+		promptScreen.okCallBack = this.itemSold;
+		promptScreen.cancelCallBack = this.cancelItemSell;
+		
+		this.presentModalScreen(promptScreen);
+    }
+    
+    public function itemSold()
+    {
+    	var item = this.house.storage.get(this.sellItemId);    	
+    	trace("itemSold: ", this.sellItem, item);
+    	
+    	this.house.sellFurniture(item);
+        this.screen.buildStorageList(this.house.loadStorage());
+    	
+    	this.sellItemId = -1;
+    }
+    
+    public function cancelItemSell()
+    {
+    	this.sellItemId = -1;
     }
 }

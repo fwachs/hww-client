@@ -47,6 +47,7 @@ class MainController extends ScreenController
     var soundText;
     var notificationsText;
     var screenUpdateTimer;
+    var friends = null;
 
     public function MainController(controlledScreen)
     {
@@ -56,6 +57,8 @@ class MainController extends ScreenController
     override public function screenLoaded()
     {
         trace("MainControlller screenLoaded!");
+        
+        Game.sharedGame().wife.registrationDone();
 
         this.screen.getElement("mysteryItemsButton").getSprite().size(Game.translateX(125), Game.translateY( 146));
 
@@ -222,6 +225,9 @@ class MainController extends ScreenController
         }
         else if(event.name == "doNothing") {
         }
+        else if(event.name == "inviteFriend") {
+        	this.inviteFriend(event.argument);
+        }
     }
 
     public function openGift()
@@ -315,13 +321,26 @@ class MainController extends ScreenController
 
     public function buildFriendCallback(requestId, ret_code, response, param)
     {
-        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
         if(ret_code == 0) {
             this.screen.prepareFriendsBelt(new Array());
             return;
         }
 
         var flist = response.get("data");
+        trace("Friends list: ", flist);
+
+        // decorate user dicts with foundOnHWW attribute
+        Game.getServer().checkPlayersStatus(flist, this);
+        
+//        this.buildFriends(flist);
+    }
+    
+    public function buildFriends(flist)
+    {
+    	trace("buildFriends: ", flist);
+    	
+        this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
+
         var friends = new Array();
         for (var i=0; i< len(flist); i++) {
             var friendUserId = flist[i].get("id");
@@ -338,15 +357,77 @@ class MainController extends ScreenController
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";
             }
+            
             var isGamePlayer = flist[i].get("isplayer");
-            if (isGamePlayer) {
-                var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer);
-                friends.append(friend);
-            }
+            var wasInvited = PapayaFriend.isInvited(friendUserId);
+        	if(isGamePlayer == 1 && wasInvited == 1) {
+	        	trace("Invitation removed: ", friendUserId);
+        		PapayaFriend.removeInvitation(friendUserId);
+        	}
+            
+            var foundOnHWW = flist[i].get("foundOnHWW");
+
+            var friend = new PapayaFriend(friendUserId, name, avatarUrl, isGamePlayer, foundOnHWW, wasInvited);
+            trace("Friend: ", flist[i]);
+            
+            friends.append(friend);
         }
-        this.screen.prepareFriendsBelt(friends);
+        
+        this.friends = friends;
+        
+        this.prepareFriends();
+    }
+    
+    public function prepareFriends()
+    {
+
+    	for(var i = 0; i < len(this.friends); i++) {
+    		var friend = this.friends[i];
+    		
+	        if(friend.wasInvited == 1) {
+	        	trace("Player is invited: ", friend.papayaUserId);
+	        	if(friend.isGamePlayer == 0) {
+	        		if(friend.foundOnHWW == 1) {
+	        			friend.isGamePlayer = 1;
+	        		}
+	        	}
+	        }
+    	}
+
+        this.screen.prepareFriendsBelt(this.friends);
     }
 
+    public function inviteFriend(friend)
+    {
+    	trace("inviteFriend: ", friend, friend.friendUserId);
+    	
+    	// uncomment for final version
+    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
+//    	this.friendInvited(0, 1, 0, friend);
+    }
+
+    public function friendInvited(requestId, ret_code, response, friend)
+    {
+    	var message = "";
+    	
+        if(ret_code == 0) {
+            message = "Invitation failed";
+        }
+        else {
+        	message = "Invitation succeded";
+        	
+        	if(friend.foundOnHWW == 1) {
+        		friend.isGamePlayer = 1;
+        	}
+        	else {
+        		this.friends.remove(friend);
+        	}
+    		PapayaFriend.addInvitation(friend.papayaUserId);
+    		trace("Invitation added", friend.papayaUserId);
+        }
+        
+        this.alert(message, this.prepareFriends);
+    }    
 }
 
 /*****************************************************************************

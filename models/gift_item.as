@@ -288,7 +288,7 @@ class BuffHusbandWorkTime extends Timer implements IBuff
 		Game.sharedGame().hubby.setWorkBuffTime(-factor);
 
 		this.restart();
-		this.changeRunningTime(time * 3600);
+		this.changeRunningTime(time * 60);
 	}
 
 	override public function tick()
@@ -315,7 +315,7 @@ class BuffHusbandShoppingTime extends Timer implements IBuff
 		Game.sharedGame().hubby.setShoppingBuffTime(-factor);
 
 		this.restart();
-		this.changeRunningTime(time * 3600);
+		this.changeRunningTime(time * 60);
 	}
 
 	override public function tick()
@@ -342,7 +342,7 @@ class BuffHusbandSalary extends Timer implements IBuff
 		Game.sharedGame().hubby.setSalaryFactor(factor);
 		
 		this.restart();
-		this.changeRunningTime(time * 3600);
+		this.changeRunningTime(time * 60);
 	}
 
 	override public function tick()
