@@ -444,6 +444,7 @@ function onpause()
 {
 	trace("### HWW ### - Pausing game.");
 	Game.sounds.pause();
+	Game.sharedGame().save();
 	Game.trackEvent("Session", "paused", "", 10);
 }
 

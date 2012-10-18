@@ -26,9 +26,12 @@ class Shop
         var costD = this.getDiamonds(furniture.diamonds);
         var payments = new Array(costGB, costD);
         var ret = Game.sharedGame().wallet.payMultiple(payments);
-        
+        if (ret == 1) {
+            Game.sharedGame().wallet.save();
+        }
         trace("Furniture bought: ", furniture, costGB, costD, ret);
         this.trackPurchaseEvent("Furniture Purchase", furniture.toString(), ret);
+        
         return ret;
     }
     

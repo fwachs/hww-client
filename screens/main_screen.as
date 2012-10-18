@@ -62,7 +62,7 @@ class MainScreen extends Screen
 			c_invoke(displayFullScreenAd, 5000, null);
 			idleAdTimer = c_addtimer(60000, displayFullScreenAd, null);
 		}
-		
+
 		idleAdTimer.play();
 	}
 
@@ -74,7 +74,7 @@ class MainScreen extends Screen
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
 		Game.stopButtonShineAnimation();
-		idleAdTimer.stop();
+	    idleAdTimer.pause();
 	}
 
 	public function stopWifeAnimation()
@@ -177,7 +177,7 @@ class MainScreen extends Screen
 
 	public function displayFullScreenAd(timer, tick, param)
 	{
-		timer.stop();
+        timer.pause();    
 		
 	    if(Game.currentScreen().getScreenName() == "main-screen") {
 	    	openUrl("appflood_fullscreen");

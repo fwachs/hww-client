@@ -40,8 +40,8 @@
 			<hww-config:furniture id="101" name="Medieval" image="furniture/coffee tables/101_Coffee.png" width="2" depth="1" level="60" gameBucks="25000" diamonds="12" stars="2" points="49" remodelRequirement="3" />
 			<hww-config:furniture id="102" name="Animal" image="furniture/coffee tables/102_Coffee.png" width="2" depth="1" level="70" gameBucks="30000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="103" name="Ebony Lacquer" image="furniture/coffee tables/103_Coffee.png" width="2" depth="2" level="80" gameBucks="35000" diamonds="24" stars="3" points="90" remodelRequirement="3" />
-			<hww-config:furniture id="104" name="Japanese" image="furniture/coffee tables104_Coffee.png" width="2" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
-			<hww-config:furniture id="105" name="Futuristic" image="furniture/coffee tables105_Coffee.png" width="1" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" /> 
+			<hww-config:furniture id="104" name="Japanese" image="furniture/coffee tables/104_Coffee.png" width="2" depth="1" level="90" gameBucks="40000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="105" name="Futuristic" image="furniture/coffee tables/105_Coffee.png" width="1" depth="1" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" /> 
 		</hww-config:furniture-sub-category>
 	
 		<hww-config:furniture-sub-category name="Beds" image="images/house-decorator/icons/beds-icon.png">
@@ -296,11 +296,11 @@
 			<hww-config:furniture id="248" name="Sedan" image="furniture/cars/248_Car.png" width="4" depth="2" level="30" gameBucks="25000" diamonds="3" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="249" name="Sports" image="furniture/cars/249_Car.png" width="4" depth="2" level="40" gameBucks="30000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
 			<hww-config:furniture id="250" name="SUV" image="furniture/cars/250_Car.png" width="3" depth="3" level="50" gameBucks="35000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-			<hww-config:furniture id="251" name="Lady Racer" image="furniture/cars/251_Car.png" width="3" depth="2" level="60" gameBucks="40000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  
+			<hww-config:furniture id="251" name="Lady Racer" image="furniture/cars/251_Car.png" width="4" depth="2" level="60" gameBucks="40000" diamonds="6" stars="1" points="42" remodelRequirement="3" />  
 			<hww-config:furniture id="252" name="Electric" image="furniture/cars/252_Car.png" width="3" depth="2" level="70" gameBucks="45000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="253" name="Luxury" image="furniture/cars/253_Car.png" width="4" depth="2" level="80" gameBucks="50000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
-			<hww-config:furniture id="254" name="Sunlight Racer" image="furniture/cars/254_Car.png" width="3" depth="2" level="90" gameBucks="60000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
-			<hww-config:furniture id="255" name="HWW Van" image="furniture/cars/255_Car.png" width="3" depth="2" level="100" gameBucks="70000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
+			<hww-config:furniture id="254" name="Sunlight Racer" image="furniture/cars/254_Car.png" width="4" depth="2" level="90" gameBucks="60000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="255" name="HWW Van" image="furniture/cars/255_Car.png" width="4" depth="2" level="100" gameBucks="70000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
 			<hww-config:furniture id="401" name="Pink Pug" image="furniture/cars/256_Car.png" width="3" depth="2" level="1" gameBucks="1" diamonds="0" stars="3" points="1" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 	</hww-config:furniture-category>
@@ -350,12 +350,12 @@
 			<hww-config:furniture id="292" name="Pipa" image="furniture/instruments/292_Instrument.png" width="1" depth="1" level="35" gameBucks="7000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
 			<hww-config:furniture id="293" name="Jazz Sax" image="furniture/instruments/293_Instrument.png" width="1" depth="1" level="40" gameBucks="8500" diamonds="0" stars="0" points="25" remodelRequirement="3" />
 			<hww-config:furniture id="294" name="Electric Organ" image="furniture/instruments/294_Instrument.png" width="2" depth="1" level="45" gameBucks="10000" diamonds="4" stars="1" points="30" remodelRequirement="3" />
-<!--				<hww-config:furniture id="295" name="Marimba" image="furniture/instruments/295_Instrument.png" width="2" depth="1" level="55" gameBucks="12000" diamonds="5" stars="1" points="36" remodelRequirement="3" /> -->
+			<hww-config:furniture id="295" name="Marimba" image="furniture/instruments/295_Instrument.png" width="2" depth="1" level="55" gameBucks="12000" diamonds="5" stars="1" points="36" remodelRequirement="3" /> 
 			<hww-config:furniture id="296" name="Zither" image="furniture/instruments/296_Instrument.png" width="2" depth="2" level="60" gameBucks="15000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
-<!--				<hww-config:furniture id="297" name="Drum Kit" image="furniture/instruments/297_Instrument.png" width="2" depth="2" level="65" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" /> -->
+			<hww-config:furniture id="297" name="Drum Kit" image="furniture/instruments/297_Instrument.png" width="2" depth="2" level="65" gameBucks="17000" diamonds="6" stars="1" points="42" remodelRequirement="3" /> 
 			<hww-config:furniture id="298" name="Cello" image="furniture/instruments/298_Instrument.png" width="1" depth="1" level="70" gameBucks="20000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
 			<hww-config:furniture id="299" name="Grand Piano" image="furniture/instruments/299_Instrument.png" width="2" depth="2" level="80" gameBucks="25000" diamonds="16" stars="2" points="63" remodelRequirement="3" /> 
-<!--				<hww-config:furniture id="300" name="Harp" image="furniture/instruments/300_Instrument.png" width="1" depth="1" level="90" gameBucks="30000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  -->
+			<hww-config:furniture id="300" name="Harp" image="furniture/instruments/300_Instrument.png" width="1" depth="1" level="90" gameBucks="30000" diamonds="27" stars="3" points="100" remodelRequirement="3" />  
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Paintings" image="images/house-decorator/icons/painting-icon.png">
