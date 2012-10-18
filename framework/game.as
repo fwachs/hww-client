@@ -294,7 +294,7 @@ class Game
     public function initializeDatabase()
     {   
     	trace("Before initializeDatabase");
-        db = c_opendb(0, "hww");
+        db = c_opendb(1, "hww-prod");
     	trace("After initializeDatabase: ", db);
     }
     
