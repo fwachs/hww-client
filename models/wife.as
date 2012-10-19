@@ -26,7 +26,6 @@ class Wife
 	public function Wife()
 	{
 		this.load();
-		this.cleanUnfinishedRegistration();
 	}
 	
 	public function cleanUnfinishedRegistration()
