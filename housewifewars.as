@@ -73,6 +73,7 @@ class HousewifeWars extends Game
 
 		this.furnitureCategories = this.getFurnitureCategories();
 		this.wife = new Wife();
+		this.wife.cleanUnfinishedRegistration();
 		this.hubby = new Husband();
 		this.darkSide = new DarkSide();
 		this.house = new House();
