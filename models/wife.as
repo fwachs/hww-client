@@ -37,14 +37,6 @@ class Wife
 		}
 	}
 	
-	public function cleanUnfinishedRegistration()
-	{
-		trace("clean unfinished reg ", this.firstPlay);
-		if(this.firstPlay == 1) {
-			Game.cleanDatabase();
-		}
-	}
-	
 	public function loadFromJSON(bestWife)
 	{
 		this.name = bestWife.get("name");
