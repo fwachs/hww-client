@@ -61,7 +61,7 @@
 				<screen:element name="stressOption2_icon" resource="hubby-screen/play-games.png" left="20" top="8"/>
 				<screen:element name="stressOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
 				<screen:element name="stressOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="stressOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Video game madness</screen:element>
+				<screen:element name="stressOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">#placeholder</screen:element>
 				<screen:element name="stressOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Lowers Stress -3</screen:element>
 			</screen:element>
 
@@ -87,7 +87,7 @@
 				<screen:element name="loveOption2_icon" resource="hubby-screen/give-kiss.png" left="20" top="8"/>
 				<screen:element name="loveOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
 				<screen:element name="loveOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="loveOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Give him a kiss</screen:element>
+				<screen:element name="loveOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">#placeholder</screen:element>
 				<screen:element name="loveOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Fills Love Tank +3</screen:element>
 			</screen:element>
 

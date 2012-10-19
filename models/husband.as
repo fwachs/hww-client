@@ -36,9 +36,13 @@ class Husband //implements DBModel
 	var shoppingTimer;
 	
 	var loveFillingTimer;
+	var loveOption2FillingTimer;
 	var stressReductionTimer;
+	var stressOption2ReductionTimer;
 	var stressCooldown;
+	var stressOption2Cooldown;
 	var loveCooldown;
+	var loveOption2Cooldown;
 	
 	var playVideoGameCost;
 	var kissCost;
@@ -67,7 +71,9 @@ class Husband //implements DBModel
 		this.workTimer = new outToWorkTimer();
 		this.shoppingTimer = new outShoppingTimer();
 		this.loveFillingTimer = new husbandLoveFillingTimer();
+		this.loveOption2FillingTimer = new husbandLoveOption2FillingTimer();
 		this.stressReductionTimer = new husbandStressReductionTimer();
+		this.stressOption2ReductionTimer = new husbandStressOption2ReductionTimer();
 	}
 
 	public function getHusbandAnimation()
@@ -473,7 +479,9 @@ class Husband //implements DBModel
 			outShopping = 0;
 			outWorking = 0;
 			stressCooldown = 0;
+			stressOption2Cooldown = 0;
 			loveCooldown = 0;
+			loveOption2Cooldown = 0;
 			rareItemThreshold = 80;
 			salaryFactor = 1;
 			playVideoGameCost = 80;
@@ -503,7 +511,9 @@ class Husband //implements DBModel
 		outShopping = husbandMap.get("outShopping");
 		outWorking = husbandMap.get("outWorking");
 		stressCooldown = husbandMap.get("stressCooldown");
+		stressOption2Cooldown = husbandMap.get("stressOption2Cooldown");
 		loveCooldown = husbandMap.get("loveCooldown");
+		loveOption2Cooldown = husbandMap.get("loveOption2Cooldown");
 		playVideoGameCost = husbandMap.get("playVideoGameCost");
 		kissCost = husbandMap.get("kissCost");
 		watchTheGameCost = husbandMap.get("watchTheGameCost");
@@ -540,7 +550,9 @@ class Husband //implements DBModel
         outShopping = 0;
         outWorking = 0;
         stressCooldown = 0;
+        stressOption2Cooldown = 0;
         loveCooldown = 0;
+        loveOption2Cooldown = 0;
         playVideoGameCost = husbandMap.get("playVideoGameCost");
         kissCost = husbandMap.get("kissCost");
         watchTheGameCost = husbandMap.get("watchTheGameCost");
@@ -580,7 +592,9 @@ class Husband //implements DBModel
 		husbandArray.append(["workBuffTime", workBuffTime]);
         husbandArray.append(["outShopping", outShopping]);
         husbandArray.append(["stressCooldown", stressCooldown]);
+        husbandArray.append(["stressOption2Cooldown", stressOption2Cooldown]);
         husbandArray.append(["loveCooldown", loveCooldown]);
+        husbandArray.append(["loveOption2Cooldown", loveOption2Cooldown]);
 
         return dict(husbandArray);
     }

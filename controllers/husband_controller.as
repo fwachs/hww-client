@@ -115,17 +115,23 @@ class HusbandController extends ScreenController implements TimerListener
             }
         }
         else if(event.name == "playVideoGames") {
-            Game.sounds.playSFX("buttonPress");
+        	
+        	if(Game.sharedGame().hubby.stressOption2Cooldown != 1) {
+        		Game.sounds.playSFX("buttonPress");
 
-            ret = Game.sharedGame().shop.buyStressRelease("playVideoGames");
-            if(ret == 1) {
-                reduceStressBy(3);
-            }
-            else {
-                gotoPremiumCurrencyGameBucks();
-            }
+                ret = Game.sharedGame().shop.buyStressRelease("playVideoGames");
+                if(ret == 1) {
+                	Game.sharedGame().hubby.stressOption2Cooldown = 1;
+                	Game.sharedGame().hubby.stressOption2ReductionTimer.restart();
+                    Game.sharedGame().hubby.stressOption2ReductionTimer.ticks = 1;
+                    reduceStressBy(3);
+                }
+                else {
+                    gotoPremiumCurrencyGameBucks();
+                }
 
-            Game.sharedGame().saveHusband();
+                Game.sharedGame().saveHusband();
+        	}
         }
         else if(event.name == "watchGame") {
             Game.sounds.playSFX("buttonPress");
@@ -150,17 +156,23 @@ class HusbandController extends ScreenController implements TimerListener
             }
         }
         else if (event.name == "giveKiss") {
-            Game.sounds.playSFX("buttonPress");
+        	
+        	if(Game.sharedGame().hubby.loveOption2Cooldown != 1) {
+        		Game.sounds.playSFX("buttonPress");
 
-            ret = Game.sharedGame().shop.buyLoveRefill("giveKiss");
-            if(ret == 1) {
-                fillLoveTankBy(3);
-            }
-            else {
-                gotoPremiumCurrencyGameBucks();
-            }
+                ret = Game.sharedGame().shop.buyLoveRefill("giveKiss");
+                if(ret == 1) {
+                	Game.sharedGame().hubby.loveOption2Cooldown = 1;
+                	Game.sharedGame().hubby.loveOption2FillingTimer.restart();
+                    Game.sharedGame().hubby.loveOption2FillingTimer.ticks = 1;
+                    fillLoveTankBy(3);
+                }
+                else {
+                    gotoPremiumCurrencyGameBucks();
+                }
 
-            Game.sharedGame().saveHusband();
+                Game.sharedGame().saveHusband();
+        	}
         }
         else if (event.name == "goOnDate") {
             Game.sounds.playSFX("buttonPress");
@@ -627,6 +639,22 @@ class husbandStressReductionTimer extends Timer
     }
 }
 
+class husbandStressOption2ReductionTimer extends Timer
+{
+    public function husbandStressOption2ReductionTimer()
+    {
+        super("husbandStressOption2ReductionTimer", 300, 1);
+    }
+
+    override public function tick()
+    {
+        if(this.ticks > 0) {
+            Game.sharedGame().hubby.stressOption2Cooldown = 0;
+            Game.sharedGame().hubby.save();
+        }
+    }
+}
+
 class husbandLoveFillingTimer extends Timer
 {
     public function husbandLoveFillingTimer()
@@ -638,6 +666,22 @@ class husbandLoveFillingTimer extends Timer
     {
         if(this.ticks > 0) {
             Game.sharedGame().hubby.loveCooldown = 0;
+            Game.sharedGame().hubby.save();
+        }
+    }
+}
+
+class husbandLoveOption2FillingTimer extends Timer
+{
+    public function husbandLoveOption2FillingTimer()
+    {
+        super("husbandLoveOption2FillingTimer", 300, 1);
+    }
+
+    override public function tick()
+    {
+        if(this.ticks > 0) {
+            Game.sharedGame().hubby.loveOption2Cooldown = 0;
             Game.sharedGame().hubby.save();
         }
     }
