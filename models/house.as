@@ -559,24 +559,54 @@ class House
 
     public function pointsIncrement()
     {       
-        var keys = new Array();
+    	var furniturePoints = calculateFurniturePlacedPoints();
+    	var customTilePoints = calculateCustomTilesPoints();
+    	
+    	var totalPoints = furniturePoints + customTilePoints;
+    	
+    	if(totalPoints > 0) {
+    		return totalPoints;
+    	}
+    	else {
+    		// receive at least 1 point
+            return 1;
+    	}
+    }
+    
+    public function calculateFurniturePlacedPoints()
+    {
+    	var keys = new Array();
         keys = this.furniture.keys();
         var length = len(keys);
         
-        if(length != 0) {
-            var result = 0;
-            
-            for(var count = 0; count < length; ++count) {
-                var item = this.furniture.get(keys[count]);
-                result += item.furnitureType.points;
-            }
-            
-            trace("### HWW ### - Total house points: " + str(length));
-            return result;
+        var result = 0;
+        
+        for(var count = 0; count < length; ++count) {
+            var item = this.furniture.get(keys[count]);
+            result += item.furnitureType.points;
         }
         
-        // no items placed
-        return 1;
+        trace("### HWW ### - Total furniture points: " + str(result));
+    	
+    	return result;
+    }
+    
+    public function calculateCustomTilesPoints()
+    {
+    	var keys = new Array();
+        keys = this.customTiles.keys();
+        var length = len(keys);
+    	
+        var result = 0;
+        
+        for(var count = 0; count < length; ++count) {
+            var tg = this.customTiles.get(keys[count]);
+            result += tg.furniture.points;
+        }
+        
+        trace("### HWW ### - Total custom tile points: " + str(result));
+    	
+    	return result;
     }
     
     public function addPoints()
