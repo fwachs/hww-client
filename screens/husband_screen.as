@@ -27,7 +27,9 @@ class HusbandScreen extends Screen
 	var sendWorkText;
 	var sendShoppingText;
 	var stressCooldownText;
+	var stressOption2CooldownText;
 	var loveCooldownText;
+	var loveOption2CooldownText;
 	var sendToWorkButtonOverlay;
 	var sendShoppingButtonOverlay;
 	
@@ -64,9 +66,15 @@ class HusbandScreen extends Screen
 
 		stressCooldownText = this.getElement("stressOption1_text");
 		stressCooldownText.setText("Boy's night out");
+		
+		stressOption2CooldownText = this.getElement("stressOption2_text");
+		stressOption2CooldownText.setText("Play video games");
 
 		loveCooldownText = this.getElement("loveOption1_text"); 
 		loveCooldownText.setText("Cook for him");
+		
+		loveOption2CooldownText = this.getElement("loveOption2_text"); 
+		loveOption2CooldownText.setText("Give him a kiss");
 
 		var occupation = this.getElement("occupation").getSprite();
 		
@@ -284,12 +292,27 @@ class HusbandScreen extends Screen
 				stressCooldownText.setText("Boy's night out");
 			}
 			
+			if(Game.sharedGame().hubby.stressOption2Cooldown == 1) {
+				trace("### HWW ### - Husband Stress Reduction Timer: " + Game.sharedGame().hubby.stressOption2ReductionTimer.getTimeString());
+				stressOption2CooldownText.setText(Game.sharedGame().hubby.stressOption2ReductionTimer.getTimeString());
+			}
+			else {
+				stressOption2CooldownText.setText("Play video games");
+			}
+			
 			if(Game.sharedGame().hubby.loveCooldown == 1) {
 				loveCooldownText.getSprite().pos(Game.translateX(300), Game.translateY( 70));
 				loveCooldownText.setText(Game.sharedGame().hubby.loveFillingTimer.getTimeString());
 			}
 			else {
 				loveCooldownText.setText("Cook for him");
+			}
+			
+			if(Game.sharedGame().hubby.loveOption2Cooldown == 1) {
+				loveOption2CooldownText.setText(Game.sharedGame().hubby.loveOption2FillingTimer.getTimeString());
+			}
+			else {
+				loveOption2CooldownText.setText("Give him a kiss");
 			}
 
 			// update stress text
