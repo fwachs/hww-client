@@ -300,9 +300,30 @@ class Game
     
     public function cleanDatabase()
     {
-        Game.db.destroy();
-    	Game.db = null;
-    	Game.initializeDatabase();
+        Game.db.remove("wife" + Game.getPapayaUserId());
+        Game.db.remove("husband" + Game.getPapayaUserId());
+        Game.db.remove("wallet" + Game.getPapayaUserId());
+        Game.db.remove("realestate" + Game.getPapayaUserId());
+        Game.db.remove("screen_screen-cfgs/darkside-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/gift-others-prompt-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/gift-shop-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/gossip-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/house-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/house-selection-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/hud-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/husband-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/husband-selection-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/main-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/message-box-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/mystery-items-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/name-enter-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/other-player-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/passport-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/premium-currency-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/receive-gift-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/travel-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/wife-customization-screen-cfg.xml");
+        Game.db.remove("screen_screen-cfgs/wife-selection-screen-cfg.xml");
     }
     
     public function save()
