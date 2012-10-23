@@ -86,6 +86,15 @@ class Wallet
 			gameBucks = wallet.get("gameBucks");
 			diamonds = wallet.get("diamonds");
 			miles = wallet.get("miles");
+			if (gameBucks == null) {
+			    gameBucks = 1000;
+			}
+			if (diamonds == null) {
+			    diamonds = 10;
+			}
+			if (miles == null) {
+			    miles = 20000;
+			}
 		}
 		this.accounts = new dict();
 		this.accounts.update("GameBucks", new Account(new Currency("GameBucks", null), gameBucks));

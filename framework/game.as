@@ -109,7 +109,7 @@ class Game
             quitgame();
         }
         var wife = new Wife();
-        var shouldSynchronize = Game.getProperty("onGoingSynchronization");
+        var shouldSynchronize = Game.getDatabase().get("onGoingSynchronization");
         if (wife.firstPlay == 1 || shouldSynchronize == 1) {
             Game.getServer().synchronize(synchronizeCallback);
         } else {
@@ -119,17 +119,18 @@ class Game
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {
         if (ret_code == 1) {
-        	this.dontCloseSyncing = this.loadingScreen.addsprite("images/house-decorator/dont-close-app.png").pos(Game.translateX(78), Game.translateY(396));
-        	var action = Game.animations.getAnimation("loading");
-        	this.loadingAnimation = this.loadingScreen.addsprite("images/house-decorator/load01.png").pos(Game.translateX(154), Game.translateY(496));
-    		this.loadingAnimation.stop();
-    		loadingAnimation.addaction(repeat(action));
-        	
-            Game.setProperty("onGoingSynchronization", 1);
-            trace("### HWWW ### Synchronize onGoingSynchronization: 1");
             var responseMap = json_loads(response_content);
             var jsonWife = responseMap.get("wife");
             if (jsonWife != null) {
+                this.recoveredFromServer = 1;
+            	this.dontCloseSyncing = this.loadingScreen.addsprite("images/house-decorator/dont-close-app.png").pos(Game.translateX(78), Game.translateY(396));
+            	var action = Game.animations.getAnimation("loading");
+            	this.loadingAnimation = this.loadingScreen.addsprite("images/house-decorator/load01.png").pos(Game.translateX(154), Game.translateY(496));
+        		this.loadingAnimation.stop();
+        		loadingAnimation.addaction(repeat(action));
+            	
+                Game.getDatabase().put("onGoingSynchronization", 1);
+                trace("### HWWW ### Synchronize onGoingSynchronization: 1");
                 var wife = new Wife();
                 trace("### HWWW ### Synchronize Wife Response: ", jsonWife);
                 wife.loadFromJSON(jsonWife);
@@ -144,7 +145,9 @@ class Game
                 var wallet = new Wallet();
                 var jsonWallet = responseMap.get("wallet");
                 trace("### HWWW ### Synchronize Wallet Response: ", jsonWallet);
-                wallet.saveFromJSON(jsonWallet);
+                if (jsonWallet != null) {
+                    wallet.saveFromJSON(jsonWallet);
+                }
 
                 var jsonPassport = responseMap.get("passport");
                 if (jsonPassport != null) {
@@ -166,9 +169,8 @@ class Game
                 }
             }
             trace("### HWWW ### Synchronize onGoingSynchronization: 0");
-            Game.setProperty("onGoingSynchronization", 0);
+            Game.getDatabase().put("onGoingSynchronization", 0);
             
-            this.recoveredFromServer = 1;
             
             //this.scene.remove(dontClose);
         }
@@ -300,30 +302,30 @@ class Game
     
     public function cleanDatabase()
     {
-        Game.db.remove("wife" + Game.getPapayaUserId());
-        Game.db.remove("husband" + Game.getPapayaUserId());
-        Game.db.remove("wallet" + Game.getPapayaUserId());
-        Game.db.remove("realestate" + Game.getPapayaUserId());
-        Game.db.remove("screen_screen-cfgs/darkside-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/gift-others-prompt-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/gift-shop-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/gossip-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/house-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/house-selection-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/hud-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/husband-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/husband-selection-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/main-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/message-box-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/mystery-items-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/name-enter-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/other-player-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/passport-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/premium-currency-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/receive-gift-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/travel-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/wife-customization-screen-cfg.xml");
-        Game.db.remove("screen_screen-cfgs/wife-selection-screen-cfg.xml");
+        Game.getDatabase().remove("wife" + Game.getPapayaUserId());
+        Game.getDatabase().remove("husband" + Game.getPapayaUserId());
+        Game.getDatabase().remove("wallet" + Game.getPapayaUserId());
+        Game.getDatabase().remove("realestate" + Game.getPapayaUserId());
+        Game.getDatabase().remove("screen_screen-cfgs/darkside-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/gift-others-prompt-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/gift-shop-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/gossip-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/house-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/house-selection-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/hud-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/husband-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/husband-selection-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/main-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/message-box-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/mystery-items-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/name-enter-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/other-player-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/passport-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/premium-currency-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/receive-gift-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/travel-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/wife-customization-screen-cfg.xml");
+        Game.getDatabase().remove("screen_screen-cfgs/wife-selection-screen-cfg.xml");
     }
     
     public function save()
