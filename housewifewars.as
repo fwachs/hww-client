@@ -148,6 +148,22 @@ class HousewifeWars extends Game
 	    this.hubby.checkAchievements();
 	    this.house.checkAchievements();
 	    this.passport.checkAchievements();
+		
+		ppy_listachievements(syncPapayaAccountAchievements, null);
+	}
+	
+	public function syncPapayaAccountAchievements(id, ret, content, param)
+	{
+		var achievementList = content.get("data");
+		trace(str(achievementList));
+		
+		for(var i = 0; i < len(achievementList); ++i) {
+			var unlocked =  achievementList[i].get("unlock");
+			
+			if(unlocked == 1) {
+				unlockAchievement(achievementList[i].get("title"));
+			}
+		}
 	}
 	
 	public function updateServer () {
@@ -371,6 +387,11 @@ class HousewifeWars extends Game
 
 	public function saveAchievements()
 	{
+		if (this.unlockedAchievements == null) {
+		       this.unlockedAchievements = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		       this.checkForUnlockedAchievements();
+		   }
+		
 	   var papayaUserId = Game.getPapayaUserId();
 	   var serializedAchievements = this.serializeAchievements();
 	   trace("### HWW ### - Saving Achievements:", str(serializedAchievements));
