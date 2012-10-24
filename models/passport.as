@@ -33,6 +33,26 @@ class Passport
 		this.load();
 	}
 	
+	public function checkAchievements()
+	{
+	    if(londonFirstVisit == 0 || SanFranciscoFirstVisit == 0 || 
+	        ParisFirstVisit == 0 || BuenosAiresFirstVisit == 0 || 
+	        TokyoFirstVisit == 0) {
+	        Game.sharedGame().unlockAchievement("Tourist");
+	    }
+	    
+	    if(londonFirstVisit == 0 && SanFranciscoFirstVisit == 0 && 
+	        ParisFirstVisit == 0 && BuenosAiresFirstVisit == 0 && 
+	        TokyoFirstVisit == 0) {
+	        Game.sharedGame().unlockAchievement("Jet Setter");
+	    }
+	    
+	    if(SydneyFirstVisit == 0) {
+	        Game.sharedGame().unlockAchievement("Sheila");
+	    }
+	}
+
+	
 	public function load() 
 	{
         var papayaUserId = Game.getPapayaUserId();

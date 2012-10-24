@@ -201,11 +201,11 @@ class House
         
     public function checkAchievements()
     {
-        if(this.level == 2)
+        if(this.level >= 2)
             Game.sharedGame().unlockAchievement("DIY");
-        if(this.level == 5)
+        if(this.level >= 5)
             Game.sharedGame().unlockAchievement("Interior Designer");
-        if(this.level == 10)
+        if(this.level >= 10)
             Game.sharedGame().unlockAchievement("Real Estate Mogul");
     }
 

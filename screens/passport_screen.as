@@ -27,6 +27,7 @@ class PassportScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
+		Game.sharedGame().passport.checkAchievements();
 	}
 	
 	override public function lostFocus()

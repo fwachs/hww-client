@@ -50,6 +50,7 @@ class HousewifeWars extends Game
 	var mysteryItems;
 	var gifts = null;
 	var realestate;
+	var unlockedAchievements;
 	var timersMap;
 	var furnitures = null;
 	var furnitureListing;
@@ -83,6 +84,7 @@ class HousewifeWars extends Game
 		this.passport = new Passport();
 		this.realestate = new Realestate();
 		this.loadCities();
+		this.loadPlayerAchievements();
 		this.loadMysteryItems();
 		this.loadGifts();
 		this.loadHusbandMessages();
@@ -96,6 +98,7 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
+		this.checkForUnlockedAchievements();
 
 		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
@@ -137,6 +140,14 @@ class HousewifeWars extends Game
 		Game.pushScreen(screen);
 
         c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
+	}
+	
+	public function checkForUnlockedAchievements()
+	{
+	    this.wife.checkAchievements();
+	    this.hubby.checkAchievements();
+	    this.house.checkAchievements();
+	    this.passport.checkAchievements();
 	}
 	
 	public function updateServer () {
@@ -248,12 +259,15 @@ class HousewifeWars extends Game
 	    // check if we are using an Android device
 	    if(getmodel() == 6) {
 	        achievementID = achievement.androidID;
+	        this.unlockedAchievements[achievementID - 2526] = 1;
 	    }
 	    else {
 	        achievementID = achievement.iosID;
+	        this.unlockedAchievements[achievementID - 2329] = 1;
 	    }
 	    
 	    ppy_unlockachievement(achievementID, null);
+	    this.saveAchievements();
 	}
 
 	public function loadGifts()
@@ -310,6 +324,7 @@ class HousewifeWars extends Game
 		this.saveWallet();
 		this.saveRealestate();
 		this.passport.save();
+		this.saveAchievements();
 	}
 
 	public function saveHusband()
@@ -330,6 +345,46 @@ class HousewifeWars extends Game
 	public function saveRealestate()
 	{
 		this.realestate.save();
+	}
+	
+	public function loadPlayerAchievements()
+	{
+	   var papayaUserId = Game.getPapayaUserId();
+	   var achievementMap = Game.getDatabase().get("achievements" + Game.getPapayaUserId());
+	   trace("### HWW ### - Fetched Achievements from DB: ", str(achievementMap));
+
+	   if (achievementMap == null)
+	   {
+	       this.unlockedAchievements = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+	       this.checkForUnlockedAchievements();
+
+	       return;
+	   }
+
+	   this.unlockedAchievements = achievementMap.get("propertyListing");
+	}
+
+	public function loadAchievementsFromJSON(achievementMap)
+	{
+	   this.unlockedAchievements = achievementMap.get("unlockedAchievements");
+	}
+
+	public function saveAchievements()
+	{
+	   var papayaUserId = Game.getPapayaUserId();
+	   var serializedAchievements = this.serializeAchievements();
+	   trace("### HWW ### - Saving Achievements:", str(serializedAchievements));
+	   Game.getDatabase().put("achievements" + Game.getPapayaUserId(), serializedAchievements);
+	}
+
+	public function serializeAchievements()
+	{
+	   var papayaUserId = Game.getPapayaUserId();
+	   var achievementsArray = [];
+	   achievementsArray.append(["id", papayaUserId]);
+	   achievementsArray.append(["unlockedAchievements", unlockedAchievements]);
+
+	   return dict(achievementsArray);
 	}
 
 	public function updateLeaderboards()
