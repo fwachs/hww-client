@@ -34,7 +34,13 @@
 			</screen:element>
 		</screen:element>
 		
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="143" top="75" ontap="showTutorialHelp" z-index="100"/>
 		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="682" ontap="done" z-index="100"/>
+		
+		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
+        	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/decorate-tutorial.png" left="0" top="0" ontap="doNothing"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="hideTutorialHelp"/>
+    	</screen:element>
 					
 	</screen:elements>
 </screen:config>

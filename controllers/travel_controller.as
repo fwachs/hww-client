@@ -167,6 +167,14 @@ class TravelController extends ScreenController
         }
         else if(event.name == "doNothing") {
         }
+        else if(event.name == "showTutorialHelp") {
+        	Game.hideBanner();
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(1);
+        }
+        else if(event.name == "hideTutorialHelp") {
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
+        	Game.showBanner(1, 0);
+        }
     }
 
     public function getCostTest(value)

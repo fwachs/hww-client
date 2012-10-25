@@ -45,5 +45,13 @@ class MysteryItemsController extends ScreenController
             Game.sounds.playSFX("buttonPress");
             this.dismissModalScreen();
         }
+        else if(event.name == "showTutorialHelp") {
+        	Game.hideBanner();
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(1);
+        }
+        else if(event.name == "hideTutorialHelp") {
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
+        	Game.hideBanner();
+        }
     }
 }
