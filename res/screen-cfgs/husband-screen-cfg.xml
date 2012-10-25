@@ -104,7 +104,7 @@
 
 		<screen:element name="character" resource="" left="0" top="40"/>
 		
-		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="143" top="75" ontap="showTutorialHelp" z-index="100"/>
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="48" top="85" ontap="showTutorialHelp" z-index="100"/>
 		
 		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
         	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/husband-tutorial.png" left="0" top="0" ontap="doNothing"/>

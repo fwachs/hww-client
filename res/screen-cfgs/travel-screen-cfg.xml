@@ -45,7 +45,7 @@
 			</screen:element>
 		</screen:element>
 		
-		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="143" top="75" ontap="showTutorialHelp" z-index="100"/>
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="48" top="85" ontap="showTutorialHelp" z-index="100"/>
 		<screen:element name="backbutton" resource="travel-screen/back-button.png" left="1020" top="688" ontap="goback"/>
 		
 		<screen:element name="travelPortalFrame" resource="" left="0" top="0" visible="NO">
