@@ -177,17 +177,27 @@ class House
     }
     
     public function nextRemodel()
-    {               
+    {
         if(this.getLevel() + 1 > len(this.remodels)) return null;
 
-        var remodel = this.remodels[this.getLevel() + 1];   
+        var remodel = this.remodels[this.getLevel() + 1];
         if(remodel.unlockLevel <= Game.sharedGame().hubby.careerLevel) {
             return remodel;
         }
-        
         return null;
     }
-    
+
+    public function getNextRemodelLevel() {
+        trace("remodels: ", str(this.remodels));
+        trace("levels: ", str(this.getLevel()));
+        for (var i=0;i< len(this.remodels); i++) {
+            if (remodel.unlockLevel <= Game.sharedGame().hubby.careerLevel) {
+                return remodel.unlockLevel;
+            }
+        }
+        return 80;
+    }
+
     public function remodel()
     {
         var remodel = this.nextRemodel();       

@@ -127,7 +127,8 @@ class MessageBoxScreen extends Screen
             this.getElement("RemodelHousePrompt").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_CantUnlockRemodel) {
-            displayOkayPrompt("Sorry, your husband needs to be higher level to remodel your house.");
+            var unlockLevel = Game.sharedGame().house.getNextRemodelLevel(); 
+            displayOkayPrompt("Your husband needs to be " + str(unlockLevel) + " level to remodel.");
         }
         else if(this.type == MessageBoxScreen.MB_Hubby_Stressed_Out) {
             displayOkayPrompt("He's too stressed out to work! Help him relax?", "okay-button-relieve-stress");
