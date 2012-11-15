@@ -189,9 +189,12 @@ class House
 
     public function getNextRemodelLevel() {
         trace("remodels: ", str(this.remodels));
-        trace("levels: ", str(this.getLevel()));
+        trace("hubby level: ", str(Game.sharedGame().hubby.careerLevel));
+
         for (var i=0;i< len(this.remodels); i++) {
-            if (remodel.unlockLevel <= Game.sharedGame().hubby.careerLevel) {
+            var remodel = this.remodels[i];
+            if (Game.sharedGame().hubby.careerLevel < remodel.unlockLevel) {
+                trace("remodel.unlockLevel ", str(remodel.unlockLevel));
                 return remodel.unlockLevel;
             }
         }

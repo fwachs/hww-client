@@ -140,8 +140,7 @@ class HouseController extends ScreenController implements TimerListener
             this.presentModalScreen(promptScreen);
         }
         else {
-            var unlockLevel = this.house.getNextRemodelLevel();
-            promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_CantUnlockRemodel, unlockLevel);
+            promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_CantUnlockRemodel);
             promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
             this.presentModalScreen(promptScreen);
         }
