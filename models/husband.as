@@ -182,15 +182,15 @@ class Husband //implements DBModel
 	
 	public function checkAchievements()
 	{
-		if(this.careerLevel == 10)
+		if(this.careerLevel >= 10)
 			Game.sharedGame().unlockAchievement("Up and Coming");
-		if(this.careerLevel == 30)
+		if(this.careerLevel >= 30)
 			Game.sharedGame().unlockAchievement("Moving on Up");
-		if(this.careerLevel == 50)
+		if(this.careerLevel >= 50)
 			Game.sharedGame().unlockAchievement("Career Driven");
-		if(this.careerLevel == 80)
+		if(this.careerLevel >= 80)
 			Game.sharedGame().unlockAchievement("Junior Executive");
-		if(this.careerLevel == 100)
+		if(this.careerLevel >= 100)
 			Game.sharedGame().unlockAchievement("The Boss");
 		
 		if(this.stressMeterValue == 10)
