@@ -157,7 +157,37 @@ class Wife
 		
 		cutAndDyeHair(screen);
 	}
-	
+
+	public function showNaked(screen) {
+        var body = screen.getElement("body").getSprite().texture("images/customize-wife/wife parts/WifeBodyBase.png");
+        var face = screen.getElement("face").getSprite();
+        var action = Game.animations.getAnimation("wife_generic_face");
+        action.stop();
+        face.stop();
+        face.addaction(repeat(action));
+
+        var rightArm = screen.getElement("rightArm").getSprite().texture("images/Animation/bare_right_arm/bare_right_arm0001.png");
+        rightArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
+
+        var leftArm = screen.getElement("leftArm").getSprite().texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
+        leftArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
+        
+        var hairBack = screen.getElement("hairback").getSprite();
+        var shoes = screen.getElement("shoes").getSprite();
+        var pants = screen.getElement("pants").getSprite();
+        var belt = screen.getElement("belt").getSprite();
+        var dress = screen.getElement("dress").getSprite();
+        var shirt = screen.getElement("shirt").getSprite();
+        var jacket = screen.getElement("jacket").getSprite();
+        var hairFront = screen.getElement("hairfront").getSprite();
+
+        body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
+        var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
+        var leftArmSleeve = screen.getElement("leftArmSleeve").getSprite();
+
+        cutAndDyeHair(screen);
+    }
+
 	public function cutAndDyeHair(screen)
 	{
 		var hairBack = screen.getElement("hairback").getSprite();

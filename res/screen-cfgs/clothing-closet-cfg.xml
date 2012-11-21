@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Shopping Screen-->
+<screen:config>
+	<screen:elements>
+	
+		<screen:element name="background" resource="fashion-shop/store-screen.png" left="0" top="0"/>
+		
+		<!--Show All Button is used to show all of the players inventory sorted by score high to low-->
+		<screen:element name="showAllButton" resource="fashion-shop/view-all.png" left="290" top="329" ontap="showAllFashion" />
+		
+		<screen:element name="shopContainer" resource="" left="347" top="81" ontap="" z-index="">		
+				<screen:element name="shopContainerFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="0" top="0"/>
+<!-- The following are variants on the item box based on the type of item in the box, they show the different ways that each item is displayed in the items box.-->				
+				<screen:element name="shopItemContainerHair" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="hairback" resource="" left="38" top="40"/>
+					<screen:element name="hairDisplay" resource="customize-wife/display-hair.png" left="33" top="43"/>
+					<screen:element name="hairfront" resource="" left="38" top="40"/>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>				
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+				</screen:element>
+				
+				<screen:element name="shopItemContainerShoes" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="shoeDisplay" resource="customize-wife/display-shoes.png" left="33" top="51"/>
+					<screen:element name="shoes" resource="" left="40" top="136"/>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>		
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>				
+				</screen:element>
+				
+				<screen:element name="shopItemContainerShirt" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="shirtDisplay" resource="customize-wife/display-shirt.png" left="16" top="51"/>
+					<screen:element name="shirt" resource="" left="16" top="51"/>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>	
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+				</screen:element>
+				
+				<screen:element name="shopItemContainerBelt" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="beltDisplay" resource="customize-wife/display-belt.png" left="16" top="51"/>
+					<screen:element name="belt" resource="" left="16" top="127"/>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+	
+				</screen:element>
+				
+		<!--Pants need to be reduced to fit in the space provided. Original size is w188 h301 target size is w131 h215-->
+				<screen:element name="shopItemContainerPants" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="pantsDisplayContainer" resource="" left="16" top="51"	width="131" height="215" 
+									visible="NO" ontap="" z-index="">
+						<screen:element name="pantsDisplay" resource="customize-wife/display-pants.png" left="0" top="0"/>
+						<screen:element name="pants" resource="" left="0" top="0"/>
+					</screen:element>	
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+				</screen:element>
+				
+		<!--Dress need to be reduced to fit in the space provided. Original size is w188 h301 target size is w131 h215-->
+				<screen:element name="shopItemContainerDress" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="dressDisplayContainer" resource="" left="16" top="51"	width="131" height="215" 
+									visible="NO" ontap="" z-index="">
+						<screen:element name="dressDisplay" resource="customize-wife/display-dress.png" left="0" top="0"/>
+						<screen:element name="dress" resource="" left="0" top="0"/>
+					</screen:element>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+				</screen:element>
+
+		<!--Premium Dress need to be reduced to fit in the space provided. Original size is w188 h301 target size is w131 h215
+		Premium Dresses are always displayed with a unique body and no animation. pant, arm, shirt, etc are set to empty when this dress is displayed.-->
+				<screen:element name="shopItemContainerPremiumDress" resource="customize-wife/item-box-name.png" left="33" top="25">
+					<screen:element name="shopItemNameBox" resource="customize-wife/item-box-name.png" left="9" top="0"/>
+					<screen:element name="shopItemName" resource="" left="26" top="10" width="171" height="32" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="shopItemFrame" resource="customize-wife/item-box2.png" left="9" top="45"/>
+					<screen:element name="dressPremiumDisplayContainer" resource="" left="16" top="51"	width="131" height="215" 
+									visible="NO" ontap="" z-index="">
+						<screen:element name="dressPremiumDisplay" resource="customize-wife/display-premium.png" left="0" top="0"/>
+						<screen:element name="dressPremium" resource="" left="0" top="0"/>
+					</screen:element>
+					<screen:element name="shopItemStarOne" resource="house-decorator/star-faded.png" left="179" top="55"/>
+					<screen:element name="shopItemStarTwo" resource="house-decorator/star-faded.png" left="179" top="90"/>
+					<screen:element name="shopItemStarThree" resource="house-decorator/star-faded.png" left="179" top="125"/>
+					<screen:element name="fashionScoreStar" resource="fashion-shop/point-star.png" left="0" top="27"/>
+					<screen:element name="fashionScoreText" resource="" left="18" top="44" width="36" height="41" font-size="28" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+					<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="9" top="218"/>
+					<!--Price icon is either fashion-shop/diamonds-med.png or fashion-shop/game-buck-med.png-->
+					<screen:element name="fashionPriceIcon" resource="" left="18" top="222"/>
+					<screen:element name="fashionPriceText" resource="" left="73" top="227" width="108" height="32" font-size="28" 
+									font-style="bold" text-align="left">#Placeholder</screen:element>
+				</screen:element>					
+			</screen:element> 
+			  	    		
+    		<screen:element name="shoppingScroll" class="Scroll" resource="" left="516" top="171" width="768" height="484" lock="horizontal">
+			</screen:element>
+			
+<!--end shopping container-->
+<!--Bottom Select Bar-->
+		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background2.png" left="375" top="670">
+			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="" />
+			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="" />
+			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="" />
+			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="" />
+			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="520" top="13" ontap="" />
+			<!--screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="640" top="13" ontap="" /-->
+		</screen:element>
+<!--end bottom select bar-->
+<!--begin wife area, In wife area, the wife should be shown undressed to start and be able to try on clothing before purchace-->		
+		<screen:element name="wife" resource="" left="82" top="130">
+			<screen:element name="hairback" resource="" left="38" top="0"/>
+			<screen:element name="rightArm" resource="" left="4" top="30"/>
+			<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+			<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="undies" resource="" left="74" top="150"/>
+			<screen:element name="shoes" resource="" left="74" top="452"/>
+			<screen:element name="pants" resource="" left="38" top="226"/>
+			<screen:element name="belt" resource="" left="38" top="226"/>
+			<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+			<screen:element name="dress" resource="" left="0" top="112"/>
+			<screen:element name="shirt" resource="" left="38" top="112"/>
+			<screen:element name="necklace" resource="" left="" top=""/>
+			<screen:element name="jacket" resource="" left="38" top="112"/>
+			<screen:element name="shoulderBag" resource="" left="" top=""/>
+			<screen:element name="leftArm" resource="" left="4" top="30"/>
+			<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="hairfront" resource="" left="38" top="0"/>
+		</screen:element>
+
+<!--Undress Icon is used to remove all items and return the wife to an underwear only state. Undearwear should be reset to basic undewear that this point.-->
+		<screen:element name="undressIcon" resource="fashion-shop/undress-icon.png" left="347" top="81" ontap="undress" z-index=""/>
+		<!--screen:element name="fashionScoreTotalBox" resource="fashion-shop/fashion-score-box2.png" left="78" top="685" ontap="" z-index="">
+			<screen:element name="fashionScoreTotalText" resource="" left="80" top="22" width="68" height="41" font-size="32" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+		</screen:element-->
+		
+		<screen:element name="magazineButton" resource="fashion-shop/magazines.png" left="240" top="662" ontap="gotoMagazinesScreen"/>
+		<screen:element name="viewClosetButton" resource="fashion-shop/closeticon.png" left="144" top="698" ontap="gotoFashionClosetScreen"/>
+		<screen:element name="customizeHairButton" resource="customize-wife/hair-style-icon.png" left="240" top="662" ontap="gotoCustomizeWife"/>
+
+		<screen:element name="backButton" resource="fashion-shop/back-button-magazines.png" left="1125" top="682" ontap="gotoMainMenu"/>
+		
+	</screen:elements>
+	
+</screen:config>

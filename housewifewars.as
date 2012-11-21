@@ -36,6 +36,7 @@ import models.realestate
 import models.mystery_item
 import models.shop
 import models.achievement
+import models.clothing_item
 
 class HousewifeWars extends Game
 {
@@ -91,6 +92,7 @@ class HousewifeWars extends Game
 		this.loadSounds();
 		this.house.loadFurniture();
 		this.loadAchievements();
+		this.loadClothingItems();
 		
 		var hud = new HUDScreen();
 		hud.configFile = "screen-cfgs/hud-screen-cfg.xml";
@@ -461,6 +463,49 @@ class HousewifeWars extends Game
 		this.furnitures = furnitures;
 		
 		return categories;
+	}
+
+	var clothingCatalogs;
+
+	public function loadClothingItems()
+    {
+        var clothingItems = dict();
+        var catalogs = dict();
+        var xmldict = parsexml("game-config/clothing-items.xml", 1);
+        var xmlClothingItems = xmldict.get("hww-config:clothing-items").get("#children");      
+                
+        for(var i = 0; i < len(xmlClothingItems); i++) {
+            var xmlCatalog = xmlClothingItems[i].get("hww-config:clothing-catalog");
+            var catalogAttrs = xmlCatalog.get("#attributes");
+            
+            var catalog = new ClothingCatalog(catalogAttrs.get("name"));
+
+            var xmlCategories = xmlCatalog.get("#children");
+            for(var j = 0; j < len(xmlCategories); j++) {
+                var xmlCat = xmlCategories[j].get("hww-config:clothing-category");
+                var catAttrs = xmlCat.get("#attributes");
+                var category = new ClothingCategory(catAttrs.get("name"));
+
+                var xmlClothingItemChildren = xmlCat.get("#children");
+                for (var k = 0; k < len(xmlClothingItemChildren); k++) {
+                    var xmlClothingItem = xmlClothingItemChildren[k].get("hww-config:clothing-item");
+                    var clothingAttrs = xmlClothingItem.get("#attributes");
+                    var clothingItem = new ClothingItem(clothingAttrs.get("id"), clothingAttrs.get("name"), clothingAttrs.get("image"),
+                         int(clothingAttrs.get("gameBucks")), int(clothingAttrs.get("diamonds")), int(clothingAttrs.get("stars")), int(clothingAttrs.get("points")), 
+                         int(clothingAttrs.get("rarity")), clothingAttrs.get("type"));
+                    furnitures.update(clothingItem.id, clothingItem);
+                    category.addClothingItem(clothingItem);
+                }
+                catalog.addCategory(category);
+            }
+            catalogs.update(catalog.name, catalog);
+        }
+
+        this.clothingCatalogs = catalogs;
+    }
+
+	public function getCatalog(name) {
+	    return this.clothingCatalogs.get(name);
 	}
 
     public function loadHusbandMessages()

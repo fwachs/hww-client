@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Closet Screen-->
+<screen:config>
+	<screen:elements>
+	
+		<screen:element name="background" resource="fashion-shop/closet-screen.png" left="0" top="0"/>
+		
+		<!--Show All Button is used to show all of the players inventory sorted by score high to low-->
+		<screen:element name="showAllButton" resource="fashion-shop/view-all.png" left="290" top="329" ontap="showAllFashion" />
+		
+		<screen:element name="closetContainer" resource="" left="347" top="81" ontap="" z-index="">		
+			<screen:element name="closetContainerFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="0" top="0">
+			</screen:element>					
+		</screen:element>
+
+   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="480" top="91" width="768" height="590" lock="horizontal">
+		</screen:element>
+			
+		<!--Bottom Select Bar-->
+		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background.png" left="375" top="670">
+			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="filterByDress" />
+			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="filterByShirts" />
+			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="filterByPants" />
+			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="filterByShoes" />
+			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="520" top="13" ontap="filterByExtras" />
+			<screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="640" top="13" ontap="filterByHair" />
+		</screen:element>
+		<!--end bottom select bar-->
+		
+		<!--begin wife area-->		
+		<screen:element name="wife" resource="" left="82" top="130">
+			<screen:element name="hairback" resource="" left="38" top="0"/>
+			<screen:element name="rightArm" resource="" left="4" top="30"/>
+			<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+			<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="undies" resource="clothing/undies/1196_Undies_All.png" left="68" top="150"/>
+			<screen:element name="shoes" resource="" left="74" top="452"/>
+			<screen:element name="pants" resource="" left="38" top="226"/>
+			<screen:element name="belt" resource="" left="38" top="226"/>
+			<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+			<screen:element name="dress" resource="" left="0" top="112"/>
+			<screen:element name="shirt" resource="" left="38" top="112"/>
+			<screen:element name="necklace" resource="" left="" top=""/>
+			<screen:element name="jacket" resource="" left="38" top="112"/>
+			<screen:element name="shoulderBag" resource="" left="" top=""/>
+			<screen:element name="leftArm" resource="" left="4" top="30"/>
+			<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
+			<screen:element name="hairfront" resource="" left="38" top="0"/>
+		</screen:element>
+
+		<!--Undress Icon is used to remove all items and return the wife to an underwear only state. Undearwear should be reset to basic undewear that this point.-->
+		<screen:element name="undressIcon" resource="fashion-shop/undress-icon.png" left="347" top="81" ontap="undress" z-index=""/>
+
+		<screen:element name="fashionScoreTotalBox" resource="fashion-shop/fashion-score-box2.png" left="78" top="685" ontap="" z-index="">
+			<screen:element name="fashionScoreTotalText" resource="" left="80" top="22" width="68" height="41" font-size="32" 
+									font-style="bold" text-align="center">#Placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="magazineButton" resource="fashion-shop/magazines.png" left="240" top="662" ontap="gotoMagazinesScreen"/>
+
+		<screen:element name="backButton" resource="fashion-shop/back-button-magazines.png" left="1125" top="682" ontap="gotoMainMenu"/>
+		
+	</screen:elements>
+	
+</screen:config>
