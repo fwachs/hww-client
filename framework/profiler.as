@@ -7,7 +7,7 @@ project     Papaya-Engine 2clams framework
 Brief Description:
    profiling helper class
 *****************************************************************************/
-
+/*
 class Profiler
 {	
 	var points;
@@ -52,3 +52,4 @@ class Profiler
 		trace("!!! PROFILING REPORT END");
 	}
 }
+*/

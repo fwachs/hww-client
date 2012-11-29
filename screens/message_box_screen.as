@@ -43,6 +43,7 @@ class MessageBoxScreen extends Screen
     static var MB_DarkSideLetter = 29;
     static var MB_BasicAccept = 30;
     static var MB_SellFurniture = 31;
+    static var MB_OutShoppingTutorial = 32;
 
     var type;
     var argument;

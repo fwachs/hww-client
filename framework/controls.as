@@ -39,7 +39,7 @@ class Control
 		var control = null;
 		
 		Control.controlsCount++;
-		trace("Control removed. Controls count: ", Control.controlsCount, ", nodes count: ", sysinfo(24));
+		trace("Control removed. Controls count: ", Control.controlsCount);
 		
 		var className = attrs.get("class");
 //		trace("className: ", className);
@@ -56,7 +56,7 @@ class Control
 			//trace("### HWW ### - newControlFromAttributes", str(attrs));
 			var resource = attrs.get("resource");
 			var highlightFile;
-			if (resource != null && resource != "" && resource.rfind("http") == -1) {
+			if (resource != null && resource != "") {
 				resource = "images/" + resource;
 				
 				var resParts = resource.split(".");
@@ -69,10 +69,12 @@ class Control
 			control.attrs = attrs;
 
 			control.lowlight = resource;
+			/*
 			var handler = c_res_file(highlightFile)
 			if(c_file_exist(handler) == 1) {
 				control.highlight = highlightFile;
 			}
+			*/
 
 			control._sprite.pos(Game.translateX(int(attrs.get("left"))), Game.translateY(int(attrs.get("top"))));
 
@@ -140,7 +142,7 @@ class Control
 		trace("- removeFromParent: ", sprt);
 
 		Control.controlsCount--;
-		trace("Control removed. Controls count: ", Control.controlsCount, ", nodes count: ", sysinfo(24));
+		trace("Control removed. Controls count: ", Control.controlsCount);
 	}
 	
 	public function removeAllChildren()
@@ -362,7 +364,7 @@ class Control
 			}
 			
 			var worldPos = this.getSprite().node2world(event.x, event.y);
-			this.didMove = event.copy();
+			this.didMove = event.makeCopy();
 			this.didMove.x = worldPos[0];
 			this.didMove.y = worldPos[1];
 		}
@@ -388,7 +390,7 @@ class Control
 			var newPos = this.parent.world2node(pos[0], pos[1]);
 //			trace("tapEventHandler: ", event.x, event.y, pos, newPos);
 			
-			var newEvent = event.copy();
+			var newEvent = event.makeCopy();
 			newEvent.x = pos[0];
 			newEvent.y = pos[1];
 			
@@ -404,7 +406,7 @@ class Control
 		var pos = event.node.node2world(event.x, event.y);
 		var newPos = this.getSprite().world2node(pos[0], pos[1]);
 		
-		var newEvent = event.copy();
+		var newEvent = event.makeCopy();
 		newEvent.x = pos[0];
 		newEvent.y = pos[1];
 		

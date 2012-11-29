@@ -10,6 +10,7 @@ Brief Description:
 
 function rotateLoop(timer, tick, carousel)
 {
+/*
 	trace("rotateLoop: ", timer, tick, carousel);
 	
 	carousel.counter--;
@@ -36,6 +37,7 @@ function rotateLoop(timer, tick, carousel)
 				
 		carousel.elements[i][1] = currentAngle + carousel.step * carousel.direction;
 	}
+*/
 }
 
 class Carousel
@@ -126,6 +128,6 @@ class Carousel
 		
 		this.counter = loops;
 		
-		c_addtimer(40, rotateLoop, this, 0, loops);
+		c_addtimer(40, g_rotateLoop, this, 0, loops);
 	}
 }

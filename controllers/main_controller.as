@@ -360,7 +360,7 @@ class MainController extends ScreenController
 
             var avatarUrl;
             if (avatarVersionId != 0) {
-                avatarUrl = avatar_url(friendUserId, avatarVersionId);
+//                avatarUrl = avatar_url(friendUserId, avatarVersionId);
                 avatarUrl = avatarUrl.replace("&", "&amp;");
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";
@@ -407,10 +407,10 @@ class MainController extends ScreenController
 
     public function inviteFriend(friend)
     {
-    	trace("inviteFriend: ", friend, friend.friendUserId);
+    	//trace("inviteFriend: ", friend, friend.friendUserId);
     	
     	// uncomment for final version
-    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
+//    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
 //    	this.friendInvited(0, 1, 0, friend);
     }
 

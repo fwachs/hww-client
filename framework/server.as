@@ -69,7 +69,7 @@ class Server
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
     }
 
-	public function register() {
+	public function doRegister() {
 	    var husband = Game.sharedGame().hubby;
 		var wife = Game.sharedGame().wife;
 	    var couple = dict();

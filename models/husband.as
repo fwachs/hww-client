@@ -338,7 +338,7 @@ class Husband //implements DBModel
 		
 		updateVisits();
 		updateWorkHours();
-		control.updateWorkStats();
+		//control.updateWorkStats();
 		this.save();		
 	}
 	

@@ -76,6 +76,6 @@ class GiftOthersPromptScreen extends Screen
 	}
 
 	override public function gotFocus() {
-		Game.sharedGame().showBanner(1, 1);
+		Game.showBanner(1, 1);
 	}
 }

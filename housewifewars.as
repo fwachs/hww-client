@@ -304,7 +304,7 @@ class HousewifeWars extends Game
 
 	public function checkForReceivedGifts()
 	{
-		Game.sharedGame().getServer().getGifts(this.saveGiftsCallback);
+		Game.getServer().getGifts(this.saveGiftsCallback);
 	}
 
 	public function saveGiftsCallback(request_id, ret_code, response_content)
@@ -511,9 +511,10 @@ class earnMilesTimer extends Timer
 	{
 		var milesEarned = Game.currentGame.wallet.moneyForCurrency(100, "Miles");
 		var ret = Game.currentGame.wallet.collect(milesEarned);
-	}
+	}	
 }
 
+/*
 export("onpause",onpause);
 function onpause()
 {
@@ -534,6 +535,6 @@ function onresume()
 var theGame = new HousewifeWars();
 Game.currentGame = theGame;
 Game.start();
-
+*/
 
 

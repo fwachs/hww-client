@@ -20,7 +20,7 @@ class TilesGroup
     var room;
     var furniture;
     
-    public function copy()
+    public function makeCopy()
     {
         var newCopy = new TilesGroup();
         newCopy.row = this.row;
@@ -74,13 +74,13 @@ class Room
     }
 }
 
-class Style
+class HouseStyle
 {
     var name;
     var description
     var items;
     
-    public function Style()
+    public function HouseStyle()
     {
         this.items = dict();
     }
@@ -93,6 +93,11 @@ class StyleItem
     var depth;
     var floor;
     var flip;
+    
+    public function StyleItem()
+    {
+    	
+    }
 }
 
 class Remodel
@@ -103,6 +108,11 @@ class Remodel
     var cleanReward;
     var garbageTime;
     var unlockLevel;
+    
+    public function Remodel()
+    {
+    	
+    }
 
     public function toString() {
         return str(id);
@@ -222,7 +232,7 @@ class House
             Game.sharedGame().unlockAchievement("Real Estate Mogul");
     }
 
-    public function setSelectedStyle(styleId) 
+    public function defSelectedStyle(styleId) 
     {
         this.selectedStyle = this.styles.get(styleId);
         Game.getDatabase().put("houseStyle", styleId);
@@ -262,9 +272,9 @@ class House
         var selectedStyleId = jsonHouse.get("type");
         var level = jsonHouse.get("level");
 
-        this.setSelectedStyle(selectedStyleId);
+        this.defSelectedStyle(selectedStyleId);
         if (this.selectedStyle == null) {
-            this.setSelectedStyle("brick-yellow");
+            this.defSelectedStyle("brick-yellow");
         }
         if (level == null) {
             level = 1;
@@ -362,7 +372,7 @@ class House
             var xmlstyle = xmlstyles[i].get("hww-config:house-style");
             var styleattrs = xmlstyle.get("#attributes");
             
-            var style = new Style();
+            var style = new HouseStyle();
             style.name = styleattrs.get("name");
             style.description = styleattrs.get("description");
             
@@ -421,7 +431,7 @@ class House
         }
         
         trace("*** REMODELS");
-        for(i = 0; i < len(this.remodels); i++) {
+        for(var i = 0; i < len(this.remodels); i++) {
             trace("***** REMODEL: ", i, this.remodels[i].id, this.remodels[i].unlockLevel);
         }
     }
@@ -517,7 +527,7 @@ class House
         var tg = this.customTiles.get(tilesId);
         
         if(tg == null) {
-            tg = tilesGroup.copy();
+            tg = tilesGroup.makeCopy();
             this.customTiles.update(tilesId, tg);
         }
 
@@ -829,7 +839,7 @@ class OtherPlayerHouse extends House
         return 0;
     }
 
-    override public function setSelectedStyle(styleId) 
+    override public function defSelectedStyle(styleId) 
     {
         this.selectedStyle = this.styles.get(styleId);
     }

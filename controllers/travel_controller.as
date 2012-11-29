@@ -269,7 +269,7 @@ class TravelController extends ScreenController
         //ppy_postnewsfeed(Game.sharedGame().wife.name + " has traveled to " + location + ".", "http://www.2clams.com", null);
 
         Game.sharedGame().passport.save();
-        Game.shardGame().saveWife();
+        Game.sharedGame().saveWife();
 
         this.screen.getElement("plane").getSprite().addaction(moveby(Game.translateX(5800), Game.translateX(1300),0));
         c_invoke(this.showGiftShopScreen, 5800, null);

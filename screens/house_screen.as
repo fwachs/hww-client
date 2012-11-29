@@ -197,12 +197,12 @@ class HouseScreen extends Screen
 			}
 		}
 		
-		for(r = 0; r < tiles.height; r++) {
-			for(c = 0; c < tiles.width; c++) {
-				trace("Setting tile: ", tiles.col + c, tiles.row + r);
+		for(var ro = 0; ro < tiles.height; ro++) {
+			for(var co = 0; co < tiles.width; co++) {
+				trace("Setting tile: ", tiles.col + co, tiles.row + ro);
 
-				t = iso.getTile(tiles.col + c, tiles.row + r);
-				t.area = tiles;
+				var to = iso.getTile(tiles.col + co, tiles.row + ro);
+				to.area = tiles;
 			}
 		}
 

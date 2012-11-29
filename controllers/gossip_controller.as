@@ -23,7 +23,7 @@ class GossipController extends ScreenController
     {
         trace("Gossip screenLoaded!");
         this.screen.screenUpdateTimer.start();
-        Game.sharedGame().getServer().getMessagesAndBestWife(this.buildMessageListAndBestWife);
+        Game.getServer().getMessagesAndBestWife(this.buildMessageListAndBestWife);
     }
 
     public function buildMessageListAndBestWife(request_id, ret_code, response_content)
@@ -62,7 +62,7 @@ class GossipController extends ScreenController
         if (event.name == "post") {
             Game.sounds.playSFX("buttonPress");
             this.screen.post();
-            //Game.sharedGame().getServer().getMessagesAndBestWife(updateMessageList);
+            //Game.getServer().getMessagesAndBestWife(updateMessageList);
         }
         else if (event.name == "goBack") {
             Game.sounds.playSFX("buttonPress");

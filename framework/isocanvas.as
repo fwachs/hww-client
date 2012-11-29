@@ -57,7 +57,7 @@ class IsometricCanvas extends Scroll
 		parentSprite.remove(sprt);
 
 		Control.controlsCount--;
-		trace("IsometricCanvas removed. Controls count: ", Control.controlsCount, ", nodes count: ", sysinfo(24));
+		trace("IsometricCanvas removed. Controls count: ", Control.controlsCount);
 
 		this.destroyItems();
 		this.destroyTiles();
@@ -318,7 +318,7 @@ class IsometricCanvas extends Scroll
 
 		var z = 500000;
 		
-		for(i = 0; i < len(this.items); i++) {
+		for(var i = 0; i < len(this.items); i++) {
 			var item = this.items[i];
 			var itemSprite = item.getSprite();
 			var parent = itemSprite.parent();
@@ -357,31 +357,38 @@ class IsometricCanvas extends Scroll
 	{
 		trace("Tile from pos: ", xpos, ypos);
 		
-		var x = new FixedPoint(xpos);
-		var y = new FixedPoint(ypos);
+		var x = float(xpos);
+		var y = float(ypos);
 		
-		var tileWidth = new FixedPoint(this.tileWidth);
-		var tileHeight = new FixedPoint(this.tileHeight);
-		var tileAspect = tileWidth.div(tileHeight);
+		var tileWidth = float(this.tileWidth);
+		var tileHeight = float(this.tileHeight);
+		var tileAspect = tileWidth / tileHeight;
 		
-		var mapTop = new FixedPoint(20);
-		var mapLeft = new FixedPoint(this.cols - 1).mul(tileWidth.div(new FixedPoint(2)));
+		var mapTop = 20.0;
+		var mapLeft = float(this.cols - 1) * (tileWidth / 2.0);
 		
-		var ymouse = tileAspect.mul(y.sub(mapTop)).sub(x).add(mapLeft).div(tileAspect);
+		//var ymouse = tileAspect.mul(y.sub(mapTop)).sub(x).add(mapLeft).div(tileAspect);
+		var ymouse = (tileAspect * (y - mapTop) - x + mapLeft) / tileAspect;
 		
-		var _ymouse = tileAspect.mul(y.sub(mapTop)).sub(x).add(mapLeft).div(new FixedPoint(2));
+		//var _ymouse = tileAspect.mul(y.sub(mapTop)).sub(x).add(mapLeft).div(new FPoint(2));
+		var _ymouse = (tileAspect * (y - mapTop) - x + mapLeft) / 2.0;
 		
-		var xmouse = x.add(_ymouse).sub(mapLeft).sub(tileWidth.div(tileAspect));
+		//var xmouse = x.add(_ymouse).sub(mapLeft).sub(tileWidth.div(tileAspect));
+		var xmouse = x + _ymouse - mapLeft - tileWidth / tileAspect;
 				
-		var xtile = ymouse.div(tileHeight);
+		//var xtile = ymouse.div(tileHeight);
+		var xtile = ymouse / tileHeight;
 		
-		var ytile = xmouse.div(tileWidth.div(new FixedPoint(2)));
+		//var ytile = xmouse.div(tileWidth.div(new FPoint(2)));
+		var ytile = xmouse / (tileWidth / 2.0);
 
+		/*
 		trace("x, y: ", x.integer(), y.integer(), " - ymouse, _ymouse, xmouse: ", ymouse.integer(), _ymouse.integer(), xmouse.integer(), " - xtile, ytile: ", xtile.round(), ytile.round());
 		
 		trace("Tile is:", xtile.round(), ytile.round());
+		*/
 		
-		return new Array(xtile.round(), ytile.round());
+		return new Array(xtile, ytile);
 	}
 	
 	public function testPlacement(item, tileX, tileY)
@@ -390,7 +397,7 @@ class IsometricCanvas extends Scroll
 			for(var x = 0; x < item.depth; x++) {
 				var tile = this.tiles[tileY - y][tileX - x];
 				if(tile.occupied == 1 && tile.item != item) {
-					this.setHighlightTiles(item, tileX, tileY);
+					this.makeTilesHighlight(item, tileX, tileY);
 					
 					c_invoke(this.clearHighlight, 2000, 0);
 					
@@ -418,7 +425,7 @@ class IsometricCanvas extends Scroll
 		}
 		*/
 		
-		for(i = 0; i < len(item.tiles); i++) {
+		for(var i = 0; i < len(item.tiles); i++) {
 			item.tiles[i].occupied = 0;
 		}		
 		
@@ -442,10 +449,10 @@ class IsometricCanvas extends Scroll
 	{	
 		var tilePos = this.tileFromPos(xpos, ypos);
 
-		this.setHighlightTiles(item, tilePos[0], tilePos[1]);
+		this.makeTilesHighlight(item, tilePos[0], tilePos[1]);
 	}
 	
-	public function setHighlightTiles(item, xTile, yTile)
+	public function makeTilesHighlight(item, xTile, yTile)
 	{
 		this.clearHighlight();
 		
@@ -499,7 +506,7 @@ class IsometricCanvas extends Scroll
 		
 		var scrollPos = this.getSprite().pos();
 		
-		var newEvent = event.copy();
+		var newEvent = event.makeCopy();
 		newEvent.x = (pos[0] + abs(scrollPos[0])) * 100 / this.currentScale;
 		newEvent.y = (pos[1] + abs(scrollPos[1])) * 100 / this.currentScale;
 		
@@ -798,7 +805,7 @@ class IsometricItem extends Control
 	public function addGhost()
 	{
 		return;
-        this.ghost = this.imageSprite.copy();
+        this.ghost = this.imageSprite.makeCopy();
         var parent = this.canvas.getSprite();
 		this.canvas.getSprite().add(this.ghost, 999999998);
 		this.updateGhostPos();
@@ -1088,65 +1095,5 @@ class Button extends Control
 	override public function controlTapped()
 	{
 		this.controller.buttonTapped(this);
-	}
-}
-
-class FixedPoint
-{
-	static var scale = 100;
-	var value;
-	
-	public function FixedPoint(val)
-	{
-		this.value = val * FixedPoint.scale;
-	}
-	
-	public function div(fpNumber)
-	{		
-		var divNum = new FixedPoint(this.value);
-		divNum.value = (this.value * FixedPoint.scale) / fpNumber.value;
-		
-		return divNum;
-	}
-	
-	public function mul(fpNumber)
-	{
-		var mulNum = new FixedPoint(this.value);
-		mulNum.value = (this.value * fpNumber.value) / FixedPoint.scale;
-		
-		return mulNum;
-	}
-
-	public function add(fpNumber)
-	{
-		var addNum = new FixedPoint(this.value);
-		addNum.value = this.value + fpNumber.value;
-		
-		return addNum;
-	}
-
-	public function sub(fpNumber)
-	{
-		var subNum = new FixedPoint(this.value);
-		subNum.value = this.value - fpNumber.value;
-		
-		return subNum;
-	}
-	
-	public function integer()
-	{
-		return this.value / FixedPoint.scale;
-	}
-	
-	public function round()
-	{
-		var ival = this.integer();
-		
-		var mantisse = this.value - ival * FixedPoint.scale;
-		if(this.value > FixedPoint.scale / 2 - 1) {
-			ival++;
-		}
-		
-		return ival;
 	}
 }

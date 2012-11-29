@@ -126,7 +126,8 @@ class HouseSelectionScreen extends Screen
 			var xmlhouse = xmlhouses[i].get("hww-config:player-house");
 			var houseattrs = xmlhouse.get("#attributes");
 			
-			if(this.firstTime == 0 || Game.sharedGame().recoveredFromServer == 1 || (this.firstTime == 1 && houseattrs.get("type") == "Default")) {
+			var ftcond = this.firstTime == 1 && houseattrs.get("type") == "Default";
+			if(this.firstTime == 0 || Game.sharedGame().recoveredFromServer == 1 || ftcond) {
 				var realEstate = new RealEstate();
 				realEstate.name = houseattrs.get("name");
 				realEstate.houseStyle = houseattrs.get("houseStyle");

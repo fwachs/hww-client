@@ -40,12 +40,17 @@ class Game
 
 	public static function getPapayaUserId()
 	{
-	    return str(papayaUserId);
+	    return "";
 	}
 
 	public static function sharedGame()
 	{
 		return Game.currentGame;
+	}
+	
+	public static function getFont()
+	{
+		return Game.font;
 	}
 
     public static function getDatabase()
@@ -75,7 +80,7 @@ class Game
 	
 	public static function trackEvent(category, action, label, value)
 	{
-		ppy_tracker_event(category, action, label, value);
+//		ppy_tracker_event(category, action, label, value);
 		
 		trace("** TRACK EVENT:", category, action, label, value);
 	}
@@ -101,13 +106,15 @@ class Game
 		this.loadingProgress.scale(0, 100);
 		
 		Game.screens = new Array();
-		this.animations = new Animations();
+		Game.animations = new Animations();
         Game.initializeServer();
-        Game.papayaUserId = ppy_userid();
+        Game.papayaUserId = 0;
         trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+/*
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
+*/
         var wife = new Wife();
         var shouldSynchronize = Game.getDatabase().get("onGoingSynchronization");
         if (wife.firstPlay == 1 || shouldSynchronize == 1) {
@@ -172,7 +179,7 @@ class Game
             Game.getDatabase().put("onGoingSynchronization", 0);
             
             
-            //this.scene.remove(dontClose);
+            //Game.scene.remove(dontClose);
         }
         c_invoke(loading1, 1, null);
     }
@@ -202,7 +209,7 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
-		this.getServer().getCurrentDateAndTick(this.initializeTimers);
+		Game.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 	}
@@ -210,13 +217,13 @@ class Game
 	function hideLoadingScreen(timer, tick, param)
 	{
 		this.loadingAnimation.stop();
-		this.scene.remove(this.loadingAnimation);
-		this.scene.remove(this.dontCloseSyncing);
-		this.scene.remove(this.loadingScreen);
-		this.scene.remove(this.loadingBar);
-		this.scene.remove(this.loadingBarStart);
-		this.scene.remove(this.loadingBarEnd);
-		this.scene.remove(this.loadingText);
+		Game.scene.remove(this.loadingAnimation);
+		Game.scene.remove(this.dontCloseSyncing);
+		Game.scene.remove(this.loadingScreen);
+		Game.scene.remove(this.loadingBar);
+		Game.scene.remove(this.loadingBarStart);
+		Game.scene.remove(this.loadingBarEnd);
+		Game.scene.remove(this.loadingText);
 	}
 	
 	public static function translateX(xPos)
@@ -252,8 +259,8 @@ class Game
 		
 		Game.scene = getscene();
 		v_scale(Game.translateX(1280), Game.translateY(800));
-		this.font = new Font();
-		this.sounds = new Sounds();
+		Game.font = new Font();
+		Game.sounds = new Sounds();
 		this.showLoadingScreen();
 
 		Game.trackEvent("Session", "begin", "", 10);
@@ -288,19 +295,19 @@ class Game
 		Timer.startTimers();
 	}
 
-    public function initializeServer()
+    static public function initializeServer()
     {
-        server = new Server();
+        Game.server = new Server();
     }
 
-    public function initializeDatabase()
+    static public function initializeDatabase()
     {   
     	trace("Before initializeDatabase");
-        db = c_opendb(1, "hww-prod");
-    	trace("After initializeDatabase: ", db);
+        //Game.db = c_opendb(1, "hww-prod");
+    	trace("After initializeDatabase: ", Game.db);
     }
     
-    public function cleanDatabase()
+    static public function cleanDatabase()
     {
         Game.getDatabase().remove("wife" + Game.getPapayaUserId());
         Game.getDatabase().remove("husband" + Game.getPapayaUserId());
@@ -332,9 +339,9 @@ class Game
     {
     }
 
-	public function quit()
+	static public function quit()
 	{
-		this.save();
+		Game.sharedGame().save();
 		
 		quitgame();
 	}
@@ -380,12 +387,12 @@ class Game
 	static public function popToRoot()
 	{
 		while(Game.lastScreen().isRoot == 0) {
-			Game.sharedGame().popScreen();		
+			Game.popScreen();		
 		}
 		Game.lastScreen().gotFocus();
 	}
 	
-	public function popScreen()
+	static public function popScreen()
 	{
 		var screenToPop = Game.screens.pop();
 		screenToPop.lostFocus();
@@ -400,7 +407,7 @@ class Game
 		lastScreen.canvas.pos(Game.translateX(0), Game.translateY( 0));
 		
 		screenToPop.destroy();
-		this.scene.remove(screenToPop.canvas);
+		Game.scene.remove(screenToPop.canvas);
 		screenToPop.controller.screenUnloaded();
 	}
 	
@@ -430,7 +437,7 @@ class Game
 		Game.bannerScreen.canvas.bringtofront();
 	}
 	
-	public function hideBanner()
+	static public function hideBanner()
 	{
 //		Game.bannerScreen.canvas.addaction(moveto(250, Game.translateX( -Game.bannerScreen.canvas.size(Game.translateX()[0])), Game.translateY( Game.translateY( 0))));
 		
@@ -440,7 +447,7 @@ class Game
 		Game.bannerScreen.getElement("hudFrameBottom").getSprite().visible(0);
 	}
 	
-	public function startButtonShineAnimation()
+	static public function startButtonShineAnimation()
 	{
 		var buttonShineAnimation = Game.bannerScreen.getElement("buttonShineAnimation").getSprite();
 		buttonShineAnimation.visible(1);
@@ -448,7 +455,7 @@ class Game
 		buttonShineAnimation.stop();
 		buttonShineAnimation.addaction(repeat(action));
 		
-		buttonShineAnimation.addaction(repeat(delaytime(832),callfunc(Game.buttonShineUpdateFunction)));
+//		buttonShineAnimation.addaction(repeat(delaytime(832),callfunc(Game.buttonShineUpdateFunction)));
 		trace("### HWW ### - " + Game.currentScreen().getScreenName());
 	}
 	
@@ -547,7 +554,7 @@ class Game
 		}
 	}
 	
-	public function stopButtonShineAnimation()
+	static public function stopButtonShineAnimation()
 	{
 		Game.bannerScreen.getElement("buttonShineAnimation").getSprite().stop();
 		Game.bannerScreen.getElement("buttonShineAnimation").getSprite().visible(0);

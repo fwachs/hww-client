@@ -351,8 +351,8 @@ class HusbandController extends ScreenController implements TimerListener
 
     public function thresholdWeighedWithBuff(thrx)
     {
-        trace("### HWW ### rareItemThreshold: " + str(Game.sharedGame().husband.rareItemThreshold));
-        thrx += Game.sharedGame().husband.rareItemThreshold;
+        trace("### HWW ### rareItemThreshold: " + str(Game.sharedGame().hubby.rareItemThreshold));
+        thrx += Game.sharedGame().hubby.rareItemThreshold;
         if(thrx > 100) {
             thrx = 100;
         }
@@ -360,7 +360,7 @@ class HusbandController extends ScreenController implements TimerListener
             thrx = 1;
         }
 
-        Game.sharedGame().husband.rareItemThreshold = 0;
+        Game.sharedGame().hubby.rareItemThreshold = 0;
 
         return thrx;
     }
@@ -565,67 +565,68 @@ class HusbandController extends ScreenController implements TimerListener
 	    	}
     	}
     }
+
+    /*****************************************************************************
+    	Message Box Functions
+    *****************************************************************************/
+
+	function hcantcomplete(x)
+	{
+	    trace("husband unable to complete action");
+	}
+	
+	function hcancel(x)
+	{
+	    trace("action canceled");
+	}
+	
+	function hreturnwork()
+	{
+	    if(Game.sharedGame().hubby.isHome() == 0) {
+	        var ret = Game.currentGame.shop.buyImmediateReturn("Work");
+	        if(ret == 1) {
+	            Game.sharedGame().hubby.returnFromWork();
+	            trace("returned from work");
+	        }
+	        else {
+	            gotoPremiumCurrencyDiamonds();
+	        }
+	    }
+	}
+	
+	function hreturnshopping()
+	{
+	    if(Game.sharedGame().hubby.isHome() == 0) {
+	        var ret = Game.currentGame.shop.buyImmediateReturn("Shopping");
+	        if(ret == 1) {
+	            Game.sharedGame().hubby.returnFromShopping();
+	            trace("returned from shopping");
+	        }
+	        else {
+	            gotoPremiumCurrencyDiamonds();
+	        }
+	    }
+	}
+	
+	function gotoPremiumCurrencyDiamonds()
+	{
+	    var screen = new PremiumCurrencyScreen("viewDiamond");
+	    screen.configFile = "screen-cfgs/premium-currency-screen-cfg.xml";
+	    var controller = new PremiumCurrencyController(screen);
+	
+	    Game.pushScreen(screen);
+	}
+	
+	function gotoPremiumCurrencyGameBucks()
+	{
+	    var screen = new PremiumCurrencyScreen("viewGameBucks");
+	    screen.configFile = "screen-cfgs/premium-currency-screen-cfg.xml";
+	    var controller = new PremiumCurrencyController(screen);
+	
+	    Game.pushScreen(screen);
+	}
 }
 
-/*****************************************************************************
-    Message Box Functions
-*****************************************************************************/
-
-function hcantcomplete(x)
-{
-    trace("husband unable to complete action");
-}
-
-function hcancel(x)
-{
-    trace("action canceled");
-}
-
-function hreturnwork()
-{
-    if(Game.sharedGame().hubby.isHome() == 0) {
-        var ret = Game.currentGame.shop.buyImmediateReturn("Work");
-        if(ret == 1) {
-            Game.sharedGame().hubby.returnFromWork();
-            trace("returned from work");
-        }
-        else {
-            gotoPremiumCurrencyDiamonds();
-        }
-    }
-}
-
-function hreturnshopping()
-{
-    if(Game.sharedGame().hubby.isHome() == 0) {
-        var ret = Game.currentGame.shop.buyImmediateReturn("Shopping");
-        if(ret == 1) {
-            Game.sharedGame().hubby.returnFromShopping();
-            trace("returned from shopping");
-        }
-        else {
-            gotoPremiumCurrencyDiamonds();
-        }
-    }
-}
-
-function gotoPremiumCurrencyDiamonds()
-{
-    var screen = new PremiumCurrencyScreen("viewDiamond");
-    screen.configFile = "screen-cfgs/premium-currency-screen-cfg.xml";
-    var controller = new PremiumCurrencyController(screen);
-
-    Game.pushScreen(screen);
-}
-
-function gotoPremiumCurrencyGameBucks()
-{
-    var screen = new PremiumCurrencyScreen("viewGameBucks");
-    screen.configFile = "screen-cfgs/premium-currency-screen-cfg.xml";
-    var controller = new PremiumCurrencyController(screen);
-
-    Game.pushScreen(screen);
-}
 
 /*****************************************************************************
     Timers

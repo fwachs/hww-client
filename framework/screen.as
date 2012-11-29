@@ -164,7 +164,7 @@ class Screen
 			this.showNextTutorial();
 		}
 		
-		this.canvas.setevent(EVENT_KEYDOWN, this.controller.keyDown);
+		//this.canvas.setevent(EVENT_KEYDOWN, this.controller.keyDown);
 
 		this.build();		
 	}
@@ -231,7 +231,7 @@ class Screen
 	public function getTemplateText(fileName)
 	{
 		var templateText = Screen.xmlTemplates.get(fileName);
-		
+/*		
 		if(!templateText) {
 		var file_handler = c_res_file("screen-cfgs/templates/" + fileName);
 		var result = c_file_op(C_FILE_READ, file_handler);
@@ -242,7 +242,7 @@ class Screen
 
 			trace("### HWW ### - XML From File: ", fileName, templateText);
 		}
-		
+*/		
 		return templateText;
 	}
 	
@@ -262,7 +262,7 @@ class Screen
 		var dict = parsexml(strXML, 0);
 
 		var templates = dict.get("screen:templates").get("#children");
-		for(i = 0; i < len(templates); i++) {
+		for(var i = 0; i < len(templates); i++) {
 			var tplt = templates[i].get("screen:template");
 			var attrs = tplt.get("#attributes");
 			
@@ -305,7 +305,7 @@ class Screen
 	public function willGetFocus()
 	{
 	    if (this.canvas != null) {
-	        this.canvas.focus(1);
+//	        this.canvas.focus(1);
 	    }
 		this.showTutorialStep(this.currentTutorial);
 	}

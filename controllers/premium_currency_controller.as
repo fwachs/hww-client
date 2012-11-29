@@ -85,16 +85,16 @@ class PremiumCurrencyController extends ScreenController
 				amount = int(paymentParams[1]);
 				papayas = int(paymentParams[2]);
 			}
-			start_payment(title, description, "", papayas, onPaymentFinished, dict([["amount", amount], ["currency", currencyName]]));
+			//start_payment(title, description, "", papayas, onPaymentFinished, dict([["amount", amount], ["currency", currencyName]]));
 		}
 	}
 	
 	public function onPaymentFinished(pid, ret, tid, receipt, param) {
 		trace("onPaymentFinished", tid, receipt); 
+		var amount = param.get("amount");
+		var currency = param.get("currency");
 		if (ret == 1) {
 			var wallet = Game.sharedGame().wallet;
-			var amount = param.get("amount");
-			var currency = param.get("currency");
 			var money = wallet.moneyForCurrency(amount, currency);
 			wallet.purchaseCurrency(money, this);
 			trace("### HWW ### - User purchased: ", amount, " ", currency);

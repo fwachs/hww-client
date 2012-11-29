@@ -35,11 +35,13 @@ class GossipScreen extends Screen
 	{
 		Game.hideBanner();
 		
+		/*
 		var vf = v_font(Game.translateFontSize(30), "arial", FONT_NORMAL);
 		this.textInput = v_create(V_INPUT_VIEW, Game.translateX(400), Game.translateY(686), Game.translateX(550), Game.translateY(100));
 		this.textInput.attr(ATTR_FONT, vf);
 		v_root().addview(this.textInput);
 		this.textInput.text(this.text);
+		*/
 	}
 	
 	override public function lostFocus()
@@ -130,9 +132,9 @@ class GossipScreen extends Screen
 		// TODO: get house level
 		if (this.text != "") {
 		    this.messages.append(dict([["message", this.text], ["houseWifeName", Game.currentGame.wife.name], ["houseLeve", ""], ["timeAgo", ""]]));
-		    var msg = GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
+		    var msg = new GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
 	        
-	        Game.sharedGame().getServer().postGossip(msg, this.buildMessageListAndBestWife);    
+	        Game.getServer().postGossip(msg, this.buildMessageListAndBestWife);    
 		}
 	}
 
