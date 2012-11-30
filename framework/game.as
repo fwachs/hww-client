@@ -271,7 +271,7 @@ class Game
 	{
 	}
 
-	public function start()
+	static public function start()
 	{
 	}
 
