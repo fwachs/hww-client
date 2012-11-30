@@ -40,7 +40,7 @@ class Game
 
 	public static function getPapayaUserId()
 	{
-	    return "";
+	    return "1234";
 	}
 
 	public static function sharedGame()
@@ -209,9 +209,11 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 		this.loadingProgress.scale(100, 100);
-		Game.getServer().getCurrentDateAndTick(this.initializeTimers);
+		//Game.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
+		this.hideLoadingScreen();
+		Game.sharedGame().run();
 	}
 	
 	function hideLoadingScreen(timer, tick, param)
@@ -304,6 +306,7 @@ class Game
     {   
     	trace("Before initializeDatabase");
         //Game.db = c_opendb(1, "hww-prod");
+    	Game.db = dict();
     	trace("After initializeDatabase: ", Game.db);
     }
     
