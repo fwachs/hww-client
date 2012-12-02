@@ -43,6 +43,7 @@ class MessageBoxScreen extends Screen
     static var MB_DarkSideLetter = 29;
     static var MB_BasicAccept = 30;
     static var MB_SellFurniture = 31;
+    static var MB_UnlockCatalog = 32;
 
     var type;
     var argument;
@@ -200,6 +201,8 @@ class MessageBoxScreen extends Screen
         }
         else if(this.type == MessageBoxScreen.MB_SellFurniture) {
         	displaySellItemPrompt();
+        } else if (this.type == MessageBoxScreen.MB_UnlockCatalog) {
+            displayOkayPrompt("Congratulations! You unlocked the " + str(this.argument) + " Fashion Catalog");
         }
     }
 

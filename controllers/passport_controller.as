@@ -388,6 +388,8 @@ class PassportController extends ScreenController
 	
 	public function checkAchievements()
 	{
+	    var showModal = 0;
+	    var catalogName = null;
 		if(currentPage == "London") {
 			if(Game.currentGame.passport.LondonSouvenirs[0] == 1 && Game.currentGame.passport.LondonSouvenirs[1] == 1 && Game.currentGame.passport.LondonSouvenirs[2] == 1 &&
 					Game.currentGame.passport.LondonSouvenirs[3] == 1 && Game.currentGame.passport.LondonSouvenirs[4] == 1) {
@@ -398,6 +400,8 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[0] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "London";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[0]);
@@ -413,6 +417,8 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[1] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "San Francisco";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[1]);
@@ -428,6 +434,8 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[2] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "Paris";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[2]);
@@ -443,6 +451,8 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[3] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "Buenos Aires";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[3]);
@@ -458,6 +468,8 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[4] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "Tokyo";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[4]);
@@ -473,11 +485,20 @@ class PassportController extends ScreenController
 					Game.sharedGame().passport.datesCompleted[5] = Game.sharedGame().today;
 					Game.sharedGame().passport.save();
 					Game.sounds.playSFX("passportStamp");
+					showModal = 1;
+					catalogName = "Sydney";
 				}
 				
 				this.stampCompletedDateLabel.text(Game.sharedGame().passport.datesCompleted[5]);
 			}
 		}
+		
+		if (showModal == 1) {
+		    var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_UnlockCatalog, catalogName);
+	        promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+	        this.presentModalScreen(promptScreen);
+		}
+		
 	}
 	
 	/*****************************************************************************

@@ -88,6 +88,12 @@
         <screen:element name="gameBucksIcon" resource="premium-currency-screen/game-buck.png" left="519" top="445"/>
         <screen:element name="sellItemCostText" resource="" left="600" top="445" font-size="46" font-style="bold">0</screen:element>
     </screen:element>
+
+	<screen:element name="unlockCataloguePrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="unlockCataloguePromptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
+        <screen:element name="unlockCataloguePromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" text-wrap="yes">#placeholder</screen:element>
+		<screen:element name="okay-button" resource="tutorial-icons/okay.png" left="512" top="523" ontap="dismiss"/>
+    </screen:element>
     
     </screen:elements>
 </screen:config>
