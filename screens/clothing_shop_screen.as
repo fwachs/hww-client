@@ -84,11 +84,7 @@ class ClothingShopScreen extends Screen
 	}
 
 	public function displayPurchaseButton(clothingItem) {
-	    var elementContainer = this.getElement("clothing_" + str(clothingItem.id)).getSprite();
-	    trace("element container: ", "clothing_" + str(clothingItem.id), elementContainer, elementContainer.texture());
-	    var purchaseButton = this.controlFromXMLTemplate("PurchaseClothingItem", dict(), "clothing-item.xml");
-	    trace("purchase button: ", purchaseButton);
-	    elementContainer.addChild(purchaseButton);
+	    var elementContainer = this.getElement("purchaseButton_" + str(clothingItem.id)).getSprite().visible(1);
 	}
 
 	override public function gotFocus() {
