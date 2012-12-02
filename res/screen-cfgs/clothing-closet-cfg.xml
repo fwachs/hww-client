@@ -13,7 +13,7 @@
 			</screen:element>
 		</screen:element> 
 			  	    		
-   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="516" top="171" width="768" height="484" lock="horizontal">
+   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="480" top="91" width="768" height="590" lock="horizontal">
 		</screen:element>
 			
 		<!--Bottom Select Bar-->
@@ -26,6 +26,7 @@
 			<!--screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="640" top="13" ontap="" /-->
 		</screen:element>
 		<!--end bottom select bar-->
+
 		<!--begin wife area, In wife area, the wife should be shown undressed to start and be able to try on clothing before purchace-->		
 		<screen:element name="wife" resource="" left="82" top="130">
 			<screen:element name="hairback" resource="" left="38" top="0"/>

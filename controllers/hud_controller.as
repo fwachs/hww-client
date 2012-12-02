@@ -121,21 +121,21 @@ class HUDController extends ScreenController
 			Game.pushScreen(screen);
 		}
 		else if(event.name == "gotoCatalog") {
-            Game.sounds.playSFX("buttonPress");
-            
-            screen = new ClothingClosetScreen();
-            screen.configFile = "screen-cfgs/clothing-closet-cfg.xml";
-            controller = new ClothingClosetController(screen);
-    
-            Game.pushScreen(screen);
-        }
-		else if(event.name == "gotoCloset") {
-            Game.sounds.playSFX("buttonPress");
+		    Game.sounds.playSFX("buttonPress");
             
             screen = new ClothingShopScreen();
             screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
             controller = new ClothingShopController(screen, "London");
 
+            Game.pushScreen(screen);
+        }
+		else if(event.name == "gotoCloset") {
+		    Game.sounds.playSFX("buttonPress");
+            
+            screen = new ClothingClosetScreen();
+            screen.configFile = "screen-cfgs/clothing-closet-cfg.xml";
+            controller = new ClothingClosetController(screen);
+    
             Game.pushScreen(screen);
         }
 	}

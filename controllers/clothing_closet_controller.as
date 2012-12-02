@@ -22,7 +22,7 @@ class ClothingClosetController extends ScreenController
     
     override public function screenLoaded()
     {
-        
+        this.screen.display();
     }
     
     override public function eventFired(event)
