@@ -14,7 +14,7 @@ class ClothingClosetScreen extends Screen
 {
     public function ClothingClosetScreen()
     {
-        super();        
+        super();
     }
 
     override public function build()
