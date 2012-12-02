@@ -486,7 +486,7 @@ class HousewifeWars extends Game
             var xmlCatalog = xmlClothingItems[i].get("hww-config:clothing-catalog");
             var catalogAttrs = xmlCatalog.get("#attributes");
             
-            var catalog = new ClothingCatalog(catalogAttrs.get("name"), catalogAttrs.get("image"));
+            var catalog = new ClothingCatalog(catalogAttrs.get("name"), catalogAttrs.get("image"), int(catalogAttrs.get("travelIndex")));
 
             var xmlCategories = xmlCatalog.get("#children");
             for(var j = 0; j < len(xmlCategories); j++) {

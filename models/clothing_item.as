@@ -2,12 +2,14 @@
 class ClothingCatalog {
     var name;
     var image;
+    var travelIndex;
     var categories;
     
-    public function ClothingCatalog(catName, image)
+    public function ClothingCatalog(catName, image, travelIndex)
     {
         this.name = catName;
         this.image = image;
+        this.travelIndex = travelIndex;
         this.categories = dict();
     }
     

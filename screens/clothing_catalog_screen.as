@@ -29,6 +29,11 @@ class ClothingCatalogScreen extends Screen
 
             params.update("left_pos", str(left));
             params.update("catalogOptionImage", clothingCatalog.image);
+            params.update("catalogOptionAction", "catalogClicked");
+            var travelDate = Game.sharedGame().passport.datesCompleted[clothingCatalog.travelIndex];
+            if (travelDate == null || travelDate == "") {
+                params.update("catalogOptionAction", "catalogLocked");
+            }
 
             var scrollCatalogItem = this.controlFromXMLTemplate("CatalogOption", params, "catalog-item.xml");
             scrollCatalogItem.tapEvent.argument = clothingCatalog.name;

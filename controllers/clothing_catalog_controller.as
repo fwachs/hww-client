@@ -40,6 +40,13 @@ class ClothingCatalogController extends ScreenController
             controller = new ClothingShopController(screen, event.argument);
             
             Game.pushScreen(screen);
+        } else if (event.name == "catalogLocked") {
+            var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_LockedCatalog);
+            promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+            this.presentModalScreen(promptScreen);
+        } else if(event.name == "dismiss") {
+            Game.sounds.playSFX("buttonPress");
+            this.dismissModalScreen();
         }
     }
 }
