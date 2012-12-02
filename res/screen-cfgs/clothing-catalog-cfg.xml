@@ -5,39 +5,7 @@
 	
 		<screen:element name="background" resource="travel-screen/background-travel.png" left="0" top="0"/>
 		
-		<screen:element name="cataloguesOptionsFrame" resource="" left="50" top="100" >
-			<screen:element name="background" resource="fashion-shop/london-mag.png" left="0" top="0" ontap="goToLondonCatalogue" >
-				<screen:element name="LondonUnlockText" resource="" left="110" top="600"/>
-				<screen:element name="hotspot" resource="" left="0" top="600" width="539" height="108">
-					<screen:element name="goToLondonCatalogue" resource="travel-screen/go-button.png" left="410" top="0" />
-				</screen:element>
-			</screen:element>
-			<screen:element name="background" resource="fashion-shop/sf-mag.png" left="550" top="0" ontap="goToSanFranciscoCatalogue" >
-				<screen:element name="SanFranciscoUnlockText" resource="" left="110" top="600"/>
-				<screen:element name="hotspot" resource="" left="0" top="600" width="539" height="108">
-					<screen:element name="goToSanFranciscoCatalogue" resource="travel-screen/go-button.png" left="410" top="0" />
-				</screen:element>
-			</screen:element>
-			<screen:element name="background" resource="fashion-shop/paris-mag.png" left="1100" top="0" ontap="goToParisCatalogue">
-				<screen:element name="ParisUnlockText" resource="" left="110" top="600"/>
-				<screen:element name="hotspot" resource="" left="0" top="600" width="539" height="108">
-					<screen:element name="goToParisCatalogue" resource="travel-screen/go-button.png" left="410" top="0" />
-				</screen:element>
-				<screen:element name="goToParisCatalogue" resource="travel-screen/go-button.png" left="410" top="600" />
-			</screen:element>
-			<screen:element name="background" resource="fashion-shop/b-aires.png" left="1650" top="0" ontap="goToBuenosAiresCatalogue" >
-				<screen:element name="BuenosAiresUnlockText" resource="" left="110" top="600"/>
-				<screen:element name="hotspot" resource="" left="0" top="600" width="539" height="108">
-					<screen:element name="goToBuenosAiresCatalogue" resource="travel-screen/go-button.png" left="410" top="0" />
-				</screen:element>
-			</screen:element>
-			<screen:element name="background" resource="fashion-shop/tokyo.png" left="2200" top="0" ontap="goToTokyoCatalogue">
-				<screen:element name="TokyoUnlockText" resource="" left="110" top="600"/>
-				<screen:element name="hotspot" resource="" left="0" top="600" width="539" height="108">
-					<screen:element name="goToTokyoCatalogue" resource="travel-screen/go-button.png" left="410" top="0" />
-				</screen:element>
-			</screen:element>
-
+		<screen:element name="cataloguesOptionsScroll" class="Scroll" resource="" left="50" top="100" width="2000" height="680" lock="horizontal">
 		</screen:element>
 		
 		<screen:element name="backbutton" resource="travel-screen/back-button.png" left="1020" top="688" ontap="goBack"/>

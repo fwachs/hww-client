@@ -1,11 +1,13 @@
 
 class ClothingCatalog {
     var name;
+    var image;
     var categories;
     
-    public function ClothingCatalog(catName)
+    public function ClothingCatalog(catName, image)
     {
         this.name = catName;
+        this.image = image;
         this.categories = dict();
     }
     

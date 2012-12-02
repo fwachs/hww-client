@@ -20,6 +20,7 @@ class ClothingCatalogController extends ScreenController
     
     override public function screenLoaded()
     {
+        this.screen.fillScroll();
     }
     
     override public function eventFired(event)
@@ -33,34 +34,10 @@ class ClothingCatalogController extends ScreenController
             Game.sounds.playSFX("buttonPress");
 
             Game.popScreen();
-        } else if(event.name == "goToLondonCatalogue") {
+        } else if (event.name == "catalogClicked") {
             screen = new ClothingShopScreen();
             screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "London");
-            
-            Game.pushScreen(screen);
-        } else if(event.name == "goToSanFranciscoCatalogue") {
-            screen = new ClothingShopScreen();
-            screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "San Francisco");
-            
-            Game.pushScreen(screen);
-        } else if(event.name == "goToParisCatalogue") {
-            screen = new ClothingShopScreen();
-            screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "Paris");
-            
-            Game.pushScreen(screen);
-        } else if(event.name == "goToBuenosAiresCatalogue") {
-            screen = new ClothingShopScreen();
-            screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "Buenos Aires");
-            
-            Game.pushScreen(screen);
-        } else if(event.name == "goToTokyoCatalogue") {
-            screen = new ClothingShopScreen();
-            screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "Tokyo");
+            controller = new ClothingShopController(screen, event.argument);
             
             Game.pushScreen(screen);
         }
