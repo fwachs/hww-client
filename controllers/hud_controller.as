@@ -14,8 +14,8 @@ import screens.premium_currency_screen
 import controllers.premium_currency_controller
 import screens.clothing_closet_screen
 import controllers.clothing_closet_controller
-import screens.clothing_shop_screen
-import controllers.clothing_shop_controller
+import screens.clothing_catalog_screen
+import controllers.clothing_catalog_controller
 
 class HUDController extends ScreenController
 {
@@ -122,12 +122,11 @@ class HUDController extends ScreenController
 		}
 		else if(event.name == "gotoCatalog") {
 		    Game.sounds.playSFX("buttonPress");
+		    screen = new ClothingCatalogScreen();
+		    screen.configFile = "screen-cfgs/clothing-catalog-cfg.xml";
+		    controller = new ClothingCatalogController(screen);
             
-            screen = new ClothingShopScreen();
-            screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
-            controller = new ClothingShopController(screen, "London");
-
-            Game.pushScreen(screen);
+		    Game.pushScreen(screen);
         }
 		else if(event.name == "gotoCloset") {
 		    Game.sounds.playSFX("buttonPress");
