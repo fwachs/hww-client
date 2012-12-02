@@ -23,19 +23,18 @@ class ClothingClosetScreen extends Screen
     }
 
     public function display(categoryName) {
-        if (categoryName == null || categoryName != "All") {
-            var clothingItemInstances = Game.sharedGame().purchasedClothingItems.clothingItemInstances;
+        var clothingItemInstances = Game.sharedGame().purchasedClothingItems.clothingItemInstances;
+        if (categoryName == null || categoryName == "All") {
             this.fillScroll(clothingItemInstances);
         } else {
-//            var categories = catalog.categories.values();
-//            var clothingItems = new Array();
-//            for (var i=0; i<len(categories); i++) {
-//                var categoryClothingItems = categories[i].clothingItems;
-//                for (var j = 0; j<len(categoryClothingItems); j++) {
-//                    clothingItems.append(categoryClothingItems[j]);
-//                }
-//            }
-//            this.fillScroll(clothingItems);
+            var clothingItems = new Array();
+            for (var i=0; i<len(clothingItemInstances); i++) {
+                var clothingItem = clothingItemInstances[i].clothingItem;
+                if (categoryName == clothingItem.category.name) {
+                    clothingItems.append(clothingItemInstances[i]);
+                }
+            }
+            this.fillScroll(clothingItems);
         }
     }
 
@@ -45,10 +44,8 @@ class ClothingClosetScreen extends Screen
         var left = 0;
         var rowsClothingItems = len(clothingItems) / 2;      
         var secondRow = 0;
-        trace("closet scroll: ", str(len(clothingItems)), clothingItems);
         for (var i = 0; i < len(clothingItems); i++) {
             var clothingItem = clothingItems[i].clothingItem;
-            trace("clothing item: ", clothingItem, clothingItem.id);
             var params = dict();
 
             params.update("left_pos", str(left));
@@ -76,8 +73,7 @@ class ClothingClosetScreen extends Screen
 
             var scrollClothingItem = this.controlFromXMLTemplate("ClothingItem" + clothingItem.type, params, "clothing-item.xml");
             scrollClothingItem.getSprite().clipping(1);
-            trace("clothing item image: ", clothingItem.image);
-            scrollClothingItem.tapEvent.argument = clothingItem;
+            scrollClothingItem.tapEvent.argument = clothingItems[i];
             shoppingScroll.addChild(scrollClothingItem);
             left += 230;
         }

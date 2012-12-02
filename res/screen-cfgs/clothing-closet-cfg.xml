@@ -15,15 +15,15 @@
 			  	    		
    		<screen:element name="shoppingScroll" class="Scroll" resource="" left="480" top="91" width="768" height="590" lock="horizontal">
 		</screen:element>
-			
+
 		<!--Bottom Select Bar-->
-		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background2.png" left="375" top="670">
-			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="" />
-			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="" />
-			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="" />
-			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="" />
-			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="520" top="13" ontap="" />
-			<!--screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="640" top="13" ontap="" /-->
+		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background.png" left="375" top="670">
+			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="filterByDress" />
+			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="filterByShirts" />
+			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="filterByPants" />
+			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="filterByShoes" />
+			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="520" top="13" ontap="filterByExtras" />
+			<screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="640" top="13" ontap="filterByHair" />
 		</screen:element>
 		<!--end bottom select bar-->
 
@@ -50,15 +50,12 @@
 
 		<!--Undress Icon is used to remove all items and return the wife to an underwear only state. Undearwear should be reset to basic undewear that this point.-->
 		<screen:element name="undressIcon" resource="fashion-shop/undress-icon.png" left="347" top="81" ontap="undress" z-index=""/>
-		<!--screen:element name="fashionScoreTotalBox" resource="fashion-shop/fashion-score-box2.png" left="78" top="685" ontap="" z-index="">
-			<screen:element name="fashionScoreTotalText" resource="" left="80" top="22" width="68" height="41" font-size="32" 
-									font-style="bold" text-align="center">#Placeholder</screen:element>
-		</screen:element-->
-		
-		<screen:element name="magazineButton" resource="fashion-shop/magazines.png" left="240" top="662" ontap="gotoMagazinesScreen"/>
-		<screen:element name="viewClosetButton" resource="fashion-shop/closeticon.png" left="144" top="698" ontap="gotoFashionClosetScreen"/>
-		<screen:element name="customizeHairButton" resource="customize-wife/hair-style-icon.png" left="240" top="662" ontap="gotoCustomizeWife"/>
 
+		<screen:element name="fashionScoreTotalBox" resource="fashion-shop/fashion-score-box2.png" left="78" top="685" ontap="" z-index="">
+			<screen:element name="fashionScoreTotalText" resource="" left="80" top="22" width="68" height="41" font-size="32" font-style="bold" text-align="center">#Placeholder</screen:element>
+		</screen:element>
+		
+		<screen:element name="magazineButton" resource="fashion-shop/magazines.png" left="240" top="662" ontap="gotoMagazinesScreen"/>		
 		<screen:element name="backButton" resource="fashion-shop/back-button-magazines.png" left="1125" top="682" ontap="gotoMainMenu"/>
 		
 	</screen:elements>

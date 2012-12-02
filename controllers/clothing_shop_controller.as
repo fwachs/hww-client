@@ -16,6 +16,7 @@ import controllers.premium_currency_controller
 class ClothingShopController extends ScreenController
 {
     var catalogName;
+    var previousClothingItem;
     var selectedClothingItem;
     var appliedFilter;
 
@@ -45,9 +46,11 @@ class ClothingShopController extends ScreenController
                 Game.popToRoot();
             }
         } else if(event.name == "wearClothingItem") {
+            this.previousClothingItem = this.selectedClothingItem;
             this.selectedClothingItem = event.argument;
             Game.sharedGame().wife.wear(this.selectedClothingItem, this.screen);
             this.screen.displayPurchaseButton(this.selectedClothingItem);
+            this.screen.hidePurchaseButton(this.previousClothingItem);
         } else if (event.name == "purchaseClothingItem") {
             var ret = Game.sharedGame().shop.buyClothingItem(this.selectedClothingItem);
             if(ret == 1) {
@@ -57,6 +60,7 @@ class ClothingShopController extends ScreenController
                 this.pushPremiumCurrencyScreen(this.selectedClothingItem);
             }
             this.selectedClothingItem = null;
+            this.previousClothingItem = null;
         } else if (event.name == "filterByDress") {
             this.screen.display(catalog, "Dress");
             this.appliedFilter = "Dress";

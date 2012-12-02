@@ -84,10 +84,13 @@ class ClothingShopScreen extends Screen
 	}
 
 	public function displayPurchaseButton(clothingItem) {
-	    var element = this.getElement("purchaseButton_" + str(clothingItem.id));
-	    trace("purchase button: ", "purchaseButton_" + str(clothingItem.id), element.getSprite().visible());
 	    this.getElement("purchaseButton_" + str(clothingItem.id)).getSprite().visible(1);
-	    trace("purchase button: ", "purchaseButton_" + str(clothingItem.id), element.getSprite().visible());
+	}
+
+	public function hidePurchaseButton(clothingItem) {
+	    if (clothingItem != null) {
+	        this.getElement("purchaseButton_" + str(clothingItem.id)).getSprite().visible(0);
+	    }
 	}
 
 	override public function gotFocus() {
