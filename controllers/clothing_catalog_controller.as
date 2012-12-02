@@ -41,7 +41,7 @@ class ClothingCatalogController extends ScreenController
             
             Game.pushScreen(screen);
         } else if (event.name == "catalogLocked") {
-            var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_LockedCatalog);
+            var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_LockedCatalog, event.argument);
             promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
             this.presentModalScreen(promptScreen);
         } else if(event.name == "dismiss") {

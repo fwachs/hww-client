@@ -205,7 +205,7 @@ class MessageBoxScreen extends Screen
         } else if (this.type == MessageBoxScreen.MB_UnlockCatalog) {
             displayOkayPrompt("Congratulations! You unlocked the " + str(this.argument) + " Fashion Catalog");
         } else if (this.type == MessageBoxScreen.MB_LockedCatalog) {
-            displayOkayPrompt("Catalog is locked. ");
+            displayOkayPrompt("Visit "+ this.argument + " and see all the sights first.");
         }
     }
 
