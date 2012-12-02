@@ -45,8 +45,9 @@ class ClothingItem {
     var rarity;
     var type;
     var category;
+    var element;
 
-    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, rarity, type) {
+    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, rarity, type, element) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -56,6 +57,7 @@ class ClothingItem {
         this.points = points;
         this.rarity = rarity;
         this.type = type;
+        this.element = element;
     }
 
     public function getCurrency() {
@@ -78,6 +80,10 @@ class ClothingItem {
             return "full";
         }
         return "faded";
+    }
+
+    public function toString() {
+        return str(this.id);
     }
 }
 

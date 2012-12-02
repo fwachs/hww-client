@@ -172,14 +172,14 @@ class Wife
         var leftArm = screen.getElement("leftArm").getSprite().texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
         leftArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         
-        var hairBack = screen.getElement("hairback").getSprite();
-        var shoes = screen.getElement("shoes").getSprite();
-        var pants = screen.getElement("pants").getSprite();
-        var belt = screen.getElement("belt").getSprite();
-        var dress = screen.getElement("dress").getSprite();
-        var shirt = screen.getElement("shirt").getSprite();
-        var jacket = screen.getElement("jacket").getSprite();
-        var hairFront = screen.getElement("hairfront").getSprite();
+        var hairBack = screen.getElement("hairback").getSprite().texture("");
+        var shoes = screen.getElement("shoes").getSprite().texture("");
+        var pants = screen.getElement("pants").getSprite().texture("");
+        var belt = screen.getElement("belt").getSprite().texture("");
+        var dress = screen.getElement("dress").getSprite().texture("");
+        var shirt = screen.getElement("shirt").getSprite().texture("");
+        var jacket = screen.getElement("jacket").getSprite().texture("");
+        var hairFront = screen.getElement("hairfront").getSprite().texture("");
 
         body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
@@ -205,6 +205,11 @@ class Wife
 		hairFront.texture(backString);
 	}
 	
+	public function wear(clothingItem, screen) {
+	    this.showNaked(screen);
+	    var screenElement = screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
+	}
+
 	public function getHairType()
 	{
 		if(this.type == "Modern")

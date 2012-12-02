@@ -52,6 +52,7 @@ class ClothingShopScreen extends Screen
 
             params.update("left_pos", str(left));
             params.update("top_pos", 0);
+            params.update("clothing_item_id", clothingItem.id);
             params.update("clothing_item_name", clothingItem.name);
             params.update("clothing_item_image", clothingItem.image);
             params.update("clothing_item_stars", clothingItem.stars);
@@ -80,6 +81,14 @@ class ClothingShopScreen extends Screen
             left += 230;
         }
         this.getElement("shoppingScroll").setContentSize(left, 185);
+	}
+
+	public function displayPurchaseButton(clothingItem) {
+	    var elementContainer = this.getElement("clothing_" + str(clothingItem.id)).getSprite();
+	    trace("element container: ", "clothing_" + str(clothingItem.id), elementContainer, elementContainer.texture());
+	    var purchaseButton = this.controlFromXMLTemplate("PurchaseClothingItem", dict(), "clothing-item.xml");
+	    trace("purchase button: ", purchaseButton);
+	    elementContainer.addChild(purchaseButton);
 	}
 
 	override public function gotFocus() {
