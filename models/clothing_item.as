@@ -165,4 +165,13 @@ class PurchasedClothingItems {
         }
         return serializedClothingItems;
     }
+
+    public function getPurchasedClothingItemsMap() {
+        var purchasedClothingItemsMap = dict();
+        for (var i=0; i< len(this.clothingItemInstances); i++) {
+            var clothingItem = this.clothingItemInstances[i].clothingItem;
+            purchasedClothingItemsMap.update(clothingItem.id, 1);
+        }
+        return purchasedClothingItemsMap;
+    }
 }

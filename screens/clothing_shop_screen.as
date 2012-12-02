@@ -23,20 +23,33 @@ class ClothingShopScreen extends Screen
 	}
 
 	public function display(catalog, categoryName) {
+	    var clothingItems = new Array();
 	    if (categoryName != null && categoryName != "All") {
 	        var category = catalog.categories.get(categoryName);
-	        this.fillScroll(category.clothingItems);
+	        clothingItems = this.filter(category.clothingItems);
+	        this.fillScroll(clothingItems);
 	    } else {
 	        var categories = catalog.categories.values();
-	        var clothingItems = new Array();
 	        for (var i=0; i<len(categories); i++) {
 	            var categoryClothingItems = categories[i].clothingItems;
 	            for (var j = 0; j<len(categoryClothingItems); j++) {
 	                clothingItems.append(categoryClothingItems[j]);
 	            }
 	        }
+	        clothingItems = this.filter(clothingItems);
 	        this.fillScroll(clothingItems);
 	    }
+	}
+
+	public function filter(clothingItems) {
+	    var purchasedClothingItemsMap = Game.sharedGame().purchasedClothingItems.getPurchasedClothingItemsMap();
+	    var filteredClothingItems = new Array();
+	    for (var i=0; i< len(clothingItems); i++) {
+	        if (!purchasedClothingItemsMap.has_key(clothingItems[i].id)) {
+	            filteredClothingItems.append(clothingItems[i]);
+	        }
+	    }
+	    return filteredClothingItems;
 	}
 
 	public function fillScroll(clothingItems) {
