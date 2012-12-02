@@ -253,6 +253,13 @@ class HousewifeWars extends Game
 		return cities;
 	}
 
+	public function getAchievementByName (Name) {
+	    if (this.achievements == null) {
+	        this.loadAchievements();
+	    }
+	    return this.achievements.get(Name);
+	}
+
 	public function loadAchievements()
 	{
 		var xmldict = parsexml("game-config/ppy_achievements.xml", 1);
@@ -272,7 +279,8 @@ class HousewifeWars extends Game
 
 	public function unlockAchievement(Name)
 	{
-	    var achievement = Game.sharedGame().achievements.get(Name);
+	    
+	    var achievement = Game.sharedGame().getAchievementByName(Name);
 	    var achievementID;
 	    
 	    // check if we are using an Android device

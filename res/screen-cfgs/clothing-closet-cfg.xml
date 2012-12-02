@@ -3,7 +3,7 @@
 <screen:config>
 	<screen:elements>
 	
-		<screen:element name="background" resource="fashion-shop/store-screen.png" left="0" top="0"/>
+		<screen:element name="background" resource="fashion-shop/closet-screen.png" left="0" top="0"/>
 		
 		<!--Show All Button is used to show all of the players inventory sorted by score high to low-->
 		<screen:element name="showAllButton" resource="fashion-shop/view-all.png" left="290" top="329" ontap="showAllFashion" />

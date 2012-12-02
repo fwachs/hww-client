@@ -69,11 +69,12 @@ class ClothingShopScreen extends Screen
             params.update("clothing_item_name", clothingItem.name);
             params.update("clothing_item_image", clothingItem.image);
             params.update("clothing_item_stars", clothingItem.stars);
-            params.update("clothing_item_currency", clothingItem.getCurrency());
+            params.update("clothing_item_currency_image", clothingItem.getCurrencyImage());
             params.update("clothing_item_price", clothingItem.getPrice());
             params.update("clothing_item_star_one", clothingItem.getStar(1));
             params.update("clothing_item_star_two", clothingItem.getStar(2));
             params.update("clothing_item_star_three", clothingItem.getStar(3));
+            params.update("clothing_item_visible", "YES");
 
             if (i >= rowsClothingItems) {
                 params.update("top_pos", 281);

@@ -5,115 +5,115 @@
 	<hww-config:clothing-catalog name="London" image="fashion-shop/london-mag.png" travelIndex="0">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="1046" image="dress/1046_Dress_Retro.png" gameBucks="400" diamonds="0" stars="1" points="5" rarity="1" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="0" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="0" stars="3" points="45" rarity="3" type="Dress" element="dress" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Top">
-			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
+			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
+			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="0" stars="2" points="45" rarity="1" type="Pants" element="pants" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
-			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
+			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
 	<hww-config:clothing-catalog name="San Francisco" image="fashion-shop/sf-mag.png" travelIndex="1">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="1046" image="dress/1046_Dress_Retro.png" gameBucks="400" diamonds="0" stars="1" points="5" rarity="1" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="0" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="0" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Top">
-			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
+			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="0" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
+			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="0" stars="2" points="45" rarity="1" type="Pants" element="pants" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
-			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
+			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
 	<hww-config:clothing-catalog name="Paris" image="fashion-shop/paris-mag.png" travelIndex="2">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="1046" image="dress/1046_Dress_Retro.png" gameBucks="400" diamonds="0" stars="1" points="5" rarity="1" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="0" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="0" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Top">
-			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
+			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="0" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
+			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="0" stars="2" points="45" rarity="1" type="Pants" element="pants" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
-			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
+			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
 	<hww-config:clothing-catalog name="Buenos Aires" image="fashion-shop/b-aires-mag.png" travelIndex="3">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="1046" image="dress/1046_Dress_Retro.png" gameBucks="400" diamonds="0" stars="1" points="5" rarity="1" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="0" stars="2" points="15" rarity="2" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="0" stars="3" points="45" rarity="3" type="Dress" element="dress" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Top">
-			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
+			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
+			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
-			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
+			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="0" stars="2" points="45" rarity="3" type="Belt" element="belt" />
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
 	<hww-config:clothing-catalog name="Tokyo" image="fashion-shop/tokyo-mag.png" travelIndex="4">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="1046" image="dress/1046_Dress_Retro.png" gameBucks="400" diamonds="0" stars="1" points="5" rarity="1" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="50" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
-			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="20" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1047" name="1047" image="dress/1047_Dress_Retro.png" gameBucks="0" diamonds="10" stars="2" points="15" rarity="2" type="Dress" element="dress" />
+			<hww-config:clothing-item id="1048" name="1048" image="dress/1048_Dress_Retro.png" gameBucks="0" diamonds="50" stars="3" points="45" rarity="3" type="Dress" element="dress" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Top">
-			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="20" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
+			<hww-config:clothing-item id="1064" name="1064" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="50" stars="1" points="45" rarity="2" type="Shirt" element="shirt" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
+			<hww-config:clothing-item id="1066" name="1066" image="pants/1066_Pants_Retro.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="1" type="Pants" element="pants" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
-			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="20" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
+			<hww-config:clothing-item id="1012" name="1012" image="belt/1012_Belt_All.png" gameBucks="0" diamonds="50" stars="2" points="45" rarity="3" type="Belt" element="belt" />
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 </hww-config:clothing-items>

@@ -71,6 +71,13 @@ class ClothingItem {
         return "Diamonds";
     }
 
+    public function getCurrencyImage() {
+        if (this.diamonds == null || this.diamonds == 0) {
+            return "game-buck-med.png";
+        }
+        return "diamonds-med.png";
+    }
+
     public function getPrice() {
         if (this.diamonds == null || this.diamonds == 0) {
             return this.gameBucks;

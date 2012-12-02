@@ -59,6 +59,7 @@ class ClothingClosetScreen extends Screen
             params.update("clothing_item_star_one", clothingItem.getStar(1));
             params.update("clothing_item_star_two", clothingItem.getStar(2));
             params.update("clothing_item_star_three", clothingItem.getStar(3));
+            params.update("clothing_item_visible", "NO");
 
             if (i >= rowsClothingItems) {
                 params.update("top_pos", 281);
