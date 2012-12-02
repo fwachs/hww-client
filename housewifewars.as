@@ -60,6 +60,8 @@ class HousewifeWars extends Game
     var furnitureCategories = null;
     var shop = null;
     var achievements;
+    var purchasedClothingItems;
+    var clothingItems = null;
 
 	public function HousewifeWars()
 	{
@@ -84,6 +86,7 @@ class HousewifeWars extends Game
 		this.milesEarnedTimer = new earnMilesTimer();
 		this.passport = new Passport();
 		this.realestate = new Realestate();
+		this.purchasedClothingItems = new PurchasedClothingItems();
 		this.loadCities();
 		this.loadPlayerAchievements();
 		this.loadMysteryItems();
@@ -102,14 +105,12 @@ class HousewifeWars extends Game
 		Buffs.startBuffs();
 		this.checkForUnlockedAchievements();
 
-		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
         var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
         ret = Game.currentGame.wallet.collect(freeMiles);
         var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
         ret = Game.currentGame.wallet.collect(freeGB);
-        */
 
 		if(wife.firstPlay == 1)
 		{
@@ -467,9 +468,16 @@ class HousewifeWars extends Game
 
 	var clothingCatalogs;
 
+	public function getClothingItemById(clothingItemId) {
+	    if (this.clothingItems == null) { 
+	        this.loadClothingItems();
+	    }
+	    return this.clothingItems.get(clothingItemId);
+	}
+
 	public function loadClothingItems()
     {
-        var clothingItems = dict();
+        this.clothingItems = dict();
         var catalogs = dict();
         var xmldict = parsexml("game-config/clothing-items.xml", 1);
         var xmlClothingItems = xmldict.get("hww-config:clothing-items").get("#children");      
@@ -493,7 +501,7 @@ class HousewifeWars extends Game
                     var clothingItem = new ClothingItem(clothingAttrs.get("id"), clothingAttrs.get("name"), clothingAttrs.get("image"),
                          int(clothingAttrs.get("gameBucks")), int(clothingAttrs.get("diamonds")), int(clothingAttrs.get("stars")), int(clothingAttrs.get("points")), 
                          int(clothingAttrs.get("rarity")), clothingAttrs.get("type"), clothingAttrs.get("element"));
-                    furnitures.update(clothingItem.id, clothingItem);
+                    clothingItems.update(clothingItem.id, clothingItem);
                     category.addClothingItem(clothingItem);
                 }
                 catalog.addCategory(category);

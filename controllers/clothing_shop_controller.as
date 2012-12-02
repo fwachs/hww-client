@@ -17,6 +17,8 @@ class ClothingShopController extends ScreenController
 {
     var catalogName;
     var selectedClothingItem;
+    var appliedFilter;
+
     public function ClothingShopController(controlledScreen, catalogName)
     {
         super(controlledScreen);
@@ -49,25 +51,33 @@ class ClothingShopController extends ScreenController
         } else if (event.name == "purchaseClothingItem") {
             var ret = Game.sharedGame().shop.buyClothingItem(this.selectedClothingItem);
             if(ret == 1) {
-                trace("Save purchased clothing item to wife's closet, reload scroll");
+                Game.sharedGame().purchasedClothingItems.addClothingItem(this.selectedClothingItem);
+                this.screen.display(catalog, this.appliedFilter);
             } else {
                 this.pushPremiumCurrencyScreen(this.selectedClothingItem);
             }
             this.selectedClothingItem = null;
         } else if (event.name == "filterByDress") {
             this.screen.display(catalog, "Dress");
+            this.appliedFilter = "Dress";
         } else if (event.name == "filterByShirts") {
             this.screen.display(catalog, "Top");
+            this.appliedFilter = "Top";
         } else if (event.name == "filterByPants") {
             this.screen.display(catalog, "Bottom");
+            this.appliedFilter = "Bottom";
         } else if (event.name == "filterByShoes") {
             this.screen.display(catalog, "Bottom");
+            this.appliedFilter = "Bottom";
         } else if (event.name == "filterByExtras") {
             this.screen.display(catalog, "Accessories");
+            this.appliedFilter = "Accessories";
         }  else if (event.name == "filterByHair") {
             this.screen.display(catalog, "Accessories");
+            this.appliedFilter = "Accessories";
         } else if (event.name == "showAllFashion") {
             this.screen.display(catalog);
+            this.appliedFilter = "All";
         }
     }
 

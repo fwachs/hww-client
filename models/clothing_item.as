@@ -93,28 +93,6 @@ class ClothingItemInstance {
 
     public function ClothingItemInstance (clothingItem) {
         this.clothingItem = clothingItem;
-        this.id = getLatestFreeId();
-    }
-
-    public function incrementAndSaveItemId() {
-        this.id++;
-        Game.getDatabase().put("clothingItemInstanceId", this.id);
-    }
-
-    public function getLatestFreeId () {
-        var latestId = Game.getDatabase().get("clothingItemInstanceId");
-        trace("Clothing Item Instance Id: ", str(latestId));
-        if (latestId == null) {
-            latestId = 0;
-        }
-        latestId++;
-        return latestId;
-    }
-
-    public function save() {
-        var serializedClothingItem = this.serialize();
-        this.incrementAndSaveItemId();
-        return 
     }
 
     public function serialize()
@@ -128,29 +106,53 @@ class ClothingItemInstance {
 
 class PurchasedClothingItems {
     var clothingItemInstances;
+    var itemId;
     
     public function PurchasedClothingItems() {
+        this.itemId = Game.getDatabase().get("lastClothingItemId");
+        trace("ItemId: ", str(this.itemId));
+        if (this.itemId == null) {
+            this.itemId = 0;
+        }
         this.load();
     }
 
     public function load() {
         this.clothingItemInstances = new Array();
         var serializedClothingItems = Game.getDatabase().get("purchasedClothingItems");
+        trace("serialized clothing items: ", serializedClothingItems);
         if (serializedClothingItems != null) {
-            for (var i=0; i<len(serializedClothingItems); i++ ) { 
-                // TODO: deserialize objects and put them on the clothing item instances array
+            var serializedItemKeys = serializedClothingItems.keys();
+            for (var i=0; i<len(serializedItemKeys); i++ ) {
+                var serializedClothingItem = serializedClothingItems.get(serializedItemKeys[i]);
+                var clothingItemId = serializedClothingItem.get("clothingItemId");
+                var clothingItemInstanceId = serializedClothingItem.get("id");
+                
+                var clothingItem = Game.sharedGame().getClothingItemById(clothingItemId);
+                var clothingItemInstance = new ClothingItemInstance(clothingItem);
+                clothingItemInstance.id = clothingItemInstanceId;
+                this.clothingItemInstances.append(clothingItemInstance);
             }
         }
     }
 
-    public function addClothingItem(clothingItemInstance) {
+    public function addClothingItem(clothingItem) {
+        var clothingItemInstance = new ClothingItemInstance(clothingItem);
+        clothingItemInstance.id = this.itemId;
+        this.incrementAndSaveItemId();
         this.clothingItemInstances.append(clothingItemInstance);
         this.save();
     }
 
     public function save() {
         var serializedClothingItems = this.serialize();
+        trace("saving clothing items: ", serializedClothingItems);
         Game.getDatabase().put("purchasedClothingItems", serializedClothingItems);
+    }
+
+    public function incrementAndSaveItemId() {
+        this.itemId++;
+        Game.getDatabase().put("lastClothingItemId", this.itemId);
     }
 
     public function serialize() {
@@ -158,6 +160,7 @@ class PurchasedClothingItems {
         for (var i=0; i< len(this.clothingItemInstances); i++) {
             var clothingItemInstance = this.clothingItemInstances[i];
             var serializedClothingItem = clothingItemInstance.serialize();
+            trace("saving clothing item: ", serializedClothingItem);
             serializedClothingItems.update(clothingItemInstance.id, serializedClothingItem);
         }
         return serializedClothingItems;

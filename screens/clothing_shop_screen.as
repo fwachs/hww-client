@@ -23,7 +23,7 @@ class ClothingShopScreen extends Screen
 	}
 
 	public function display(catalog, categoryName) {
-	    if (categoryName != null) {
+	    if (categoryName != null && categoryName != "All") {
 	        var category = catalog.categories.get(categoryName);
 	        this.fillScroll(category.clothingItems);
 	    } else {
