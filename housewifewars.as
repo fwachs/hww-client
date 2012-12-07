@@ -507,8 +507,8 @@ class HousewifeWars extends Game
                     var xmlClothingItem = xmlClothingItemChildren[k].get("hww-config:clothing-item");
                     var clothingAttrs = xmlClothingItem.get("#attributes");
                     var clothingItem = new ClothingItem(clothingAttrs.get("id"), clothingAttrs.get("name"), clothingAttrs.get("image"),
-                         int(clothingAttrs.get("gameBucks")), int(clothingAttrs.get("diamonds")), int(clothingAttrs.get("stars")), int(clothingAttrs.get("points")), 
-                         int(clothingAttrs.get("rarity")), clothingAttrs.get("type"), clothingAttrs.get("element"));
+                         int(clothingAttrs.get("gameBucks")), int(clothingAttrs.get("diamonds")), int(clothingAttrs.get("stars")),
+                         int(clothingAttrs.get("points")), clothingAttrs.get("type"), clothingAttrs.get("element"));
                     clothingItems.update(clothingItem.id, clothingItem);
                     category.addClothingItem(clothingItem);
                 }

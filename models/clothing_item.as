@@ -46,12 +46,11 @@ class ClothingItem {
     var diamonds;
     var stars;
     var points;
-    var rarity;
     var type;
     var category;
     var element;
 
-    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, rarity, type, element) {
+    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, type, element) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -59,7 +58,6 @@ class ClothingItem {
         this.diamonds = diamonds;
         this.stars = stars;
         this.points = points;
-        this.rarity = rarity;
         this.type = type;
         this.element = element;
     }

@@ -22,7 +22,8 @@ class Wife
 	var firstPlay = 0;
 	var statusPointsFactor = 1;
 	var mysteryItemCollection = dict();
-	
+	var clothingItems = dict();
+
 	public function Wife()
 	{
 		this.load();
@@ -92,7 +93,7 @@ class Wife
 		var shirt = screen.getElement("shirt").getSprite();
 		var jacket = screen.getElement("jacket").getSprite();
 		var hairFront = screen.getElement("hairfront").getSprite();
-		var undies = screen.getElement("undies").getSprite().texture("");
+		var undies = screen.getElement("undies").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 
 		body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
 		var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
@@ -100,59 +101,71 @@ class Wife
 		var leftArmSleeve = screen.getElement("leftArmSleeve").getSprite();
 		leftArmSleeve.stop();
 
-		if(this.type == "Modern")
-		{
-			shoes.texture("images/customize-wife/wife parts/WShoesMod001.png");
-			pants.texture("");
-			belt.texture("");
-			dress.texture("images/customize-wife/wife parts/WDressFMod001.png");
-			shirt.texture("");
-			jacket.texture("");
-		}
-		else if(this.type == "Rocker")
-		{
-			rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
-			leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
-			
-			shoes.texture("images/customize-wife/wife parts/WShoesRock001.png");
-			pants.texture("images/customize-wife/wife parts/PantsRock001.png");
-			belt.texture("images/customize-wife/wife parts/BeltRock001.png");
-			dress.texture("");
-			shirt.texture("images/customize-wife/wife parts/WShirtRock001.png");
-			jacket.texture("images/customize-wife/wife parts/WJacketRock001.png");
-		}
-		else if(this.type == "Business")
-		{
-			rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
-			leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+		if (this.clothingItems != null && len(this.clothingItems) > 0) {
+		    var clothingItemKeys = this.clothingItems.keys();
+	        for (var i=0;i<len(this.clothingItems); i++) {
+	            var elementName = clothingItemKeys[i];
+	            var elementSprite = screen.getElement(elementName).getSprite();
+	            
+	            var clothingItemId = this.clothingItems.get(clothingItemKeys[i]);
+	            var clothingItem = Game.sharedGame().getClothingItemById(clothingItemId);
+	            elementSprite.texture("images/clothing/" + clothingItem.image);
+	        }
+		} else {
+		    if(this.type == "Modern")
+	        {
+	            shoes.texture("images/customize-wife/wife parts/WShoesMod001.png");
+	            pants.texture("");
+	            belt.texture("");
+	            dress.texture("images/customize-wife/wife parts/WDressFMod001.png");
+	            shirt.texture("");
+	            jacket.texture("");
+	        }
+	        else if(this.type == "Rocker")
+	        {
+	            rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
+	            leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
+	            
+	            shoes.texture("images/customize-wife/wife parts/WShoesRock001.png");
+	            pants.texture("images/customize-wife/wife parts/PantsRock001.png");
+	            belt.texture("images/customize-wife/wife parts/BeltRock001.png");
+	            dress.texture("");
+	            shirt.texture("images/customize-wife/wife parts/WShirtRock001.png");
+	            jacket.texture("images/customize-wife/wife parts/WJacketRock001.png");
+	        }
+	        else if(this.type == "Business")
+	        {
+	            rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
+	            leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
 
-			shoes.texture("images/customize-wife/wife parts/WShoesBus001.png");
-			pants.texture("images/customize-wife/wife parts/PantsBus001.png");
-			belt.texture("");
-			dress.texture("");
-			shirt.texture("images/customize-wife/wife parts/WShirtBus001.png");
-			jacket.texture("images/customize-wife/wife parts/WJacketBus001.png");
-		}
-		else if(this.type == "Retro")
-		{
-			rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
-			leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
-			
-			shoes.texture("images/customize-wife/wife parts/WShoesRetr001.png");
-			pants.texture("");
-			belt.texture("");
-			dress.texture("images/customize-wife/wife parts/WDressRetr001.png");
-			shirt.texture("");
-			jacket.texture("");
-		}
-		else if(this.type == "Celeb")
-		{
-			shoes.texture("images/customize-wife/wife parts/WShoesCelb001.png");
-			pants.texture("");
-			belt.texture("");
-			dress.texture("images/customize-wife/wife parts/WDressFCelb001.png");
-			shirt.texture("");
-			jacket.texture("");
+	            shoes.texture("images/customize-wife/wife parts/WShoesBus001.png");
+	            pants.texture("images/customize-wife/wife parts/PantsBus001.png");
+	            belt.texture("");
+	            dress.texture("");
+	            shirt.texture("images/customize-wife/wife parts/WShirtBus001.png");
+	            jacket.texture("images/customize-wife/wife parts/WJacketBus001.png");
+	        }
+	        else if(this.type == "Retro")
+	        {
+	            rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
+	            leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
+	            
+	            shoes.texture("images/customize-wife/wife parts/WShoesRetr001.png");
+	            pants.texture("");
+	            belt.texture("");
+	            dress.texture("images/customize-wife/wife parts/WDressRetr001.png");
+	            shirt.texture("");
+	            jacket.texture("");
+	        }
+	        else if(this.type == "Celeb")
+	        {
+	            shoes.texture("images/customize-wife/wife parts/WShoesCelb001.png");
+	            pants.texture("");
+	            belt.texture("");
+	            dress.texture("images/customize-wife/wife parts/WDressFCelb001.png");
+	            shirt.texture("");
+	            jacket.texture("");
+	        }
 		}
 		
 		cutAndDyeHair(screen);
@@ -204,10 +217,28 @@ class Wife
 		hairBack.texture(frontString);
 		hairFront.texture(backString);
 	}
-	
+
+	public function testClothingItem(clothingItem, screen) {
+        this.showNaked(screen);
+        screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
+	}
+
 	public function wear(clothingItem, screen) {
-	    this.showNaked(screen);
-	    var screenElement = screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
+	    screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
+	    clothingItems.update(clothingItem.element, clothingItem.id);
+
+	    if (clothingItem.category.name == "Dress") {
+	        screen.getElement("shirt").getSprite().texture("");
+	        screen.getElement("jacket").getSprite().texture("");
+	        screen.getElement("pants").getSprite().texture("");
+	        clothingItems.pop("shirt");
+            clothingItems.pop("jacket");
+            clothingItems.pop("pants");
+	    } else if (clothingItem.category.name == "Top" || clothingItem.category.name == "Bottom") {
+	        screen.getElement("dress").getSprite().texture("");
+	        clothingItems.pop("dress");
+        }
+	    this.save();
 	}
 
 	public function getHairType()
@@ -342,7 +373,7 @@ class Wife
 			firstPlay = 1;
 			
 			statusPointsFactor = 0;
-			
+			this.clothingItems = dict();			
 			return;
         }
         name = wifeMap.get("name");
@@ -356,6 +387,10 @@ class Wife
             socialStatusPoints = 0;
         }
 		statusPointsFactor = wifeMap.get("statusPointsFactor");
+		this.clothingItems = wifeMap.get("clothingItems");
+		if (this.clothingItems == null) {
+		    this.clothingItems = dict();
+		}
 		loadMysteryItems(null);
 	}
 	
@@ -418,6 +453,7 @@ class Wife
         wifeArray.append(["socialStatusPoints", socialStatusPoints]);
         wifeArray.append(["statusPointsFactor", statusPointsFactor]);
         wifeArray.append(["mysteryItems", this.mysteryItemCollection.keys()]);
+        wifeArray.append(["clothingItems", this.clothingItems]);
         return dict(wifeArray);
     }
 

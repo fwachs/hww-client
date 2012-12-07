@@ -43,7 +43,9 @@ class ClothingClosetController extends ScreenController
         } else if(event.name == "wearClothingItem") {
             this.selectedClothingItem = event.argument;
             Game.sharedGame().wife.wear(this.selectedClothingItem.clothingItem, this.screen);
-        } else if (event.name == "filterByDress") {
+        }  else if (event.name == "undress") {
+            Game.sharedGame().wife.showNaked(this.screen);
+        }  else if (event.name == "filterByDress") {
             this.screen.display("Dress");
             this.appliedFilter = "Dress";
         } else if (event.name == "filterByShirts") {
