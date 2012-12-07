@@ -42,6 +42,7 @@ class ClothingClosetScreen extends Screen
         var shoppingScroll = this.getElement("shoppingScroll");
         shoppingScroll.removeAllChildren();
         var left = 0;
+        var secondLaneLeft = 0;
         var rowsClothingItems = len(clothingItems) / 2;      
         var secondRow = 0;
         for (var i = 0; i < len(clothingItems); i++) {
@@ -61,24 +62,30 @@ class ClothingClosetScreen extends Screen
             params.update("clothing_item_star_three", clothingItem.getStar(3));
             params.update("clothing_item_visible", "NO");
 
-            if (i >= rowsClothingItems) {
+            if (i%2 != 0) {
                 params.update("top_pos", 281);
-                
-                if (secondRow == 0 ) {
-                    params.update("top_pos", 281);
-                    left = 0;
-                    params.update("left_pos",0);
-                    secondRow = 1
-                }
+                params.update("left_pos", str(secondLaneLeft));
             }
 
-            var scrollClothingItem = this.controlFromXMLTemplate("ClothingItem" + clothingItem.type, params, "clothing-item.xml");
-            scrollClothingItem.getSprite().clipping(1);
-            scrollClothingItem.tapEvent.argument = clothingItems[i];
-            shoppingScroll.addChild(scrollClothingItem);
-            left += 230;
+            c_invoke(this.asyncItemLoad, i * 300, [params, clothingItems[i]]);
+
+            if (i%2 == 0) {
+                left += 230;
+            } else {
+                secondLaneLeft += 230;
+            }
         }
         this.getElement("shoppingScroll").setContentSize(left, 185);
+    }
+
+    public function asyncItemLoad(firingTimer, tick, args) {
+        var params = args[0];
+        var clothingItemInstance = args[1];
+        var shoppingScroll = this.getElement("shoppingScroll");
+        var scrollClothingItem = this.controlFromXMLTemplate("ClothingItem" + clothingItemInstance.clothingItem.type, params, "clothing-item.xml");
+        scrollClothingItem.getSprite().clipping(1);
+        scrollClothingItem.tapEvent.argument = clothingItemInstance;
+        shoppingScroll.addChild(scrollClothingItem);
     }
 
     override public function gotFocus() {
