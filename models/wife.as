@@ -103,6 +103,12 @@ class Wife
 
 		if (this.clothingItems != null && len(this.clothingItems) > 0) {
 		    var clothingItemKeys = this.clothingItems.keys();
+		    shoes.texture("");
+            pants.texture("");
+            belt.texture("");
+            dress.texture("");
+            shirt.texture("");
+            jacket.texture("");
 	        for (var i=0;i<len(this.clothingItems); i++) {
 	            var elementName = clothingItemKeys[i];
 	            var elementSprite = screen.getElement(elementName).getSprite();
@@ -110,6 +116,7 @@ class Wife
 	            var clothingItemId = this.clothingItems.get(clothingItemKeys[i]);
 	            var clothingItem = Game.sharedGame().getClothingItemById(clothingItemId);
 	            elementSprite.texture("images/clothing/" + clothingItem.image);
+	            trace("wearing: ", clothingItem.name);
 	        }
 		} else {
 		    if(this.type == "Modern")
