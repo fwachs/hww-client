@@ -232,20 +232,32 @@ class Wife
 
 	public function wear(clothingItem, screen) {
 	    screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
-	    clothingItems.update(clothingItem.element, clothingItem.id);
+	    this.clothingItems.update(clothingItem.element, clothingItem.id);
 
 	    if (clothingItem.category.name == "Dress") {
 	        screen.getElement("shirt").getSprite().texture("");
 	        screen.getElement("jacket").getSprite().texture("");
 	        screen.getElement("pants").getSprite().texture("");
-	        clothingItems.pop("shirt");
-            clothingItems.pop("jacket");
-            clothingItems.pop("pants");
+	        this.clothingItems.pop("shirt");
+	        this.clothingItems.pop("jacket");
+	        this.clothingItems.pop("pants");
 	    } else if (clothingItem.category.name == "Top" || clothingItem.category.name == "Bottom") {
 	        screen.getElement("dress").getSprite().texture("");
-	        clothingItems.pop("dress");
+	        this.clothingItems.pop("dress");
         }
+
+	    screen.getElement("fashionScoreTotalText").setText(str(this.calculateFashionPoints()));
 	    this.save();
+	}
+
+	public function calculateFashionPoints () {
+	    var totalPoints = 0;
+        var clothingItemValues = this.clothingItems.values();
+        for (var i=0; i<len(clothingItemValues); i++) {
+            var points = Game.sharedGame().getClothingItemById(clothingItemValues[i]).points;
+            totalPoints = totalPoints + points;
+        }
+        return totalPoints;
 	}
 
 	public function getHairType()

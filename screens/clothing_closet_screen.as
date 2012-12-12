@@ -19,7 +19,9 @@ class ClothingClosetScreen extends Screen
 
     override public function build()
     {
-        Game.sharedGame().wife.dress(this);
+        var wife = Game.sharedGame().wife; 
+        wife.dress(this);
+        this.getElement("fashionScoreTotalText").setText(str(wife.calculateFashionPoints()));
     }
 
     public function display(categoryName) {
@@ -60,6 +62,7 @@ class ClothingClosetScreen extends Screen
             params.update("clothing_item_star_one", clothingItem.getStar(1));
             params.update("clothing_item_star_two", clothingItem.getStar(2));
             params.update("clothing_item_star_three", clothingItem.getStar(3));
+            params.update("clothing_item_points", str(clothingItem.points));
             params.update("clothing_item_visible", "NO");
 
             if (i%2 != 0) {

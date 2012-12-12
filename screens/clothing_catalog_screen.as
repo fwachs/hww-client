@@ -23,6 +23,7 @@ class ClothingCatalogScreen extends Screen
         var left = 0;
         var clothingCatalogs = Game.sharedGame().clothingCatalogs;
         var clothingCatalogsKeys = Game.sharedGame().clothingCatalogs.keys();
+        
         for (var i = 0; i < len(clothingCatalogsKeys); i++) {
             var clothingCatalog = clothingCatalogs.get(clothingCatalogsKeys[i]);
             var params = dict();
@@ -34,7 +35,7 @@ class ClothingCatalogScreen extends Screen
             var travelDate = Game.sharedGame().passport.datesCompleted[clothingCatalog.travelIndex];
             if (travelDate == null || travelDate == "") {
                 params.update("catalogOptionAction", "catalogLocked");
-                params.update("catalogOptionLocked", "Visit " + clothingCatalog.name + " and buy all gift items to unlock!");
+                params.update("catalogOptionLocked", "Go to " + clothingCatalog.name + " and see all the sights first!");
             }
 
             var scrollCatalogItem = this.controlFromXMLTemplate("CatalogOption", params, "catalog-item.xml");
