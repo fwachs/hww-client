@@ -54,7 +54,7 @@
 		<screen:element name="magazineButton" resource="main-menu/magazine-icon.png" left="285" top="672" ontap="gotoMagazinesScreen"/>		
 
 		<screen:element name="viewClosetButton" resource="main-menu/closet-icon.png" left="180" top="672" ontap="gotoFashionClosetScreen"/>
-		<screen:element name="customizeHairButton" resource="customize-wife/hair-style-icon.png" left="78" top="662" ontap="gotoCustomizeWife"/>
+<!-- 		<screen:element name="customizeHairButton" resource="customize-wife/hair-style-icon.png" left="78" top="662" ontap="gotoCustomizeWife"/> -->
 
 		<screen:element name="backButton" resource="fashion-shop/back-button-magazines.png" left="1125" top="682" ontap="gotoMainMenu"/>
 		
