@@ -3,7 +3,7 @@
 <screen:config>
 	<screen:elements>
 	
-		<screen:element name="background" resource="fashion-shop/closet-screen.png" left="0" top="0"/>
+		<screen:element name="background" resource="fashion-shop/closet-screen.png" left="0" top="0" ontap="doNothing"/>
 
 		<!--Bottom Select Bar-->
 		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background.png" left="420" top="670">

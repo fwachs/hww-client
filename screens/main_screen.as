@@ -12,16 +12,11 @@ Brief Description:
 
 class MainScreen extends Screen
 {
-	var advertisement;
-	var firstTimeAdDisplay;
-	var idleAdTimer;
-	
 	public function MainScreen()
 	{
 		super();
 
 		this.isRoot = 1;	
-		this.firstTimeAdDisplay = 1;
 	}
 	
 	override public function build()
@@ -56,14 +51,6 @@ class MainScreen extends Screen
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
 		Game.startButtonShineAnimation();
-		
-		if(this.firstTimeAdDisplay == 1){
-			this.firstTimeAdDisplay = 0;
-			c_invoke(displayFullScreenAd, 5000, null);
-			idleAdTimer = c_addtimer(60000, displayFullScreenAd, null);
-		}
-
-		idleAdTimer.play();
 	}
 
 	override public function lostFocus()
@@ -74,7 +61,6 @@ class MainScreen extends Screen
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
 		Game.stopButtonShineAnimation();
-	    idleAdTimer.pause();
 	}
 
 	public function stopWifeAnimation()
@@ -175,19 +161,4 @@ class MainScreen extends Screen
 		this.getElement("dailyBonusFrame").getSprite().visible(1);
 	}
 
-	public function displayFullScreenAd(timer, tick, param)
-	{
-        timer.pause();    
-		
-	    if(Game.currentScreen().getScreenName() == "main-screen") {
-	    	openUrl("appflood_fullscreen");
-	    }	    
-	}
-
-	public function removeAd()
-	{
-	    if (advertisement != null) {
-	        advertisement.removefromparent();
-	    }
-	}
 }

@@ -91,7 +91,25 @@ class ClothingClosetScreen extends Screen
         shoppingScroll.addChild(scrollClothingItem);
     }
 
-    override public function gotFocus() {
+    override public function gotFocus()
+    {
         Game.showBanner(1, 0);
+        this.stopWifeAnimation();
+        Game.sharedGame().wife.dress(this);
+    }
+
+    override public function lostFocus()
+    {
+        Game.showBanner(1, 0);
+        this.stopWifeAnimation();
+    }
+
+    public function stopWifeAnimation()
+    {
+        this.getElement("rightArm").getSprite().stop();
+        this.getElement("leftArm").getSprite().stop();
+        this.getElement("rightArmSleeve").getSprite().stop();
+        this.getElement("leftArmSleeve").getSprite().stop();
+        this.getElement("face").getSprite().stop();
     }
 }

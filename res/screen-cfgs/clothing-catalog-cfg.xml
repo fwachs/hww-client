@@ -5,7 +5,7 @@
 	
 		<screen:element name="background" resource="travel-screen/background-travel.png" left="0" top="0"/>
 		
-		<screen:element name="cataloguesOptionsScroll" class="Scroll" resource="" left="50" top="100" width="2000" height="680" lock="horizontal">
+		<screen:element name="cataloguesOptionsScroll" class="Scroll" resource="" left="20" top="100" width="1260" height="680" lock="horizontal">
 		</screen:element>
 		
 		<screen:element name="backbutton" resource="travel-screen/back-button.png" left="1020" top="688" ontap="goBack"/>

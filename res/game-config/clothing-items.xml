@@ -2,7 +2,7 @@
 
 <hww-config:clothing-items>
 
-	<hww-config:clothing-catalog name="London" image="fashion-shop/london-mag.png">
+	<hww-config:clothing-catalog name="London" image="fashion-shop/london-mag.png" travelIndex="0">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1076" name="Mondrian" image="dress/1076_Dress_Modern.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1077" name="Black and White Mini" image="dress/1077_Dress_Modern.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
@@ -65,7 +65,7 @@
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
-	<hww-config:clothing-catalog name="San Francisco" image="fashion-shop/sf-mag.png">
+	<hww-config:clothing-catalog name="San Francisco" image="fashion-shop/sf-mag.png" travelIndex="1">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1166" name="Simple Black" image="dress/1166_Dress_Rocker.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1167" name="White Stripes" image="dress/1167_Dress_Rocker.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
@@ -126,7 +126,7 @@
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
-	<hww-config:clothing-catalog name="Paris" image="fashion-shop/paris-mag.png">
+	<hww-config:clothing-catalog name="Paris" image="fashion-shop/paris-mag.png" travelIndex="2">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1046" name="Retro" image="dress/1046_Dress_Retro.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="retro" />
 			<hww-config:clothing-item id="1047" name="Pink Ring" image="dress/1047_Dress_Retro.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
@@ -189,7 +189,7 @@
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
-	<hww-config:clothing-catalog name="Buenos Aires" image="fashion-shop/b-aires-mag.png">
+	<hww-config:clothing-catalog name="Buenos Aires" image="fashion-shop/b-aires-mag.png" travelIndex="3">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1137" name="Princess Gown" image="dress/1137_Dress_Celeb.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1138" name="Little Black Satin Dress" image="dress/1138_Dress_Celeb.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
@@ -250,7 +250,7 @@
 		</hww-config:clothing-category>
 	</hww-config:clothing-catalog>
 
-	<hww-config:clothing-catalog name="Tokyo" image="fashion-shop/tokyo-mag.png">
+	<hww-config:clothing-catalog name="Tokyo" image="fashion-shop/tokyo-mag.png" travelIndex="4">
 		<hww-config:clothing-category name="Dress">
 			<hww-config:clothing-item id="1106" name="Misty Dots" image="dress/1106_Dress_Business.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1107" name="Black and White Casual" image="dress/1107_Dress_Business.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
