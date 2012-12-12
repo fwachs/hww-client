@@ -12,6 +12,8 @@ Brief Description:
 import framework.event
 import screens.premium_currency_screen
 import controllers.premium_currency_controller
+import screens.clothing_catalog_screen
+import controllers.clothing_catalog_controller
 
 class ClothingClosetController extends ScreenController
 {
@@ -30,16 +32,19 @@ class ClothingClosetController extends ScreenController
     
     override public function eventFired(event)
     {
-        var screen;
-        var controller;
-        
         super.eventFired(event);
-        
+
+        Game.sounds.playSFX("buttonPress");
         if(event.name == "gotoMainMenu") {
             if(Game.currentScreen().getScreenName() != "main-screen") {
-                Game.sounds.playSFX("buttonPress");
                 Game.popToRoot();
             }
+        } else if (event.name == "gotoMagazinesScreen") {
+            var screen = new ClothingCatalogScreen();
+            screen.configFile = "screen-cfgs/clothing-catalog-cfg.xml";
+            var controller = new ClothingCatalogController(screen);
+            
+            Game.pushScreen(screen);
         } else if(event.name == "wearClothingItem") {
             this.selectedClothingItem = event.argument;
             Game.sharedGame().wife.wear(this.selectedClothingItem.clothingItem, this.screen);

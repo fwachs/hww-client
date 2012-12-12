@@ -30,22 +30,22 @@ class ClothingCatalogController extends ScreenController
         
         super.eventFired(event);
         
+        Game.sounds.playSFX("buttonPress");
         if(event.name == "goBack") {
-            Game.sounds.playSFX("buttonPress");
-
             Game.popScreen();
         } else if (event.name == "catalogClicked") {
+
             screen = new ClothingShopScreen();
             screen.configFile = "screen-cfgs/clothing-shop-cfg.xml";
             controller = new ClothingShopController(screen, event.argument);
             
             Game.pushScreen(screen);
         } else if (event.name == "catalogLocked") {
+
             var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_LockedCatalog, event.argument);
             promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
             this.presentModalScreen(promptScreen);
         } else if(event.name == "dismiss") {
-            Game.sounds.playSFX("buttonPress");
             this.dismissModalScreen();
         }
     }
