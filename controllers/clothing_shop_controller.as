@@ -49,6 +49,8 @@ class ClothingShopController extends ScreenController
                 Game.sounds.playSFX("buttonPress");
                 Game.popToRoot();
             }
+        } else if (event.name == "undress") {
+            Game.sharedGame().wife.showNaked(this.screen);
         } else if (event.name == "gotoMagazinesScreen") {
             Game.popScreen();
         } else if (event.name == "gotoFashionClosetScreen") {
