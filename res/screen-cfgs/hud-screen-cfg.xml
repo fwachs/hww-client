@@ -42,9 +42,9 @@
 			
 			<screen:element name="gossipNavButton" resource="main-menu/nav-button-small-05.png" left="586" top="690" ontap="gotoGossip"/>
 			
-			<screen:element name="catalogButton" resource="fashion-shop/magazines.png" left="800" top="690" ontap="gotoCatalog"/>
+			 <screen:element name="magazineButton" resource="main-menu/magazine-icon.png" left="1018" top="695" ontap="gotoCatalog"/>
 			
-			<screen:element name="closetButton" resource="fashion-shop/closeticon.png" left="900" top="690" ontap="gotoCloset"/>
+			<screen:element name="closetButton" resource="main-menu/closet-icon.png" left="918" top="695" ontap="gotoCloset"/>
 		</screen:element>
 		
 		<screen:element name="buttonShineAnimation" resource="" left="158" top="650" visible="NO" z-index="99999999"/>

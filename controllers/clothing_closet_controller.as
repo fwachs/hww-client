@@ -60,8 +60,8 @@ class ClothingClosetController extends ScreenController
             this.screen.display("Bottom");
             this.appliedFilter = "Bottom";
         } else if (event.name == "filterByShoes") {
-            this.screen.display("Bottom");
-            this.appliedFilter = "Bottom";
+            this.screen.display("Shoes");
+            this.appliedFilter = "Shoes";
         } else if (event.name == "filterByExtras") {
             this.screen.display("Accessories");
             this.appliedFilter = "Accessories";

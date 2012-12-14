@@ -159,6 +159,19 @@
 			<hww-config:furniture id="130" name="Industrial Pro" image="furniture/ovens/130_Oven.png" width="2" depth="1" level="90" gameBucks="35000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
+		<hww-config:furniture-sub-category name="Islands" image="images/house-decorator/icons/island-icon.png">
+			<hww-config:furniture id="271" name="Natural" image="furniture/islands/271_island.png" width="3" depth="2" level="30" gameBucks="12000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="272" name="Tiled Country" image="furniture/islands/272_island.png" width="3" depth="2" level="35" gameBucks="15000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
+			<hww-config:furniture id="273" name="European" image="furniture/islands/273_island.png" width="3" depth="2" level="40" gameBucks="17000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
+			<hww-config:furniture id="274" name="Kira Kira" image="furniture/islands/274_island.png" width="3" depth="2" level="45" gameBucks="20000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
+			<hww-config:furniture id="275" name="Breakfast Bar" image="furniture/islands/275_island.png" width="3" depth="2" level="50" gameBucks="25000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
+			<hww-config:furniture id="276" name="CheckerBoard" image="furniture/islands/276_island.png" width="3" depth="2" level="60" gameBucks="30000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
+			<hww-config:furniture id="277" name="Gourmet Chef" image="furniture/islands/277_island.png" width="3" depth="2" level="70" gameBucks="35000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
+			<hww-config:furniture id="278" name="Sunny Morning" image="furniture/islands/278_island.png" width="3" depth="2" level="80" gameBucks="40000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
+			<hww-config:furniture id="279" name="Marble Bartop" image="furniture/islands/279_island.png" width="3" depth="2" level="90" gameBucks="55000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
+			<hww-config:furniture id="280" name="Heirloom Granite" image="furniture/islands/280_island.png" width="3" depth="2" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
+		</hww-config:furniture-sub-category>
+		
 		<hww-config:furniture-sub-category name="Refrigerators" image="images/house-decorator/icons/fridge-icon.png">
 			<hww-config:furniture id="131" name="Dormitory" image="furniture/fridge/131_Fridge.png" width="1" depth="1" level="5" gameBucks="600" diamonds="0" stars="0" points="5" remodelRequirement="2" />
 			<hww-config:furniture id="132" name="Wet Bar" image="furniture/fridge/132_Fridge.png" width="1" depth="1" level="7" gameBucks="800" diamonds="0" stars="0" points="5" remodelRequirement="2" />
@@ -319,17 +332,15 @@
 			<hww-config:furniture id="265" name="Futuristic" image="furniture/vanity/265_Vanity.png" width="2" depth="2" level="100" gameBucks="50000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
-		<hww-config:furniture-sub-category name="Islands" image="images/house-decorator/icons/island-icon.png">
-			<hww-config:furniture id="271" name="Natural" image="furniture/islands/271_island.png" width="3" depth="2" level="30" gameBucks="12000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="272" name="Tiled Country" image="furniture/islands/272_island.png" width="3" depth="2" level="35" gameBucks="15000" diamonds="0" stars="0" points="20" remodelRequirement="3" />
-			<hww-config:furniture id="273" name="European" image="furniture/islands/273_island.png" width="3" depth="2" level="40" gameBucks="17000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
-			<hww-config:furniture id="274" name="Kira Kira" image="furniture/islands/274_island.png" width="3" depth="2" level="45" gameBucks="20000" diamonds="0" stars="0" points="25" remodelRequirement="3" />
-			<hww-config:furniture id="275" name="Breakfast Bar" image="furniture/islands/275_island.png" width="3" depth="2" level="50" gameBucks="25000" diamonds="5" stars="1" points="36" remodelRequirement="3" />
-			<hww-config:furniture id="276" name="CheckerBoard" image="furniture/islands/276_island.png" width="3" depth="2" level="60" gameBucks="30000" diamonds="6" stars="1" points="42" remodelRequirement="3" />
-			<hww-config:furniture id="277" name="Gourmet Chef" image="furniture/islands/277_island.png" width="3" depth="2" level="70" gameBucks="35000" diamonds="14" stars="2" points="56" remodelRequirement="3" />
-			<hww-config:furniture id="278" name="Sunny Morning" image="furniture/islands/278_island.png" width="3" depth="2" level="80" gameBucks="40000" diamonds="16" stars="2" points="63" remodelRequirement="3" />
-			<hww-config:furniture id="279" name="Marble Bartop" image="furniture/islands/279_island.png" width="3" depth="2" level="90" gameBucks="55000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
-			<hww-config:furniture id="280" name="Heirloom Granite" image="furniture/islands/280_island.png" width="3" depth="2" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" />
+		<hww-config:furniture-sub-category name="Bath" image="images/house-decorator/icons/bath-icon.png">
+			<hww-config:furniture id="401" name="Bath Mat" image="furniture/bath/401_Bath.png" width="2" depth="1" level="1" gameBucks="500" diamonds="0" stars="0" points="5" remodelRequirement="3" />
+			<hww-config:furniture id="402" name="White Sink" image="furniture/bath/402_Bath.png" width="1" depth="1" level="5" gameBucks="2000" diamonds="0" stars="1" points="15" remodelRequirement="3" />
+			<hww-config:furniture id="403" name="World Standard" image="furniture/bath/403_Bath.png" width="1" depth="1" level="10" gameBucks="3000" diamonds="1" stars="1" points="25" remodelRequirement="3" />
+			<hww-config:furniture id="404" name="Clawfoot White" image="furniture/bath/404_Bath.png" width="2" depth="1" level="15" gameBucks="5000" diamonds="2" stars="1" points="35" remodelRequirement="3" />
+			<hww-config:furniture id="405" name="Terry Green" image="furniture/bath/405_Bath.png" width="2" depth="1" level="20" gameBucks="2000" diamonds="0" stars="2" points="10" remodelRequirement="3" />
+			<hww-config:furniture id="406" name="Marble Sink" image="furniture/bath/406_Bath.png" width="1" depth="1" level="25" gameBucks="10000" diamonds="5" stars="2" points="55" remodelRequirement="3" />
+			<hww-config:furniture id="407" name="Gold Toilet" image="furniture/bath/407_Bath.png" width="1" depth="1" level="30" gameBucks="20000" diamonds="8" stars="3" points="65" remodelRequirement="3" />
+			<hww-config:furniture id="408" name="Marbled Gold" image="furniture/bath/408_Bath.png" width="2" depth="2" level="35" gameBucks="30000" diamonds="12" stars="3" points="80" remodelRequirement="3" />
 		</hww-config:furniture-sub-category>
 		
 		<hww-config:furniture-sub-category name="Fireplaces" image="images/house-decorator/icons/fireplace-icon.png">

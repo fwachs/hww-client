@@ -200,6 +200,8 @@ class Wife
         var shirt = screen.getElement("shirt").getSprite().texture("");
         var jacket = screen.getElement("jacket").getSprite().texture("");
         var hairFront = screen.getElement("hairfront").getSprite().texture("");
+        var necklace = screen.getElement("necklace").getSprite().texture("");
+        var shoulderBag = screen.getElement("shoulderBag").getSprite().texture("");
 
         body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
