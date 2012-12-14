@@ -121,6 +121,12 @@ class Wife
 		} else {
 		    if(this.type == "Modern")
 	        {
+		        var modernClothingItem = Game.sharedGame().getClothingItemById("1076");
+		        this.clothingItems.update(modernClothingItem.element, modernClothingItem.id);
+
+                modernClothingItem = Game.sharedGame().getClothingItemById("1042");
+                this.clothingItems.update(modernClothingItem.element, modernClothingItem.id);
+
 	            shoes.texture("images/customize-wife/wife parts/WShoesMod001.png");
 	            pants.texture("");
 	            belt.texture("");
@@ -133,6 +139,21 @@ class Wife
 	            rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
 	            leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
 	            
+	            var rockerClothingItem = Game.sharedGame().getClothingItemById("1186");
+	            this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
+
+	            rockerClothingItem = Game.sharedGame().getClothingItemById("1023");
+	            this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
+	            
+                rockerClothingItem = Game.sharedGame().getClothingItemById("1012");
+                this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
+                
+                rockerClothingItem = Game.sharedGame().getClothingItemById("1183");
+                this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
+                
+                rockerClothingItem = Game.sharedGame().getClothingItemById("1039");
+                this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
+                
 	            shoes.texture("images/customize-wife/wife parts/WShoesRock001.png");
 	            pants.texture("images/customize-wife/wife parts/PantsRock001.png");
 	            belt.texture("images/customize-wife/wife parts/BeltRock001.png");
@@ -144,6 +165,15 @@ class Wife
 	        {
 	            rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
 	            leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+
+	            var businessClothingItem = Game.sharedGame().getClothingItemById("1127");
+	            this.clothingItems.update(businessClothingItem.element, businessClothingItem.id);
+
+                businessClothingItem = Game.sharedGame().getClothingItemById("1123");
+                this.clothingItems.update(businessClothingItem.element, businessClothingItem.id);
+                
+                businessClothingItem = Game.sharedGame().getClothingItemById("1043");
+                this.clothingItems.update(businessClothingItem.element, businessClothingItem.id);
 
 	            shoes.texture("images/customize-wife/wife parts/WShoesBus001.png");
 	            pants.texture("images/customize-wife/wife parts/PantsBus001.png");
@@ -157,6 +187,12 @@ class Wife
 	            rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
 	            leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
 	            
+	            var retroClothingItem = Game.sharedGame().getClothingItemById("1040");
+	            this.clothingItems.update(retroClothingItem.element, retroClothingItem.id);
+
+                retroClothingItem = Game.sharedGame().getClothingItemById("1046");
+                this.clothingItems.update(retroClothingItem.element, retroClothingItem.id);
+                
 	            shoes.texture("images/customize-wife/wife parts/WShoesRetr001.png");
 	            pants.texture("");
 	            belt.texture("");
@@ -166,6 +202,12 @@ class Wife
 	        }
 	        else if(this.type == "Celeb")
 	        {
+	            var celebClothingItem = Game.sharedGame().getClothingItemById("1137");
+	            this.clothingItems.update(celebClothingItem.element, celebClothingItem.id);
+
+                celebClothingItem = Game.sharedGame().getClothingItemById("1041");
+                this.clothingItems.update(celebClothingItem.element, celebClothingItem.id);
+
 	            shoes.texture("images/customize-wife/wife parts/WShoesCelb001.png");
 	            pants.texture("");
 	            belt.texture("");
@@ -173,6 +215,12 @@ class Wife
 	            shirt.texture("");
 	            jacket.texture("");
 	        }
+		    var clothingItemValues = this.clothingItems.values();
+		    for (var k=0; k<len(clothingItemValues);k++) {
+		        var defaultClothingItem = Game.sharedGame().getClothingItemById(clothingItemValues[k]);
+		        Game.sharedGame().purchasedClothingItems.addClothingItem(defaultClothingItem);
+		    }
+		    this.save();
 		}
 		
 		cutAndDyeHair(screen);
