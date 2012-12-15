@@ -136,6 +136,15 @@ class Game
                 wife.loadFromJSON(jsonWife);
                 wife.save();
 
+                var purchasedClothingItems = new PurchasedClothingItems();
+                var clothingItemValues = wife.clothingItems.values();
+                for (var k=0; k<len(clothingItemValues); k++) {
+                    var defaultClothingItem = new ClothingItem(clothingItemValues[k], null, null, null, null, null, null, null, null, null);
+                    purchasedClothingItems.addClothingItem(defaultClothingItem);
+                }
+
+//                this.addDefaultClothingItems(wife, purchasedClothingItems);
+
                 var husband = new Husband();
                 var jsonHusband = responseMap.get("husband");
                 trace("### HWWW ### Synchronize Husband Response: ", jsonHusband);
@@ -176,6 +185,53 @@ class Game
         }
         c_invoke(loading1, 1, null);
     }
+
+	public function addDefaultClothingItems(wife, purchasedClothingItems) {
+	    var defaultClothingItem;
+	    if(wife.type == "Modern") {
+            defaultClothingItem = new ClothingItem("1076", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+
+            defaultClothingItem = new ClothingItem("1042", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+        } else if(wife.type == "Rocker") {
+            defaultClothingItem = new ClothingItem("1186", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+
+            defaultClothingItem = new ClothingItem("1023", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+            
+            defaultClothingItem = new ClothingItem("1012", null, null, null, null, null, null, null, null, null); 
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+            
+            defaultClothingItem = new ClothingItem("1183", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+            
+            defaultClothingItem = new ClothingItem("1039", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+        } else if(wife.type == "Business") {
+            defaultClothingItem = new ClothingItem("1127", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+
+            defaultClothingItem = new ClothingItem("1123", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+            
+            defaultClothingItem = new ClothingItem("1043", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+        } else if(wife.type == "Retro") {
+            defaultClothingItem = new ClothingItem("1040", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+
+            defaultClothingItem = new ClothingItem("1046", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+        } else if(wife.type == "Celeb") {
+            defaultClothingItem = new ClothingItem("1137", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+
+            defaultClothingItem = new ClothingItem("1041", null, null, null, null, null, null, null, null, null);
+            purchasedClothingItems.addClothingItem(defaultClothingItem);
+        }
+	}
 
 	function loading1()
 	{

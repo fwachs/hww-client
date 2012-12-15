@@ -42,6 +42,7 @@ class ClothingClosetScreen extends Screen
 
     public function fillScroll(clothingItems) {
         var shoppingScroll = this.getElement("shoppingScroll");
+        shoppingScroll.getSprite().pos(0,0);
         shoppingScroll.removeAllChildren();
         var left = 0;
         var secondLaneLeft = 0;
@@ -85,7 +86,8 @@ class ClothingClosetScreen extends Screen
         var params = args[0];
         var clothingItemInstance = args[1];
         var shoppingScroll = this.getElement("shoppingScroll");
-        var scrollClothingItem = this.controlFromXMLTemplate("ClothingItem" + clothingItemInstance.clothingItem.type, params, "clothing-item.xml");
+        var templateName = "ClothingItem" + clothingItemInstance.clothingItem.type;
+        var scrollClothingItem = this.controlFromXMLTemplate(templateName, params, "clothing/" + templateName + ".xml");
         scrollClothingItem.getSprite().clipping(1);
         scrollClothingItem.tapEvent.argument = clothingItemInstance;
         shoppingScroll.addChild(scrollClothingItem);

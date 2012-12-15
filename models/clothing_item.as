@@ -49,8 +49,9 @@ class ClothingItem {
     var type;
     var category;
     var element;
+    var sleeves;
 
-    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, type, element) {
+    public function ClothingItem (id, name, image, gameBucks, diamonds, stars, points, type, element, sleeves) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -60,6 +61,7 @@ class ClothingItem {
         this.points = points;
         this.type = type;
         this.element = element;
+        this.sleeves = sleeves;
     }
 
     public function getCurrency() {
