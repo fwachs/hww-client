@@ -66,6 +66,20 @@ class ClothingClosetScreen extends Screen
             params.update("clothing_item_points", str(clothingItem.points));
             params.update("clothing_item_visible", "NO");
 
+            if (clothingItem.type == "Jacket") {
+                trace("clothing item sleeves: ", clothingItem.sleeves);
+                if (clothingItem.sleeves == "rocker") {
+                    params.update("clothing_item_right_sleeve", "Animation/rocker_right_arm/rocker_right_arm0001.png");
+                    params.update("clothing_item_left_sleeve", "Animation/rocker_left_arm/rocker_left_arm0001.png");
+                } else if (clothingItem.sleeves == "business") {
+                    params.update("clothing_item_right_sleeve", "Animation/business_right_arm/business_right_arm0001.png");
+                    params.update("clothing_item_left_sleeve", "Animation/business_left_arm/business_left_arm0001.png");
+                } else if (clothingItem.sleeves == "retro") {
+                    params.update("clothing_item_right_sleeve", "Animation/retro_right_arm/retro_right_arm0001.png");
+                    params.update("clothing_item_left_sleeve", "Animation/retro_left_arm/retro_left_arm0001.png");
+                }
+            }
+
             if (i%2 != 0) {
                 params.update("top_pos", 281);
                 params.update("left_pos", str(secondLaneLeft));

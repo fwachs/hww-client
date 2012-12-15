@@ -371,6 +371,13 @@ class Wife
 	        screen.getElement("dressPremium").getSprite().texture("");
 	        this.clothingItems.pop("dressPremium");
 	        this.clothingItems.pop("dress");
+	        if (clothingItem.type == "Jacket") {
+	            screen.getElement("shirt").getSprite().texture("");
+	            this.clothingItems.pop("shirt");    
+	        } else if (clothingItem.type == "Shirt") {
+	            screen.getElement("jacket").getSprite().texture("");
+	            this.clothingItems.pop("jacket");
+	        }
         }
 
 	    var rightArm = screen.getElement("rightArm").getSprite();
