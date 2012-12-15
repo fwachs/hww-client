@@ -152,8 +152,8 @@
 			<hww-config:clothing-item id="1061" name="Baby Bell" image="shirt/1061_Shirt_Retro.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1062" name="Cream Blouse" image="shirt/1062_Shirt_Retro.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1063" name="Wool Turtleneck" image="shirt/1063_Shirt_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
-			<hww-config:clothing-item id="1064" name="Navy Ruffle Jacket" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
-			<hww-config:clothing-item id="1065" name="Smoke Gray Jacket" image="jacket/1065_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1064" name="Navy Ruffle Jacket" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1065" name="Smoke Gray Jacket" image="jacket/1065_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
