@@ -45,6 +45,7 @@ class MessageBoxScreen extends Screen
     static var MB_SellFurniture = 31;
     static var MB_UnlockCatalog = 32;
     static var MB_LockedCatalog = 33;
+    static var MB_ClothingValidation = 34;
 
     var type;
     var argument;
@@ -206,6 +207,8 @@ class MessageBoxScreen extends Screen
             displayOkayPrompt("Congratulations! You unlocked the " + str(this.argument) + " Fashion Catalog");
         } else if (this.type == MessageBoxScreen.MB_LockedCatalog) {
             displayOkayPrompt("Visit "+ this.argument + " and see all the sights first.");
+        } else if (this.type == MessageBoxScreen.MB_ClothingValidation) {
+            displayOkayPrompt("Too much skin showing! Put on a top, a bottom and some shoes before you leave.");
         }
     }
 

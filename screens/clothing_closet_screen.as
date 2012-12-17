@@ -112,7 +112,7 @@ class ClothingClosetScreen extends Screen
     {
         Game.showBanner(1, 0);
         this.stopWifeAnimation();
-        Game.sharedGame().wife.dress(this);
+        Game.sharedGame().wife.dress(this, 0);
     }
 
     override public function lostFocus()

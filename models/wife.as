@@ -282,7 +282,11 @@ class Wife
 
         body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
+        rightArmSleeve.texture("");
+        rightArmSleeve.stop();
         var leftArmSleeve = screen.getElement("leftArmSleeve").getSprite();
+        leftArmSleeve.texture("");
+        leftArmSleeve.stop();
 
         cutAndDyeHair(screen);
     }
@@ -302,6 +306,11 @@ class Wife
 
 		hairBack.texture(frontString);
 		hairFront.texture(backString);
+	}
+
+	public function removeClothingItems() {
+	    this.clothingItems = dict();
+	    this.save();
 	}
 
 	public function testClothingItem(clothingItem, screen) {
@@ -349,36 +358,41 @@ class Wife
 	}
 
 	public function wear(clothingItem, screen) {
-	    screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
-	    this.clothingItems.update(clothingItem.element, clothingItem.id);
+	    if (this.clothingItems.has_key(clothingItem.element)) {
+	        screen.getElement(clothingItem.element).getSprite().texture("");
+	        this.clothingItems.pop(clothingItem.element);
+	    } else {
+	        screen.getElement(clothingItem.element).getSprite().texture("images/clothing/" + clothingItem.image);
+	        this.clothingItems.update(clothingItem.element, clothingItem.id);
 
-	    if (clothingItem.category.name == "Dress") {
-	        screen.getElement("shirt").getSprite().texture("");
-	        screen.getElement("jacket").getSprite().texture("");
-	        screen.getElement("pants").getSprite().texture("");
-	        this.clothingItems.pop("shirt");
-	        this.clothingItems.pop("jacket");
-	        this.clothingItems.pop("pants");
-	        if (clothingItem.element == "dressPremium") {
+	        if (clothingItem.category.name == "Dress") {
+	            screen.getElement("shirt").getSprite().texture("");
+	            screen.getElement("jacket").getSprite().texture("");
+	            screen.getElement("pants").getSprite().texture("");
+	            this.clothingItems.pop("shirt");
+	            this.clothingItems.pop("jacket");
+	            this.clothingItems.pop("pants");
+	            if (clothingItem.element == "dressPremium") {
+	                screen.getElement("dress").getSprite().texture("");
+	                this.clothingItems.pop("dress");
+	            } else {
+	                screen.getElement("dressPremium").getSprite().texture("");
+	                this.clothingItems.pop("dressPremium");
+	            }
+	        } else if (clothingItem.category.name == "Top" || clothingItem.category.name == "Bottom") {
 	            screen.getElement("dress").getSprite().texture("");
-	            this.clothingItems.pop("dress");
-	        } else {
 	            screen.getElement("dressPremium").getSprite().texture("");
 	            this.clothingItems.pop("dressPremium");
+	            this.clothingItems.pop("dress");
+	            if (clothingItem.type == "Jacket") {
+	                screen.getElement("shirt").getSprite().texture("");
+	                this.clothingItems.pop("shirt");    
+	            } else if (clothingItem.type == "Shirt") {
+	                screen.getElement("jacket").getSprite().texture("");
+	                this.clothingItems.pop("jacket");
+	            }
 	        }
-	    } else if (clothingItem.category.name == "Top" || clothingItem.category.name == "Bottom") {
-	        screen.getElement("dress").getSprite().texture("");
-	        screen.getElement("dressPremium").getSprite().texture("");
-	        this.clothingItems.pop("dressPremium");
-	        this.clothingItems.pop("dress");
-	        if (clothingItem.type == "Jacket") {
-	            screen.getElement("shirt").getSprite().texture("");
-	            this.clothingItems.pop("shirt");    
-	        } else if (clothingItem.type == "Shirt") {
-	            screen.getElement("jacket").getSprite().texture("");
-	            this.clothingItems.pop("jacket");
-	        }
-        }
+	    }
 
 	    var rightArm = screen.getElement("rightArm").getSprite();
         rightArm.stop();
@@ -651,5 +665,38 @@ class Wife
             var ret = Game.currentGame.wallet.collect(reward);
             trace("### HWW ###: Reward Awarded: ", mysteryItem.id, " currency:", mysteryItem.currency, " amount: ", mysteryItem.reward, " ret: ", str(ret));
         }
+    }
+
+    public function canLeaveCloset() {
+        if (this.clothingItems != null) {
+            this.clothingItems.values();
+            var top = 0;
+            var bottom = 0;
+            var shoes = 0;
+            var dress = 0;
+
+            for (var m=0;m<len(this.clothingItems.values()); m++) {
+                var aClothingItem = Game.sharedGame().getClothingItemById(this.clothingItems.values()[m]);
+                if (aClothingItem.category.name == "Top" ) {
+                    top = 1;
+                }
+                if (aClothingItem.category.name == "Bottom") {
+                    bottom = 1;
+                }
+                if (aClothingItem.category.name == "Shoes") {
+                    shoes = 1;
+                }
+                if (aClothingItem.category.name == "Dress" ) {
+                    dress = 2;
+                }
+            }
+            trace("vestimenta: ", str(top), str(bottom), str(shoes), str(dress));
+            var total = top + bottom + shoes + dress;
+            if (total >= 3) {
+                return 1;
+            }
+        }
+        return 0;
+
     }
 }

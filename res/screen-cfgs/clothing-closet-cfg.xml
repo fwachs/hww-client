@@ -6,13 +6,13 @@
 		<screen:element name="background" resource="fashion-shop/closet-screen.png" left="0" top="0" ontap="doNothing"/>
 
 		<!--Bottom Select Bar-->
-		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background.png" left="420" top="670">
+		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background2.png" left="420" top="670">
 			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="filterByDress" />
 			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="filterByShirts" />
-			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="250" top="13" ontap="filterByPants" />
-			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="360" top="13" ontap="filterByShoes" />
-			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="470" top="13" ontap="filterByExtras" />
-			<screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="580" top="13" ontap="filterByHair" />
+			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="filterByPants" />
+			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="filterByShoes" />
+			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="500" top="13" ontap="filterByExtras" />
+			<!--screen:element name="showHairIcon" resource="fashion-shop/shop-icon-hair.png" left="580" top="13" ontap="filterByHair" /-->
 		</screen:element>
 		<!--end bottom select bar-->
 		
@@ -24,7 +24,7 @@
 			</screen:element>
 		</screen:element> 
 			  	    		
-   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="480" top="91" width="768" height="590" lock="horizontal">
+   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="440" top="91" width="768" height="590" lock="horizontal">
 		</screen:element>
 
 

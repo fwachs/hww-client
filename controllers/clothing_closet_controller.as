@@ -34,22 +34,41 @@ class ClothingClosetController extends ScreenController
     {
         super.eventFired(event);
 
+        var wife = Game.sharedGame().wife;
+        var promptScreen;
         Game.sounds.playSFX("buttonPress");
         if(event.name == "gotoMainMenu") {
-            if(Game.currentScreen().getScreenName() != "main-screen") {
-                Game.popToRoot();
+            if (wife.canLeaveCloset() == 1) {
+                if(Game.currentScreen().getScreenName() != "main-screen") {
+                    Game.popToRoot();
+                }
+            } else {
+                promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_ClothingValidation);
+                promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+                this.presentModalScreen(promptScreen);
             }
         } else if (event.name == "gotoMagazinesScreen") {
-            var screen = new ClothingCatalogScreen();
-            screen.configFile = "screen-cfgs/clothing-catalog-cfg.xml";
-            var controller = new ClothingCatalogController(screen);
+            if (wife.canLeaveCloset() == 1) {
+                var screen = new ClothingCatalogScreen();
+                screen.configFile = "screen-cfgs/clothing-catalog-cfg.xml";
+                var controller = new ClothingCatalogController(screen);
+                
+                Game.pushScreen(screen);
+            } else {
+                promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_ClothingValidation);
+                promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+                this.presentModalScreen(promptScreen);
             
-            Game.pushScreen(screen);
+            }
+        } else if(event.name == "dismiss") {
+            this.dismissModalScreen();
         } else if(event.name == "wearClothingItem") {
             this.selectedClothingItem = event.argument;
             Game.sharedGame().wife.wear(this.selectedClothingItem.clothingItem, this.screen);
         }  else if (event.name == "undress") {
-            Game.sharedGame().wife.showNaked(this.screen);
+            wife.showNaked(this.screen);
+            wife.removeClothingItems();
+            this.screen.getElement("fashionScoreTotalText").setText(str(wife.calculateFashionPoints()));
         }  else if (event.name == "filterByDress") {
             this.screen.display("Dress");
             this.appliedFilter = "Dress";

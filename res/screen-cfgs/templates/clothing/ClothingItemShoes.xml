@@ -8,7 +8,7 @@
 							font-style="bold" text-align="center">#clothing_item_name</screen:element>
 			<screen:element name="closetItemFrame" resource="customize-wife/item-box-x2.png" left="19" top="45"/>
 			<screen:element name="shoeDisplay" resource="fashion-shop/display-shoes.png" left="43" top="51"/>
-			<screen:element name="shoesImage" resource="clothing/#clothing_item_image" left="50" top="60"/>				
+			<screen:element name="shoesImage" resource="clothing/#clothing_item_image" left="49" top="59"/>				
 			<screen:element name="closetItemStarOne" resource="house-decorator/star-#clothing_item_star_one.png" left="187" top="55"/>
 			<screen:element name="closetItemStarTwo" resource="house-decorator/star-#clothing_item_star_two.png" left="187" top="90"/>
 			<screen:element name="closetItemStarThree" resource="house-decorator/star-#clothing_item_star_three.png" left="187" top="125"/>	

@@ -22,7 +22,7 @@
 			</screen:element>					
 		</screen:element>
 
-   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="480" top="91" width="768" height="590" lock="horizontal">
+   		<screen:element name="shoppingScroll" class="Scroll" resource="" left="440" top="91" width="768" height="590" lock="horizontal">
 		</screen:element>
 			
 

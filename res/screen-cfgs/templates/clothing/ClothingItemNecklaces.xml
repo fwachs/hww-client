@@ -8,9 +8,9 @@
 									font-style="bold" text-align="center">#clothing_item_name</screen:element>
 			<screen:element name="closetItemFrame" resource="customize-wife/item-box-x2.png" left="19" top="45"/>
 			
-			<screen:element name="hairback" resource="customize-wife/6HairStyles/celeb/CelebHS01Back01.png" left="48" top="40"/>
+			<screen:element name="hairback-temp" resource="customize-wife/6HairStyles/celeb/CelebHS01Back01.png" left="48" top="40"/>
 			<screen:element name="necklaceDisplay" resource="fashion-shop/display-hair.png" left="43" top="43"/>
-			<screen:element name="hairfront" resource="customize-wife/6HairStyles/celeb/CelebHS01Front01.png" left="48" top="40"/>
+			<screen:element name="hairfront-temp" resource="customize-wife/6HairStyles/celeb/CelebHS01Front01.png" left="48" top="40"/>
 			
 			<screen:element name="NecklaceImage" resource="clothing/#clothing_item_image" left="78" top="170"/>				
 			<screen:element name="closetItemStarOne" resource="house-decorator/star-#clothing_item_star_one.png" left="187" top="55"/>
