@@ -130,7 +130,7 @@ class ScreenController
 	
 	public function presentModalScreen(modalScreen)
 	{
- 		this.cancelEvents = 1;
+ 		//this.cancelEvents = 1;
 		
  		if(len(this.modalScreenStack) == 0) {
 			// check if the current screen shows the HUD
@@ -140,7 +140,7 @@ class ScreenController
 			Game.hideBanner();
  		}
 		
-		var newCanvas = Game.scene.addsprite().size(screensize()).pos(0, screensize()[1]);
+		var newCanvas = Game.scene.addsprite().size(screensize()).pos(0, 0); //.pos(0, screensize()[1]);
 		modalScreen.canvas = newCanvas;
 		modalScreen.controller = this;
 		modalScreen.create();

@@ -59,11 +59,11 @@ class MainScreen extends Screen
 		
 		if(this.firstTimeAdDisplay == 1){
 			this.firstTimeAdDisplay = 0;
-			c_invoke(displayFullScreenAd, 5000, null);
-			idleAdTimer = c_addtimer(60000, displayFullScreenAd, null);
+			//c_invoke(displayFullScreenAd, 5000, null);
+			//idleAdTimer = c_addtimer(60000, displayFullScreenAd, null);
 		}
 
-		idleAdTimer.play();
+		//idleAdTimer.play();
 	}
 
 	override public function lostFocus()
@@ -74,7 +74,7 @@ class MainScreen extends Screen
 		this.stopHusbandAnimation();
 		this.stopWifeAnimation();
 		Game.stopButtonShineAnimation();
-	    idleAdTimer.pause();
+	    //idleAdTimer.pause();
 	}
 
 	public function stopWifeAnimation()

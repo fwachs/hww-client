@@ -153,9 +153,9 @@ class WifeCustomizationController extends ScreenController implements INameEnter
             Game.sounds.playSFX("buttonPress");
 
             // get the text and check if they gave a name
-            nameScreen.text = nameScreen.textInput.text();
+            //nameScreen.text = nameScreen.textInput.text();
 
-            if(nameScreen.text != "") {
+            //if(nameScreen.text != "") {
                 this.dismissModalScreen();
 
                 var husbandScreen = new HusbandSelectionScreen();
@@ -164,7 +164,7 @@ class WifeCustomizationController extends ScreenController implements INameEnter
                 Game.sharedGame().saveWife();
                 ppy_setscore(0);
                 Game.pushScreen(husbandScreen);
-            }
+            //}
         }
         else if(event.name == "cancel") {
             Game.sounds.playSFX("buttonPress");

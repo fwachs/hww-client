@@ -34,8 +34,6 @@ class HUDController extends ScreenController
 		this.screen.gamebucks.setText(str(Game.currentGame.wallet.getBalance("GameBucks")));
 		this.screen.diamonds = this.screen.getElement("diamond-text");
 		this.screen.diamonds.setText(str(Game.currentGame.wallet.getBalance("Diamonds")));
-		
-		this.screen.screenUpdateTimer.start();
 	}
 	
 	override public function eventFired(event)

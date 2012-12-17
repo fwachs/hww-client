@@ -16,7 +16,6 @@ class HUDScreen extends Screen
 	var miles;
 	var gamebucks;
 	var diamonds;
-	var screenUpdateTimer;
 	
 	public function HUDScreen()
 	{

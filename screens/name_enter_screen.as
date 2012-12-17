@@ -81,6 +81,8 @@ class NameEnterScreen extends Screen
 	{
 		trace("############ name enter screen lost focus");
 		
+		return;
+		
 		Game.hideBanner();
 		if (len(this.textInput.text())>=11) {
 		    this.text = substring(this.textInput.text(), 0, 10);

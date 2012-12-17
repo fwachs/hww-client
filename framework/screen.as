@@ -79,23 +79,23 @@ class Screen
 			ev.controller = this.controller;
 
 			control.tapEvent = ev;
-
+			
 			trace("Adding on tap to ", control.controlName, ev.name, ev.argument);
 		}
 		
 		var onTouchUp = attrs.get("ontouchup");
 		if(onTouchUp) {
-			this.addEvent(newSprite, onTouchUp, null, EVENT_UNTOUCH);
+			this.addEvent(newSprite, onTouchUp, 0, EVENT_UNTOUCH);
 		}
 		
 		var onTouchDown = attrs.get("ontouchdown");
 		if(onTouchDown) {
-			this.addEvent(newSprite, onTouchDown, null, EVENT_TOUCH);
+			this.addEvent(newSprite, onTouchDown, 0, EVENT_TOUCH);
 		}
 
 		var onMove = attrs.get("onmove");
 		if(onMove) {
-			this.addEvent(newSprite, onMove, null, EVENT_MOVE);
+			this.addEvent(newSprite, onMove, 0, EVENT_MOVE);
 		}
 	}
 	
@@ -183,6 +183,7 @@ class Screen
 	
 	public function showTutorialStep(step)
 	{
+		this.firstTime = 0;
 		if(this.firstTime == 0 || Game.sharedGame().recoveredFromServer == 1) return;
 
 		this.hideTutorial();
@@ -217,32 +218,18 @@ class Screen
 		return control;
 	}
 	
-	public function arrayToString(arr)
-	{
-		var newstr = "";
-		
-		for(var i = 0; i < len(arr); i++) {
-			newstr += str(arr[i]);
-		}
-		
-		return newstr;
-	}
-	
 	public function getTemplateText(fileName)
 	{
 		var templateText = Screen.xmlTemplates.get(fileName);
-/*		
+
 		if(!templateText) {
-		var file_handler = c_res_file("screen-cfgs/templates/" + fileName);
-		var result = c_file_op(C_FILE_READ, file_handler);
-			
-			templateText = this.arrayToString(result);
+			templateText = readfile("screen-cfgs/templates/" + fileName);
 			
 			Screen.xmlTemplates.update(fileName, templateText);
 
 			trace("### HWW ### - XML From File: ", fileName, templateText);
 		}
-*/		
+
 		return templateText;
 	}
 	

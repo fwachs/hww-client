@@ -298,7 +298,7 @@ class GiftShopController extends ScreenController
 		}
 		else if(event.name == "buySouvenirPrompt") {
 			this.screen.getElement("buySouvenirPrompt").getSprite().visible(0);
-			this.promptFunction();
+			callMethod(this.promptFunction);
 		}
 		else if(event.name == "cancelBuySouvenir") {
 			this.screen.getElement("buySouvenirPrompt").getSprite().visible(0);

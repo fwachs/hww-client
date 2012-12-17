@@ -346,9 +346,11 @@ class IsometricCanvas extends Scroll
 		for(var y = 0; y < item.width; y++) {
 			for(var x = 0; x < item.depth; x++) {
 				var tile = this.tiles[tiley - y][tilex - x];
-				tile.occupied = 1;
-				tile.item = item;
-				item.tiles.append(tile);				
+				if(tile) {
+					tile.occupied = 1;
+					tile.item = item;
+					item.tiles.append(tile);
+				}
 			}
 		}		
 	}
@@ -589,10 +591,10 @@ class IsometricItem extends Control
 
 	override public function configureEvents()
 	{
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_TOUCH);
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_MULTI_TOUCH);
-		this.attachEvent(this._sprite, "onuntouch", null, EVENT_UNTOUCH);
-		this.attachEvent(this._sprite, "onmove", null, EVENT_MOVE);
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_TOUCH);
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_MULTI_TOUCH);
+		this.attachEvent(this._sprite, "onuntouch", 0, EVENT_UNTOUCH);
+		this.attachEvent(this._sprite, "onmove", 0, EVENT_MOVE);
 	}
 	
 	public function testPlacement()
@@ -929,10 +931,11 @@ class IsometricTile extends Control
 	
 	override public function configureEvents()
 	{
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_TOUCH);
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_MULTI_TOUCH);
-		this.attachEvent(this._sprite, "onuntouch", null, EVENT_UNTOUCH);
-		this.attachEvent(this._sprite, "onmove", null, EVENT_MOVE);
+		return;
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_TOUCH);
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_MULTI_TOUCH);
+		this.attachEvent(this._sprite, "onuntouch", 0, EVENT_UNTOUCH);
+		this.attachEvent(this._sprite, "onmove", 0, EVENT_MOVE);
 	}
 	
 	override public function controlTapped()
@@ -1086,10 +1089,10 @@ class Button extends Control
 
 	override public function configureEvents()
 	{
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_TOUCH);
-		this.attachEvent(this._sprite, "ontouch", null, EVENT_MULTI_TOUCH);
-		this.attachEvent(this._sprite, "onuntouch", null, EVENT_UNTOUCH);
-		this.attachEvent(this._sprite, "onmove", null, EVENT_MOVE);
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_TOUCH);
+		this.attachEvent(this._sprite, "ontouch", 0, EVENT_MULTI_TOUCH);
+		this.attachEvent(this._sprite, "onuntouch", 0, EVENT_UNTOUCH);
+		this.attachEvent(this._sprite, "onmove", 0, EVENT_MOVE);
 	}
 	
 	override public function controlTapped()

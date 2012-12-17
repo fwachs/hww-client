@@ -155,10 +155,10 @@ class Control
 	public function configureEvents()
 	{
 		if(this.tapEvent != null) {
-			this.attachEvent(this._sprite, "ontouch", null, EVENT_TOUCH);
-			this.attachEvent(this._sprite, "ontouch", null, EVENT_MULTI_TOUCH);
-			this.attachEvent(this._sprite, "onuntouch", null, EVENT_UNTOUCH);
-			this.attachEvent(this._sprite, "onmove", null, EVENT_MOVE);
+			this.attachEvent(this._sprite, "ontouch", "", EVENT_TOUCH);
+			this.attachEvent(this._sprite, "ontouch", "", EVENT_MULTI_TOUCH);
+			this.attachEvent(this._sprite, "onuntouch", "", EVENT_UNTOUCH);
+			this.attachEvent(this._sprite, "onmove", "", EVENT_MOVE);
 		}
 	}
 	
@@ -174,7 +174,7 @@ class Control
 		
 		this.parent = parent;
 
-		this.getSprite().put(this);
+		//this.getSprite().put(this);
 
 		this.configureEvents();	
 	}
@@ -377,12 +377,12 @@ class Control
 				this.getSprite().texture(this.lowlight);
 			}
 			
-			trace("Untouch with distance: ", dist);
-			if(dist < 75) {
+//			trace("Untouch with distance: ", dist);
+//			if(dist < 75) {
 				this.controlTapped();
 				
 				return;
-			}
+//			}
 		}
 		
 		if(this.parent) {
@@ -469,12 +469,11 @@ class Scroll extends Control
 		this.container.pos(Game.translateX(left), Game.translateY(top));
 		this.container.clipping(1);
 		this.container.size(this.width, this.height);
-		this.container.add(this._sprite);
 
-		this.attachEvent(this.container, "ontouch", null, EVENT_TOUCH);
-		this.attachEvent(this.container, "ontouch", null, EVENT_MULTI_TOUCH);
-		this.attachEvent(this.container, "onuntouch", null, EVENT_UNTOUCH);
-		this.attachEvent(this.container, "onmove", null, EVENT_MOVE);
+		this.attachEvent(this.container, "ontouch", "", EVENT_TOUCH);
+		this.attachEvent(this.container, "ontouch", "", EVENT_MULTI_TOUCH);
+		this.attachEvent(this.container, "onuntouch", "", EVENT_UNTOUCH);
+		this.attachEvent(this.container, "onmove", "", EVENT_MOVE);
 				
 		this.minZoom = 100;
 		this.maxZoom = 100;
@@ -499,6 +498,7 @@ class Scroll extends Control
 		}
 		
 		parent.add(this.container, zIndex);
+		this.container.add(this._sprite);
 		
 		this.parent = parent;
 

@@ -114,14 +114,17 @@ class Game
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();
         }
-*/
+
         var wife = new Wife();
+
         var shouldSynchronize = Game.getDatabase().get("onGoingSynchronization");
         if (wife.firstPlay == 1 || shouldSynchronize == 1) {
             Game.getServer().synchronize(synchronizeCallback);
         } else {
-            c_invoke(loading1, 1, null);
+            c_invoke(loading4, 1, null);
         }
+*/
+        c_invoke(loading1, 1, null);
 	}
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {
@@ -208,15 +211,16 @@ class Game
 	function loading4()
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
-		this.loadingProgress.scale(100, 100);
+//		this.loadingProgress.scale(100, 100);
 		//Game.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 		this.hideLoadingScreen();
+		Timer.startTimers();
 		Game.sharedGame().run();
 	}
 	
-	function hideLoadingScreen(timer, tick, param)
+	function hideLoadingScreen()
 	{
 		this.loadingAnimation.stop();
 		Game.scene.remove(this.loadingAnimation);
@@ -362,7 +366,8 @@ class Game
 	static public function pushScreen(screenToPush)
 	{
 		var scrSize = screensize();		
-		var newCanvas = Game.scene.addsprite().size(scrSize).pos(Game.translateX(1280), 0);
+//		var newCanvas = Game.scene.addsprite().size(scrSize).pos(Game.translateX(1280), 0);
+		var newCanvas = Game.scene.addsprite().size(scrSize).pos(0, 0);
 		screenToPush.canvas = newCanvas;
 
 		var lastScreen = Game.lastScreen();
@@ -443,7 +448,7 @@ class Game
 	static public function hideBanner()
 	{
 //		Game.bannerScreen.canvas.addaction(moveto(250, Game.translateX( -Game.bannerScreen.canvas.size(Game.translateX()[0])), Game.translateY( Game.translateY( 0))));
-		
+		Game.bannerScreen.canvas.pos(Game.translateX(0), Game.translateY( 0));
 		Game.bannerScreen.gotFocus();
 		Game.bannerScreen.canvas.bringtoback();
 		Game.bannerScreen.getElement("hudFrameTop").getSprite().visible(0);

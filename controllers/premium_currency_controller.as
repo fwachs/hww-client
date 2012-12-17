@@ -118,7 +118,7 @@ class PremiumCurrencyController extends ScreenController
 				db.put("user.purchase", purchaseCount++);
 				Game.sounds.playSFX("gainSSP");
 				Game.sharedGame().wife.incSocialStatusPoints(1000);
-				Game.sharedGame.saveWife();
+				Game.sharedGame().saveWife();
 			}
 			Game.trackEvent("Premium Purchase", "purchase-success", currency + "-"+ str(amount), 1);
 		} else if( ret == -1) {

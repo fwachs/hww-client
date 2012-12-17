@@ -202,7 +202,9 @@ class HouseScreen extends Screen
 				trace("Setting tile: ", tiles.col + co, tiles.row + ro);
 
 				var to = iso.getTile(tiles.col + co, tiles.row + ro);
-				to.area = tiles;
+				if(to) {
+					to.area = tiles;
+				}
 			}
 		}
 
@@ -335,6 +337,7 @@ class HouseScreen extends Screen
 			itemParams.update("left", str(left));
 			itemParams.update("name", furniture.name);
 			itemParams.update("resource", furniture.image);
+			/*
 			itemParams.update("gamebucks", furniture.gameBucks);
 			itemParams.update("diamonds", furniture.diamonds);
 			itemParams.update("level", furniture.level);
@@ -348,20 +351,19 @@ class HouseScreen extends Screen
 			if(furniture.stars < 3) {
 				itemParams.update("star_3_full", "no");
 			}
+			*/
 				
 			var template = "FurnitureItem";
 			if(furniture.level > Game.sharedGame().hubby.careerLevel) {
 				template = "LockedFurnitureItem";
 			}
 			
-			c_invoke(this.asyncItemLoad, i * 300, [template, itemParams, furniture]);
+//			c_invoke(this.asyncItemLoad, i * 300, [template, itemParams, furniture]);
 			
-			/*
-			var item = this.controlFromXMLTemplateP(template, itemParams, "furniture-item.xml");
+			var item = this.controlFromXMLTemplate(template, itemParams, "furniture-item.xml");
 			item.tapEvent.argument = furniture;
 
 			furnitureBar.addChild(item);
-			*/
 			
 			left += 200;
 		}

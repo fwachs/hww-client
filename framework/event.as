@@ -28,26 +28,6 @@ class Event
 
 	static public function eventHandler(node, event, param, x, y, points) 
 	{
-	/*
-		if(event == EVENT_MULTI_TOUCH) {
-			var point0 = points[0];
-			var point1 = points[1];
-			
-			trace("MultiTouch: (", point0[0] , ",", point0[1], ") (", point1[0], ",", point1[1], ")");	
-		}
-		else if(event == EVENT_TOUCH) {
-			trace("Touch: (", x , ",", y, ") ");
-		}
-		else if(event == EVENT_MOVE) {
-			trace("Move: (", x , ",", y, ") ");	
-		}
-		else if(event == EVENT_UNTOUCH) {
-			trace("Move: (", x , ",", y, ") ");	
-		}	
-	*/
-
-//		trace("EventHandler: ", node.get().controlName);
-		
 		var hookResult;
 		var nodeEvents = Event.glEvents.get(node);
 		for(var i = 0; i < len(nodeEvents); i++) {
@@ -82,6 +62,9 @@ class Event
 	{
 //		trace("Adding event to ", event.node, " of type ", event.eventType);
 	
+		event.node.setevent(event);
+
+		/*
 		event.node.setevent(event.eventType, Event.eventHandler);
 		
 //		trace("Event has_key: ", Event.glEvents.has_key(event.node));
@@ -92,6 +75,7 @@ class Event
 		var arrayList = Event.glEvents.get(event.node);
 		arrayList.append(event);
 //		trace("Event arrayList: ", arrayList, " - ", arrayList.count());
+ */
 	}
 	
 	public static function removeEventsForHandler(objectHandler)
@@ -126,7 +110,16 @@ class Event
 	
 	public function run()
 	{
-		this.controller.eventFired(this);
+		var hookResult = 0;
+		if(Event.hookController) {
+			if(Event.hookType == this.eventType) {
+				hookResult = Event.hookController.hookFired(this);
+			}
+		}
+		
+		if(hookResult == 0) {
+			this.controller.eventFired(this);
+		}
 	}
 	
 	public function makeCopy()
