@@ -65,6 +65,7 @@ class ClothingClosetScreen extends Screen
             params.update("clothing_item_star_three", clothingItem.getStar(3));
             params.update("clothing_item_points", str(clothingItem.points));
             params.update("clothing_item_visible", "NO");
+            params.update("clothing_item_visible_open", "YES");
 
             if (clothingItem.type == "Jacket") {
                 trace("clothing item sleeves: ", clothingItem.sleeves);

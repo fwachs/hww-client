@@ -2,7 +2,7 @@
 
 <screen:templates>
 	<screen:template name="ClothingItemShoulderbag">
-    	<screen:element name="closetItemContainerHair" resource="" left="#left_pos" top="#top_pos" width="225" height="274" ontap="wearClothingItem">
+    	<screen:element name="closetItemContainerHair" resource="" left="#left_pos" top="#top_pos" width="225" height="273" ontap="wearClothingItem">
 			<screen:element name="closetItemNameBox" resource="fashion-shop/item-box-name.png" left="19" top="0"/>
 			<screen:element name="closetItemName" resource="" left="36" top="10" width="171" height="32" font-size="28" 
 									font-style="bold" text-align="center">#clothing_item_name</screen:element>
@@ -20,7 +20,8 @@
 				<screen:element name="currency" resource="fashion-shop/#clothing_item_currency_image" left="20" top="0"/>
 				<screen:element name="price" resource="" left="90" top="0">#clothing_item_price</screen:element>
 			</screen:element>
-			<screen:element name="purchaseButton_#clothing_item_id" resource="fashion-shop/buy-button.png" left="29" top="60" visible="NO" ontap="purchaseClothingItem" />
+			<screen:element name="item-box-price-open" resource="fashion-shop/item-box-price-open.png" left="19" top="218" visible="#clothing_item_visible_open"/>
+			<screen:element name="purchaseButton_#clothing_item_id" resource="fashion-shop/buy-button.png" left="55" top="110" visible="NO" ontap="purchaseClothingItem" />
 		</screen:element>
     </screen:template>
 </screen:templates>
