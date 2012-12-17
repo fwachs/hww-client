@@ -358,7 +358,7 @@ class Wife
 	}
 
 	public function wear(clothingItem, screen) {
-	    if (this.clothingItems.has_key(clothingItem.element)) {
+	    if (this.clothingItems.has_key(clothingItem.element) && this.clothingItems.get(clothingItem.element) == clothingItem.id) {
 	        screen.getElement(clothingItem.element).getSprite().texture("");
 	        this.clothingItems.pop(clothingItem.element);
 	    } else {
