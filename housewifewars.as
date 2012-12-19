@@ -570,6 +570,9 @@ class earnMilesTimer extends Timer
 	
 	override public function tick()
 	{
+	    var wife = Game.sharedGame().wife;
+	    var ssp = wife.calculateFashionPoints();
+	    wife.incSocialStatusPoints(ssp);
 		var milesEarned = Game.currentGame.wallet.moneyForCurrency(100, "Miles");
 		var ret = Game.currentGame.wallet.collect(milesEarned);
 	}

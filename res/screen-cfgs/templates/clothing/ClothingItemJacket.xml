@@ -10,8 +10,8 @@
    <screen:element name="closetItemStarTwo" resource="house-decorator/star-#clothing_item_star_two.png" left="187" top="90"/>
    <screen:element name="closetItemStarThree" resource="house-decorator/star-#clothing_item_star_three.png" left="187" top="125"/>
    <screen:element name="jacketRightArmsImage" resource="fashion-shop/bare_right_arm0001.png" left="5" top="-35"/>
-   <screen:element name="jacketRightSleaveImage" resource="#clothing_item_right_sleeve" left="5" top="-35"/> 
    <screen:element name="jacketDisplay" resource="fashion-shop/display-jacket.png" left="36" top="51"/>
+   <screen:element name="jacketRightSleaveImage" resource="#clothing_item_right_sleeve" left="5" top="-36"/>
    <screen:element name="jacketImage" resource="clothing/#clothing_item_image" left="43" top="79"/>
    <screen:element name="jacketLeftArmsImage" resource="fashion-shop/bare_left_arm0001.png" left="5" top="-35"/> 
    <screen:element name="jacketLeftSleaveImage" resource="#clothing_item_left_sleeve" left="5" top="-35"/>  

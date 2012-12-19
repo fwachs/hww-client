@@ -32,23 +32,24 @@
 		<!--begin wife area, In wife area, the wife should be shown undressed to start and be able to try on clothing before purchace-->		
 		<screen:element name="wife" resource="" left="82" top="130">
 			<screen:element name="hairback" resource="" left="38" top="0"/>
-			<screen:element name="rightArm" resource="" left="4" top="30"/>
-			<screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
-			<screen:element name="rightArmSleeve" resource="" left="4" top="30"/>
-			<screen:element name="undies" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
-			<screen:element name="shoes" resource="" left="77" top="374"/>
-			<screen:element name="pants" resource="" left="38" top="226"/>
-			<screen:element name="belt" resource="" left="65" top="226"/>
-			<screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
-			<screen:element name="dress" resource="" left="0" top="112"/>
-			<screen:element name="dressPremium" resource="" left="-50" top="2"/>
-			<screen:element name="shirt" resource="" left="38" top="112"/>
-			<screen:element name="necklace" resource="" left="75" top="122"/>
-			<screen:element name="jacket" resource="" left="44" top="142"/>
-			<screen:element name="shoulderBag" resource="" left="0" top="145"/>
-			<screen:element name="leftArm" resource="" left="4" top="30"/>
-			<screen:element name="leftArmSleeve" resource="" left="4" top="30"/>
-			<screen:element name="hairfront" resource="" left="38" top="0"/>
+		    <screen:element name="rightArm" resource="" left="0" top="27"/>
+		    <screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+		    <screen:element name="rightArmSleeve" resource="" left="0" top="27"/>
+		    <screen:element name="undies2" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
+		    <screen:element name="undies" resource="" left="63" top="150"/>
+		    <screen:element name="shoes" resource="" left="77" top="374"/>
+		    <screen:element name="pants" resource="" left="38" top="226"/>
+		    <screen:element name="belt" resource="" left="65" top="226"/>
+		    <screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+		    <screen:element name="dress" resource="" left="0" top="112"/>
+		    <screen:element name="dressPremium" resource="" left="-50" top="2"/>
+		    <screen:element name="shirt" resource="" left="38" top="112"/>
+		    <screen:element name="necklace" resource="" left="75" top="122"/>
+		    <screen:element name="jacket" resource="" left="44" top="139"/>
+		    <screen:element name="shoulderBag" resource="" left="0" top="145"/>
+		    <screen:element name="leftArm" resource="" left="4" top="27"/>
+		    <screen:element name="leftArmSleeve" resource="" left="4" top="27"/>
+		    <screen:element name="hairfront" resource="" left="38" top="0"/>
 		</screen:element>
 
 		<!--Undress Icon is used to remove all items and return the wife to an underwear only state. Undearwear should be reset to basic undewear that this point.-->

@@ -7,7 +7,7 @@
 			<screen:element name="closetItemName" resource="" left="36" top="10" width="171" height="32" font-size="28" 
 									font-style="bold" text-align="center">#clothing_item_name</screen:element>
 			<screen:element name="closetItemFrame" resource="customize-wife/item-box-x2.png" left="19" top="45"/>
-			<screen:element name="hairback" resource="" left="48" top="40"/>
+			<screen:element name="hair-back" resource="" left="48" top="40"/>
 			<screen:element name="shoulderbagDisplay" resource="fashion-shop/display-shirt.png" left="43" top="52"/>
 			<screen:element name="shoulderbagImage" resource="clothing/#clothing_item_image" left="5" top="83"/>
 			<screen:element name="closetItemStarOne" resource="house-decorator/star-#clothing_item_star_one.png" left="187" top="55"/>

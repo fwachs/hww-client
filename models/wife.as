@@ -96,7 +96,7 @@ class Wife
 		var shirt = screen.getElement("shirt").getSprite();
 		var jacket = screen.getElement("jacket").getSprite();
 		var hairFront = screen.getElement("hairfront").getSprite();
-		var undies = screen.getElement("undies").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+		var undies = screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 
 		body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
 		var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
@@ -142,6 +142,7 @@ class Wife
                 }
 	        }
 		} else {
+		    screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 		    if(this.type == "Modern")
 	        {
 		        var modernClothingItem = Game.sharedGame().getClothingItemById("1076");
@@ -149,13 +150,6 @@ class Wife
 
                 modernClothingItem = Game.sharedGame().getClothingItemById("1042");
                 this.clothingItems.update(modernClothingItem.element, modernClothingItem.id);
-
-	            shoes.texture("images/customize-wife/wife parts/WShoesMod001.png");
-	            pants.texture("");
-	            belt.texture("");
-	            dress.texture("images/customize-wife/wife parts/WDressFMod001.png");
-	            shirt.texture("");
-	            jacket.texture("");
 	        }
 	        else if(this.type == "Rocker")
 	        {
@@ -176,13 +170,6 @@ class Wife
                 
                 rockerClothingItem = Game.sharedGame().getClothingItemById("1039");
                 this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
-                
-	            shoes.texture("images/customize-wife/wife parts/WShoesRock001.png");
-	            pants.texture("images/customize-wife/wife parts/PantsRock001.png");
-	            belt.texture("images/customize-wife/wife parts/BeltRock001.png");
-	            dress.texture("");
-	            shirt.texture("images/customize-wife/wife parts/WShirtRock001.png");
-	            jacket.texture("images/customize-wife/wife parts/WJacketRock001.png");
 	        }
 	        else if(this.type == "Business")
 	        {
@@ -197,31 +184,17 @@ class Wife
                 
                 businessClothingItem = Game.sharedGame().getClothingItemById("1043");
                 this.clothingItems.update(businessClothingItem.element, businessClothingItem.id);
-
-	            shoes.texture("images/customize-wife/wife parts/WShoesBus001.png");
-	            pants.texture("images/customize-wife/wife parts/PantsBus001.png");
-	            belt.texture("");
-	            dress.texture("");
-	            shirt.texture("images/customize-wife/wife parts/WShirtBus001.png");
-	            jacket.texture("images/customize-wife/wife parts/WJacketBus001.png");
 	        }
 	        else if(this.type == "Retro")
 	        {
 	            rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
 	            leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
 	            
-	            var retroClothingItem = Game.sharedGame().getClothingItemById("1040");
+	            var retroClothingItem = Game.sharedGame().getClothingItemById("1346");
 	            this.clothingItems.update(retroClothingItem.element, retroClothingItem.id);
 
                 retroClothingItem = Game.sharedGame().getClothingItemById("1046");
                 this.clothingItems.update(retroClothingItem.element, retroClothingItem.id);
-                
-	            shoes.texture("images/customize-wife/wife parts/WShoesRetr001.png");
-	            pants.texture("");
-	            belt.texture("");
-	            dress.texture("images/customize-wife/wife parts/WDressRetr001.png");
-	            shirt.texture("");
-	            jacket.texture("");
 	        }
 	        else if(this.type == "Celeb")
 	        {
@@ -230,17 +203,18 @@ class Wife
 
                 celebClothingItem = Game.sharedGame().getClothingItemById("1041");
                 this.clothingItems.update(celebClothingItem.element, celebClothingItem.id);
-
-	            shoes.texture("images/customize-wife/wife parts/WShoesCelb001.png");
-	            pants.texture("");
-	            belt.texture("");
-	            dress.texture("images/customize-wife/wife parts/WDressFCelb001.png");
-	            shirt.texture("");
-	            jacket.texture("");
 	        }
-		    trace("save value: ", str(save));
+		    var clothingKeys = this.clothingItems.keys();
+		    for (var p=0;p<len(this.clothingItems); p++) {
+                var secondElement = clothingKeys[p];
+                var secondSprite = screen.getElement(secondElement).getSprite();
+                
+                var id = this.clothingItems.get(secondElement);
+                var clothe = Game.sharedGame().getClothingItemById(id);
+                trace("perfil: ", secondElement, id, clothe.image);
+                secondSprite.texture("images/clothing/" + clothe.image);
+		    }
 		    if (save == null) {
-		        trace("saving default clothes", this.clothingItems.values());
 		        var clothingItemValues = this.clothingItems.values();
 		        for (var k=0; k<len(clothingItemValues);k++) {
 		            var defaultClothingItem = Game.sharedGame().getClothingItemById(clothingItemValues[k]);
@@ -278,7 +252,8 @@ class Wife
         var necklace = screen.getElement("necklace").getSprite().texture("");
         var shoulderBag = screen.getElement("shoulderBag").getSprite().texture("");
         var dressPremium = screen.getElement("dressPremium").getSprite().texture("");
-        var undies = screen.getElement("undies").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+        var undies = screen.getElement("undies").getSprite().texture("");
+        var undies2 = screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 
         body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();

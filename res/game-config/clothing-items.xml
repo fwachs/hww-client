@@ -83,7 +83,7 @@
 
 		<hww-config:clothing-category name="Top">
 			<hww-config:clothing-item id="1176" name="Silver Zip" image="shirt/1176_Shirt_Rocker.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
-			<hww-config:clothing-item id="1177" name="Saphire" image="shirt/1177_Shirt_Rocker.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1177" name="Sapphire" image="shirt/1177_Shirt_Rocker.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1178" name="Silver Heart" image="shirt/1178_Shirt_Rocker.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1179" name="Girl Power" image="shirt/1179_Shirt_Rocker.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
 			<hww-config:clothing-item id="1180" name="Mesh" image="shirt/1180_Shirt_Rocker.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
@@ -281,8 +281,8 @@
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Bottom">
-			<hww-config:clothing-item id="1127" name="Gray Suit Pants" image="pants/1126_Pants_Business.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1128" name="Navy Suit Pants" image="pants/1127_Pants_Business.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1127" name="Gray Suit Pants" image="pants/1127_Pants_Business.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+ 			<hww-config:clothing-item id="1128" name="Navy Suit Pants" image="pants/1128_Pants_Business.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1129" name="Navy Suit Skirt Long" image="pants/1129_Pants_Business.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1130" name="Navy Suit Skirt" image="pants/1130_Pants_Business.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1131" name="Pinstrip Gray Suit Skirt" image="pants/1131_Pants_Business.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
