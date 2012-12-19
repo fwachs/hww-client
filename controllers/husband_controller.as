@@ -482,7 +482,7 @@ class HusbandController extends ScreenController implements TimerListener
             trace("### HWW ### - veryRareItems: " + str(len(veryRareItems)));
             trace("### HWW ### - extremelyRareItems: " + str(len(extremelyRareItems)));
 
-            if(rareness > 97 && len(extremelyRareItems) > 0) {
+            if(rareness > 95 && len(extremelyRareItems) > 0) {
                 selectionRange = len(extremelyRareItems);
                 selectionIndex = rand(selectionRange, 5);
                 shoppingItem = extremelyRareItems[selectionIndex];
