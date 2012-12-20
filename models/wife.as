@@ -96,6 +96,9 @@ class Wife
 		var shirt = screen.getElement("shirt").getSprite();
 		var jacket = screen.getElement("jacket").getSprite();
 		var hairFront = screen.getElement("hairfront").getSprite();
+		var necklace = screen.getElement("necklace").getSprite();
+		var shoulderBag = screen.getElement("shoulderBag").getSprite();
+		var undies1 = screen.getElement("undies").getSprite();
 		var undies = screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 
 		body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
@@ -114,6 +117,9 @@ class Wife
             dress.texture("");
             shirt.texture("");
             jacket.texture("");
+            shoulderBag.texture("");
+            undies1.texture("");
+            necklace.texture("");
 	        for (var i=0;i<len(this.clothingItems); i++) {
 	            var elementName = clothingItemKeys[i];
 	            var elementSprite = screen.getElement(elementName).getSprite();
