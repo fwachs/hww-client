@@ -104,16 +104,16 @@ class HousewifeWars extends Game
 		var hudcontroller = new HUDController(hud);		
 		Game.setBanner(hud, 1280);
 		
-		screen = new MainScreen();
-		screen.configFile = "screen-cfgs/main-screen-cfg.xml";
-		controller = new MainController(screen);
-		Game.pushScreen(screen);
-
-return;
 		screen = new WifeSelectionScreen();
 		screen.configFile = "screen-cfgs/wife-selection-screen-cfg.xml";
 		controller = new WifeSelectionController(screen);
 		Game.pushScreen(screen);
+
+return;
+screen = new MainScreen();
+screen.configFile = "screen-cfgs/main-screen-cfg.xml";
+controller = new MainController(screen);
+Game.pushScreen(screen);
 		
 		/*
 		Buffs.startBuffs();
