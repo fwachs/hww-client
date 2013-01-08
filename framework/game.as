@@ -309,8 +309,7 @@ class Game
     static public function initializeDatabase()
     {   
     	trace("Before initializeDatabase");
-        //Game.db = c_opendb(1, "hww-prod");
-    	Game.db = dict();
+        Game.db = c_opendb(1, "hww-prod");
     	trace("After initializeDatabase: ", Game.db);
     }
     

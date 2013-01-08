@@ -74,7 +74,7 @@ class MainController extends ScreenController
         this.notificationsText.setText("Notifications");
         this.notificationsText.setFont(Game.font.getBoldFont(), Game.translateFontSize(60));
 
-        this.screenUpdateTimer = new mainScreenUpdateTimer(this.checkForGifts);
+        this.screenUpdateTimer = new mainScreenUpdateTimer(this);
         this.screenUpdateTimer.start();
 
         if(Game.audioOn() == 1) {
@@ -444,17 +444,17 @@ Timers
 
 class mainScreenUpdateTimer extends Timer
 {
-    var updateFunction;
+    var controller;
 
-    public function mainScreenUpdateTimer(functionArg)
+    public function mainScreenUpdateTimer(controller)
     {
         super("mainScreenUpdateTimer", 30, -1);
-        this.updateFunction = functionArg;
+        this.controller = controller;
     }
 
     override public function tick()
     {
         trace("### HWW ### - checking for new gifts!");
-        this.updateFunction();
+        controller.checkForGifts();
     }
 }

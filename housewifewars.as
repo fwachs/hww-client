@@ -92,32 +92,13 @@ class HousewifeWars extends Game
 		this.house.loadFurniture();
 		this.loadAchievements();
 		
-		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
-        var ret = Game.currentGame.wallet.collect(freeMoney);
-        var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
-        ret = Game.currentGame.wallet.collect(freeMiles);
-        var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
-        ret = Game.currentGame.wallet.collect(freeGB);
-        
 		var hud = new HUDScreen();
 		hud.configFile = "screen-cfgs/hud-screen-cfg.xml";
 		var hudcontroller = new HUDController(hud);		
 		Game.setBanner(hud, 1280);
-		
-		screen = new WifeSelectionScreen();
-		screen.configFile = "screen-cfgs/wife-selection-screen-cfg.xml";
-		controller = new WifeSelectionController(screen);
-		Game.pushScreen(screen);
 
-return;
-screen = new MainScreen();
-screen.configFile = "screen-cfgs/main-screen-cfg.xml";
-controller = new MainController(screen);
-Game.pushScreen(screen);
-		
-		/*
 		Buffs.startBuffs();
-		this.checkForUnlockedAchievements();
+//		this.checkForUnlockedAchievements();
 
 
 		if(wife.firstPlay == 1)
@@ -150,8 +131,7 @@ Game.pushScreen(screen);
 		this.milesEarnedTimer.start();
 		Game.pushScreen(screen);
 
-        c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
-        */
+//        c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
 	}
 	
 	public function checkForUnlockedAchievements()
