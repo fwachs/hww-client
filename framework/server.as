@@ -45,6 +45,7 @@ class Server
     }
 
     public function synchronizeGame() {
+    	return;
         var params = dict();
         var wife = Game.sharedGame().wife.serialize();
         var husband = Game.sharedGame().hubby.serialize();

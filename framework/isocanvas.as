@@ -839,15 +839,14 @@ class IsometricItem extends Control
 			if(event.name == "ontouch") {
 		        this.start = event;
 		        
-		        var parent = this._sprite.parent();
-		        this._sprite.removefromparent();
-		        parent.add(this._sprite, 999999999);
+		        this._sprite.zPosition(999999999);
 			}
 			else if(event.name == "onuntouch") {
 				var result = this.testPlacement();
 				if(result == 0) {
 					this._sprite.pos(this.left, this.top);
 				}
+		        this._sprite.zPosition(0);
 				this.canvas.reorganize();
 				this.canvas.clearHighlight();
 				if(this.hiddenAcceptButton == 1) {
