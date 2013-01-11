@@ -298,37 +298,31 @@ class IsometricCanvas extends Scroll
 		}	
 	}
 	
+	public function stopSort()
+	{
+		this.getSprite().cancelSort(1);
+	}
+	
 	public function startBubbleSort()
 	{
-		var swapped = 1;
-		var j = 0;
-		var tmp;
-		while(swapped == 1) {
-		    swapped = 0;
-		    j++;
-		    for(var i = 0; i < len(this.items) - j; i++) {                                       
-				if(this.isInFrontOf(this.items[i], this.items[i + 1]) == 1) {
-	                tmp = this.items[i];
-	                this.items[i] = this.items[i + 1];
-	                this.items[i + 1] = tmp;
-	                swapped = 1;
-				}
-		    }                
-		}
+		this.items.sortArray(this.isInFrontOf);
 
-		var z = 500000;
+		var z = 0;
 		
-		for(var i = 0; i < len(this.items); i++) {
+		var parent = this.items[0].getSprite().parent();
+		parent.cancelSort(0);
+		
+		for(var i = len(this.items) - 1; i >= 0 ; i--) {
 			var item = this.items[i];
 			var itemSprite = item.getSprite();
-			var parent = itemSprite.parent();
+			//var parent = itemSprite.parent();
 			itemSprite.removefromparent();
-			parent.add(itemSprite, z);
+			parent.add(itemSprite, z, 0);
 			itemSprite.remove(item.text);
 //			item.text = itemSprite.addlabel(str(z), "Arial", 30);
 			item.z = z;
 
-			z--;
+			z++;
 		}
     }
 	
@@ -625,19 +619,19 @@ class IsometricItem extends Control
 		this.acceptButton.getSprite().prepare();
 //		trace("createEditingUI ", size, this.acceptButton, this.acceptButton.getSprite(), this.acceptButton.getSprite().size());
 		this.acceptButton.getSprite().visible(0);
-		this.canvas.getSprite().add(this.acceptButton.getSprite(), 999999999);
+		this.canvas.getSprite().add(this.acceptButton.getSprite(), 999999999, 0);
 		this.acceptButton.configureEvents();
 
 		this.cancelButton = new Button("images/house-decorator/cancel-button.png", this, "cancel");
 		this.cancelButton.getSprite().prepare();
 		this.cancelButton.getSprite().visible(0);
-		this.canvas.getSprite().add(this.cancelButton.getSprite(), 999999999);
+		this.canvas.getSprite().add(this.cancelButton.getSprite(), 999999999, 0);
 		this.cancelButton.configureEvents();
 
 		this.flippButton = new Button("images/house-decorator/rotate.png", this, "flip");
 		this.flippButton.getSprite().prepare();
 		this.flippButton.getSprite().visible(0);
-		this.canvas.getSprite().add(this.flippButton.getSprite(), 999999999);
+		this.canvas.getSprite().add(this.flippButton.getSprite(), 999999999, 0);
 		this.flippButton.configureEvents();
 		
 		if(this.hiddenAcceptButton == 1) {
@@ -697,7 +691,18 @@ class IsometricItem extends Control
 			this.cancelButton.getSprite().texture("images/house-decorator/storage-box-icon.png");
 			this.cancelButton.name = "storage";			
 		}
-}
+	}
+	
+	public function reorderEditingUI()
+	{
+		this.acceptButton.getSprite().removefromparent();
+		this.cancelButton.getSprite().removefromparent();
+		this.flippButton.getSprite().removefromparent();
+
+		this.canvas.getSprite().add(this.acceptButton.getSprite(), 999999999, 0);
+		this.canvas.getSprite().add(this.cancelButton.getSprite(), 999999999, 0);
+		this.canvas.getSprite().add(this.flippButton.getSprite(), 999999999, 0);
+	}
 	
 	public function toggleEditingUI()
 	{	
@@ -852,6 +857,7 @@ class IsometricItem extends Control
 				if(this.hiddenAcceptButton == 1) {
 					this.toggleEditingUI();
 				}
+				this.reorderEditingUI();
 			}
 			else if(event.name == "onmove") {
 				var deltaX = event.x - this.start.x;
@@ -911,6 +917,9 @@ class IsometricTile extends Control
 	var isHighlighted;
 	var canvas;
 	var area;
+	var resource;
+	var item_width;
+	var item_depth;
 	
 	public function IsometricTile(x, y, width, height)
 	{
@@ -923,7 +932,8 @@ class IsometricTile extends Control
 		this.height = height;
 		this.isHighlighted = 0;
 		
-		this._sprite = sprite("images/furniture/highlight02.png", ARGB_8888);
+//		this._sprite = sprite("images/furniture/highlight02.png", ARGB_8888);
+		this._sprite = sprite();
 		
 		this.item = null;
 	}
@@ -1001,12 +1011,16 @@ class IsometricTile extends Control
 	
 	public function setFlatResource(resource, item_width, item_depth)
 	{
-		var newSprite = sprite(resource);
+		this.resource = resource;
+		this.item_width = item_width;
+		this.item_depth = item_depth;
+
+		var newSprite = sprite(this.resource);
 		newSprite.prepare();
 		var size = newSprite.size();
 		
 		var top = this.top - size[1] + this.height;
-		var left = this.left - this.width / item_width;
+		var left = this.left - this.width / this.item_width;
 		
 		Event.removeEventsForHandler(this._sprite);
 		
@@ -1026,7 +1040,7 @@ class IsometricTile extends Control
 		
 		parent.add(this._sprite, this.z);
 	}
-
+	
 	public function setResource(resource, item_width, item_depth)
 	{
 		var newSprite = sprite(resource);

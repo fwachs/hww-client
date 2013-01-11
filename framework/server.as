@@ -139,6 +139,7 @@ class Server
 
 	public function getGifts(callback)
 	{
+		return;
 		this.makeRequest("/getGifts", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 

@@ -103,13 +103,13 @@ class HousewifeWars extends Game
 
 		if(wife.firstPlay == 1)
 		{
-			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000, "GameBucks");
+			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000 * 100, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
-			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(10, "Diamonds");
+			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(10 * 100, "Diamonds");
 			returnValue = Game.currentGame.wallet.collect(startingDiamonds);
 
-			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000, "Miles");
+			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000 * 100, "Miles");
             returnValue = Game.currentGame.wallet.collect(startingMiles);
 			
 			screen = new WifeSelectionScreen();

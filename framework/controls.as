@@ -578,7 +578,14 @@ class Scroll extends Control
 		
 		this._sprite.pos(newX, newY);
 		
+		var size = this.container.size();
+		this.viewPortChanged(-newX, -newY, size[0], size[1]);
+		
 //				this.lastMoved = event;
+	}
+	
+	function viewPortChanged(x, y, width, height)
+	{
 	}
 	
 	function dragEnded(event)

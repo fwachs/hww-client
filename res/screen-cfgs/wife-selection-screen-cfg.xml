@@ -44,7 +44,7 @@
 		<screen:element name="tutorial-step-1" resource="tutorial-icons/overlay75gray.png" left="0" top="0" z-index="99999999" visible="no" ontap="doNothing">
 		    <screen:element name="" resource="tutorial-icons/welcomedescription_text.png" left="96" top="100"/>
 		    <screen:element name="" resource="tutorial-icons/okay.png" left="833" top="556" ontap="nextTutorial"/>
-		</screen:element>	
+		    		</screen:element>	
 	    <screen:element name="tutorial-step-2" resource="tutorial-icons/arrowdown01.png" z-index="99999999" left="1064" top="92" visible="no"/>
 	    <screen:element name="tutorial-step-3" resource="tutorial-icons/arrow01.png" z-index="99999999" left="1010" top="722" visible="no"/>		
 						
