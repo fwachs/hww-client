@@ -74,8 +74,6 @@ class HouseScreen extends Screen
 
 		this.setBlueprint();	
 		
-		this.iso.stopSort();
-		
 		this.iso.controller = this.controller;
 		this.iso.centerOnTile(13, 26);
 
