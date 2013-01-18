@@ -156,7 +156,6 @@ class HouseController extends ScreenController implements TimerListener
             wife.incSocialStatusPoints(lastMission.ssp);
             wife.save();
             if (ret == 1) {
-                trace("rewarded: ", lastMission.gameBucks, lastMission.diamonds);
                 Game.sharedGame().wallet.save();
             }
             lastMissionId++;

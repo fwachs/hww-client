@@ -41,7 +41,7 @@ class MissionsScreen extends Screen
 	public function fillScroll(tasks) {
 	    var scroll = this.getElement("scroll");
         scroll.removeAllChildren();
-        var ypos = 0;
+        var ypos = 50;
         var canCollect = 1;
         
         for (var i = 0; i < len(tasks); i++) {
@@ -76,7 +76,7 @@ class MissionsScreen extends Screen
             scroll.addChild(control);
             ypos += 72;
         }
-        scroll.setContentSize(200, ypos + 50);
+        scroll.setContentSize(200, ypos);
         return canCollect;
 	}
 

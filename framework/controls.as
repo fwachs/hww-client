@@ -603,6 +603,9 @@ class Scroll extends Control
 		}
 		if(newY < this.height - cHeight) {
 			newY = this.height - cHeight;
+			if(newY > 0) {
+			    newY = 0;
+            }
 		}
 
 		if(this.lock == "vertical") {

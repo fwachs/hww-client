@@ -22,7 +22,7 @@ class Mission {
     }
 
     public function getCurrency() {
-        if (diamonds == null || diamonds == null) {
+        if (diamonds == null || diamonds == 0) {
             return "gameBucks";
         }
         return "diamonds"; 
