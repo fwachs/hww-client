@@ -25,6 +25,7 @@ import controllers.main_controller
 import models.wife
 
 //import framework.timer
+import models.mission
 import models.furniture
 import models.house
 import models.husband
@@ -62,6 +63,7 @@ class HousewifeWars extends Game
     var achievements;
     var purchasedClothingItems;
     var clothingItems = null;
+    var missions = null;
 
 	public function HousewifeWars()
 	{
@@ -96,6 +98,7 @@ class HousewifeWars extends Game
 		this.house.loadFurniture();
 		this.loadAchievements();
 		this.loadClothingItems();
+		this.loadMissions();
 		
 		var hud = new HUDScreen();
 		hud.configFile = "screen-cfgs/hud-screen-cfg.xml";
@@ -481,6 +484,37 @@ class HousewifeWars extends Game
 	        this.loadClothingItems();
 	    }
 	    return this.clothingItems.get(clothingItemId);
+	}
+
+	public function loadMissions () {
+	    var missions = new Array();
+	    var xmldict = parsexml("game-config/missions.xml", 1);
+	    var xmlMissions = xmldict.get("hww-config:missions").get("#children");
+	    for(var i = 0; i < len(xmlMissions); i++) {
+	        var xmlMission = xmlMissions[i].get("hww-config:mission");
+            var missionAttrs = xmlMission.get("#attributes");
+            var mission = new Mission(missionAttrs.get("id"), missionAttrs.get("name"), missionAttrs.get("type"), 
+                    int(missionAttrs.get("ssp")), int(missionAttrs.get("gameBucks")), int(missionAttrs.get("diamonds")));
+
+            var xmlMissionTasks = xmlMission.get("#children");
+            for (var k = 0; k < len(xmlMissionTasks); k++) {
+                var xmlMissionTask = xmlMissionTasks[k].get("hww-config:task");
+                var missionTaskAttrs = xmlMissionTask.get("#attributes");
+                var missionTask = null;
+                if (mission.type == "furniture") {
+                    missionTask = new MissionTask(missionTaskAttrs.get("itemId"), int(missionTaskAttrs.get("amount")));
+                } else {
+                    missionTask = new RemodelMissionTask(int(missionTaskAttrs.get("level")));
+                }
+                mission.addTask(missionTask);
+            }
+            missions.append(mission);
+	    }
+	    this.missions = missions;
+	}
+
+	public function getMission (missionId) {
+	    return this.missions[missionId-1];
 	}
 
 	public function loadClothingItems()

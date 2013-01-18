@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+
+    <screen:elements>
+        <screen:element name="missionPopupFrame" resource="mission/mission-popup-bg.png" left="259" top="20"/>
+        <screen:element name="missionTitle" resource="" left="520" top="52" font-size="34" font-style="bold" width="450" height="46" text-align="center">#missionsTitlePlaceholder</screen:element>
+        <screen:element name="missionRewardFrame" resource="mission/mission-reward-frame-bg.png" left="518" top="117"/>
+        <screen:element name="missionRewardTitle" resource="" left="520" top="129" font-size="34" font-style="bold" width="450" height="46" text-align="center">Reward</screen:element>
+        <screen:element name="missionRewardsBox" resource="mission/reward-box.png" left="555" top="176"/>
+        <screen:element name="missionSspReward" resource="" left="624" top="183" font-size="28" font-style="bold" width="118" height="46" text-align="center">#sspPlaceholder</screen:element>
+        <screen:element name="missionRewardsBox" resource="mission/reward-box.png" left="771" top="179"/>
+        <screen:element name="missionCurrencyReward" resource="" left="839" top="187" font-size="28" font-style="bold" width="118" height="46" text-align="center">#currencyPlaceholder</screen:element>
+        <screen:element name="missionSspRewardIcon" resource="mission/SSPIcon.png" left="526" top="162"/>
+        <screen:element name="missionCurrencyRewardIcon" resource="" left="749" top="166"/>
+		<screen:element name="missionTitleIcon" resource="furniture/sofas/042_Sofa.png" left="296" top="34"/>
+        <screen:element name="closeButton" resource="premium-currency-screen/cancel-button.png" left="962" top="9" ontap="dismiss"/>
+        
+        <screen:element name="scroll" class="Scroll" resource="" left="20" top="250" width="722" height="352" lock="vertical" />
+            
+        <screen:element name="missionCompleteTextFrame" resource="mission/mission-reward-frame-bg.png" left="277" top="623" visible="NO" >
+            <screen:element name="missionCompleteText001" resource="" left="10" top="10" font-size="40" font-style="bold" width="440" height="84" text-align="center" text-wrap="yes">Mission is complete, tap collect to get reward</screen:element>
+        </screen:element>
+ 
+        <screen:element name="missionIncompleteButton" resource="mission/gray-collect-button.png" left="742" top="646" ontap="doNothing" visible="YES" />
+        <screen:element name="missionCompleteButton" resource="mission/collect-button.png" left="742" top="646" ontap="collectMission" visible="NO"/>
+        
+    </screen:elements>
+</screen:config>
+    

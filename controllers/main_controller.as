@@ -24,6 +24,7 @@ import screens.gift_others_prompt_screen
 import screens.receive_gift_screen
 import screens.mystery_items_screen
 import screens.message_box_screen
+import screens.missions_screen
 
 
 import controllers.house_controller

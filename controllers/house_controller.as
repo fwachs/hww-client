@@ -126,7 +126,53 @@ class HouseController extends ScreenController implements TimerListener
         else if(event.name == "hideTutorialHelp") {
         	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
         	Game.showBanner(1, 0);
+        } 
+        else if (event.name == "displayMissions") {
+            Game.sounds.playSFX("buttonPress");
+            var db = Game.getDatabase();
+            var missionId = db.get("lastMissionId");
+            if (missionId == null) {
+                missionId = 1;
+            }
+            var mission = Game.sharedGame().getMission(missionId);
+            var missionsScreen = new MissionsScreen(mission);
+            missionsScreen.configFile = "screen-cfgs/missions-screen-cfg.xml";
+            this.presentModalScreen(missionsScreen);
         }
+        else if (event.name == "collectMission") {
+            Game.sounds.playSFX("buttonPress");
+            var database = Game.getDatabase();
+            var lastMissionId = database.get("lastMissionId");
+            if (lastMissionId == null) {
+                lastMissionId = 1;
+            }
+            var lastMission = Game.sharedGame().getMission(lastMissionId);
+            // collect
+            var costGB = this.getGameBucks(lastMission.gameBucks);
+            var costD = this.getDiamonds(lastMission.diamonds);
+            var payments = new Array(costGB, costD);
+            var ret = Game.sharedGame().wallet.payMultiple(payments);
+            var wife = Game.sharedGame().wife;
+            wife.incSocialStatusPoints(lastMission.ssp);
+            wife.save();
+            if (ret == 1) {
+                trace("rewarded: ", lastMission.gameBucks, lastMission.diamonds);
+                Game.sharedGame().wallet.save();
+            }
+            lastMissionId++;
+            database.put("lastMissionId", lastMissionId);
+            this.dismissModalScreen();
+        }
+    }
+
+    public function getGameBucks(amount)
+    {
+        return Game.sharedGame().wallet.moneyForCurrency(amount, "GameBucks");
+    }
+
+    public function getDiamonds(amount)
+    {
+        return Game.sharedGame().wallet.moneyForCurrency(amount, "Diamonds");
     }
 
     public function promptForRemodel()

@@ -308,7 +308,23 @@ class House
             this.blueprint.update(tileattrs.get("row") + "_" + tileattrs.get("col"), tileattrs.get("asset"));
         }       
     }
-    
+
+    public function containsFurniture(furnitureItem, amount) {
+        this.loadFurniture();
+        var furnitureArray = this.furniture.values();
+        var count = 0;
+        for (var i=0; i<len(furnitureArray); i++) {
+            var furniture = furnitureArray[i];
+            if (furniture.furnitureType.id == furnitureItem.id) {
+                count ++;
+                if (count >= amount) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
+
     public function loadMap()
     {
         var xmldict = parsexml("game-config/house_map.xml", 1);

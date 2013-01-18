@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:missions>
+
+    <hww-config:mission id="1" name="How it's done" type="furniture" ssp="100" gameBucks="100" diamonds="0">
+        <hww-config:task itemId="21" amount="1" />
+    </hww-config:mission>
+
+    <hww-config:mission id="2" name="Drinking Black Coffee" type="furniture" ssp="75" gameBucks="50" diamonds="0">
+        <hww-config:task itemId="91" amount="1" />
+    </hww-config:mission>
+
+    <hww-config:mission id="3" name="REMODEL 1" type="remodel" ssp="2500" gameBucks="0" diamonds="0">
+        <hww-config:task level="2" />
+    </hww-config:mission>
+
+    <hww-config:mission id="4" name="Let's Get Started" type="furniture" ssp="450" gameBucks="400" diamonds="0">
+        <hww-config:task itemId="43" amount="1" />
+        <hww-config:task itemId="201" amount="1" />
+        <hww-config:task itemId="107" amount="1" />
+    </hww-config:mission>
+</hww-config:missions>
+    
