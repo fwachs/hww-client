@@ -111,6 +111,8 @@ class IsometricItem extends Control
 	
 	private function createEditingUI()
 	{
+		if(this.acceptButton) return;
+		
 		this.getSprite().prepare();
 		
 		this.acceptButton = new Button("images/house-decorator/check-mark.png", this, "accept");
@@ -205,6 +207,8 @@ class IsometricItem extends Control
 	public function toggleEditingUI()
 	{	
 		if(this.isEditable == 0) return;
+		
+		this.createEditingUI();
 		
 		if(this.editUIIsVisible == 1) {
 			this.editUIIsVisible = 0;

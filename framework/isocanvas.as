@@ -24,6 +24,9 @@ class IsometricCanvas extends Scroll
 	var addingItem;
 	var items;
 	var selectedItem = null;
+	var screen;
+	var prevLeft = 0;
+	var prevTop = 0;
 	
 	static public function newCanvasFromAttributes(attrs)
 	{
@@ -78,18 +81,20 @@ class IsometricCanvas extends Scroll
 		var toY = fromY + areaHeight;
 		var fromX = centerX - areaWidth / 2;
 		var toX = fromX + areaWidth;
+		var cols = this.cols;
 				
 		for(var y = 0; y < this.rows; y++ ) {
 			var r = new Array();
 			this.tiles.append(r);
 			
-			for(var x = 0; x < this.cols; x++) {
+			for(var x = 0; x < cols; x++) {
 				var tile = new IsometricTile(x, y, this.tileWidth, this.tileHeight);
 				tile.occupied = 0;
-
-				if(x >= fromX && x <= toX && y >= fromY && y <= toY) {
-					tile.addToCanvas(this);
-				}
+				tile.calcPosition(cols);
+				
+//				if(x >= fromX && x <= toX && y >= fromY && y <= toY) {
+//					tile.addToCanvas(this);
+//				}
 
 				r.append(tile);
 			}
@@ -121,6 +126,46 @@ class IsometricCanvas extends Scroll
 		var rightTile = this.tiles[this.rows - 1][0];
 		this.setContentSize(Game.untranslate(rightTile.left + this.tileWidth), Game.untranslate(bottomTile.top + this.tileHeight));
 		this.setZoomLimits(60, 100);
+	}
+	
+	function oldviewPortChanged(x, y, width, height)
+	{
+		var tileFrom = self.tileFromPos(x + width / 2, y + height / 2);
+		var fromX = tileFrom[0];
+		if(fromX < 0) {
+			fromX = 0;
+		}
+		var fromY = tileFrom[1] -4;
+		if(fromY < 0) {
+			fromY = 0;
+		}
+
+		var areaWidth = tileFrom[0] + 8;
+		if(areaWidth > this.cols) {
+			areaWidth = this.cols;
+		}
+		var areaHeight = tileFrom[1] + 8;
+		if(areaHeight > this.rows) {
+			areaHeight = this.rows;
+		}
+		
+		for(var y = fromY; y < areaHeight; y++ ) {
+			var row = this.tiles[y];
+			for(var x = fromX; x < areaWidth; x++) {
+				var tile = row[x];
+				tile.addToCanvas(this);
+			}
+		}	
+	}
+	
+	function viewPortChanged(left, top, width, height)
+	{		
+		if(abs(left - this.prevLeft) > 20 || abs(top - this.prevTop) > 20) {
+			this.prevLeft = left;
+			this.prevTop = top;
+		
+			IsoCanvasNative.viewPortChanged(this, left, top, width, height);
+		}
 	}
 	
 	public function destroyTiles()
@@ -349,12 +394,12 @@ class IsometricCanvas extends Scroll
 	
 	public function startBubbleSort()
 	{
+		if(len(this.items) == 0) return;
+		
 		this.items.sortArray(this.isInFrontOf);
 
-		var z = 0;
-		
+		var z = 0;		
 		var parent = this.items[0].getSprite().parent();
-		parent.cancelSort(0);
 		
 		for(var i = len(this.items) - 1; i >= 0 ; i--) {
 			var item = this.items[i];
@@ -428,7 +473,7 @@ class IsometricCanvas extends Scroll
 		trace("Tile is:", xtile.round(), ytile.round());
 		*/
 		
-		return new Array(xtile, ytile);
+		return new Array(round(xtile), round(ytile));
 	}
 	
 	public function testPlacement(item, tileX, tileY)
@@ -547,8 +592,10 @@ class IsometricCanvas extends Scroll
 		var scrollPos = this.getSprite().pos();
 		
 		var newEvent = event.makeCopy();
-		newEvent.x = (pos[0] + abs(scrollPos[0])) * 100 / this.currentScale;
-		newEvent.y = (pos[1] + abs(scrollPos[1])) * 100 / this.currentScale;
+//		newEvent.x = (pos[0] + abs(scrollPos[0])) * 100 / this.currentScale;
+//		newEvent.y = (pos[1] + abs(scrollPos[1])) * 100 / this.currentScale;
+		newEvent.x = pos[0];
+		newEvent.y = pos[1];
 		
 		return newEvent;
 	}

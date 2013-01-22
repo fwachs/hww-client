@@ -38,7 +38,7 @@ class IsometricTile extends Control
 		this.height = height;
 		this.isHighlighted = 0;
 		
-//		this._sprite = sprite("images/furniture/highlight02.png", ARGB_8888);
+		this.resource = "images/furniture/highlight02.png";
 		this._sprite = sprite();
 		
 		this.item = null;
@@ -58,24 +58,63 @@ class IsometricTile extends Control
 		canvas.tileTapped(this);
 	}
 	
-	public function addToCanvas(canvas)
+	public function calcPosition(cols)
 	{
 		this.top = (this.y + this.x) * this.height / 2;
-		this.left = (this.y - this.x) * this.width / 2 + (canvas.cols - 1) * this.width / 2;
+		this.left = (this.y - this.x) * this.width / 2 + (cols - 1) * this.width / 2;
+	}
+	
+	public function isInView(x, y, w, h)
+	{
+		var right = this.left + this.width;
+		var bottom = this.top + this.height; 
+		if(right >= x && this.left < x + w && bottom >= y && this.top < y + h) {
+			return 1;
+		}
 		
-		this._sprite.pos(this.left, this.top);
-		this._sprite.size(this.width, this.height);
-		
-		/*
-		 this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
-		 */
-		
-		canvas.getSprite().add(this._sprite, x + y);
-		
+		return 0;
+	}
+	
+	public function addToCanvas(canvas)
+	{
+		if(this.canvas) return 0;		
+
 		this.canvas = canvas;
 		
 		this.parent = canvas.getSprite();
 		this.configureEvents();
+
+		var newSprite = sprite(this.resource);
+		newSprite.prepare();
+		var size = newSprite.size();
+		
+		var top = this.top - size[1] + this.height;
+		var left = this.left - this.width / this.item_width;
+		
+		Event.removeEventsForHandler(this._sprite);
+		
+		this._sprite.removefromparent();		
+		this._sprite = newSprite;
+		this._sprite.pos(left, top);
+		
+		this.configureEvents();
+
+		var x1000 = this.x * 1000;
+		var y1000 = this.y * 1000;
+		var itemWidth1000 = 1 * 1000;
+		
+		this.z = (x1000 + 1000 - itemWidth1000 / 2) + 1000;
+		
+		parent.add(this._sprite, this.z);
+		
+		this._sprite.pos(this.left, this.top);
+		this._sprite.size(this.width, this.height);
+		
+		//this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
+		
+		canvas.getSprite().add(this._sprite, x + y);
+		
+		return 1;
 	}
 	
 	public function destroy()
@@ -120,31 +159,6 @@ class IsometricTile extends Control
 		this.resource = resource;
 		this.item_width = item_width;
 		this.item_depth = item_depth;
-
-		var newSprite = sprite(this.resource);
-		newSprite.prepare();
-		var size = newSprite.size();
-		
-		var top = this.top - size[1] + this.height;
-		var left = this.left - this.width / this.item_width;
-		
-		Event.removeEventsForHandler(this._sprite);
-		
-		var parent = this._sprite.parent();
-		this._sprite.removefromparent();
-		
-		this._sprite = newSprite;
-		this._sprite.pos(left, top);
-		
-		this.configureEvents();
-
-		var x1000 = this.x * 1000;
-		var y1000 = this.y * 1000;
-		var itemWidth1000 = 1 * 1000;
-		
-		this.z = (x1000 + 1000 - itemWidth1000 / 2) + 1000;
-		
-		parent.add(this._sprite, this.z);
 	}
 	
 	public function setResource(resource, item_width, item_depth)

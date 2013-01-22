@@ -75,19 +75,25 @@ class HouseScreen extends Screen
 		this.setBlueprint();	
 		
 		this.iso.controller = this.controller;
+		this.iso.screen = this;
 		this.iso.centerOnTile(13, 26);
 
+//		this.setRooms();
+		
+//		this.loadFurniture();
+		
+		this.iso.reorganize();
+	}
+	
+	public function setRooms()
+	{
 		for(var i = 0; i < len(this.house.rooms); i++) {
 			var room = this.house.rooms[i];
 			
 			for(var j = 0; j < len(room.tiles); j++) {
 				this.setTiles(room.tiles[j]);
 			}
-		}
-		
-		this.loadFurniture();
-		
-		this.iso.reorganize();
+		}		
 	}
 	
 	public function setBlueprint()
@@ -109,10 +115,10 @@ class HouseScreen extends Screen
 				if(t != null) {
 					var asset = this.house.blueprint.get(str(row) + "_" + str(col));
 					if(asset != null) {
-						t.getSprite().texture("images/" + asset);
+						t.setFlatResource("images/" + asset, 1, 1);
 					}
 					else {
-						t.getSprite().texture("images/furniture/blueprint/blue-print-mid-empty.png");
+						t.setFlatResource("images/furniture/blueprint/blue-print-mid-empty.png", 1, 1);
 					}
 				}
 			}
