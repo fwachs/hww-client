@@ -489,6 +489,9 @@ class HousewifeWars extends Game
 	public function loadMissions () {
 	    var missions = new Array();
 	    var xmldict = parsexml("game-config/missions.xml", 1);
+	    if (xmldict == null) {
+	        return;
+	    }
 	    var xmlMissions = xmldict.get("hww-config:missions").get("#children");
 	    for(var i = 0; i < len(xmlMissions); i++) {
 	        var xmlMission = xmlMissions[i].get("hww-config:mission");

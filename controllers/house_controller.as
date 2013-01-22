@@ -141,7 +141,7 @@ class HouseController extends ScreenController implements TimerListener
             this.presentModalScreen(missionsScreen);
         }
         else if (event.name == "collectMission") {
-            Game.sounds.playSFX("buttonPress");
+            Game.sounds.playSFX("houseLevelUp");
             var database = Game.getDatabase();
             var lastMissionId = database.get("lastMissionId");
             if (lastMissionId == null) {
