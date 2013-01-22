@@ -135,6 +135,7 @@ class Game
                 trace("### HWWW ### Synchronize Wife Response: ", jsonWife);
                 wife.loadFromJSON(jsonWife);
                 wife.save();
+                Game.getDatabase().put("lastMissionId", jsonWife.get("lastMissionId"));
 
                 var purchasedClothingItems = new PurchasedClothingItems();
                 var clothingItemValues = wife.clothingItems.values();

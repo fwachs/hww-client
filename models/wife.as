@@ -635,6 +635,7 @@ class Wife
         wifeArray.append(["statusPointsFactor", statusPointsFactor]);
         wifeArray.append(["mysteryItems", this.mysteryItemCollection.keys()]);
         wifeArray.append(["clothingItems", this.clothingItems]);
+        wifeArray.append(["lastMissionId", Game.getDatabase().get("lastMissionId")]);
         return dict(wifeArray);
     }
 

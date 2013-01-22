@@ -57,7 +57,7 @@
 		
 		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
         	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/travel-tutorial.png" left="0" top="0" ontap="doNothing"/>
-        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="hideTutorialHelp"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="905" top="623" ontap="hideTutorialHelp"/>
     	</screen:element>
 
 	</screen:elements>

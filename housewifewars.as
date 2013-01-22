@@ -494,17 +494,17 @@ class HousewifeWars extends Game
 	        var xmlMission = xmlMissions[i].get("hww-config:mission");
             var missionAttrs = xmlMission.get("#attributes");
             var mission = new Mission(missionAttrs.get("id"), missionAttrs.get("name"), missionAttrs.get("type"), 
-                    int(missionAttrs.get("ssp")), int(missionAttrs.get("gameBucks")), int(missionAttrs.get("diamonds")));
+                    int(missionAttrs.get("ssp")), int(missionAttrs.get("gameBucks")), int(missionAttrs.get("diamonds")), missionAttrs.get("image"));
 
             var xmlMissionTasks = xmlMission.get("#children");
             for (var k = 0; k < len(xmlMissionTasks); k++) {
                 var xmlMissionTask = xmlMissionTasks[k].get("hww-config:task");
                 var missionTaskAttrs = xmlMissionTask.get("#attributes");
                 var missionTask = null;
-                if (mission.type == "furniture") {
-                    missionTask = new MissionTask(missionTaskAttrs.get("itemId"), int(missionTaskAttrs.get("amount")));
+                if (mission.type == "furniture" || mission.type == "purchase") {
+                    missionTask = new MissionTask(missionTaskAttrs.get("itemId"), missionTaskAttrs.get("name"), int(missionTaskAttrs.get("amount")));
                 } else {
-                    missionTask = new RemodelMissionTask(int(missionTaskAttrs.get("level")));
+                    missionTask = new RemodelMissionTask(missionTaskAttrs.get("name"), int(missionTaskAttrs.get("level")));
                 }
                 mission.addTask(missionTask);
             }

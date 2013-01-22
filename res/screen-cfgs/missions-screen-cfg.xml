@@ -13,7 +13,7 @@
         <screen:element name="missionCurrencyReward" resource="" left="839" top="187" font-size="28" font-style="bold" width="118" height="46" text-align="center">#currencyPlaceholder</screen:element>
         <screen:element name="missionSspRewardIcon" resource="house-decorator/SSPIcon01.png" left="526" top="162"/>
         <screen:element name="missionCurrencyRewardIcon" resource="" left="749" top="166"/>
-		<screen:element name="missionTitleIcon" resource="furniture/sofas/042_Sofa.png" left="296" top="34"/>
+		<screen:element name="missionTitleIcon" height="207" width="207" resource="furniture/sofas/042_Sofa.png" left="296" top="34"/>
         <screen:element name="closeButton" resource="premium-currency-screen/cancel-button.png" left="962" top="9" ontap="dismiss"/>
         
         <screen:element name="scroll" class="Scroll" resource="" left="277" top="255" width="722" height="352" lock="vertical" />

@@ -26,6 +26,7 @@ class MissionsScreen extends Screen
 	        currencyImage = "images/premium-currency-screen/dimonds01v2.png";
 	    }
 
+	    this.getElement("missionTitleIcon").getSprite().texture("images/" + mission.image);
 	    this.getElement("missionCurrencyRewardIcon").getSprite().texture(currencyImage);
 	    this.getElement("missionTitle").setText(mission.name);
 	    this.getElement("missionSspReward").setText(str(mission.ssp));
@@ -49,8 +50,8 @@ class MissionsScreen extends Screen
             var control = null;
             if (this.mission.type == "remodel") {
                 params.update("top", ypos);
-                params.update("level", str(tasks[i].level));
                 params.update("visible", "NO");
+                params.update("missionTaskName", tasks[i].name);
                 var level = Game.sharedGame().house.level;
                 if (level >= tasks[i].level) {
                     params.update("visible", "YES");
@@ -62,14 +63,27 @@ class MissionsScreen extends Screen
                 var furniture = Game.sharedGame().getFurniture(tasks[i].itemId);
                 params.update("top", ypos);
                 params.update("amount", str(tasks[i].amount));
-                params.update("furnitureName", furniture.name);
+                params.update("missionTaskName", tasks[i].name);
                 params.update("visible", "NO");
-                var completedFurnitureTask = Game.sharedGame().house.containsFurniture(furniture, tasks[i].amount);
-                if (completedFurnitureTask == 1) {
-                    params.update("visible", "YES");
+
+                if (this.mission.type == "furniture") {
+                    var completedFurnitureTask = Game.sharedGame().house.containsFurniture(furniture, tasks[i].amount);
+                    if (completedFurnitureTask == 1) {
+                        params.update("visible", "YES");
+                    } else {
+                        canCollect = 0;
+                    }    
                 } else {
-                    canCollect = 0;
+                    // check if the user has that house skin
+                    trace("check if the user has that house skin");
+                    var hasRealEstate = Game.sharedGame().realestate.propertyListing[int(tasks[i].itemId)];
+                    if (hasRealEstate == 1) {
+                        params.update("visible", "YES");
+                    } else {
+                        canCollect = 0;
+                    }   
                 }
+                
                 control = this.controlFromXMLTemplate("MissionTask", params, "mission-task.xml");
             }
 

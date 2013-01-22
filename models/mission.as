@@ -6,14 +6,16 @@ class Mission {
     var gameBucks;
     var diamonds;
     var tasks;
+    var image;
 
-    public function Mission (id, name, type, ssp, gameBucks, diamonds) {
+    public function Mission (id, name, type, ssp, gameBucks, diamonds, image) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.ssp = ssp;
         this.gameBucks = gameBucks;
         this.diamonds = diamonds;
+        this.image = image;
         this.tasks = new Array();
     }
 
@@ -41,18 +43,22 @@ class MissionTask {
 
     var itemId;
     var amount;
+    var name;
 
-    public function MissionTask (itemId, amount) {
+    public function MissionTask (itemId, name, amount) {
         this.itemId = itemId;
         this.amount = amount;
+        this.name = name;
     }
 }
 
 class RemodelMissionTask {
 
     var level;
+    var name;
 
-    public function RemodelMissionTask (level) {
+    public function RemodelMissionTask (name, level) {
+        this.name = name;
         this.level = level;
     }
 }

@@ -150,14 +150,11 @@ class HouseController extends ScreenController implements TimerListener
             // collect
             var costGB = this.getGameBucks(lastMission.gameBucks);
             var costD = this.getDiamonds(lastMission.diamonds);
-            var payments = new Array(costGB, costD);
-            var ret = Game.sharedGame().wallet.payMultiple(payments);
+            Game.sharedGame().wallet.collect(costGB);
+            Game.sharedGame().wallet.collect(costD);
             var wife = Game.sharedGame().wife;
             wife.incSocialStatusPoints(lastMission.ssp);
             wife.save();
-            if (ret == 1) {
-                Game.sharedGame().wallet.save();
-            }
             lastMissionId++;
             database.put("lastMissionId", lastMissionId);
             this.dismissModalScreen();
