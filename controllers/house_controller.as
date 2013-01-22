@@ -74,6 +74,7 @@ class HouseController extends ScreenController implements TimerListener
         }
         else if(event.name == "collectPoints") {
             this.collectPoints();
+            Game.sounds.playSFX("reward");
         }
         else if(event.name == "cleanHouse") {
             Game.sounds.playSFX("cleanHouse");

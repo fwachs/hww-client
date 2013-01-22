@@ -42,16 +42,16 @@
 		<hww-config:task itemId="33" name="Place 3 Barstools" amount="3" />	
 	</hww-config:mission>
 
-<hww-config:mission id="10" name="Down South" ssp="1400" gameBucks="0" diamonds="0" type="purchase" image="house-decorator/for-sale-button.png">	<hww-config:task itemId="6" name="Buy a Colonial House" amount="1" />	</hww-config:mission>
+    <hww-config:mission id="10" name="A Little Culture" ssp="150" gameBucks="125" diamonds="0" type="furniture" image="furniture/paintings/391_Painting.png">   
+        <hww-config:task itemId="391" name="Place 1 Garden Painting" amount="1" />  
+    </hww-config:mission>
 
 	<hww-config:mission id="11" name="Something Green" ssp="200" gameBucks="150" diamonds="0" type="furniture" image="furniture/Plants/223_Plant.png">	
 		<hww-config:task itemId="221" name="Place 2 Sprouts" amount="2" />	
 		<hww-config:task itemId="223" name="Place 1 Fire Lily" amount="1" />	
 	</hww-config:mission>
 
-	<hww-config:mission id="12" name="A Little Culture" ssp="150" gameBucks="125" diamonds="0" type="furniture" image="furniture/paintings/391_Painting.png">	
-		<hww-config:task itemId="391" name="Place 1 Garden Painting" amount="1" />	
-	</hww-config:mission>
+<hww-config:mission id="12" name="Down South" ssp="1400" gameBucks="0" diamonds="0" type="purchase" image="house-decorator/for-sale-button.png">    <hww-config:task itemId="6" name="Buy a Colonial House" amount="1" />   </hww-config:mission>
 
 <hww-config:mission id="13" name="Out in the Countryside" ssp="1200" gameBucks="200" diamonds="0" type="furniture" image="furniture/sofa/045_Sofa.png">	<hww-config:task itemId="45" name="Place 1 Country Sofa" amount="1" />	
 	<hww-config:task itemId="77" name="Place 1 Country Dining Table" amount="1" />	
