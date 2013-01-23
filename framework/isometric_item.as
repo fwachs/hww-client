@@ -73,12 +73,16 @@ class IsometricItem extends Control
 	
 	public function setCanvas(canvas)
 	{
+		if(this.canvas) return;
+		
 		this.canvas = canvas;
 		this.createEditingUI();
-		this.testPlacement();
+//		this.testPlacement();
 		this.getSprite().put(this);
 		this.parent = canvas.getSprite();
 		this.configureEvents();	
+
+		canvas.getSprite().add(this.getSprite(), this.z);
 	}
 
 	override public function configureEvents()
@@ -242,6 +246,8 @@ class IsometricItem extends Control
 	
 	public function flipItem()
 	{
+		if(!this.canvas) return;
+		
 		var size = this.imageSprite.size();
 		this.imageSprite.size(-size[0], size[1]);
 				

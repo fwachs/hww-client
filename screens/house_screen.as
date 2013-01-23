@@ -76,13 +76,14 @@ class HouseScreen extends Screen
 		
 		this.iso.controller = this.controller;
 		this.iso.screen = this;
-		this.iso.centerOnTile(13, 26);
 
-//		this.setRooms();
+		this.setRooms();
 		
-//		this.loadFurniture();
+		this.loadFurniture();
 		
 		this.iso.reorganize();
+		
+		this.iso.centerOnTile(13, 26);
 	}
 	
 	public function setRooms()
@@ -152,10 +153,12 @@ class HouseScreen extends Screen
 
 		var map = this.getElement("map");
 		
+		/*
 		if(tiles.room.level > this.house.getLevel()) {
 			this.lockTiles(tiles);
 			return;			
 		}
+		*/
 		
 		var customTiles = this.house.customTiles.get(str(tiles.row) + str(tiles.col));		
 		

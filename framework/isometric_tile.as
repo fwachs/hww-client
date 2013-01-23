@@ -110,9 +110,13 @@ class IsometricTile extends Control
 		this._sprite.pos(this.left, this.top);
 		this._sprite.size(this.width, this.height);
 		
-		//this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
+		this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
 		
 		canvas.getSprite().add(this._sprite, x + y);
+		
+		if(this.item) {
+			this.item.setCanvas(canvas);
+		}
 		
 		return 1;
 	}

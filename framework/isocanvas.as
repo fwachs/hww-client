@@ -100,62 +100,12 @@ class IsometricCanvas extends Scroll
 			}
 		}	
 
-		/*
-		for(var y = 0; y < this.rows; y++ ) {
-			var r = new Array();
-			this.tiles.append(r);
-			
-			if(y >= fromY && y <= toY) {
-				for(var x = 0; x < this.cols; x++) {
-					if(x >= fromX && x <= toX) {
-						var tile = new IsometricTile(x, y, this.tileWidth, this.tileHeight);
-						tile.occupied = 0;
-	
-						tile.addToCanvas(this);
-	
-						r.append(tile);
-					}					
-				}
-			}
-		}	
-		*/
-
 //		this.posLabel = this._sprite.addlabel("0 0", "Arial", 16);
 		
 		var bottomTile = this.tiles[this.rows - 1][this.cols - 1];
 		var rightTile = this.tiles[this.rows - 1][0];
 		this.setContentSize(Game.untranslate(rightTile.left + this.tileWidth), Game.untranslate(bottomTile.top + this.tileHeight));
 		this.setZoomLimits(60, 100);
-	}
-	
-	function oldviewPortChanged(x, y, width, height)
-	{
-		var tileFrom = self.tileFromPos(x + width / 2, y + height / 2);
-		var fromX = tileFrom[0];
-		if(fromX < 0) {
-			fromX = 0;
-		}
-		var fromY = tileFrom[1] -4;
-		if(fromY < 0) {
-			fromY = 0;
-		}
-
-		var areaWidth = tileFrom[0] + 8;
-		if(areaWidth > this.cols) {
-			areaWidth = this.cols;
-		}
-		var areaHeight = tileFrom[1] + 8;
-		if(areaHeight > this.rows) {
-			areaHeight = this.rows;
-		}
-		
-		for(var y = fromY; y < areaHeight; y++ ) {
-			var row = this.tiles[y];
-			for(var x = fromX; x < areaWidth; x++) {
-				var tile = row[x];
-				tile.addToCanvas(this);
-			}
-		}	
 	}
 	
 	function viewPortChanged(left, top, width, height)
@@ -276,36 +226,23 @@ class IsometricCanvas extends Scroll
 	
 	public function addItem(item, x, y)
 	{		
-		var centerY = 26;
-		var centerX = 13;
-		var areaWidth = 16;
-		var areaHeight = 16;
-		var fromY = centerY - areaHeight / 2;
-		var toY = fromY + areaHeight;
-		var fromX = centerX - areaWidth / 2;
-		var toX = fromX + areaWidth;
+		trace("Adding item: ", item, x, y, item.getSprite());
+		this.unselectSelectedItem();
+		
+		var itemSprite = item.getSprite();
+		
+		var z = this.placeItem(item, x, y)	
 				
-		if(x >= fromX && x <= toX && y >= fromY && y <= toY) {					
-			trace("Adding item: ", item, x, y, item.getSprite());
-			this.unselectSelectedItem();
-			
-			var itemSprite = item.getSprite();
-			
-			var z = this.placeItem(item, x, y)	
-			this.getSprite().add(itemSprite, 999999);
-			
-			item.setCanvas(this);
-					
-			this.items.append(item);
-		}
+		this.items.append(item);
 	}
 	
 	public function newItem(item, x, y)
 	{
 		this.addingItem = item;
 		this.addItem(item, x, y);
+		item.setCanvas(this);
 		item.toggleEditingUI();			
-		this.reorganize();
+		//this.reorganize();
 	}
 	
 	public function placeItem(item, x, y)
@@ -473,7 +410,7 @@ class IsometricCanvas extends Scroll
 		trace("Tile is:", xtile.round(), ytile.round());
 		*/
 		
-		return new Array(round(xtile), round(ytile));
+		return new Array(round(xtile) + 1, round(ytile) + 1);
 	}
 	
 	public function testPlacement(item, tileX, tileY)
@@ -574,7 +511,11 @@ class IsometricCanvas extends Scroll
 	{
 		var tile = this.tiles[y][x];
 		var size = this.container.size();
-		this._sprite.addaction(moveto(250, -tile.left + size[0] / 2, -tile.top + size[1] / 2));		
+//		this._sprite.addaction(moveto(250, -tile.left + size[0] / 2, -tile.top + size[1] / 2));
+		var newX = -tile.left + size[0] / 2;
+		var newY = -tile.top + size[1] / 2;
+		this._sprite.pos(newX, newY);
+		this.viewPortChanged(-newX, -newY, size[0], size[1]);
 	}
 	
 	public function tileTapped(tile)
@@ -594,8 +535,8 @@ class IsometricCanvas extends Scroll
 		var newEvent = event.makeCopy();
 //		newEvent.x = (pos[0] + abs(scrollPos[0])) * 100 / this.currentScale;
 //		newEvent.y = (pos[1] + abs(scrollPos[1])) * 100 / this.currentScale;
-		newEvent.x = pos[0];
-		newEvent.y = pos[1];
+		newEvent.x = newPos[0];
+		newEvent.y = newPos[1];
 		
 		return newEvent;
 	}
