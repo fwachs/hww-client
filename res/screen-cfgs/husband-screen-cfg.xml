@@ -36,10 +36,10 @@
 		<screen:element name="salary" left="935" top="136" />
 
 		
-		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="1018" top="277" ontap="fillLoveTank" />
+		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="968" top="277" ontap="fillLoveTank" />
         <screen:element name="loveTankPlus" resource="hubby-screen/plus-icon.png" left="1124" top="246" ontap="fillLoveTank" />
 
-		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="1018" top="431" ontap="releaseStress"/>
+		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="968" top="431" ontap="releaseStress"/>
         <screen:element name="stressMeterPlus" resource="hubby-screen/plus-icon.png" left="1124" top="408" ontap="releaseStress"/>
 		
 		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
