@@ -335,8 +335,8 @@ class IsometricCanvas extends Scroll
 		
 		this.items.sortArray(this.isInFrontOf);
 
-		var z = 0;		
-		var parent = this.items[0].getSprite().parent();
+		var z = 50000;		
+		var parent = this.getSprite();
 		
 		for(var i = len(this.items) - 1; i >= 0 ; i--) {
 			var item = this.items[i];
@@ -344,7 +344,7 @@ class IsometricCanvas extends Scroll
 			//var parent = itemSprite.parent();
 			itemSprite.removefromparent();
 			parent.add(itemSprite, z, 0);
-			itemSprite.remove(item.text);
+//			itemSprite.remove(item.text);
 //			item.text = itemSprite.addlabel(str(z), "Arial", 30);
 			item.z = z;
 
