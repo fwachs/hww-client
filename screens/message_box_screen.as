@@ -43,6 +43,12 @@ class MessageBoxScreen extends Screen
     static var MB_DarkSideLetter = 29;
     static var MB_BasicAccept = 30;
     static var MB_SellFurniture = 31;
+<<<<<<< HEAD
+=======
+    static var MB_UnlockCatalog = 32;
+    static var MB_LockedCatalog = 33;
+    static var MB_ClothingValidation = 34;
+>>>>>>> origin/develop
 
     var type;
     var argument;
@@ -127,7 +133,8 @@ class MessageBoxScreen extends Screen
             this.getElement("RemodelHousePrompt").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_CantUnlockRemodel) {
-            displayOkayPrompt("Sorry, your husband needs to be higher level to remodel your house.");
+            var unlockLevel = Game.sharedGame().house.getNextRemodelLevel(); 
+            displayOkayPrompt("Your husband needs to be level " + str(unlockLevel) + " to remodel.");
         }
         else if(this.type == MessageBoxScreen.MB_Hubby_Stressed_Out) {
             displayOkayPrompt("He's too stressed out to work! Help him relax?", "okay-button-relieve-stress");
@@ -199,6 +206,15 @@ class MessageBoxScreen extends Screen
         }
         else if(this.type == MessageBoxScreen.MB_SellFurniture) {
         	displaySellItemPrompt();
+<<<<<<< HEAD
+=======
+        } else if (this.type == MessageBoxScreen.MB_UnlockCatalog) {
+            displayOkayPrompt("Congratulations! You unlocked the " + str(this.argument) + " Fashion Catalog");
+        } else if (this.type == MessageBoxScreen.MB_LockedCatalog) {
+            displayOkayPrompt("Visit "+ this.argument + " and see all the sights first.");
+        } else if (this.type == MessageBoxScreen.MB_ClothingValidation) {
+            displayOkayPrompt("Too much skin showing! Put on a top, a bottom and some shoes before you leave.");
+>>>>>>> origin/develop
         }
     }
 

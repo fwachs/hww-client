@@ -34,7 +34,22 @@ class Shop
         
         return ret;
     }
-    
+
+    public function buyClothingItem(clothingItem)
+    {
+        var costGB = this.getGameBucks(clothingItem.gameBucks);
+        var costD = this.getDiamonds(clothingItem.diamonds);
+        var payments = new Array(costGB, costD);
+        var ret = Game.sharedGame().wallet.payMultiple(payments);
+        if (ret == 1) {
+            Game.sharedGame().wallet.save();
+        }
+        trace("ClothingItem bought: ", clothingItem, costGB, costD, ret);
+        this.trackPurchaseEvent("ClothingItem Purchase", clothingItem.toString(), ret);
+
+        return ret;
+    }
+
     public function buyHouseRemodel(remodel)
     {
         var cost = this.getDiamonds(remodel.diamonds);

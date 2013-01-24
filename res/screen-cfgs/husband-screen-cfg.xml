@@ -36,10 +36,11 @@
 		<screen:element name="salary" left="935" top="136" />
 
 		
-		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="1018" top="277" ontap="fillLoveTank" />
-		
-		
-		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="1018" top="431" ontap="releaseStress"/>
+		<screen:element name="loveTank" resource="hubby-screen/love-tank.png" left="968" top="277" ontap="fillLoveTank" />
+        <screen:element name="loveTankPlus" resource="hubby-screen/plus-icon.png" left="1124" top="246" ontap="fillLoveTank" />
+
+		<screen:element name="stressMeter" resource="hubby-screen/stress-meter.png" left="968" top="431" ontap="releaseStress"/>
+        <screen:element name="stressMeterPlus" resource="hubby-screen/plus-icon.png" left="1124" top="408" ontap="releaseStress"/>
 		
 		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
 			<screen:element name="faceAnimation" resource="" left="0" top="0" />
@@ -61,7 +62,7 @@
 				<screen:element name="stressOption2_icon" resource="hubby-screen/play-games.png" left="20" top="8"/>
 				<screen:element name="stressOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
 				<screen:element name="stressOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="stressOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Video game madness</screen:element>
+				<screen:element name="stressOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">#placeholder</screen:element>
 				<screen:element name="stressOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Lowers Stress -3</screen:element>
 			</screen:element>
 
@@ -87,7 +88,7 @@
 				<screen:element name="loveOption2_icon" resource="hubby-screen/give-kiss.png" left="20" top="8"/>
 				<screen:element name="loveOption2_cost_icon" resource="premium-currency-screen/game-buck.png" left="157" top="60"/>
 				<screen:element name="loveOption2_cost_text" resource="" left="235" top="70">#placeholder</screen:element>
-				<screen:element name="loveOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">Give him a kiss</screen:element>
+				<screen:element name="loveOption2_text" resource="" left="220" top="23" font-size="40" font-style="bold" text-align="center" width="358" height="50">#placeholder</screen:element>
 				<screen:element name="loveOption2_subText" resource="" left="295" top="107" font-size="28" font-style="bold" text-align="center" width="246" height="36">Fills Love Tank +3</screen:element>
 			</screen:element>
 
@@ -100,9 +101,16 @@
 			</screen:element>
 
 			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="644" top="7" ontap="closeLoveOptions"/>
-		</screen:element>
+			</screen:element>
 
 		<screen:element name="character" resource="" left="0" top="40"/>
+		
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="48" top="85" ontap="showTutorialHelp" z-index="100"/>
+		
+		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
+        	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/husband-tutorial.png" left="0" top="0" ontap="doNothing"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="hideTutorialHelp"/>
+    	</screen:element>
 
 	    <screen:element name="tutorial-step-1" resource="tutorial-icons/overlay75gray.png" z-index="99999999" left="0" top="0" visible="NO" ontap="doNothing">
 	        <screen:element name="tutorialPromptFrame" resource="tutorial-icons/husband-tutorial.png" left="0" top="0" ontap="doNothing"/>

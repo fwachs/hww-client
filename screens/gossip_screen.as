@@ -62,7 +62,7 @@ class GossipScreen extends Screen
 	public function drawBestHouseWife(topHouseWife)
 	{
 		this.getElement("topWifeName").setText(topHouseWife.name);
-		topHouseWife.dress(this);
+		topHouseWife.dress(this, 0);
 		
 		this.getElement("sspText").setText(str(topHouseWife.socialStatusPoints));
 	}

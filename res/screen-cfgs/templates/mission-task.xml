@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:templates>
+    <screen:template name="MissionTask">
+        <screen:element name="missionTask001" resource="mission/descript-check-active.png" left="34" top="#top">
+            <screen:element name="missionTaskText001" resource="" left="113" top="18" font-size="28" font-style="bold" width="600" height="36" text-align="left">#missionTaskName </screen:element>
+            <screen:element name="missionTaskCheck" resource="mission/mission-check.png" left="0" top="-12" visible="#visible" />
+        </screen:element>
+    </screen:template>
+
+    <screen:template name="RemodelMissionTask">
+        <screen:element name="missionTask001" resource="mission/descript-check-active.png" left="34" top="#top">
+            <screen:element name="missionTaskText001" resource="" left="113" top="18" font-size="28" font-style="bold" width="600" height="36" text-align="left">#missionTaskName</screen:element>
+            <screen:element name="missionTaskCheck" resource="mission/mission-check.png" left="0" top="-12" visible="#visible" />
+        </screen:element>
+    </screen:template>
+</screen:templates>

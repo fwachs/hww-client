@@ -11,7 +11,8 @@
 			<screen:element name="forSaleButton"  resource="house-decorator/for-sale-button.png" left="952" top="682" ontap="forSale" z-index="100"/>		
 			<screen:element name="forSaleButton"  resource="house-decorator/remod-button.png" left="847" top="682" ontap="remodelPrompt" z-index="100"/>		
 			<screen:element name="storageButton"  resource="house-decorator/storage-box-icon.png" left="722" top="682" ontap="showStorage" z-index="100"/>		
-			<screen:element name="decorateButton" resource="house-decorator/decorate-button.png" left="597" top="682" ontap="decorate" z-index="100"/>		
+			<screen:element name="decorateButton" resource="house-decorator/decorate-button.png" left="597" top="682" ontap="decorate" z-index="100"/>
+            <screen:element name="missionsButton" resource="mission/mission-icon.png" left="80" top="160" ontap="displayMissions" z-index="100"/>		
 		</screen:element>
 
 		<screen:element name="categoryFrame" resource="" left="0" top="800" width="1280" height="1518" z-index="100" ontap="doNothing">
@@ -34,7 +35,13 @@
 			</screen:element>
 		</screen:element>
 		
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="48" top="85" ontap="showTutorialHelp" z-index="100"/>
 		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="682" ontap="done" z-index="100"/>
+		
+		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
+        	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/decorate-tutorial.png" left="0" top="0" ontap="doNothing"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="hideTutorialHelp"/>
+    	</screen:element>
 					
 	</screen:elements>
 </screen:config>

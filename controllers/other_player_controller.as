@@ -51,7 +51,7 @@ class OtherPlayerController extends ScreenController
 
 		var houseWife = new Wife();
 		houseWife.loadFromJSON(wife);
-		houseWife.dress(this.screen);
+		houseWife.dress(this.screen, 0);
 
 		var socialStatusPointsElement = this.screen.getElement("SSPText");
 		socialStatusPointsElement.setText(str(houseWife.socialStatusPoints));

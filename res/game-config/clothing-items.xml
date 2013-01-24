@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<hww-config:clothing-items>
+
+	<hww-config:clothing-catalog name="London" image="fashion-shop/london-mag.png" travelIndex="0">
+		<hww-config:clothing-category name="Dress">
+			<hww-config:clothing-item id="1076" name="Mondrian" image="dress/1076_Dress_Modern.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1077" name="Black and White Mini" image="dress/1077_Dress_Modern.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1078" name="Beach Party" image="dress/1078_Dress_Modern.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1079" name="Diamonds" image="dress/1079_Dress_Modern.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1080" name="Ocean Gown" image="dress/1080_Dress_Modern.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1081" name="StarBurst" image="dress/1081_Dress_Modern.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1082" name="Golden" image="dress/1082_Dress_Modern.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1083" name="Mona Lisa" image="dress/1083_Dress_Modern.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1084" name="Geometry" image="dress/1084_Dress_Modern.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1085" name="Teal Tiles" image="dress/1085_Dress_Modern.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1203" name="Classic Brit" image="premium/LONDON2_dress.png" gameBucks="0" diamonds="50" stars="3" points="95" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+<!-- 			<hww-config:clothing-item id="1202" name="Queen" image="premium/LONDON_dress.png" gameBucks="0" diamonds="60" stars="3" points="99" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Top">
+			<hww-config:clothing-item id="1086" name="Speckle Blue" image="shirt/1086_Shirt_Modern.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1087" name="Pink Ring" image="shirt/1087_Shirt_Modern.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1088" name="Blue Fade" image="shirt/1088_Shirt_Modern.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1089" name="Pearl" image="shirt/1089_Shirt_Modern.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1090" name="Woven Hues" image="shirt/1090_Shirt_Modern.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1091" name="Orange Agent" image="shirt/1091_Shirt_Modern.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1092" name="Checker" image="shirt/1092_Shirt_Modern.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1093" name="Ice Pearl" image="jacket/1093_Jacket_Modern.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1094" name="Fade Out" image="jacket/1094_Jacket_Modern.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1095" name="Night Speckle" image="jacket/1095_Jacket_Modern.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Bottom">
+			<hww-config:clothing-item id="1096" name="Red and Gold" image="pants/1096_Pants_Modern.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1097" name="Yellow Daisy" image="pants/1097_Pants_Modern.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1098" name="Pink Shorts" image="pants/1098_Pants_Modern.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1099" name="White Capri" image="pants/1099_Pants_Modern.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1100" name="Black Skinny" image="pants/1100_Pants_Modern.png" gameBucks="" diamonds="7" stars="1" points="22" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1101" name="Charcoal" image="pants/1101_Pants_Modern.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1102" name="Ocean Floor" image="pants/1102_Pants_Modern.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1103" name="Grey Scale" image="pants/1103_Pants_Modern.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1104" name="Forest" image="pants/1104_Pants_Modern.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1105" name="Glamour Stretch Skirt" image="pants/1105_Pants_Modern.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Shoes">
+			<hww-config:clothing-item id="1041" name="Princess Pumps" image="shoes/1041_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1046" name="PinkFlair" image="shoes/1046_Shoes_All.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1050" name="Mondrian" image="shoes/1050_Shoes_All.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1056" name="Zebra_pumps" image="shoes/1056_Shoes_All.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1059" name="Blue Ribbon Heels" image="shoes/1059_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1060" name="Leopard Pumps" image="shoes/1060_Shoes_All.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Accessories">
+			<hww-config:clothing-item id="1014" name="Glittering Heart" image="belt/1014_Belt_All.png" gameBucks="3000" diamonds="0" stars="0" points="15" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1020" name="Silver Studs" image="belt/1020_Belt_All.png" gameBucks="0" diamonds="12" stars="3" points="36" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1032" name="Lucky Jade" image="necklace/1032_Necklace_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1037" name="Pearl Drop" image="necklace/1037_Necklace_All.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1003" name="Evening Silver Clutch" image="shoulderbag/1003_Shoulderbag_All.png" gameBucks="1200" diamonds="0" stars="0" points="2" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1008" name="Peacock Sparkle" image="shoulderbag/1008_Shoulderbag_All.png" gameBucks="0" diamonds="5" stars="2" points="19" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1024" name="Funky Deco Tights" image="undies/1024_Undies_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1028" name="Purple Jazz Leggings" image="undies/1028_Undies_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+	</hww-config:clothing-catalog>
+
+	<hww-config:clothing-catalog name="San Francisco" image="fashion-shop/sf-mag.png" travelIndex="1">
+		<hww-config:clothing-category name="Dress">
+			<hww-config:clothing-item id="1166" name="Simple Black" image="dress/1166_Dress_Rocker.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1167" name="White Stripes" image="dress/1167_Dress_Rocker.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1168" name="Diamond Stud" image="dress/1168_Dress_Rocker.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1169" name="Pink Shimmer" image="dress/1169_Dress_Rocker.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1170" name="Blue Lagoon" image="dress/1170_Dress_Rocker.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1171" name="Peach Fuz" image="dress/1171_Dress_Rocker.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1172" name="Tapestry Circles" image="dress/1172_Dress_Rocker.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1173" name="Feather Flapper" image="dress/1173_Dress_Rocker.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" /> -->
+			<hww-config:clothing-item id="1174" name="United Colors" image="dress/1174_Dress_Rocker.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1175" name="Night Sky" image="dress/1175_Dress_Rocker.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1205" name="Tie Dye" image="premium/SAN-FRA2_dress.png" gameBucks="0" diamonds="50" stars="3" points="95" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+<!-- 			<hww-config:clothing-item id="1204" name="Peace and Love" image="premium/SAN-FRA_dress.png" gameBucks="0" diamonds="60" stars="3" points="99" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Top">
+			<hww-config:clothing-item id="1176" name="Silver Zip" image="shirt/1176_Shirt_Rocker.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1177" name="Sapphire" image="shirt/1177_Shirt_Rocker.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1178" name="Silver Heart" image="shirt/1178_Shirt_Rocker.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1179" name="Girl Power" image="shirt/1179_Shirt_Rocker.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1180" name="Mesh" image="shirt/1180_Shirt_Rocker.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1181" name="Skinny Pink" image="shirt/1181_Shirt_Rocker.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1182" name="Black Skull" image="shirt/1182_Shirt_Rocker.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1183" name="Candy Skull" image="jacket/1183_Jacket_Rocker.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1184" name="Zebra Tie" image="jacket/1184_Jacket_Rocker.png" gameBucks="0" diamonds="10" stars="3" points="30" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+			<hww-config:clothing-item id="1185" name="Black Leather" image="jacket/1185_Jacket_Rocker.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Bottom">
+			<hww-config:clothing-item id="1186" name="Rocker" image="pants/1186_Pants_Rocker.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1187" name="Leather Skinny" image="pants/1187_Pants_Rocker.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1188" name="Golden Plaid" image="pants/1188_Pants_Rocker.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1189" name="Ice Hot" image="pants/1189_Pants_Rocker.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1190" name="Purple Haze" image="pants/1190_Pants_Rocker.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1191" name="Torn" image="pants/1191_Pants_Rocker.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1192" name="Daisy Dukes" image="pants/1192_Pants_Rocker.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1193" name="Short Shorts" image="pants/1193_Pants_Rocker.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1194" name="Ash Frills" image="pants/1194_Pants_Rocker.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1195" name="White Stripes" image="pants/1195_Pants_Rocker.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Shoes">
+			<hww-config:clothing-item id="1039" name="Navy Heels" image="shoes/1039_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1044" name="Blue Boots" image="shoes/1044_Shoes_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1049" name="RoyalPurpleGlam" image="shoes/1049_Shoes_All.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1054" name="Equestrian" image="shoes/1054_Shoes_All.png" gameBucks="0" diamonds="12" stars="2" points="36" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1057" name="Moc Martins" image="shoes/1057_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Accessories">
+			<hww-config:clothing-item id="1012" name="Rock Star" image="belt/1012_Belt_All.png" gameBucks="500" diamonds="0" stars="0" points="1" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1013" name="Poison Girl" image="belt/1013_Belt_All.png" gameBucks="2000" diamonds="0" stars="0" points="10" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1035" name="Amethyst Beads" image="necklace/1035_Necklace_All.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1001" name="Young Heart" image="shoulderbag/1001_Shoulderbag_All.png" gameBucks="500" diamonds="0" stars="0" points="1" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1006" name="Soft Gray Leather Tote" image="shoulderbag/1006_Shoulderbag_All.png" gameBucks="0" diamonds="1" stars="0" points="7" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1011" name="Butterscotch Plaid" image="shoulderbag/1011_Shoulderbag_All.png" gameBucks="0" diamonds="12" stars="3" points="36" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1023" name="Fishnet Stockings" image="undies/1023_Undies_All.png" gameBucks="1500" diamonds="0" stars="0" points="3" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+	</hww-config:clothing-catalog>
+
+	<hww-config:clothing-catalog name="Paris" image="fashion-shop/paris-mag.png" travelIndex="2">
+		<hww-config:clothing-category name="Dress">
+			<hww-config:clothing-item id="1346" name="Retro" image="dress/1046_Dress_Retro.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="retro" />
+			<hww-config:clothing-item id="1347" name="Pink Ring" image="dress/1047_Dress_Retro.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1348" name="Green Flora" image="dress/1048_Dress_Retro.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1349" name="Purple Geo" image="dress/1049_Dress_Retro.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1350" name="Pink Flora" image="dress/1050_Dress_Retro.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1351" name="Royal Eve" image="dress/1051_Dress_Retro.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1352" name="Red Dot" image="dress/1052_Dress_Retro.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1353" name="Juniper Belted" image="dress/1053_Dress_Retro.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1354" name="Lipstick and Flowers" image="dress/1054_Dress_Retro.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1355" name="Black Sheep" image="dress/1055_Dress_Retro.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1356" name="Pink and Blue" image="dress/1056_Shirt_Retro.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1357" name="Yellow Roses Apron" image="dress/1057_Shirt_Retro.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1198" name="Aristocrat" image="premium/FRENCH_dress.png" gameBucks="0" diamonds="50" stars="3" points="95" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+<!-- 			<hww-config:clothing-item id="1199" name="French Maid" image="premium/FRENCH2_dress.png" gameBucks="0" diamonds="60" stars="3" points="99" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Top">
+
+<!-- 			<hww-config:clothing-item id="1358" name="Baker Dot" image="shirt/1058_Shirt_Retro.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" /> -->
+			<hww-config:clothing-item id="1359" name="Peppermint" image="shirt/1059_Shirt_Retro.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1360" name="Eggshell" image="shirt/1060_Shirt_Retro.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1361" name="Baby Bell" image="shirt/1061_Shirt_Retro.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1362" name="Cream Blouse" image="shirt/1062_Shirt_Retro.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1363" name="Wool Turtleneck" image="shirt/1063_Shirt_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1364" name="Navy Ruffle Jacket" image="jacket/1064_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1365" name="Smoke Gray Jacket" image="jacket/1065_Jacket_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Bottom">
+			<hww-config:clothing-item id="1366" name="Black Polka" image="pants/1066_Pants_Retro.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1367" name="Peppermint" image="pants/1067_Pants_Retro.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1368" name="Escher Print" image="pants/1068_Pants_Retro.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1369" name="White Capris" image="pants/1069_Pants_Retro.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1370" name="Summer Hems" image="pants/1070_Pants_Retro.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1371" name="Tango Skirt" image="pants/1071_Pants_Retro.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1372" name="Green Belted" image="pants/1072_Pants_Retro.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1373" name="Coffee Wrap" image="pants/1073_Pants_Retro.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1374" name="Soda Fountain Skirt" image="pants/1074_Pants_Retro.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1375" name="Black Capris" image="pants/1075_Pants_Retro.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Shoes">
+			<hww-config:clothing-item id="1040" name="Dark Wine Pumps" image="shoes/1040_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1045" name="Black and White" image="shoes/1045_Shoes_All.png" gameBucks="0" diamonds="3" stars="1" points="12" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1051" name="Red Ruffle" image="shoes/1051_Shoes_All.png" gameBucks="0" diamonds="8" stars="1" points="25" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1055" name="BrownRidingBoots" image="shoes/1055_Shoes_All.png" gameBucks="0" diamonds="14" stars="2" points="42" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Accessories">
+			<hww-config:clothing-item id="1017" name="Glitter Leather" image="belt/1017_Belt_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1019" name="Cowgirl" image="belt/1019_Belt_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1031" name="Rose Gold Chain" image="necklace/1031_Necklace_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1036" name="Classic Pearls" image="necklace/1036_Necklace_All.png" gameBucks="0" diamonds="15" stars="3" points="45" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1002" name="Evening Black Clutch" image="shoulderbag/1002_Shoulderbag_All.png" gameBucks="1000" diamonds="0" stars="0" points="2" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1007" name="Pink Alligator" image="shoulderbag/1007_Shoulderbag_All.png" gameBucks="0" diamonds="3" stars="1" points="12" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1022" name="Vintage Nylons" image="undies/1022_Undies_All.png" gameBucks="1000" diamonds="0" stars="0" points="2" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1027" name="Festive Green Leggings" image="undies/1027_Undies_All.png" gameBucks="2500" diamonds="0" stars="0" points="12" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1029" name="Chocolate Brown Leggings" image="undies/1029_Undies_All.png" gameBucks="0" diamonds="12" stars="3" points="36" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+	</hww-config:clothing-catalog>
+
+	<hww-config:clothing-catalog name="Buenos Aires" image="fashion-shop/b-aires-mag.png" travelIndex="3">
+		<hww-config:clothing-category name="Dress">
+			<hww-config:clothing-item id="1137" name="Princess Gown" image="dress/1137_Dress_Celeb.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1138" name="Little Black Satin Dress" image="dress/1138_Dress_Celeb.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1139" name="Peach Lacey Flirt Dress" image="dress/1139_Dress_Celeb.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1140" name="Black Silk Mini Dress" image="dress/1140_Dress_Celeb.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1141" name="Leopard Tunic" image="dress/1141_Dress_Celeb.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1142" name="Soft Gray Dress" image="dress/1142_Dress_Celeb.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1143" name="HWW Designer Dress" image="dress/1143_Dress_Celeb.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1144" name="Angel Gown" image="dress/1144_Dress_Celeb.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1145" name="Yellow Roses SunDress" image="dress/1145_Dress_Celeb.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1146" name="Silk Petals Gown" image="dress/1146_Dress_Celeb.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1147" name="Red Carpet" image="dress/1147_Dress_Celeb.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1196" name="Tango Night" image="premium/BAires_dress.png" gameBucks="0" diamonds="50" stars="3" points="95" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+<!-- 			<hww-config:clothing-item id="1197" name="Cheerleader" image="premium/BAires2pom2_dress.png" gameBucks="0" diamonds="60" stars="3" points="99" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Top">
+			<hww-config:clothing-item id="1148" name="Peach Cashmere" image="shirt/1148_Shirt_Celeb.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1149" name="Black Silk Tube Shirt" image="shirt/1149_Shirt_Celeb.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1150" name="Red Satin Tunic" image="shirt/1150_Shirt_Celeb.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1151" name="Angel Wings Blouse" image="shirt/1151_Shirt_Celeb.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1152" name="Silver Sparkle Sweater" image="shirt/1152_Shirt_Celeb.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1153" name="Silk Halter Shirt" image="shirt/1153_Shirt_Celeb.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1154" name="Lacy Collar Shirt" image="shirt/1154_Shirt_Celeb.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1155" name="Black Lace Corset" image="jacket/1155_Jacket_Celeb.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+			<hww-config:clothing-item id="1156" name="Jean Jacket with Lace" image="jacket/1156_Jacket_Celeb.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Bottom">
+			<hww-config:clothing-item id="1157" name="Linen Skirt" image="pants/1157_Pants_Celeb.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1158" name="Designer Ripped" image="pants/1158_Pants_Celeb.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1159" name="Princess Gauze" image="pants/1159_Pants_Celeb.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1160" name="Red Carpet Pleats" image="pants/1160_Pants_Celeb.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1161" name="Designer Stretch Jeans" image="pants/1161_Pants_Celeb.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1162" name="Leopard Wrap" image="pants/1162_Pants_Celeb.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1163" name="Plush Super-Mini" image="pants/1163_Pants_Celeb.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1164" name="Full-lenth Designer Print" image="pants/1164_Pants_Celeb.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1165" name="Mocha Wrap Skirt" image="pants/1165_Pants_Celeb.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Shoes">
+			<hww-config:clothing-item id="1042" name="Silver Heels" image="shoes/1042_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1047" name="GoldenGlitz" image="shoes/1047_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1052" name="SantanaBoots" image="shoes/1052_Shoes_All.png" gameBucks="0" diamonds="9" stars="2" points="27" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1061" name="HWW_Designer" image="shoes/1061_Shoes_All.png" gameBucks="0" diamonds="35" stars="3" points="85" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1062" name="Club Flair" image="shoes/1062_Shoes_All.png" gameBucks="0" diamonds="40" stars="3" points="90" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Accessories">
+			<hww-config:clothing-item id="1015" name="Silver Weave" image="belt/1015_Belt_All.png" gameBucks="3500" diamonds="0" stars="0" points="17" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1021" name="HWW Designer" image="belt/1021_Belt_All.png" gameBucks="0" diamonds="15" stars="3" points="45" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1033" name="Coral Beads" image="necklace/1033_Necklace_All.png" gameBucks="0" diamonds="3" stars="1" points="12" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1038" name="Star Sapphire Jewels" image="necklace/1038_Necklace_All.png" gameBucks="0" diamonds="35" stars="3" points="85" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1004" name="Passion Red Leather Tote" image="shoulderbag/1004_Shoulderbag_All.png" gameBucks="0" diamonds="1" stars="0" points="7" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1009" name="Mini Zebra" image="shoulderbag/1009_Shoulderbag_All.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1025" name="Empire Tights" image="undies/1025_Undies_All.png" gameBucks="0" diamonds="12" stars="3" points="36" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1026" name="Rhinestone Leggings" image="undies/1026_Undies_All.png" gameBucks="2000" diamonds="0" stars="0" points="10" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+	</hww-config:clothing-catalog>
+
+	<hww-config:clothing-catalog name="Tokyo" image="fashion-shop/tokyo-mag.png" travelIndex="4">
+		<hww-config:clothing-category name="Dress">
+			<hww-config:clothing-item id="1106" name="Misty Dots" image="dress/1106_Dress_Business.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1107" name="Black and White Casual" image="dress/1107_Dress_Business.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1108" name="Soft Cotton Stripes" image="dress/1108_Dress_Business.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1109" name="Sunrise Dress" image="dress/1109_Dress_Business.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1110" name="Bahama Swirl" image="dress/1110_Dress_Business.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1111" name="Silk Cocktail Mini" image="dress/1111_Dress_Business.png" gameBucks="2000" diamonds="0" stars="0" points="12" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1112" name="Swirl Evening Dress" image="dress/1112_Dress_Business.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1113" name="Tropical Fun" image="dress/1113_Dress_Business.png" gameBucks="3000" diamonds="0" stars="0" points="17" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1114" name="Navy Flirt" image="dress/1114_Dress_Business.png" gameBucks="4000" diamonds="0" stars="0" points="22" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1115" name="Velvet Stretch" image="dress/1115_Dress_Business.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Dress" element="dress" premium="0" animation="1" sleeves="bare" />
+<!-- 			<hww-config:clothing-item id="1201" name="School Girl" image="premium/JAPAN2_dress.png" gameBucks="0" diamonds="50" stars="3" points="95" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+<!-- 			<hww-config:clothing-item id="1200" name="Kimono" image="premium/JAPAN_dress.png" gameBucks="0" diamonds="60" stars="3" points="99" type="PremiumDress" element="dressPremium" premium="1" animation="0" sleeves="bare" /> -->
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Top">
+			<hww-config:clothing-item id="1116" name="Cornflower Blouse" image="shirt/1116_Shirt_Business.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1117" name="Magenta Button-Up" image="shirt/1117_Shirt_Business.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1118" name="French Gray Shirt" image="shirt/1118_Shirt_Business.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1119" name="Designer Tunic" image="shirt/1119_Shirt_Business.png" gameBucks="0" diamonds="10" stars="1" points="30" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1120" name="Silk Pattern Blouse" image="shirt/1120_Shirt_Business.png" gameBucks="0" diamonds="25" stars="3" points="75" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1121" name="Stretch Turtleneck" image="shirt/1121_Shirt_Business.png" gameBucks="0" diamonds="15" stars="1" points="45" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1122" name="Lemon Twist" image="shirt/1122_Shirt_Business.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shirt" element="shirt" premium="0" animation="1" sleeves="bare" />
+			<hww-config:clothing-item id="1123" name="Gray Suit Jacket" image="jacket/1123_Jacket_Business.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+			<hww-config:clothing-item id="1124" name="Gray Suit Button Up" image="jacket/1124_Jacket_Business.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Jacket" element="jacket" premium="0" animation="1" sleeves="business" />
+			<hww-config:clothing-item id="1125" name="Navy Suit Jacket" image="jacket/1125_Jacket_Business.png" gameBucks="0" diamonds="7" stars="2" points="22" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+			<hww-config:clothing-item id="1126" name="Navy Tunic Jacket" image="jacket/1126_Jacket_Business.png" gameBucks="0" diamonds="10" stars="3" points="30" type="Jacket" element="jacket" premium="0" animation="1" sleeves="rocker" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Bottom">
+			<hww-config:clothing-item id="1127" name="Gray Suit Pants" image="pants/1127_Pants_Business.png" gameBucks="1000" diamonds="0" stars="0" points="3" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+ 			<hww-config:clothing-item id="1128" name="Navy Suit Pants" image="pants/1128_Pants_Business.png" gameBucks="2000" diamonds="0" stars="0" points="11" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1129" name="Navy Suit Skirt Long" image="pants/1129_Pants_Business.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1130" name="Navy Suit Skirt" image="pants/1130_Pants_Business.png" gameBucks="3000" diamonds="0" stars="0" points="16" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1131" name="Pinstrip Gray Suit Skirt" image="pants/1131_Pants_Business.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1132" name="Gray Suit Skirt" image="pants/1132_Pants_Business.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1133" name="Linen Business Miniskirt" image="pants/1133_Pants_Business.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1134" name="Pink Stretch Skirt" image="pants/1134_Pants_Business.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1135" name="Sage Linen Skirt" image="pants/1135_Pants_Business.png" gameBucks="0" diamonds="20" stars="3" points="60" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1136" name="Pinstripe Gray Trousers" image="pants/1136_Pants_Business.png" gameBucks="0" diamonds="15" stars="2" points="45" type="Pants" element="pants" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Shoes">
+			<hww-config:clothing-item id="1043" name="Black Pumps" image="shoes/1043_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1048" name="GoldBuckleBoots" image="shoes/1048_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1053" name="GreenBuckle" image="shoes/1053_Shoes_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1058" name="Red Gator" image="shoes/1058_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+
+		<hww-config:clothing-category name="Accessories">
+			<hww-config:clothing-item id="1016" name="Leather Weave" image="belt/1016_Belt_All.png" gameBucks="3700" diamonds="0" stars="0" points="18" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1018" name="Pink Alligator" image="belt/1018_Belt_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Belt" element="belt" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1034" name="Simple Heart" image="necklace/1034_Necklace_All.png" gameBucks="0" diamonds="5" stars="2" points="19" type="Necklaces" element="necklace" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1005" name="Teal Leather Tote" image="shoulderbag/1005_Shoulderbag_All.png" gameBucks="0" diamonds="1" stars="0" points="7" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1010" name="HWW Designer" image="shoulderbag/1010_Shoulderbag_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Shoulderbag" element="shoulderBag" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1030" name="Classic Tennis Socks" image="undies/1030_Undies_All.png" gameBucks="0" diamonds="13" stars="3" points="39" type="Undies" element="undies" premium="0" animation="ignore" sleeves="ignore" />
+		</hww-config:clothing-category>
+	</hww-config:clothing-catalog>
+</hww-config:clothing-items>

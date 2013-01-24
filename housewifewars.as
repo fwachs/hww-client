@@ -25,6 +25,7 @@ import controllers.main_controller
 import models.wife
 
 //import framework.timer
+import models.mission
 import models.furniture
 import models.house
 import models.husband
@@ -36,6 +37,7 @@ import models.realestate
 import models.mystery_item
 import models.shop
 import models.achievement
+import models.clothing_item
 
 class HousewifeWars extends Game
 {
@@ -50,6 +52,7 @@ class HousewifeWars extends Game
 	var mysteryItems;
 	var gifts = null;
 	var realestate;
+	var unlockedAchievements;
 	var timersMap;
 	var furnitures = null;
 	var furnitureListing;
@@ -58,6 +61,9 @@ class HousewifeWars extends Game
     var furnitureCategories = null;
     var shop = null;
     var achievements;
+    var purchasedClothingItems;
+    var clothingItems = null;
+    var missions = null;
 
 	public function HousewifeWars()
 	{
@@ -82,13 +88,17 @@ class HousewifeWars extends Game
 		this.milesEarnedTimer = new earnMilesTimer();
 		this.passport = new Passport();
 		this.realestate = new Realestate();
+		this.purchasedClothingItems = new PurchasedClothingItems();
 		this.loadCities();
+		this.loadPlayerAchievements();
 		this.loadMysteryItems();
 		this.loadGifts();
 		this.loadHusbandMessages();
 		this.loadSounds();
 		this.house.loadFurniture();
 		this.loadAchievements();
+		this.loadClothingItems();
+		this.loadMissions();
 		
 		var hud = new HUDScreen();
 		hud.configFile = "screen-cfgs/hud-screen-cfg.xml";
@@ -96,7 +106,7 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
-
+		this.checkForUnlockedAchievements();
 		/*
 		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
         var ret = Game.currentGame.wallet.collect(freeMoney);
@@ -105,13 +115,12 @@ class HousewifeWars extends Game
         var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
         ret = Game.currentGame.wallet.collect(freeGB);
         */
-
 		if(wife.firstPlay == 1)
 		{
 			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
-			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(10, "Diamonds");
+			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(15, "Diamonds");
 			returnValue = Game.currentGame.wallet.collect(startingDiamonds);
 
 			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000, "Miles");
@@ -137,6 +146,30 @@ class HousewifeWars extends Game
 		Game.pushScreen(screen);
 
         c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
+	}
+	
+	public function checkForUnlockedAchievements()
+	{
+	    this.wife.checkAchievements();
+	    this.hubby.checkAchievements();
+	    this.house.checkAchievements();
+	    this.passport.checkAchievements();
+		
+		ppy_listachievements(syncPapayaAccountAchievements, null);
+	}
+	
+	public function syncPapayaAccountAchievements(id, ret, content, param)
+	{
+		var achievementList = content.get("data");
+		trace(str(achievementList));
+		
+		for(var i = 0; i < len(achievementList); ++i) {
+			var unlocked =  achievementList[i].get("unlock");
+			
+			if(unlocked == 1) {
+				unlockAchievement(achievementList[i].get("title"));
+			}
+		}
 	}
 	
 	public function updateServer () {
@@ -223,6 +256,13 @@ class HousewifeWars extends Game
 		return cities;
 	}
 
+	public function getAchievementByName (Name) {
+	    if (this.achievements == null) {
+	        this.loadAchievements();
+	    }
+	    return this.achievements.get(Name);
+	}
+
 	public function loadAchievements()
 	{
 		var xmldict = parsexml("game-config/ppy_achievements.xml", 1);
@@ -242,18 +282,22 @@ class HousewifeWars extends Game
 
 	public function unlockAchievement(Name)
 	{
-	    var achievement = Game.sharedGame().achievements.get(Name);
+	    
+	    var achievement = Game.sharedGame().getAchievementByName(Name);
 	    var achievementID;
 	    
 	    // check if we are using an Android device
 	    if(getmodel() == 6) {
 	        achievementID = achievement.androidID;
+	        this.unlockedAchievements[achievementID - 2526] = 1;
 	    }
 	    else {
 	        achievementID = achievement.iosID;
+	        this.unlockedAchievements[achievementID - 2329] = 1;
 	    }
 	    
 	    ppy_unlockachievement(achievementID, null);
+	    this.saveAchievements();
 	}
 
 	public function loadGifts()
@@ -310,6 +354,7 @@ class HousewifeWars extends Game
 		this.saveWallet();
 		this.saveRealestate();
 		this.passport.save();
+		this.saveAchievements();
 	}
 
 	public function saveHusband()
@@ -330,6 +375,51 @@ class HousewifeWars extends Game
 	public function saveRealestate()
 	{
 		this.realestate.save();
+	}
+	
+	public function loadPlayerAchievements()
+	{
+	   var papayaUserId = Game.getPapayaUserId();
+	   var achievementMap = Game.getDatabase().get("achievements" + Game.getPapayaUserId());
+	   trace("### HWW ### - Fetched Achievements from DB: ", str(achievementMap));
+
+	   if (achievementMap == null)
+	   {
+	       this.unlockedAchievements = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+	       this.checkForUnlockedAchievements();
+
+	       return;
+	   }
+
+	   this.unlockedAchievements = achievementMap.get("propertyListing");
+	}
+
+	public function loadAchievementsFromJSON(achievementMap)
+	{
+	   this.unlockedAchievements = achievementMap.get("unlockedAchievements");
+	}
+
+	public function saveAchievements()
+	{
+		if (this.unlockedAchievements == null) {
+		       this.unlockedAchievements = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		       this.checkForUnlockedAchievements();
+		   }
+		
+	   var papayaUserId = Game.getPapayaUserId();
+	   var serializedAchievements = this.serializeAchievements();
+	   trace("### HWW ### - Saving Achievements:", str(serializedAchievements));
+	   Game.getDatabase().put("achievements" + Game.getPapayaUserId(), serializedAchievements);
+	}
+
+	public function serializeAchievements()
+	{
+	   var papayaUserId = Game.getPapayaUserId();
+	   var achievementsArray = [];
+	   achievementsArray.append(["id", papayaUserId]);
+	   achievementsArray.append(["unlockedAchievements", unlockedAchievements]);
+
+	   return dict(achievementsArray);
 	}
 
 	public function updateLeaderboards()
@@ -387,6 +477,90 @@ class HousewifeWars extends Game
 		return categories;
 	}
 
+	var clothingCatalogs;
+
+	public function getClothingItemById(clothingItemId) {
+	    if (this.clothingItems == null) { 
+	        this.loadClothingItems();
+	    }
+	    return this.clothingItems.get(clothingItemId);
+	}
+
+	public function loadMissions () {
+	    var missions = new Array();
+	    var xmldict = parsexml("game-config/missions.xml", 1);
+	    if (xmldict == null) {
+	        return;
+	    }
+	    var xmlMissions = xmldict.get("hww-config:missions").get("#children");
+	    for(var i = 0; i < len(xmlMissions); i++) {
+	        var xmlMission = xmlMissions[i].get("hww-config:mission");
+            var missionAttrs = xmlMission.get("#attributes");
+            var mission = new Mission(missionAttrs.get("id"), missionAttrs.get("name"), missionAttrs.get("type"), 
+                    int(missionAttrs.get("ssp")), int(missionAttrs.get("gameBucks")), int(missionAttrs.get("diamonds")), missionAttrs.get("image"));
+
+            var xmlMissionTasks = xmlMission.get("#children");
+            for (var k = 0; k < len(xmlMissionTasks); k++) {
+                var xmlMissionTask = xmlMissionTasks[k].get("hww-config:task");
+                var missionTaskAttrs = xmlMissionTask.get("#attributes");
+                var missionTask = null;
+                if (mission.type == "furniture" || mission.type == "purchase") {
+                    missionTask = new MissionTask(missionTaskAttrs.get("itemId"), missionTaskAttrs.get("name"), int(missionTaskAttrs.get("amount")));
+                } else {
+                    missionTask = new RemodelMissionTask(missionTaskAttrs.get("name"), int(missionTaskAttrs.get("level")));
+                }
+                mission.addTask(missionTask);
+            }
+            missions.append(mission);
+	    }
+	    this.missions = missions;
+	}
+
+	public function getMission (missionId) {
+	    return this.missions[missionId-1];
+	}
+
+	public function loadClothingItems()
+    {
+        this.clothingItems = dict();
+        var catalogs = dict();
+        var xmldict = parsexml("game-config/clothing-items.xml", 1);
+        var xmlClothingItems = xmldict.get("hww-config:clothing-items").get("#children");      
+                
+        for(var i = 0; i < len(xmlClothingItems); i++) {
+            var xmlCatalog = xmlClothingItems[i].get("hww-config:clothing-catalog");
+            var catalogAttrs = xmlCatalog.get("#attributes");
+            
+            var catalog = new ClothingCatalog(catalogAttrs.get("name"), catalogAttrs.get("image"), int(catalogAttrs.get("travelIndex")));
+
+            var xmlCategories = xmlCatalog.get("#children");
+            for(var j = 0; j < len(xmlCategories); j++) {
+                var xmlCat = xmlCategories[j].get("hww-config:clothing-category");
+                var catAttrs = xmlCat.get("#attributes");
+                var category = new ClothingCategory(catAttrs.get("name"));
+
+                var xmlClothingItemChildren = xmlCat.get("#children");
+                for (var k = 0; k < len(xmlClothingItemChildren); k++) {
+                    var xmlClothingItem = xmlClothingItemChildren[k].get("hww-config:clothing-item");
+                    var clothingAttrs = xmlClothingItem.get("#attributes");
+                    var clothingItem = new ClothingItem(clothingAttrs.get("id"), clothingAttrs.get("name"), clothingAttrs.get("image"),
+                         int(clothingAttrs.get("gameBucks")), int(clothingAttrs.get("diamonds")), int(clothingAttrs.get("stars")),
+                         int(clothingAttrs.get("points")), clothingAttrs.get("type"), clothingAttrs.get("element"), clothingAttrs.get("sleeves"));
+                    clothingItems.update(clothingItem.id, clothingItem);
+                    category.addClothingItem(clothingItem);
+                }
+                catalog.addCategory(category);
+            }
+            catalogs.update(catalog.name, catalog);
+        }
+
+        this.clothingCatalogs = catalogs;
+    }
+
+	public function getCatalog(name) {
+	    return this.clothingCatalogs.get(name);
+	}
+
     public function loadHusbandMessages()
     {
         this.husbandMainMenuScreenMessages = new Array();
@@ -433,6 +607,9 @@ class earnMilesTimer extends Timer
 	
 	override public function tick()
 	{
+	    var wife = Game.sharedGame().wife;
+	    var ssp = wife.calculateFashionPoints();
+	    wife.incSocialStatusPoints(ssp);
 		var milesEarned = Game.currentGame.wallet.moneyForCurrency(100, "Miles");
 		var ret = Game.currentGame.wallet.collect(milesEarned);
 	}

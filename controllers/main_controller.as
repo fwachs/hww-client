@@ -24,6 +24,7 @@ import screens.gift_others_prompt_screen
 import screens.receive_gift_screen
 import screens.mystery_items_screen
 import screens.message_box_screen
+import screens.missions_screen
 
 
 import controllers.house_controller
@@ -153,7 +154,11 @@ class MainController extends ScreenController
 
             var url = "http://itunes.apple.com/us/app/housewife-wars/id508200796?ls=1&mt=8";
             if (getmodel() == 6) {
+<<<<<<< HEAD
                 url = "https://play.google.com/store/apps/details?id=com.twoclams.hww.android.live";
+=======
+                url = "https://play.google.com/store/apps/details?id=com.twoclams.hww.android.dx.live";
+>>>>>>> origin/develop
             }
             Game.sharedGame().rateReward();
             openUrl(url);
@@ -228,6 +233,17 @@ class MainController extends ScreenController
         else if(event.name == "inviteFriend") {
         	this.inviteFriend(event.argument);
         }
+<<<<<<< HEAD
+=======
+        else if(event.name == "showTutorialHelp") {
+        	Game.hideBanner();
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(1);
+        }
+        else if(event.name == "hideTutorialHelp") {
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
+        	Game.showBanner(1, 1);
+        }
+>>>>>>> origin/develop
     }
 
     public function openGift()

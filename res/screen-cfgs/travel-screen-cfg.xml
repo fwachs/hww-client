@@ -45,6 +45,7 @@
 			</screen:element>
 		</screen:element>
 		
+		<screen:element name="tutorialHelpButton" resource="main-menu/help-icon.png" left="48" top="85" ontap="showTutorialHelp" z-index="100"/>
 		<screen:element name="backbutton" resource="travel-screen/back-button.png" left="1020" top="688" ontap="goback"/>
 		
 		<screen:element name="travelPortalFrame" resource="" left="0" top="0" visible="NO">
@@ -53,6 +54,11 @@
 			<screen:element name="loadingframe" resource="travel-portal/loading-frame.png" left="0" top="730"/>
 			<screen:element name="plane" resource="travel-portal/plane.png" left="0" top="720"/>
 		</screen:element>
+		
+		<screen:element name="tutorialPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing" z-index="99999999">
+        	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/travel-tutorial.png" left="0" top="0" ontap="doNothing"/>
+        	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="905" top="623" ontap="hideTutorialHelp"/>
+    	</screen:element>
 
 	</screen:elements>
 </screen:config>

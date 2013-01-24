@@ -167,6 +167,14 @@ class TravelController extends ScreenController
         }
         else if(event.name == "doNothing") {
         }
+        else if(event.name == "showTutorialHelp") {
+        	Game.hideBanner();
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(1);
+        }
+        else if(event.name == "hideTutorialHelp") {
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
+        	Game.showBanner(1, 0);
+        }
     }
 
     public function getCostTest(value)
@@ -261,7 +269,7 @@ class TravelController extends ScreenController
         //ppy_postnewsfeed(Game.sharedGame().wife.name + " has traveled to " + location + ".", "http://www.2clams.com", null);
 
         Game.sharedGame().passport.save();
-        Game.shardGame().saveWife();
+        Game.sharedGame().saveWife();
 
         this.screen.getElement("plane").getSprite().addaction(moveby(Game.translateX(5800), Game.translateX(1300),0));
         c_invoke(this.showGiftShopScreen, 5800, null);

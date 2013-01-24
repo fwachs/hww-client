@@ -177,17 +177,30 @@ class House
     }
     
     public function nextRemodel()
-    {               
+    {
         if(this.getLevel() + 1 > len(this.remodels)) return null;
 
-        var remodel = this.remodels[this.getLevel() + 1];   
+        var remodel = this.remodels[this.getLevel() + 1];
         if(remodel.unlockLevel <= Game.sharedGame().hubby.careerLevel) {
             return remodel;
         }
-        
         return null;
     }
-    
+
+    public function getNextRemodelLevel() {
+        trace("remodels: ", str(this.remodels));
+        trace("hubby level: ", str(Game.sharedGame().hubby.careerLevel));
+
+        for (var i=0;i< len(this.remodels); i++) {
+            var remodel = this.remodels[i];
+            if (Game.sharedGame().hubby.careerLevel < remodel.unlockLevel) {
+                trace("remodel.unlockLevel ", str(remodel.unlockLevel));
+                return remodel.unlockLevel;
+            }
+        }
+        return 80;
+    }
+
     public function remodel()
     {
         var remodel = this.nextRemodel();       
@@ -201,11 +214,11 @@ class House
         
     public function checkAchievements()
     {
-        if(this.level == 2)
+        if(this.level >= 2)
             Game.sharedGame().unlockAchievement("DIY");
-        if(this.level == 5)
+        if(this.level >= 5)
             Game.sharedGame().unlockAchievement("Interior Designer");
-        if(this.level == 10)
+        if(this.level >= 10)
             Game.sharedGame().unlockAchievement("Real Estate Mogul");
     }
 
@@ -295,7 +308,23 @@ class House
             this.blueprint.update(tileattrs.get("row") + "_" + tileattrs.get("col"), tileattrs.get("asset"));
         }       
     }
-    
+
+    public function containsFurniture(furnitureItem, amount) {
+        this.loadFurniture();
+        var furnitureArray = this.furniture.values();
+        var count = 0;
+        for (var i=0; i<len(furnitureArray); i++) {
+            var furniture = furnitureArray[i];
+            if (furniture.furnitureType.id == furnitureItem.id) {
+                count ++;
+                if (count >= amount) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
+
     public function loadMap()
     {
         var xmldict = parsexml("game-config/house_map.xml", 1);
@@ -559,24 +588,54 @@ class House
 
     public function pointsIncrement()
     {       
-        var keys = new Array();
+    	var furniturePoints = calculateFurniturePlacedPoints();
+    	var customTilePoints = calculateCustomTilesPoints();
+    	
+    	var totalPoints = furniturePoints + customTilePoints;
+    	
+    	if(totalPoints > 0) {
+    		return totalPoints;
+    	}
+    	else {
+    		// receive at least 1 point
+            return 1;
+    	}
+    }
+    
+    public function calculateFurniturePlacedPoints()
+    {
+    	var keys = new Array();
         keys = this.furniture.keys();
         var length = len(keys);
         
-        if(length != 0) {
-            var result = 0;
-            
-            for(var count = 0; count < length; ++count) {
-                var item = this.furniture.get(keys[count]);
-                result += item.furnitureType.points;
-            }
-            
-            trace("### HWW ### - Total house points: " + str(length));
-            return result;
+        var result = 0;
+        
+        for(var count = 0; count < length; ++count) {
+            var item = this.furniture.get(keys[count]);
+            result += item.furnitureType.points;
         }
         
-        // no items placed
-        return 1;
+        trace("### HWW ### - Total furniture points: " + str(result));
+    	
+    	return result;
+    }
+    
+    public function calculateCustomTilesPoints()
+    {
+    	var keys = new Array();
+        keys = this.customTiles.keys();
+        var length = len(keys);
+    	
+        var result = 0;
+        
+        for(var count = 0; count < length; ++count) {
+            var tg = this.customTiles.get(keys[count]);
+            result += tg.furniture.points;
+        }
+        
+        trace("### HWW ### - Total custom tile points: " + str(result));
+    	
+    	return result;
     }
     
     public function addPoints()

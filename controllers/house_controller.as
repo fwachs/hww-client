@@ -74,6 +74,7 @@ class HouseController extends ScreenController implements TimerListener
         }
         else if(event.name == "collectPoints") {
             this.collectPoints();
+            Game.sounds.playSFX("reward");
         }
         else if(event.name == "cleanHouse") {
             Game.sounds.playSFX("cleanHouse");
@@ -119,6 +120,56 @@ class HouseController extends ScreenController implements TimerListener
         }
         else if(event.name == "doNothing") {
         }
+        else if(event.name == "showTutorialHelp") {
+        	Game.hideBanner();
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(1);
+        }
+        else if(event.name == "hideTutorialHelp") {
+        	this.screen.getElement("tutorialPrompt").getSprite().visible(0);
+        	Game.showBanner(1, 0);
+        } 
+        else if (event.name == "displayMissions") {
+            Game.sounds.playSFX("buttonPress");
+            var db = Game.getDatabase();
+            var missionId = db.get("lastMissionId");
+            if (missionId == null) {
+                missionId = 1;
+            }
+            var mission = Game.sharedGame().getMission(missionId);
+            var missionsScreen = new MissionsScreen(mission);
+            missionsScreen.configFile = "screen-cfgs/missions-screen-cfg.xml";
+            this.presentModalScreen(missionsScreen);
+        }
+        else if (event.name == "collectMission") {
+            Game.sounds.playSFX("houseLevelUp");
+            var database = Game.getDatabase();
+            var lastMissionId = database.get("lastMissionId");
+            if (lastMissionId == null) {
+                lastMissionId = 1;
+            }
+            var lastMission = Game.sharedGame().getMission(lastMissionId);
+            // collect
+            var costGB = this.getGameBucks(lastMission.gameBucks);
+            var costD = this.getDiamonds(lastMission.diamonds);
+            Game.sharedGame().wallet.collect(costGB);
+            Game.sharedGame().wallet.collect(costD);
+            var wife = Game.sharedGame().wife;
+            wife.incSocialStatusPoints(lastMission.ssp);
+            wife.save();
+            lastMissionId++;
+            database.put("lastMissionId", lastMissionId);
+            this.dismissModalScreen();
+        }
+    }
+
+    public function getGameBucks(amount)
+    {
+        return Game.sharedGame().wallet.moneyForCurrency(amount, "GameBucks");
+    }
+
+    public function getDiamonds(amount)
+    {
+        return Game.sharedGame().wallet.moneyForCurrency(amount, "Diamonds");
     }
 
     public function promptForRemodel()
