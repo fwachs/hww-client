@@ -329,7 +329,7 @@ class IsometricCanvas extends Scroll
 		this.getSprite().cancelSort(1);
 	}
 	
-	public function startBubbleSort()
+	public function startFastSort()
 	{
 		if(len(this.items) == 0) return;
 		
@@ -349,6 +349,24 @@ class IsometricCanvas extends Scroll
 			item.z = z;
 
 			z++;
+		}
+    }
+	
+	public function startBubbleSort()
+	{
+		IsoCanvasNative.isometricSort(this.items);
+
+		var z = 500000;
+		
+		var parent = this.getSprite();
+		for(var i = 0; i < len(this.items); i++) {
+			var item = this.items[i];
+			var itemSprite = item.getSprite();
+			itemSprite.removefromparent();
+			parent.add(itemSprite, z);
+			item.z = z;
+
+			z--;
 		}
     }
 	
