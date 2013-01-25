@@ -338,7 +338,7 @@ class Husband //implements DBModel
 		
 		updateVisits();
 		updateWorkHours();
-		control.updateWorkStats();
+		//control.updateWorkStats();
 		this.save();		
 	}
 	
@@ -628,7 +628,6 @@ class outToWorkTimer extends Timer
 {
 	public function outToWorkTimer()
 	{
-		trace("### HWW ### - Hubby work hours for timer: " + str(Game.sharedGame().hubby.workHours));
 		super("outToWorkTimer", 1, 1);
 	}
 	

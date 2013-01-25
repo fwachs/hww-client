@@ -8,6 +8,7 @@ Brief Description:
    async helper class
 *****************************************************************************/
 
+	/*
 class Runnable
 {
 	var calls = null;
@@ -51,3 +52,4 @@ class Runnable
 		}
 	}
 }
+	*/

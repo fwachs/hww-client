@@ -46,6 +46,7 @@ class MessageBoxScreen extends Screen
     static var MB_UnlockCatalog = 32;
     static var MB_LockedCatalog = 33;
     static var MB_ClothingValidation = 34;
+    static var MB_OutShoppingTutorial = 35;
 
     var type;
     var argument;

@@ -24,7 +24,7 @@ class OtherPlayerController extends ScreenController
 	{
 		trace("OtherPlayerController screenLoaded!");
 		this.screen.getElement("playerName").setText(this.player.name);
-		Game.sharedGame().getServer().getOtherPlayerProfile(player.papayaUserId, buildOtherPlayerScreen);
+		Game.getServer().getOtherPlayerProfile(player.papayaUserId, buildOtherPlayerScreen);
 	}
 
 	public function buildOtherPlayerScreen(request_id, ret_code, response_content)
@@ -88,7 +88,7 @@ class OtherPlayerController extends ScreenController
 		}
 		else if (event.name == "visitHome") {
 			Game.sounds.playSFX("buttonPress");
-			Game.sharedGame().getServer().getOtherPlayerHouse(this.player.papayaUserId, buildHouseScreen);
+			Game.getServer().getOtherPlayerHouse(this.player.papayaUserId, buildHouseScreen);
 		}
 		else if (event.name == "showGiftOthersScreen") {
 			Game.sounds.playSFX("buttonPress");
@@ -136,9 +136,9 @@ class OtherPlayerController extends ScreenController
 		house.storage = houseStorage;
 		house.furniture = houseFurniture;
 		house.customTiles = houseCustomTiles;
-		house.setSelectedStyle(selectedStyleId);
+		house.defSelectedStyle(selectedStyleId);
 		if (house.selectedStyle == null) {
-		    house.setSelectedStyle("brick-yellow");
+		    house.defSelectedStyle("brick-yellow");
 		}
 		if (level == null) {
 		    level = 1;

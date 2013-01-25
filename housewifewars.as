@@ -64,6 +64,7 @@ class HousewifeWars extends Game
     var purchasedClothingItems;
     var clothingItems = null;
     var missions = null;
+	var clothingCatalogs;
 
 	public function HousewifeWars()
 	{
@@ -74,7 +75,7 @@ class HousewifeWars extends Game
 	{
 		var screen;
 		var controller;
-
+		
 		this.loadGifts();
 
 		this.furnitureCategories = this.getFurnitureCategories();
@@ -106,24 +107,20 @@ class HousewifeWars extends Game
 		Game.setBanner(hud, 1280);
 
 		Buffs.startBuffs();
-		this.checkForUnlockedAchievements();
-		/*
-		var freeMoney = Game.currentGame.wallet.moneyForCurrency(100000, "Diamonds");
-        var ret = Game.currentGame.wallet.collect(freeMoney);
-        var freeMiles = Game.currentGame.wallet.moneyForCurrency(500000, "Miles");
-        ret = Game.currentGame.wallet.collect(freeMiles);
-        var freeGB = Game.currentGame.wallet.moneyForCurrency(100000, "GameBucks");
-        ret = Game.currentGame.wallet.collect(freeGB);
-        */
+
+//		this.checkForUnlockedAchievements();
+
+
 		if(wife.firstPlay == 1)
 		{
-			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000, "GameBucks");
+			var startingGameBucks = Game.currentGame.wallet.moneyForCurrency(1000 * 100, "GameBucks");
 			var returnValue = Game.currentGame.wallet.collect(startingGameBucks);
 			
-			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(15, "Diamonds");
+			var startingDiamonds = Game.currentGame.wallet.moneyForCurrency(10 * 100, "Diamonds");
+
 			returnValue = Game.currentGame.wallet.collect(startingDiamonds);
 
-			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000, "Miles");
+			var startingMiles = Game.currentGame.wallet.moneyForCurrency(20000 * 100, "Miles");
             returnValue = Game.currentGame.wallet.collect(startingMiles);
 			
 			screen = new WifeSelectionScreen();
@@ -145,7 +142,7 @@ class HousewifeWars extends Game
 		this.milesEarnedTimer.start();
 		Game.pushScreen(screen);
 
-        c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
+//        c_addtimer(60000, this.updateLeaderboards, null, 0, -1);
 	}
 	
 	public function checkForUnlockedAchievements()
@@ -318,7 +315,7 @@ class HousewifeWars extends Game
 
 	public function checkForReceivedGifts()
 	{
-		Game.sharedGame().getServer().getGifts(this.saveGiftsCallback);
+		Game.getServer().getGifts(this.saveGiftsCallback);
 	}
 
 	public function saveGiftsCallback(request_id, ret_code, response_content)
@@ -477,8 +474,6 @@ class HousewifeWars extends Game
 		return categories;
 	}
 
-	var clothingCatalogs;
-
 	public function getClothingItemById(clothingItemId) {
 	    if (this.clothingItems == null) { 
 	        this.loadClothingItems();
@@ -612,9 +607,10 @@ class earnMilesTimer extends Timer
 	    wife.incSocialStatusPoints(ssp);
 		var milesEarned = Game.currentGame.wallet.moneyForCurrency(100, "Miles");
 		var ret = Game.currentGame.wallet.collect(milesEarned);
-	}
+	}	
 }
 
+/*
 export("onpause",onpause);
 function onpause()
 {
@@ -635,6 +631,6 @@ function onresume()
 var theGame = new HousewifeWars();
 Game.currentGame = theGame;
 Game.start();
-
+*/
 
 

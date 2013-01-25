@@ -3,7 +3,7 @@
 <screen:config>
 	<screen:elements>
 		<screen:element name="background" resource="wife-selection-screen/wife-selection-screen.png" left="0" top="0"/>
-		
+
 		<screen:element name="spotLight" resource="wife-selection-screen/spot-light.png" left="0" top="0"/>
 
 		<screen:element name="descriptionBox" resource="wife-selection-screen/description-box.png" left="368" top="727"/>
@@ -11,38 +11,40 @@
 
 		<screen:element name="confirmCircle" resource="wife-selection-screen/confirm-circle.png" left="1114" top="684" z-index="999999" ontap="customizeWife"/>
 
-		<screen:element name="wifeTypeBox1" resource="wife-selection-screen/wife-type-highlight.png" left="956" top="214" z-index="999999" ontap="showModern">
-			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/modern-name.png" left="0" top="0"/>
+		<screen:element name="wifeTypeBox1" resource="wife-selection-screen/wife-type-highlight.png" left="956" top="214" z-index="999999">
+			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/modern-name.png" left="0" top="0" ontap="showModern"/>
 		</screen:element>
 		
-		<screen:element name="wifeTypeBox2" resource="wife-selection-screen/wife-type-box.png" left="956" top="306" z-index="999999" ontap="showRocker">
-			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/rocker-name.png" left="0" top="0"/>
+		<screen:element name="wifeTypeBox2" resource="wife-selection-screen/wife-type-box.png" left="956" top="306" z-index="999999">
+			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/rocker-name.png" left="0" top="0" ontap="showRocker"/>
 		</screen:element>
 		
-		<screen:element name="wifeTypeBox3" resource="wife-selection-screen/wife-type-box.png" left="956" top="398" z-index="999999" ontap="showBusiness">
-			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/business-name.png" left="0" top="0"/>
+		<screen:element name="wifeTypeBox3" resource="wife-selection-screen/wife-type-box.png" left="956" top="398" z-index="999999">
+			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/business-name.png" left="0" top="0" ontap="showBusiness"/>
 		</screen:element>
 		
-		<screen:element name="wifeTypeBox4" resource="wife-selection-screen/wife-type-box.png" left="956" top="490" z-index="999999" ontap="showRetro">
-			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/retro-name.png" left="0" top="0"/>
+		<screen:element name="wifeTypeBox4" resource="wife-selection-screen/wife-type-box.png" left="956" top="490" z-index="999999">
+			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/retro-name.png" left="0" top="0" ontap="showRetro"/>
 		</screen:element>
 		
-		<screen:element name="wifeTypeBox5" resource="wife-selection-screen/wife-type-box.png" left="956" top="582" z-index="999999" ontap="showCeleb">
-			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/celeb-name.png" left="0" top="0"/>
+		<screen:element name="wifeTypeBox5" resource="wife-selection-screen/wife-type-box.png" left="956" top="582" z-index="999999">
+			<screen:element name="wifeTypeBox1Text" resource="wife-selection-screen/celeb-name.png" left="0" top="0" ontap="showCeleb"/>
 		</screen:element>
 		
 		<screen:element name="rockerWife" resource="wife-selection-screen/m-WifeRocker-526.png" left="40" top="258"/>
 		<screen:element name="businessWife" resource="wife-selection-screen/m-WifeProf-526.png" left="236" top="296"/>
 		<screen:element name="retroWife" resource="wife-selection-screen/m-WifeRetro-526.png" left="722" top="258"/>
 		<screen:element name="celebWife" resource="wife-selection-screen/m-WifeCeleb-526.png" left="571" top="296"/>
+		<!--
 		<screen:element name="spotLight" resource="wife-selection-screen/spot-light.png" left="0" top="0"/>
+		-->
 		<screen:element name="spotLightOverlay" resource="wife-selection-screen/spot-light-overlay.png" left="0" top="0"/>
 		<screen:element name="modernWife" resource="wife-selection-screen/m-WifeModern-526.png" left="383" top="197"/>
 		
 		<screen:element name="tutorial-step-1" resource="tutorial-icons/overlay75gray.png" left="0" top="0" z-index="99999999" visible="no" ontap="doNothing">
 		    <screen:element name="" resource="tutorial-icons/welcomedescription_text.png" left="96" top="100"/>
 		    <screen:element name="" resource="tutorial-icons/okay.png" left="833" top="556" ontap="nextTutorial"/>
-		</screen:element>	
+		    		</screen:element>	
 	    <screen:element name="tutorial-step-2" resource="tutorial-icons/arrowdown01.png" z-index="99999999" left="1064" top="92" visible="no"/>
 	    <screen:element name="tutorial-step-3" resource="tutorial-icons/arrow01.png" z-index="99999999" left="1010" top="722" visible="no"/>		
 						

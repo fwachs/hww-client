@@ -34,6 +34,7 @@ class NameEnterScreen extends Screen
 			Game.sharedGame().wife.dress(this);
 		}
 		else if(this.isWife == 0) {
+			this.getElement("husband").getSprite().visible(1);
 			this.getElement("husband").getSprite().texture(Game.sharedGame().hubby.getHusbandTexture());
 			this.startHusbandAnimation();
 		}
@@ -64,12 +65,11 @@ class NameEnterScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
-		var vf = v_font(Game.translateFontSize(30), "arial", FONT_NORMAL);
-		this.textInput = v_create(V_INPUT_VIEW, Game.translateX(353), Game.translateY(110), Game.translateX(562), Game.translateY(100)); 
-		this.textInput.attr(ATTR_FONT, vf);
-		this.textInput.attr(ATTR_INPUT_MAX, 10);
-		v_root().addview(this.textInput);
+		
+		this.textInput = new TextField(Game.translateX(20), Game.translateY(70), Game.translateX(562), Game.translateY(100));
+		this.getElement("frame").getSprite().add(this.textInput);
 		this.textInput.text(this.text);
+		
 		if(this.isWife == 0) {
 			this.startHusbandAnimation();
 		}
@@ -81,7 +81,7 @@ class NameEnterScreen extends Screen
 		
 		Game.hideBanner();
 		if (len(this.textInput.text())>=11) {
-		    this.text = substring(this.textInput.text(), 0, 10);
+		    this.text = this.textInput.text().substring(0, 10);
 		} else {
 		    this.text = this.textInput.text();
 		}

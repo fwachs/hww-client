@@ -35,7 +35,9 @@
 		<screen:element name="doctorHubby" resource="husband-selection-screen/m-Husbands-Doctor-536.png" left="0" top="0"/>
 		<screen:element name="bankerHubby" resource="husband-selection-screen/m-Husbands-Bankerv5-536.png" left="722" top="258"/>
 		<screen:element name="athleteHubby" resource="husband-selection-screen/m-Husbands-Sport-536.png" left="571" top="296"/>
+		<!--
 		<screen:element name="spotLight" resource="wife-selection-screen/spot-light.png" left="0" top="0"/>
+		-->
 		<screen:element name="spotLightOverlay" resource="wife-selection-screen/spot-light-overlay.png" left="0" top="0"/>
 		<screen:element name="lawyerHubby" resource="husband-selection-screen/m-Husbands-Lawyer-536.png" left="383" top="197"/>
 		

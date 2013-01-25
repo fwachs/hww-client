@@ -138,7 +138,7 @@ class HusbandScreen extends Screen
 	{
 		Game.showBanner(1,1);
 		
-		if(Game.sharedGame().hubby.isHome == 0) {
+		if(Game.sharedGame().hubby.isHome() == 0) {
 			if (this.getElement("faceAnimation") != null) {
 				this.stopHusbandAnimation();
 				this.getElement("faceAnimation").getSprite().visible(0);

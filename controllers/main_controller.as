@@ -75,7 +75,7 @@ class MainController extends ScreenController
         this.notificationsText.setText("Notifications");
         this.notificationsText.setFont(Game.font.getBoldFont(), Game.translateFontSize(60));
 
-        this.screenUpdateTimer = new mainScreenUpdateTimer(this.checkForGifts);
+        this.screenUpdateTimer = new mainScreenUpdateTimer(this);
         this.screenUpdateTimer.start();
 
         if(Game.audioOn() == 1) {
@@ -361,7 +361,7 @@ class MainController extends ScreenController
 
             var avatarUrl;
             if (avatarVersionId != 0) {
-                avatarUrl = avatar_url(friendUserId, avatarVersionId);
+//                avatarUrl = avatar_url(friendUserId, avatarVersionId);
                 avatarUrl = avatarUrl.replace("&", "&amp;");
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";
@@ -408,10 +408,10 @@ class MainController extends ScreenController
 
     public function inviteFriend(friend)
     {
-    	trace("inviteFriend: ", friend, friend.friendUserId);
+    	//trace("inviteFriend: ", friend, friend.friendUserId);
     	
     	// uncomment for final version
-    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
+//    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
 //    	this.friendInvited(0, 1, 0, friend);
     }
 
@@ -445,17 +445,17 @@ Timers
 
 class mainScreenUpdateTimer extends Timer
 {
-    var updateFunction;
+    var controller;
 
-    public function mainScreenUpdateTimer(functionArg)
+    public function mainScreenUpdateTimer(controller)
     {
         super("mainScreenUpdateTimer", 30, -1);
-        this.updateFunction = functionArg;
+        this.controller = controller;
     }
 
     override public function tick()
     {
         trace("### HWW ### - checking for new gifts!");
-        this.updateFunction();
+        controller.checkForGifts();
     }
 }

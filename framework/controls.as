@@ -39,7 +39,7 @@ class Control
 		var control = null;
 		
 		Control.controlsCount++;
-		trace("Control removed. Controls count: ", Control.controlsCount, ", nodes count: ", sysinfo(24));
+		trace("Control removed. Controls count: ", Control.controlsCount);
 		
 		var className = attrs.get("class");
 //		trace("className: ", className);
@@ -56,7 +56,7 @@ class Control
 			//trace("### HWW ### - newControlFromAttributes", str(attrs));
 			var resource = attrs.get("resource");
 			var highlightFile;
-			if (resource != null && resource != "" && resource.rfind("http") == -1) {
+			if (resource != null && resource != "") {
 				resource = "images/" + resource;
 				
 				var resParts = resource.split(".");
@@ -69,10 +69,12 @@ class Control
 			control.attrs = attrs;
 
 			control.lowlight = resource;
+			/*
 			var handler = c_res_file(highlightFile)
 			if(c_file_exist(handler) == 1) {
 				control.highlight = highlightFile;
 			}
+			*/
 
 			control._sprite.pos(Game.translateX(int(attrs.get("left"))), Game.translateY(int(attrs.get("top"))));
 
@@ -140,7 +142,7 @@ class Control
 		trace("- removeFromParent: ", sprt);
 
 		Control.controlsCount--;
-		trace("Control removed. Controls count: ", Control.controlsCount, ", nodes count: ", sysinfo(24));
+		trace("Control removed. Controls count: ", Control.controlsCount);
 	}
 	
 	public function removeAllChildren()
@@ -153,10 +155,10 @@ class Control
 	public function configureEvents()
 	{
 		if(this.tapEvent != null) {
-			this.attachEvent(this._sprite, "ontouch", null, EVENT_TOUCH);
-			this.attachEvent(this._sprite, "ontouch", null, EVENT_MULTI_TOUCH);
-			this.attachEvent(this._sprite, "onuntouch", null, EVENT_UNTOUCH);
-			this.attachEvent(this._sprite, "onmove", null, EVENT_MOVE);
+			this.attachEvent(this._sprite, "ontouch", "", EVENT_TOUCH);
+			this.attachEvent(this._sprite, "ontouch", "", EVENT_MULTI_TOUCH);
+			this.attachEvent(this._sprite, "onuntouch", "", EVENT_UNTOUCH);
+			this.attachEvent(this._sprite, "onmove", "", EVENT_MOVE);
 		}
 	}
 	
@@ -172,7 +174,7 @@ class Control
 		
 		this.parent = parent;
 
-		this.getSprite().put(this);
+		//this.getSprite().put(this);
 
 		this.configureEvents();	
 	}
@@ -362,7 +364,7 @@ class Control
 			}
 			
 			var worldPos = this.getSprite().node2world(event.x, event.y);
-			this.didMove = event.copy();
+			this.didMove = event.makeCopy();
 			this.didMove.x = worldPos[0];
 			this.didMove.y = worldPos[1];
 		}
@@ -375,12 +377,12 @@ class Control
 				this.getSprite().texture(this.lowlight);
 			}
 			
-			trace("Untouch with distance: ", dist);
-			if(dist < 75) {
+//			trace("Untouch with distance: ", dist);
+//			if(dist < 75) {
 				this.controlTapped();
 				
 				return;
-			}
+//			}
 		}
 		
 		if(this.parent) {
@@ -388,7 +390,7 @@ class Control
 			var newPos = this.parent.world2node(pos[0], pos[1]);
 //			trace("tapEventHandler: ", event.x, event.y, pos, newPos);
 			
-			var newEvent = event.copy();
+			var newEvent = event.makeCopy();
 			newEvent.x = pos[0];
 			newEvent.y = pos[1];
 			
@@ -404,7 +406,7 @@ class Control
 		var pos = event.node.node2world(event.x, event.y);
 		var newPos = this.getSprite().world2node(pos[0], pos[1]);
 		
-		var newEvent = event.copy();
+		var newEvent = event.makeCopy();
 		newEvent.x = pos[0];
 		newEvent.y = pos[1];
 		
@@ -467,12 +469,11 @@ class Scroll extends Control
 		this.container.pos(Game.translateX(left), Game.translateY(top));
 		this.container.clipping(1);
 		this.container.size(this.width, this.height);
-		this.container.add(this._sprite);
 
-		this.attachEvent(this.container, "ontouch", null, EVENT_TOUCH);
-		this.attachEvent(this.container, "ontouch", null, EVENT_MULTI_TOUCH);
-		this.attachEvent(this.container, "onuntouch", null, EVENT_UNTOUCH);
-		this.attachEvent(this.container, "onmove", null, EVENT_MOVE);
+		this.attachEvent(this.container, "ontouch", "", EVENT_TOUCH);
+		this.attachEvent(this.container, "ontouch", "", EVENT_MULTI_TOUCH);
+		this.attachEvent(this.container, "onuntouch", "", EVENT_UNTOUCH);
+		this.attachEvent(this.container, "onmove", "", EVENT_MOVE);
 				
 		this.minZoom = 100;
 		this.maxZoom = 100;
@@ -497,6 +498,7 @@ class Scroll extends Control
 		}
 		
 		parent.add(this.container, zIndex);
+		this.container.add(this._sprite);
 		
 		this.parent = parent;
 
@@ -576,7 +578,14 @@ class Scroll extends Control
 		
 		this._sprite.pos(newX, newY);
 		
+		var size = this.container.size();
+		this.viewPortChanged(-newX, -newY, size[0], size[1]);
+		
 //				this.lastMoved = event;
+	}
+	
+	function viewPortChanged(x, y, width, height)
+	{
 	}
 	
 	function dragEnded(event)

@@ -77,7 +77,7 @@ class HouseSelectionController extends ScreenController
         if(Game.sharedGame().realestate.propertyListing[int(this.showingHouse.fileNumber) - 1] == 1) {
             this.selectedHouse = this.showingHouse;
             this.updateCheckmark();
-            Game.sharedGame().house.setSelectedStyle(this.selectedHouse.houseStyle);
+            Game.sharedGame().house.defSelectedStyle(this.selectedHouse.houseStyle);
         }
     }
 
@@ -102,7 +102,7 @@ class HouseSelectionController extends ScreenController
                 houseSelectionBar.removeAllChildren();
                 this.screen.displayHouses();
 
-                Game.sharedGame().house.setSelectedStyle(this.showingHouse.houseStyle);
+                Game.sharedGame().house.defSelectedStyle(this.showingHouse.houseStyle);
             }
             else {
                 var screen;

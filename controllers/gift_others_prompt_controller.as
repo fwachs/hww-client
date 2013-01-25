@@ -25,7 +25,7 @@ class GiftOthersPromptController extends ScreenController
 	override public function screenLoaded()
 	{
 		trace("controlledScreen screenLoaded!");
-		this.screen.drawGiftsWall(Game.sharedGame().getGifts().values());
+		this.screen.drawGiftsWall(Game.getServer().getGifts().values());
 	}
 
 	override public function eventFired(event)
@@ -53,7 +53,7 @@ class GiftOthersPromptController extends ScreenController
 				trace("### HWW ### sender name: " + Game.sharedGame().wife.name);
 				params.update("id", this.currentGift.id);
 				params.update("papayaUserId", this.player.papayaUserId);
-				Game.sharedGame().getServer().sendGift(params);
+				Game.sharedGame().sendGift(params);
 				
 				ppy_query("send_notification", dict([["message", Game.sharedGame().wife.name + " has sent you a gift."], ["uid", this.player.papayaUserId]]) , null, null);
 				

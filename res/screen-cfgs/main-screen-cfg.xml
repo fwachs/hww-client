@@ -51,7 +51,7 @@
 		    <screen:element name="hairfront" resource="" left="38" top="0"/>
 		</screen:element>
 			
-		<screen:element name="husband" resource="" left="860" top="130" ontap="gotoHusband">
+		<screen:element name="husband" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="860" top="130" ontap="gotoHusband">
 			<screen:element name="faceAnimation" resource="" left="0" top="0" />
 			<screen:element name="chatBubble" resource="main-menu/chat-bubble-2.png" left="-350" top="-75" >
 				<screen:element name="chatText" resource="" left="20" top="30" width="372" text-wrap="yes">#placeholder</screen:element>

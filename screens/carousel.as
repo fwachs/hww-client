@@ -8,35 +8,7 @@ Brief Description:
    
 *****************************************************************************/
 
-function rotateLoop(timer, tick, carousel)
-{
-	trace("rotateLoop: ", timer, tick, carousel);
-	
-	carousel.counter--;
-	
-	for(var i = 0; i < len(carousel.elements); i++) {
-		var e = carousel.elements[i];
-		var element = e[0];
-		var currentAngle = e[1];
-		
-		var x = sin(currentAngle) / 3 + 340;
-		var y = cos(currentAngle) / 20 + 150;
-	
-		var scale = (cos(currentAngle) + 1000) / 6 + 666;
-		var width = carousel.startWidth * scale / 1000;
-		var height = carousel.startHeight * scale / 1000;
-		
-		y += (carousel.startHeight - height);
-		
-		element.size(Game.translateX(width), Game.translateY( height));
-		element.pos(Game.translateX(x), Game.translateY( y));
-		var parent = element.parent();
-		element.removefromparent();
-		parent.add(element, scale);
-				
-		carousel.elements[i][1] = currentAngle + carousel.step * carousel.direction;
-	}
-}
+
 
 class Carousel
 {
@@ -65,6 +37,36 @@ class Carousel
 		else if(type == "hubby") {
 			this.startHeight = 536;
 			this.startWidth = 220;
+		}
+	}
+	
+	public function rotateLoop(timer, tick, arg)
+	{
+		var carousel = this;
+		
+		carousel.counter--;
+		
+		for(var i = 0; i < len(carousel.elements); i++) {
+			var e = carousel.elements[i];
+			var element = e[0];
+			var currentAngle = e[1];
+			
+			var x = sin(currentAngle) / 3 + 340;
+			var y = cos(currentAngle) / 20 + 150;
+		
+			var scale = (cos(currentAngle) + 1000) / 6 + 666;
+			var width = carousel.startWidth * scale / 1000;
+			var height = carousel.startHeight * scale / 1000;
+			
+			y += (carousel.startHeight - height);
+			
+			element.size(Game.translateX(width), Game.translateY( height));
+			element.pos(Game.translateX(x), Game.translateY( y));
+			var parent = element.parent();
+			element.removefromparent();
+			parent.add(element, scale);
+					
+			carousel.elements[i][1] = currentAngle + carousel.step * carousel.direction;
 		}
 	}
 	
@@ -126,6 +128,6 @@ class Carousel
 		
 		this.counter = loops;
 		
-		c_addtimer(40, rotateLoop, this, 0, loops);
+		c_addtimer(40, this.rotateLoop, this, 0, loops);
 	}
 }

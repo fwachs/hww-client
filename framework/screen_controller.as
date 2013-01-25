@@ -68,7 +68,7 @@ class ScreenController
 		}
 		
 		if(event.name == "exitGame") {
-			Game.sharedGame().quit();
+			Game.quit();
 		}
 		else if(event.name == "cancelMB") {
 			var scr = this.modalScreenStack[len(this.modalScreenStack) - 1];
@@ -80,7 +80,7 @@ class ScreenController
 			}
 		}
 		else if(event.name == "okMB") {
-			scr = this.modalScreenStack[len(this.modalScreenStack) - 1];
+			var scr = this.modalScreenStack[len(this.modalScreenStack) - 1];
 			
 			this.dismissModalScreen();
 			
@@ -100,7 +100,7 @@ class ScreenController
 		var handler = this.handlers.get(event.name);
 		trace("processHandler: ", event.name, handler, handlers);
 		if(handler) {
-			handler(event);
+			//handler(event);
 		}
 	}
 	
@@ -130,7 +130,7 @@ class ScreenController
 	
 	public function presentModalScreen(modalScreen)
 	{
- 		this.cancelEvents = 1;
+ 		//this.cancelEvents = 1;
 		
  		if(len(this.modalScreenStack) == 0) {
 			// check if the current screen shows the HUD
@@ -140,7 +140,7 @@ class ScreenController
 			Game.hideBanner();
  		}
 		
-		var newCanvas = Game.scene.addsprite().size(screensize()).pos(0, screensize()[1]);
+		var newCanvas = Game.scene.addsprite().size(screensize()).pos(0, 0); //.pos(0, screensize()[1]);
 		modalScreen.canvas = newCanvas;
 		modalScreen.controller = this;
 		modalScreen.create();
@@ -148,7 +148,7 @@ class ScreenController
 		this.screen.willLoseFocus();
 		this.screen.lostFocus();
 		
-		newCanvas.addaction(sequence(moveto(250, 0, 0), callfunc(this.reactivateEvents)));
+		//newCanvas.addaction(sequence(moveto(250, 0, 0), callfunc(this.reactivateEvents)));
 		modalScreen.willGetFocus();
 		modalScreen.gotFocus();
 		
@@ -165,7 +165,7 @@ class ScreenController
 		var modalScreen = this.modalScreenStack.pop();
 		
 		modalScreen.canvas.addaction(moveto(250, 0, screensize()[1]));
-		modalScreen.willLoosFocus();
+		modalScreen.willLoseFocus();
 		modalScreen.lostFocus();
 		
 		Game.scene.remove(modalScreen.canvas);
@@ -192,8 +192,10 @@ class ScreenController
 	
 	public function keyDown(node, event, param, x, y, points)
 	{
+		/*
 		if(event == EVENT_KEYDOWN && x == KEYCODE_BACK) {
 			this.showMessageBox(MessageBoxScreen.MB_Exit);
 		}
+		*/
 	}
 }

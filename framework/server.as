@@ -45,6 +45,7 @@ class Server
     }
 
     public function synchronizeGame() {
+    	return;
         var params = dict();
         var wife = Game.sharedGame().wife.serialize();
         var husband = Game.sharedGame().hubby.serialize();
@@ -69,7 +70,7 @@ class Server
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
     }
 
-	public function register() {
+	public function doRegister() {
 	    var husband = Game.sharedGame().hubby;
 		var wife = Game.sharedGame().wife;
 	    var couple = dict();
@@ -138,6 +139,7 @@ class Server
 
 	public function getGifts(callback)
 	{
+		return;
 		this.makeRequest("/getGifts", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 

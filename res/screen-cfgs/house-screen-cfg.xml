@@ -3,8 +3,8 @@
 <screen:config>
 	<screen:elements>
 		<screen:element name="background" resource="house-decorator/house-background.png" left="0" top="0" width="1280" height="800" z-index="0"/>
-
-		<screen:element name="toolbarContainer" resource="" left="0" top="0" width="1280" height="800" z-index="100" >		
+	    
+		<screen:element name="toolbarContainer" resource="" left="0" top="0" width="1280" height="800" z-index="1000" >		
 			<screen:element name="collectPoints" resource="house-decorator/SSPIcon01.png" left="640" top="360" visible="no" ontap="collectPoints" z-index="100"/>
 			<screen:element name="cleanHouse" resource="house-decorator/trash-02.png" left="700" top="420" visible="no" ontap="cleanHouse" z-index="100"/>
 	
@@ -15,10 +15,10 @@
             <screen:element name="missionsButton" resource="mission/mission-icon.png" left="80" top="160" ontap="displayMissions" z-index="100"/>		
 		</screen:element>
 
-		<screen:element name="categoryFrame" resource="" left="0" top="800" width="1280" height="1518" z-index="100" ontap="doNothing">
+		<screen:element name="categoryFrame" resource="" left="0" top="800" width="1280" height="1518" z-index="1500" ontap="doNothing">
 			<screen:element name="cancelButton" resource="house-decorator/cancel-button.png" left="1128" top="-50" z-index="100" ontap="hideCategories" visible="no"/>
 
-			<screen:element name="categoryBar" resource="house-decorator/primary-cat-frame.png" left="0" top="0" width="1280" height="185" z-index="50" lock="horizontal">
+			<screen:element name="categoryBar" resource="house-decorator/primary-cat-frame.png" left="0" top="0" width="1280" height="185" lock="horizontal">
 			</screen:element>
 
 			<screen:element name="subCategoryFrame" resource="house-decorator/sub-cat-bar.png" left="0" top="181" width="1280" height="126" lock="horizontal">
@@ -28,7 +28,7 @@
 			</screen:element>
 		</screen:element>
 
-		<screen:element name="storageFrame" resource="" left="0" top="800" width="1280" height="209" z-index="100" ontap="doNothing">
+		<screen:element name="storageFrame" resource="" left="0" top="800" width="1280" height="209" z-index="1500" ontap="doNothing">
 			<screen:element name="cancelStorage" resource="house-decorator/cancel-button.png" left="1128" top="-50" z-index="100" ontap="hideStorage" visible="no"/>
 			
 			<screen:element name="storageScroll" class="Scroll" resource="house-decorator/items-frame.png" left="0" top="0" width="1280" height="209" lock="horizontal" ontap="doNothing">

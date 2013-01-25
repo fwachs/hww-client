@@ -67,26 +67,34 @@ class HouseScreen extends Screen
 
 	public function setWalls()
 	{		
-		this.house.loadCustomTiles();
+		
+		this.house.loadCustomTiles();		
 		
 		this.iso.createTiles();
 
 		this.setBlueprint();	
 		
 		this.iso.controller = this.controller;
-		this.iso.centerOnTile(13, 26);
+		this.iso.screen = this;
 
+		this.setRooms();
+		
+		this.loadFurniture();
+		
+		this.iso.reorganize();
+		
+		this.iso.centerOnTile(13, 26);
+	}
+	
+	public function setRooms()
+	{
 		for(var i = 0; i < len(this.house.rooms); i++) {
 			var room = this.house.rooms[i];
 			
 			for(var j = 0; j < len(room.tiles); j++) {
 				this.setTiles(room.tiles[j]);
 			}
-		}
-		
-		this.loadFurniture();
-		
-		this.iso.reorganize();
+		}		
 	}
 	
 	public function setBlueprint()
@@ -108,10 +116,10 @@ class HouseScreen extends Screen
 				if(t != null) {
 					var asset = this.house.blueprint.get(str(row) + "_" + str(col));
 					if(asset != null) {
-						t.getSprite().texture("images/" + asset);
+						t.setFlatResource("images/" + asset, 1, 1);
 					}
 					else {
-						t.getSprite().texture("images/furniture/blueprint/blue-print-mid-empty.png");
+						t.setFlatResource("images/furniture/blueprint/blue-print-mid-empty.png", 1, 1);
 					}
 				}
 			}
@@ -145,10 +153,12 @@ class HouseScreen extends Screen
 
 		var map = this.getElement("map");
 		
+		/*
 		if(tiles.room.level > this.house.getLevel()) {
 			this.lockTiles(tiles);
 			return;			
 		}
+		*/
 		
 		var customTiles = this.house.customTiles.get(str(tiles.row) + str(tiles.col));		
 		
@@ -197,12 +207,14 @@ class HouseScreen extends Screen
 			}
 		}
 		
-		for(r = 0; r < tiles.height; r++) {
-			for(c = 0; c < tiles.width; c++) {
-				trace("Setting tile: ", tiles.col + c, tiles.row + r);
+		for(var ro = 0; ro < tiles.height; ro++) {
+			for(var co = 0; co < tiles.width; co++) {
+				trace("Setting tile: ", tiles.col + co, tiles.row + ro);
 
-				t = iso.getTile(tiles.col + c, tiles.row + r);
-				t.area = tiles;
+				var to = iso.getTile(tiles.col + co, tiles.row + ro);
+				if(to) {
+					to.area = tiles;
+				}
 			}
 		}
 
@@ -335,6 +347,7 @@ class HouseScreen extends Screen
 			itemParams.update("left", str(left));
 			itemParams.update("name", furniture.name);
 			itemParams.update("resource", furniture.image);
+			/*
 			itemParams.update("gamebucks", furniture.gameBucks);
 			itemParams.update("diamonds", furniture.diamonds);
 			itemParams.update("level", furniture.level);
@@ -348,20 +361,19 @@ class HouseScreen extends Screen
 			if(furniture.stars < 3) {
 				itemParams.update("star_3_full", "no");
 			}
+			*/
 				
 			var template = "FurnitureItem";
 			if(furniture.level > Game.sharedGame().hubby.careerLevel) {
 				template = "LockedFurnitureItem";
 			}
 			
-			c_invoke(this.asyncItemLoad, i * 300, [template, itemParams, furniture]);
+//			c_invoke(this.asyncItemLoad, i * 300, [template, itemParams, furniture]);
 			
-			/*
-			var item = this.controlFromXMLTemplateP(template, itemParams, "furniture-item.xml");
+			var item = this.controlFromXMLTemplate(template, itemParams, "furniture-item.xml");
 			item.tapEvent.argument = furniture;
 
 			furnitureBar.addChild(item);
-			*/
 			
 			left += 200;
 		}

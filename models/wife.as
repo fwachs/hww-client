@@ -512,7 +512,7 @@ class Wife
 		this.save();
 		trace("Increment SSPs after: ", this.socialStatusPoints);
 
-		ppy_updatescore(total);
+		//ppy_updatescore(total);
 		this.checkAchievements();
 	}
 	

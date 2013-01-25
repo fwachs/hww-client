@@ -44,7 +44,7 @@ class Animations
 			return rightArmSequence;
 		}
 
-		var action = animate(6667, "images/Animation/bare_right_arm/bare_right_arm0001.png", "images/Animation/bare_right_arm/bare_right_arm0002.png",
+		rightArmSequence = animate(6667, "images/Animation/bare_right_arm/bare_right_arm0001.png", "images/Animation/bare_right_arm/bare_right_arm0002.png",
 				"images/Animation/bare_right_arm/bare_right_arm0003.png","images/Animation/bare_right_arm/bare_right_arm0004.png",
 				"images/Animation/bare_right_arm/bare_right_arm0005.png","images/Animation/bare_right_arm/bare_right_arm0006.png",
 				"images/Animation/bare_right_arm/bare_right_arm0007.png","images/Animation/bare_right_arm/bare_right_arm0008.png",
@@ -83,9 +83,8 @@ class Animations
 				"images/Animation/bare_right_arm/bare_right_arm0073.png","images/Animation/bare_right_arm/bare_right_arm0074.png",
 				"images/Animation/bare_right_arm/bare_right_arm0075.png","images/Animation/bare_right_arm/bare_right_arm0076.png",
 				"images/Animation/bare_right_arm/bare_right_arm0077.png","images/Animation/bare_right_arm/bare_right_arm0078.png",
-				"images/Animation/bare_right_arm/bare_right_arm0079.png","images/Animation/bare_right_arm/bare_right_arm0080.png");
-
-			var secondAction = animate(6667, "images/Animation/bare_right_arm/bare_right_arm0081.png","images/Animation/bare_right_arm/bare_right_arm0082.png",
+				"images/Animation/bare_right_arm/bare_right_arm0079.png","images/Animation/bare_right_arm/bare_right_arm0080.png",
+				"images/Animation/bare_right_arm/bare_right_arm0081.png","images/Animation/bare_right_arm/bare_right_arm0082.png",
 				"images/Animation/bare_right_arm/bare_right_arm0083.png","images/Animation/bare_right_arm/bare_right_arm0084.png",
 				"images/Animation/bare_right_arm/bare_right_arm0085.png","images/Animation/bare_right_arm/bare_right_arm0086.png",
 				"images/Animation/bare_right_arm/bare_right_arm0087.png","images/Animation/bare_right_arm/bare_right_arm0088.png",
@@ -125,7 +124,6 @@ class Animations
 				"images/Animation/bare_right_arm/bare_right_arm0155.png","images/Animation/bare_right_arm/bare_right_arm0156.png",
 				"images/Animation/bare_right_arm/bare_right_arm0157.png","images/Animation/bare_right_arm/bare_right_arm0158.png",
 				"images/Animation/bare_right_arm/bare_right_arm0159.png","images/Animation/bare_right_arm/bare_right_arm0160.png");
-		rightArmSequence = sequence(action, secondAction);
 		animationsMap.update("rightArmAnimation", rightArmSequence);
 		return rightArmSequence;
 	}
@@ -135,7 +133,7 @@ class Animations
 		if (leftArmSequence != null) {
 			return leftArmSequence;
 		}
-		var action = animate(6667, "images/Animation/bare_left_arm/bare_left_arm0001.png", "images/Animation/bare_left_arm/bare_left_arm0002.png",
+		leftArmSequence = animate(6667, "images/Animation/bare_left_arm/bare_left_arm0001.png", "images/Animation/bare_left_arm/bare_left_arm0002.png",
 				"images/Animation/bare_left_arm/bare_left_arm0003.png","images/Animation/bare_left_arm/bare_left_arm0004.png",
 				"images/Animation/bare_left_arm/bare_left_arm0005.png","images/Animation/bare_left_arm/bare_left_arm0006.png",
 				"images/Animation/bare_left_arm/bare_left_arm0007.png","images/Animation/bare_left_arm/bare_left_arm0008.png",
@@ -174,9 +172,8 @@ class Animations
 				"images/Animation/bare_left_arm/bare_left_arm0073.png","images/Animation/bare_left_arm/bare_left_arm0074.png",
 				"images/Animation/bare_left_arm/bare_left_arm0075.png","images/Animation/bare_left_arm/bare_left_arm0076.png",
 				"images/Animation/bare_left_arm/bare_left_arm0077.png","images/Animation/bare_left_arm/bare_left_arm0078.png",
-				"images/Animation/bare_left_arm/bare_left_arm0079.png","images/Animation/bare_left_arm/bare_left_arm0080.png");
-
-			var secondAction = animate(6667, "images/Animation/bare_left_arm/bare_left_arm0081.png","images/Animation/bare_left_arm/bare_left_arm0082.png",
+				"images/Animation/bare_left_arm/bare_left_arm0079.png","images/Animation/bare_left_arm/bare_left_arm0080.png",
+				"images/Animation/bare_left_arm/bare_left_arm0081.png","images/Animation/bare_left_arm/bare_left_arm0082.png",
 				"images/Animation/bare_left_arm/bare_left_arm0083.png","images/Animation/bare_left_arm/bare_left_arm0084.png",
 				"images/Animation/bare_left_arm/bare_left_arm0085.png","images/Animation/bare_left_arm/bare_left_arm0086.png",
 				"images/Animation/bare_left_arm/bare_left_arm0087.png","images/Animation/bare_left_arm/bare_left_arm0088.png",
@@ -216,7 +213,6 @@ class Animations
 				"images/Animation/bare_left_arm/bare_left_arm0155.png","images/Animation/bare_left_arm/bare_left_arm0156.png",
 				"images/Animation/bare_left_arm/bare_left_arm0157.png","images/Animation/bare_left_arm/bare_left_arm0158.png",
 				"images/Animation/bare_left_arm/bare_left_arm0159.png","images/Animation/bare_left_arm/bare_left_arm0160.png");
-		leftArmSequence = sequence(action, secondAction);
 		animationsMap.update("leftArmAnimation", leftArmSequence); 
 		return leftArmSequence;
 	}
@@ -226,7 +222,7 @@ class Animations
 		if (businessLeftArmSequence != null) {
 			return businessLeftArmSequence;
 		}
-		var action = animate(6667, "images/Animation/business_left_arm/business_left_arm0001.png", "images/Animation/business_left_arm/business_left_arm0002.png",
+		businessLeftArmSequence = animate(6667, "images/Animation/business_left_arm/business_left_arm0001.png", "images/Animation/business_left_arm/business_left_arm0002.png",
 				"images/Animation/business_left_arm/business_left_arm0003.png","images/Animation/business_left_arm/business_left_arm0004.png",
 				"images/Animation/business_left_arm/business_left_arm0005.png","images/Animation/business_left_arm/business_left_arm0006.png",
 				"images/Animation/business_left_arm/business_left_arm0007.png","images/Animation/business_left_arm/business_left_arm0008.png",
@@ -265,8 +261,8 @@ class Animations
 				"images/Animation/business_left_arm/business_left_arm0073.png","images/Animation/business_left_arm/business_left_arm0074.png",
 				"images/Animation/business_left_arm/business_left_arm0075.png","images/Animation/business_left_arm/business_left_arm0076.png",
 				"images/Animation/business_left_arm/business_left_arm0077.png","images/Animation/business_left_arm/business_left_arm0078.png",
-				"images/Animation/business_left_arm/business_left_arm0079.png","images/Animation/business_left_arm/business_left_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/business_left_arm/business_left_arm0081.png","images/Animation/business_left_arm/business_left_arm0082.png",
+				"images/Animation/business_left_arm/business_left_arm0079.png","images/Animation/business_left_arm/business_left_arm0080.png",
+				"images/Animation/business_left_arm/business_left_arm0081.png","images/Animation/business_left_arm/business_left_arm0082.png",
 				"images/Animation/business_left_arm/business_left_arm0083.png","images/Animation/business_left_arm/business_left_arm0084.png",
 				"images/Animation/business_left_arm/business_left_arm0085.png","images/Animation/business_left_arm/business_left_arm0086.png",
 				"images/Animation/business_left_arm/business_left_arm0087.png","images/Animation/business_left_arm/business_left_arm0088.png",
@@ -306,7 +302,6 @@ class Animations
 				"images/Animation/business_left_arm/business_left_arm0155.png","images/Animation/business_left_arm/business_left_arm0156.png",
 				"images/Animation/business_left_arm/business_left_arm0157.png","images/Animation/business_left_arm/business_left_arm0158.png",
 				"images/Animation/business_left_arm/business_left_arm0159.png","images/Animation/business_left_arm/business_left_arm0160.png");
-		businessLeftArmSequence = sequence(action, secondAction);
 		animationsMap.update("businessLeftArmAnimation", businessLeftArmSequence);
 		return businessLeftArmSequence;
 	}
@@ -316,7 +311,7 @@ class Animations
 		if (businessRightArmSequence != null) {
 			return businessRightArmSequence;
 		}
-		var action = animate(6667, "images/Animation/business_right_arm/business_right_arm0001.png", "images/Animation/business_right_arm/business_right_arm0002.png",
+		businessRightArmSequence = animate(6667, "images/Animation/business_right_arm/business_right_arm0001.png", "images/Animation/business_right_arm/business_right_arm0002.png",
 				"images/Animation/business_right_arm/business_right_arm0003.png","images/Animation/business_right_arm/business_right_arm0004.png",
 				"images/Animation/business_right_arm/business_right_arm0005.png","images/Animation/business_right_arm/business_right_arm0006.png",
 				"images/Animation/business_right_arm/business_right_arm0007.png","images/Animation/business_right_arm/business_right_arm0008.png",
@@ -355,8 +350,8 @@ class Animations
 				"images/Animation/business_right_arm/business_right_arm0073.png","images/Animation/business_right_arm/business_right_arm0074.png",
 				"images/Animation/business_right_arm/business_right_arm0075.png","images/Animation/business_right_arm/business_right_arm0076.png",
 				"images/Animation/business_right_arm/business_right_arm0077.png","images/Animation/business_right_arm/business_right_arm0078.png",
-				"images/Animation/business_right_arm/business_right_arm0079.png","images/Animation/business_right_arm/business_right_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/business_right_arm/business_right_arm0081.png","images/Animation/business_right_arm/business_right_arm0082.png",
+				"images/Animation/business_right_arm/business_right_arm0079.png","images/Animation/business_right_arm/business_right_arm0080.png",
+				"images/Animation/business_right_arm/business_right_arm0081.png","images/Animation/business_right_arm/business_right_arm0082.png",
 				"images/Animation/business_right_arm/business_right_arm0083.png","images/Animation/business_right_arm/business_right_arm0084.png",
 				"images/Animation/business_right_arm/business_right_arm0085.png","images/Animation/business_right_arm/business_right_arm0086.png",
 				"images/Animation/business_right_arm/business_right_arm0087.png","images/Animation/business_right_arm/business_right_arm0088.png",
@@ -396,7 +391,6 @@ class Animations
 				"images/Animation/business_right_arm/business_right_arm0155.png","images/Animation/business_right_arm/business_right_arm0156.png",
 				"images/Animation/business_right_arm/business_right_arm0157.png","images/Animation/business_right_arm/business_right_arm0158.png",
 				"images/Animation/business_right_arm/business_right_arm0159.png","images/Animation/business_right_arm/business_right_arm0160.png");
-		businessRightArmSequence = sequence(action, secondAction);
 		animationsMap.update("businessRightArmAnimation", businessRightArmSequence);
 		return businessRightArmSequence;
 	}
@@ -406,7 +400,7 @@ class Animations
 		if (retroLeftArmSequence != null) {
 			return retroLeftArmSequence;
 		}
-		var action = animate(6667, "images/Animation/retro_left_arm/retro_left_arm0001.png", "images/Animation/retro_left_arm/retro_left_arm0002.png",
+		retroLeftArmSequence = animate(6667, "images/Animation/retro_left_arm/retro_left_arm0001.png", "images/Animation/retro_left_arm/retro_left_arm0002.png",
 				"images/Animation/retro_left_arm/retro_left_arm0003.png","images/Animation/retro_left_arm/retro_left_arm0004.png",
 				"images/Animation/retro_left_arm/retro_left_arm0005.png","images/Animation/retro_left_arm/retro_left_arm0006.png",
 				"images/Animation/retro_left_arm/retro_left_arm0007.png","images/Animation/retro_left_arm/retro_left_arm0008.png",
@@ -445,8 +439,8 @@ class Animations
 				"images/Animation/retro_left_arm/retro_left_arm0073.png","images/Animation/retro_left_arm/retro_left_arm0074.png",
 				"images/Animation/retro_left_arm/retro_left_arm0075.png","images/Animation/retro_left_arm/retro_left_arm0076.png",
 				"images/Animation/retro_left_arm/retro_left_arm0077.png","images/Animation/retro_left_arm/retro_left_arm0078.png",
-				"images/Animation/retro_left_arm/retro_left_arm0079.png","images/Animation/retro_left_arm/retro_left_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/retro_left_arm/retro_left_arm0081.png","images/Animation/retro_left_arm/retro_left_arm0082.png",
+				"images/Animation/retro_left_arm/retro_left_arm0079.png","images/Animation/retro_left_arm/retro_left_arm0080.png",
+				"images/Animation/retro_left_arm/retro_left_arm0081.png","images/Animation/retro_left_arm/retro_left_arm0082.png",
 				"images/Animation/retro_left_arm/retro_left_arm0083.png","images/Animation/retro_left_arm/retro_left_arm0084.png",
 				"images/Animation/retro_left_arm/retro_left_arm0085.png","images/Animation/retro_left_arm/retro_left_arm0086.png",
 				"images/Animation/retro_left_arm/retro_left_arm0087.png","images/Animation/retro_left_arm/retro_left_arm0088.png",
@@ -486,7 +480,6 @@ class Animations
 				"images/Animation/retro_left_arm/retro_left_arm0155.png","images/Animation/retro_left_arm/retro_left_arm0156.png",
 				"images/Animation/retro_left_arm/retro_left_arm0157.png","images/Animation/retro_left_arm/retro_left_arm0158.png",
 				"images/Animation/retro_left_arm/retro_left_arm0159.png","images/Animation/retro_left_arm/retro_left_arm0160.png");
-		retroLeftArmSequence = sequence(action, secondAction);
 		animationsMap.update("retroLeftArmSequence", retroLeftArmSequence);
 		return retroLeftArmSequence;
 	}
@@ -496,7 +489,7 @@ class Animations
 		if (retroRightArmSequence != null) {
 			return retroRightArmSequence;
 		}
-		var action = animate(6667, "images/Animation/retro_right_arm/retro_right_arm0001.png", "images/Animation/retro_right_arm/retro_right_arm0002.png",
+		retroRightArmSequence = animate(6667, "images/Animation/retro_right_arm/retro_right_arm0001.png", "images/Animation/retro_right_arm/retro_right_arm0002.png",
 				"images/Animation/retro_right_arm/retro_right_arm0003.png","images/Animation/retro_right_arm/retro_right_arm0004.png",
 				"images/Animation/retro_right_arm/retro_right_arm0005.png","images/Animation/retro_right_arm/retro_right_arm0006.png",
 				"images/Animation/retro_right_arm/retro_right_arm0007.png","images/Animation/retro_right_arm/retro_right_arm0008.png",
@@ -535,8 +528,8 @@ class Animations
 				"images/Animation/retro_right_arm/retro_right_arm0073.png","images/Animation/retro_right_arm/retro_right_arm0074.png",
 				"images/Animation/retro_right_arm/retro_right_arm0075.png","images/Animation/retro_right_arm/retro_right_arm0076.png",
 				"images/Animation/retro_right_arm/retro_right_arm0077.png","images/Animation/retro_right_arm/retro_right_arm0078.png",
-				"images/Animation/retro_right_arm/retro_right_arm0079.png","images/Animation/retro_right_arm/retro_right_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/retro_right_arm/retro_right_arm0081.png","images/Animation/retro_right_arm/retro_right_arm0082.png",
+				"images/Animation/retro_right_arm/retro_right_arm0079.png","images/Animation/retro_right_arm/retro_right_arm0080.png",
+				"images/Animation/retro_right_arm/retro_right_arm0081.png","images/Animation/retro_right_arm/retro_right_arm0082.png",
 				"images/Animation/retro_right_arm/retro_right_arm0083.png","images/Animation/retro_right_arm/retro_right_arm0084.png",
 				"images/Animation/retro_right_arm/retro_right_arm0085.png","images/Animation/retro_right_arm/retro_right_arm0086.png",
 				"images/Animation/retro_right_arm/retro_right_arm0087.png","images/Animation/retro_right_arm/retro_right_arm0088.png",
@@ -576,7 +569,6 @@ class Animations
 				"images/Animation/retro_right_arm/retro_right_arm0155.png","images/Animation/retro_right_arm/retro_right_arm0156.png",
 				"images/Animation/retro_right_arm/retro_right_arm0157.png","images/Animation/retro_right_arm/retro_right_arm0158.png",
 				"images/Animation/retro_right_arm/retro_right_arm0159.png","images/Animation/retro_right_arm/retro_right_arm0160.png");
-		retroRightArmSequence = sequence(action, secondAction);
 		animationsMap.update("retroRightArmSequence", retroRightArmSequence);
 		return retroRightArmSequence;
 	}
@@ -586,7 +578,7 @@ class Animations
 		if (rockerLeftArmSequence != null) {
 			return rockerLeftArmSequence;
 		}
-		var action = animate(6667, "images/Animation/rocker_left_arm/rocker_left_arm0001.png", "images/Animation/rocker_left_arm/rocker_left_arm0002.png",
+		rockerLeftArmSequence = animate(6667, "images/Animation/rocker_left_arm/rocker_left_arm0001.png", "images/Animation/rocker_left_arm/rocker_left_arm0002.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0003.png","images/Animation/rocker_left_arm/rocker_left_arm0004.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0005.png","images/Animation/rocker_left_arm/rocker_left_arm0006.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0007.png","images/Animation/rocker_left_arm/rocker_left_arm0008.png",
@@ -625,8 +617,8 @@ class Animations
 				"images/Animation/rocker_left_arm/rocker_left_arm0073.png","images/Animation/rocker_left_arm/rocker_left_arm0074.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0075.png","images/Animation/rocker_left_arm/rocker_left_arm0076.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0077.png","images/Animation/rocker_left_arm/rocker_left_arm0078.png",
-				"images/Animation/rocker_left_arm/rocker_left_arm0079.png","images/Animation/rocker_left_arm/rocker_left_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/rocker_left_arm/rocker_left_arm0081.png","images/Animation/rocker_left_arm/rocker_left_arm0082.png",
+				"images/Animation/rocker_left_arm/rocker_left_arm0079.png","images/Animation/rocker_left_arm/rocker_left_arm0080.png",
+				"images/Animation/rocker_left_arm/rocker_left_arm0081.png","images/Animation/rocker_left_arm/rocker_left_arm0082.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0083.png","images/Animation/rocker_left_arm/rocker_left_arm0084.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0085.png","images/Animation/rocker_left_arm/rocker_left_arm0086.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0087.png","images/Animation/rocker_left_arm/rocker_left_arm0088.png",
@@ -666,7 +658,6 @@ class Animations
 				"images/Animation/rocker_left_arm/rocker_left_arm0155.png","images/Animation/rocker_left_arm/rocker_left_arm0156.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0157.png","images/Animation/rocker_left_arm/rocker_left_arm0158.png",
 				"images/Animation/rocker_left_arm/rocker_left_arm0159.png","images/Animation/rocker_left_arm/rocker_left_arm0160.png");
-		rockerLeftArmSequence = sequence(action, secondAction);
 		animationsMap.update("rockerLeftArmSequence", rockerLeftArmSequence);
 		return rockerLeftArmSequence;
 	}
@@ -676,7 +667,7 @@ class Animations
 		if (rockerRightArmSequence != null) {
 			return rockerRightArmSequence;
 		}
-		var action = animate(6667, "images/Animation/rocker_right_arm/rocker_right_arm0001.png", "images/Animation/rocker_right_arm/rocker_right_arm0002.png",
+		rockerRightArmSequence = animate(6667, "images/Animation/rocker_right_arm/rocker_right_arm0001.png", "images/Animation/rocker_right_arm/rocker_right_arm0002.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0003.png","images/Animation/rocker_right_arm/rocker_right_arm0004.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0005.png","images/Animation/rocker_right_arm/rocker_right_arm0006.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0007.png","images/Animation/rocker_right_arm/rocker_right_arm0008.png",
@@ -715,8 +706,8 @@ class Animations
 				"images/Animation/rocker_right_arm/rocker_right_arm0073.png","images/Animation/rocker_right_arm/rocker_right_arm0074.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0075.png","images/Animation/rocker_right_arm/rocker_right_arm0076.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0077.png","images/Animation/rocker_right_arm/rocker_right_arm0078.png",
-				"images/Animation/rocker_right_arm/rocker_right_arm0079.png","images/Animation/rocker_right_arm/rocker_right_arm0080.png");
-		var secondAction = animate(6667,"images/Animation/rocker_right_arm/rocker_right_arm0081.png","images/Animation/rocker_right_arm/rocker_right_arm0082.png",
+				"images/Animation/rocker_right_arm/rocker_right_arm0079.png","images/Animation/rocker_right_arm/rocker_right_arm0080.png",
+				"images/Animation/rocker_right_arm/rocker_right_arm0081.png","images/Animation/rocker_right_arm/rocker_right_arm0082.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0083.png","images/Animation/rocker_right_arm/rocker_right_arm0084.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0085.png","images/Animation/rocker_right_arm/rocker_right_arm0086.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0087.png","images/Animation/rocker_right_arm/rocker_right_arm0088.png",
@@ -756,7 +747,6 @@ class Animations
 				"images/Animation/rocker_right_arm/rocker_right_arm0155.png","images/Animation/rocker_right_arm/rocker_right_arm0156.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0157.png","images/Animation/rocker_right_arm/rocker_right_arm0158.png",
 				"images/Animation/rocker_right_arm/rocker_right_arm0159.png","images/Animation/rocker_right_arm/rocker_right_arm0160.png");
-		rockerRightArmSequence = sequence(action, secondAction);
 		animationsMap.update("rockerRightArmSequence", rockerRightArmSequence);
 		return rockerRightArmSequence;
 	}

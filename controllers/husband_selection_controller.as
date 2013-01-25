@@ -72,15 +72,15 @@ class HusbandSelectionController extends ScreenController implements INameEnterC
             Game.sounds.playSFX("buttonPress");
 
             // get the text and check if they gave a name
-            nameScreen.text = nameScreen.textInput.text();
+            //nameScreen.text = nameScreen.textInput.text();
 
-            if(nameScreen.text != "") {
+            //if(nameScreen.text != "") {
                 Game.sharedGame().saveHusband();
 
                 this.dismissModalScreen();
 
                 this.screen.showNextTutorial();
-            }
+            //}
         }
         else if(event.name == "completed") {
             Game.sounds.playSFX("buttonPress");
