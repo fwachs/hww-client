@@ -80,9 +80,16 @@ class IsometricItem extends Control
 //		this.testPlacement();
 		this.getSprite().put(this);
 		this.parent = canvas.getSprite();
-		this.configureEvents();	
 
 		canvas.getSprite().add(this.getSprite(), this.z);
+	}
+	
+	public function resetZ(z)
+	{
+		if(!this.canvas) return;
+		
+		this.getSprite().removefromparent();
+		this.canvas.getSprite().add(this.getSprite(), z);
 	}
 
 	override public function configureEvents()
@@ -213,6 +220,8 @@ class IsometricItem extends Control
 		if(this.isEditable == 0) return;
 		
 		this.createEditingUI();
+		
+		this.configureEvents();
 		
 		if(this.editUIIsVisible == 1) {
 			this.editUIIsVisible = 0;
@@ -360,12 +369,12 @@ class IsometricItem extends Control
 					this._sprite.pos(this.left, this.top);
 				}
 		        this._sprite.zPosition(0);
-				this.canvas.reorganize();
 				this.canvas.clearHighlight();
 				if(this.hiddenAcceptButton == 1) {
 					this.toggleEditingUI();
 				}
 				this.reorderEditingUI();
+				this.canvas.reorganize();
 			}
 			else if(event.name == "onmove") {
 				var deltaX = event.x - this.start.x;

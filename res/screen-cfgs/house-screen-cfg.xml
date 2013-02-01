@@ -12,7 +12,7 @@
 			<screen:element name="forSaleButton"  resource="house-decorator/remod-button.png" left="847" top="682" ontap="remodelPrompt" z-index="100"/>		
 			<screen:element name="storageButton"  resource="house-decorator/storage-box-icon.png" left="722" top="682" ontap="showStorage" z-index="100"/>		
 			<screen:element name="decorateButton" resource="house-decorator/decorate-button.png" left="597" top="682" ontap="decorate" z-index="100"/>
-            <screen:element name="missionsButton" resource="mission/mission-icon.png" left="80" top="160" ontap="displayMissions" z-index="100"/>		
+            <screen:element name="missionsButton" resource="mission/mission-icon.png" left="80" top="160" ontap="displayMissions" z-index="1000"/>		
 		</screen:element>
 
 		<screen:element name="categoryFrame" resource="" left="0" top="800" width="1280" height="1518" z-index="1500" ontap="doNothing">

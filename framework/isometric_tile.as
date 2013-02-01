@@ -90,7 +90,7 @@ class IsometricTile extends Control
 		
 		var top = this.top - size[1] + this.height;
 		var left = this.left - this.width / this.item_width;
-		
+
 		Event.removeEventsForHandler(this._sprite);
 		
 		this._sprite.removefromparent();		
@@ -107,10 +107,10 @@ class IsometricTile extends Control
 		
 		parent.add(this._sprite, this.z);
 		
-		this._sprite.pos(this.left, this.top);
-		this._sprite.size(this.width, this.height);
+		this._sprite.pos(left, top);
+		//this._sprite.size(this.width, this.height);
 		
-		this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
+		//this._sprite.addlabel(str(this.x) + "," + str(this.y), "Arial", 14);
 		
 		canvas.getSprite().add(this._sprite, x + y);
 		
@@ -119,6 +119,12 @@ class IsometricTile extends Control
 		}
 		
 		return 1;
+	}
+	
+	public function clear()
+	{
+		this.parent.remove(this._sprite);
+		this.resource = "";
 	}
 	
 	public function destroy()

@@ -142,7 +142,24 @@ class HouseScreen extends Screen
 			}
 		}
 	}
-	
+
+	public function clearTiles(tiles)
+	{
+		var map = this.getElement("map");
+		
+		for(var r = 0; r < tiles.height; r++) {
+			for(var c = 0; c < tiles.width; c++) {
+				var row = r + tiles.row - 1;
+				var col = c + tiles.col - 1;
+				var t = iso.getTile(col, row);
+
+				if(t != null) {
+					t.clear();
+				}
+			}
+		}
+	}
+
 	public function setTiles(tiles)
 	{
 		var styleItem = this.style.items.get(tiles.type);
@@ -152,13 +169,13 @@ class HouseScreen extends Screen
 		if(styleItem == null) return;
 
 		var map = this.getElement("map");
-		
-		/*
+				
 		if(tiles.room.level > this.house.getLevel()) {
 			this.lockTiles(tiles);
 			return;			
 		}
-		*/
+
+		this.clearTiles(tiles);
 		
 		var customTiles = this.house.customTiles.get(str(tiles.row) + str(tiles.col));		
 		

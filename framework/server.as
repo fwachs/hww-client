@@ -150,7 +150,7 @@ class Server
 
 	public function getDailyBonus(callback)
 	{
-		this.makeRequest("/getDailyBonus", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
+		//this.makeRequest("/getDailyBonus", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 
     public function makeRequest(path, callback, params)

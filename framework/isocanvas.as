@@ -361,10 +361,7 @@ class IsometricCanvas extends Scroll
 		var parent = this.getSprite();
 		for(var i = 0; i < len(this.items); i++) {
 			var item = this.items[i];
-			var itemSprite = item.getSprite();
-			itemSprite.removefromparent();
-			parent.add(itemSprite, z);
-			item.z = z;
+			item.resetZ(z);
 
 			z--;
 		}

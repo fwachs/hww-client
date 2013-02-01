@@ -657,8 +657,10 @@ class Scroll extends Control
 		this._sprite.scale(this.currentScale);
 
 		var pos = this._sprite.pos();
-		
-		this._sprite.pos(pos[0] + (-scaleDelta * this.contentWidth / 100 / 2), pos[1] + (-scaleDelta * this.contentHeight / 100 / 2));
+
+		var newX = pos[0] + (-scaleDelta * this.contentWidth / 100 / 2);
+		var newY = pos[1] + (-scaleDelta * this.contentHeight / 100 / 2);
+		this._sprite.pos(newX, newY);
 
 		this.dist0 = this.dist1;
 	}
@@ -677,13 +679,23 @@ class Scroll extends Control
 		this.currentScale += scaleDelta;
 		
 		var pos = this._sprite.pos();
+		
+		this._sprite.scale(this.currentScale);
+		var newX = pos[0] + (-scaleDelta * this.contentWidth / 100 / 2);
+		var newY = pos[1] + (-scaleDelta * this.contentHeight / 100 / 2);
+		this._sprite.pos(newX, newY);
+		
+		var size = this._sprite.size();
+		this.viewPortChanged(-newX, -newY, size[0], size[1]);
 
+	/*
 		this._sprite.addaction(
 							spawn(
 								scaleto(200, this.currentScale, this.currentScale), 
 								moveto(200, pos[0] + (-scaleDelta * this.contentWidth / 100 / 2), pos[1] + (-scaleDelta * this.contentHeight / 100 / 2))
 							)
 						);
+*/
 	}
 	
 	public function offsetLeft()

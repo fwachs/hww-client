@@ -64,7 +64,10 @@ class ClothingShopController extends ScreenController
             this.selectedClothingItem = event.argument;
             Game.sharedGame().wife.testClothingItem(this.selectedClothingItem, this.screen);
             this.screen.displayPurchaseButton(this.selectedClothingItem);
-            if (this.previousClothingItem.id != this.selectedClothingItem.id) {
+            
+            if (this.previousClothingItem == null) return;
+            
+            if(this.previousClothingItem.id != this.selectedClothingItem.id) {
                 this.screen.hidePurchaseButton(this.previousClothingItem);
             }
         } else if (event.name == "purchaseClothingItem") {
