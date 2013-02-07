@@ -40,7 +40,7 @@ class Game
 
 	public static function getPapayaUserId()
 	{
-	    return "1234";
+	    return ppy_userid();
 	}
 
 	public static function sharedGame()
@@ -269,7 +269,7 @@ class Game
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
 //		this.loadingProgress.scale(100, 100);
-		//Game.getServer().getCurrentDateAndTick(this.initializeTimers);
+		Game.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);
 		
 		this.hideLoadingScreen();

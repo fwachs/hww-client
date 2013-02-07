@@ -45,7 +45,6 @@ class Server
     }
 
     public function synchronizeGame() {
-    	return;
         var params = dict();
         var wife = Game.sharedGame().wife.serialize();
         var husband = Game.sharedGame().hubby.serialize();
@@ -139,7 +138,6 @@ class Server
 
 	public function getGifts(callback)
 	{
-		return;
 		this.makeRequest("/getGifts", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 
@@ -150,7 +148,7 @@ class Server
 
 	public function getDailyBonus(callback)
 	{
-		//this.makeRequest("/getDailyBonus", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
+		this.makeRequest("/getDailyBonus", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
 	}
 
     public function makeRequest(path, callback, params)
