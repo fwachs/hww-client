@@ -85,7 +85,7 @@ class ScreenController
 			this.dismissModalScreen();
 			
 			if(scr.okCallBack) {
-				scr.okCallBack();
+				callMethod(scr.okCallBack);
 			}
 		}
 	}	
