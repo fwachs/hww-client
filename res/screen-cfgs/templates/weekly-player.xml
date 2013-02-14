@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:templates>
+    <screen:template name="WeeklyPlayerPosition">
+		<screen:element name="lbPlayerCardInstance" resource="gossip-wall/lb-player-card.png" left="0" top="#top">
+			<screen:element name="lbPlayerCardRank" resource="" left="15" top="14" font-size="40" text-align="center" width="80" height="51">#rank</screen:element>
+			<screen:element name="lbPlayerCardName" resource="" left="95" top="14" font-size="40" text-align="center" width="300" height="51">#name</screen:element>
+			<screen:element name="lbPlayerCardScore" resource="" left="410" top="14" font-size="40" text-align="center" width="300" height="51">#score</screen:element>
+			<screen:element name="lbDiamondIcon" resource="premium-currency-screen/dimonds01v2.png" left="710" top="4"/>
+			<screen:element name="lbDiamondAmount" resource="" left="760" top="14" font-size="40" text-align="center" width="80" height="51">#amount</screen:element>
+	    </screen:element>
+    </screen:template>
+</screen:templates>

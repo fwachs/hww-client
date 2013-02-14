@@ -13,7 +13,14 @@ class Server
     var url;
     public function Server()
     {	
-    	url = "http://hww.2clams.com:8080";
+    	url = "http://ec2-184-169-252-151.us-west-1.compute.amazonaws.com:8080";
+    }
+
+    public function getWeeklyTournament(callback) {
+        var params = dict();
+
+        params.update("papayaUserId", Game.papayaUserId);
+        this.makeRequest("/tournament", callback, params);
     }
 
     public function checkPlayersStatus(flist, mainController) {
@@ -133,7 +140,7 @@ class Server
 
 	public function getCurrentDateAndTick(callback)
     {
-        this.makeRequest("/getCurrentDateAndTick", callback, dict());
+        this.makeRequest("/getCurrentDateAndTick", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
     }
 
 	public function getGifts(callback)

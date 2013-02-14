@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<screen:config>
+	<screen:elements>
+		<screen:element name="popupGreyBackground" resource="tutorial-icons/overlay75gray.png" left="0" top="0"/>
+		<screen:element name="lbBackground" resource="gossip-wall/lb-background.png" left="192" top="30">		
+			<screen:element name="lbTitalArea" resource="gossip-wall/lb-player-card.png" left="21" top="15">
+				<screen:element name="lbTitleText" resource="" left="100" top="14" font-size="46" text-align="center" width="500" height="51">Weekly Tournament Leaderboard Ending</screen:element>
+				<screen:element name="tourneyDate" resource="" left="640" top="14" font-size="40" text-align="center" width="150" height="51">#placeholder</screen:element>
+			</screen:element>
+			
+			<screen:element name="scroll" class="Scroll" lock="vertical" resource="" left="21" top="100" width="860" height="700"/>	
+		
+		</screen:element>
+		<screen:element name="closeButton" resource="premium-currency-screen/cancel-button.png" left="1040" top="4" ontap="dismiss" />
+	</screen:elements>
+</screen:config>

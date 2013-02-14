@@ -52,19 +52,23 @@ class GossipScreen extends Screen
 
 	public function stopWifeAnimation()
 	{
-		this.getElement("rightArm").getSprite().stop();
-		this.getElement("leftArm").getSprite().stop();
-		this.getElement("rightArmSleeve").getSprite().stop();
-		this.getElement("leftArmSleeve").getSprite().stop();
-		this.getElement("face").getSprite().stop();
+	    for (var i=1; i<4; i++) {
+	        var pos = str(i);
+	        this.getElement("rightArm" + pos).getSprite().stop();
+	        this.getElement("leftArm" + pos).getSprite().stop();
+	        this.getElement("rightArmSleeve" + pos).getSprite().stop();
+	        this.getElement("leftArmSleeve" + pos).getSprite().stop();
+	        this.getElement("face" + pos).getSprite().stop();
+	    }
 	}
 
-	public function drawBestHouseWife(topHouseWife)
+	public function drawBestHouseWife(topHouseWife, pos, runAnimation)
 	{
-		this.getElement("topWifeName").setText(topHouseWife.name);
-		topHouseWife.dress(this, 0);
+	    pos = str(pos);
+		this.getElement("topWifeName" + pos).setText(topHouseWife.name);
+		topHouseWife.dress(this, 0, pos, runAnimation);
 		
-		this.getElement("sspText").setText(str(topHouseWife.socialStatusPoints));
+		this.getElement("sspText" + pos).setText(str(topHouseWife.socialStatusPoints));
 	}
 	
 	public function addMessageToWall(idx, message, ypos)
@@ -88,7 +92,6 @@ class GossipScreen extends Screen
 	public function updateMessages(msgs)
 	{
 		this.messages = msgs;
-		this.drawWall(this.messages)
 	}
 	
 	public function drawWall(messages)
@@ -144,12 +147,22 @@ class GossipScreen extends Screen
         var response = json_loads(response_content);
         var messages = response.get("messages");
         var bestWife = response.get("bestHouseWife");
-        
+        var secondHouseWife = response.get("secondHouseWife");
+        var thirdHouseWife = response.get("thirdHouseWife");
+
         var topHouseWife = new Wife();
         topHouseWife.loadFromJSON(bestWife);
-        
+        this.drawBestHouseWife(topHouseWife, 1);   
+
+        var secondWife = new Wife();
+        secondWife.loadFromJSON(secondHouseWife);
+        this.drawBestHouseWife(secondWife, 2, 0);
+
+        var thirdWife = new Wife();
+        thirdWife.loadFromJSON(thirdHouseWife);
+        this.drawBestHouseWife(thirdWife, 3, 0);
+
         this.updateMessages(messages);
-        this.drawBestHouseWife(topHouseWife);   
     }
 }
 
