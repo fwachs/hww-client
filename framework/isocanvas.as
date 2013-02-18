@@ -231,8 +231,8 @@ class IsometricCanvas extends Scroll
 		
 		var itemSprite = item.getSprite();
 		
-		var z = this.placeItem(item, x, y)	
-				
+		var z = this.placeItem(item, x, y);	
+
 		this.items.append(item);
 	}
 	

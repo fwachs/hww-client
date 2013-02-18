@@ -254,6 +254,7 @@ class HouseScreen extends Screen
 			map.addItem(frnture, it.left, it.top);
 			if(it.isFlipped == 1) {
 				frnture.flipItem();
+				frnture.isFlipped = 1;
 			}
 			
 			frnture.hideAcceptButton();
@@ -364,7 +365,6 @@ class HouseScreen extends Screen
 			itemParams.update("left", str(left));
 			itemParams.update("name", furniture.name);
 			itemParams.update("resource", furniture.image);
-			/*
 			itemParams.update("gamebucks", furniture.gameBucks);
 			itemParams.update("diamonds", furniture.diamonds);
 			itemParams.update("level", furniture.level);
@@ -378,7 +378,6 @@ class HouseScreen extends Screen
 			if(furniture.stars < 3) {
 				itemParams.update("star_3_full", "no");
 			}
-			*/
 				
 			var template = "FurnitureItem";
 			if(furniture.level > Game.sharedGame().hubby.careerLevel) {

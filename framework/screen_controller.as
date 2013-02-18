@@ -76,7 +76,7 @@ class ScreenController
 			this.dismissModalScreen();
 
 			if(scr.cancelCallBack) {
-				scr.cancelCallBack();
+				callMethod(scr.cancelCallBack);
 			}
 		}
 		else if(event.name == "okMB") {

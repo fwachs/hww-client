@@ -77,9 +77,13 @@ class IsometricItem extends Control
 		
 		this.canvas = canvas;
 		this.createEditingUI();
+		this.configureEvents();
 //		this.testPlacement();
 		this.getSprite().put(this);
 		this.parent = canvas.getSprite();
+		if(this.isFlipped == 1) {
+			this.flipItem();
+		}
 
 		canvas.getSprite().add(this.getSprite(), this.z);
 	}
@@ -220,9 +224,7 @@ class IsometricItem extends Control
 		if(this.isEditable == 0) return;
 		
 		this.createEditingUI();
-		
-		this.configureEvents();
-		
+				
 		if(this.editUIIsVisible == 1) {
 			this.editUIIsVisible = 0;
 
@@ -234,7 +236,9 @@ class IsometricItem extends Control
 			this.addGhost();
 		}
 		
-		this.acceptButton.getSprite().visible(this.editUIIsVisible);
+		if(this.hiddenAcceptButton != 1) {
+			this.acceptButton.getSprite().visible(this.editUIIsVisible);
+		}
 		this.cancelButton.getSprite().visible(this.editUIIsVisible);
 		this.flippButton.getSprite().visible(this.editUIIsVisible);
 
@@ -256,27 +260,11 @@ class IsometricItem extends Control
 	public function flipItem()
 	{
 		if(!this.canvas) return;
-		
-		var size = this.imageSprite.size();
-		this.imageSprite.size(-size[0], size[1]);
-				
-		if(this.isFlipped == 0) {
-			this.isFlipped = 1;
-			this.imageSprite.pos(size[0], 0);
-		}
-		else {
-			this.isFlipped = 0;
-			this.imageSprite.pos(0, 0);
-		}
-				
-		this.swapWidthAndDepth();
-		
+						
+		this.imageSprite.flip();
+		this.swapWidthAndDepth();		
 		this.canvas.liftItem(this);
 
-		var firstTile = this.tiles[0];
-		trace("Flipping item at tile: ", firstTile.x, firstTile.y);
-		this.canvas.placeItem(this, firstTile.x, firstTile.y);
-		
 		this.removeGhost();
 		this.addGhost();
 	}
@@ -285,6 +273,13 @@ class IsometricItem extends Control
 	{
 //		trace("Flipping: ", this.isFlipped);
 
+		if(this.isFlipped == 0) {
+			this.isFlipped = 1;
+		}
+		else {
+			this.isFlipped = 0;
+		}
+		
 		this.flipItem();
 		
 		if(this.isEditable == 1) {
