@@ -46,6 +46,7 @@ class MessageBoxScreen extends Screen
     static var MB_UnlockCatalog = 32;
     static var MB_LockedCatalog = 33;
     static var MB_ClothingValidation = 34;
+    static var MB_UpdateGame = 35;
 
     var type;
     var argument;
@@ -209,6 +210,8 @@ class MessageBoxScreen extends Screen
             displayOkayPrompt("Visit "+ this.argument + " and see all the sights first.");
         } else if (this.type == MessageBoxScreen.MB_ClothingValidation) {
             displayOkayPrompt("Too much skin showing! Put on a top, a bottom and some shoes before you leave.");
+        } else if (this.type == MessageBoxScreen.MB_UpdateGame) {
+            displayOkayPrompt("Please update your game through Google store, othewise you can't come in!");
         }
     }
 
