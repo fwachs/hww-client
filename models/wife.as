@@ -160,6 +160,19 @@ class Wife
 	                    rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
 	                    leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
 	                }
+	            } else {
+	                rightArm.texture("images/Animation/bare_right_arm/bare_right_arm0001.png");
+	                leftArm.texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
+	                if (clothingItem.sleeves == "rocker") {
+	                    rightArmSleeve.texture("images/Animation/rocker_right_arm/rocker_right_arm0001.png");
+	                    leftArmSleeve.texture("images/Animation/rocker_left_arm/rocker_left_arm0001.png");
+                    } else if (clothingItem.sleeves == "business") {
+                        rightArmSleeve.texture("images/Animation/business_right_arm/business_right_arm0001.png");
+                        leftArmSleeve.texture("images/Animation/business_left_arm/business_left_arm0001.png");
+                    } else if (clothingItem.sleeves == "retro") {
+                        rightArmSleeve.texture("images/Animation/retro_right_arm/retro_right_arm0001.png");
+                        leftArmSleeve.texture("images/Animation/retro_left_arm/retro_left_arm0001.png");
+                    }
 	            }
 	        }
 		} else {

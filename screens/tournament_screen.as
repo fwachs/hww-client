@@ -26,7 +26,6 @@ class TournamentScreen extends Screen
     {
         if(ret_code == 0) return;
 
-        trace("### HWW ### - Received Tournament Rank: ", str(response_content));
         var response = json_loads(response_content);
         var players = response.get("players");
         this.getElement("tourneyDate").setText(response.get("tournamentEndDate"));
@@ -40,7 +39,6 @@ class TournamentScreen extends Screen
         
         for (var i = 0; i < len(players); i++) {
             var wife = new Wife();
-            trace("fucking player: ", players[i]);
             wife.loadFromJSON(players[i]);
             
             var reward = null;
@@ -51,18 +49,18 @@ class TournamentScreen extends Screen
             if (i+1 == 1) {
                 reward = "10";
             } else if (i+1 == 2) {
-                reward = "5";
+                reward = "7";
             } else if (i+1 == 3) {
-                reward = "3";
+                reward = "5";
             } else {
-                reward = "1";
+                reward = "2";
             }
             params.update("amount", reward);
             params.update("top", ypos);
             var control = this.controlFromXMLTemplate("WeeklyPlayerPosition", params, "weekly-player.xml");
 
             scroll.addChild(control);
-            ypos += 70;
+            ypos += 75;
         }
         scroll.setContentSize(200, ypos);
 	}

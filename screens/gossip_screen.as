@@ -13,7 +13,6 @@ Brief Description:
 class GossipScreen extends Screen
 {
 	var screenUpdateTimer;
-	var textInput;
 	var text;
 	
 	var ypos;
@@ -34,19 +33,12 @@ class GossipScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
-		
-		var vf = v_font(Game.translateFontSize(30), "arial", FONT_NORMAL);
-		this.textInput = v_create(V_INPUT_VIEW, Game.translateX(400), Game.translateY(686), Game.translateX(550), Game.translateY(100));
-		this.textInput.attr(ATTR_FONT, vf);
-		v_root().addview(this.textInput);
-		this.textInput.text(this.text);
 	}
 	
 	override public function lostFocus()
 	{
 		Game.hideBanner();
 		
-		this.textInput.removefromparent();
 		this.stopWifeAnimation();
 	}
 
@@ -127,8 +119,6 @@ class GossipScreen extends Screen
 	
 	public function post()
 	{
-		this.text = this.textInput.text();
-		this.textInput.text("");
 		
 		// TODO: get house level
 		if (this.text != "") {

@@ -49,7 +49,7 @@ class GossipController extends ScreenController
         thirdWife.loadFromJSON(thirdHouseWife);
         this.screen.drawBestHouseWife(thirdWife, 3, 0);
 
-//        this.getElement("tourneyDate").setText(response.get("tournamentEndDate"));
+        this.screen.getElement("tournamentEndDateText2").setText(response.get("tournamentEndDate"));
     }
 
     public function updateMessageList(request_id, ret_code, response_content)
