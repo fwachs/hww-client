@@ -89,7 +89,10 @@ class IsometricTile extends Control
 		var size = newSprite.size();
 		
 		var top = this.top - size[1] + this.height;
-		var left = this.left - this.width / this.item_width;
+		var left = this.left;
+		if(this.item_width > 1) {
+			left -= this.width / this.item_width;
+		}
 
 		Event.removeEventsForHandler(this._sprite);
 		

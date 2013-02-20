@@ -478,5 +478,5 @@ class HouseScreen extends Screen
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 800)));
 
 		this.getElement("cancelStorage").getSprite().visible(0);
-	}	
+	}
 }

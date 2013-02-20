@@ -71,7 +71,10 @@ class MessageBoxScreen extends Screen
         else if(this.type == MessageBoxScreen.MB_Hubby_Return_Shopping) {
             this.getElement("ReturnFromShoppingPrompt").getSprite().visible(1);
             var itemRetrieved = this.getElement("itemRetrieved").getSprite();
+            itemRetrieved.size(140, 140);
             itemRetrieved.texture("images/" + this.argument.image);
+            
+            /*
             itemRetrieved.prepare();
             var sizeX = itemRetrieved.size()[0];
             var sizeY = itemRetrieved.size()[1];
@@ -80,6 +83,7 @@ class MessageBoxScreen extends Screen
             var scaleY = 140 * 100 / sizeY;
             trace("### HWW ### - Image scaled by: " + str(scaleX) + ", " + str(scaleY));
             itemRetrieved.scale(Game.translateX(scaleX), Game.translateY(scaleY));
+            */
 
             var shoppingText = this.getElement("shoppingText");
             shoppingText.setText("Look what I got for you!");
@@ -225,8 +229,12 @@ class MessageBoxScreen extends Screen
         this.getElement(okayButton).getSprite().visible(1);
     }
 
-    public function setOkayPromptTextSize(newSize, style = "bold", align = "center", wrapMode = "wrap")
+    public function setOkayPromptTextSize(newSize)
     {
+    	var style = "bold";
+    	var align = "center";
+    	var wrapMode = "wrap";
+    	
         var okayPromptText = this.getElement("okayPromptText");
         okayPromptText.setFont(Game.font.getFont(), Game.translateFontSize(newSize), style, align, wrapMode);
     }

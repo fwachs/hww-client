@@ -109,7 +109,7 @@ class IsometricCanvas extends Scroll
 	}
 	
 	function viewPortChanged(left, top, width, height)
-	{		
+	{
 		if(abs(left - this.prevLeft) > 20 || abs(top - this.prevTop) > 20) {
 			this.prevLeft = left;
 			this.prevTop = top;
