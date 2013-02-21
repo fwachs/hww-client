@@ -2,7 +2,7 @@
 
 <screen:config>
 	<screen:elements>
-		<screen:element name="popupGreyBackground" resource="tutorial-icons/overlay75gray.png" left="0" top="0"/>
+		<screen:element name="popupGreyBackground" resource="tutorial-icons/overlay75gray.png" left="0" top="0" ontap="doNothing" />
 		<screen:element name="lbBackground" resource="gossip-wall/lb-background.png" left="192" top="30" >		
 			<screen:element name="lbTitalArea" resource="gossip-wall/lb-player-card.png" left="21" top="15">
 				<screen:element name="lbTitleText" resource="" left="100" top="14" font-size="46" text-align="center" width="500" height="51">Weekly Tournament Leaderboard Ending</screen:element>

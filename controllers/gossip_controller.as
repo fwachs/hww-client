@@ -14,6 +14,8 @@ import models.gossip_message
 
 class GossipController extends ScreenController
 {
+    var userWeeklyScore;
+
     public function GossipController(controlledScreen)
     {
         super(controlledScreen);
@@ -50,6 +52,7 @@ class GossipController extends ScreenController
         this.screen.drawBestHouseWife(thirdWife, 3, 0);
 
         this.screen.getElement("tournamentEndDateText2").setText(response.get("tournamentEndDate"));
+        userWeeklyScore = response.get("weeklyScore");
     }
 
     public function updateMessageList(request_id, ret_code, response_content)
@@ -74,7 +77,7 @@ class GossipController extends ScreenController
             //Game.sharedGame().getServer().getMessagesAndBestWife(updateMessageList);
         }
         else if (event.name == "showWeeklyTournament") {
-            var tournamentScreen = new TournamentScreen();
+            var tournamentScreen = new TournamentScreen(userWeeklyScore);
             tournamentScreen.configFile = "screen-cfgs/tournament-screen-cfg.xml";
             this.presentModalScreen(tournamentScreen);
         }

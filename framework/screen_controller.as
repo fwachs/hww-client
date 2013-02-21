@@ -165,7 +165,7 @@ class ScreenController
 		var modalScreen = this.modalScreenStack.pop();
 		
 		modalScreen.canvas.addaction(moveto(250, 0, screensize()[1]));
-		modalScreen.willLoosFocus();
+		modalScreen.willLoseFocus();
 		modalScreen.lostFocus();
 		
 		Game.scene.remove(modalScreen.canvas);

@@ -12,9 +12,12 @@ Brief Description:
 
 class TournamentScreen extends Screen
 {
-	public function TournamentScreen()
+    var playerWeeklyScore;
+
+	public function TournamentScreen(playerWeeklyScore)
 	{
 		super();
+		this.playerWeeklyScore = playerWeeklyScore;
 	}
 	
 	override public function build()
@@ -36,13 +39,19 @@ class TournamentScreen extends Screen
 	    var scroll = this.getElement("scroll");
         scroll.removeAllChildren();
         var ypos = 10;
-        
+        var addWeeklyScore = 1;
         for (var i = 0; i < len(players); i++) {
             var wife = new Wife();
             wife.loadFromJSON(players[i]);
             
             var reward = null;
             var params = dict();
+            
+            params.update("lbcard", "gossip-wall/lb-player-card.png");
+            if (players[i].get("id") == Game.papayaUserId) {
+                params.update("lbcard", "gossip-wall/lb-player-card2.png");
+                addWeeklyScore = 0;
+            }
             params.update("rank", str(i+1));
             params.update("name", wife.name);
             params.update("score", wife.socialStatusPoints);
@@ -61,6 +70,17 @@ class TournamentScreen extends Screen
 
             scroll.addChild(control);
             ypos += 75;
+        }
+        if (addWeeklyScore == 1) {
+            params = dict();
+            params.update("top", ypos);
+            params.update("lbcard", "gossip-wall/lb-player-card2.png");
+            params.update("rank", str(26));
+            params.update("name", Game.sharedGame().wife.name);
+            params.update("score", str(playerWeeklyScore));
+            params.update("amount", "??");
+            var weeklyUserControl = this.controlFromXMLTemplate("WeeklyPlayerPosition", params, "weekly-player.xml");
+            scroll.addChild(weeklyUserControl);
         }
         scroll.setContentSize(200, ypos);
 	}
