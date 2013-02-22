@@ -13,7 +13,7 @@ class Server
     var url;
     public function Server()
     {	
-    	url = "http://ec2-184-169-252-151.us-west-1.compute.amazonaws.com:8080";
+    	url = "http://hww.2clams.com:8080";
     }
 
     public function getWeeklyTournament(callback) {
