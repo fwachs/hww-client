@@ -36,12 +36,13 @@ class GossipController extends ScreenController
         var response = json_loads(response_content);
         var messages = response.get("messages");
         var bestWife = response.get("bestHouseWife");
+        trace("besthousewife: ", bestWife);
         var secondHouseWife = response.get("secondHouseWife");
         var thirdHouseWife = response.get("thirdHouseWife");
 
         var topHouseWife = new Wife();
         topHouseWife.loadFromJSON(bestWife);
-        this.screen.drawBestHouseWife(topHouseWife, 1);
+        this.screen.drawBestHouseWife(topHouseWife, 1, 0);
 
         var secondWife = new Wife();
         secondWife.loadFromJSON(secondHouseWife);

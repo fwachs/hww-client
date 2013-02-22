@@ -48,7 +48,8 @@ class TournamentScreen extends Screen
             var params = dict();
             
             params.update("lbcard", "gossip-wall/lb-player-card.png");
-            if (players[i].get("id") == Game.papayaUserId) {
+            trace("rank player id: ", players[i].get("id"), wife.name);
+            if (players[i].get("id") == str(Game.papayaUserId)) {
                 params.update("lbcard", "gossip-wall/lb-player-card2.png");
                 addWeeklyScore = 0;
             }
@@ -69,7 +70,7 @@ class TournamentScreen extends Screen
             var control = this.controlFromXMLTemplate("WeeklyPlayerPosition", params, "weekly-player.xml");
 
             scroll.addChild(control);
-            ypos += 75;
+            ypos += 80;
         }
         if (addWeeklyScore == 1) {
             params = dict();
@@ -81,6 +82,7 @@ class TournamentScreen extends Screen
             params.update("amount", "??");
             var weeklyUserControl = this.controlFromXMLTemplate("WeeklyPlayerPosition", params, "weekly-player.xml");
             scroll.addChild(weeklyUserControl);
+            ypos += 80;
         }
         scroll.setContentSize(200, ypos);
 	}

@@ -104,6 +104,8 @@ class Game
 		this.animations = new Animations();
         Game.initializeServer();
         Game.papayaUserId = ppy_userid();
+//        michi 92257583  mila 68569919
+//        ;
         trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
         if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
             quitgame();

@@ -72,6 +72,7 @@ class Wife
 	    } else {
 	        pos = str(pos);
 	    }
+
 	    if (runAnimation == null || runAnimation == "None") {
 	        runAnimation = 1;
 	    }
@@ -122,6 +123,7 @@ class Wife
 		leftArmSleeve.texture("");
 		leftArmSleeve.stop();
 
+		trace("wearing: ", str(runAnimation), "wife:" + this.name, this.clothingItems);
 		if (this.clothingItems != null && len(this.clothingItems) > 0) {
 		    var clothingItemKeys = this.clothingItems.keys();
 		    shoes.texture("");
@@ -177,6 +179,10 @@ class Wife
 	        }
 		} else {
 		    screen.getElement("undies2" + pos).getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+		    if (runAnimation == 0) {
+                rightArm.texture("images/Animation/bare_right_arm/bare_right_arm0001.png");
+                leftArm.texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
+            }
 		    if(this.type == "Modern")
 	        {
 		        var modernClothingItem = Game.sharedGame().getClothingItemById("1076");
@@ -184,12 +190,16 @@ class Wife
 
                 modernClothingItem = Game.sharedGame().getClothingItemById("1042");
                 this.clothingItems.update(modernClothingItem.element, modernClothingItem.id);
+                
 	        }
 	        else if(this.type == "Rocker")
 	        {
 	            if (runAnimation == 1) {
 	                rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
 	                leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/rocker_right_arm/rocker_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/rocker_left_arm/rocker_left_arm0001.png");
 	            }
 	            var rockerClothingItem = Game.sharedGame().getClothingItemById("1186");
 	            this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
@@ -211,6 +221,9 @@ class Wife
 	            if (runAnimation == 1) {
 	                rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
 	                leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/business_right_arm/business_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/business_left_arm/business_left_arm0001.png");
 	            }
 
 	            var businessClothingItem = Game.sharedGame().getClothingItemById("1127");
@@ -227,6 +240,9 @@ class Wife
 	            if (runAnimation == 1) {
 	                rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
 	                leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/retro_right_arm/retro_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/retro_left_arm/retro_left_arm0001.png");
 	            }
 	            
 	            var retroClothingItem = Game.sharedGame().getClothingItemById("1346");
@@ -250,7 +266,6 @@ class Wife
                 
                 var id = this.clothingItems.get(secondElement);
                 var clothe = Game.sharedGame().getClothingItemById(id);
-                trace("perfil: ", secondElement, id, clothe.image);
                 secondSprite.texture("images/clothing/" + clothe.image);
 		    }
 		    if (save == null) {
