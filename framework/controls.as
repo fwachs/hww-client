@@ -69,12 +69,10 @@ class Control
 			control.attrs = attrs;
 
 			control.lowlight = resource;
-			/*
-			var handler = c_res_file(highlightFile)
-			if(c_file_exist(handler) == 1) {
+
+			if(c_file_exist(highlightFile) == 1) {
 				control.highlight = highlightFile;
 			}
-			*/
 
 			control._sprite.pos(Game.translateX(int(attrs.get("left"))), Game.translateY(int(attrs.get("top"))));
 
@@ -377,12 +375,12 @@ class Control
 				this.getSprite().texture(this.lowlight);
 			}
 			
-//			trace("Untouch with distance: ", dist);
-//			if(dist < 75) {
+			trace("Untouch with distance: ", dist);
+			if(dist < 35) {
 				this.controlTapped();
 				
 				return;
-//			}
+			}
 		}
 		
 		if(this.parent) {

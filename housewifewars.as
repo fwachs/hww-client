@@ -171,6 +171,7 @@ class HousewifeWars extends Game
 	
 	public function updateServer () {
 	    Game.getServer().synchronizeGame();
+	    save();
 	}
 	
 	public function loadSounds()

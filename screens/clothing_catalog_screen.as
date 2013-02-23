@@ -33,14 +33,13 @@ class ClothingCatalogScreen extends Screen
             params.update("catalogOptionAction", "catalogClicked");
             params.update("catalogOptionLocked", "");
             params.update("catalogOptionVisible", "YES");
-            /*
+
             var travelDate = Game.sharedGame().passport.datesCompleted[clothingCatalog.travelIndex];
             if (travelDate == null || travelDate == "") {
                 params.update("catalogOptionAction", "catalogLocked");
                 params.update("catalogOptionVisible", "NO");
                 params.update("catalogOptionLocked", "Go to " + clothingCatalog.name + " and see all the sights first!");
             }
-            */
 
             var scrollCatalogItem = this.controlFromXMLTemplate("CatalogOption", params, "catalog-item.xml");
             scrollCatalogItem.tapEvent.argument = clothingCatalog.name;

@@ -4,15 +4,6 @@
 	<screen:elements>
 	
 		<screen:element name="background" resource="fashion-shop/store-screen.png" left="0" top="0" ontap="doNothing"/>
-		<!--Bottom Select Bar-->
-		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background2.png" left="435" top="670">
-			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="filterByDress" />
-			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="filterByShirts" />
-			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="filterByPants" />
-			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="filterByShoes" />
-			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="500" top="13" ontap="filterByExtras" />
-		</screen:element>
-		<!--end bottom select bar-->
 		
 		<!--Show All Button is used to show all of the players inventory sorted by score high to low-->
 		<screen:element name="showAllButton" resource="fashion-shop/view-all.png" left="365" top="329" ontap="showAllFashion" />
@@ -60,6 +51,16 @@
 
 		<screen:element name="backButton" resource="fashion-shop/back-button-magazines.png" left="1125" top="682" ontap="gotoMainMenu"/>
 		
-	</screen:elements>
+		<!--Bottom Select Bar-->
+		<screen:element name="selectFashionTypeBackground" resource="fashion-shop/shop-icons-background2.png" left="435" top="670">
+			<screen:element name="showDressIcon" resource="fashion-shop/shop-icon-dress.png" left="20" top="13" ontap="filterByDress" />
+			<screen:element name="showShirtIcon" resource="fashion-shop/shop-icon-shirt.png" left="140" top="13" ontap="filterByShirts" />
+			<screen:element name="showPantsIcon" resource="fashion-shop/shop-icon-pants.png" left="260" top="13" ontap="filterByPants" />
+			<screen:element name="showShoesIcon" resource="fashion-shop/shop-icon-shoes.png" left="380" top="13" ontap="filterByShoes" />
+			<screen:element name="showExtrasIcon" resource="fashion-shop/shop-icon-items.png" left="500" top="13" ontap="filterByExtras" />
+		</screen:element>
+		<!--end bottom select bar-->
+		
+		</screen:elements>
 	
 </screen:config>

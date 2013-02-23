@@ -90,7 +90,18 @@ class Game
 		Game.sounds.addMusic("splashMusic", "sounds/Housewife.Splash.1b.mp3");
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
-		c_invoke(transitionLoadingScreen, 2000, null);
+	}
+	
+	function socialLoginSucceeded(userId)
+	{
+        Game.papayaUserId = userId;
+        trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+        transitionLoadingScreen();
+	}
+	
+	function socialLoginFailed()
+	{
+		// show the "no connection message"
 	}
 	
 	function transitionLoadingScreen()
@@ -108,12 +119,6 @@ class Game
 		Game.screens = new Array();
 		Game.animations = new Animations();
         Game.initializeServer();
-        Game.papayaUserId = 0;
-        trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
-/*
-        if (Game.papayaUserId == null || Game.papayaUserId == 0 || !ppy_connected()) {
-            quitgame();
-        }
 
         var wife = new Wife();
 
@@ -121,10 +126,8 @@ class Game
         if (wife.firstPlay == 1 || shouldSynchronize == 1) {
             Game.getServer().synchronize(synchronizeCallback);
         } else {
-            c_invoke(loading4, 1, null);
+            c_invoke(loading1, 1, null);
         }
-*/
-        c_invoke(loading1, 1, null);
 	}
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {
@@ -154,7 +157,7 @@ class Game
                     purchasedClothingItems.addClothingItem(defaultClothingItem);
                 }
 
-//                this.addDefaultClothingItems(wife, purchasedClothingItems);
+                //this.addDefaultClothingItems(wife, purchasedClothingItems);
 
                 var husband = new Husband();
                 var jsonHusband = responseMap.get("husband");
@@ -191,9 +194,9 @@ class Game
             trace("### HWWW ### Synchronize onGoingSynchronization: 0");
             Game.getDatabase().put("onGoingSynchronization", 0);
             
-            
-            //Game.scene.remove(dontClose);
+//            Game.scene.remove(dontClose);
         }
+        
         c_invoke(loading1, 1, null);
     }
 
@@ -268,13 +271,11 @@ class Game
 	function loading4()
 	{
 		this.loadingText.texture("images/tutorial-icons/loading005.png");
-//		this.loadingProgress.scale(100, 100);
+		this.loadingProgress.scale(100, 100);
 		Game.getServer().getCurrentDateAndTick(this.initializeTimers);
-		this.loadingBarEnd.visible(1);
-		
-		this.hideLoadingScreen();
+		this.loadingBarEnd.visible(1);		
+
 		Timer.startTimers();
-		Game.sharedGame().run();
 	}
 	
 	function hideLoadingScreen()
