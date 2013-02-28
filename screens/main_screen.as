@@ -34,7 +34,7 @@ class MainScreen extends Screen
         var husbandMessage = Game.sharedGame().getRandomMessage("main-menu");
         trace("HWW ### - husband message: ", husbandMessage);
         chatText.setText(husbandMessage);
-        chatText.getSprite().color(0, 0, 0);
+        chatText.textColor(0, 0, 0);
         this.getElement("chatBubble").getSprite().visible(1);
         c_invoke(this.hideChatBubble, 4000, null);
 	}

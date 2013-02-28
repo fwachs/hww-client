@@ -107,14 +107,14 @@ class Game
 	function transitionLoadingScreen()
 	{
 		this.loadingScreen.texture("images/LoadScreen.png");
-		this.loadingBar = Game.scene.addsprite("images/tutorial-icons/loadingbar-base.png").pos(Game.translateX(325), Game.translateY( 722));
+		this.loadingBar = this.loadingScreen.addsprite("images/tutorial-icons/loadingbar-base.png").pos(Game.translateX(325), Game.translateY( 722));
 		this.loadingBarStart = loadingBar.addsprite("images/tutorial-icons/loadingbar-front.png").pos(Game.translateX(0), Game.translateY( 0));
 		this.loadingProgress = loadingBar.addsprite("images/tutorial-icons/loadingbar-repeat.png").pos(Game.translateX(20), Game.translateY( 0));
 		this.loadingBarEnd = loadingBar.addsprite("images/tutorial-icons/loadingbar-end.png").pos(Game.translateX(577), Game.translateY( 0));
 		this.loadingText = this.loadingBar.addsprite("images/tutorial-icons/loading001.png");
 		this.loadingBarEnd.visible(0);
-		this.loadingProgress.size(Game.translateX(557), Game.translateY( 42));
-		this.loadingProgress.scale(0, 100);
+		this.loadingProgress.size(Game.translateX(557 * 0), Game.translateY( 42));
+		//this.loadingProgress.scale(0, 100);
 		
 		Game.screens = new Array();
 		Game.animations = new Animations();
@@ -249,29 +249,34 @@ class Game
 
 	function loading1()
 	{
-		this.loadingProgress.scale(25, 100);
+//		this.loadingProgress.scale(25, 100);
+		this.loadingProgress.size(Game.translateX(557 * 25 / 100), Game.translateY( 42));
 		this.loadingText.texture("images/tutorial-icons/loading002.png");
 		c_invoke(loading2, 1000, null);
 	}
 	
 	function loading2()
 	{
-		this.loadingProgress.scale(50, 100);
+//		this.loadingProgress.scale(50, 100);
+		this.loadingProgress.size(Game.translateX(557 * 50 / 100), Game.translateY( 42));
 		this.loadingText.texture("images/tutorial-icons/loading003.png");
 		c_invoke(loading3, 1000, null);
 	}
 	
 	function loading3()
 	{
-		this.loadingProgress.scale(75, 100);
+//		this.loadingProgress.scale(75, 100);
+		this.loadingProgress.size(Game.translateX(557 * 75 / 100), Game.translateY( 42));
 		this.loadingText.texture("images/tutorial-icons/loading004.png");
 		c_invoke(loading4, 1000, null);
 	}
 	
 	function loading4()
 	{
-		this.loadingText.texture("images/tutorial-icons/loading005.png");
-		this.loadingProgress.scale(100, 100);
+		this.loadingText.texture("images/tutorial-icons/loading005.png");	
+//		this.loadingProgress.scale(100, 100);
+		this.loadingProgress.size(Game.translateX(557), Game.translateY( 42));
+		
 		Game.getServer().getCurrentDateAndTick(this.initializeTimers);
 		this.loadingBarEnd.visible(1);		
 

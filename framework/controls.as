@@ -208,17 +208,7 @@ class Control
 			fontStyle = FONT_NORMAL;
 		}
 
-		var textAlign;
-		var strTextAlign = this.attrs.get("text-align");
-		if(strTextAlign == "left") {
-			textAlign = ALIGN_LEFT;
-		}
-		else if(strTextAlign == "right") {
-			textAlign = ALIGN_RIGHT;
-		}
-		else {
-			textAlign = ALIGN_CENTER;
-		}
+		var textAlign = this.attrs.get("text-align");
 
 		var selectedFont = "Arial";
 		var strFont = this.attrs.get("text-font");
@@ -250,6 +240,11 @@ class Control
 		this.textString = text;
 		
 		return ret;
+	}
+	
+	public function textColor(red, blue, green)
+	{
+		this.textLabel.color(red, blue, green);
 	}
 	
 	public function setFont(fontName, fontSize, style, align, wrapMode)
