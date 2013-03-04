@@ -76,6 +76,10 @@ class TravelController extends ScreenController
         TokyoCostText = this.screen.getElement("TokyoCostText").getSprite().addlabel("Only " + getCostTest(TokyoCost) + " Miles", "Arial",Game.translateFontSize(30));
         SydneyCostText = this.screen.getElement("SydneyCostText").getSprite().addlabel("Only " + getCostTest(SydneyCost) + " Diamonds", "Arial",Game.translateFontSize(30));
 
+        var slider = this.screen.getElement("travelOptionsFrame").getSprite();
+        var size = slider.size();
+        slider.size(20000, size[1]);
+        
         this.travelTimer = new planeTravelTimer();
     }
 
@@ -141,16 +145,9 @@ class TravelController extends ScreenController
             buyTicketToTokyo();
         }
         else if (event.name == "goToSydney") {
-            if(Game.sharedGame().passport.citiesVisited >= 5) {
-                Game.sounds.playSFX("buttonPress");
-                this.screen.getElement("goToSydney").getSprite().texture("images/travel-screen/go-button-highlight.png");
-                buyTicketToSydney();
-            }
-            else {
-                var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_Travel_Sydney);
-                promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
-                this.presentModalScreen(promptScreen);
-            }
+            Game.sounds.playSFX("buttonPress");
+            this.screen.getElement("goToSydney").getSprite().texture("images/travel-screen/go-button-highlight.png");
+            buyTicketToSydney();
         }
         else if(event.name == "dismiss") {
             Game.sounds.playSFX("buttonPress");

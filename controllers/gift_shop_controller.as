@@ -114,32 +114,32 @@ class GiftShopController extends ScreenController
 			diamondCost.setText(str(Game.sharedGame().shop.getSouvenirCost(GiftShopController.travelDestination, 1)));
 			
 			if(GiftShopController.travelDestination == "London") {
-				achievementIcon.texture("images/gift-shop-icons/bulldog.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/bulldog.png");
 				itemNameText.setText("Bulldog");
 				itemDescriptionText.setText("A breed for distinguished people such as yourself.");
 			}
 			else if(GiftShopController.travelDestination == "SanFrancisco") {
-				achievementIcon.texture("images/gift-shop-icons/sourdough-bread.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/sourdough-bread.png");
 				itemNameText.setText("Sourdough Bread");
 				itemDescriptionText.setText("This distinctive bread is a true San Francisco favorite.");
 			}
 			else if(GiftShopController.travelDestination == "Paris") {
-				achievementIcon.texture("images/gift-shop-icons/baguette.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/baguette.png");
 				itemNameText.setText("Baguette");
 				itemDescriptionText.setText("Oui! Oui! Something so simple yet so wonderful to eat. ");
 			}
 			else if(GiftShopController.travelDestination == "BuenosAires") {
-				achievementIcon.texture("images/gift-shop-icons/el-obelisco.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/el-obelisco.png");
 				itemNameText.setText("El Obelisco");
 				itemDescriptionText.setText("Show off your historical side by visiting this monument in the financial district.");
 			}
 			else if(GiftShopController.travelDestination == "Tokyo") {
-				achievementIcon.texture("images/gift-shop-icons/sushi.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/sushi.png");
 				itemNameText.setText("Sushi");
 				itemDescriptionText.setText("Can heaven be found in a single bite? It can in Tokyo.");
 			}
 			else if(GiftShopController.travelDestination == "Sydney") {
-				achievementIcon.texture("images/gift-shop-icons/koala.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/koala.png");
 				itemNameText.setText("Koala");
 				itemDescriptionText.setText("Soft and cuddly, aren't these illegal to bring home? Not for a jetsetter");
 			}
@@ -152,32 +152,32 @@ class GiftShopController extends ScreenController
 			diamondCost.setText(str(Game.sharedGame().shop.getSouvenirCost(GiftShopController.travelDestination, 2)));
 			
 			if(GiftShopController.travelDestination == "London") {
-				achievementIcon.texture("images/gift-shop-icons/gin.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/gin.png");
 				itemNameText.setText("Gin");
 				itemDescriptionText.setText("A bottle of their finest for that upcoming cocktail party you're hosting.");
 			}
 			else if(GiftShopController.travelDestination == "SanFrancisco") {
-				achievementIcon.texture("images/gift-shop-icons/gg-bridge.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/gg-bridge.png");
 				itemNameText.setText("GG Bridge Picture");
 				itemDescriptionText.setText("Your visit to the Golden Gate begs the question, which is more popular?");
 			}
 			else if(GiftShopController.travelDestination == "Paris") {
-				achievementIcon.texture("images/gift-shop-icons/eiffel-tower.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/eiffel-tower.png");
 				itemNameText.setText("Eiffel Tower Picture");
 				itemDescriptionText.setText("Visit this romantic landmark and rekindle the fires with your husband or that cute guy at the patisserie.");
 			}
 			else if(GiftShopController.travelDestination == "BuenosAires") {
-				achievementIcon.texture("images/gift-shop-icons/do-the-tango.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/do-the-tango.png");
 				itemNameText.setText("Tango");
 				itemDescriptionText.setText("Discover the passion of the most forbidden of dances.");
 			}
 			else if(GiftShopController.travelDestination == "Tokyo") {
-				achievementIcon.texture("images/gift-shop-icons/sake.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/sake.png");
 				itemNameText.setText("Sake");
 				itemDescriptionText.setText("A sip here, a sip there and you'll think you're turning Japanese.");
 			}
 			else if(GiftShopController.travelDestination == "Sydney") {
-				achievementIcon.texture("images/gift-shop-icons/opera-house.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/opera-house.png");
 				itemNameText.setText("Opera House");
 				itemDescriptionText.setText("Opera never looked this good! The Aussies know how to take high culture even higher.");
 			}
@@ -190,32 +190,32 @@ class GiftShopController extends ScreenController
 			diamondCost.setText(str(Game.sharedGame().shop.getSouvenirCost(GiftShopController.travelDestination, 3)));
 			
 			if(GiftShopController.travelDestination == "London") {
-				achievementIcon.texture("images/gift-shop-icons/big-ben.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/big-ben.png");
 				itemNameText.setText("Big Ben");
 				itemDescriptionText.setText("No trip to London would be complete without seeing Big Ben.");
 			}
 			else if(GiftShopController.travelDestination == "SanFrancisco") {
-				achievementIcon.texture("images/gift-shop-icons/dim-sum.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/dim-sum.png");
 				itemNameText.setText("Dim Sum");
 				itemDescriptionText.setText("Taste the delicacies of Chinatown.");
 			}
 			else if(GiftShopController.travelDestination == "Paris") {
-				achievementIcon.texture("images/gift-shop-icons/poodle.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/poodle.png");
 				itemNameText.setText("Poodle");
 				itemDescriptionText.setText("Cute, sassy and a little snotty, like you.");
 			}
 			else if(GiftShopController.travelDestination == "BuenosAires") {
-				achievementIcon.texture("images/gift-shop-icons/puente-de-la-mujer.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/puente-de-la-mujer.png");
 				itemNameText.setText("Puente De La Mujer");
 				itemDescriptionText.setText("A quiet evening stroll along this modern wonder will have others wondering how you manage to do it all.");
 			}
 			else if(GiftShopController.travelDestination == "Tokyo") {
-				achievementIcon.texture("images/gift-shop-icons/bullet-train.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/bullet-train.png");
 				itemNameText.setText("Shinkansen");
 				itemDescriptionText.setText("The speed, the luxury, the way ground travel was meant to be.");
 			}
 			else if(GiftShopController.travelDestination == "Sydney") {
-				achievementIcon.texture("images/gift-shop-icons/harbour-bridge.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/harbour-bridge.png");
 				itemNameText.setText("Harbor Bridge");
 				itemDescriptionText.setText("They call it The Coathanger, obviously Sydney understands high fashion.");
 			}
@@ -228,32 +228,32 @@ class GiftShopController extends ScreenController
 			diamondCost.setText(str(Game.sharedGame().shop.getSouvenirCost(GiftShopController.travelDestination, 4)));
 			
 			if(GiftShopController.travelDestination == "London") {
-				achievementIcon.texture("images/gift-shop-icons/buckingham-palace.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/buckingham-palace.png");
 				itemNameText.setText("Buckingham Palace");
 				itemDescriptionText.setText("Stop by and share tips with the Queen on interacting with the common folk.");
 			}
 			else if(GiftShopController.travelDestination == "SanFrancisco") {
-				achievementIcon.texture("images/gift-shop-icons/cable-car.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/cable-car.png");
 				itemNameText.setText("Cable Car");
 				itemDescriptionText.setText("Ride an historic cable car and see the sights.");
 			}
 			else if(GiftShopController.travelDestination == "Paris") {
-				achievementIcon.texture("images/gift-shop-icons/dress.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/dress.png");
 				itemNameText.setText("Dress");
 				itemDescriptionText.setText("Buy a couture dress and show the others your fantastic sense of style.");
 			}
 			else if(GiftShopController.travelDestination == "BuenosAires") {
-				achievementIcon.texture("images/gift-shop-icons/mate.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/mate.png");
 				itemNameText.setText("Yerba Mate Tea");
 				itemDescriptionText.setText("Enjoy this tea in a gourd just like the locals do!");
 			}
 			else if(GiftShopController.travelDestination == "Tokyo") {
-				achievementIcon.texture("images/gift-shop-icons/kinkakuji.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/kinkakuji.png");
 				itemNameText.setText("Kinkakuji Picture");
 				itemDescriptionText.setText("They have solid gold buildings here?! Show the others how cultured you are.");
 			}
 			else if(GiftShopController.travelDestination == "Sydney") {
-				achievementIcon.texture("images/gift-shop-icons/kangaroo.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/kangaroo.png");
 				itemNameText.setText("Kangaroo");
 				itemDescriptionText.setText("Great to take pictures of, not great for a pet.");
 			}
@@ -266,32 +266,32 @@ class GiftShopController extends ScreenController
 			diamondCost.setText(str(Game.sharedGame().shop.getSouvenirCost(GiftShopController.travelDestination, 5)));
 			
 			if(GiftShopController.travelDestination == "London") {
-				achievementIcon.texture("images/gift-shop-icons/fish-n-chips.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/fish-n-chips.png");
 				itemNameText.setText("Fish N Chips");
 				itemDescriptionText.setText("Temptation finally gets the best of you and your diet comes to a delicious end.");
 			}
 			else if(GiftShopController.travelDestination == "SanFrancisco") {
-				achievementIcon.texture("images/gift-shop-icons/alcatraz.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/alcatraz.png");
 				itemNameText.setText("Alcatraz");
 				itemDescriptionText.setText("Take a sightseeing excursion to tour Alcatraz Island.");
 			}
 			else if(GiftShopController.travelDestination == "Paris") {
-				achievementIcon.texture("images/gift-shop-icons/wine.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/wine.png");
 				itemNameText.setText("Wine");
 				itemDescriptionText.setText("Enjoy a bottle of wine with other fancy people.");
 			}
 			else if(GiftShopController.travelDestination == "BuenosAires") {
-				achievementIcon.texture("images/gift-shop-icons/el-caminito.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/el-caminito.png");
 				itemNameText.setText("Caminito");
 				itemDescriptionText.setText("Experience the birthplace of the music behind the tango.");
 			}
 			else if(GiftShopController.travelDestination == "Tokyo") {
-				achievementIcon.texture("images/gift-shop-icons/kimono.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/kimono.png");
 				itemNameText.setText("Kimono");
 				itemDescriptionText.setText("Wrap yourself in a beautiful kimono.");
 			}
 			else if(GiftShopController.travelDestination == "Sydney") {
-				achievementIcon.texture("images/gift-shop-icons/manly-ferry.png");
+				achievementIcon.texture("images/gift-shop-icons/for-balloons/manly-ferry.png");
 				itemNameText.setText("Manly Ferry");
 				itemDescriptionText.setText("Where are all the manly men? Oh well, get on board and head to Manly for fantastic beaches.");
 			}

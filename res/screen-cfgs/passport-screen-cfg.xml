@@ -5,23 +5,26 @@
 		
 		<screen:element name="background" resource="passport-screen/london-bg.jpg" left="0" top="0"/>
 				
-		<screen:element name="souvenir3" resource="passport-screen/b-left-frame.png" left="169" top="356"/>
-		<screen:element name="souvenir4" resource="passport-screen/b-right-frame.png" left="757" top="349"/>
-		<screen:element name="souvenir1" resource="passport-screen/t-left-frame.png" left="120" top="5"/>
-		<screen:element name="souvenir2" resource="passport-screen/t-right-frame.png" left="784" top="26"/>
-		<screen:element name="souvenir5" resource="passport-screen/mid-frame.png" left="464" top="278"/>
+		<screen:element name="souvenir1" resource="passport-screen/t-left-frame.png" left="40" top="16">
+			<screen:element name="souvenirTopLeftIcon" resource="" left="10" top="16"/>
+		</screen:element>
 		
-		<screen:element name="souvenirTopLeftIcon" resource="" left="0" top="0"/>
-		<screen:element name="souvenirTopRightIcon" resource="" left="0" top="0"/>
-		<screen:element name="souvenirBottomLeftIcon" resource="" left="0" top="0"/>
-		<screen:element name="souvenirBottomRightIcon" resource="" left="0" top="0"/>
-		<screen:element name="souvenirMiddleIcon" resource="" left="0" top="0"/>
+		<screen:element name="souvenir2" resource="passport-screen/t-right-frame.png" left="862" top="16">
+			<screen:element name="souvenirTopRightIcon" resource="" left="14" top="18"/>
+		</screen:element>
 		
-		<screen:element name="souvenirTopLeftCaption" resource="" left="305" top="356"/>
-		<screen:element name="souvenirTopRightCaption" resource="" left="878" top="329"/>
-		<screen:element name="souvenirBottomLeftCaption" resource="" left="208" top="630"/>
-		<screen:element name="souvenirBottomRightCaption" resource="" left="926" top="710"/>
-		<screen:element name="souvenirMiddleCaption" resource="" left="591" top="600"/>
+		<screen:element name="souvenir4" resource="passport-screen/b-right-frame.png" left="757" top="349">
+			<screen:element name="souvenirBottomRightIcon" resource="" left="10" top="16"/>
+		</screen:element>
+		
+		<screen:element name="souvenir3" resource="passport-screen/b-left-frame.png" left="40" top="356">
+			<screen:element name="souvenirBottomLeftIcon" resource="" left="14" top="18"/>
+		</screen:element>
+		
+		<screen:element name="souvenir5" resource="passport-screen/mid-frame.png" left="500" top="136">
+			<screen:element name="souvenirMiddleIcon" resource="" left="14" top="16"/>
+		</screen:element>
+		
 		
 		<screen:element name="achievementbadge" resource="passport-screen/stamp.png" left="456" top="58" visible="NO"/>
 		

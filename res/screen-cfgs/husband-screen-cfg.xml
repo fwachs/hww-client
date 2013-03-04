@@ -36,12 +36,16 @@
 		<screen:element name="salary" left="935" top="136" />
 
 		
-		<screen:element name="loveTank" resource="hubby-screen/love-tank00.png" left="968" top="277" ontap="fillLoveTank" />
-        <screen:element name="loveTankPlus" resource="hubby-screen/plus-icon.png" left="1124" top="246" ontap="fillLoveTank"/>
-
-		<screen:element name="stressMeter" resource="hubby-screen/stress-meter1.png" left="968" top="431" ontap="releaseStress"/>
-		<screen:element name="stressMeterPlus" resource="hubby-screen/plus-icon.png" left="1124" top="408" ontap="releaseStress"/>
-		
+		<screen:element name="hotspotLoveTank" resource="" left="968" top="246" width="250" height="180" ontap="fillLoveTank">
+			<screen:element name="loveTank" resource="hubby-screen/love-tank00.png" left="0" top="31"/>
+	        <screen:element name="loveTankPlus" resource="hubby-screen/plus-icon.png" left="156" top="0"/>
+		</screen:element>
+        
+		<screen:element name="hotspotStressMeter" resource="" left="968" top="408" width="250" height="180" ontap="releaseStress">
+			<screen:element name="stressMeter" resource="hubby-screen/stress-meter1.png" left="0" top="31"/>
+			<screen:element name="stressMeterPlus" resource="hubby-screen/plus-icon.png" left="156" top="0"/>
+		</screen:element>
+					
 		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
 			<screen:element name="faceAnimation" resource="" left="0" top="0" />
 			<screen:element name="chatBubble" resource="main-menu/chat-bubble.png" left="210" top="-75" visible="NO">
