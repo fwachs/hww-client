@@ -412,7 +412,7 @@ class MainController extends ScreenController
     	//trace("inviteFriend: ", friend, friend.friendUserId);
     	
     	// uncomment for final version
-//    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
+    	ppy_query("send_friend_request", dict("uid", friend.friendUserId), friendInvited, friend);
 //    	this.friendInvited(0, 1, 0, friend);
     }
 
