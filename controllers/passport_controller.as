@@ -49,6 +49,10 @@ class PassportController extends ScreenController
 		
 		this.screen.loadDestination(currentPage);
 		
+		stampCompletedDateLabel = this.screen.getElement("achievementbadge").getSprite().addlabel(Game.sharedGame().today, Game.getFont(), Game.translateFontSize(24));
+		stampCompletedDateLabel.pos(Game.translateX(100), Game.translateY( 140));
+		stampCompletedDateLabel.color(0,0,0);
+		
 		this.checkAchievements();
 		
 		if(this.screen.souvinirPurchase == 1) {

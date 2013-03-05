@@ -186,6 +186,7 @@ class MainController extends ScreenController
             Game.sounds.playSFX("buttonPress");
 
             this.screen.getElement("dailyBonusFrame").getSprite().visible(0);
+    		this.screen.getElement("closeDailyBonusButton").getSprite().visible(0);
         }
         else if (event.name == "showGiftOthersStep") {
             Game.sounds.playSFX("buttonPress");

@@ -349,10 +349,10 @@ class HusbandController extends ScreenController implements TimerListener
         }
     }
 
-    public function thresholdWeighedWithBuff(thrx)
+    public function thresholdWeighedWithBuff(threshold)
     {
         trace("### HWW ### rareItemThreshold: " + str(Game.sharedGame().hubby.rareItemThreshold));
-        thrx += Game.sharedGame().hubby.rareItemThreshold;
+        var thrx = threshold + Game.sharedGame().hubby.rareItemThreshold;
         if(thrx > 100) {
             thrx = 100;
         }
@@ -382,15 +382,19 @@ class HusbandController extends ScreenController implements TimerListener
 
         //
         var threshold = this.thresholdWeighedWithBuff(itemType);
+        
+        log("### HWW ### - Item type: " + str(itemType));
+        log("### HWW ### - Threshold: " + str(threshold));
 
         // 30% chance to get furniture
         if(itemType <= 30) {
             var furnLen = len(Game.sharedGame().furnitureListing);
 
-            trace("### HWW ### - Furniture items: " + str(furnLen));
+            log("### HWW ### - Furniture items: " + str(furnLen));
 
             // seperate by rarity only allow items the husband is high enough level for and don't cost diamonds
             for(var i = 0; i < furnLen; i++) {
+            	if(Game.sharedGame().furnitureListing[i].id == 499) continue; //skip pink pug
                 if(Game.sharedGame().furnitureListing[i].stars == 0 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
                     commonItems.append(Game.sharedGame().furnitureListing[i]);
                 if(Game.sharedGame().furnitureListing[i].stars == 1 && Game.sharedGame().furnitureListing[i].level <= Game.sharedGame().hubby.careerLevel && Game.sharedGame().furnitureListing[i].diamonds == 0)
@@ -401,10 +405,10 @@ class HusbandController extends ScreenController implements TimerListener
                     extremelyRareItems.append(Game.sharedGame().furnitureListing[i]);
             }
 
-            trace("### HWW ### - common items: " + str(len(commonItems)));
-            trace("### HWW ### - rareItems: " + str(len(rareItems)));
-            trace("### HWW ### - veryRareItems: " + str(len(veryRareItems)));
-            trace("### HWW ### - extremelyRareItems: " + str(len(extremelyRareItems)));
+            log("### HWW ### - common items: " + str(len(commonItems)));
+            log("### HWW ### - rareItems: " + str(len(rareItems)));
+            log("### HWW ### - veryRareItems: " + str(len(veryRareItems)));
+            log("### HWW ### - extremelyRareItems: " + str(len(extremelyRareItems)));
 
 
             // check if husband is of level required
@@ -439,12 +443,12 @@ class HusbandController extends ScreenController implements TimerListener
                 shoppingItem = commonItems[selectionIndex];
             }
 
-            trace("### HWW ### - Item rarity: " + str(rareness));
+            log("### HWW ### - Item rarity: " + str(rareness));
             itemLevel = shoppingItem.level;
 
-            trace("### HWW ### - Item retrieved: " + str(shoppingItem.name) + " - " + str(shoppingItem.id))
-            trace("### HWW ### - Retrieved furniture item requiring level: " + str(itemLevel));
-            trace("### HWW ### - Husband is level: " + str(Game.sharedGame().hubby.careerLevel));
+            log("### HWW ### - Item retrieved: " + str(shoppingItem.name) + " - " + str(shoppingItem.id))
+            log("### HWW ### - Retrieved furniture item requiring level: " + str(itemLevel));
+            log("### HWW ### - Husband is level: " + str(Game.sharedGame().hubby.careerLevel));
 
             Game.sharedGame().house.saveNewStorageItem(shoppingItem);
             Game.sounds.playSFX("gainSSP");
@@ -456,16 +460,14 @@ class HusbandController extends ScreenController implements TimerListener
             rareness = rand(100, 4) + 1;
             rareness += threshold;
             var mysteryItemsMap = Game.sharedGame().mysteryItems; 
-            trace("mystery items map ", mysteryItemsMap);
+            log("mystery items map ", mysteryItemsMap);
             var mysteryItemsKeys = mysteryItemsMap.keys();
-            trace("mystery keys ", mysteryItemsKeys);
+            log("mystery keys ", mysteryItemsKeys);
 
             // seperate by rarity
             for(var j = 0; j < miLen; j++) {
                 var mysteryItemKey = mysteryItemsKeys[j];
-                trace("mystery key ", mysteryItemKey);
                 var mysteryItem = mysteryItemsMap.get(mysteryItemKey);
-                trace("found mystery item: ", mysteryItem);
                 if(mysteryItem.stars == 0)
                     commonItems.append(mysteryItem);
                 if(mysteryItem.stars == 1)
@@ -476,10 +478,11 @@ class HusbandController extends ScreenController implements TimerListener
                     extremelyRareItems.append(mysteryItem);
             }
 
-            trace("### HWW ### - common items: " + str(len(commonItems)));
-            trace("### HWW ### - rareItems: " + str(len(rareItems)));
-            trace("### HWW ### - veryRareItems: " + str(len(veryRareItems)));
-            trace("### HWW ### - extremelyRareItems: " + str(len(extremelyRareItems)));
+            log("### HWW ### - rareness: " + str(rareness));
+            log("### HWW ### - common items: " + str(len(commonItems)));
+            log("### HWW ### - rareItems: " + str(len(rareItems)));
+            log("### HWW ### - veryRareItems: " + str(len(veryRareItems)));
+            log("### HWW ### - extremelyRareItems: " + str(len(extremelyRareItems)));
 
             if(rareness > 95 && len(extremelyRareItems) > 0) {
                 selectionRange = len(extremelyRareItems);

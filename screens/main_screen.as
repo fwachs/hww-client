@@ -147,18 +147,19 @@ class MainScreen extends Screen
 	{
 		var db = Game.getDatabase();
 		var lastReward = db.get("lastReward");
-		var count = lastReward.get("reward.count");
+		var count = 1;
 		trace("### HWW ### - LastReward: ", str(lastReward));
 		trace("### HWW ### - LastReward count : ", str(count));
-		if (count == null) {
-            count = 1;
-        }
+		if(lastReward != null) {
+			count = lastReward.get("reward.count");
+		}
 		for (var i=1; i <= count; i++) {
 			this.getElement("day"+str(i)+"Icon").getSprite().texture("images/daily-bonus-prompt/check-select.png");
 		}
 		
 		this.getElement("todayBonusPrize").getSprite().texture("images/daily-bonus-prompt/bonus-0" + str(count) +".png");
 		this.getElement("dailyBonusFrame").getSprite().visible(1);
+		this.getElement("closeDailyBonusButton").getSprite().visible(1);
 	}
 
 }

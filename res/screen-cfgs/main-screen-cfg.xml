@@ -71,8 +71,8 @@
 			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="976" top="94" ontap="closeSettings"/>
 		</screen:element>
 
-		<screen:element name="dailyBonusFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="78" top="125" visible="NO" z-index="100" ontap="doNothing">
-			<screen:element name="closeDailyBonusButton" resource="gift-shop-prompt/cancel-button.png" left="1125" top="-30" ontap="hideDailyBonusFrame" z-index="100"/>
+		<screen:element name="closeDailyBonusButton" resource="gift-shop-prompt/cancel-button.png" left="1047" top="95" ontap="hideDailyBonusFrame" z-index="110" visible="NO"/>
+		<screen:element name="dailyBonusFrame" resource="daily-bonus-prompt/daily-bonus-frame.png" left="78" top="125" visible="NO" z-index="100" ontap="doNothing">		    
 			<screen:element name="todayBonusBox" resource="daily-bonus-prompt/today-bonus-box.png" left="67" top="21">
 				<screen:element name="todayBonusText" resource="daily-bonus-prompt/daily-bonus-text.png" left="152" top="3"/>
 				<screen:element name="todayBonusPrize" resource="" left="410" top="130"/>
