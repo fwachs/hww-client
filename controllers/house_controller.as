@@ -136,9 +136,11 @@ class HouseController extends ScreenController implements TimerListener
                 missionId = 1;
             }
             var mission = Game.sharedGame().getMission(missionId);
-            var missionsScreen = new MissionsScreen(mission);
-            missionsScreen.configFile = "screen-cfgs/missions-screen-cfg.xml";
-            this.presentModalScreen(missionsScreen);
+            if (mission != null) {
+                var missionsScreen = new MissionsScreen(mission);
+                missionsScreen.configFile = "screen-cfgs/missions-screen-cfg.xml";
+                this.presentModalScreen(missionsScreen);
+            }
         }
         else if (event.name == "collectMission") {
             Game.sounds.playSFX("houseLevelUp");
@@ -149,15 +151,17 @@ class HouseController extends ScreenController implements TimerListener
             }
             var lastMission = Game.sharedGame().getMission(lastMissionId);
             // collect
-            var costGB = this.getGameBucks(lastMission.gameBucks);
-            var costD = this.getDiamonds(lastMission.diamonds);
-            Game.sharedGame().wallet.collect(costGB);
-            Game.sharedGame().wallet.collect(costD);
-            var wife = Game.sharedGame().wife;
-            wife.incSocialStatusPoints(lastMission.ssp);
-            wife.save();
-            lastMissionId++;
-            database.put("lastMissionId", lastMissionId);
+            if (lastMission != null) {
+                var costGB = this.getGameBucks(lastMission.gameBucks);
+                var costD = this.getDiamonds(lastMission.diamonds);
+                Game.sharedGame().wallet.collect(costGB);
+                Game.sharedGame().wallet.collect(costD);
+                var wife = Game.sharedGame().wife;
+                wife.incSocialStatusPoints(lastMission.ssp);
+                wife.save();
+                lastMissionId++;
+                database.put("lastMissionId", lastMissionId);
+            }
             this.dismissModalScreen();
         }
     }

@@ -25,7 +25,8 @@ import screens.receive_gift_screen
 import screens.mystery_items_screen
 import screens.message_box_screen
 import screens.missions_screen
-
+import screens.tournament_screen
+import screens.reward_screen
 
 import controllers.house_controller
 import controllers.husband_controller
@@ -39,8 +40,6 @@ import controllers.house_selection_controller
 import controllers.gift_others_prompt_controller
 import controllers.receive_gift_controller
 import controllers.mystery_items_controller
-
-
 
 class MainController extends ScreenController
 {
@@ -212,6 +211,21 @@ class MainController extends ScreenController
 
             Game.pushScreen(Game.sharedGame().hubby.husbandScreen);
         }
+        else if (event.name == "collectReward") {
+            Game.sounds.playSFX("buttonPress");
+            var storedRewards = Game.getDatabase().get("storedRewards");
+            trace("storedRewards before pop: ", storedRewards);
+            var reward = storedRewards.pop(0); 
+            var amount = reward.get("amount");
+            var currency = reward.get("currency");
+            if (amount != null && currency != null) {
+                var freeMoney = Game.currentGame.wallet.moneyForCurrency(amount, currency);
+                Game.currentGame.wallet.collect(freeMoney);
+            }
+            trace("storedRewards after pop: ", storedRewards);
+            Game.getDatabase().put("storedRewards", storedRewards);
+            this.dismissModalScreen();
+        }
         else if(event.name == "dismiss") {
             Game.sounds.playSFX("buttonPress");
             this.dismissModalScreen();
@@ -221,7 +235,6 @@ class MainController extends ScreenController
             openUrl("static_home", 1);
         }
         else if(event.name == "gotoPapayaCircle") {
-            trace("papaya circle");
             Game.sounds.playSFX("buttonPress");
             openUrl("static_mycircles_circle?cid=7644329", 1);
         }
@@ -317,6 +330,15 @@ class MainController extends ScreenController
                 trace("### HWW ### - Count of storedGifts", str(len(storedGifts)));
                 countElement.setText(str(len(storedGifts)));
             }
+        }
+
+        var storedRewards = Game.getDatabase().get("storedRewards");
+        if (storedRewards != null && len(storedRewards)>0)
+        {
+            trace("showing storedRewards: ", storedRewards);
+            var rewardScreen = new RewardScreen(storedRewards[0]);
+            rewardScreen.configFile = "screen-cfgs/reward-prompt-cfg.xml";
+            this.presentModalScreen(rewardScreen);
         }
     }
 

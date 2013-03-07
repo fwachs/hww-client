@@ -13,7 +13,6 @@ Brief Description:
 class GossipScreen extends Screen
 {
 	var screenUpdateTimer;
-	var textInput;
 	var text;
 	
 	var ypos;
@@ -34,39 +33,34 @@ class GossipScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
-		
-		/*
-		var vf = v_font(Game.translateFontSize(30), "arial", FONT_NORMAL);
-		this.textInput = v_create(V_INPUT_VIEW, Game.translateX(400), Game.translateY(686), Game.translateX(550), Game.translateY(100));
-		this.textInput.attr(ATTR_FONT, vf);
-		v_root().addview(this.textInput);
-		this.textInput.text(this.text);
-		*/
 	}
 	
 	override public function lostFocus()
 	{
 		Game.hideBanner();
 		
-		this.textInput.removefromparent();
 		this.stopWifeAnimation();
 	}
 
 	public function stopWifeAnimation()
 	{
-		this.getElement("rightArm").getSprite().stop();
-		this.getElement("leftArm").getSprite().stop();
-		this.getElement("rightArmSleeve").getSprite().stop();
-		this.getElement("leftArmSleeve").getSprite().stop();
-		this.getElement("face").getSprite().stop();
+	    for (var i=1; i<4; i++) {
+	        var pos = str(i);
+	        this.getElement("rightArm" + pos).getSprite().stop();
+	        this.getElement("leftArm" + pos).getSprite().stop();
+	        this.getElement("rightArmSleeve" + pos).getSprite().stop();
+	        this.getElement("leftArmSleeve" + pos).getSprite().stop();
+	        this.getElement("face" + pos).getSprite().stop();
+	    }
 	}
 
-	public function drawBestHouseWife(topHouseWife)
+	public function drawBestHouseWife(topHouseWife, pos, runAnimation)
 	{
-		this.getElement("topWifeName").setText(topHouseWife.name);
-		topHouseWife.dress(this, 0);
+	    pos = str(pos);
+		this.getElement("topWifeName" + pos).setText(topHouseWife.name);
+		topHouseWife.dress(this, 0, pos, runAnimation);
 		
-		this.getElement("sspText").setText(str(topHouseWife.socialStatusPoints));
+		this.getElement("sspText" + pos).setText(str(topHouseWife.socialStatusPoints));
 	}
 	
 	public function addMessageToWall(idx, message, ypos)
@@ -90,7 +84,6 @@ class GossipScreen extends Screen
 	public function updateMessages(msgs)
 	{
 		this.messages = msgs;
-		this.drawWall(this.messages)
 	}
 	
 	public function drawWall(messages)
@@ -126,15 +119,13 @@ class GossipScreen extends Screen
 	
 	public function post()
 	{
-		this.text = this.textInput.text();
-		this.textInput.text("");
 		
 		// TODO: get house level
 		if (this.text != "") {
 		    this.messages.append(dict([["message", this.text], ["houseWifeName", Game.currentGame.wife.name], ["houseLeve", ""], ["timeAgo", ""]]));
-		    var msg = new GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
+		    var msg = GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
 	        
-	        Game.getServer().postGossip(msg, this.buildMessageListAndBestWife);    
+	        Game.sharedGame().getServer().postGossip(msg, this.buildMessageListAndBestWife);    
 		}
 	}
 
@@ -146,12 +137,22 @@ class GossipScreen extends Screen
         var response = json_loads(response_content);
         var messages = response.get("messages");
         var bestWife = response.get("bestHouseWife");
-        
+        var secondHouseWife = response.get("secondHouseWife");
+        var thirdHouseWife = response.get("thirdHouseWife");
+
         var topHouseWife = new Wife();
         topHouseWife.loadFromJSON(bestWife);
-        
+        this.drawBestHouseWife(topHouseWife, 1);   
+
+        var secondWife = new Wife();
+        secondWife.loadFromJSON(secondHouseWife);
+        this.drawBestHouseWife(secondWife, 2, 0);
+
+        var thirdWife = new Wife();
+        thirdWife.loadFromJSON(thirdHouseWife);
+        this.drawBestHouseWife(thirdWife, 3, 0);
+
         this.updateMessages(messages);
-        this.drawBestHouseWife(topHouseWife);   
     }
 }
 

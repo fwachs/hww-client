@@ -242,6 +242,199 @@
 		<hww-config:task itemId="145" name="Place 1 Retro Cabinet" amount="1" />	
 		<hww-config:task itemId="260" name="Place 1 Retro Vanity" amount="1" />	
 	</hww-config:mission>
-		
+	
+	<hww-config:mission id="51" name="Turning Japanese " ssp="9000" gameBucks="0" diamonds="4" type="furniture" image="furniture/lamps/209_Lamp.png">	
+		<hww-config:task itemId="219" name="Place 1 Japanese Mirror" amount="1" />
+		<hww-config:task itemId="209" name="Place 1 Japanese Lamp" amount="1" />
+	</hww-config:mission>
+	
+	<hww-config:mission id="52" name="Victorian Era" ssp="2500" gameBucks="2000" diamonds="0" type="furniture" image="furniture/sofas/051_sofa.png">	
+		<hww-config:task itemId="51" name="Place 1 Medieval Sofa" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="53" name="Serious Cooks Only!" ssp="8000" gameBucks="0" diamonds="0" type="furniture" image="furniture/ovens/126_Ovens.png">	
+		<hww-config:task itemId="126" name="Place 1 Professional Oven" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="54" name="Summertime " ssp="11000" gameBucks="0" diamonds="3" type="furniture" image="furniture/plants/231_Plant.png">	
+		<hww-config:task itemId="231" name="Place 2 Summer Mix Plants" amount="2" />
+	</hww-config:mission>
+
+	<hww-config:mission id="55" name="Turning Japanese II" ssp="60000" gameBucks="0" diamonds="12" type="furniture" image="furniture/Plants/232_Plant.png">	
+		<hww-config:task itemId="232" name="Place 4 Bonsai" amount="4" />
+	</hww-config:mission>
+	
+	<hww-config:mission id="56" name="His Royal Bedroom" ssp="50000" gameBucks="0" diamonds="0" type="furniture" image="furniture/beds/009_Bed.png">	
+		<hww-config:task itemId="9" name="Place 1 King Bed" amount="1" />
+		<hww-config:task itemId="51" name="Place 1 Medieval Sofa" amount="1" />
+		<hww-config:task itemId="115" name="Place 1 Imperial Shelf" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="57" name="Fairy Taffy" ssp="4000" gameBucks="4000" diamonds="0" type="furniture" image="furniture/sofas/054_Sofa.png">	
+		<hww-config:task itemId="54" name="Place 1 Pink Taffy Sofa" amount="1" />
+		<hww-config:task itemId="17" name="Place 1 Fairy Tale Crib" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="58" name="Art Gallery" ssp="8000" gameBucks="0" diamonds="0" type="furniture" image="furniture/paintings/394_Painting.png">	
+		<hww-config:task itemId="391" name="Place 1 Garden Painting" amount="1" />
+		<hww-config:task itemId="392" name="Place 1 Ocean Painting" amount="1" />
+		<hww-config:task itemId="393" name="Place 1 Mountain Painting" amount="1" />
+		<hww-config:task itemId="394" name="Place 1 Italian Villa Painting" amount="1" />
+		<hww-config:task itemId="395" name="Place 1 Human Painting" amount="1" />
+		<hww-config:task itemId="396" name="Place 1 Abstract Painting" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="59" name="Sweet Sounds" ssp="6500" gameBucks="0" diamonds="0" type="furniture" image="furniture/instruments/295_Instrument.png">		
+		<hww-config:task itemId="295" name="Place 1 Marimba" amount="1" />
+		<hww-config:task itemId="294" name="Place 1 Electric Organ" amount="1" />
+		<hww-config:task itemId="296" name="Place 1 Zither" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="60" name="Fun and Funky" ssp="10000" gameBucks="4000" diamonds="0" type="furniture" image="furniture/islands/276_island.png">	
+		<hww-config:task itemId="276" name="Place 1 Checkboard Island" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="61" name="Lady Leadfoot" ssp="15000" gameBucks="0" diamonds="0" type="furniture" image="furniture/cars/251_Car.png">	
+		<hww-config:task itemId="251" name="Place 1 Lady Racer" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="62" name="Indoors or Out?" ssp="70000" gameBucks="0" diamonds="6" type="furniture" image="furniture/pools/311_pool.png">	
+		<hww-config:task itemId="311" name="Place 1 Mini Pool" amount="1" />
+		<hww-config:task itemId="307" name="Place 1 New European Garden" amount="1" />
+		<hww-config:task itemId="267" name="Place 1 Peace Fountain" amount="1" />
+		<hww-config:task itemId="233" name="Place 2 Petite Sweets" amount="2" />
+	</hww-config:mission>
+
+
+	<hww-config:mission id="63" name="Money to Burn" ssp="5000" gameBucks="0" diamonds="0" type="furniture" image="furniture/fireplaces/285_Fireplace.png">	
+		<hww-config:task itemId="285" name="Place 1 Sculpted Fireplace" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="64" name="Swiss Alps" ssp="12000" gameBucks="0" diamonds="5" type="purchase" image="house-decorator/for-sale-button.png">	
+		<hww-config:task itemId="" name="Buy the Chateau" amount="1" />
+	</hww-config:mission>
+	
+	<hww-config:mission id="65" name="Blonde Hair, Blue Eyes" ssp="40000" gameBucks="0" diamonds="0" type="furniture" image="furniture/dressers/065_Dresser.png">	
+		<hww-config:task itemId="203" name="Place 2 Scandinavian Lamps " amount="2" />
+		<hww-config:task itemId="213" name="Place 1 Scandinavian Mirror" amount="1" />
+		<hww-config:task itemId="46" name="Place 1 Scandinavian Sofa" amount="1" />
+		<hww-config:task itemId="78" name="Place 1 Scandinavian Dining Table" amount="1" />
+		<hww-config:task itemId="65" name="Place 1 Scandinavian Dresser" amount="1" />
+		<hww-config:task itemId="96" name="Place 1 Scandinavian Coffee Table" amount="1" />
+		<hww-config:task itemId="110" name="Place 1 Scandinavian Shelf" amount="1" />
+		<hww-config:task itemId="143" name="Place 1 Scandinavian Cabinet" amount="1" />
+		<hww-config:task itemId="258" name="Place 1 Scandinavian Vanity" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="66" name="Kitchen Needs Color" ssp="30000" gameBucks="0" diamonds="10" type="furniture" image="furniture/fridge/136_Fridge.png">		
+		<hww-config:task itemId="35" name="Place 3 Purple Passion Chairs" amount="3" />
+		<hww-config:task itemId="136" name="Place 1 Tiffany Blue Refrigerator" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="67" name="Drop The Beat" ssp="0" gameBucks="0" diamonds="20" type="furniture" image="furniture/instruments/297_Instrument.png">	
+		<hww-config:task itemId="297" name="Place 1 Drum Kit" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="68" name="This Room Needs Something…" ssp="21000" gameBucks="0" diamonds="12" type="furniture" image="furniture/Plants/234_Plant.png">		
+		<hww-config:task itemId="234" name="Place 2 Peacock Plant2" amount="2" />
+	</hww-config:mission>
+
+	<hww-config:mission id="69" name="Renaissance " ssp="45000" gameBucks="0" diamonds="0" type="furniture" image="furniture/vanity/261_Vanity.png">	
+		<hww-config:task itemId="85" name="Place 1 Medieval Dining Table" amount="1" />
+		<hww-config:task itemId="101" name="Place 1 Medieval Coffee Table" amount="1" />
+		<hww-config:task itemId="116" name="Place 1 Medieval Shelf" amount="1" />
+		<hww-config:task itemId="146" name="Place 1 Medieval Cabinet" amount="1" />
+		<hww-config:task itemId="261" name="Place 1 Medieval Vanity" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="70" name="Remodel 7" ssp="75000" gameBucks="0" diamonds="0" type="Remodel" image="house-decorator/remod-button.png">	
+		<hww-config:task itemId="" name="Remodel Your House to Level 8" amount="1" />
+	</hww-config:mission>
+	<hww-config:mission id="71" name="Keep The Chairs But…" ssp="40000" gameBucks="0" diamonds="0" type="furniture" image="furniture/islands/277_island.png">	
+		<hww-config:task itemId="277" name="Place 1 Gourmet Chef Island" amount="1" />
+		<hww-config:task itemId="35" name="Place 3 Purple Passion Chairs" amount="1" />
+		<hww-config:task itemId="137" name="Place 1 Candy Coated Refrigerator" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="72" name="Our First Castle" ssp="50000" gameBucks="0" diamonds="0" type="purchase" image="house-decorator/for-sale-button.png">	
+		<hww-config:task itemId="" name="Purchase and Select Goodwitch Castle" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="73" name="Eco Friendly " ssp="20000" gameBucks="0" diamonds="25" type="furniture" image="furniture/cars/252_Car.png">	
+		<hww-config:task itemId="252" name="Place 1 Electric Car" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="74" name="Pretty or Pretty Ugly?" ssp="30000" gameBucks="10000" diamonds="0" type="furniture" image="furniture/Plants/235_Plant.png">	
+		<hww-config:task itemId="235" name="Place 2 Exotic Plants" amount="2" />
+	</hww-config:mission>
+
+	<hww-config:mission id="75" name="Her Royal Bed" ssp="15000" gameBucks="20000" diamonds="0" type="furniture" image="furniture/beds/019_Bed.png">	
+		<hww-config:task itemId="19" name="Place 1 Palace king" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="76" name="Iron Elegance" ssp="40000" gameBucks="0" diamonds="0" type="furniture" image="furniture/fences/304_Fence.png">	
+		<hww-config:task itemId="304" name="Place 5 Fancy Black" amount="5" />
+	</hww-config:mission>
+
+	<hww-config:mission id="77" name="Turning Japanese II" ssp="18000" gameBucks="0" diamonds="7" type="furniture" image="furniture/sofas/058_Sofa.png">	
+		<hww-config:task itemId="73" name="Place 1 Japanese Dresser" amount="1" />
+		<hww-config:task itemId="58" name="Place 1 Japanese Sofa" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="78" name="Gallery Additions" ssp="80000" gameBucks="0" diamonds="0" type="furniture" image="furniture/fireplaces/286_Fireplace.png">	
+		<hww-config:task itemId="286" name="Place 1 Sophisticated Fireplace" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="79" name="The Wild Side" ssp="65000" gameBucks="0" diamonds="14" type="furniture" image="furniture/dining tables/087_Dining.png">		
+		<hww-config:task itemId="87" name="Place 1 Animal Dining Table" amount="1" />
+		<hww-config:task itemId="102" name="Place 1 Animal Coffee Table" amount="1" />
+		<hww-config:task itemId="117" name="Place 1 Animal Shelf" amount="1" />
+		<hww-config:task itemId="147" name="Place 1 Animal Cabinet" amount="1" />
+		<hww-config:task itemId="262" name="Place 1 Animal Vanity" amount="1" />
+		<hww-config:task itemId="397" name="Place 1 Animal Painting" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="80" name="Are You Ready for This?" ssp="100000" gameBucks="0" diamonds="50" type="furniture" image="">	
+		<hww-config:task itemId="1" name="" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="81" name="Remodel 8" ssp="150000" gameBucks="0" diamonds="0" type="Remodel" image="house-decorator/remod-button.png">	
+		<hww-config:task itemId="" name="Remodel Your House to Level 9" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="82" name="Windmill Gardens" ssp="40000" gameBucks="0" diamonds="10" type="purchase" image="furniture/gardens/309_Garden.png">		
+		<hww-config:task itemId="309" name="Place 1 Dutch Garden" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="83" name="Conservatory" ssp="12000" gameBucks="40000" diamonds="0" type="furniture" image="furniture/instruments/298_Instrument.png">		
+		<hww-config:task itemId="298" name="Place 1 Cello" amount="1" />
+		<hww-config:task itemId="299" name="Place 1 Grand Piano" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="84" name="Water Sports" ssp="100000" gameBucks="30000" diamonds="0" type="furniture" image="furniture/pools/313_pool.png">
+		<hww-config:task itemId="313" name="Place 1 Designer Pool" amount="1" />
+		<hww-config:task itemId="308" name="Place 2 French Gardens" amount="2" />
+		<hww-config:task itemId="269" name="Place 1 Elegance Fountain" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="85" name="Finery From The Far East" ssp="120000" gameBucks="70000" diamonds="0" type="furniture" image="furniture/cabinets/148_Cabinet.png">	
+		<hww-config:task itemId="218" name="Place 1 Ebony Lacquer Mirror" amount="1" />
+		<hww-config:task itemId="208" name="Place 1 Ebony Lacquer Lamp" amount="1" />
+		<hww-config:task itemId="71" name="Place 1 Ebony Lacquer Dresser" amount="1" />
+		<hww-config:task itemId="56" name="Place 1 Ebony Lacquer Sofa" amount="1" />
+		<hww-config:task itemId="88" name="Place 1 Ebony Lacquer Dining Table" amount="1" />
+		<hww-config:task itemId="103" name="Place 1 Ebony Lacquer Coffee Table" amount="1" />
+		<hww-config:task itemId="118" name="Place 1 Ebony Lacquer Shelf" amount="1" />
+		<hww-config:task itemId="148" name="Place 1 Ebony Lacquer Cabinet" amount="1" />
+		<hww-config:task itemId="263" name="Place 1 Ebony Lacquer Vanity" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="86" name="Anyone for Tennis?" ssp="50000" gameBucks="0" diamonds="0" type="furniture" image="furniture/tennis/316_tennis.png">	
+		<hww-config:task itemId="316" name="Place1 Basic Tennis Court" amount="1" />
+	</hww-config:mission>
+
+	<hww-config:mission id="87" name="Japanese Princess" ssp="70000" gameBucks="0" diamonds="0" type="purchase" image="house-decorator/for-sale-button.png">	
+		<hww-config:task itemId="" name="Purchase and Select Sakura Castle" amount="1" />
+	</hww-config:mission>
+	
 </hww-config:missions>
-    

@@ -334,6 +334,17 @@ class HousewifeWars extends Game
 			storedGifts.append(gifts[i]);
 		}
 		Game.getDatabase().put("storedGifts", storedGifts);
+		
+		var rewards = response.get("rewards");
+		var storedRewards = Game.getDatabase().get("storedRewards");
+        if (storedRewards == null) {
+            storedRewards = new Array();
+        }
+        for (var j=0;j<len(rewards);j++) {
+            storedRewards.append(rewards[j]);
+        }
+        Game.getDatabase().put("storedRewards", storedRewards);
+		
 	}
 
 	public function getGift(giftId)

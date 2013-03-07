@@ -14,6 +14,8 @@ import models.gossip_message
 
 class GossipController extends ScreenController
 {
+    var userWeeklyScore;
+
     public function GossipController(controlledScreen)
     {
         super(controlledScreen);
@@ -34,13 +36,24 @@ class GossipController extends ScreenController
         var response = json_loads(response_content);
         var messages = response.get("messages");
         var bestWife = response.get("bestHouseWife");
+        trace("besthousewife: ", bestWife);
+        var secondHouseWife = response.get("secondHouseWife");
+        var thirdHouseWife = response.get("thirdHouseWife");
 
         var topHouseWife = new Wife();
         topHouseWife.loadFromJSON(bestWife);
+        this.screen.drawBestHouseWife(topHouseWife, 1, 0);
 
-        this.screen.updateMessages(messages);
-        this.screen.drawBestHouseWife(topHouseWife);
+        var secondWife = new Wife();
+        secondWife.loadFromJSON(secondHouseWife);
+        this.screen.drawBestHouseWife(secondWife, 2, 0);
 
+        var thirdWife = new Wife();
+        thirdWife.loadFromJSON(thirdHouseWife);
+        this.screen.drawBestHouseWife(thirdWife, 3, 0);
+
+        this.screen.getElement("tournamentEndDateText2").setText(response.get("tournamentEndDate"));
+        userWeeklyScore = response.get("weeklyScore");
     }
 
     public function updateMessageList(request_id, ret_code, response_content)
@@ -63,6 +76,11 @@ class GossipController extends ScreenController
             Game.sounds.playSFX("buttonPress");
             this.screen.post();
             //Game.getServer().getMessagesAndBestWife(updateMessageList);
+        }
+        else if (event.name == "showWeeklyTournament") {
+            var tournamentScreen = new TournamentScreen(userWeeklyScore);
+            tournamentScreen.configFile = "screen-cfgs/tournament-screen-cfg.xml";
+            this.presentModalScreen(tournamentScreen);
         }
         else if (event.name == "goBack") {
             Game.sounds.playSFX("buttonPress");

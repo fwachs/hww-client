@@ -65,50 +65,65 @@ class Wife
 		return this.type;
 	}
 	
-	public function dress(screen, save)
+	public function dress(screen, save, pos, runAnimation)
 	{
-		var body = screen.getElement("body").getSprite().texture("images/customize-wife/wife parts/WifeBodyBase.png");
-		var face = screen.getElement("face").getSprite();
+	    if (pos == null || pos == "None") {
+	        pos = "";
+	    } else {
+	        pos = str(pos);
+	    }
+
+	    if (runAnimation == null || runAnimation == "None") {
+	        runAnimation = 1;
+	    }
+	    
+		var body = screen.getElement("body" + pos).getSprite().texture("images/customize-wife/wife parts/WifeBodyBase.png");
+		var face = screen.getElement("face" + pos).getSprite();
 		var action = Game.animations.getAnimation("wife_generic_face");
 		action.stop();
 		face.stop();
 		face.addaction(repeat(action));
 
-		var rightArm = screen.getElement("rightArm").getSprite();
+		var rightArm = screen.getElement("rightArm" + pos).getSprite();
 		rightArm.stop();
         var rightArmAction = Game.animations.getRightArmAnimation();
         rightArmAction.stop();
         rightArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
-        rightArm.addaction(repeat(rightArmAction));
+        if (runAnimation == 1) {
+            rightArm.addaction(repeat(rightArmAction));
+        }
 
-		var leftArm = screen.getElement("leftArm").getSprite();
+		var leftArm = screen.getElement("leftArm" + pos).getSprite();
 		leftArm.stop();
 		var leftArmAction = Game.animations.getLeftArmAnimation();
 		leftArmAction.stop();
 		leftArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
-		leftArm.addaction(repeat(leftArmAction));
-		
-		var hairBack = screen.getElement("hairback").getSprite();
-		var shoes = screen.getElement("shoes").getSprite();
-		var pants = screen.getElement("pants").getSprite();
-		var belt = screen.getElement("belt").getSprite();
-		var dress = screen.getElement("dress").getSprite();
-		var shirt = screen.getElement("shirt").getSprite();
-		var jacket = screen.getElement("jacket").getSprite();
-		var hairFront = screen.getElement("hairfront").getSprite();
-		var necklace = screen.getElement("necklace").getSprite();
-		var shoulderBag = screen.getElement("shoulderBag").getSprite();
-		var undies1 = screen.getElement("undies").getSprite();
-		var undies = screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+        if (runAnimation == 1) {
+            leftArm.addaction(repeat(leftArmAction));
+        }
+
+		var hairBack = screen.getElement("hairback" + pos).getSprite();
+		var shoes = screen.getElement("shoes" + pos).getSprite();
+		var pants = screen.getElement("pants" + pos).getSprite();
+		var belt = screen.getElement("belt" + pos).getSprite();
+		var dress = screen.getElement("dress" + pos).getSprite();
+		var shirt = screen.getElement("shirt" + pos).getSprite();
+		var jacket = screen.getElement("jacket" + pos).getSprite();
+		var hairFront = screen.getElement("hairfront" + pos).getSprite();
+		var necklace = screen.getElement("necklace" + pos).getSprite();
+		var shoulderBag = screen.getElement("shoulderBag" + pos).getSprite();
+		var undies1 = screen.getElement("undies" + pos).getSprite();
+		var undies = screen.getElement("undies2" + pos).getSprite().texture("images/clothing/undies/1196_Undies_All.png");
 
 		body.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
-		var rightArmSleeve = screen.getElement("rightArmSleeve").getSprite();
+		var rightArmSleeve = screen.getElement("rightArmSleeve" + pos).getSprite();
 		rightArmSleeve.texture("");
 		rightArmSleeve.stop();
-		var leftArmSleeve = screen.getElement("leftArmSleeve").getSprite();
+		var leftArmSleeve = screen.getElement("leftArmSleeve" + pos).getSprite();
 		leftArmSleeve.texture("");
 		leftArmSleeve.stop();
 
+		trace("wearing: ", str(runAnimation), "wife:" + this.name, this.clothingItems);
 		if (this.clothingItems != null && len(this.clothingItems) > 0) {
 		    var clothingItemKeys = this.clothingItems.keys();
 		    shoes.texture("");
@@ -122,7 +137,7 @@ class Wife
             necklace.texture("");
 	        for (var i=0;i<len(this.clothingItems); i++) {
 	            var elementName = clothingItemKeys[i];
-	            var elementSprite = screen.getElement(elementName).getSprite();
+	            var elementSprite = screen.getElement(elementName + pos).getSprite();
 	            
 	            var clothingItemId = this.clothingItems.get(clothingItemKeys[i]);
 	            var clothingItem = Game.sharedGame().getClothingItemById(clothingItemId);
@@ -136,19 +151,38 @@ class Wife
 	                leftArmSleeve.stop();
 	            }
 
-	            if (clothingItem.sleeves == "rocker") {
-	                rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
-                    leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
-	            } else if (clothingItem.sleeves == "business") {
-	                rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
-	                leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
-                } else if (clothingItem.sleeves == "retro") {
-                    rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
-                    leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
-                }
+	            if (runAnimation == 1) {
+	                if (clothingItem.sleeves == "rocker") {
+	                    rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
+	                    leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
+	                } else if (clothingItem.sleeves == "business") {
+	                    rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
+	                    leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+	                } else if (clothingItem.sleeves == "retro") {
+	                    rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
+	                    leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
+	                }
+	            } else {
+	                rightArm.texture("images/Animation/bare_right_arm/bare_right_arm0001.png");
+	                leftArm.texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
+	                if (clothingItem.sleeves == "rocker") {
+	                    rightArmSleeve.texture("images/Animation/rocker_right_arm/rocker_right_arm0001.png");
+	                    leftArmSleeve.texture("images/Animation/rocker_left_arm/rocker_left_arm0001.png");
+                    } else if (clothingItem.sleeves == "business") {
+                        rightArmSleeve.texture("images/Animation/business_right_arm/business_right_arm0001.png");
+                        leftArmSleeve.texture("images/Animation/business_left_arm/business_left_arm0001.png");
+                    } else if (clothingItem.sleeves == "retro") {
+                        rightArmSleeve.texture("images/Animation/retro_right_arm/retro_right_arm0001.png");
+                        leftArmSleeve.texture("images/Animation/retro_left_arm/retro_left_arm0001.png");
+                    }
+	            }
 	        }
 		} else {
-		    screen.getElement("undies2").getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+		    screen.getElement("undies2" + pos).getSprite().texture("images/clothing/undies/1196_Undies_All.png");
+		    if (runAnimation == 0) {
+                rightArm.texture("images/Animation/bare_right_arm/bare_right_arm0001.png");
+                leftArm.texture("images/Animation/bare_left_arm/bare_left_arm0001.png");
+            }
 		    if(this.type == "Modern")
 	        {
 		        var modernClothingItem = Game.sharedGame().getClothingItemById("1076");
@@ -156,12 +190,17 @@ class Wife
 
                 modernClothingItem = Game.sharedGame().getClothingItemById("1042");
                 this.clothingItems.update(modernClothingItem.element, modernClothingItem.id);
+                
 	        }
 	        else if(this.type == "Rocker")
 	        {
-	            rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
-	            leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
-	            
+	            if (runAnimation == 1) {
+	                rightArmSleeve.addaction(repeat(Game.animations.getRockerRightArmAnimation()));
+	                leftArmSleeve.addaction(repeat(Game.animations.getRockerLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/rocker_right_arm/rocker_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/rocker_left_arm/rocker_left_arm0001.png");
+	            }
 	            var rockerClothingItem = Game.sharedGame().getClothingItemById("1186");
 	            this.clothingItems.update(rockerClothingItem.element, rockerClothingItem.id);
 
@@ -179,8 +218,13 @@ class Wife
 	        }
 	        else if(this.type == "Business")
 	        {
-	            rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
-	            leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+	            if (runAnimation == 1) {
+	                rightArmSleeve.addaction(repeat(Game.animations.getBusinessRightArmAnimation()));
+	                leftArmSleeve.addaction(repeat(Game.animations.getBusinessLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/business_right_arm/business_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/business_left_arm/business_left_arm0001.png");
+	            }
 
 	            var businessClothingItem = Game.sharedGame().getClothingItemById("1127");
 	            this.clothingItems.update(businessClothingItem.element, businessClothingItem.id);
@@ -193,8 +237,13 @@ class Wife
 	        }
 	        else if(this.type == "Retro")
 	        {
-	            rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
-	            leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
+	            if (runAnimation == 1) {
+	                rightArmSleeve.addaction(repeat(Game.animations.getRetroRightArmAnimation()));
+	                leftArmSleeve.addaction(repeat(Game.animations.getRetroLeftArmAnimation()));
+	            } else {
+	                rightArmSleeve.texture("images/Animation/retro_right_arm/retro_right_arm0001.png");
+                    leftArmSleeve.texture("images/Animation/retro_left_arm/retro_left_arm0001.png");
+	            }
 	            
 	            var retroClothingItem = Game.sharedGame().getClothingItemById("1346");
 	            this.clothingItems.update(retroClothingItem.element, retroClothingItem.id);
@@ -213,11 +262,10 @@ class Wife
 		    var clothingKeys = this.clothingItems.keys();
 		    for (var p=0;p<len(this.clothingItems); p++) {
                 var secondElement = clothingKeys[p];
-                var secondSprite = screen.getElement(secondElement).getSprite();
+                var secondSprite = screen.getElement(secondElement + pos).getSprite();
                 
                 var id = this.clothingItems.get(secondElement);
                 var clothe = Game.sharedGame().getClothingItemById(id);
-                trace("perfil: ", secondElement, id, clothe.image);
                 secondSprite.texture("images/clothing/" + clothe.image);
 		    }
 		    if (save == null) {
@@ -230,7 +278,7 @@ class Wife
 		    }
 		}
 		
-		cutAndDyeHair(screen);
+		cutAndDyeHair(screen, pos);
 	}
 
 	public function showNaked(screen) {
@@ -269,13 +317,16 @@ class Wife
         leftArmSleeve.texture("");
         leftArmSleeve.stop();
 
-        cutAndDyeHair(screen);
+        cutAndDyeHair(screen, null);
     }
 
-	public function cutAndDyeHair(screen)
+	public function cutAndDyeHair(screen, pos)
 	{
-		var hairBack = screen.getElement("hairback").getSprite();
-		var hairFront = screen.getElement("hairfront").getSprite();
+	    if (pos == null) {
+	        pos = "";
+	    }
+		var hairBack = screen.getElement("hairback" + pos).getSprite();
+		var hairFront = screen.getElement("hairfront" + pos).getSprite();
 		
 		var hairTypeText = getHairType();
 		var hairColorText = getHairColor();
@@ -635,7 +686,11 @@ class Wife
         wifeArray.append(["statusPointsFactor", statusPointsFactor]);
         wifeArray.append(["mysteryItems", this.mysteryItemCollection.keys()]);
         wifeArray.append(["clothingItems", this.clothingItems]);
-        wifeArray.append(["lastMissionId", Game.getDatabase().get("lastMissionId")]);
+        var lastMissionId = Game.getDatabase().get("lastMissionId");
+        if (lastMissionId == null) {
+            lastMissionId = 0;
+        }
+        wifeArray.append(["lastMissionId", lastMissionId]);
         return dict(wifeArray);
     }
 

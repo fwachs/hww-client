@@ -16,6 +16,13 @@ class Server
     	url = "http://hww.2clams.com:8080";
     }
 
+    public function getWeeklyTournament(callback) {
+        var params = dict();
+
+        params.update("papayaUserId", Game.papayaUserId);
+        this.makeRequest("/tournament", callback, params);
+    }
+
     public function checkPlayersStatus(flist, mainController) {
         var params = dict();
         params.update("papayaUserIds", flist);
@@ -133,7 +140,7 @@ class Server
 
 	public function getCurrentDateAndTick(callback)
     {
-        this.makeRequest("/getCurrentDateAndTick", callback, dict());
+        this.makeRequest("/getCurrentDateAndTick", callback, dict([["papayaUserId", Game.getPapayaUserId()]]));
     }
 
 	public function getGifts(callback)

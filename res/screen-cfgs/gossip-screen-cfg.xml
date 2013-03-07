@@ -2,47 +2,126 @@
 
 <screen:config>
 	<screen:elements>
-		<screen:element name="background" resource="wife-selection-screen/wife-selection-screen.png" left="0" top="0" ontap="doNothing"/>
-		
-		<screen:element name="crown" resource="gossip-wall/top-wife-crown.png" left="158" top="126"/>
-		<screen:element name="topWifeFrame" resource="gossip-wall/top-wife-box.png" left="46" top="0">
-			<screen:element name="topWifeText" resource="gossip-wall/top-housewife.png" left="16" top="30"/>
-			<screen:element name="topWifeName" resource="" left="16" top="80" font-size="48" text-align="center" width="246" text-wrap="yes">#topWife</screen:element>
-			
-			<screen:element name="topWife" resource="" left="50" top="170">
-				<screen:element name="hairback" resource="" left="38" top="0"/>
-			    <screen:element name="rightArm" resource="" left="0" top="27"/>
-			    <screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
-			    <screen:element name="rightArmSleeve" resource="" left="0" top="27"/>
-			    <screen:element name="undies2" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
-			    <screen:element name="undies" resource="" left="63" top="150"/>
-			    <screen:element name="shoes" resource="" left="77" top="374"/>
-			    <screen:element name="pants" resource="" left="38" top="226"/>
-			    <screen:element name="belt" resource="" left="65" top="226"/>
-			    <screen:element name="face" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
-			    <screen:element name="dress" resource="" left="0" top="112"/>
-			    <screen:element name="dressPremium" resource="" left="-50" top="2"/>
-			    <screen:element name="shirt" resource="" left="38" top="112"/>
-			    <screen:element name="necklace" resource="" left="75" top="122"/>
-			    <screen:element name="jacket" resource="" left="44" top="139"/>
-			    <screen:element name="shoulderBag" resource="" left="0" top="145"/>
-			    <screen:element name="leftArm" resource="" left="4" top="27"/>
-			    <screen:element name="leftArmSleeve" resource="" left="4" top="27"/>
-			    <screen:element name="hairfront" resource="" left="38" top="0"/>
+		<screen:element name="background" resource="gossip-wall/gw-bg.png" left="0" top="0" ontap="doNothing"/>
+
+		<screen:element name="nextTopWifeText" resource="" left="60" top="20" font-size="48" height="64" font-style="bold" text-align="center" ontap="">Our Most Fabulous Housewives</screen:element>
+
+		<screen:element name="topWifeFrame" resource="" left="42" top="60">
+			<screen:element name="textWifeRank" resource="" left="0" top="20" font-size="40" width="68" height="64" font-style="bold" text-align="center" ontap="">1st</screen:element>
+			<screen:element name="topWife" resource="" left="20" top="15">
+				<screen:element name="hairback1" resource="" left="38" top="0"/>
+			    <screen:element name="rightArm1" resource="" left="0" top="27"/>
+			    <screen:element name="body1" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+			    <screen:element name="rightArmSleeve1" resource="" left="0" top="27"/>
+			    <screen:element name="undies21" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
+			    <screen:element name="undies1" resource="" left="63" top="150"/>
+			    <screen:element name="shoes1" resource="" left="77" top="374"/>
+			    <screen:element name="pants1" resource="" left="38" top="226"/>
+			    <screen:element name="belt1" resource="" left="65" top="226"/>
+			    <screen:element name="face1" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+			    <screen:element name="dress1" resource="" left="0" top="112"/>
+			    <screen:element name="dressPremium1" resource="" left="-50" top="2"/>
+			    <screen:element name="shirt1" resource="" left="38" top="112"/>
+			    <screen:element name="necklace1" resource="" left="75" top="122"/>
+			    <screen:element name="jacket1" resource="" left="44" top="139"/>
+			    <screen:element name="shoulderBag1" resource="" left="0" top="145"/>
+			    <screen:element name="leftArm1" resource="" left="4" top="27"/>
+			    <screen:element name="leftArmSleeve1" resource="" left="4" top="27"/>
+			    <screen:element name="hairfront1" resource="" left="38" top="0"/>
 			</screen:element>
 			
-			<screen:element name="sspIcon" resource="other-player-screen/SSPIcon-02.png" left="24" top="614"/>
-			<screen:element name="sspText" resource="" left="110" top="712" font-size="48" text-align="center" width="246" text-wrap="yes">#topSsp</screen:element>
+			<screen:element name="diamondReward" resource="premium-currency-screen/dimonds01v2.png" left="-10" top="450"/>
+			<screen:element name="diamondRewardText" resource="" left="64" top="470" height="32" width="40" ontap="">10</screen:element>
+			<screen:element name="leaderboardNameBox" resource="gossip-wall/top-3-name.png" left="5" top="555">
+				<screen:element name="topWifeName1" resource="" left="10" top="2" font-size="36" text-align="center" width="246" text-wrap="yes">#topWife</screen:element>
+				<screen:element name="sspText1" resource="" left="10" top="33" font-size="36" text-align="center" width="246" text-wrap="yes">#topSsp</screen:element>
+			</screen:element>
+			
 			
 		</screen:element>
-		
-		<screen:element name="gossipWall" resource="" left="0" top="0"/>
-		<screen:element name="scroll" class="Scroll" resource="" left="0" top="20" width="1400" height="600" lock="vertical" z-index="100000"/>
 
-		<screen:element name="gossipWallText" resource="gossip-wall/post-box.png" left="400" top="612" z-index="900000"/>
+        <screen:element name="secondWifeFrame" resource="" left="302" top="60">
+		<screen:element name="textWifeRank" resource="" left="0" top="20" font-size="40" width="88" height="64" font-style="bold" text-align="center" ontap="">2nd</screen:element>
+
+            <screen:element name="topWife" resource="" left="20 " top="15">
+                <screen:element name="hairback2" resource="" left="38" top="0"/>
+                <screen:element name="rightArm2" resource="" left="0" top="27"/>
+                <screen:element name="body2" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+                <screen:element name="rightArmSleeve2" resource="" left="0" top="27"/>
+                <screen:element name="undies22" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
+                <screen:element name="undies2" resource="" left="63" top="150"/>
+                <screen:element name="shoes2" resource="" left="77" top="374"/>
+                <screen:element name="pants2" resource="" left="38" top="226"/>
+                <screen:element name="belt2" resource="" left="65" top="226"/>
+                <screen:element name="face2" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+                <screen:element name="dress2" resource="" left="0" top="112"/>
+                <screen:element name="dressPremium2" resource="" left="-50" top="2"/>
+                <screen:element name="shirt2" resource="" left="38" top="112"/>
+                <screen:element name="necklace2" resource="" left="75" top="122"/>
+                <screen:element name="jacket2" resource="" left="44" top="139"/>
+                <screen:element name="shoulderBag2" resource="" left="0" top="145"/>
+                <screen:element name="leftArm2" resource="" left="4" top="27"/>
+                <screen:element name="leftArmSleeve2" resource="" left="4" top="27"/>
+                <screen:element name="hairfront2" resource="" left="38" top="0"/>
+            </screen:element>
+
+			<screen:element name="diamondReward" resource="premium-currency-screen/dimonds01v2.png" left="-10" top="450"/>
+			<screen:element name="diamondRewardText" resource="" left="64" top="470" height="32" width="40" ontap="">7</screen:element>
+			<screen:element name="leaderboardNameBox" resource="gossip-wall/top-3-name.png" left="5" top="555">
+				<screen:element name="topWifeName2" resource="" left="10" top="2" font-size="36" text-align="center" width="246" text-wrap="yes">#topWife</screen:element>
+				<screen:element name="sspText2" resource="" left="10" top="33" font-size="36" text-align="center" width="246" text-wrap="yes">#topSsp</screen:element>
+			</screen:element>
+			
+           </screen:element>
+
+        <screen:element name="thirdWifeFrame" resource="" left="562" top="60">
+			<screen:element name="textWifeRank" resource="" left="0" top="20" font-size="40" width="68" height="64" font-style="bold" text-align="center" ontap="">3rd</screen:element>
+
+            <screen:element name="topWife3" resource="" left="20" top="15">
+                <screen:element name="hairback3" resource="" left="38" top="0"/>
+                <screen:element name="rightArm3" resource="" left="0" top="27"/>
+                <screen:element name="body3" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
+                <screen:element name="rightArmSleeve3" resource="" left="0" top="27"/>
+                <screen:element name="undies23" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
+                <screen:element name="undies3" resource="" left="63" top="150"/>
+                <screen:element name="shoes3" resource="" left="77" top="374"/>
+                <screen:element name="pants3" resource="" left="38" top="226"/>
+                <screen:element name="belt3" resource="" left="65" top="226"/>
+                <screen:element name="face3" resource="customize-wife/wife parts/WFace001.png" left="74" top="38"/>
+                <screen:element name="dress3" resource="" left="0" top="112"/>
+                <screen:element name="dressPremium3" resource="" left="-50" top="2"/>
+                <screen:element name="shirt3" resource="" left="38" top="112"/>
+                <screen:element name="necklace3" resource="" left="75" top="122"/>
+                <screen:element name="jacket3" resource="" left="44" top="139"/>
+                <screen:element name="shoulderBag3" resource="" left="0" top="145"/>
+                <screen:element name="leftArm3" resource="" left="4" top="27"/>
+                <screen:element name="leftArmSleeve3" resource="" left="4" top="27"/>
+                <screen:element name="hairfront3" resource="" left="38" top="0"/>
+            </screen:element>
+		<screen:element name="diamondReward" resource="premium-currency-screen/dimonds01v2.png" left="-10" top="450"/>
+			<screen:element name="diamondRewardText" resource="" left="64" top="470" height="32" width="40" ontap="">5</screen:element>
+			<screen:element name="leaderboardNameBox" resource="gossip-wall/top-3-name.png" left="5" top="555">
+				<screen:element name="topWifeName3" resource="" left="10" top="2" font-size="36" text-align="center" width="246" text-wrap="yes">#topWife</screen:element>
+				<screen:element name="sspText3" resource="" left="10" top="33" font-size="36" text-align="center" width="246" text-wrap="yes">#topSsp</screen:element>
+			</screen:element>
+			
+            
+        </screen:element>	
+
 		
-		<screen:element name="postButton" resource="gossip-wall/post-button.png" left="955" top="697" ontap="post" z-index="900000"/>
-		<screen:element name="backButton" resource="travel-screen/back-button.png" left="1125" top="686" ontap="goBack" z-index="900000"/>
+
+		<screen:element name="tournamentEndDateBox" resource="gossip-wall/lb-text-box.png" left="448" top="713">
+				<screen:element name="tournamentEndDateText" resource="" left="2" top="3" height="34" width="305" font-size="34" text-align="center" ontap="">Weekly tournament ends</screen:element>
+				<screen:element name="tournamentEndDateText2" resource="" left="2" top="36" height="34" width="305" font-size="34" text-align="center" ontap="">#Date</screen:element>
+				</screen:element>
+					
+		<screen:element name="showWeeklyTournament" resource="gossip-wall/leaderboard-button.png" left="40" top="691" ontap="showWeeklyTournament">
+				</screen:element>
+				
+		<screen:element name="tipOfDayBox" resource="gossip-wall/tip-of-day.png" left="830" top="10" ontap="showWeeklyTournament" />
+		<screen:element name="backButton" resource="travel-screen/back-button.png" left="760" top="686" ontap="goBack" z-index="900000"/>
+
+
 
 	</screen:elements>
 </screen:config>
