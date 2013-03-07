@@ -185,7 +185,7 @@ class Buffs
 		}
 		if(gift.buffSSPsIcon) {
 		    var sspIcon = str(gift.buffSSPsIcon);
-			Game.bannerScreen.showSSPsBuffIcon(sspIcon);
+			Game.sharedGame().bannerScreen.showSSPsBuffIcon(sspIcon);
 		}
 	}
 	
