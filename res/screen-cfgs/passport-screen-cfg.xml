@@ -10,7 +10,7 @@
 		</screen:element>
 		
 		<screen:element name="souvenir2" resource="passport-screen/t-right-frame.png" left="862" top="16">
-			<screen:element name="souvenirTopRightIcon" resource="" left="14" top="18"/>
+			<screen:element name="souvenirTopRightIcon" resource="" left="12" top="17"/>
 		</screen:element>
 		
 		<screen:element name="souvenir4" resource="passport-screen/b-right-frame.png" left="757" top="349">
@@ -21,8 +21,8 @@
 			<screen:element name="souvenirBottomLeftIcon" resource="" left="14" top="18"/>
 		</screen:element>
 		
-		<screen:element name="souvenir5" resource="passport-screen/mid-frame.png" left="500" top="136">
-			<screen:element name="souvenirMiddleIcon" resource="" left="14" top="16"/>
+		<screen:element name="souvenir5" resource="passport-screen/mid-frame.png" left="480" top="336">
+			<screen:element name="souvenirMiddleIcon" resource="" left="13" top="12"/>
 		</screen:element>
 		
 		
