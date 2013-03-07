@@ -89,19 +89,11 @@ class HUDController extends ScreenController
 		}
 		else if(event.name == "gotoGossip") {
 			Game.sounds.playSFX("buttonPress");
-			var tournyScreenCfg = c_res_file("screen-cfgs/tournament-screen-cfg.xml");
-			var tournamentAvailable = c_file_exist(tournyScreenCfg);
-			if (tournamentAvailable == 1) {
-			    screen = new GossipScreen();
-			    screen.configFile = "screen-cfgs/gossip-screen-cfg.xml";
-			    controller = new GossipController(screen);
-			    
-			    Game.pushScreen(screen);
-			} else {
-			    var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_UpdateGame);
-	            promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
-	            this.presentModalScreen(promptScreen); 
-			}
+		    screen = new GossipScreen();
+		    screen.configFile = "screen-cfgs/gossip-screen-cfg.xml";
+		    controller = new GossipController(screen);
+		    
+		    Game.pushScreen(screen);
 		}
 		else if(event.name == "viewLeaderboards") {
 			Game.sounds.playSFX("buttonPress");

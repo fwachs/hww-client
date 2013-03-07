@@ -22,7 +22,7 @@ class TournamentScreen extends Screen
 	
 	override public function build()
 	{
-	    Game.sharedGame().getServer().getWeeklyTournament(this.displayWeeklyTournament);
+	    Game.getServer().getWeeklyTournament(this.displayWeeklyTournament);
 	}
 
     public function displayWeeklyTournament(request_id, ret_code, response_content)
@@ -73,7 +73,7 @@ class TournamentScreen extends Screen
             ypos += 80;
         }
         if (addWeeklyScore == 1) {
-            params = dict();
+            var params = dict();
             params.update("top", ypos);
             params.update("lbcard", "gossip-wall/lb-player-card2.png");
             params.update("rank", str(26));

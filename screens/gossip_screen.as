@@ -123,9 +123,9 @@ class GossipScreen extends Screen
 		// TODO: get house level
 		if (this.text != "") {
 		    this.messages.append(dict([["message", this.text], ["houseWifeName", Game.currentGame.wife.name], ["houseLeve", ""], ["timeAgo", ""]]));
-		    var msg = GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
+		    var msg = new GossipMessage(this.text, Game.currentGame.wife.name, 1, 0);     
 	        
-	        Game.sharedGame().getServer().postGossip(msg, this.buildMessageListAndBestWife);    
+	        Game.getServer().postGossip(msg, this.buildMessageListAndBestWife);    
 		}
 	}
 
