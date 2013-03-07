@@ -4,6 +4,7 @@
 	<screen:elements>
 		<screen:element name="background" resource="wife-selection-screen/wife-selection-screen.png" left="0" top="0" ontap="doNothing"/>
 		
+        <screen:element name="ad" resource="" left="0" top="0"/>
 		<screen:element name="crown" resource="gossip-wall/top-wife-crown.png" left="158" top="126"/>
 		<screen:element name="topWifeFrame" resource="gossip-wall/top-wife-box.png" left="46" top="0">
 			<screen:element name="topWifeText" resource="gossip-wall/top-housewife.png" left="16" top="30"/>
