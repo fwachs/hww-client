@@ -176,6 +176,8 @@ class WifeCustomizationScreen extends Screen
         Game.sharedGame().wife.skinTone[1] = this.body.color()[1];
         Game.sharedGame().wife.skinTone[2] = this.body.color()[2];
 
+        Game.sharedGame().wife.dress(this);
+
         this.showTutorialStep(3);
     }
 

@@ -371,7 +371,7 @@ class Control
 			}
 			
 			trace("Untouch with distance: ", dist);
-			if(dist < 35) {
+			if(dist < 55) {
 				this.controlTapped();
 				
 				return;
