@@ -177,12 +177,6 @@ class Wallet
 	public function purchaseCurrency(money, controller)
 	{
 		this.collect(money);
-		
-		var ev = new PurchaseCurrencyEvent();
-		ev.controller = controller;
-		ev.succeeded = 1;
-		
-		ev.run();
 	}
 	
 	public function balanceForCurrency(currencyName)
@@ -213,14 +207,3 @@ class Wallet
         return dict(walletArray);
 	}
 }
-
-class PurchaseCurrencyEvent extends Event
-{
-	var succeeded;
-	
-	public function PurchaseCurrencyEvent()
-	{
-		this.name = "PURCHASE_EVENT";
-	}
-}
-

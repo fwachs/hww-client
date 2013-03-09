@@ -68,7 +68,7 @@ class HouseSelectionScreen extends Screen
 			var house = this.houseListing[i];
 			var houseSmallFrame = "house-select/house-select-screen/house-frame-small.png";
 			var houseType;
-			var houseText = "";
+			var houseText = " ";
 			
 			if(house.type == "Default") {
 				houseType = "";
@@ -90,7 +90,7 @@ class HouseSelectionScreen extends Screen
 				}
 				else {
 					houseType = "";
-					houseText = "";
+					houseText = " ";
 				}
 			}
 			else if(house.type == "FriendReq") {

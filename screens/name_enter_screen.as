@@ -66,7 +66,7 @@ class NameEnterScreen extends Screen
 	{
 		Game.hideBanner();
 		
-		this.textInput = new TextField(Game.translateX(20), Game.translateY(70), Game.translateX(562), Game.translateY(100));
+		this.textInput = new TextField(Game.translateX(30), Game.translateY(90), Game.translateX(562), Game.translateY(100));
 		this.getElement("frame").getSprite().add(this.textInput);
 		this.textInput.text(this.text);
 		

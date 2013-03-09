@@ -73,7 +73,7 @@ class Wife
 	        pos = str(pos);
 	    }
 
-	    if (runAnimation == null || runAnimation == "None") {
+	    if (runAnimation == null || str(runAnimation) == "None") {
 	        runAnimation = 1;
 	    }
 	    

@@ -225,7 +225,7 @@ class Control
 				size[0] = Game.translateX(int(width));
 			}
 		
-			this.textLabel = this.getSprite().addlabel(text, selectedFont, fontSize, fontStyle, size[0], 0, textAlign);
+			this.textLabel = this.getSprite().addlabel(text, selectedFont, fontSize, fontStyle, size[0], 0, textAlign, 1);
 			this.textLabel.prepare();
 			
 			this.getSprite().size(size[0], this.textLabel.size()[1]);
