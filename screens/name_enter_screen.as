@@ -73,6 +73,8 @@ class NameEnterScreen extends Screen
 		if(this.isWife == 0) {
 			this.startHusbandAnimation();
 		}
+		
+		this.text.focus();
 	}
 	
 	override public function lostFocus()
