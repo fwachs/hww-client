@@ -384,7 +384,7 @@ class MainController extends ScreenController
 
             var avatarUrl;
             if (avatarVersionId != 0) {
-//                avatarUrl = avatar_url(friendUserId, avatarVersionId);
+                avatarUrl = avatar_url(friendUserId, avatarVersionId);
                 avatarUrl = avatarUrl.replace("&", "&amp;");
             } else {
                 avatarUrl = "friend-belt/friendbelt-question.png";

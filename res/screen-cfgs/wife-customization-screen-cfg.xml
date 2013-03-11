@@ -6,9 +6,9 @@
 		
 		<screen:element name="wife" left="180" top="144">
 			<screen:element name="hairback" resource="" left="38" top="0"/>
-		    <screen:element name="rightArm" resource="" left="0" top="27"/>
+		    <screen:element name="rightArm" resource="transparent.png" left="0" top="27"/>
 		    <screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
-		    <screen:element name="rightArmSleeve" resource="" left="0" top="27"/>
+		    <screen:element name="rightArmSleeve" resource="transparent.png" left="0" top="27"/>
 		    <screen:element name="undies2" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
 		    <screen:element name="undies" resource="" left="63" top="150"/>
 		    <screen:element name="shoes" resource="" left="77" top="374"/>
@@ -21,8 +21,8 @@
 		    <screen:element name="necklace" resource="" left="75" top="122"/>
 		    <screen:element name="jacket" resource="" left="44" top="139"/>
 		    <screen:element name="shoulderBag" resource="" left="0" top="145"/>
-		    <screen:element name="leftArm" resource="" left="4" top="27"/>
-		    <screen:element name="leftArmSleeve" resource="" left="4" top="27"/>
+		    <screen:element name="leftArm" resource="transparent.png" left="4" top="27"/>
+		    <screen:element name="leftArmSleeve" resource="transparent.png" left="4" top="27"/>
 		    <screen:element name="hairfront" resource="" left="38" top="0"/>
 		</screen:element>
 
