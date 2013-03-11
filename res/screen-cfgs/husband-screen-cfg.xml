@@ -47,7 +47,7 @@
 		</screen:element>
 					
 		<screen:element name="hubby" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="180" top="144" ontap="earlyreturn">
-			<screen:element name="faceAnimation" resource="transparent.png" left="0" top="0" />
+			<screen:element name="faceAnimation" resource="" left="0" top="0" />
 			<screen:element name="chatBubble" resource="main-menu/chat-bubble.png" left="210" top="-75" visible="NO">
 				<screen:element name="chatText" resource="" left="20" top="30" width="372" text-wrap="yes">#chat-placeholder</screen:element>
 			</screen:element>
