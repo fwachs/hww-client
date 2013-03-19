@@ -24,7 +24,7 @@ class IsometricCanvas extends Scroll
 	var addingItem;
 	var items;
 	var selectedItem = null;
-	var screen;
+	weak var screen;
 	var prevLeft = 0;
 	var prevTop = 0;
 	

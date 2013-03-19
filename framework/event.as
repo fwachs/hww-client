@@ -15,8 +15,8 @@ class Event
 	static var hookType = null;
 	static var glEvents = new dict();
 	var eventType;
-	var controller;
-	var node;
+	weak var controller;
+	weak var node;
 	var name;
 	var argument;
 	var param;

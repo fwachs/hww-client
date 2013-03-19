@@ -65,6 +65,17 @@ class Wife
 		return this.type;
 	}
 	
+	public function setSkinTone(red, green, blue)
+	{
+		this.skinTone = new Array(red, green, blue);
+		
+        var rightArmAction = Game.animations.getRightArmAnimation();
+        rightArmAction.color(red, green, blue);
+
+		var leftArmAction = Game.animations.getLeftArmAnimation();
+		leftArmAction.color(red, green, blue);
+	}
+	
 	public function dress(screen, save, pos, runAnimation)
 	{
 	    if (pos == null || pos == "None") {
@@ -88,6 +99,7 @@ class Wife
 		rightArm.stop();
         var rightArmAction = Game.animations.getRightArmAnimation();
         rightArmAction.stop();
+        rightArmAction.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         rightArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         if (runAnimation == 1) {
             rightArm.addaction(repeat(rightArmAction));
@@ -97,6 +109,7 @@ class Wife
 		leftArm.stop();
 		var leftArmAction = Game.animations.getLeftArmAnimation();
 		leftArmAction.stop();
+		leftArmAction.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
 		leftArm.color(this.skinTone[0], this.skinTone[1], this.skinTone[2]);
         if (runAnimation == 1) {
             leftArm.addaction(repeat(leftArmAction));

@@ -11,7 +11,7 @@ Brief Description:
 class ScreenController
 {
 	var modalScreenStack;
-	var screen;
+	weak var screen;
 	var hudFrameTop;
 	var hudFrameBottom;
 	var cancelEvents = 0;

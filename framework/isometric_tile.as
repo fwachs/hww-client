@@ -19,9 +19,9 @@ class IsometricTile extends Control
 	var left;
 	var z;
 	var occupied;
-	var item;
+	weak var item;
 	var isHighlighted;
-	var canvas;
+	weak var canvas;
 	var area;
 	var resource;
 	var item_width;

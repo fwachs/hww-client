@@ -4,6 +4,10 @@
 	<screen:elements>
 	
 		<screen:element name="background" resource="gift-shop/gift-shop-painting.png" left="0" top="0"/>
+		
+		<screen:element name="peopleAnimation" resource="" left="394" top="129"/>
+		<screen:element name="balloonStrings" resource="Animation/gift_shop_end_anim/strings0001.png" left="795" top="470"/>
+		
 		<screen:element name="animation" resource="" left="0" top="0"/>
 		
 		<!-- Travel cities souvenirs -->
@@ -60,10 +64,7 @@
 			<screen:element name="sydneysouvenir4" resource="gift-shop-icons/for-balloons/kangaroo.png" left="539" top="133" ontap="buysouvenir4"/>
 			<screen:element name="sydneysouvenir5" resource="gift-shop-icons/for-balloons/manly-ferry.png" left="329" top="137" ontap="buysouvenir5"/>
 		</screen:element>
-		
-		<screen:element name="peopleAnimation" resource="" left="394" top="129"/>
-		<screen:element name="balloonStrings" resource="Animation/gift_shop_end_anim/strings0001.png" left="795" top="470"/>
-		
+				
 		<screen:element name="passportbutton" resource="gift-shop/passport-button.png" left="1039" top="633" ontap="gotopassport"/>
 		
 		<!-- prompt screen -->
