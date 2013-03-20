@@ -410,7 +410,7 @@ class HouseController extends ScreenController implements TimerListener
     {
         if(this.selectedPaint != null) {
             var area = item.tiles[0].area;
-            trace("### HWW ### - Area:", area.serialize());
+            //trace("### HWW ### - Area:", area.serialize());
             if(area.type == "Paint") {
                 var furniture = this.selectedPaint;
 
