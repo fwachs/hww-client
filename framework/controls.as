@@ -627,12 +627,14 @@ class Scroll extends Control
 	
 	function zoomStarted(event)
 	{
+		return;
 		this.dist0 = distance(event.points[0], event.points[1]);
 		this.state = ZOOM;
 	}
 	
 	function zoomMoved(event)
 	{
+		return;
 		this.dist1 = distance(event.points[0], event.points[1]);
 
 		if(abs(this.dist1 - this.dist0) < 5) return;
@@ -660,6 +662,7 @@ class Scroll extends Control
 	
 	function zoomEnded(event)
 	{
+		return;
 		var scaleDelta = 0;
 		
 		if(this.currentScale < this.minZoom) {

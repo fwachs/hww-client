@@ -611,7 +611,8 @@ class Wife
 			hairStyle = 0;
 			hairColor = 0;
 			
-			skinTone = [100, 86, 68];
+			//skinTone = [100, 86, 68];
+			this.setSkinTone(100, 86, 68);
 			
 			socialStatusPoints = 0;
 			mysteryItemCollection = dict();

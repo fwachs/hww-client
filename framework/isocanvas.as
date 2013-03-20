@@ -105,7 +105,7 @@ class IsometricCanvas extends Scroll
 		var bottomTile = this.tiles[this.rows - 1][this.cols - 1];
 		var rightTile = this.tiles[this.rows - 1][0];
 		this.setContentSize(Game.untranslate(rightTile.left + this.tileWidth), Game.untranslate(bottomTile.top + this.tileHeight));
-		this.setZoomLimits(60, 100);
+		this.setZoomLimits(100, 100);
 	}
 	
 	function viewPortChanged(left, top, width, height)
