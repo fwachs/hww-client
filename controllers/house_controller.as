@@ -513,6 +513,7 @@ class HouseController extends ScreenController implements TimerListener
 
             if(map.testPlacement(frnture, centeredX, centeredY) == 1) {
                 map.newItem(frnture, centeredX, centeredY);
+        		map.addingItem = null;
 
                 frnture.hideAcceptButton();
 
