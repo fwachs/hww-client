@@ -110,8 +110,8 @@
 
 		
 
-		<screen:element name="tournamentEndDateBox" resource="gossip-wall/lb-text-box.png" left="448" top="713">
-				<screen:element name="tournamentEndDateText" resource="" left="2" top="3" height="34" width="305" font-size="34" text-align="center" ontap="">Weekly tournament ends</screen:element>
+		<screen:element name="tournamentEndDateBox" resource="gossip-wall/lb-text-box.png" text-align="center" left="448" top="713">
+				<screen:element name="tournamentEndDateText" resource="" left="2" top="3" height="34" width="305" font-size="34" text-align="center" ontap="">Weekly Tournament Ends</screen:element>
 				<screen:element name="tournamentEndDateText2" resource="" left="2" top="36" height="34" width="305" font-size="34" text-align="center" ontap="">#Date</screen:element>
 				</screen:element>
 					
