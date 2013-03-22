@@ -20,7 +20,7 @@
 				</screen:element>
 				<screen:element name="fashionPriceBox" resource="fashion-shop/item-box-price.png" left="19" top="218" visible="#clothing_item_visible">
 					<screen:element name="currency" resource="fashion-shop/#clothing_item_currency_image" left="20" top="0"/>
-					<screen:element name="price" resource="" left="90" top="0">#clothing_item_price</screen:element>
+					<screen:element name="price" resource="" left="90" top="5">#clothing_item_price</screen:element>
 				</screen:element>
 				<screen:element name="item-box-price-open" resource="fashion-shop/item-box-price-open.png" left="19" top="218" visible="#clothing_item_visible_open"/>
 				<screen:element name="purchaseButton_#clothing_item_id" resource="fashion-shop/buy-button.png" left="55" top="110" visible="NO" ontap="purchaseClothingItem" />
