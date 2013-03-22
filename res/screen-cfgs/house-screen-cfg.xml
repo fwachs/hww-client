@@ -28,9 +28,8 @@
 			</screen:element>
 		</screen:element>
 
-		<screen:element name="storageFrame" resource="" left="0" top="800" width="1280" height="209" z-index="1500" ontap="doNothing">
-			<screen:element name="cancelStorage" resource="house-decorator/cancel-button.png" left="1128" top="-50" z-index="100" ontap="hideStorage" visible="no"/>
-			
+		<screen:element name="cancelStorage" resource="house-decorator/cancel-button.png" left="1128" top="750" z-index="100" ontap="hideStorage" visible="no"/>
+		<screen:element name="storageFrame" resource="" left="0" top="800" width="1280" height="209" z-index="1500" ontap="doNothing">			
 			<screen:element name="storageScroll" class="Scroll" resource="house-decorator/items-frame.png" left="0" top="0" width="1280" height="209" lock="horizontal" ontap="doNothing">
 			</screen:element>
 		</screen:element>
