@@ -14,7 +14,7 @@ class IsometricItem extends Control
 	var width;
 	var depth;
 	var start;
-	var canvas = null;
+	weak var canvas = null;
 	var tiles;
 	var left;
 	var top;
@@ -416,7 +416,7 @@ class IsometricItem extends Control
 
 class Button extends Control
 {
-	var controller;
+	weak var controller;
 	var name;
 	
 	public function Button(resourceImage, controller, name)

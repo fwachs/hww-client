@@ -100,6 +100,7 @@ class GiftShopController extends ScreenController
 		}
 		
 		checkForPoppedBalloons();
+		this.screen.startGiftShopIdleAnimation();
 	}
 	
 	override public function eventFired(event)

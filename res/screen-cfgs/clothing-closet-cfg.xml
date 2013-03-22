@@ -45,7 +45,7 @@
 		<screen:element name="undressIcon" resource="fashion-shop/undress-icon.png" left="310" top="81" ontap="undress" z-index=""/>
 
 		<screen:element name="fashionScoreTotalBox" resource="fashion-shop/fashion-score-box2.png" left="78" top="685" ontap="" z-index="">
-			<screen:element name="fashionScoreTotalText" resource="" left="60" top="22" width="88" height="41" font-size="24" font-style="bold" text-align="center">#Placeholder</screen:element>
+			<screen:element name="fashionScoreTotalText" resource="" left="60" top="22" width="88" height="41" font-size="38" font-style="bold" text-align="center">#Placeholder</screen:element>
 		</screen:element>
 		
 		<screen:element name="magazineButton" resource="fashion-shop/magazines.png" left="240" top="662" ontap="gotoMagazinesScreen"/>		

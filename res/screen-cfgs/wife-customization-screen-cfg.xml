@@ -6,9 +6,9 @@
 		
 		<screen:element name="wife" left="180" top="144">
 			<screen:element name="hairback" resource="" left="38" top="0"/>
-		    <screen:element name="rightArm" resource="transparent.png" left="0" top="27"/>
+		    <screen:element name="rightArm" resource="" left="0" top="27"/>
 		    <screen:element name="body" resource="customize-wife/wife parts/WifeBodyBase.png" left="0" top="0"/>
-		    <screen:element name="rightArmSleeve" resource="transparent.png" left="0" top="27"/>
+		    <screen:element name="rightArmSleeve" resource="" left="0" top="27"/>
 		    <screen:element name="undies2" resource="clothing/undies/1196_Undies_All.png" left="63" top="150"/>
 		    <screen:element name="undies" resource="" left="63" top="150"/>
 		    <screen:element name="shoes" resource="" left="77" top="374"/>
@@ -21,8 +21,8 @@
 		    <screen:element name="necklace" resource="" left="75" top="122"/>
 		    <screen:element name="jacket" resource="" left="44" top="139"/>
 		    <screen:element name="shoulderBag" resource="" left="0" top="145"/>
-		    <screen:element name="leftArm" resource="transparent.png" left="4" top="27"/>
-		    <screen:element name="leftArmSleeve" resource="transparent.png" left="4" top="27"/>
+		    <screen:element name="leftArm" resource="" left="4" top="27"/>
+		    <screen:element name="leftArmSleeve" resource="" left="4" top="27"/>
 		    <screen:element name="hairfront" resource="" left="38" top="0"/>
 		</screen:element>
 
@@ -106,7 +106,7 @@
 		
 		<screen:element name="skinToneContainer" left="511" top="105" visible="NO">
 			<screen:element name="sliderBox" resource="customize-wife/slider-box.png" left="87" top="172">
-				<screen:element name="slider" resource="customize-wife/slider.png" left="267" top="0" ontouchdown="getSliderPosition" onmove="skinToneSlider" />
+				<screen:element name="slider" resource="customize-wife/slider.png" left="267" top="0" ontouchdown="getSliderPosition" onmove="skinToneSlider" ontouchup="skinToneSelected"/>
 			</screen:element>
 			<screen:element name="ebonyBox" resource="customize-wife/ebony-box.png" left="93" top="420"/>
 			<screen:element name="paleBox" resource="customize-wife/pale-box.png" left="515" top="420"/>

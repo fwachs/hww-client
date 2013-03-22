@@ -122,6 +122,9 @@ class WifeCustomizationController extends ScreenController implements INameEnter
         else if(event.name == "skinToneSlider"){
             this.screen.slideSkinToneSlider(event.x);
         }
+        else if(event.name == "skinToneSelected"){
+            this.screen.skinToneSelected();
+        }
         else if(event.name == "showHairStyle") {
             Game.sounds.playSFX("buttonPress");
             this.screen.displayCustomizationFrame(0);

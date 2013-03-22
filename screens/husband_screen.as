@@ -388,16 +388,16 @@ class HusbandScreen extends Screen
 	
 	public function update_career_stats()
 	{
-		var distance = 621;
+		var distance = 624;
 		var t = distance * Game.sharedGame().hubby.localVisits / Game.sharedGame().hubby.requiredVisits;
-		var s = 100 * t / distance;
-		if(s > 100)
-			s = 100;
+		if(t > 624) {
+			t = 624;
+		}
 		
-		careerStatusProgress.scale(s, 100);
+		careerStatusProgress.size(Game.translateX(t), Game.translateY(26));
 		
 		if(Game.sharedGame().hubby.localVisits == 0) {
-			careerStatusProgress.scale(0);
+			careerStatusProgress.size(0);
 		}
 		
 		this.careerLevelText.setText(str(Game.sharedGame().hubby.careerLevel));

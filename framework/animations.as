@@ -22,7 +22,7 @@ class Animations
 		animationsMap.update("husband_lawyer", this.buildLawyerAnimation());
 		animationsMap.update("husband_exec", this.buildExecutiveAnimation());
 		animationsMap.update("husband_sports", this.buildSportsAnimation());
-		animationsMap.update("gift_shop_balloons", this.getGiftShopBalloonsAnimation());
+		//animationsMap.update("gift_shop_balloons", this.getGiftShopBalloonsAnimation());
 		animationsMap.update("gift_shop_people", this.getGiftShopIdleAnimation());
 		animationsMap.update("gift_shop_end", this.getGiftShopAnimation());
 		animationsMap.update("button_shine", this.getButtonShineAnimation());

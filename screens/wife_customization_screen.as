@@ -140,43 +140,36 @@ class WifeCustomizationScreen extends Screen
         if(slider.pos()[0] > Game.translateX(545)) {
             slider.pos(Game.translateX(545), posY);
         }
+    }
+
+    public function skinToneSelected()
+    {
+        var slider = this.getElement("slider").getSprite();
 
         if(slider.pos()[0] >= 0 && slider.pos()[0] < Game.translateX(50)) {
             this.body.color(40, 25, 12);
-            this.rightArm.color(40, 25, 12);
-            this.leftArm.color(40, 25, 12);
+            Game.sharedGame().wife.setSkinTone(40, 25, 12);
         }
         else if(slider.pos()[0] >= Game.translateX(50) && slider.pos()[0] < Game.translateX(150)) {
             this.body.color(55, 40, 29);
-            this.rightArm.color(55, 40, 29);
-            this.leftArm.color(55, 40, 29);
+            Game.sharedGame().wife.setSkinTone(55, 40, 29);
         }
         else if(slider.pos()[0] >= Game.translateX(150) && slider.pos()[0] < Game.translateX(250)) {
             this.body.color(70, 54, 40);
-            this.rightArm.color(70, 54, 40);
-            this.leftArm.color(70, 54, 40);
+            Game.sharedGame().wife.setSkinTone(70, 54, 40);
         }
         else if(slider.pos()[0] >= Game.translateX(250) && slider.pos()[0] < Game.translateX(350)) {
             this.body.color(100, 86, 68);
-            this.rightArm.color(100, 86, 68);
-            this.leftArm.color(100, 86, 68);
+            Game.sharedGame().wife.setSkinTone(100, 86, 68);
         }
         else if(slider.pos()[0] >= Game.translateX(350) && slider.pos()[0] < Game.translateX(500)) {
             this.body.color(100, 91, 74);
-            this.rightArm.color(100, 91, 74);
-            this.leftArm.color(100, 91, 74);
+            Game.sharedGame().wife.setSkinTone(100, 91, 74);
         }
         else if(slider.pos()[0] >= Game.translateX(500) && slider.pos()[0] <= Game.translateX(595)) {
             this.body.color(100, 94, 85);
-            this.rightArm.color(100, 94, 85);
-            this.leftArm.color(100, 94, 85);
+            Game.sharedGame().wife.setSkinTone(100, 94, 85);
         }
-
-        Game.sharedGame().wife.skinTone[0] = this.body.color()[0];
-        Game.sharedGame().wife.skinTone[1] = this.body.color()[1];
-        Game.sharedGame().wife.skinTone[2] = this.body.color()[2];
-
-        Game.sharedGame().wife.dress(this);
 
         this.showTutorialStep(3);
     }

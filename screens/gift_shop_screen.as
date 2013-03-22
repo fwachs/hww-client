@@ -20,7 +20,7 @@ class GiftShopScreen extends Screen
 	override public function gotFocus()
 	{
 		Game.hideBanner();
-		this.startGiftShopIdleAnimation();
+		//this.startGiftShopIdleAnimation();
 	}
 	
 	override public function lostFocus()
