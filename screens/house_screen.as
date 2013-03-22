@@ -464,19 +464,26 @@ class HouseScreen extends Screen
 	}
 
 	public function showStorage()
-	{
-	
+	{	
 		var container = this.getElement("storageFrame").getSprite();		
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 591)));
-		
-		this.getElement("cancelStorage").getSprite().visible(1);
+		c_invoke(this.showCancelStorage, 300, null);
 	}
 	
 	public function hideStorage()
 	{
 		var container = this.getElement("storageFrame").getSprite();		
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 800)));
+		this.hideCancelStorage();
+	}
+	
+	public function showCancelStorage()
+	{
+		this.getElement("cancelStorage").getSprite().visible(1);
+	}
 
+	public function hideCancelStorage()
+	{
 		this.getElement("cancelStorage").getSprite().visible(0);
 	}
 }
