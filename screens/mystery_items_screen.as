@@ -53,7 +53,7 @@ class MysteryItemsScreen extends Screen
                         var item = Game.sharedGame().mysteryItems.get(itemId);
                         i++;
                         var itemImage = ""; //"friend-belt/friendbelt-question.png";
-                        var itemName = ""; //"?????";
+                        var itemName = " "; //"?????";
                         var imageLeft = 16;
                         var imageTop = 16;
                         var mysteryItemsMap = Game.sharedGame().wife.mysteryItemCollection;
