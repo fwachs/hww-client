@@ -117,8 +117,11 @@ class HusbandScreen extends Screen
 		stressLevelText = stressMeter.addlabel(str(Game.sharedGame().hubby.stressMeterValue),Game.font.getFont(),Game.translateFontSize(75)).pos(Game.translateX(130), Game.translateY( 27));
 	}
 	
-    public function showChatText() {
-        if(this.firstTime != 1 && Game.sharedGame().hubby.isHome()  && this.getElement("chatText") != null && this.getElement("chatBubble").getSprite().visible() == 0) {
+    public function showChatText() 
+    {
+    	if(this.getElement("chatText") == null) return;
+    	
+        if(this.firstTime != 1 && Game.sharedGame().hubby.isHome()  &&  this.getElement("chatBubble").getSprite().visible() == 0) {
             var chatText = this.getElement("chatText");
             var husbandMessage = Game.sharedGame().getRandomMessage("husband-screen");
             trace("HWW ### - husband message: ", husbandMessage);
