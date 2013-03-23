@@ -334,11 +334,7 @@ class HouseScreen extends Screen
 	public function buildSubcategories(subcategories)
 	{
 		var subcategoriesBar = this.getElement("subCategoryFrame").getSprite();
-		var subnodes = subcategoriesBar.subnodes();
-		var n = len(subnodes);
-		for(var t = 0; t < n; t++) {
-			subcategoriesBar.remove(t);			
-		}
+		subcategoriesBar.removeAllChildren();
 		
 		var left = 20;
 		for(var i = 0; i < len(subcategories); i++) {
