@@ -217,7 +217,9 @@ class HouseScreen extends Screen
 						frnture.isEditable = 0;
 						map.addItem(frnture, col, row);
 						if(styleItem.flip == 1) {
-							frnture.flip();
+							frnture.isFlipped = 1;
+							frnture.swapWidthAndDepth();
+//							frnture.flip();
 						}
 					}
 				}
@@ -251,11 +253,12 @@ class HouseScreen extends Screen
 			
 			trace("loadItem: ", f.image, f.width, f.depth, it.left, it.top);
 
-			map.addItem(frnture, it.left, it.top);
 			if(it.isFlipped == 1) {
-				frnture.flipItem();
+//				frnture.flipItem();
 				frnture.isFlipped = 1;
+				frnture.swapWidthAndDepth();
 			}
+			map.addItem(frnture, it.left, it.top);
 			
 			frnture.hideAcceptButton();
 		}
