@@ -365,6 +365,7 @@ class HouseController extends ScreenController implements TimerListener
             if(map.testPlacement(frnture, centeredX, centeredY) == 1) {
                 frnture.ref = new FurnitureItem(this.selectedFurniture, centeredX, centeredY, 0);
                 map.newItem(frnture, centeredX, centeredY);
+                map.reorganize();
             }
 
             this.selectedFurniture = null;
