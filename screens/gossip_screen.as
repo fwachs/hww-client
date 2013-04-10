@@ -28,7 +28,6 @@ class GossipScreen extends Screen
 	override public function build()
 	{
 		this.text = "";
-		MoPubAdController.sharedInstance().showAddInSprite(this.getElement("tipOfDayBox").getSprite());
 	}
 	
 	override public function gotFocus()
