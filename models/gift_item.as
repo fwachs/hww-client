@@ -238,7 +238,7 @@ class Buffs
 		
 		Buffs.workIcon = null;
 		Buffs.shoppingIcon = null;
-		Game.bannerScreen.controller.hideSSPsBuffIcon();
+		Game.bannerScreen.hideSSPsBuffIcon();
 
 		Game.sharedGame().setProperty("OngoingBuff", 0);
 		Game.sharedGame().setProperty("CurrentGiftId", -1);

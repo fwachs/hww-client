@@ -46,10 +46,10 @@
 
 		<hww-config:clothing-category name="Shoes">
 			<hww-config:clothing-item id="1041" name="Princess Pumps" image="shoes/1041_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1046" name="PinkFlair" image="shoes/1046_Shoes_All.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1046" name="Pink Flair" image="shoes/1046_Shoes_All.png" gameBucks="0" diamonds="4" stars="1" points="16" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1050" name="Mondrian" image="shoes/1050_Shoes_All.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1056" name="Zebra_pumps" image="shoes/1056_Shoes_All.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1059" name="Blue Ribbon Heels" image="shoes/1059_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1056" name="Zebra Pumps" image="shoes/1056_Shoes_All.png" gameBucks="0" diamonds="20" stars="2" points="60" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1059" name="Royalty Heels" image="shoes/1059_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1060" name="Leopard Pumps" image="shoes/1060_Shoes_All.png" gameBucks="0" diamonds="30" stars="3" points="80" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 		</hww-config:clothing-category>
 
@@ -110,7 +110,7 @@
 		<hww-config:clothing-category name="Shoes">
 			<hww-config:clothing-item id="1039" name="Navy Heels" image="shoes/1039_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1044" name="Blue Boots" image="shoes/1044_Shoes_All.png" gameBucks="0" diamonds="2" stars="1" points="9" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1049" name="RoyalPurpleGlam" image="shoes/1049_Shoes_All.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1049" name="Purple Glam" image="shoes/1049_Shoes_All.png" gameBucks="0" diamonds="7" stars="1" points="22" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1054" name="Equestrian" image="shoes/1054_Shoes_All.png" gameBucks="0" diamonds="12" stars="2" points="36" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1057" name="Moc Martins" image="shoes/1057_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 		</hww-config:clothing-category>
@@ -170,10 +170,10 @@
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Shoes">
-			<hww-config:clothing-item id="1040" name="Dark Wine Pumps" image="shoes/1040_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1045" name="Black and White" image="shoes/1045_Shoes_All.png" gameBucks="0" diamonds="3" stars="1" points="12" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1040" name="Dark Wine" image="shoes/1040_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1045" name="Black White" image="shoes/1045_Shoes_All.png" gameBucks="0" diamonds="3" stars="1" points="12" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1051" name="Red Ruffle" image="shoes/1051_Shoes_All.png" gameBucks="0" diamonds="8" stars="1" points="25" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1055" name="BrownRidingBoots" image="shoes/1055_Shoes_All.png" gameBucks="0" diamonds="14" stars="2" points="42" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1055" name="Riding Boots" image="shoes/1055_Shoes_All.png" gameBucks="0" diamonds="14" stars="2" points="42" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 		</hww-config:clothing-category>
 
 		<hww-config:clothing-category name="Accessories">
@@ -232,9 +232,9 @@
 
 		<hww-config:clothing-category name="Shoes">
 			<hww-config:clothing-item id="1042" name="Silver Heels" image="shoes/1042_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1047" name="GoldenGlitz" image="shoes/1047_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1052" name="SantanaBoots" image="shoes/1052_Shoes_All.png" gameBucks="0" diamonds="9" stars="2" points="27" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1061" name="HWW_Designer" image="shoes/1061_Shoes_All.png" gameBucks="0" diamonds="35" stars="3" points="85" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1047" name="Gold Glitz" image="shoes/1047_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1052" name="Santana" image="shoes/1052_Shoes_All.png" gameBucks="0" diamonds="9" stars="2" points="27" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1061" name="HWW Designer" image="shoes/1061_Shoes_All.png" gameBucks="0" diamonds="35" stars="3" points="85" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1062" name="Club Flair" image="shoes/1062_Shoes_All.png" gameBucks="0" diamonds="40" stars="3" points="90" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 		</hww-config:clothing-category>
 
@@ -295,8 +295,8 @@
 
 		<hww-config:clothing-category name="Shoes">
 			<hww-config:clothing-item id="1043" name="Black Pumps" image="shoes/1043_Shoes_All.png" gameBucks="1500" diamonds="0" stars="0" points="8" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1048" name="GoldBuckleBoots" image="shoes/1048_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
-			<hww-config:clothing-item id="1053" name="GreenBuckle" image="shoes/1053_Shoes_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1048" name="Buckle Boots" image="shoes/1048_Shoes_All.png" gameBucks="0" diamonds="5" stars="1" points="19" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
+			<hww-config:clothing-item id="1053" name="Green Buckle" image="shoes/1053_Shoes_All.png" gameBucks="0" diamonds="10" stars="2" points="30" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 			<hww-config:clothing-item id="1058" name="Red Gator" image="shoes/1058_Shoes_All.png" gameBucks="0" diamonds="25" stars="2" points="75" type="Shoes" element="shoes" premium="0" animation="ignore" sleeves="ignore" />
 		</hww-config:clothing-category>
 

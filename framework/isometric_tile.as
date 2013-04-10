@@ -46,7 +46,6 @@ class IsometricTile extends Control
 	
 	override public function configureEvents()
 	{
-		return;
 		this.attachEvent(this._sprite, "ontouch", 0, EVENT_TOUCH);
 		this.attachEvent(this._sprite, "ontouch", 0, EVENT_MULTI_TOUCH);
 		this.attachEvent(this._sprite, "onuntouch", 0, EVENT_UNTOUCH);
@@ -172,6 +171,10 @@ class IsometricTile extends Control
 		this.resource = resource;
 		this.item_width = item_width;
 		this.item_depth = item_depth;
+		
+		if(this.canvas) {
+			this._sprite.texture(resource);
+		}
 	}
 	
 	public function setResource(resource, item_width, item_depth)

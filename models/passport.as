@@ -149,12 +149,15 @@ class Passport
         passportArray.append(["TokyoSouvenirs", TokyoSouvenirs]);
         passportArray.append(["SydneySouvenirs", SydneySouvenirs]);
         passportArray.append(["datesCompleted", datesCompleted]);
+        /*
         var escapedDates = new Array();
         for (var i=0 ;i <len(datesCompleted); i++) {
             trace("Dates Completed: ", datesCompleted[i]);
             escapedDates.append(str("'" + datesCompleted[i] + "'"));
         }
         passportArray.append(["escapedDatesCompleted", escapedDates]);
+        */
+        passportArray.append(["escapedDatesCompleted", datesCompleted]);
         
         return dict(passportArray);
     }

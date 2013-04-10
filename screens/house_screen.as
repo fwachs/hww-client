@@ -217,7 +217,9 @@ class HouseScreen extends Screen
 						frnture.isEditable = 0;
 						map.addItem(frnture, col, row);
 						if(styleItem.flip == 1) {
-							frnture.flip();
+							frnture.isFlipped = 1;
+							frnture.swapWidthAndDepth();
+//							frnture.flip();
 						}
 					}
 				}
@@ -251,11 +253,12 @@ class HouseScreen extends Screen
 			
 			trace("loadItem: ", f.image, f.width, f.depth, it.left, it.top);
 
-			map.addItem(frnture, it.left, it.top);
 			if(it.isFlipped == 1) {
-				frnture.flipItem();
+//				frnture.flipItem();
 				frnture.isFlipped = 1;
+				frnture.swapWidthAndDepth();
 			}
+			map.addItem(frnture, it.left, it.top);
 			
 			frnture.hideAcceptButton();
 		}
@@ -334,11 +337,7 @@ class HouseScreen extends Screen
 	public function buildSubcategories(subcategories)
 	{
 		var subcategoriesBar = this.getElement("subCategoryFrame").getSprite();
-		var subnodes = subcategoriesBar.subnodes();
-		var n = len(subnodes);
-		for(var t = 0; t < n; t++) {
-			subcategoriesBar.remove(t);			
-		}
+		subcategoriesBar.removeAllChildren();
 		
 		var left = 20;
 		for(var i = 0; i < len(subcategories); i++) {
@@ -464,19 +463,26 @@ class HouseScreen extends Screen
 	}
 
 	public function showStorage()
-	{
-	
+	{	
 		var container = this.getElement("storageFrame").getSprite();		
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 591)));
-		
-		this.getElement("cancelStorage").getSprite().visible(1);
+		c_invoke(this.showCancelStorage, 300, null);
 	}
 	
 	public function hideStorage()
 	{
 		var container = this.getElement("storageFrame").getSprite();		
 		container.addaction(moveto(250, Game.translateX( 0), Game.translateY( 800)));
+		this.hideCancelStorage();
+	}
+	
+	public function showCancelStorage()
+	{
+		this.getElement("cancelStorage").getSprite().visible(1);
+	}
 
+	public function hideCancelStorage()
+	{
 		this.getElement("cancelStorage").getSprite().visible(0);
 	}
 }

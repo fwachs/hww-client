@@ -31,7 +31,7 @@ class ClothingCatalogScreen extends Screen
             params.update("left_pos", str(left));
             params.update("catalogOptionImage", clothingCatalog.image);
             params.update("catalogOptionAction", "catalogClicked");
-            params.update("catalogOptionLocked", "");
+            params.update("catalogOptionLocked", " ");
             params.update("catalogOptionVisible", "YES");
 
             var travelDate = Game.sharedGame().passport.datesCompleted[clothingCatalog.travelIndex];

@@ -197,29 +197,7 @@
 			<hww-config:furniture id="149" name="Japanese" image="furniture/cabinets/149_Cabinet.png" width="3" depth="1" level="90" gameBucks="45000" diamonds="27" stars="3" points="100" remodelRequirement="3" />
 			<hww-config:furniture id="150" name="Futuristic" image="furniture/cabinets/150_Cabinet.png" width="3" depth="2" level="100" gameBucks="60000" diamonds="30" stars="3" points="110" remodelRequirement="3" /> 
 		</hww-config:furniture-sub-category>
-	
-		<hww-config:furniture-sub-category name="Floor" image="images/house-decorator/icons/flooring-icon.png" >
-			<hww-config:furniture id="171" name="Beige" image="furniture/flooring/171_Floor.png" width="2" depth="2" level="1" gameBucks="1000" diamonds="0" stars="0" points="1" remodelRequirement="0" />
-			<hww-config:furniture id="172" name="Grey" image="furniture/flooring/172_Floor.png" width="2" depth="2" level="3" gameBucks="1200" diamonds="0" stars="0" points="1" remodelRequirement="0" />
-			<hww-config:furniture id="173" name="Blue Shag" image="furniture/flooring/173_Floor.png" width="2" depth="2" level="5" gameBucks="1500" diamonds="0" stars="0" points="1" remodelRequirement="2" />
-			<hww-config:furniture id="174" name="Green Shag" image="furniture/flooring/174_Floor.png" width="2" depth="2" level="7" gameBucks="500" diamonds="1" stars="0" points="1" remodelRequirement="2" />
-			<hww-config:furniture id="175" name="White Carpet" image="furniture/flooring/175_Floor.png" width="2" depth="2" level="10" gameBucks="800" diamonds="2" stars="0" points="2" remodelRequirement="3" />
-			<hww-config:furniture id="176" name="Dark Blue Tile" image="furniture/flooring/176_Floor.png" width="2" depth="2" level="15" gameBucks="1100" diamonds="2" stars="0" points="2" remodelRequirement="3" />
-			<hww-config:furniture id="177" name="Red Shag" image="furniture/flooring/177_Floor.png" width="2" depth="2" level="20" gameBucks="1400" diamonds="3" stars="1" points="2" remodelRequirement="3" />
-			<hww-config:furniture id="178" name="Checkerboard" image="furniture/flooring/178_Floor.png" width="2" depth="2" level="25" gameBucks="1700" diamonds="3" stars="1" points="2" remodelRequirement="3" />
-			<hww-config:furniture id="179" name="White Walnut " image="furniture/flooring/179_Floor.png" width="2" depth="2" level="30" gameBucks="2000" diamonds="4" stars="1" points="3" remodelRequirement="3" />
-			<hww-config:furniture id="180" name="Dark Wood " image="furniture/flooring/180_Floor.png" width="2" depth="2" level="35" gameBucks="2300" diamonds="4" stars="1" points="3" remodelRequirement="3" />
-			<hww-config:furniture id="181" name="HWW Insignia" image="furniture/flooring/181_Floor.png" width="2" depth="2" level="40" gameBucks="2600" diamonds="5" stars="1" points="3" remodelRequirement="3" />
-			<hww-config:furniture id="182" name="Dollar Sign " image="furniture/flooring/182_Floor.png" width="2" depth="2" level="45" gameBucks="2900" diamonds="5" stars="1" points="3" remodelRequirement="3" />
-			<hww-config:furniture id="183" name="Stone Tile" image="furniture/flooring/183_Floor.png" width="2" depth="2" level="50" gameBucks="3200" diamonds="6" stars="2" points="4" remodelRequirement="3" />
-			<hww-config:furniture id="184" name="Combination" image="furniture/flooring/184_Floor.png" width="2" depth="2" level="55" gameBucks="3500" diamonds="6" stars="2" points="4" remodelRequirement="3" />
-			<hww-config:furniture id="185" name="Tatami" image="furniture/flooring/185_Floor.png" width="2" depth="2" level="60" gameBucks="38000" diamonds="7" stars="2" points="4" remodelRequirement="3" />
-			<hww-config:furniture id="186" name="Chessboard" image="furniture/flooring/186_Floor.png" width="2" depth="2" level="65" gameBucks="4100" diamonds="7" stars="2" points="4" remodelRequirement="3" />
-			<hww-config:furniture id="187" name="Rose Marble" image="furniture/flooring/187_Floor.png" width="2" depth="2" level="70" gameBucks="4400" diamonds="8" stars="2" points="5" remodelRequirement="3" />
-			<hww-config:furniture id="188" name="White Marble" image="furniture/flooring/188_Floor.png" width="2" depth="2" level="80" gameBucks="4700" diamonds="9" stars="3" points="8" remodelRequirement="3" />
-			<hww-config:furniture id="189" name="Blue Marble" image="furniture/flooring/189_Floor.png" width="2" depth="2" level="90" gameBucks="5000" diamonds="10" stars="3" points="9" remodelRequirement="3" />
-<!--			<hww-config:furniture id="190" name="Disco Tile" image="furniture/flooring/190_Floor001.png" width="2" depth="2" level="100" gameBucks="53000" diamonds="12" stars="3" points="10" remodelRequirement="3" /> -->
-		</hww-config:furniture-sub-category>
+
 	</hww-config:furniture-category>
 	
 	<hww-config:furniture-category name="Dècor" image="images/house-decorator/Decor-icon.png">

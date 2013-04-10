@@ -365,6 +365,7 @@ class HouseController extends ScreenController implements TimerListener
             if(map.testPlacement(frnture, centeredX, centeredY) == 1) {
                 frnture.ref = new FurnitureItem(this.selectedFurniture, centeredX, centeredY, 0);
                 map.newItem(frnture, centeredX, centeredY);
+                map.reorganize();
             }
 
             this.selectedFurniture = null;
@@ -410,7 +411,7 @@ class HouseController extends ScreenController implements TimerListener
     {
         if(this.selectedPaint != null) {
             var area = item.tiles[0].area;
-            trace("### HWW ### - Area:", area.serialize());
+            //trace("### HWW ### - Area:", area.serialize());
             if(area.type == "Paint") {
                 var furniture = this.selectedPaint;
 

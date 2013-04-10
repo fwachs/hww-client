@@ -80,7 +80,7 @@ class Game
 	
 	public static function trackEvent(category, action, label, value)
 	{
-//		ppy_tracker_event(category, action, label, value);
+		ga_tracker_event(category, action, label, value);
 		
 		trace("** TRACK EVENT:", category, action, label, value);
 	}
