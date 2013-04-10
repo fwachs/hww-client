@@ -118,7 +118,8 @@
 		<screen:element name="showWeeklyTournament" resource="gossip-wall/leaderboard-button.png" left="40" top="691" ontap="showWeeklyTournament">
 				</screen:element>
 				
-		<screen:element name="tipOfDayBox" resource="" left="830" top="10" ontap="showWeeklyTournament" />
+		<screen:element name="tipOfDayBox" resource="gossip-wall/tip-of-day.png" left="830" top="10" ontap="showWeeklyTournament" />
+
 		<screen:element name="backButton" resource="travel-screen/back-button.png" left="760" top="686" ontap="goBack" z-index="900000"/>
 
 
