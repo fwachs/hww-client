@@ -4,11 +4,13 @@
     <screen:elements>
           <screen:element name="ReturnFromShoppingPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="yes" ontap="doNothing">
         <screen:element name="promptFrame" resource="gift-shop-prompt/prompt-frame.png" left="282" top="146"/>
-        <screen:element name="rewardReasonText" resource="" left="390" top="187" font-size="44" font-style="bold" text-align="center" width="550" height="200">#placeholder</screen:element>
-        <screen:element name="rewardGivenIcon" resource="premium-currency-screen/dimonds01v2.png" left="480" top="418"/>
-        <screen:element name="rewardGivenAmount" resource="" left="560" top="418" font-size="44" font-style="bold" text-align="center" width="250" height="59">#placeholder</screen:element>
+        <screen:element name="rewardWinnerIcon" resource="award/winner-d.png" left="490" top="222"/>
+		<screen:element name="rewardReasonText" resource="" left="320" top="166" font-size="46" font-style="bold" text-align="center" width="640" height="200">#placeholder</screen:element>
+        <screen:element name="rewardGivenIcon" resource="premium-currency-screen/dimonds01v2.png" left="575" top="463"/>
+		
+        <screen:element name="rewardGivenAmount" resource="" left="655" top="469" font-size="44" font-style="bold" text-align="left" width="200" height="59">#placeholder</screen:element>
         
-        <screen:element name="okay-button" resource="tutorial-icons/okay.png" left="512" top="523" ontap="collectReward"/>
+        <screen:element name="okay-button" resource="tutorial-icons/okay.png" left="512" top="538" ontap="collectReward"/>
     </screen:element>
 
     </screen:elements>
