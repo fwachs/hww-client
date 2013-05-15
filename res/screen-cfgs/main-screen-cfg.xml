@@ -53,7 +53,7 @@
 			
 		<screen:element name="husband" resource="husband-selection-screen/m-Husbands-executivev5-526.png" left="860" top="130" ontap="gotoHusband">
 			<screen:element name="faceAnimation" resource="Animation/banker_anim/banker_anim_face/banker_anim_face0001.png" left="0" top="0" />
-			<screen:element name="chatBubble" resource="main-menu/chat-bubble-2.png" left="-350" top="-75" >
+			<screen:element name="chatBubble" resource="main-menu/chat-bubble-2.png" left="-350" top="-55" >
 				<screen:element name="chatText" resource="" left="20" top="30" width="372" text-wrap="yes">#placeholder</screen:element>
 			</screen:element>
 		</screen:element>
@@ -107,7 +107,7 @@
 		<screen:element name="tutorial-step-1" resource="" left="0" top="0" z-index="99999999" visible="no">
         	<screen:element name="tutorialPromptFrame" resource="tutorial-icons/mainmenu-tutorial-01.png" left="0" top="0" ontap="doNothing"/>
         	<screen:element name="tutorialPromptOkayButton" resource="tutorial-icons/okay.png" left="830" top="623" ontap="nextTutorial"/>
-    	</screen:element>
+    	</screen:element>    	
 	</screen:elements>
 	
 </screen:config>

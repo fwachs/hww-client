@@ -82,7 +82,8 @@ class IsometricItem extends Control
 		this.getSprite().put(this);
 		this.parent = canvas.getSprite();
 		if(this.isFlipped == 1) {
-			this.flipItem();
+			this.imageSprite.flip();
+//			this.flipItem();
 		}
 
 		canvas.getSprite().add(this.getSprite(), this.z);
@@ -90,6 +91,8 @@ class IsometricItem extends Control
 	
 	public function resetZ(z)
 	{
+		this.z = z;
+		
 		if(!this.canvas) return;
 		
 		this.getSprite().removefromparent();
@@ -262,9 +265,9 @@ class IsometricItem extends Control
 		if(!this.canvas) return;
 						
 		this.imageSprite.flip();
-		this.swapWidthAndDepth();		
 		this.canvas.liftItem(this);
-
+		this.canvas.placeItem(this, this.xpos, this.ypos)
+		
 		this.removeGhost();
 		this.addGhost();
 	}
@@ -273,6 +276,12 @@ class IsometricItem extends Control
 	{
 //		trace("Flipping: ", this.isFlipped);
 
+		this.swapWidthAndDepth();
+		if(this.canvas.testPlacement(this, this.xpos, this.ypos) == 0) {
+			this.swapWidthAndDepth();
+			return;
+		}
+		
 		if(this.isFlipped == 0) {
 			this.isFlipped = 1;
 		}

@@ -84,67 +84,67 @@ class PremiumCurrencyController extends ScreenController
 		var currency = "";
 		
 		if (result == 1) {
-			if(packageName == "hww001") {
+			if(packageName == "diamonds1") {
 				currency = "Diamonds";
 				amount = 10;
 			}
-			else if(packageName == "hww002") {
+			else if(packageName == "diamonds2") {
 				currency = "Diamonds";
 				amount = 21;
 			}
-			else if(packageName == "hww003") {
+			else if(packageName == "diamonds3") {
 				currency = "Diamonds";
 				amount = 55;
 			}
-			else if(packageName == "hww004") {
+			else if(packageName == "diamonds4") {
 				currency = "Diamonds";
 				amount = 115;
 			}
-			else if(packageName == "hww005") {
+			else if(packageName == "diamonds5") {
 				currency = "Diamonds";
 				amount = 300;
 			}
-			else if(packageName == "hww006") {
+			else if(packageName == "diamonds6") {
 				currency = "Diamonds";
 				amount = 625;
 			}
-			else if(packageName == "hww007") {
+			else if(packageName == "diamonds7") {
 				currency = "Diamonds";
 				amount = 910;
 			}
-			else if(packageName == "hww008") {
+			else if(packageName == "diamonds8") {
 				currency = "Diamonds";
 				amount = 1500;
 			}
-			else if(packageName == "hww009") {
+			else if(packageName == "gamebucks1") {
 				currency = "GameBucks";
 				amount = 10000;
 			}
-			else if(packageName == "hww010") {
+			else if(packageName == "gamebucks2") {
 				currency = "GameBucks";
 				amount = 21000;
 			}
-			else if(packageName == "hww011") {
+			else if(packageName == "gamebucks3") {
 				currency = "GameBucks";
 				amount = 55000;
 			}
-			else if(packageName == "hww012") {
+			else if(packageName == "gamebucks4") {
 				currency = "GameBucks";
 				amount = 115000;
 			}
-			else if(packageName == "hww013") {
+			else if(packageName == "gamebucks5") {
 				currency = "GameBucks";
 				amount = 300000;
 			}
-			else if(packageName == "hww014") {
+			else if(packageName == "gamebucks6") {
 				currency = "GameBucks";
 				amount = 625000;
 			}
-			else if(packageName == "hww015") {
+			else if(packageName == "gamebucks7") {
 				currency = "GameBucks";
 				amount = 910000;
 			}
-			else if(packageName == "hww016") {
+			else if(packageName == "gamebucks8") {
 				currency = "GameBucks";
 				amount = 1500000;
 			}

@@ -202,7 +202,9 @@ class Screen
 		var oldTut = this.getElement("tutorial-step-" + str(this.currentTutorial));
 		if(oldTut) {
 			oldTut.getSprite().removefromparent();
-			this.rootNode.getSprite().add(oldTut.getSprite());
+			if(this.rootNode) {
+				this.rootNode.getSprite().add(oldTut.getSprite());
+			}
 			oldTut.getSprite().visible(0);
 		}
 	}

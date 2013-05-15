@@ -5,34 +5,34 @@
 		<screen:element name="viewDiamond" resource="travel-screen/background-travel.png" left="0" top="0" ontap="doNothing">
 			<screen:element name="currencyFrame" resource="premium-currency-screen/currency-frame.png" left="51" top="96"/>
 				<screen:element name="backButton" resource="travel-screen/back-button.png" left="1049" top="688" ontap="goBack"/>
-				<screen:element name="DiamondOption1" resource="premium-currency-screen/Diamonds001.png" left="101" top="134" ontap="dispatchDiamond:hww001">	
+				<screen:element name="DiamondOption1" resource="premium-currency-screen/Diamonds001.png" left="101" top="134" ontap="dispatchDiamond:diamonds1">	
 					<screen:element name="diamonText1" resource="" left="110" top="45">$0.99 = 10</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption2" resource="premium-currency-screen/Diamonds002.png" left="101" top="272" ontap="dispatchDiamond:hww002">
+				<screen:element name="DiamondOption2" resource="premium-currency-screen/Diamonds002.png" left="101" top="272" ontap="dispatchDiamond:diamonds2">
 					<screen:element name="diamonText2" resource="" left="110" top="45">$1.99 = 21</screen:element>
 					<screen:element name="diamondMoreText2" resource="" left="370" top="12">5% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption3" resource="premium-currency-screen/Diamonds003.png" left="101" top="413" ontap="dispatchDiamond:hww003">
+				<screen:element name="DiamondOption3" resource="premium-currency-screen/Diamonds003.png" left="101" top="413" ontap="dispatchDiamond:diamonds3">
 					<screen:element name="diamonText3" resource="" left="110" top="45">$4.99 = 55</screen:element>
 					<screen:element name="diamondMoreText3" resource="" left="360" top="12">10% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption4" resource="premium-currency-screen/Diamonds004.png" left="101" top="552" ontap="dispatchDiamond:hww004">
+				<screen:element name="DiamondOption4" resource="premium-currency-screen/Diamonds004.png" left="101" top="552" ontap="dispatchDiamond:diamonds4">
 					<screen:element name="diamonText4" resource="" left="110" top="45">$9.99 = 115</screen:element>
 					<screen:element name="diamondMoreText4" resource="" left="360" top="12">15% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption5" resource="premium-currency-screen/Diamonds005.png" left="662" top="134" ontap="dispatchDiamond:hww005">
+				<screen:element name="DiamondOption5" resource="premium-currency-screen/Diamonds005.png" left="662" top="134" ontap="dispatchDiamond:diamonds5">
 					<screen:element name="diamonText5" resource="" left="98" top="45">$24.99 = 300</screen:element>
 					<screen:element name="diamondMoreText5" resource="" left="360" top="12">20% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption6" resource="premium-currency-screen/Diamonds006.png" left="662" top="272" ontap="dispatchDiamond:hww006">
+				<screen:element name="DiamondOption6" resource="premium-currency-screen/Diamonds006.png" left="662" top="272" ontap="dispatchDiamond:diamonds6">
 					<screen:element name="diamonText6" resource="" left="98" top="45">$49.99 = 625</screen:element>
 					<screen:element name="diamondMoreText6" resource="" left="360" top="12">25% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption7" resource="premium-currency-screen/Diamonds007.png" left="662" top="413" ontap="dispatchDiamond:hww007">
+				<screen:element name="DiamondOption7" resource="premium-currency-screen/Diamonds007.png" left="662" top="413" ontap="dispatchDiamond:diamonds7">
 					<screen:element name="diamonText7" resource="" left="98" top="45">$69.99 = 910</screen:element>
 					<screen:element name="diamondMoreText7" resource="" left="360" top="12">30% more</screen:element>
 				</screen:element>
-				<screen:element name="DiamondOption8" resource="premium-currency-screen/Diamonds008.png" left="662" top="552" ontap="dispatchDiamond:hww008">
+				<screen:element name="DiamondOption8" resource="premium-currency-screen/Diamonds008.png" left="662" top="552" ontap="dispatchDiamond:diamonds8">
 					<screen:element name="diamonText8" resource="" left="98" top="45">$99.99 = 1500</screen:element>
 					<screen:element name="diamondMoreText8" resource="" left="360" top="12">50% more</screen:element>
 				</screen:element>
@@ -44,34 +44,34 @@
 		
 		<screen:element name="viewGameBucks" resource="travel-screen/background-travel.png" left="0" top="0" visible="no" ontap="doNothing">
 			<screen:element name="currencyFrame" resource="premium-currency-screen/currency-frame.png" left="51" top="96"/>
-				<screen:element name="GameBucksOption1" resource="premium-currency-screen/GameBucks001.png" left="101" top="134" ontap="dispatchGameBucks:hww009" >
+				<screen:element name="GameBucksOption1" resource="premium-currency-screen/GameBucks001.png" left="101" top="134" ontap="dispatchGameBucks:gamebucks1" >
 					<screen:element name="gameBucksText1" resource="" left="110" top="45">$0.99 = 10,000</screen:element>
 				</screen:element>	
-				<screen:element name="GameBucksOption2" resource="premium-currency-screen/GameBucks002.png" left="101" top="272" ontap="dispatchGameBucks:hww010" >
+				<screen:element name="GameBucksOption2" resource="premium-currency-screen/GameBucks002.png" left="101" top="272" ontap="dispatchGameBucks:gamebucks2" >
 					<screen:element name="gameBucksText2" resource="" left="110" top="45">$1.99 = 21,000</screen:element>
 					<screen:element name="gameBucksMoreText2" resource="" left="370" top="12">5% more</screen:element>
 				</screen:element>	
-				<screen:element name="GameBucksOption3" resource="premium-currency-screen/GameBucks003.png" left="101" top="413" ontap="dispatchGameBucks:hww011" >
+				<screen:element name="GameBucksOption3" resource="premium-currency-screen/GameBucks003.png" left="101" top="413" ontap="dispatchGameBucks:gamebucks3" >
 					<screen:element name="gameBucksText3" resource="" left="110" top="45">$4.99 = 55,000</screen:element>
 					<screen:element name="gameBucksMoreText3" resource="" left="360" top="12">10% more</screen:element>
 				</screen:element>
-				<screen:element name="GameBucksOption4" resource="premium-currency-screen/GameBucks004.png" left="101" top="552" ontap="dispatchGameBucks:hww012" >
+				<screen:element name="GameBucksOption4" resource="premium-currency-screen/GameBucks004.png" left="101" top="552" ontap="dispatchGameBucks:gamebucks4" >
 					<screen:element name="gameBucksText4" resource="" left="110" top="45">$9.99 = 115,000</screen:element>
 					<screen:element name="gameBucksMoreText4" resource="" left="360" top="12">15% more</screen:element>
 				</screen:element>
-				<screen:element name="GameBucksOption5" resource="premium-currency-screen/GameBucks005.png" left="662" top="134" ontap="dispatchGameBucks:hww013" >
+				<screen:element name="GameBucksOption5" resource="premium-currency-screen/GameBucks005.png" left="662" top="134" ontap="dispatchGameBucks:gamebucks5" >
 					<screen:element name="gameBucksText5" resource="" left="98" top="45">$24.99 = 300,000</screen:element>
 					<screen:element name="gameBucksMoreText5" resource="" left="360" top="12">20% more</screen:element>
 				</screen:element>
-				<screen:element name="GameBucksOption6" resource="premium-currency-screen/GameBucks006.png" left="662" top="272" ontap="dispatchGameBucks:hww014" >
+				<screen:element name="GameBucksOption6" resource="premium-currency-screen/GameBucks006.png" left="662" top="272" ontap="dispatchGameBucks:gamebucks6" >
 					<screen:element name="gameBucksText6" resource="" left="98" top="45">$49.99 = 625,000</screen:element>
 					<screen:element name="gameBucksMoreText6" resource="" left="360" top="12">25% more</screen:element>
 				</screen:element>
-				<screen:element name="GameBucksOption7" resource="premium-currency-screen/GameBucks007.png" left="662" top="413" ontap="dispatchGameBucks:hww015" >
+				<screen:element name="GameBucksOption7" resource="premium-currency-screen/GameBucks007.png" left="662" top="413" ontap="dispatchGameBucks:gamebucks7" >
 					<screen:element name="gameBucksText7" resource="" left="98" top="45">$69.99 = 910,000</screen:element>
 					<screen:element name="gameBucksMoreText7" resource="" left="360" top="12">30% more</screen:element>
 				</screen:element>
-				<screen:element name="GameBucksOption8" resource="premium-currency-screen/GameBucks008.png" left="662" top="552" ontap="dispatchGameBucks:hww016" >
+				<screen:element name="GameBucksOption8" resource="premium-currency-screen/GameBucks008.png" left="662" top="552" ontap="dispatchGameBucks:gamebucks8" >
 					<screen:element name="gameBucksText8" resource="" left="98" top="45">$99.99 = 1,500,000</screen:element>
 					<screen:element name="gameBucksMoreText8" resource="" left="360" top="12">50% more</screen:element>
 				</screen:element>

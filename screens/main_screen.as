@@ -27,6 +27,9 @@ class MainScreen extends Screen
 		Game.sharedGame().wife.dress(this);
 		this.showChatText();
 		this.startHusbandAnimation();
+		
+		var fbLogin = FacebookApi.loginView(0, 150, 183, 47);
+		this.getElement("background").getSprite().add(fbLogin);
 	}
 
 	public function showChatText() {
