@@ -348,10 +348,11 @@ class MainController extends ScreenController
         var queryParams = dict([["offset",0],["limit",499]]);
         var param = "";
         // ppy_query("list_friends", queryParams, buildFriendCallback, param);
-        ppy_query("list_friends", queryParams, buildFriendCallback, param);
+        //ppy_query("list_friends", queryParams, buildFriendCallback, param);
+        FacebookApi.request("me/friends?fields=installed", dict(), buildFriendCallback);
     }
 
-    public function buildFriendCallback(requestId, ret_code, response, param)
+    public function buildFriendCallback(ret_code, response, param)
     {
         if(ret_code == 0) {
             this.screen.prepareFriendsBelt(new Array());
@@ -434,7 +435,8 @@ class MainController extends ScreenController
     	//trace("inviteFriend: ", friend, friend.papayaUserId);
     	
     	// uncomment for final version
-    	ppy_query("send_friend_request", dict([["uid", friend.papayaUserId]]), friendInvited, friend);
+//    	ppy_query("send_friend_request", dict([["uid", friend.papayaUserId]]), friendInvited, friend);
+    	FacebookApi.dialog("Invite text", dict([["to", friend.papayaUserId]]), friendInvited, friend);
 //    	this.friendInvited(0, 1, 0, friend);
     }
 
