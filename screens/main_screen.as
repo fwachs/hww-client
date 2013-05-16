@@ -28,8 +28,8 @@ class MainScreen extends Screen
 		this.showChatText();
 		this.startHusbandAnimation();
 		
-		var fbLogin = FacebookApi.loginView(0, 150, 183, 47);
-		this.getElement("background").getSprite().add(fbLogin);
+		var fbLogin = FacebookApi.loginView(330, 272, 104, 35);
+		this.getElement("settingsFrame").getSprite().add(fbLogin);
 	}
 
 	public function showChatText() {

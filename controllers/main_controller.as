@@ -354,6 +354,7 @@ class MainController extends ScreenController
 
     public function buildFriendCallback(ret_code, response, param)
     {
+        trace("Friends list response: ", ret_code);
         if(ret_code == 0) {
             this.screen.prepareFriendsBelt(new Array());
             return;
