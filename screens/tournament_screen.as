@@ -49,7 +49,7 @@ class TournamentScreen extends Screen
             
             params.update("lbcard", "gossip-wall/lb-player-card.png");
             trace("rank player id: ", players[i].get("id"), wife.name);
-            if (players[i].get("id") == str(Game.papayaUserId)) {
+            if (players[i].get("id") == str(Game.getPapayaUserId())) {
                 params.update("lbcard", "gossip-wall/lb-player-card2.png");
                 addWeeklyScore = 0;
             }

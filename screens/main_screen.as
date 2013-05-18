@@ -28,8 +28,12 @@ class MainScreen extends Screen
 		this.showChatText();
 		this.startHusbandAnimation();
 		
-		var fbLogin = FacebookApi.loginView(330, 272, 104, 35);
+		var fbLogin = FacebookApi.loginView(330, 272, 104, 35, facebookLoginCallback);
 		this.getElement("settingsFrame").getSprite().add(fbLogin);
+	}
+
+	public function facebookLoginCallback(facebookId) {
+	    Game.sharedGame().updateSocialId(facebookId);
 	}
 
 	public function showChatText() {
@@ -101,7 +105,7 @@ class MainScreen extends Screen
 		    var fakeFriend = new PapayaFriend(0, "Invite", "friend-belt/friendbelt-question.png", 0, 0, 0);
 		    fakeFriends.append(fakeFriend);
         }
-		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriends");
+		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriend");
 		this.getElement("friendsScroll").setContentSize(left, 185);
 	}
 	
@@ -125,8 +129,6 @@ class MainScreen extends Screen
 		for(var i = 0; i < friendsCount; i++) {
 			var friend = friends[i];
 			
-			if(friend.wasInvited == 1 && friend.isGamePlayer == 0) continue;
-						
 			if(friend.isGamePlayer == isGamePlayer) {
 				var friendParams = dict();
 				friendParams.update("left_pos", str(left));

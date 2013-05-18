@@ -40,7 +40,7 @@ class Game
 
 	public static function getPapayaUserId()
 	{
-	    return ppy_userid();
+	    return Game.getDatabase().get("userId");
 	}
 
 	public static function sharedGame()
@@ -91,14 +91,19 @@ class Game
 		Game.sounds.playMusic("splashMusic");
 		this.loadingScreen = Game.scene.addsprite("images/2clams-splash.png").pos(Game.translateX(0), Game.translateY( 0));
 	}
-	
+
 	function socialLoginSucceeded(userId)
 	{
         Game.papayaUserId = userId;
         trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
         transitionLoadingScreen();
 	}
-	
+
+	function updateSocialId(userId) {
+	    Game.papayaUserId = userId;
+        log("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+	}
+
 	function socialLoginFailed()
 	{
 		// show the "no connection message"
@@ -119,15 +124,34 @@ class Game
 		Game.screens = new Array();
 		Game.animations = new Animations();
         Game.initializeServer();
+        
+        var papayaId = Game.db.getPapayaId();
 
         var wife = new Wife();
 
         var shouldSynchronize = Game.getDatabase().get("onGoingSynchronization");
-        if (wife.firstPlay == 1 || shouldSynchronize == 1) {
-            Game.getServer().synchronize(synchronizeCallback);
+        if (wife.firstPlay == 1 || shouldSynchronize == 1 || papayaId == null) {
+            if (papayaId == null && Game.getPapayaUserId() == null) {
+                Game.getServer().registerNewUser(registerCallback);
+            } else if (wife.firstPlay == 1 || shouldSynchronize == 1) {
+                Game.papayaUserId = papayaId;
+                Game.getServer().synchronize(synchronizeCallback);
+            } else {
+                c_invoke(loading1, 1, null);
+            }
         } else {
             c_invoke(loading1, 1, null);
         }
+	}
+
+	public function registerCallback(request_id, ret_code, response_content) {
+	    if (ret_code == 1) {
+	        var responseMap = json_loads(response_content);
+	        log("server replied: ", response_content);
+	        
+	        Game.getDatabase().put("userId", responseMap.get("id"));
+	    }
+	    c_invoke(loading1, 1, null);
 	}
 
 	public function synchronizeCallback(request_id, ret_code, response_content) {

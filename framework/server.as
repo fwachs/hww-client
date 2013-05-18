@@ -13,13 +13,13 @@ class Server
     var url;
     public function Server()
     {	
-    	url = "http://hww.2clams.com:8080";
+    	url = "http://localhost:8080";
     }
 
     public function getWeeklyTournament(callback) {
         var params = dict();
 
-        params.update("papayaUserId", Game.papayaUserId);
+        params.update("papayaUserId", Game.getPapayaUserId());
         this.makeRequest("/tournament", callback, params);
     }
 
@@ -47,7 +47,7 @@ class Server
     public function synchronize(callback) {
     	var params = dict();
 
-        params.update("papayaUserId", Game.papayaUserId);
+        params.update("papayaUserId", Game.getPapayaUserId());
     	this.makeRequest("/synchronize", callback, params);
     }
 
@@ -72,8 +72,15 @@ class Server
         passportMap.update("datesCompleted", new Array());
         params.update("passport", passportMap);
         params.update("realstate", realstate);
-        params.update("papayaUserId", Game.papayaUserId);
+        params.update("papayaUserId", Game.getPapayaUserId());
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
+    }
+
+    public function registerNewUser(callback) {
+        var params = dict();
+
+        params.update("papayaUserId", Game.getPapayaUserId());
+        this.makeRequest("/registerNewUser", callback, params);
     }
 
 	public function doRegister() {
