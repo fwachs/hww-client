@@ -422,16 +422,7 @@ class MainController extends ScreenController
             message = "Invitation failed";
         }
         else {
-        	message = "Invitation succeded";
-        	
-        	if(friend.foundOnHWW == 1) {
-        		friend.isGamePlayer = 1;
-        	}
-        	else {
-        		this.friends.remove(friend);
-        	}
-    		PapayaFriend.addInvitation(friend.papayaUserId);
-    		trace("Invitation added", friend.papayaUserId);
+        	message = "Invitation sent succesfully";
         }
         
         this.alert(message, this.prepareFriends);

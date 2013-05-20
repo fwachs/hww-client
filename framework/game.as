@@ -26,6 +26,7 @@ class Game
 	static var animations;
 	static var screenScale = 50;
 	static var papayaUserId = 0;
+	static var socialId=0;
 	var loadingScreen;
 	var loadingBar;
 	var loadingBarStart;
@@ -94,8 +95,8 @@ class Game
 
 	function socialLoginSucceeded(userId)
 	{
-        Game.papayaUserId = userId;
-        trace("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+        Game.socialId = userId;
+        trace("### HWW ### - PapayaUserId: ", str(Game.socialId));
         transitionLoadingScreen();
 	}
 
