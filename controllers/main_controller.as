@@ -368,9 +368,12 @@ class MainController extends ScreenController
             var pictureDict = data[i].get("picture");
             var url = pictureDict.get("data").get("url");
             coolFriend.update("avatar_version", url);
-            coolFriend.update("foundOnHWW", 1);
-            log("friend installed: ", data[i].get("installed"));
-            coolFriends.append(coolFriend);
+            var installed = data[i].get("installed");
+            if (installed == "1") {
+                log(data[i].get("name"), " installed: ", installed);
+                coolFriend.update("foundOnHWW", 1);
+                coolFriends.append(coolFriend);
+            }
         }
         
         this.buildFriends(coolFriends);
@@ -378,7 +381,6 @@ class MainController extends ScreenController
     
     public function buildFriends(flist)
     {
-    	log("buildFriends: ", flist);
     	
         this.screen.getElement("friendsBeltContainer").getSprite().visible(1);
 
@@ -386,20 +388,9 @@ class MainController extends ScreenController
         for (var i=0; i< len(flist); i++) {
             var friendUserId = flist[i].get("id");
             var name = flist[i].get("name");
-            var avatarVersionId = 0;
             var avatarUrl= flist[i].get("avatar_version");
-            
-            var isGamePlayer = flist[i].get("isplayer");
-            var wasInvited = PapayaFriend.isInvited(friendUserId);
-        	if(isGamePlayer == 1 && wasInvited == 1) {
-	        	trace("Invitation removed: ", friendUserId);
-        		PapayaFriend.removeInvitation(friendUserId);
-        	}
-            
-            var foundOnHWW = flist[i].get("foundOnHWW");
-
-            var friend = new PapayaFriend(friendUserId, name, avatarUrl, 1, 0, 0);
-            
+            log(name, " installed: ", 1);
+            var friend = new PapayaFriend(friendUserId, name, avatarUrl, 1, 1, 0);
             friends.append(friend);
         }
         

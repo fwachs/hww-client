@@ -99,13 +99,12 @@ class MainScreen extends Screen
 		this.getElement("friendsScroll").removeAllChildren();
 		
 		var left = this.buildFriendsBelt(friends, 20, 1, "friendSelected");
-		left = this.buildFriendsBelt(friends, left, 0, "inviteFriend");
 		var fakeFriends = new Array();
 		for(var j = 0; j < 3; j++) {
 		    var fakeFriend = new PapayaFriend(0, "Invite", "friend-belt/friendbelt-question.png", 0, 0, 0);
 		    fakeFriends.append(fakeFriend);
         }
-		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriend");
+		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriends");
 		this.getElement("friendsScroll").setContentSize(left, 185);
 	}
 	
@@ -128,7 +127,7 @@ class MainScreen extends Screen
 		
 		for(var i = 0; i < friendsCount; i++) {
 			var friend = friends[i];
-			
+			log(friend.name, friend.isGamePlayer, " game player: ", isGamePlayer);
 			if(friend.isGamePlayer == isGamePlayer) {
 				var friendParams = dict();
 				friendParams.update("left_pos", str(left));
