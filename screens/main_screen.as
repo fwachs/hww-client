@@ -104,7 +104,7 @@ class MainScreen extends Screen
 		    var fakeFriend = new PapayaFriend(0, "Invite", "friend-belt/friendbelt-question.png", 0, 0, 0);
 		    fakeFriends.append(fakeFriend);
         }
-		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriends");
+		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriend");
 		this.getElement("friendsScroll").setContentSize(left, 185);
 	}
 	
