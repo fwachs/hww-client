@@ -344,12 +344,24 @@ class MainController extends ScreenController
 
     public function loadFriends()
     {
-        var friends = new Array();
-        var queryParams = dict([["offset",0],["limit",499]]);
-        var param = "";
-        // ppy_query("list_friends", queryParams, buildFriendCallback, param);
-        //ppy_query("list_friends", queryParams, buildFriendCallback, param);
+        if (Game.socialId == 0) {
+            var fbLogin = FacebookApi.loginView(10, 35, 104, 35, 
+                    this.facebookLoginCallback, this.facebookLogoutCallback);
+            this.buildFriendCallback(0, 0, 0);
+            this.screen.getElement("friendsScroll").getSprite().add(fbLogin);
+        } else {
+            FacebookApi.request("me/friends?fields=installed", dict(), buildFriendCallback);
+        }
+    }
+
+    public function facebookLoginCallback(facebookId) {
+        Game.sharedGame().updateSocialId(facebookId);
         FacebookApi.request("me/friends?fields=installed", dict(), buildFriendCallback);
+    }
+
+    public function facebookLogoutCallback() {
+        log("logging out of facebook");
+        Game.sharedGame().updateSocialId(0);
     }
 
     public function buildFriendCallback(ret_code, response, param)
@@ -406,26 +418,16 @@ class MainController extends ScreenController
 
     public function inviteFriend(friend)
     {
-    	//trace("inviteFriend: ", friend, friend.papayaUserId);
-    	
-    	// uncomment for final version
-//    	ppy_query("send_friend_request", dict([["uid", friend.papayaUserId]]), friendInvited, friend);
-    	FacebookApi.dialog("Invite text", dict([["to", friend.papayaUserId]]), friendInvited, friend);
-//    	this.friendInvited(0, 1, 0, friend);
+    	FacebookApi.dialog("Come join HouseWifeWars!", dict([["to", friend.papayaUserId]]), friendInvited, friend);
     }
 
     public function friendInvited(requestId, ret_code, response, friend)
     {
     	var message = "";
-    	
         if(ret_code == 0) {
-            message = "Invitation failed";
+            message = "An error ocurred while trying to send the invites...";
+            this.alert(message, this.prepareFriends);
         }
-        else {
-        	message = "Invitation sent succesfully";
-        }
-        
-        this.alert(message, this.prepareFriends);
     }    
 }
 

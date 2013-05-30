@@ -96,13 +96,14 @@ class Game
 	function socialLoginSucceeded(userId)
 	{
         Game.socialId = userId;
-        trace("### HWW ### - PapayaUserId: ", str(Game.socialId));
+        log("### HWW ### - SocialId: ", str(Game.socialId));
         transitionLoadingScreen();
 	}
 
 	function updateSocialId(userId) {
 	    Game.papayaUserId = userId;
-        log("### HWW ### - PapayaUserId: ", str(Game.papayaUserId));
+	    Game.socialId = userId;
+        log("### HWW ### - SocialId: ", str(Game.papayaUserId));
 	}
 
 	function socialLoginFailed()

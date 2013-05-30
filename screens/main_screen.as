@@ -28,13 +28,18 @@ class MainScreen extends Screen
 		this.showChatText();
 		this.startHusbandAnimation();
 		
-		var fbLogin = FacebookApi.loginView(330, 272, 104, 35, facebookLoginCallback);
+		var fbLogin = FacebookApi.loginView(330, 272, 104, 35, facebookLoginCallback, facebookLogoutCallback);
 		this.getElement("settingsFrame").getSprite().add(fbLogin);
 	}
 
 	public function facebookLoginCallback(facebookId) {
 	    Game.sharedGame().updateSocialId(facebookId);
 	}
+
+	public function facebookLogoutCallback() {
+	    log("logging out of facebook");
+        Game.sharedGame().updateSocialId(0);
+    }
 
 	public function showChatText() {
 	    var chatText = this.getElement("chatText");
@@ -98,13 +103,16 @@ class MainScreen extends Screen
 	{
 		this.getElement("friendsScroll").removeAllChildren();
 		
-		var left = this.buildFriendsBelt(friends, 20, 1, "friendSelected");
 		var fakeFriends = new Array();
-		for(var j = 0; j < 3; j++) {
+		for(var j = 0; j < 1; j++) {
 		    var fakeFriend = new PapayaFriend(0, "Invite", "friend-belt/friendbelt-question.png", 0, 0, 0);
 		    fakeFriends.append(fakeFriend);
-        }
-		left = this.buildFriendsBelt(fakeFriends, left, 0, "inviteFriend");
+		}
+		var left = 0;
+		if (Game.socialId != 0) {
+		    left = this.buildFriendsBelt(fakeFriends, 20, 0, "inviteFriend");
+		}
+		left = this.buildFriendsBelt(friends, left, 1, "friendSelected");
 		this.getElement("friendsScroll").setContentSize(left, 185);
 	}
 	

@@ -84,69 +84,37 @@ class PremiumCurrencyController extends ScreenController
 		var currency = "";
 		
 		if (result == 1) {
-			if(packageName == "diamonds1") {
+			if(packageName == "fablife002") {
 				currency = "Diamonds";
 				amount = 10;
 			}
-			else if(packageName == "diamonds2") {
+			else if(packageName == "fablife003") {
 				currency = "Diamonds";
 				amount = 21;
 			}
-			else if(packageName == "diamonds3") {
+			else if(packageName == "fablife004") {
 				currency = "Diamonds";
 				amount = 55;
 			}
-			else if(packageName == "diamonds4") {
+			else if(packageName == "fablife005") {
 				currency = "Diamonds";
 				amount = 115;
 			}
-			else if(packageName == "diamonds5") {
-				currency = "Diamonds";
-				amount = 300;
-			}
-			else if(packageName == "diamonds6") {
-				currency = "Diamonds";
-				amount = 625;
-			}
-			else if(packageName == "diamonds7") {
-				currency = "Diamonds";
-				amount = 910;
-			}
-			else if(packageName == "diamonds8") {
-				currency = "Diamonds";
-				amount = 1500;
-			}
-			else if(packageName == "gamebucks1") {
+			else if(packageName == "fablife006") {
 				currency = "GameBucks";
 				amount = 10000;
 			}
-			else if(packageName == "gamebucks2") {
+			else if(packageName == "fablife007") {
 				currency = "GameBucks";
 				amount = 21000;
 			}
-			else if(packageName == "gamebucks3") {
+			else if(packageName == "fablife008") {
 				currency = "GameBucks";
 				amount = 55000;
 			}
-			else if(packageName == "gamebucks4") {
+			else if(packageName == "fablife009") {
 				currency = "GameBucks";
 				amount = 115000;
-			}
-			else if(packageName == "gamebucks5") {
-				currency = "GameBucks";
-				amount = 300000;
-			}
-			else if(packageName == "gamebucks6") {
-				currency = "GameBucks";
-				amount = 625000;
-			}
-			else if(packageName == "gamebucks7") {
-				currency = "GameBucks";
-				amount = 910000;
-			}
-			else if(packageName == "gamebucks8") {
-				currency = "GameBucks";
-				amount = 1500000;
 			}
 			
 			var wallet = Game.sharedGame().wallet;
