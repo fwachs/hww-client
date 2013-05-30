@@ -45,7 +45,6 @@ class MainController extends ScreenController
 {
     var settingsText;
     var soundText;
-    var notificationsText;
     var screenUpdateTimer;
     var friends = null;
 
@@ -69,10 +68,6 @@ class MainController extends ScreenController
         this.soundText = this.screen.getElement("soundText");
         this.soundText.setText("Sound");
         this.soundText.setFont(Game.font.getBoldFont(), Game.translateFontSize(60));
-
-        this.notificationsText = this.screen.getElement("notificationsText");
-        this.notificationsText.setText("Notifications");
-        this.notificationsText.setFont(Game.font.getBoldFont(), Game.translateFontSize(60));
 
         this.screenUpdateTimer = new mainScreenUpdateTimer(this);
         this.screenUpdateTimer.start();
