@@ -153,6 +153,9 @@ class MainController extends ScreenController
             Game.sharedGame().rateReward();
             openUrl(url);
         }
+        else if (event.name == "restorePurchases") {
+            InAppHelper.restorePurchases();
+        }
         else if(event.name == "friendSelected") {
             Game.sounds.playSFX("buttonPress");
             var socialPlayer = event.argument;
