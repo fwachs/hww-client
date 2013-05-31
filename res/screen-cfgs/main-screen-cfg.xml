@@ -60,14 +60,14 @@
 		
 		<screen:element name="settingsFrame" resource="settings-prompt/settings-prompt-frame.png" left="0" top="0" visible="no" ontap="doNothing">
 			<screen:element name="settingsText" resource="" left="496" top="184"/>
-			<screen:element name="soundText" resource="" left="315" top="283"/>
-			<screen:element name="soundOnButton" resource="settings-prompt/on-box-highlight.png" left="669" top="269" ontap="soundOn"/>
-			<screen:element name="soundOffButton" resource="settings-prompt/off-box-deselect.png" left="829" top="269" ontap="soundOff"/>
-			<screen:element name="restorePurchasesButton" resource="settings-prompt/restore.png" left="335" top="379" ontap="restorePurchases"/>
+			<screen:element name="soundText" resource="" left="315" top="263"/>
+			<screen:element name="soundOnButton" resource="settings-prompt/on-box-highlight.png" left="669" top="259" ontap="soundOn"/>
+			<screen:element name="soundOffButton" resource="settings-prompt/off-box-deselect.png" left="829" top="259" ontap="soundOff"/>
+			<screen:element name="restorePurchasesButton" resource="settings-prompt/restore.png" left="335" top="349" ontap="restorePurchases"/>
 			<!--screen:element name="notificationsText" resource="" left="315" top="379"/>
 			<screen:element name="notificationsOnButton" resource="settings-prompt/on-box-highlight.png" left="669" top="365" ontap="notificationsOn"/>
 			<screen:element name="notificationsOffButton" resource="settings-prompt/off-box-deselect.png" left="829" top="365" ontap="notificationsOff"/-->
-			<screen:element name="rateUsText" resource="" left="320" top="448" width="646" height="84"  font-size="34" font-style="bold">Earn diamonds for rating us. Your 5-star rating keeps the updates coming.</screen:element>
+			<screen:element name="rateUsText" resource="" left="350" top="448" width="646" height="84"  font-size="34" font-style="bold">Earn diamonds for rating us. Your 5-star rating keeps the updates coming.</screen:element>
 			<screen:element name="rateUsButton" resource="settings-prompt/rate-us.png" left="380" top="544" ontap="rateUs"/>
 		
 			<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="976" top="94" ontap="closeSettings"/>
