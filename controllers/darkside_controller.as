@@ -43,7 +43,7 @@ class DarkSideController extends ScreenController
 	{
 		var doorNum = int(event.argument);
 		
-		trace("doorTapped: ", event.argument, doorNum);
+		log("doorTapped: ", event.argument, doorNum);
 
 		if(Game.sharedGame().darkSide.isDoorOpen(doorNum) == 1) return;
 		

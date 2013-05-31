@@ -583,13 +583,13 @@ class HusbandController extends ScreenController implements TimerListener
                 Game.sharedGame().darkSide.acceptChallenge();
                 
                 if (HusbandController.activeScreen) {
-                    HusbandController.activeScreen.dismissModalScreen();
-                    HusbandController.activeScreen.showDarkSidePrompt();
+                    HusbandController.activeController.dismissModalScreen();
+                    HusbandController.activeController.showDarkSideLetter();
                 }
             }
         } else{
             if (HusbandController.activeScreen) {
-                HusbandController.activeScreen.dismissModalScreen();
+                HusbandController.activeController.dismissModalScreen();
             }
         }
     }
