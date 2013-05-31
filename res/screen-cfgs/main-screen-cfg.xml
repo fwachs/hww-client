@@ -63,7 +63,7 @@
 			<screen:element name="soundText" resource="" left="315" top="283"/>
 			<screen:element name="soundOnButton" resource="settings-prompt/on-box-highlight.png" left="669" top="269" ontap="soundOn"/>
 			<screen:element name="soundOffButton" resource="settings-prompt/off-box-deselect.png" left="829" top="269" ontap="soundOff"/>
-			<screen:element name="restorePurchasesButton" resource="settings-prompt/restore.png" left="335" top="379" ontap=""/>
+			<screen:element name="restorePurchasesButton" resource="settings-prompt/restore.png" left="335" top="379" ontap="restorePurchases"/>
 			<!--screen:element name="notificationsText" resource="" left="315" top="379"/>
 			<screen:element name="notificationsOnButton" resource="settings-prompt/on-box-highlight.png" left="669" top="365" ontap="notificationsOn"/>
 			<screen:element name="notificationsOffButton" resource="settings-prompt/off-box-deselect.png" left="829" top="365" ontap="notificationsOff"/-->

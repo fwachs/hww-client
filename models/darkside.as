@@ -139,7 +139,7 @@ class DarkSide
     {
         var papayaUserId = Game.getPapayaUserId();
         var serializedDarkSide = this.serialize();
-        trace("### HWW ### - Saving DarkSide: ",str(serializedDarkSide));
+        log("### HWW ### - Saving DarkSide: ",str(serializedDarkSide));
         Game.getDatabase().put("darkside" + Game.getPapayaUserId(), serializedDarkSide);
     }
 

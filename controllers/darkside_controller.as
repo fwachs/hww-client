@@ -24,19 +24,19 @@ class DarkSideController extends ScreenController
     	Game.sharedGame().darkSide.activate();
 	}	
 
-	override public function configureHandlers()
-	{
-		this.setEventHandler(this.doorTapped, "doorTapped");
-		this.setEventHandler(this.openSafe, "openSafe");
-		this.setEventHandler(this.getAway, "getAway");
-		this.setEventHandler(this.dismiss, "dismiss");
-	}
-	
 	override public function eventFired(event)
 	{
 		super.eventFired(event);
 
-		this.processHandlerForEvent(event);
+		if (event.name == "doorTapped") {
+		    this.doorTapped(event);
+		} else if (event.name == "openSafe") {
+		    this.openSafe(event);
+		} else if (event.name == "getAway") {
+		    this.getAway(event);
+		} else if (event.name == "dismiss") {
+		    this.dismiss(event);
+		}
 	}
 	
 	public function doorTapped(event)

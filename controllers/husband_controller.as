@@ -580,6 +580,7 @@ class HusbandController extends ScreenController implements TimerListener
     {
         if (result == 1) {
             if (packageName == "fablife001") {
+                Game.sharedGame().darkSide.requirementsChecked = 1;
                 Game.sharedGame().darkSide.acceptChallenge();
                 
                 if (HusbandController.activeScreen) {
