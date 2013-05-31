@@ -6,11 +6,11 @@
 			<screen:element name="currencyFrame" resource="premium-currency-screen/currency-frame.png" left="51" top="96"/>
 				<screen:element name="backButton" resource="travel-screen/back-button.png" left="1049" top="688" ontap="goBack"/>
 				<screen:element name="DiamondOption1" resource="premium-currency-screen/Diamonds001.png" left="101" top="134" ontap="dispatchDiamond:fablife002">	
-					<screen:element name="diamonText1" resource="" left="40" top="55" font-size="24" width="300" height="50">$0.99 = 10</screen:element>
+					<screen:element name="diamonText1" resource="" left="40" top="55" font-size="30" width="300" height="50">$0.99 = 10</screen:element>
 				</screen:element>
 				<screen:element name="DiamondOption3" resource="premium-currency-screen/Diamonds003.png" left="101" top="413" ontap="dispatchDiamond:fablife003">
-					<screen:element name="diamonText3" resource="" left="40" top="55" font-size="24" width="300" height="50">$4.99 = 55</screen:element>
-					<screen:element name="diamondMoreText3" resource="" left="320" top="12" width="200" height="50" font-size="18">10% more</screen:element>
+					<screen:element name="diamonText3" resource="" left="40" top="55" font-size="48" width="300" height="50">$4.99 = 55</screen:element>
+					<screen:element name="diamondMoreText3" resource="" left="320" top="12" width="200" height="50" font-size="36">10% more</screen:element>
 				</screen:element>
 				<screen:element name="DiamondOption4" resource="premium-currency-screen/Diamonds005.png" left="662" top="134" ontap="dispatchDiamond:fablife004">
 					<screen:element name="diamonText4" resource="" left="40" top="55" font-size="24" width="300" height="50">$9.99 = 115</screen:element>
