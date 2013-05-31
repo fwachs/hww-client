@@ -10,6 +10,11 @@ Brief Description:
 
 class DarkSideScreen extends Screen
 {
+	public function DarkSideScreen()
+	{
+		super();
+	}
+	
 	override public function build()
 	{
 	}
