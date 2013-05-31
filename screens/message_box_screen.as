@@ -198,10 +198,8 @@ class MessageBoxScreen extends Screen
             displayDarkSideChallengePrompt();
         }
         else if(this.type == MessageBoxScreen.MB_DarkSideLetter) {
-            displayOkayPrompt("", "okay-button-dark-side-letter");
-            var promptBG = this.getElement("okayPromptFrame").getSprite();
-            promptBG.texture("images/dark-side/darkside-intro-02.png");
-            promptBG.pos(0, 0);
+            this.getElement("okay-button-dark-side-letter").getSprite().visible(1);
+            this.getElement("okayPromptFrameDark").getSprite().visible(1);;
         }
         else if(this.type == MessageBoxScreen.MB_BasicAccept) {
             displayOkayPrompt(this.argument, "okay-button-alert");
