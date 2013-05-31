@@ -128,8 +128,7 @@ class MessageBoxScreen extends Screen
             this.getElement("TravelReturnPrompt").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_Secret) {
-            displayOkayPrompt("");
-            this.getElement("okayPromptFrame").getSprite().texture("images/hubby-screen/secret-popup.png");
+            this.getElement("unlockDarkSideContainer").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_RemodelHousePrompt) {
             this.getElement("remodelCost").setText(str(this.argument.diamonds));

@@ -14,6 +14,9 @@ import screens.message_box_screen
 
 class HusbandController extends ScreenController implements TimerListener
 {
+    static var activeScreen = null;
+    static var activeController = null;
+
     public function HusbandController(controlledScreen)
     {
         super(controlledScreen);
@@ -27,12 +30,16 @@ class HusbandController extends ScreenController implements TimerListener
 
         Timer.registerListener("outToWorkTimer", this);
         Timer.registerListener("outShoppingTimer", this);
+        HusbandController.activeScreen = this.screen;
+        HusbandController.activeController = this;
     }
 
     override public function screenUnloaded()
     {
         Timer.unregisterListener("outToWorkTimer", this);
         Timer.unregisterListener("outShoppingTimer", this);
+        HusbandController.activeScreen = null;
+        HusbandController.activeController = null;
     }
 
     override public function eventFired(event)
@@ -44,6 +51,9 @@ class HusbandController extends ScreenController implements TimerListener
         if(event.name == "fillLoveTank") {
             Game.sounds.playSFX("buttonPress");
             this.screen.fillLoveTank();
+        }
+        else if (event.name == "dispatchDarkSide") {
+            start_payment(event.argument);
         }
         else if(event.name == "closeLoveOptions") {
             this.screen.closeLoveOptions();
@@ -564,6 +574,24 @@ class HusbandController extends ScreenController implements TimerListener
 	    		this.showDarkSideScreen();
 	    	}
     	}
+    }
+
+    public static function onPaymentFinished(packageName, result, error, param) 
+    {
+        if (result == 1) {
+            if (packageName == "fablife001") {
+                Game.sharedGame().darkSide.acceptChallenge();
+                
+                if (HusbandController.activeScreen) {
+                    HusbandController.activeScreen.dismissModalScreen();
+                    HusbandController.activeScreen.showDarkSidePrompt();
+                }
+            }
+        } else{
+            if (HusbandController.activeScreen) {
+                HusbandController.activeScreen.dismissModalScreen();
+            }
+        }
     }
 
     /*****************************************************************************

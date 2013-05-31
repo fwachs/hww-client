@@ -3,6 +3,13 @@
 <screen:config>
     <screen:elements>
 
+    <screen:element name="unlockDarkSideContainer" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="okayPromptFrame" resource="dark-side/unlock-dark-side.png" left="240" top="100"/>
+        <screen:element name="okay-button-default" resource="tutorial-icons/okay.png" left="552" top="200" ontap="dismiss" visible="yes"/>
+        <screen:element name="purchaseDarkSideDismiss" resource="dark-side/not-now.png" left="342" top="450" ontap="dismiss" visible="yes"/>
+        <screen:element name="purchaseDarkSide" resource="tutorial-icons/yes.png" left="692" top="450" ontap="dispatchDarkSide:fablife001" visible="yes"/>
+    </screen:element>
+    
     <screen:element name="okayPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="okayPromptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
         <screen:element name="okayPromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" text-wrap="yes">#placeholder</screen:element>

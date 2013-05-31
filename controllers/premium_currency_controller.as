@@ -155,4 +155,13 @@ class PremiumCurrencyController extends ScreenController
 		} 
 	}
 
+	public static function onPaymentRestored(packageName, result, error, param) 
+    {
+	    if (result == 1) {
+	        if(packageName == "fablife001") {
+	            log("dark side unlock restored!");
+            }
+	    }
+    }
+
 }//end class
