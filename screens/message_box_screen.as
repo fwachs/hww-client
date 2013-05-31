@@ -199,7 +199,7 @@ class MessageBoxScreen extends Screen
         }
         else if(this.type == MessageBoxScreen.MB_DarkSideLetter) {
             this.getElement("okay-button-dark-side-letter").getSprite().visible(1);
-            this.getElement("okayPromptFrameDark").getSprite().visible(1);;
+            this.getElement("okayPromptFrameDarkFrame").getSprite().visible(1);
         }
         else if(this.type == MessageBoxScreen.MB_BasicAccept) {
             displayOkayPrompt(this.argument, "okay-button-alert");

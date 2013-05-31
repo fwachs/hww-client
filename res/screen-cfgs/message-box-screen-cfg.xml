@@ -15,7 +15,9 @@
         <screen:element name="okayPromptText" resource="" left="331" top="163" font-size="42" font-style="bold" text-align="center" width="618" text-wrap="yes">#placeholder</screen:element>
     </screen:element>
 
-    <screen:element name="okayPromptFrameDark" resource="dark-side/darkside-intro-02.png" left="0" top="0" visible="NO"/>
+    <screen:element name="okayPromptFrameDarkFrame" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
+        <screen:element name="okayPromptFrameDark" resource="dark-side/darkside-intro-02.png" left="0" top="0" />
+    </screen:element>
 
     <screen:element name="okayPrompt" resource="tutorial-icons/overlay75gray.png" left="0" top="0" visible="NO" ontap="doNothing">
         <screen:element name="okayPromptFrame" resource="gift-others-prompt/receive-frame.png" left="280" top="130"/>
