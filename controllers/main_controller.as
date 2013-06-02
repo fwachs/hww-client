@@ -416,7 +416,7 @@ class MainController extends ScreenController
 
     public function inviteFriend(friend)
     {
-    	FacebookApi.dialog("Come join HouseWifeWars!", dict([["to", friend.papayaUserId]]), friendInvited, friend);
+    	FacebookApi.dialog("Come join HouseWifeWars!", dict(), friendInvited, friend);
     }
 
     public function friendInvited(requestId, ret_code, response, friend)

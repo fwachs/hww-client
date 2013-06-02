@@ -28,7 +28,7 @@ class MainScreen extends Screen
 		this.showChatText();
 		this.startHusbandAnimation();
 		
-		var fbLogin = FacebookApi.loginView(330, 272, 104, 35, facebookLoginCallback, facebookLogoutCallback);
+		var fbLogin = FacebookApi.loginView(310, 267, 104, 35, facebookLoginCallback, facebookLogoutCallback);
 		this.getElement("settingsFrame").getSprite().add(fbLogin);
 	}
 
