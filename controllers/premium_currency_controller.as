@@ -90,15 +90,15 @@ class PremiumCurrencyController extends ScreenController
 			}
 			else if(packageName == "fablife003") {
 				currency = "Diamonds";
-				amount = 21;
+				amount = 55;
 			}
 			else if(packageName == "fablife004") {
 				currency = "Diamonds";
-				amount = 55;
+				amount = 115;
 			}
 			else if(packageName == "fablife005") {
 				currency = "Diamonds";
-				amount = 115;
+				amount = 300;
 			}
 			else if(packageName == "fablife006") {
 				currency = "GameBucks";
@@ -106,22 +106,22 @@ class PremiumCurrencyController extends ScreenController
 			}
 			else if(packageName == "fablife007") {
 				currency = "GameBucks";
-				amount = 21000;
+				amount = 55000;
 			}
 			else if(packageName == "fablife008") {
 				currency = "GameBucks";
-				amount = 55000;
+				amount = 115000;
 			}
 			else if(packageName == "fablife009") {
 				currency = "GameBucks";
-				amount = 115000;
+				amount = 300000;
 			}
-			
+
 			var wallet = Game.sharedGame().wallet;
 			var money = wallet.moneyForCurrency(amount, currency);
 			wallet.purchaseCurrency(money, this);
 			trace("### HWW ### - User purchased: ", amount, " ", currency);
-			
+
 			if(currency == "Diamonds") {
 				Game.sounds.playSFX("reward");
 				Game.sharedGame().unlockAchievement("High Roller");
