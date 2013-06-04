@@ -25,7 +25,10 @@
     		</screen:element>
     		
     		<screen:element name="closeButton" resource="gift-shop-prompt/cancel-button.png" left="1160" top="500" ontap="hideFriendsBelt" z-index="100"/>
-    		<screen:element name="friendsScroll" class="Scroll" resource="" left="60" top="570" width="1148" height="196" lock="horizontal" z-index="99">
+      
+        <screen:element name="fbContainer" resource="" left="10" top="-10" height="35" width="104" z-index="99"/>
+
+   		<screen:element name="friendsScroll" class="Scroll" resource="" left="60" top="570" width="1148" height="196" lock="horizontal" z-index="99">
 			</screen:element>
     	</screen:element>
 		

@@ -346,7 +346,10 @@ class MainController extends ScreenController
             var fbLogin = FacebookApi.loginView(10, 35, 104, 35, 
                     this.facebookLoginCallback, this.facebookLogoutCallback);
             this.buildFriendCallback(0, 0, 0);
-            this.screen.getElement("friendsScroll").getSprite().add(fbLogin);
+            var fbContainer = this.screen.getElement("fbContainer");
+            fbContainer.getSprite().add(fbLogin);
+            fbContainer.getSprite().visible(1);
+            this.screen.getElement("friendsScroll").getSprite().add(fbContainer.getSprite());
         } else {
             FacebookApi.request("me/friends?fields=installed", dict(), buildFriendCallback);
         }
@@ -354,11 +357,12 @@ class MainController extends ScreenController
 
     public function facebookLoginCallback(facebookId) {
         Game.sharedGame().updateSocialId(facebookId);
+        var fbContainer = this.screen.getElement("fbContainer");
+        fbContainer.getSprite().visible(0);
         FacebookApi.request("me/friends?fields=installed", dict(), buildFriendCallback);
     }
 
     public function facebookLogoutCallback() {
-        log("logging out of facebook");
         Game.sharedGame().updateSocialId(0);
     }
 
