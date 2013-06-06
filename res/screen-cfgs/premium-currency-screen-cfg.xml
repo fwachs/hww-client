@@ -21,8 +21,8 @@
 					<screen:element name="diamondMoreText5" resource="" left="320" top="12" width="200" height="50" font-size="36">20% more</screen:element-->
 				</screen:element>
 				
-			<screen:element name="gbViewButton" resource="premium-currency-screen/gb-view-button.png" left="565" top="12" ontap="gbViewButton" />
-			<screen:element name="diamondViewButton" resource="premium-currency-screen/diamond-view-button-highlight.png" left="855" top="12" />
+			<screen:element name="gbViewButton" resource="premium-currency-screen/gb-view-button.png" left="341" top="12" ontap="gbViewButton" />
+			<screen:element name="diamondViewButton" resource="premium-currency-screen/diamond-view-button-highlight.png" left="662" top="12" />
 		</screen:element>
 		
 		
@@ -43,8 +43,8 @@
 					<!--screen:element name="gameBucksText5" resource="" left="40" top="55" width="300" height="50" font-size="48">$24.99 = 300,000</screen:element>
 					<screen:element name="gameBucksMoreText5" resource="" left="320" top="12" width="200" height="50" font-size="36">20% more</screen:element-->
 				</screen:element>
-				<screen:element name="gbViewButton" resource="premium-currency-screen/gb-view-button-highlight.png" left="565" top="12" />
-				<screen:element name="diamondViewButton" resource="premium-currency-screen/diamond-view-button.png" left="855" top="12" ontap="diamondViewButton" />
+				<screen:element name="gbViewButton" resource="premium-currency-screen/gb-view-button-highlight.png" left="341" top="12" />
+				<screen:element name="diamondViewButton" resource="premium-currency-screen/diamond-view-button.png" left="662" top="12" ontap="diamondViewButton" />
 		</screen:element>
 		
 		<screen:element name="containerPopup" resource="" left="0" top="0" visible="no" ontap="doNothing">
