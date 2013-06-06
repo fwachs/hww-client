@@ -13,7 +13,7 @@ class Server
     var url;
     public function Server()
     {	
-    	url = "http://ec2-184-169-252-151.us-west-1.compute.amazonaws.com:8080";
+        url = "http://ec2-184-169-252-151.us-west-1.compute.amazonaws.com:8080";
     }
 
     public function getWeeklyTournament(callback) {
@@ -73,13 +73,12 @@ class Server
         params.update("passport", passportMap);
         params.update("realstate", realstate);
         params.update("papayaUserId", Game.getPapayaUserId());
+        params.update("socialId", Game.socialId);
         this.makeRequest("/synchronizeGame", this.defaultCallBack, params);
     }
 
     public function registerNewUser(callback) {
         var params = dict();
-
-        params.update("papayaUserId", Game.getPapayaUserId());
         this.makeRequest("/registerNewUser", callback, params);
     }
 
@@ -117,6 +116,7 @@ class Server
     	house.loadCustomTiles();
     	house.loadFurniture();
     	house.loadStorage();
+    	house.update("socialId", Game.socialId);
         this.makeRequest("/syncHouse", defaultCallBack, house.serialize());
     }
 

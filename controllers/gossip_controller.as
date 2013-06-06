@@ -91,7 +91,7 @@ class GossipController extends ScreenController
             this.dismissModalScreen();
         }
         else if(event.name == "openTCG") {
-        	openUrl("https://itunes.apple.com/us/app/telephone-chain-gang/id458664411?mt=8");
+        	openUrl("https://itunes.apple.com/us/app/kitchen-rage/id635408386?mt=8");
         }
         else if(event.name == "doNothing") {
         }
