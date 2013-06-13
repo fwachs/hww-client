@@ -145,8 +145,8 @@ class MainController extends ScreenController
         }
         else if(event.name == "rateUs") {
             Game.sounds.playSFX("buttonPress");
-
-            var url = "http://itunes.apple.com/us/app/housewife-wars/id508200796?ls=1&mt=8";
+            
+            var url = "https://itunes.apple.com/us/app/fabulous-life/id655192209?ls=1&mt=8";
             if (getmodel() == 6) {
                 url = "https://play.google.com/store/apps/details?id=com.twoclams.hww.android.dx.live";
             }

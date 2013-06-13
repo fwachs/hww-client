@@ -194,9 +194,11 @@ class PassportController extends ScreenController
 		}
 		
 		if (showModal == 1) {
-		    var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_UnlockCatalog, catalogName);
-	        promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
-	        this.presentModalScreen(promptScreen);
+		    if (catalogName != "Sydney") {
+		        var promptScreen = new MessageBoxScreen(MessageBoxScreen.MB_UnlockCatalog, catalogName);
+	            promptScreen.configFile = "screen-cfgs/message-box-screen-cfg.xml";
+	            this.presentModalScreen(promptScreen);
+		    }
 		}
 		
 	}
